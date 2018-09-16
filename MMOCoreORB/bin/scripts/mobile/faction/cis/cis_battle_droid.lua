@@ -26,7 +26,7 @@ cis_battle_droid = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/battle_dd.iff"
+		"object/mobile/battle_droid.iff"
 	},
 	lootGroups = {
 		{

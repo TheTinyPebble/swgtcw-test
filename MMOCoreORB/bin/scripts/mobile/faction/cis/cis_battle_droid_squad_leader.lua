@@ -1,5 +1,6 @@
-cis_battle_droid = Creature:new {
+cis_battle_droid_squad_leader = Creature:new {
 objectName = "@mob/creature_names:rebel_battle_droid",
+customName = "A Battle Droid Squad Leader",
 socialGroup = "rebel",
 faction = "rebel",
 level = 17,
@@ -48,4 +49,4 @@ personalityStf = "@hireling/hireling_military",
 attacks = merge(brawlermaster,marksmanmaster)
 }
 
-CreatureTemplates:addCreatureTemplate(cis_battle_droid, "cis_battle_droid")
+CreatureTemplates:addCreatureTemplate(cis_battle_droid_squad_leader, "cis_battle_droid_squad_leader")
