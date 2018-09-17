@@ -97,6 +97,7 @@ ZonesEnabled = {
 	--"character_farm",
 	--"cinco_city_test_m5",
 	"corellia",
+	"coruscant",
 	--"creature_test",
 	"dantooine",
 	"dathomir",
