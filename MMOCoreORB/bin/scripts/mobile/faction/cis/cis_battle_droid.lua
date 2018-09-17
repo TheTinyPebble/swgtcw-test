@@ -43,7 +43,7 @@ cis_battle_droid = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_light"},
+	weapons = {"battle_droid_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",

@@ -1,17 +1,17 @@
-cis_battle_droid_scout = Creature:new {
+cis_sbd = Creature:new {
 	objectName = "@mob/creature_names:rebel_battle_droid",
-	customName = "A Battle Droid Scout",
+	customName = "A Super Battle Droid",
 	socialGroup = "rebel",
 	faction = "rebel",
-	level = 15,
-	chanceHit = 0.31,
-	damageMin = 160,
-	damageMax = 170,
-	baseXp = 831,
-	baseHAM = 2400,
-	baseHAMmax = 3000,
-	armor = 0,
-	resists = {0,0,0,0,0,0,0,0,-1},
+	level = 20,
+	chanceHit = 0.33,
+	damageMin = 190,
+	damageMax = 200,
+	baseXp = 2006,
+	baseHAM = 5000,
+	baseHAMmax = 6100,
+	armor = 1,
+	resists = {40,40,40,40,40,40,40,40,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -22,33 +22,34 @@ cis_battle_droid_scout = Creature:new {
 	tamingChance = 0,
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
-	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED + FACTIONAGGRO,
+	creatureBitmask = PACK + KILLER,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/battle_droid.iff"
+			"object/mobile/death_watch_s_battle_droid_02.iff"
 	},
 	lootGroups = {
 		{
 			groups = {
 				{group = "color_crystals", chance = 100000},
-				{group = "junk", chance = 4700000},
+				{group = "junk", chance = 4250000},
 				{group = "rifles", chance = 1000000},
 				{group = "pistols", chance = 1000000},
 				{group = "melee_weapons", chance = 1000000},
 				{group = "carbines", chance = 1000000},
 				{group = "clothing_attachments", chance = 100000},
 				{group = "armor_attachments", chance = 100000},
+				{group = "rebel_officer_common", chance = 450000},
 				{group = "wearables_common", chance = 1000000}
 			}
 		}
 	},
-	weapons = {"battle_droid_weapons"},
+	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermid,marksmanmid)
+	attacks = merge(brawlermaster,marksmanmaster)
 }
 
-CreatureTemplates:addCreatureTemplate(cis_battle_droid_scout, "cis_battle_droid_scout")
+CreatureTemplates:addCreatureTemplate(cis_sbd, "cis_sbd")

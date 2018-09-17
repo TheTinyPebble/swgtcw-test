@@ -1,17 +1,17 @@
-cis_battle_droid_scout = Creature:new {
+cis_battle_droid_captain = Creature:new {
 	objectName = "@mob/creature_names:rebel_battle_droid",
-	customName = "A Battle Droid Scout",
+	customName = "A Battle Droid Captain",
 	socialGroup = "rebel",
 	faction = "rebel",
-	level = 15,
-	chanceHit = 0.31,
-	damageMin = 160,
-	damageMax = 170,
-	baseXp = 831,
-	baseHAM = 2400,
-	baseHAMmax = 3000,
+	level = 22,
+	chanceHit = 0.34,
+	damageMin = 200,
+	damageMax = 210,
+	baseXp = 2006,
+	baseHAM = 5400,
+	baseHAMmax = 6600,
 	armor = 0,
-	resists = {0,0,0,0,0,0,0,0,-1},
+	resists = {25,25,25,25,25,25,25,25,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -22,33 +22,33 @@ cis_battle_droid_scout = Creature:new {
 	tamingChance = 0,
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
-	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED + FACTIONAGGRO,
+	creatureBitmask = PACK + KILLER,
+	optionsBitmask = AIENABLED + FACTIONAGGRO + CONVERSABLE,
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/battle_droid.iff"
+		"object/mobile/death_watch_battle_droid_03.iff"
 	},
 	lootGroups = {
 		{
 			groups = {
 				{group = "color_crystals", chance = 100000},
-				{group = "junk", chance = 4700000},
+				{group = "junk", chance = 4250000},
 				{group = "rifles", chance = 1000000},
 				{group = "pistols", chance = 1000000},
 				{group = "melee_weapons", chance = 1000000},
 				{group = "carbines", chance = 1000000},
 				{group = "clothing_attachments", chance = 100000},
 				{group = "armor_attachments", chance = 100000},
+				{group = "rebel_officer_common", chance = 450000},
 				{group = "wearables_common", chance = 1000000}
 			}
 		}
 	},
 	weapons = {"battle_droid_weapons"},
-	conversationTemplate = "",
+	conversationTemplate = "rebelRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/military",
-	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermid,marksmanmid)
+	attacks = merge(brawlermaster,marksmanmaster)
 }
 
-CreatureTemplates:addCreatureTemplate(cis_battle_droid_scout, "cis_battle_droid_scout")
+CreatureTemplates:addCreatureTemplate(cis_battle_droid_captain, "cis_battle_droid_captain")

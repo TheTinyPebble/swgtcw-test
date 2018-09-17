@@ -11,7 +11,7 @@ baseXp = 1102,
 baseHAM = 3500,
 baseHAMmax = 4300,
 armor = 0,
-resists = {15,15,15,15,15,15,15,-1,-1},
+resists = {15,15,15,15,15,15,15,15,-1},
 meatType = "",
 meatAmount = 0,
 hideType = "",
@@ -42,7 +42,7 @@ lootGroups = {
 		}
 	}
 },
-weapons = {"rebel_weapons_medium"},
+weapons = {"battle_droid_weapons"},
 conversationTemplate = "",
 reactionStf = "@npc_reaction/military",
 personalityStf = "@hireling/hireling_military",
