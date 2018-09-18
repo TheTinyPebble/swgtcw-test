@@ -27,7 +27,7 @@ stormtrooper = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_stormtrooper_m.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -47,7 +47,7 @@ stormtrooper = Creature:new {
 	weapons = {"stormtrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	personalityStf = "@hireling/hireling_stormtrooper",		
+	personalityStf = "@hireling/hireling_stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,brawlermaster,marksmanmaster)
 }
 

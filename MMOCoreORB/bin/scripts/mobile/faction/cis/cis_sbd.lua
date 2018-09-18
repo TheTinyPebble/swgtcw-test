@@ -23,7 +23,7 @@ cis_sbd = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = AIENABLED + FACTIONAGGRO,
 	diet = HERBIVORE,
 
 	templates = {

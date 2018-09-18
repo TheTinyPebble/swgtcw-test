@@ -1,0 +1,12 @@
+includeFile("faction/republic/clone_commando.lua")
+includeFile("faction/republic/clone_sand_trooper.lua")
+includeFile("faction/republic/clone_scout_trooper.lua")
+includeFile("faction/republic/clonetrooper.lua")
+includeFile("faction/republic/clonetrooper_bombardier.lua")
+includeFile("faction/republic/clonetrooper_captain.lua")
+includeFile("faction/republic/clonetrooper_major.lua")
+includeFile("faction/republic/clonetrooper_medic.lua")
+includeFile("faction/republic/clonetrooper_sniper.lua")
+includeFile("faction/republic/clonetrooper_squad_leader.lua")
+includeFile("faction/republic/rep_jedi_knight.lua")
+
