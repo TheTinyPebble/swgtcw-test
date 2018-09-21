@@ -1,5 +1,5 @@
 rep_jedi_knight = Creature:new {
-	objectName = "@mob/creature_names:light_jedi_sentinel",
+	objectName = "@mob/creature_names:rep_jedi_knight",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "self",
@@ -24,7 +24,7 @@ rep_jedi_knight = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED + FACTIONAGGRO,
+	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
 	templates = {

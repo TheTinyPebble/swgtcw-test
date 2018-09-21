@@ -550,7 +550,7 @@ String NameManager::makeImperialTrooperName(int type) {
 		name += swamptrooperPrefixes.get(System::random(swamptrooperPrefixes.size() - 1));
 
 	name += "-";
-	name += String::valueOf(1 + System::random(898));
+	name += String::valueOf(1 + System::random(5898));
 
 	return name;
 }

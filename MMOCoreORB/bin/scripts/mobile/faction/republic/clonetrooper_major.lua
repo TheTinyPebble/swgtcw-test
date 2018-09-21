@@ -1,6 +1,6 @@
 clonetrooper_major = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper_major",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper_major",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -47,7 +47,7 @@ clonetrooper_major = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "imperialRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)

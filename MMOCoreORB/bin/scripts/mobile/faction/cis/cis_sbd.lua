@@ -1,5 +1,5 @@
 cis_sbd = Creature:new {
-	objectName = "@mob/creature_names:rebel_battle_droid",
+	objectName = "@mob/creature_names:cis_sbd",
 	customName = "A Super Battle Droid",
 	socialGroup = "rebel",
 	faction = "rebel",

@@ -1,5 +1,5 @@
 cis_battle_droid_specforce = Creature:new {
-	objectName = "@mob/creature_names:rebel_battle_droid",
+	objectName = "@mob/creature_names:cis_battle_droid",
 	customName = "A SpecForce Battle Droid",
 	socialGroup = "rebel",
 	faction = "rebel",

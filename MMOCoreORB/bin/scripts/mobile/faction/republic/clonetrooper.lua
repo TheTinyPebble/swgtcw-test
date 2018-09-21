@@ -1,6 +1,7 @@
 clonetrooper = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper",
+	randomNameType = NAME_SWAMPTROOPER,
+	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 25,
@@ -44,7 +45,7 @@ clonetrooper = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	personalityStf = "@hireling/hireling_stormtrooper",

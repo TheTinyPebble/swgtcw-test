@@ -1,6 +1,6 @@
 clone_scout_trooper = Creature:new {
-	objectName = "@mob/creature_names:scout_trooper",
-	randomNameType = NAME_SCOUTTROOPER,
+	objectName = "@mob/creature_names:clonetrooper_scout",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -48,7 +48,7 @@ clone_scout_trooper = Creature:new {
 	weapons = {"imperial_weapons_heavy"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	personalityStf = "@hireling/hireling_stormtrooper",	
+	personalityStf = "@hireling/hireling_stormtrooper",
 	attacks = merge(brawlermaster,marksmanmaster)
 }
 

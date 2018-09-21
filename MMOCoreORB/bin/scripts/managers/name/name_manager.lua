@@ -19,5 +19,6 @@ require("resource.reactiveGas")
 -- Imperial Trooper Prefixes
 stormtrooperPrefixes = { "GK", "LK", "RK", "TK", "VK" };
 scouttrooperPrefixes = { "SX", "GX", "VX", "CX", "NX" };
-darktrooperPrefixes = { "JLB", "RAR", "KNP", "BCP", "RTZ" };
-swamptrooperPrefixes = { "GL", "TL", "RL", "NL", "CL" };
+darktrooperPrefixes = { "RC", "RC", "RC", "RC", "RC" };
+swamptrooperPrefixes = { "CT", "CT", "CT", "CT", "CT" };
+clonetrooperPrefixes = { "CT", "CT", "CT", "CT", "CT" };

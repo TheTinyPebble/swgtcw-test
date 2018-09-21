@@ -92,3 +92,8 @@ includeFile("weapon/groups/nilyahin_old_guard.lua")
 includeFile("weapon/groups/nilyahin_smuggler.lua")
 includeFile("weapon/groups/nilyahin_specialist.lua")
 includeFile("weapon/groups/nilyahin_tribunal.lua")
+
+-- Prequel Weapons
+
+includeFile("weapon/groups/clonetrooper_weapons.lua")
+includeFile("weapon/groups/magnaguard_weapons.lua")

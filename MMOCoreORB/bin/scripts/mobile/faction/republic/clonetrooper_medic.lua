@@ -1,6 +1,6 @@
 clonetrooper_medic = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper_medic",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper_medic",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -28,7 +28,10 @@ clonetrooper_medic = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_stormtrooper_medic_m.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff",
+		     "object/mobile/dressed_clonetrooper_blue_m.iff",
+		     "object/mobile/dressed_clonetrooper_blue_nh_m.iff"
+	},
 	lootGroups = {
 		{
 			groups = {
@@ -45,10 +48,10 @@ clonetrooper_medic = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	personalityStf = "@hireling/hireling_stormtrooper",		
+	personalityStf = "@hireling/hireling_stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
 }
 

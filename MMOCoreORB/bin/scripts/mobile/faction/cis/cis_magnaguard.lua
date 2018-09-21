@@ -1,7 +1,6 @@
 cis_magnaguard = Creature:new {
-	objectName = "@mob/creature_names:light_jedi_sentinel",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_magnaguard",
+	customName = "A Magnaguard",
 	socialGroup = "self",
 	faction = "rebel",
 	level = 30,
@@ -31,9 +30,9 @@ cis_magnaguard = Creature:new {
 		"object/mobile/magnaguard.iff"
 	},
 	lootGroups = {},
-	weapons = {"light_jedi_weapons"},
-	conversationTemplate = "imperialRecruiterConvoTemplate",
-	attacks = merge(lightsabermaster)
+	weapons = {"magnaguard_weapons"},
+	conversationTemplate = "",
+	attacks = merge(lightsabermaster,pikemanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(cis_magnaguard, "cis_magnaguard")

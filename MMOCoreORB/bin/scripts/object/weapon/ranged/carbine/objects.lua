@@ -865,3 +865,10 @@ object_weapon_ranged_carbine_shared_carbine_geo = SharedWeaponObjectTemplate:new
 }
 
 ObjectTemplates:addClientTemplate(object_weapon_ranged_carbine_shared_carbine_geo, "object/weapon/ranged/carbine/shared_carbine_geo.iff")
+
+object_weapon_ranged_carbine_ep3_shared_carbine_dc15 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/ranged/carbine/ep3/shared_carbine_dc15.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_ranged_carbine_ep3_shared_carbine_dc15, "object/weapon/ranged/carbine/ep3/shared_carbine_dc15.iff")
+

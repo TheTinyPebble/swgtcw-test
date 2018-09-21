@@ -1,5 +1,5 @@
 cis_battle_droid_pilot = Creature:new {
-	objectName = "@mob/creature_names:rebel_battle_droid",
+	objectName = "@mob/creature_names:cis_battle_droid",
 	customName = "A Battle Droid Pilot",
 	socialGroup = "rebel",
 	faction = "rebel",

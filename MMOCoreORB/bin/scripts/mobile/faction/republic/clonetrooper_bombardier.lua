@@ -1,6 +1,6 @@
 clonetrooper_bombardier = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper_bombardier",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper_bombardier",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -28,7 +28,7 @@ clonetrooper_bombardier = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_stormtrooper_bombardier_m.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -48,7 +48,7 @@ clonetrooper_bombardier = Creature:new {
 	weapons = {"st_bombardier_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	personalityStf = "@hireling/hireling_stormtrooper",		
+	personalityStf = "@hireling/hireling_stormtrooper",
 	attacks = merge(commandomaster,marksmanmaster,brawlermaster)
 }
 

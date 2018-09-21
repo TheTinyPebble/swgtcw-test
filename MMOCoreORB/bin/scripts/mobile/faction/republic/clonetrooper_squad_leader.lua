@@ -1,6 +1,6 @@
 clonetrooper_squad_leader = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper_squad_leader",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper_sergeant",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -12,7 +12,7 @@ clonetrooper_squad_leader = Creature:new {
 	baseHAM = 8100,
 	baseHAMmax = 9900,
 	armor = 0,
-	resists = {20,20,20,-1,30,-1,30,-1,-1},
+	resists = {20,20,40,-1,30,-1,30,-1,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -28,7 +28,8 @@ clonetrooper_squad_leader = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_blue_m.iff",
+		     "object/mobile/dressed_clonetrooper_blue_nh_m.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -45,10 +46,10 @@ clonetrooper_squad_leader = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	personalityStf = "@hireling/hireling_stormtrooper",		
+	personalityStf = "@hireling/hireling_stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
 }
 

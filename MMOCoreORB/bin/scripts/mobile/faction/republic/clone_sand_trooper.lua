@@ -1,6 +1,6 @@
 clone_sand_trooper = Creature:new {
-	objectName = "@mob/creature_names:sand_trooper",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -45,7 +45,7 @@ clone_sand_trooper = Creature:new {
 			}
 		}
 	},
-	weapons = {"sandtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	personalityStf = "@hireling/hireling_stormtrooper",
