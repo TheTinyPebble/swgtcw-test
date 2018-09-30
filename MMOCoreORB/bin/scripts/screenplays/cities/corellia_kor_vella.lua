@@ -30,7 +30,7 @@ CorelliaKorVellaScreenPlay = CityScreenPlay:new {
 		{"stormtrooper_medic", "cis_battle_droid", 0.2, 0.1, -5.1, 0, 1331946, "", ""},
 		{"imperial_major", "cis_battle_droid_captain", 4.6, 0.1, -2.1, -135, 1331948, "", ""},
 		{"stormtrooper", "cis_battle_droid", -0.2, 0.1, 1.3, -90, 1331953, "", ""},
-		{"imperial_colonel", "rebel_colonel", 4.6, 0.1, -2.1, -135, 1331955, "", ""},
+		{"imperial_colonel", "cis_magnaguard", 4.6, 0.1, -2.1, -135, 1331955, "", ""},
 
 	--faction swap spawns for in the city itself
 		{"imperial_noncom", "cis_battle_droid_squad_leader", -3660.31, 86, 3103.26, 39.0513, 0, "", ""},
