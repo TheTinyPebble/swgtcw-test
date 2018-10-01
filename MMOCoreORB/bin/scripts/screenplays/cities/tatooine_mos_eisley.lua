@@ -7,26 +7,26 @@ TatooineMosEisleyScreenPlay = CityScreenPlay:new {
 
 	gcwMobs = {
 		{"comm_operator", "cis_battle_droid_squad_leader", 3410.5,5,-4735.8,-154,0, "", ""},
-		{"elite_sand_trooper", "cis_battle_droid_squad_leader", 3500.8,8,-4683.9,143,0, "", ""},
-		{"elite_sand_trooper", "cis_battle_droid_squad_leader", 3496.81,5.52789,-4923.13,352.589,0, "neutral", "neutral"},
+		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 3500.8,8,-4683.9,143,0, "", ""},
+		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 3496.81,5.52789,-4923.13,352.589,0, "neutral", "neutral"},
 		{"imperial_noncom", "cis_sbd", 3760.6,5,-4802,68,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3322.23,4.77649,-4623.57,331.647,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3304.54,5,-4602.49,86.0652,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3288.68,4.72215,-4636.09,61.7463,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3278.49,4.75246,-4676.19,22.0117,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3290.4,5,-4696.4,137,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3427.14,5,-4952.92,91.6772,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3417.99,5,-4974.46,-54,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3538.04,5.12541,-4806.46,312.721,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3516.17,5,-4879.7,80,0, "neutral", "neutral"},
-		{"sand_trooper", "cis_battle_droid_pilot", 3279.95,5,-4835.74,40,0, "", ""},
-		{"sand_trooper", "cis_battle_droid_pilot", 3341.8,5,-4750.9,124,0, "", ""},
-		{"scout_trooper", "cis_battle_droid", 3585.84,5,-4719.95,281.969,0, "", ""},
-		{"scout_trooper", "cis_battle_droid", 3288.12,4.9981,-4842.11,27.4222,0, "", ""},
-		{"scout_trooper", "cis_battle_droid", 3377.5,0,-4709,156,0, "", ""},
-		{"stormtrooper", "cis_battle_droid_commando", 3242.3,5,-4532.3,151,0, "npc_imperial", "neutral"},
-		{"stormtrooper_rifleman", "cis_sbd", 3756.71,5,-4845.03,78.2181,0, "", ""},
-		{"imperial_colonel", "cis_magnaguard", 3490.5,5,-4733.94,305,0, "npc_imperial", "conversation"},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3322.23,4.77649,-4623.57,331.647,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3304.54,5,-4602.49,86.0652,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3288.68,4.72215,-4636.09,61.7463,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3278.49,4.75246,-4676.19,22.0117,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3290.4,5,-4696.4,137,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3427.14,5,-4952.92,91.6772,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3417.99,5,-4974.46,-54,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3538.04,5.12541,-4806.46,312.721,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3516.17,5,-4879.7,80,0, "neutral", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3279.95,5,-4835.74,40,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3341.8,5,-4750.9,124,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid", 3585.84,5,-4719.95,281.969,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid", 3288.12,4.9981,-4842.11,27.4222,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid", 3377.5,0,-4709,156,0, "", ""},
+		{"clonetrooper", "cis_battle_droid_commando", 3242.3,5,-4532.3,151,0, "npc_imperial", "neutral"},
+		{"clonetrooper_sniper", "cis_sbd", 3756.71,5,-4845.03,78.2181,0, "", ""},
+		{"rep_jedi_knight", "cis_magnaguard", 3490.5,5,-4733.94,305,0, "npc_imperial", "conversation"},
 		{"mos_eisley_police_lieutenant", "mos_eisley_police_lieutenant_rebel", 3407,0,-4505,255,0, "npc_imperial", "calm"},
 		{"mos_eisley_police_sergeant", "mos_eisley_police_sergeant_rebel", 3405.2,0,-4505.5,75,0, "npc_accusing", "calm"},
 		{"mos_eisley_police_officer", "mos_eisley_police_officer_rebel", 3298.17,4.72998,-4655.93,335.574,0, "", ""},
@@ -167,9 +167,9 @@ function TatooineMosEisleyScreenPlay:spawnMobiles()
 	self:setMoodString(pNpc, "npc_sitting_chair")
 	pNpc = spawnMobile(self.planet, "r3",60,15.9215,-0.894992,-0.217826,56.8618,1082877)
 	self:setMoodString(pNpc, "happy")
-	pNpc = spawnMobile(self.planet, "stormtrooper",400,2.84,-0.894992,-6.3,16.0005,1082877)
+	pNpc = spawnMobile(self.planet, "clonetrooper",400,2.84,-0.894992,-6.3,16.0005,1082877)
 	self:setMoodString(pNpc, "npc_imperial")
-	pNpc = spawnMobile(self.planet, "stormtrooper_squad_leader",400,3.62,-0.894992,-6.78,360.011,1082877)
+	pNpc = spawnMobile(self.planet, "clonetrooper_squad_leader",400,3.62,-0.894992,-6.78,360.011,1082877)
 	self:setMoodString(pNpc, "npc_accusing")
 	pNpc = spawnMobile(self.planet, "wuher",60,-14,-0.9,0,90,1082877)
 	self:setMoodString(pNpc, "worried")
