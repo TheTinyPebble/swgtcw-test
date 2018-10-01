@@ -26,7 +26,7 @@ CorelliaKorVellaScreenPlay = CityScreenPlay:new {
 		{"clonetrooper_medic", "cis_battle_droid", -5.7, -13.8, 13.8, -33, 1331940, "", ""},
 		{"imperial_second_lieutenant", "cis_sbd", 16.0, -13.8, 9.6, 180, 1331941, "", ""},
 		{"imperial_trooper", "cis_battle_droid", 17.0, -13.8, -2.5, -45, 1331941, "", ""},
-		{"clonetrooper_major_general", "cis_major_general", 15.1, -11.5, -20.8, 0, 1331942, "", ""},
+		{"imperial_major_general", "cis_major_general", 15.1, -11.5, -20.8, 0, 1331942, "", ""},
 		{"clonetrooper_medic", "cis_battle_droid", 0.2, 0.1, -5.1, 0, 1331946, "", ""},
 		{"clonetrooper_major", "cis_battle_droid_captain", 4.6, 0.1, -2.1, -135, 1331948, "", ""},
 		{"clonetrooper", "cis_battle_droid", -0.2, 0.1, 1.3, -90, 1331953, "", ""},

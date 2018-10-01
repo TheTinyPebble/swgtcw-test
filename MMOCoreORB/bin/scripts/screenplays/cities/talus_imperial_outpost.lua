@@ -13,7 +13,7 @@ end
 
 function TalusImperialOutpostScreenPlay:spawnMobiles()
 	spawnMobile("talus", "imperial_recruiter", 1, -2192, 20.0, 2269, -50, 0)
-	spawnMobile("talus", "at_st", 300, -2167.8, 20.0, 2411.1, -8, 0)
+	spawnMobile("talus", "rep_at_xt", 300, -2167.8, 20.0, 2411.1, -8, 0)
 	spawnMobile("talus", "clonetrooper", 300, -2194.6, 20.0, 2344.9, 179, 0)
 	spawnMobile("talus", "clonetrooper", 300, -2187.9, 20.0, 2344.9, 179, 0)
 	spawnMobile("talus", "clonetrooper", 300, -2178.9, 20.0, 2344.9, 179, 0)
@@ -38,7 +38,7 @@ function TalusImperialOutpostScreenPlay:spawnMobiles()
 	spawnMobile("talus", "clonetrooper_sniper", 300, -2205.0, 20.0, 2320.1, -127, 0)
 	spawnMobile("talus", "imperial_private", 300, -2219.4, 20.0, 2299.2, -24, 0)
 	spawnMobile("talus", "clonetrooper_sniper", 300, -2193.5, 20.0, 2267.2, -15, 0)
-	spawnMobile("talus", "at_st", 300, -2198.2, 20.0, 2299.8, 0, 0)
+	spawnMobile("talus", "rep_at_xt", 300, -2198.2, 20.0, 2299.8, 0, 0)
 	spawnMobile("talus", "clonetrooper_bombardier", 300, -2195.2, 20.0, 2295.2, 0, 0)
 	spawnMobile("talus", "clonetrooper_bombardier", 300, -2201.2, 20.0, 2295.2, 0, 0)
 end

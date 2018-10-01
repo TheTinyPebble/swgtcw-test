@@ -19,8 +19,8 @@ function DantooineImperialOutpostScreenPlay:spawnMobiles()
 	self:setMoodString(pNpc, "npc_sitting_table_eating")
 
 	--outside
-	spawnMobile("dantooine", "at_st", 900, -4230, 3, -2330, 80, 0)
-	spawnMobile("dantooine", "at_st", 900, -4230, 3, -2475, 0, 0)
+	spawnMobile("dantooine", "rep_at_xt", 900, -4230, 3, -2330, 80, 0)
+	spawnMobile("dantooine", "rep_at_xt", 900, -4230, 3, -2475, 0, 0)
 	spawnMobile("dantooine", "clonetrooper", 450, -4212, 3, -2380, 300, 0)
 	spawnMobile("dantooine", "clonetrooper", 450, -4217, 3, -2389, 330, 0)
 	spawnMobile("dantooine", "clonetrooper", 450, -4232, 3, -2390, 40, 0)
