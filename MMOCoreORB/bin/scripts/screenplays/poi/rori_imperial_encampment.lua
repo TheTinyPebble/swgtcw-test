@@ -127,17 +127,17 @@ function RoriImperialEncampmentScreenPlay:spawnRebels()
 
 	--towers
 
-	spawnMobile("rori", "specforce_pathfinder", 300, -5510.3, 82.9, -5702.1, 135, 0)
+	spawnMobile("rori", "cis_battle_droid", 300, -5510.3, 82.9, -5702.1, 135, 0)
 	spawnMobile("rori", "cis_sbd", 300, -5516.1, 82.9, -5702.4, 180, 0)
 
-	spawnMobile("rori", "specforce_pathfinder", 300, -5508.7, 82.9, -5630.7, 90, 0)
+	spawnMobile("rori", "cis_battle_droid", 300, -5508.7, 82.9, -5630.7, 90, 0)
 	spawnMobile("rori", "cis_sbd", 300, -5509.3, 82.9, -5623.6, 45, 0)
 	spawnMobile("rori", "cis_magnaguard", 300, -5514.7, 82.9, -5622.7, 0, 0)
 
-	spawnMobile("rori", "specforce_pathfinder", 300, -5612.8, 83.0, -5623.3, 0, 0)
+	spawnMobile("rori", "cis_battle_droid", 300, -5612.8, 83.0, -5623.3, 0, 0)
 	spawnMobile("rori", "cis_sbd", 300, -5618.4, 83.0, -5623.7, -45, 0)
 
-	spawnMobile("rori", "specforce_pathfinder", 300, -5619.4, 82.6, -5696.9, -90, 0)
+	spawnMobile("rori", "cis_battle_droid", 300, -5619.4, 82.6, -5696.9, -90, 0)
 	spawnMobile("rori", "cis_sbd", 300, -5618.5, 82.6, -5702.6, -135, 0)
 	spawnMobile("rori", "cis_sbd", 300, -5613.1, 82.6, -5703.4, 180, 0)
 
@@ -170,7 +170,7 @@ function RoriImperialEncampmentScreenPlay:spawnRebels()
 	spawnMobile("rori", "cis_battle_droid", 300, -11.7, 7.0, -13.5, 0, 2935414)
 
 	spawnMobile("rori", "cis_battle_droid_captain", 300, -11.5, 7.0, 9.3, 90, 2935415)
-	spawnMobile("rori", "rebel_lieutenant_colonel", 300, -9.1, 7.0, 12.5, 0, 2935415)
+	spawnMobile("rori", "cis_magnaguard", 300, -9.1, 7.0, 12.5, 0, 2935415)
 	spawnMobile("rori", "cis_sbd", 300, 0.0, 7.0, 12.6, 0, 2935415)
 	spawnMobile("rori", "cis_battle_droid", 300, 14.1, 7.0, 11.8, 60, 2935416)
 
@@ -187,5 +187,5 @@ function RoriImperialEncampmentScreenPlay:spawnMobiles()
 	spawnMobile("rori", "thug", 300, -5551.1, 75.9, -5782.5, 30, 0)
 	spawnMobile("rori", "thug", 300, -5559.1, 75.9, -5781.4, -75, 0)
 	spawnMobile("rori", "thug", 300, -5562.1, 75.9, -5784.3, 45, 0)
-		
+
 end
