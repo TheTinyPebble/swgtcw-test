@@ -48,6 +48,6 @@ seanMerchants = {
 
 victorImperials = {
 	--City Hall Guards
-	{ "dark_trooper", -1133.2, 12.1958, -3614.6, 125.004, "" },
-	{ "dark_trooper", -1130.9, 12.1964, -3611.6, 125.004, "" },
+	{ "clone_commando", -1133.2, 12.1958, -3614.6, 125.004, "" },
+	{ "clone_commando", -1130.9, 12.1964, -3611.6, 125.004, "" },
 }

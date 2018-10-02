@@ -359,6 +359,16 @@
 </resource>
 
 <resource>
+<SpawnName>Auvvoe</SpawnName>
+<resType>vegetable_fungi_naboo</resType>
+<attribute name="res_decay_resist">358</attribute>
+<attribute name="res_flavor">18</attribute>
+<attribute name="res_potential_energy">446</attribute>
+<attribute name="res_quality">973</attribute>
+<planet>naboo</planet>
+</resource>
+
+<resource>
 <SpawnName>Auy</SpawnName>
 <resType>meat_insect_tatooine</resType>
 <attribute name="res_decay_resist">679</attribute>
@@ -1320,16 +1330,6 @@
 </resource>
 
 <resource>
-<SpawnName>Deiapa</SpawnName>
-<resType>vegetable_fungi_naboo</resType>
-<attribute name="res_decay_resist">966</attribute>
-<attribute name="res_flavor">484</attribute>
-<attribute name="res_potential_energy">803</attribute>
-<attribute name="res_quality">956</attribute>
-<planet>naboo</planet>
-</resource>
-
-<resource>
 <SpawnName>Delo</SpawnName>
 <resType>iron_doonium</resType>
 <attribute name="res_cold_resist">628</attribute>
@@ -2064,6 +2064,17 @@
 </resource>
 
 <resource>
+<SpawnName>Feldinoi</SpawnName>
+<resType>softwood_conifer_rori</resType>
+<attribute name="res_decay_resist">360</attribute>
+<attribute name="res_malleability">939</attribute>
+<attribute name="res_quality">783</attribute>
+<attribute name="res_shock_resistance">150</attribute>
+<attribute name="res_toughness">91</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
 <SpawnName>Femiian</SpawnName>
 <resType>iron_polonium</resType>
 <attribute name="res_cold_resist">99</attribute>
@@ -2611,17 +2622,6 @@
 <attribute name="res_shock_resistance">891</attribute>
 <attribute name="res_toughness">956</attribute>
 <planet>dantooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Haweble</SpawnName>
-<resType>softwood_conifer_rori</resType>
-<attribute name="res_decay_resist">305</attribute>
-<attribute name="res_malleability">703</attribute>
-<attribute name="res_quality">2</attribute>
-<attribute name="res_shock_resistance">223</attribute>
-<attribute name="res_toughness">208</attribute>
-<planet>rori</planet>
 </resource>
 
 <resource>
@@ -3266,16 +3266,6 @@
 <attribute name="res_potential_energy">326</attribute>
 <attribute name="res_quality">500</attribute>
 <planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Iho</SpawnName>
-<resType>oats_domesticated_naboo</resType>
-<attribute name="res_decay_resist">947</attribute>
-<attribute name="res_flavor">361</attribute>
-<attribute name="res_potential_energy">974</attribute>
-<attribute name="res_quality">152</attribute>
-<planet>naboo</planet>
 </resource>
 
 <resource>
@@ -3943,6 +3933,16 @@
 </resource>
 
 <resource>
+<SpawnName>Lenoumi</SpawnName>
+<resType>vegetable_tubers_lok</resType>
+<attribute name="res_decay_resist">611</attribute>
+<attribute name="res_flavor">683</attribute>
+<attribute name="res_potential_energy">113</attribute>
+<attribute name="res_quality">122</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
 <SpawnName>Letoa</SpawnName>
 <resType>wheat_wild_talus</resType>
 <attribute name="res_decay_resist">889</attribute>
@@ -4153,6 +4153,16 @@
 <attribute name="res_potential_energy">844</attribute>
 <attribute name="res_quality">838</attribute>
 <planet>tatooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Mehe</SpawnName>
+<resType>oats_domesticated_naboo</resType>
+<attribute name="res_decay_resist">749</attribute>
+<attribute name="res_flavor">608</attribute>
+<attribute name="res_potential_energy">656</attribute>
+<attribute name="res_quality">893</attribute>
+<planet>naboo</planet>
 </resource>
 
 <resource>
@@ -7573,16 +7583,6 @@
 <attribute name="res_flavor">685</attribute>
 <attribute name="res_potential_energy">619</attribute>
 <attribute name="res_quality">992</attribute>
-<planet>lok</planet>
-</resource>
-
-<resource>
-<SpawnName>Wenai</SpawnName>
-<resType>vegetable_tubers_lok</resType>
-<attribute name="res_decay_resist">282</attribute>
-<attribute name="res_flavor">1000</attribute>
-<attribute name="res_potential_energy">469</attribute>
-<attribute name="res_quality">674</attribute>
 <planet>lok</planet>
 </resource>
 
