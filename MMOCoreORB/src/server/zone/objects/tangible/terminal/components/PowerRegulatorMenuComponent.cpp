@@ -80,7 +80,7 @@ int PowerRegulatorMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject
 	} else if (powerRegulator->getDistanceTo(player) > 15) {
 		player->sendSystemMessage("@faction/faction_hq/faction_hq_response:power_too_far"); // You are too far away from the power regulator to continue the setup!
 		return 1;
-	} else if (!player->hasSkill("base_bust_power_disruptor_01")) {
+	} else if (!player->hasSkill("base_bust_power_disruptor_04")) {
 		player->sendSystemMessage("Only a Power Disruption Specialist could expect to rig the regulators for overload"); // Only an experienced commando with heavy weapons training could expect to rig the regulators for overload
 		return 1;
 	}

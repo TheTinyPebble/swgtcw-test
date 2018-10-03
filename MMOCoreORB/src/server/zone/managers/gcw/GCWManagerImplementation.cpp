@@ -1143,7 +1143,7 @@ bool GCWManagerImplementation::canStartSlice(CreatureObject* creature, TangibleO
 	} else if (tano->getDistanceTo(creature) > 15) {
 		creature->sendSystemMessage("You are too far away from the terminal to continue slicing!");
 		return false;
-	} else if (!creature->hasSkill("base_bust_security_hacker_01")) {
+	} else if (!creature->hasSkill("base_bust_security_hacker_04")) {
 		creature->sendSystemMessage("Only a Terminal Hacking Specialist could expect to disable this security terminal!");
 		return false;
 	}
@@ -1281,7 +1281,7 @@ void GCWManagerImplementation::sendDNASampleMenu(CreatureObject* creature, Build
 	if (chain == "") {
 		int length = 3;
 
-		if (creature->hasSkill("base_bust_genetic_decrypter_01"))
+		if (creature->hasSkill("base_bust_genetic_decrypter_04"))
 			length = 8;
 		/*else if (creature->hasSkill("outdoors_bio_engineer_dna_harvesting_04"))
 			length = 7;

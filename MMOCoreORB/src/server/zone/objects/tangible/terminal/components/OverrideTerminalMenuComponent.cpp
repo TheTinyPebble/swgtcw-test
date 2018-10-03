@@ -82,7 +82,7 @@ int OverrideTerminalMenuComponent::handleObjectMenuSelect(SceneObject* sceneObje
 	} else if (overrideTerminal->getDistanceTo(player) > 15) {
 		player->sendSystemMessage("You are too far away from the override terminal to continue sequencing!");
 		return 1;
-	} else if (!player->hasSkill("base_bust_genetic_decrypter_01")) {
+	} else if (!player->hasSkill("base_bust_genetic_decrypter_04")) {
 		player->sendSystemMessage("Only a Genetic Decryption Specialist could expect to forge a suitable DNA sequence.");
 		return 1;
 	}
