@@ -827,7 +827,7 @@ int CombatManager::getDefenderDefenseModifier(CreatureObject* defender, WeaponOb
 }
 
 int CombatManager::getDefenderSecondaryDefenseModifier(CreatureObject* defender) {
-	if (defender->isIntimidated() || defender->isBerserked() || defender->isVehicleObject()) return 0;
+	if (defender->isBerserked() || defender->isVehicleObject()) return 0;
 
 	int targetDefense = defender->isPlayerCreature() ? 0 : defender->getLevel();
 	ManagedReference<WeaponObject*> weapon = defender->getWeapon();
@@ -859,8 +859,12 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	}
 
 	int jediToughness = defender->getSkillMod("jedi_toughness");
+	int lsRangedToughness = defender->getSkillMod("lightsaber_toughness") / 1.5;
 	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0)
 		damage *= 1.f - (jediToughness / 100.f);
+
+	if (damType == SharedWeaponObjectTemplate::RANGEDATTACK && lsRangedToughness > 0)
+		damage *= 1.f - (lsRangedToughness / 100.f);
 
 	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && defender->isPlayerCreature() && defender->hasSkill("combat_bountyhunter_master")){
 		damage *= 1.f - (25.f/100.f);
@@ -969,8 +973,12 @@ float CombatManager::applyDamageModifiers(CreatureObject* attacker, WeaponObject
 	if (data.isForceAttack() && (attacker->hasSkill("frs_post9_dark_powers_04") || attacker->hasSkill("frs_post9_light_powers_04")))
 		damageDivisor = 0;
 
-	if (damageDivisor != 0)
-		damage /= damageDivisor;
+	if (damageDivisor != 0){
+		if (damageDivisor == 2)
+			damage /= 1.25;
+		else
+			damage /= damageDivisor;
+	}
 
 	return damage;
 }
@@ -1578,7 +1586,7 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 			int attackerAccuracy = creoAttacker->getSkillMod(data.getCommand()->getAccuracySkillMod());
 			int targetDefense = targetCreature->getSkillMod("force_defense");
 
-			float attackerRoll = (float)System::random(249) + 1.f;
+			float attackerRoll = (float)System::random(300) + 10.f;
 			float defenderRoll = (float)System::random(150) + 25.f;
 
 			float accTotal = hitChanceEquation(attackerAccuracy, attackerRoll, targetDefense, defenderRoll);
@@ -1654,13 +1662,13 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 		// saber block is special because it's just a % chance to block based on the skillmod
 		if (def == "saber_block") {
 			if ((attacker->isPlayerCreature() && weapon->getAttackType() == SharedWeaponObjectTemplate::RANGEDATTACK) && attacker->asCreatureObject()->hasSkill("combat_bountyhunter_master") && !(weapon->isThrownWeapon() || weapon->isSpecialHeavyWeapon())){
-				if (System::random(105) < targetCreature->getSkillMod(def)){
+				if (System::random(105) < (targetCreature->getSkillMod(def) *.71)){
 					return RICOCHET;
 				} else {
 					return HIT;
 				}
 			} else if (!(attacker->isTurret() || weapon->isThrownWeapon()) && ((weapon->isHeavyWeapon() || weapon->isSpecialHeavyWeapon() || (weapon->getAttackType() == SharedWeaponObjectTemplate::RANGEDATTACK)))){
-				if (System::random(100) < targetCreature->getSkillMod(def)){
+				if (System::random(100) < (targetCreature->getSkillMod(def) * .71)){
 					return RICOCHET;
 				} else {
 					return HIT;
