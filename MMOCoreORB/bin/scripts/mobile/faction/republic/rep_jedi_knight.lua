@@ -30,7 +30,9 @@ rep_jedi_knight = Creature:new {
 	templates = {
 		"object/mobile/dressed_jedi_knight_01.iff",
 		"object/mobile/dressed_jedi_knight_02.iff",
-		"object/mobile/dressed_neja_bertolo.iff"},
+		"object/mobile/dressed_neja_bertolo.iff"
+		},
+
 	lootGroups = {},
 	weapons = {"light_jedi_weapons_basic"},
 	conversationTemplate = "imperialRecruiterConvoTemplate",

@@ -99,7 +99,7 @@ qualdo_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns =
 			{
@@ -119,8 +119,8 @@ qualdo_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -187,8 +187,8 @@ wedge_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "imperial_first_lieutenant", npcName = "Imperial First Lieutenant" },
-				{ npcTemplate = "imperial_staff_corporal", npcName = "Imperial Staff Corporal" }
+				{ npcTemplate = "imperial_first_lieutenant", npcName = "Republic First Lieutenant" },
+				{ npcTemplate = "imperial_staff_corporal", npcName = "Republic Staff Corporal" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -205,10 +205,10 @@ wedge_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns =
 			{
@@ -228,8 +228,8 @@ wedge_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns =
 			{
@@ -254,7 +254,7 @@ leia_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -285,8 +285,8 @@ leia_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -304,7 +304,7 @@ leia_missions =
 			secondarySpawns = {},
 			itemSpawns =
 			{
-				{ itemTemplate = "object/tangible/mission/mission_datadisk.iff", itemName = "Imperial Codes" }
+				{ itemTemplate = "object/tangible/mission/mission_datadisk.iff", itemName = "Republic Codes" }
 			},
 			rewards =
 			{
@@ -316,12 +316,12 @@ leia_missions =
 			planetName = "corellia",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_imperial_commander", npcName = "Imperial Undercover Commander" }
+				{ npcTemplate = "theme_park_imperial_commander", npcName = "Republic Undercover Commander" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -459,8 +459,8 @@ han_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -495,9 +495,9 @@ ackbar_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},
@@ -549,8 +549,8 @@ ackbar_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns =
 			{
@@ -566,12 +566,12 @@ ackbar_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-437" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-871" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-437" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-871" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -606,12 +606,12 @@ mon_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper_squad_leader", npcName = "Strike Team Leader" }
+				{ npcTemplate = "Clonetrooper_squad_leader", npcName = "Strike Team Leader" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-221" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-982" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-221" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-982" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -629,8 +629,8 @@ mon_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-179" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-322" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-179" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-322" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -643,12 +643,12 @@ mon_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper_squad_leader", npcName = "TK-1132" }
+				{ npcTemplate = "Clonetrooper_squad_leader", npcName = "CT-1132" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-658" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-459" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-658" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-459" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -665,8 +665,8 @@ mon_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-134" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-873" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-134" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-873" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -679,12 +679,12 @@ mon_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "imperial_general", npcName = "Imperial General" }
+				{ npcTemplate = "imperial_general", npcName = "Republic General" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-297" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-447" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-297" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-447" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -702,12 +702,12 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper_squad_leader", npcName = "TK-419" }
+				{ npcTemplate = "Clonetrooper_squad_leader", npcName = "CT-419" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-447" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-428" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-447" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-428" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -720,7 +720,7 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_imperial_engineer", npcName = "Rebel Contact" }
+				{ npcTemplate = "theme_park_imperial_engineer", npcName = "Separatist Contact" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},
@@ -734,12 +734,12 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper_squad_leader", npcName = "TK-770" }
+				{ npcTemplate = "Clonetrooper_squad_leader", npcName = "CT-770" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-400" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-105" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-400" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-105" }
 			},
 			itemSpawns = {},
 			rewards =

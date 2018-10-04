@@ -3948,6 +3948,16 @@
 </resource>
 
 <resource>
+<SpawnName>Lleukuko</SpawnName>
+<resType>wheat_wild_dathomir</resType>
+<attribute name="res_decay_resist">417</attribute>
+<attribute name="res_flavor">650</attribute>
+<attribute name="res_potential_energy">495</attribute>
+<attribute name="res_quality">628</attribute>
+<planet>dathomir</planet>
+</resource>
+
+<resource>
 <SpawnName>Lligo</SpawnName>
 <resType>seafood_crustacean_naboo</resType>
 <attribute name="res_decay_resist">881</attribute>
@@ -4088,6 +4098,16 @@
 <attribute name="res_potential_energy">374</attribute>
 <attribute name="res_quality">170</attribute>
 <planet>lok</planet>
+</resource>
+
+<resource>
+<SpawnName>Maya</SpawnName>
+<resType>milk_domesticated_tatooine</resType>
+<attribute name="res_decay_resist">259</attribute>
+<attribute name="res_flavor">326</attribute>
+<attribute name="res_potential_energy">679</attribute>
+<attribute name="res_quality">660</attribute>
+<planet>tatooine</planet>
 </resource>
 
 <resource>
@@ -4270,16 +4290,6 @@
 <attribute name="res_decay_resist">819</attribute>
 <attribute name="res_quality">867</attribute>
 <planet>yavin4</planet>
-</resource>
-
-<resource>
-<SpawnName>Movae</SpawnName>
-<resType>milk_domesticated_tatooine</resType>
-<attribute name="res_decay_resist">436</attribute>
-<attribute name="res_flavor">587</attribute>
-<attribute name="res_potential_energy">315</attribute>
-<attribute name="res_quality">728</attribute>
-<planet>tatooine</planet>
 </resource>
 
 <resource>
@@ -6572,16 +6582,6 @@
 <attribute name="res_shock_resistance">309</attribute>
 <attribute name="res_toughness">327</attribute>
 <planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Svidri</SpawnName>
-<resType>wheat_wild_dathomir</resType>
-<attribute name="res_decay_resist">378</attribute>
-<attribute name="res_flavor">523</attribute>
-<attribute name="res_potential_energy">661</attribute>
-<attribute name="res_quality">552</attribute>
-<planet>dathomir</planet>
 </resource>
 
 <resource>
