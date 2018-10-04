@@ -1,7 +1,7 @@
 novatrooper_cadet = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper_novatrooper_cadet",
-	randomNameType = NAME_STORMTROOPER,
-	randomNameTag = true,
+objectName = "@mob/creature_names:clonetrooper_cadet",
+randomNameType = NAME_SWAMPTROOPER,
+randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 72,
@@ -27,7 +27,8 @@ novatrooper_cadet = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_stormtrooper_black_gold.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
+
 	lootGroups = {
 		{
 			groups = {
@@ -40,7 +41,7 @@ novatrooper_cadet = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster)

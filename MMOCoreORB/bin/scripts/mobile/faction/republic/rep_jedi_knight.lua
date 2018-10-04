@@ -28,14 +28,13 @@ rep_jedi_knight = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_jedi_trainer_old_human_male_01.iff",
-		"object/mobile/dressed_jedi_trainer_chiss_male_01.iff",
-		"object/mobile/dressed_jedi_trainer_nikto_male_01.iff",
-		"object/mobile/dressed_jedi_trainer_twilek_female_01.iff",
-		"object/mobile/dressed_tiberus_anderlock.iff",
-		"object/mobile/dressed_neja_bertolo.iff"},
+		"object/mobile/dressed_jedi_knight_01.iff",
+		"object/mobile/dressed_jedi_knight_02.iff",
+		"object/mobile/dressed_neja_bertolo.iff"
+		},
+
 	lootGroups = {},
-	weapons = {"light_jedi_weapons"},
+	weapons = {"light_jedi_weapons_basic"},
 	conversationTemplate = "imperialRecruiterConvoTemplate",
 	attacks = merge(lightsabermaster,forcepowermaster)
 }

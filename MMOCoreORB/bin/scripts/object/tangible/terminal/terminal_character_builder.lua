@@ -1547,7 +1547,16 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Jedi Items",
 			{
 				"Color Crystal", "color_crystals",
-				"Krayt Pearl", "krayt_pearls"
+				"Krayt Pearl", "krayt_pearls",
+				"Dark Blue 1H", "object/weapon/melee/sword/sword_lightsaber_darkblue.iff",
+				"Blue 1H", "object/weapon/melee/sword/sword_lightsaber_blue.iff",
+				"Green 1H", "object/weapon/melee/sword/sword_lightsaber_lightgreen.iff",
+				"Dark Blue 2H", "object/weapon/melee/2h_sword/2h_sword_lightsaber_darkblue.iff",
+				"Blue 2H", "object/weapon/melee/2h_sword/2h_sword_lightsaber_blue.iff",
+				"Green 2H", "object/weapon/melee/2h_sword/2h_sword_lightsaber_lightgreen.iff",
+				"Blue Polearm", "object/weapon/melee/polearm/lance_lightsaber_blue.iff",
+				"Dark Blue Polearm", "object/weapon/melee/polearm/lance_lightsaber_darkblue.iff",
+				"Green Polearm", "object/weapon/melee/polearm/lance_lightsaber_lightgreen.iff"
 			},
 			--"Attachments",
 			--{

@@ -1,6 +1,6 @@
 novatrooper = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper_novatrooper",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -27,7 +27,8 @@ novatrooper = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_stormtrooper_black_gold.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
+
 	lootGroups = {
 		{
 			groups = {
@@ -40,7 +41,7 @@ novatrooper = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster)
