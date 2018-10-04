@@ -97,3 +97,4 @@ includeFile("weapon/groups/nilyahin_tribunal.lua")
 
 includeFile("weapon/groups/clonetrooper_weapons.lua")
 includeFile("weapon/groups/magnaguard_weapons.lua")
+includeFile("weapon/groups/light_jedi_weapons_basic.lua")
