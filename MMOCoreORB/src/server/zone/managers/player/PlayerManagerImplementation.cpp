@@ -1727,25 +1727,41 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 	if (playerObject == NULL)
 		return 0;
 	int xp;
-	if (amount <= 0 || xpType == "jedi_general" || xpType == "gcw_currency_rebel" || xpType == "gcw_currency_imperial" ){
+	if (amount <= 0 || xpType == "gcw_currency_rebel" || xpType == "gcw_currency_imperial" ){
 		xp = playerObject->addExperience(xpType, amount);
+	} else if (xpType == "jedi_general" ) {
+		float speciesModifier = 1.f;
+		float entBonus = 1.f;
+		if (amount > 0){
+			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
+			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100); 
+		}
+		xp = playerObject->addExperience(xpType, (amount * 2 * entBonus * speciesModifier));
+
 	} else if (xpType == "imagedesigner" ||
 		xpType == "music" || 
 		xpType == "dance" ||
 		xpType == "entertainer_healing" ||
 		xpType == "bio_engineer_dna_harvesting"){
-			xp = playerObject->addExperience(xpType, (amount * 10));
 			float speciesModifier = 1.f;
+			float entBonus = 1.f;
 
-			if (amount > 0)
+			if (amount > 0){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
+				entBonus = (player->getSkillMod("private_ent_xp_gain") / 100); 
+			}
+			if (applyModifiers)
+				xp = playerObject->addExperience(xpType, (amount * 10 * entBonus * speciesModifier));
 
 	} else {
 		float speciesModifier = 1.f;
-		if (amount > 0)
+		float entBonus = 1.f;
+		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
+			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
+		}
 		if (applyModifiers)
-			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * globalExpMultiplier));
+			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * entBonus * globalExpMultiplier));
 		else
 			xp = playerObject->addExperience(xpType, (int)amount);
 	}
