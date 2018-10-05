@@ -1092,7 +1092,7 @@ int DirectorManager::createEvent(lua_State* L) {
 			pevent->setKey(key);
 			pevent->setScreenplay(play);
 			pevent->setArgs(args);
-			pevent->setTimeStamp(mili);
+			pevent->setMiliDiff(mili);
 			pevent->setCurTime(currentTime);
 			pevent->setScreenplayTask(task);
 
@@ -1178,7 +1178,7 @@ int DirectorManager::createServerEvent(lua_State* L) {
 	Reference<ScreenPlayTask*> task = new ScreenPlayTask(NULL, key, play, "");
 
 	Reference<PersistentEvent*> pevent = new PersistentEvent();
-	pevent->setTimeStamp(mili);
+	pevent->setMiliDiff(mili);
 	pevent->setCurTime(currentTime);
 	pevent->setEventName(eventName);
 	pevent->setKey(key);
@@ -1251,7 +1251,7 @@ int DirectorManager::rescheduleServerEvent(lua_State* L) {
 	Time curTime;
 	uint64 currentTime = curTime.getMiliTime();
 
-	pEvent->setTimeStamp(mili);
+	pEvent->setMiliDiff(mili);
 	pEvent->setCurTime(currentTime);
 	task->reschedule(mili);
 
@@ -1275,9 +1275,9 @@ int DirectorManager::getServerEventTimeLeft(lua_State* L) {
 	else {
 		Time curTime;
 		uint64 currentTime = curTime.getMiliTime();
-		int origTime = pEvent->getCurTime();
-		int timeStamp = pEvent->getTimeStamp();
-		int timeLeft = origTime + timeStamp - currentTime;
+		uint64 origTime = pEvent->getCurTime();
+		uint64 timeStamp = pEvent->getMiliDiff();
+		uint64 timeLeft = origTime + timeStamp - currentTime;
 
 		lua_pushinteger(L, timeLeft);
 	}

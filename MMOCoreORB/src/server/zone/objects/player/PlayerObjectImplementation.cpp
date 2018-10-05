@@ -285,9 +285,11 @@ int PlayerObjectImplementation::calculateBhReward() {
 	int minReward = 60000; // Minimum reward for a player bounty
 	int maxReward = 1000000; // Maximum reward for a player bounty
 
-	int reward = minReward;
+	if (getJediState() >= 4) // Minimum if player is knight
+		minReward = 50000;
 
 	int skillPoints = getSpentJediSkillPoints();
+	int reward = skillPoints * 1000;
 	ManagedReference<CreatureObject*> creature = dynamic_cast<CreatureObject*>(parent.get().get());
 
 	reward = skillPoints * 2000;
@@ -295,10 +297,14 @@ int PlayerObjectImplementation::calculateBhReward() {
 		int playerBounty = 100000 + (creature->getScreenPlayState("deathBounty") * 100000);
 		reward += playerBounty;
 	}
+
+	int frsRank = getFrsData()->getRank();
+
+	if (frsRank > 0)
+		reward += frsRank * 100000; // +100k per frs rank
+
 	if (reward < minReward)
 		reward = minReward;
-	else if (reward > maxReward)
-		reward = maxReward;
 
 	return reward;
 }
@@ -1329,6 +1335,7 @@ void PlayerObjectImplementation::notifyOnline() {
 		if (!missionManager->hasPlayerBountyTargetInList(id))
 			missionManager->addPlayerToBountyList(id, calculateBhReward());
 		else {
+			missionManager->updatePlayerBountyReward(id, calculateBhReward());
 			missionManager->updatePlayerBountyOnlineStatus(id, true);
 			missionManager->updatePlayerBountyReward(id, calculateBhReward());
 		}
