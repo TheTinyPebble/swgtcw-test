@@ -96,23 +96,23 @@ object_tangible_wearables_armor_composite_armor_composite_bracer_l = object_tang
 	specialResists = ELECTRICITY,
 
 	-- These are default Blue Frog stats
-	healthEncumbrance = 80,
-	actionEncumbrance = 80,
-	mindEncumbrance = 80,
+	healthEncumbrance = 0,
+	actionEncumbrance = 0,
+	mindEncumbrance = 0,
 
 	maxCondition = 30000,
 
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	kinetic = 80,
-	energy = 80,
-	electricity = 80,
+	kinetic = 50,
+	energy = 50,
+	electricity = 50,
 	stun = 35,
-	blast = 80,
-	heat = 80,
-	cold = 80,
-	acid = 80,
+	blast = 50,
+	heat = 50,
+	cold = 50,
+	acid = 50,
 	lightSaber = 0,
 
 	numberExperimentalProperties = {1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1},
@@ -120,8 +120,8 @@ object_tangible_wearables_armor_composite_armor_composite_bracer_l = object_tang
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "null", "exp_durability", "exp_quality", "exp_resistance", "exp_durability", "exp_durability", "exp_durability", "null", "null", "exp_resistance", "null"},
 	experimentalSubGroupTitles = {"null", "null", "sockets", "hit_points", "armor_effectiveness", "armor_integrity", "armor_health_encumbrance", "armor_action_encumbrance", "armor_mind_encumbrance", "armor_rating", "armor_special_type", "armor_special_effectiveness", "armor_special_integrity"},
-	experimentalMin = {0, 0, 0, 1000, 1, 10000, 25, 22, 25, 1, 0, 0, 0},
-	experimentalMax = {0, 0, 0, 1000, 20, 30000, 15, 13, 15, 1, 0, 0, 0},
+	experimentalMin = {0, 0, 0, 1000, 1, 10000, 0, 0, 0, 1, 0, 0, 0},
+	experimentalMax = {0, 0, 0, 1000, 20, 30000, 0, 0, 0, 1, 0, 0, 0},
 	experimentalPrecision = {0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 4, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1},
 }
