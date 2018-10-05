@@ -1667,8 +1667,14 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 				} else {
 					return HIT;
 				}
+			 } else if ((attacker->isPlayerCreature() && weapon->getAttackType() == SharedWeaponObjectTemplate::RANGEDATTACK) && !(weapon->isThrownWeapon() || weapon->isSpecialHeavyWeapon())){
+				if (System::random(100) < (targetCreature->getSkillMod(def) *.71)){
+					return RICOCHET;
+				} else {
+					return HIT;
+				}
 			} else if (!(attacker->isTurret() || weapon->isThrownWeapon()) && ((weapon->isHeavyWeapon() || weapon->isSpecialHeavyWeapon() || (weapon->getAttackType() == SharedWeaponObjectTemplate::RANGEDATTACK)))){
-				if (System::random(100) < (targetCreature->getSkillMod(def) * .71)){
+				if (System::random(100) < targetCreature->getSkillMod(def)){
 					return RICOCHET;
 				} else {
 					return HIT;
