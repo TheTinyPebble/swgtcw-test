@@ -1640,7 +1640,7 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* target
 	int postureDefense = calculateTargetPostureModifier(weapon, targetCreature);
 
 	//info("Defender posture defense is " + String::valueOf(postureDefense), true);
-	float attackerRoll = (float)System::random(249) + 1.f;
+	float attackerRoll = (float)System::random(300) + 10.f;
 	float defenderRoll = (float)System::random(150) + 25.f;
 
 	// TODO (dannuic): add the trapmods in here somewhere (defense down trapmods)
