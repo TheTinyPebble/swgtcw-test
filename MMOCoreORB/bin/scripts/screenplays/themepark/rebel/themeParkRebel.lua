@@ -24,12 +24,12 @@ c3po_missions =
 			planetName = "corellia",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_captain", npcName = "Captain Montrasword" }
+				{ npcTemplate = "cis_battle_droid_captain", npcName = "Battle Droid Captain" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
 			{
-				{ itemTemplate = "object/tangible/medicine/crafted/medpack_wound_health_a.iff", itemName = "Medicine" }
+				{ itemTemplate = "object/tangible/medicine/crafted/medpack_enhance_strength_d.iff", itemName = "Supplies" }
 			},
 			rewards =
 			{
