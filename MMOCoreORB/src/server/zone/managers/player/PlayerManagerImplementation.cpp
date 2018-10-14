@@ -1734,7 +1734,9 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		float entBonus = 1.f;
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100); 
+			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
+			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f; 
+
 		}
 		xp = playerObject->addExperience(xpType, (amount * 2 * entBonus * speciesModifier));
 
@@ -1748,7 +1750,8 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 
 			if (amount > 0){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-				entBonus = (player->getSkillMod("private_ent_xp_gain") / 100); 
+				entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
+				(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f; 
 			}
 			if (applyModifiers)
 				xp = playerObject->addExperience(xpType, (amount * 10 * entBonus * speciesModifier));
@@ -1759,6 +1762,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
+			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f; 
 		}
 		if (applyModifiers)
 			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * entBonus * globalExpMultiplier));
