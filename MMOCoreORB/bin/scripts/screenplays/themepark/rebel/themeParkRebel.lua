@@ -29,7 +29,7 @@ c3po_missions =
 			secondarySpawns = {},
 			itemSpawns =
 			{
-				{ itemTemplate = "object/tangible/medicine/crafted/medpack_enhance_strength_d.iff", itemName = "Supplies" }
+				{ itemTemplate = "object/factory/factory_crate_armor.iff", itemName = "Supplies" }
 			},
 			rewards =
 			{
