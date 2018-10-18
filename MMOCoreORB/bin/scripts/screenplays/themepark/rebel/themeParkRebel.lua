@@ -29,7 +29,7 @@ c3po_missions =
 			secondarySpawns = {},
 			itemSpawns =
 			{
-				{ itemTemplate = "object/factory/factory_crate_armor.iff", itemName = "Supplies" }
+				{ itemTemplate = "tangible/ship/crafted/weapon/missile/wpn_launcher_proton_mk2.iff", itemName = "Supplies" }
 			},
 			rewards =
 			{
