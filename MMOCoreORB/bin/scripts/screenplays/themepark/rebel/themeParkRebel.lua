@@ -720,7 +720,7 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_imperial_engineer", npcName = "Separatist Contact" }
+				{ npcTemplate = "theme_park_imperial_engineer", npcName = "Republic Engineer" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},
@@ -752,7 +752,7 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_bothan_spy", npcName = "Nateba Kurr" }
+				{ npcTemplate = "cis_battle_droid_pilot", npcName = "Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
@@ -770,7 +770,7 @@ jan_missions =
 			missionDescription = "GENERAL DODONNA needs you to DELIVER the INFORMATION to REBEL PILOT",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_bothan_spy", npcName = "Pilot" }
+				{ npcTemplate = "cis_battle_droid_pilot", npcName = "Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
