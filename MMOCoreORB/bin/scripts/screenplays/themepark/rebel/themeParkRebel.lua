@@ -855,7 +855,7 @@ luke_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_supervisor", npcName = "Tribesman" }
+				{ npcTemplate = "cis_battle_droid_pilot", npcName = "Ace Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
