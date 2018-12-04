@@ -242,7 +242,6 @@ class PlayerObject extends IntangibleObject {
 	protected Time lastGcwPvpCombatActionTimestamp;
 
 	@dereferenced
-<<<<<<< HEAD
 	protected Time lastJediPvpCombatActionTimestamp;
 
 	@dereferenced
@@ -250,9 +249,6 @@ class PlayerObject extends IntangibleObject {
 
 	@dereferenced
 	protected Reference<PvpTefRemovalTask> pvpTefTask;
-=======
-	protected transient Reference<PvpTefRemovalTask> pvpTefTask;
->>>>>>> fbb28fb7e71846de8a07b3194319a46c1abeb117
 
 	@dereferenced
 	protected Time lastDigestion;
@@ -1667,7 +1663,6 @@ class PlayerObject extends IntangibleObject {
 	@local
 	public native Time getLastGcwPvpCombatActionTimestamp();
 
-<<<<<<< HEAD
 	@dereferenced
 	@local
 	public native Time getLastJediPvpCombatActionTimestamp();
@@ -1677,9 +1672,6 @@ class PlayerObject extends IntangibleObject {
 	public native Time getLastJediAttackableTimestamp();
 	
 	public native void updateLastPvpCombatActionTimestamp(boolean updateGcwAction, boolean updateBhAction, boolean updateJediAction);
-=======
-	public native void updateLastPvpCombatActionTimestamp(boolean updateGcwAction, boolean updateBhAction);
->>>>>>> fbb28fb7e71846de8a07b3194319a46c1abeb117
 
 	public native void updateLastBhPvpCombatActionTimestamp();
 
@@ -1693,15 +1685,11 @@ class PlayerObject extends IntangibleObject {
 
 	public native boolean hasBhTef();
 
-<<<<<<< HEAD
 	public native boolean hasJediTef();
 
 	public native boolean isJediAttackable();
 	
 	public native void schedulePvpTefRemovalTask(boolean removeGcwTefNow, boolean removeBhTefNow, boolean removeJediTefNow);
-=======
-	public native void schedulePvpTefRemovalTask(boolean removeGcwTefNow, boolean removeBhTefNow);
->>>>>>> fbb28fb7e71846de8a07b3194319a46c1abeb117
 
 	public native void schedulePvpTefRemovalTask(boolean removeNow = false);
 
@@ -1919,7 +1907,6 @@ class PlayerObject extends IntangibleObject {
 		pvpRating = rating;
 	}
 
-<<<<<<< HEAD
 	@read
 	public int getRatingReset() {
 		return ratingReset;
@@ -1929,8 +1916,6 @@ class PlayerObject extends IntangibleObject {
 		ratingReset = reset;
 	}
 	
-=======
->>>>>>> fbb28fb7e71846de8a07b3194319a46c1abeb117
 	public boolean isCloning() {
 		return isPlayerCloning;
 	}
