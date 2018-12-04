@@ -15,3 +15,5 @@ includeFile("faction/cis/cis_surface_marshall.lua")
 
 includeFile("faction/cis/cis_magnaguard.lua")
 includeFile("faction/cis/general_grievous.lua")
+
+includeFile("faction/cis/cis_resistance_separatist.lua")
