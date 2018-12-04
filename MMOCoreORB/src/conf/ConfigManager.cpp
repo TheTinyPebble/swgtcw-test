@@ -76,6 +76,8 @@ ConfigManager::ConfigManager() {
 	syncLogOutput = false;
 	pathfinderLogJSON = false;
 	luaLogJSON = false;
+
+	restPort = 0;
 }
 
 bool ConfigManager::loadConfigData() {
@@ -161,8 +163,12 @@ bool ConfigManager::loadConfigData() {
 	luaLogJSON = getGlobalByte("LuaLogJSON");
 	pathfinderLogJSON = getGlobalByte("PathfinderLogJSON");
 
+	cleanupMailCount = getGlobalInt("CleanupMailCount");
+
 	termsOfService = getGlobalString("TermsOfService");
 	tosVersion = getGlobalInt("TermsOfServiceVersion");
+
+	restPort = getGlobalInt("RESTServerPort");
 
 	return true;
 }

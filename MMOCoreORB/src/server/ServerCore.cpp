@@ -6,15 +6,16 @@
 
 #include <type_traits>
 
+#include "db/MySqlDatabase.h"
 #include "db/ServerDatabase.h"
 #include "db/MantisDatabase.h"
 
 #include "server/chat/ChatManager.h"
 #include "server/login/LoginServer.h"
-#include "features/Features.h"
 #include "ping/PingServer.h"
 #include "status/StatusServer.h"
 #include "web/WebServer.h"
+#include "web/RESTServer.h"
 #include "server/zone/ZoneServer.h"
 
 #include "server/zone/managers/object/ObjectManager.h"
@@ -43,6 +44,7 @@ ServerCore::ServerCore(bool truncateDatabases, SortedVector<String>& args) :
 	webServer = nullptr;
 	database = nullptr;
 	mantisDatabase = nullptr;
+	restServer = nullptr;
 
 	truncateAllData = truncateDatabases;
 	arguments = args;
@@ -69,6 +71,31 @@ public:
 		zoneServer->printInfo();
 	}
 };
+
+void ServerCore::finalizeContext() {
+	Core::finalizeContext();
+
+	server::db::mysql::MySqlDatabase::finalizeLibrary();
+}
+
+void ServerCore::initializeContext(int logLevel) {
+	server::db::mysql::MySqlDatabase::initializeLibrary();
+
+	class ThreadHook : public ThreadInitializer {
+	public:
+		void onThreadStart(Thread* thread) final {
+			server::db::mysql::MySqlDatabase::onThreadStart();
+		}
+
+		void onThreadEnd(Thread* thread) final {
+			server::db::mysql::MySqlDatabase::onThreadEnd();
+		}
+	};
+
+	Thread::setThreadInitializer(new ThreadHook());
+
+	Core::initializeContext(logLevel);
+}
 
 void ServerCore::signalShutdown() {
 	shutdownBlockMutex.lock();
@@ -97,14 +124,12 @@ void ServerCore::initialize() {
 
 		const String& orbaddr = configManager->getORBNamingDirectoryAddress();
 		orb = DistributedObjectBroker::initialize(orbaddr,
-//				DistributedObjectBroker::NAMING_DIRECTORY_PORT);
 				configManager->getORBNamingDirectoryPort());
 
 		orb->setCustomObjectManager(objectManager);
 
 		StringBuffer metricsMsg;
-		metricsMsg << "METRICS: " << String::valueOf(configManager->shouldUseMetrics()) << " " << configManager->getMetricsHost() << " " << String::valueOf(configManager->getMetricsPort()) << endl;
-
+		metricsMsg << "MetricsServer: " << String::valueOf(configManager->shouldUseMetrics()) << " " << configManager->getMetricsHost() << " " << String::valueOf(configManager->getMetricsPort());
 		info(metricsMsg, true);
 
 		if (configManager->shouldUseMetrics()) {
@@ -220,6 +245,11 @@ void ServerCore::initialize() {
 		statiscticsTask->schedulePeriodic(10000, 10000);
 #endif
 
+		if (configManager->getRESTPort()) {
+			restServer = new server::web3::RESTServer(configManager->getRESTPort());
+			restServer->start();
+		}
+
 		info("initialized", true);
 
 		if (arguments.contains("playercleanup") && zoneServer != nullptr) {
@@ -251,6 +281,13 @@ void ServerCore::run() {
 
 void ServerCore::shutdown() {
 	info("shutting down server..", true);
+
+	if (restServer) {
+		restServer->stop();
+
+		delete restServer;
+		restServer = nullptr;
+	}
 
 	ObjectManager* objectManager = ObjectManager::instance();
 
@@ -367,7 +404,7 @@ void ServerCore::shutdown() {
 	}
 
 	mysql_thread_end();
-	engine::db::mysql::MySqlDatabase::finalizeLibrary();
+	server::db::mysql::MySqlDatabase::finalizeLibrary();
 
 	NetworkInterface::finalize();
 
