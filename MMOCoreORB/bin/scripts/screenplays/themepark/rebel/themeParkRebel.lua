@@ -1,4 +1,4 @@
-THEME_PARK_REBEL_BADGE = 107
+evousTHEME_PARK_REBEL_BADGE = 107
 
 c3po_missions =
 	{
@@ -16,7 +16,7 @@ c3po_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 }
+				{ rewardType = "credits", amount = 500 }
 			}
 		},
 		{
@@ -33,7 +33,7 @@ c3po_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 }
+				{ rewardType = "credits", amount = 1000 }
 			}
 		},
 		{
@@ -47,7 +47,7 @@ c3po_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 150 }
+				{ rewardType = "credits", amount = 1500 }
 			}
 		},
 		{
@@ -64,7 +64,7 @@ c3po_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 },
+				{ rewardType = "credits", amount = 2000 },
 				{ rewardType = "faction", faction = "rebel", amount = 50 },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_c_3po" }
 			}
@@ -87,7 +87,7 @@ qualdo_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 }
+				{ rewardType = "credits", amount = 2000 }
 			}
 		},
 		{
@@ -107,7 +107,7 @@ qualdo_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 250 }
+				{ rewardType = "credits", amount = 2500 }
 			}
 		},
 		{
@@ -125,7 +125,7 @@ qualdo_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 300 }
+				{ rewardType = "credits", amount = 3000 }
 			}
 		},
 		{
@@ -161,7 +161,7 @@ wedge_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 350 }
+				{ rewardType = "credits", amount = 3500 }
 			}
 		},
 		{
@@ -175,7 +175,7 @@ wedge_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 400 }
+				{ rewardType = "credits", amount = 4000 }
 			}
 		},
 		{
@@ -193,7 +193,7 @@ wedge_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 450 }
+				{ rewardType = "credits", amount = 4500 }
 			}
 		},
 		{
@@ -216,7 +216,7 @@ wedge_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 }
+				{ rewardType = "credits", amount = 5000 }
 			}
 		},
 		{
@@ -259,7 +259,7 @@ leia_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 550 }
+				{ rewardType = "credits", amount = 5500 }
 			}
 		},
 		{
@@ -273,7 +273,7 @@ leia_missions =
 			itemSpawns = { },
 			rewards =
 			{
-				{ rewardType = "credits", amount = 600 }
+				{ rewardType = "credits", amount = 6000 }
 			}
 		},
 		{
@@ -291,7 +291,7 @@ leia_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 650 }
+				{ rewardType = "credits", amount = 6500 }
 			}
 		},
 		{
@@ -308,7 +308,7 @@ leia_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 700 }
+				{ rewardType = "credits", amount = 7000 }
 			}
 		},
 		{
@@ -345,7 +345,7 @@ nien_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 750 }
+				{ rewardType = "credits", amount = 7500 }
 			}
 		},
 		{
@@ -359,7 +359,7 @@ nien_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 800 }
+				{ rewardType = "credits", amount = 8000 }
 			}
 		},
 		{
@@ -373,7 +373,7 @@ nien_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 850 }
+				{ rewardType = "credits", amount = 8500 }
 			}
 		},
 		{
@@ -409,7 +409,7 @@ han_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 900 }
+				{ rewardType = "credits", amount = 9000 }
 			}
 		},
 		{
@@ -428,7 +428,7 @@ han_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 950 }
+				{ rewardType = "credits", amount = 9500 }
 			}
 		},
 		{
@@ -447,7 +447,7 @@ han_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1000 }
+				{ rewardType = "credits", amount = 10000 }
 			}
 		},
 		{
@@ -465,7 +465,7 @@ han_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1050 }
+				{ rewardType = "credits", amount = 10500 }
 			}
 		},
 		{
@@ -503,7 +503,7 @@ ackbar_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1100 }
+				{ rewardType = "credits", amount = 11000 }
 			}
 		},
 		{
@@ -520,7 +520,7 @@ ackbar_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1150 }
+				{ rewardType = "credits", amount = 11500 }
 			}
 		},
 		{
@@ -537,7 +537,7 @@ ackbar_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1200 }
+				{ rewardType = "credits", amount = 12000 }
 			}
 		},
 		{
@@ -558,7 +558,7 @@ ackbar_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1250 }
+				{ rewardType = "credits", amount = 12500 }
 			}
 		},
 		{
@@ -598,7 +598,7 @@ mon_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1300 }
+				{ rewardType = "credits", amount = 13000 }
 			}
 		},
 		{
@@ -616,7 +616,7 @@ mon_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1350 }
+				{ rewardType = "credits", amount = 13500 }
 			}
 		},
 		{
@@ -635,7 +635,7 @@ mon_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1400 }
+				{ rewardType = "credits", amount = 14000 }
 			}
 		},
 		{
@@ -653,7 +653,7 @@ mon_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1450 }
+				{ rewardType = "credits", amount = 14500 }
 			}
 		},
 		{
@@ -671,7 +671,7 @@ mon_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1500 }
+				{ rewardType = "credits", amount = 15000 }
 			}
 		},
 		{
@@ -712,7 +712,7 @@ jan_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1550 }
+				{ rewardType = "credits", amount = 15500 }
 			}
 		},
 		{
@@ -726,7 +726,7 @@ jan_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1600 }
+				{ rewardType = "credits", amount = 16000 }
 			}
 		},
 		{
@@ -744,7 +744,7 @@ jan_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1650 }
+				{ rewardType = "credits", amount = 16500 }
 			}
 		},
 		{
@@ -761,7 +761,7 @@ jan_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1700 }
+				{ rewardType = "credits", amount = 17000 }
 			}
 		},
 		{
@@ -799,7 +799,7 @@ luke_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1750 }
+				{ rewardType = "credits", amount = 17500 }
 			}
 		},
 		{
@@ -816,7 +816,7 @@ luke_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1800 }
+				{ rewardType = "credits", amount = 18000 }
 			}
 		},
 		{
@@ -830,7 +830,7 @@ luke_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1850 }
+				{ rewardType = "credits", amount = 18500 }
 			}
 		},
 		{
@@ -847,7 +847,7 @@ luke_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1900 }
+				{ rewardType = "credits", amount = 19000 }
 			}
 		},
 		{
@@ -865,7 +865,7 @@ luke_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 300 },
-				{ rewardType = "credits", amount = 1950 },
+				{ rewardType = "credits", amount = 19500 },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_luke_skywalker" },
 				{ rewardType = "badge", badge = THEME_PARK_REBEL_BADGE }
 			}
@@ -875,7 +875,7 @@ luke_missions =
 npcMapRebel =
 	{
 		{
-			spawnData = { planetName = "corellia", npcTemplate = "general_grievous", x = -2.3, z = 2.0, y = 4.0, direction = 150, cellID = 8555472, position = STAND },
+			spawnData = { planetName = "corellia", npcTemplate = "theme_b1", x = -2.3, z = 2.0, y = 4.0, direction = 150, cellID = 8555472, position = STAND },
 			worldPosition = { x = -6507.5, y = 5985.7 },
 			npcNumber = 1,
 			stfFile = "@theme_park_rebel/c3po",
