@@ -27,7 +27,11 @@ fbase_imperial_colonel = Creature:new {
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_imperial_colonel_m.iff"},
+	templates = {
+		"object/mobile/dressed_jedi_knight_01.iff",
+		"object/mobile/dressed_jedi_knight_02.iff",
+		"object/mobile/dressed_neja_bertolo.iff"
+		},
 	lootGroups = {
 		{
 			groups = {
@@ -42,10 +46,9 @@ fbase_imperial_colonel = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_medium"},
+	weapons = {"light_jedi_weapons_basic"},
 	conversationTemplate = "imperialRecruiterConvoTemplate",
-	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,carbineernovice,riflemannovice)
+	attacks = merge(lightsabermaster,forcepowermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_imperial_colonel, "fbase_imperial_colonel")

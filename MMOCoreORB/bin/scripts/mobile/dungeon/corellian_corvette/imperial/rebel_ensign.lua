@@ -1,7 +1,6 @@
 rebel_ensign = Creature:new {
-	objectName = "@mob/creature_names:corvette_rebel_ensign",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_battle_droid",
+	customName = "A Battle Droid",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 72,
@@ -27,7 +26,9 @@ rebel_ensign = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_major_human_male_01.iff"},
+	templates = {
+		"object/mobile/battle_droid.iff"
+	},
 	lootGroups = {
 		{
 			groups = {
@@ -40,7 +41,7 @@ rebel_ensign = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_medium"},
+	weapons = {"battle_droid_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	attacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster)

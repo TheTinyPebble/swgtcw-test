@@ -1,7 +1,6 @@
 rebel_admiral = Creature:new {
-	objectName = "@mob/creature_names:corvette_rebel_admiral",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_magnaguard",
+	customName = "A Magnaguard",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 226,
@@ -11,7 +10,7 @@ rebel_admiral = Creature:new {
 	baseXp = 21533,
 	baseHAM = 208000,
 	baseHAMmax = 254000,
-	armor = 0,
+	armor = 2,
 	resists = {80,90,0,0,30,30,80,65,-1},
 	meatType = "",
 	meatAmount = 0,
@@ -27,7 +26,9 @@ rebel_admiral = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_major_zabrak_male_01.iff"},
+	templates = {
+		"object/mobile/magnaguard.iff"
+	},
 	lootGroups = {
 		{
 			groups = {
@@ -40,10 +41,9 @@ rebel_admiral = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_heavy"},
+	weapons = {"magnaguard_weapons"},
 	conversationTemplate = "",
-	reactionStf = "@npc_reaction/military",
-	attacks = merge(commandomaster,marksmanmaster,brawlermaster)
+	attacks = merge(lightsabermaster,pikemanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(rebel_admiral, "rebel_admiral")

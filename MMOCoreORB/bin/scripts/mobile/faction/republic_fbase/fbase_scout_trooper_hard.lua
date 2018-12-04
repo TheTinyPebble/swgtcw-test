@@ -1,6 +1,6 @@
 fbase_scout_trooper_hard = Creature:new {
 	objectName = "@mob/creature_names:fbase_scout_trooper_hard",
-	randomNameType = NAME_SCOUTTROOPER,
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",

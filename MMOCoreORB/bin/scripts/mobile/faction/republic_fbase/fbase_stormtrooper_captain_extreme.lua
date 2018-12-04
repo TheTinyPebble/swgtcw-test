@@ -1,6 +1,6 @@
 fbase_stormtrooper_captain_extreme = Creature:new {
 	objectName = "@mob/creature_names:fbase_stormtrooper_captain_extreme",
-	randomNameType = NAME_STORMTROOPER,
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -28,7 +28,11 @@ fbase_stormtrooper_captain_extreme = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_stormtrooper_captain_black_black.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff",
+		     "object/mobile/dressed_clonetrooper_blue_m.iff",
+		     "object/mobile/dressed_scout_trooper_white_white.iff",
+		     "object/mobile/dressed_clonetrooper_blue_nh_m.iff"
+	},
 	lootGroups = {
 		{
 			groups = {
@@ -43,7 +47,7 @@ fbase_stormtrooper_captain_extreme = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	attacks = merge(carbineermaster,brawlermaster,marksmanmaster,riflemanmid)

@@ -1,7 +1,6 @@
 rebel_first_mate = Creature:new {
-	objectName = "@mob/creature_names:corvette_rebel_mate",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_battle_droid",
+	customName = "A Battle Droid Pilot",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 86,
@@ -27,7 +26,9 @@ rebel_first_mate = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_first_lieutenant_bothan_male_01.iff"},
+	templates = {
+		"object/mobile/death_watch_battle_droid_02.iff"
+		},
 	lootGroups = {
 		{
 			groups = {
@@ -40,7 +41,7 @@ rebel_first_mate = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_medium"},
+	weapons = {"battle_droid_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	attacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster)

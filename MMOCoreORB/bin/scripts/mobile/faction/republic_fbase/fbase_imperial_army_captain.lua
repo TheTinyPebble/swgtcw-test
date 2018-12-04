@@ -1,6 +1,6 @@
 fbase_imperial_army_captain = Creature:new {
 	objectName = "@mob/creature_names:fbase_imperial_army_captain",
-	randomNameType = NAME_GENERIC,
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -27,7 +27,8 @@ fbase_imperial_army_captain = Creature:new {
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_imperial_captain_m.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_blue_nh_m.iff"},
+
 	lootGroups = {
 		{
 			groups = {

@@ -1,7 +1,6 @@
 rebel_commandant = Creature:new {
-	objectName = "@mob/creature_names:corvette_rebel_commandant",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_battle_droid",
+	customName = "A Battle Droid Commando",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 151,
@@ -27,7 +26,9 @@ rebel_commandant = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_general_human_female_02.iff"},
+	templates = {
+		"object/mobile/death_watch_battle_droid.iff"
+		},
 	lootGroups = {
 		{
 			groups = {

@@ -1,6 +1,6 @@
 fbase_stormtrooper_bombardier = Creature:new {
 	objectName = "@mob/creature_names:fbase_stormtrooper_bombardier",
-	randomNameType = NAME_STORMTROOPER,
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -28,7 +28,10 @@ fbase_stormtrooper_bombardier = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_stormtrooper_bombardier_m.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff",
+		     "object/mobile/dressed_clonetrooper_blue_m.iff",
+		     "object/mobile/dressed_clonetrooper_blue_nh_m.iff"
+	},
 	lootGroups = {
 		{
 			groups = {

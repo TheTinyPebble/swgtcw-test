@@ -1,6 +1,6 @@
 fbase_storm_commando_hard = Creature:new {
 	objectName = "@mob/creature_names:fbase_storm_commando_hard",
-	randomNameType = NAME_STORMTROOPER,
+	randomNameType = NAME_DARKTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -28,7 +28,7 @@ fbase_storm_commando_hard = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_stormtrooper_commando1_m.iff"},
+	templates = {"object/mobile/dressed_clone_commando_m.iff"},
 	lootGroups = {
 		{
 			groups = {

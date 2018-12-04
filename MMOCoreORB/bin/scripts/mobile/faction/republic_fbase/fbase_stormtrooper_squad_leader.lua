@@ -1,6 +1,6 @@
 fbase_stormtrooper_squad_leader = Creature:new {
 	objectName = "@mob/creature_names:fbase_stormtrooper_squad_leader",
-	randomNameType = NAME_STORMTROOPER,
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -28,8 +28,9 @@ fbase_stormtrooper_squad_leader = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_stormtrooper_squad_leader_white_white.iff",
-			"object/mobile/dressed_stormtrooper_groupleader_m.iff"
+	templates = {"object/mobile/dressed_clonetrooper_m.iff",
+		     "object/mobile/dressed_clonetrooper_blue_m.iff",
+		     "object/mobile/dressed_clonetrooper_blue_nh_m.iff"
 	},
 	lootGroups = {
 		{
@@ -45,7 +46,7 @@ fbase_stormtrooper_squad_leader = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	attacks = merge(carbineernovice,brawlermaster,marksmanmaster)

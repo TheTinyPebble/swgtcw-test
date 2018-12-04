@@ -1,5 +1,5 @@
 fbase_at_st = Creature:new {
-	objectName = "@mob/creature_names:fbase_at_st",
+	objectName = "@mob/creature_names:at_xt",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 205,
@@ -25,7 +25,7 @@ fbase_at_st = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = NONE,
 
-	templates = {"object/mobile/atst.iff"},
+	templates = {"object/mobile/atxt.iff"},
 	lootGroups = {},
 	conversationTemplate = "",
 	defaultAttack = "defaultdroidattack",

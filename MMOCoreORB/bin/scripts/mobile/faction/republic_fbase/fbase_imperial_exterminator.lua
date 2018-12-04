@@ -1,6 +1,6 @@
 fbase_imperial_exterminator = Creature:new {
 	objectName = "@mob/creature_names:fbase_imperial_exterminator",
-	randomNameType = NAME_GENERIC,
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -27,7 +27,7 @@ fbase_imperial_exterminator = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_imperial_exterminator.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_blue_nh_m.iff"},
 	lootGroups = {
 		{
 			groups = {

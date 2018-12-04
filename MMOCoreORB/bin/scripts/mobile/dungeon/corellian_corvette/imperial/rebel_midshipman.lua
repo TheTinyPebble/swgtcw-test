@@ -1,7 +1,6 @@
 rebel_midshipman = Creature:new {
-	objectName = "@mob/creature_names:corvet_rebel_midshipman",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_battle_droid",
+	customName = "A Battle Droid Captain",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 136,
@@ -28,12 +27,7 @@ rebel_midshipman = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_crewman_human_female_01.iff",
-		"object/mobile/dressed_rebel_crewman_human_female_02.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_01.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_02.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_03.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_04.iff"
+		"object/mobile/death_watch_battle_droid_03.iff"
 	},
 	lootGroups = {
 		{
@@ -47,7 +41,7 @@ rebel_midshipman = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_medium"},
+	weapons = {"battle_droid_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	attacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster)

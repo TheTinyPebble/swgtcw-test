@@ -1,7 +1,6 @@
 rebel_rear_admiral = Creature:new {
-	objectName = "@mob/creature_names:corvette_rebel_rear_admiral",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:geonosian_droideka_crazed",
+	customName = "A Separatist Droideka",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 200,
@@ -27,12 +26,7 @@ rebel_rear_admiral = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_high_general_sullustan_male_01.iff",
-		"object/mobile/dressed_rebel_high_general_old_twilek_female_01.iff",
-		"object/mobile/dressed_rebel_high_general_human_male_02.iff",
-		"object/mobile/dressed_rebel_high_general_human_female_01.iff",
-		"object/mobile/dressed_rebel_high_general_moncal_male_01.iff"
-	},
+	templates = {"object/mobile/droideka.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -48,7 +42,8 @@ rebel_rear_admiral = Creature:new {
 	weapons = {"rebel_weapons_heavy"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(commandomaster,marksmanmaster,brawlermaster)
+	defaultAttack = "attack",
+	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
 }
 
 CreatureTemplates:addCreatureTemplate(rebel_rear_admiral, "rebel_rear_admiral")

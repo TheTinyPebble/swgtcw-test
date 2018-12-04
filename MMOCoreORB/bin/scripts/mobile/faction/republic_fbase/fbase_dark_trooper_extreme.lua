@@ -26,9 +26,8 @@ fbase_dark_trooper_extreme = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
-	scale = 1.5,
 
-	templates = {"object/mobile/dressed_dark_trooper_black_hole.iff"},
+	templates = {"object/mobile/dressed_clone_commando_m.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -44,7 +43,7 @@ fbase_dark_trooper_extreme = Creature:new {
 			}
 		}
 	},
-	weapons = {"dark_trooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	attacks = merge(riflemanmaster,marksmanmaster,fencermaster,brawlermaster)

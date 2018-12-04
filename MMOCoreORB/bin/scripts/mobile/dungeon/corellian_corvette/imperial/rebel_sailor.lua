@@ -1,7 +1,6 @@
 rebel_sailor = Creature:new {
-	objectName = "@mob/creature_names:corvette_rebel_sailor",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_battle_droid",
+	customName = "A Battle Droid Squad Leader",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 96,
@@ -27,13 +26,7 @@ rebel_sailor = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_crewman_human_female_01.iff",
-		"object/mobile/dressed_rebel_crewman_human_female_02.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_01.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_02.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_03.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_04.iff"
-	},
+templates = {"object/mobile/battle_droid_red.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -46,7 +39,7 @@ rebel_sailor = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_medium"},
+	weapons = {"battle_droid_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	attacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster)
