@@ -1732,9 +1732,13 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 	} else if (xpType == "jedi_general" ) {
 		float speciesModifier = 1.f;
 		float entBonus = 1.f;
+		info("XP before calculation" + String::valueOf(amount), true);
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100); 
+			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
+			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
+			info ("entBonus: " + String::valueOf(entBonus), true); 
+
 		}
 		xp = playerObject->addExperience(xpType, (amount * 2 * entBonus * speciesModifier));
 
@@ -1745,20 +1749,27 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		xpType == "bio_engineer_dna_harvesting"){
 			float speciesModifier = 1.f;
 			float entBonus = 1.f;
-
+			info("XP before calculation" + String::valueOf(amount), true);
 			if (amount > 0){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-				entBonus = (player->getSkillMod("private_ent_xp_gain") / 100); 
+				entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
+				(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f; 
+				info ("entBonus: " + String::valueOf(entBonus), true);
 			}
 			if (applyModifiers)
 				xp = playerObject->addExperience(xpType, (amount * 10 * entBonus * speciesModifier));
+			else
+				xp = playerObject->addExperience(xpType, (int)amount);
 
 	} else {
 		float speciesModifier = 1.f;
 		float entBonus = 1.f;
+		info("XP before calculation" + String::valueOf(amount), true);
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
+			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
+			info ("entBonus: " + String::valueOf(entBonus), true); 
 		}
 		if (applyModifiers)
 			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * entBonus * globalExpMultiplier));
@@ -3089,7 +3100,7 @@ int PlayerManagerImplementation::checkSpeedHackFirstTest(CreatureObject* player,
 		}
 
 		SpeedModChange* firstChange = &changeBuffer->get(changeBuffer->size() - 1);
-		Time* timeStamp = &firstChange->getTimeStamp();
+		const Time* timeStamp = &firstChange->getTimeStamp();
 
 		if (timeStamp->miliDifference() > 2000) { // we already should have lowered the speed, 2 seconds lag
 			StringBuffer msg;
@@ -5689,6 +5700,11 @@ void PlayerManagerImplementation::unlockFRSForTesting(CreatureObject* player, in
 
 	if (ghost == nullptr)
 		return;
+
+	if (player->hasSkill("force_rank_light_novice") || player->hasSkill("force_rank_dark_novice")) {
+		player->sendSystemMessage("You already have FRS skills. You must drop them before using this feature again.");
+		return;
+	}
 
 	SkillManager* skillManager = SkillManager::instance();
 

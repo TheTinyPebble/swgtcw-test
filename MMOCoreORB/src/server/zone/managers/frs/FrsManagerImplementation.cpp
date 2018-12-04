@@ -1760,6 +1760,49 @@ void FrsManagerImplementation::runVotingUpdate(FrsRank* rankData) {
 	short councilType = rankData->getCouncilType();
 	int rank = rankData->getRank();
 
+	SortedVector<uint64>* rankList = rankData->getPlayerList();
+	ManagedReference<PlayerManager*> playerManager = zoneServer->getPlayerManager();
+
+	for (int j = rankList->size() - 1; j >= 0; j--) {
+		uint64 playerID = rankList->get(j);
+		String playerName = playerManager->getPlayerName(playerID);
+
+		if (playerName.isEmpty()) {
+			rankData->removeFromPlayerList(playerID);
+			continue;
+		}
+
+		ManagedReference<CreatureObject*> player = zoneServer->getObject(rankList->get(j)).castTo<CreatureObject*>();
+
+		if (player == nullptr) {
+			rankData->removeFromPlayerList(playerID);
+			continue;
+		}
+
+		PlayerObject* ghost = player->getPlayerObject();
+
+		if (ghost == nullptr) {
+			rankData->removeFromPlayerList(playerID);
+			continue;
+		}
+
+		FrsData* playerData = ghost->getFrsData();
+		int playerRank = playerData->getRank();
+		int playerCouncil = playerData->getCouncilType();
+
+		if (playerCouncil != councilType) {
+			rankData->removeFromPlayerList(playerID);
+		} else if (playerRank != rank) {
+			ManagedReference<FrsManager*> strongMan = _this.getReferenceUnsafeStaticCast();
+			ManagedReference<CreatureObject*> strongRef = player->asCreatureObject();
+
+			Core::getTaskManager()->executeTask([strongMan, strongRef] () {
+				Locker locker(strongRef);
+				strongMan->validatePlayerData(strongRef);
+			}, "ValidatePlayerTask");
+		}
+	}
+
 	ChatManager* chatManager = zoneServer->getChatManager();
 
 	short status = rankData->getVoteStatus();
@@ -1845,7 +1888,7 @@ void FrsManagerImplementation::runVotingUpdate(FrsRank* rankData) {
 				StringIdChatParameter mailBody("@force_rank:vote_win_body"); // Your Enclave peers have decided that you are worthy of a promotion within the hierarchy. You should return to your Enclave as soon as possible and select "Accept Promotion" at the voting terminal.
 				sendMailToList(winnerList, "@force_rank:vote_win_sub", mailBody);
 
-				delete(winnerList);
+				delete winnerList;
 
 				rankData->setVoteStatus(WAITING);
 			} else { // No available slot, top winner will be auto promoted next time a slot opens
@@ -1855,7 +1898,7 @@ void FrsManagerImplementation::runVotingUpdate(FrsRank* rankData) {
 				StringIdChatParameter mailBody("@force_rank:vote_win_no_slot_body"); // You have won the vote by your Enclave peers in order to achieve a higher ranking. Unforuntately, there are no longer any open seats for you to fill. As a result, you will be offered a chance to accept an open seat the next time one becomes available.
 				sendMailToList(winnerList, "@force_rank:vote_win_sub", mailBody);
 
-				delete(winnerList);
+				delete winnerList;
 
 				rankData->setVoteStatus(VOTING_CLOSED); // Set status to closed without resetting voting data so that the winner will auto take the next available slot
 			}
@@ -2733,7 +2776,16 @@ void FrsManagerImplementation::sendRankPlayerList(CreatureObject* player, int co
 		if (playerName.isEmpty())
 			continue;
 
+		if (ghost->isPrivileged())
+			playerName += " (" + String::valueOf(playerID) + ")";
+
 		box->addMenuItem(playerName);
+	}
+
+	int availSlots = getAvailableRankSlots(rankData);
+
+	for (int i = 0; i < availSlots; i++) {
+		box->addMenuItem("Open Seat");
 	}
 
 	ghost->addSuiBox(box);
@@ -3970,7 +4022,7 @@ void FrsManagerImplementation::handleSuddenDeathLoss(CreatureObject* player, Thr
 		}
 	}
 
-	delete(contribList);
+	delete contribList;
 
 	VectorMap<uint64, int>* petitionerList = rankData->getPetitionerList();
 	StringIdChatParameter msgBody("@pvp_rating:sudden_death_death"); // %TT has fallen to a fellow rank petitioner. Any votes they may have had accumilated have been divided amongs those that took part in the slaughter of %TT. Let this be a lesson in how the Council deals with failure.

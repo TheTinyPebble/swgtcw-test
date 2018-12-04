@@ -74,7 +74,7 @@ MetricsHost = "localhost"
 MetricsPort = 8125
 MetricsPrefix = ""
 
-AutoReg = 0
+--AutoReg = 0
 AutoReg = 1
 
 ProgressMonitors = "true"
@@ -185,6 +185,7 @@ WebSessionTimeout = 600 -- Length that inactive web sessions expire
 
 PurgeDeletedCharacters = 10 --How often in minutes to purge deleted characters
 MaxNavMeshJobs = 6
+MaxAuctionSearchJobs = 1
 DumpObjFiles = 1
 
 UnloadContainers = 1 --Whether to unload container contents from RAM after the container hasn't been accessed for a time
@@ -199,6 +200,10 @@ PathfinderLogJSON = 0
 
 TermsOfServiceVersion = 0
 TermsOfService = ""
+
+CleanupMailCount = 25000
+
+RESTServerPort = 0
 
 local localFile = loadfile("conf/config-local.lua")
 
