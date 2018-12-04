@@ -26,7 +26,7 @@ theme_padme_amidala = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/leia_organa.iff"},
+	templates = {"object/mobile/padme_dress.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "theme_park_imperial_mission_giver_convotemplate",
