@@ -7,7 +7,7 @@ kaja_orzee_missions =
 			missionType = "escort",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_imperial_escort_moff",  npcName = "an Imperial Moff" }
+				{ npcTemplate = "theme_park_imperial_escort_moff",  npcName = "a Republic General" }
 			},
 			secondarySpawns =
 			{
@@ -15,19 +15,19 @@ kaja_orzee_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 75 }
+				{ rewardType = "credits", amount = 750 }
 			}
 		},
 		{
 			missionType = "confiscate",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_imperial_rebel_sympathizer",  npcName = "a Rebel Sympathizer" }
+				{ npcTemplate = "theme_park_imperial_rebel_sympathizer",  npcName = "a Separatist Sympathizer" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_corporal",  npcName = "" },
-				{ npcTemplate = "rebel_corporal",  npcName = "" }
+				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "" },
+				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -35,7 +35,7 @@ kaja_orzee_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 150 }
+				{ rewardType = "credits", amount = 1500 }
 			}
 		},
 
@@ -51,7 +51,7 @@ kaja_orzee_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 225 }
+				{ rewardType = "credits", amount = 2250 }
 			}
 		},
 
@@ -64,14 +64,14 @@ kaja_orzee_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_corporal",  npcName = "" },
-				{ npcTemplate = "rebel_corporal",  npcName = "" },
-				{ npcTemplate = "rebel_corporal",  npcName = "" }
+				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "" },
+				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "" },
+				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 300 }
+				{ rewardType = "credits", amount = 3000 }
 			}
 		},
 		{
@@ -108,7 +108,7 @@ loam_redge_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 375 }
+				{ rewardType = "credits", amount = 3750 }
 			}
 		},
 
@@ -120,14 +120,14 @@ loam_redge_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_resistance_dissident",  npcName = "" },
-				{ npcTemplate = "rebel_resistance_dissident",  npcName = "" },
-				{ npcTemplate = "rebel_resistance_dissident",  npcName = "" }
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 450 }
+				{ rewardType = "credits", amount = 4500 }
 			}
 		},
 		{
@@ -144,7 +144,7 @@ loam_redge_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 525 }
+				{ rewardType = "credits", amount = 5250 }
 			}
 		},
 
@@ -182,7 +182,7 @@ lord_hethrir_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 600 }
+				{ rewardType = "credits", amount = 6000 }
 			}
 		},
 
@@ -200,7 +200,7 @@ lord_hethrir_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 675 }
+				{ rewardType = "credits", amount = 6750 }
 			}
 		},
 		{
@@ -215,7 +215,7 @@ lord_hethrir_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 750 }
+				{ rewardType = "credits", amount = 7500 }
 			}
 		},
 
@@ -234,7 +234,7 @@ lord_hethrir_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 825 }
+				{ rewardType = "credits", amount = 8250 }
 			}
 		},
 		{
@@ -269,7 +269,7 @@ thrawn_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 900 }
+				{ rewardType = "credits", amount = 9000 }
 			}
 		},
 
@@ -286,7 +286,7 @@ thrawn_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 975 }
+				{ rewardType = "credits", amount = 9750 }
 			}
 		},
 		{
@@ -304,7 +304,7 @@ thrawn_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1050 }
+				{ rewardType = "credits", amount = 10500 }
 			}
 		},
 
@@ -322,7 +322,7 @@ thrawn_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1125 }
+				{ rewardType = "credits", amount = 11250 }
 			}
 		},
 		{
@@ -338,7 +338,7 @@ thrawn_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1200 }
+				{ rewardType = "credits", amount = 12000 }
 			}
 		},
 
@@ -346,11 +346,11 @@ thrawn_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "rebel_commando",  npcName = "a Rebel Commando" }
+				{ npcTemplate = "cis_battle_droid_commando",  npcName = "" }
 			},
 			secondarySpawns = {
-				{ npcTemplate = "rebel_trooper",  npcName = "" },
-				{ npcTemplate = "rebel_trooper",  npcName = "" }
+				{ npcTemplate = "cis_battle_droid",  npcName = "" },
+				{ npcTemplate = "cis_battle_droid",  npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -370,7 +370,7 @@ veers_missions =
 			missionType = "confiscate",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_imperial_rebel_trooper",  npcName = "a Rebel Trooper" },
+				{ npcTemplate = "theme_park_imperial_rebel_trooper",  npcName = "a Separatist Trooper" },
 				{ npcTemplate = "thug",  npcName = "a Thug" },
 				{ npcTemplate = "borvos_thug",  npcName = "Borvo's Thug" },
 			},
@@ -382,14 +382,14 @@ veers_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1275 }
+				{ rewardType = "credits", amount = 12750 }
 			}
 		},
 		{
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "rebel_trooper",  npcName = "a Rebel Trooper" },
+				{ npcTemplate = "cis_battle_droid",  npcName = "" },
 				{ npcTemplate = "thug",  npcName = "a Thug" },
 				{ npcTemplate = "thug",  npcName = "a Thug" },
 			},
@@ -400,7 +400,7 @@ veers_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1350 }
+				{ rewardType = "credits", amount = 13500 }
 			}
 		},
 		{
@@ -419,7 +419,7 @@ veers_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1425 }
+				{ rewardType = "credits", amount = 14250 }
 			}
 		},
 
@@ -478,7 +478,7 @@ palpatine_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1575 }
+				{ rewardType = "credits", amount = 15750 }
 			}
 		},
 		{
@@ -496,7 +496,7 @@ palpatine_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1650 }
+				{ rewardType = "credits", amount = 16500 }
 			}
 		},
 		{
@@ -516,7 +516,7 @@ palpatine_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1725 }
+				{ rewardType = "credits", amount = 17250 }
 			}
 		},
 
@@ -532,7 +532,7 @@ palpatine_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1800 }
+				{ rewardType = "credits", amount = 18000 }
 			}
 		},
 
@@ -553,7 +553,7 @@ palpatine_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1875 }
+				{ rewardType = "credits", amount = 18750 }
 			}
 		},
 
@@ -580,13 +580,13 @@ palpatine_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "rebel_general",  npcName = "a Rebel General" }
+				{ npcTemplate = "cis_general",  npcName = "a Separatist General" }
 			},
 			secondarySpawns = {
-				{ npcTemplate = "rebel_trooper",  npcName = "a Rebel Trooper" },
-				{ npcTemplate = "rebel_trooper",  npcName = "a Rebel Trooper" },
-				{ npcTemplate = "rebel_trooper",  npcName = "a Rebel Trooper" },
-				{ npcTemplate = "rebel_trooper",  npcName = "a Rebel Trooper" }
+				{ npcTemplate = "cis_battle_droid",  npcName = "" },
+				{ npcTemplate = "cis_battle_droid",  npcName = "" },
+				{ npcTemplate = "cis_battle_droid",  npcName = "" },
+				{ npcTemplate = "cis_battle_droid",  npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -616,7 +616,7 @@ darth_vader_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 2025 }
+				{ rewardType = "credits", amount = 20250 }
 			}
 		},
 
@@ -634,7 +634,7 @@ darth_vader_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 2100 }
+				{ rewardType = "credits", amount = 21000 }
 			}
 		},
 
@@ -652,7 +652,7 @@ darth_vader_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 2175 }
+				{ rewardType = "credits", amount = 21750 }
 			}
 		},
 
@@ -671,7 +671,7 @@ darth_vader_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 2250 }
+				{ rewardType = "credits", amount = 22500 }
 			}
 		},
 
@@ -691,7 +691,7 @@ darth_vader_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 2325 }
+				{ rewardType = "credits", amount = 23250 }
 			}
 		},
 
@@ -710,7 +710,7 @@ darth_vader_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 425 },
-				{ rewardType = "credits", amount = 2400 },
+				{ rewardType = "credits", amount = 24000 },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_imperial_vader" },
 				{ rewardType = "badge", badge = THEME_PARK_IMPERIAL_BADGE }
 			}
@@ -720,7 +720,7 @@ darth_vader_missions =
 npcMapImperial =
 	{
 		{
-			spawnData = {  npcTemplate = "kaja_orzee", x = 1.1, z = 0.2, y = -13.3, direction = 0, cellID = 1418872, position = STAND },
+			spawnData = {  npcTemplate = "theme_mas_amedda", x = 1.1, z = 0.2, y = -13.3, direction = 0, cellID = 1418872, position = STAND },
 			worldPosition = { x = 2407.8, y = -3944.5 },
 			npcNumber = 1,
 			stfFile = "@theme_park_imperial/kaja_orzee",
@@ -728,7 +728,7 @@ npcMapImperial =
 			missions = kaja_orzee_missions
 		},
 		{
-			spawnData = {  npcTemplate = "loam_redge", x = 19.8, z = 0.2, y = -41.9, direction = 54, cellID = 1418875, position = STAND },
+			spawnData = {  npcTemplate = "theme_tarkin", x = 19.8, z = 0.2, y = -41.9, direction = 54, cellID = 1418875, position = STAND },
 			worldPosition = { x = 2382, y = -3967 },
 			npcNumber = 2,
 			stfFile = "@theme_park_imperial/loam_redge",
@@ -736,7 +736,7 @@ npcMapImperial =
 			missions = loam_redge_missions
 		},
 		{
-			spawnData = {  npcTemplate = "lord_hethrir", x = 5.1, z = 0.2, y = -41.4, direction = -30, cellID = 1418876, position = STAND },
+			spawnData = {  npcTemplate = "theme_padme_amidala", x = 5.1, z = 0.2, y = -41.4, direction = -30, cellID = 1418876, position = STAND },
 			worldPosition = { x = 2380, y = -3952 },
 			npcNumber = 4,
 			stfFile = "@theme_park_imperial/lord_hethrir",
@@ -744,21 +744,21 @@ npcMapImperial =
 			missions = lord_hethrir_missions
 		},
 		{
-			spawnData = {  npcTemplate = "thrawn", x = 2371.1, z = 291.9, y = -3923.8, direction = -132, cellID = 0, position = STAND, mood = "conversation" },
+			spawnData = {  npcTemplate = "theme_kit_fisto", x = 2371.1, z = 291.9, y = -3923.8, direction = -132, cellID = 0, position = STAND, mood = "conversation" },
 			npcNumber = 8,
 			stfFile = "@theme_park_imperial/thrawn",
 			stfWarning = "lord_hethrir",
 			missions = thrawn_missions
 		},
 		{
-			spawnData = {  npcTemplate = "veers", x = 2370.5, z = 291.9, y = -3923.1, direction = -136, cellID = 0, position = STAND, mood = "conversation" },
+			spawnData = {  npcTemplate = "theme_rex", x = 2370.5, z = 291.9, y = -3923.1, direction = -136, cellID = 0, position = STAND, mood = "conversation" },
 			npcNumber = 16,
 			stfFile = "@theme_park_imperial/veers",
 			stfWarning = "lord_hethrir",
 			missions = veers_missions
 		},
 		{
-			spawnData = {  npcTemplate = "palpatine", x = 13, z = 21, y = -25.5, direction = 180, cellID = 1418886, position = STAND },
+			spawnData = {  npcTemplate = "theme_palpatine", x = 13, z = 21, y = -25.5, direction = 180, cellID = 1418886, position = STAND },
 			worldPosition = { x = 2397, y = -3958 },
 			npcNumber = 32,
 			stfFile = "@theme_park_imperial/emperor",
@@ -766,7 +766,7 @@ npcMapImperial =
 			missions = palpatine_missions
 		},
 		{
-			spawnData = {  npcTemplate = "darth_vader", x = -57.5, z = 0.2, y = -24.1, direction = 90, cellID = 1418884, position = STAND },
+			spawnData = {  npcTemplate = "theme_anakin_skywalker", x = -57.5, z = 0.2, y = -24.1, direction = 90, cellID = 1418884, position = STAND },
 			worldPosition = { x = 2387, y = -3889 },
 			npcNumber = 64,
 			stfFile = "@theme_park_imperial/darth_vader",
@@ -838,4 +838,3 @@ theme_park_imperial_mission_giver_conv_handler = mission_giver_conv_handler:new 
 theme_park_imperial_mission_target_conv_handler = mission_target_conv_handler:new {
 	themePark = ThemeParkImperial
 }
-
