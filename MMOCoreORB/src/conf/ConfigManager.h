@@ -72,6 +72,7 @@ namespace conf {
 		int pingAllowedConnections;
 
 		int maxNavMeshJobs;
+		int maxAuctionSearchJobs;
 
 		String messageOfTheDay;
 
@@ -85,11 +86,14 @@ namespace conf {
 		bool luaLogJSON;
 		bool pathfinderLogJSON;
 
+		int cleanupMailCount = 25000;
+
 		String termsOfService;
 		int tosVersion;
 
-	public:
+		int restPort = 0;
 
+	public:
 		ConfigManager();
 
 		~ConfigManager() {
@@ -106,7 +110,6 @@ namespace conf {
 		void loadEnabledZones();
 
 		//getters
-
 		inline bool getMakeLogin() const {
 			return makeLogin;
 		}
@@ -319,6 +322,10 @@ namespace conf {
 			return maxNavMeshJobs;
 		}
 
+		inline int getMaxAuctionSearchJobs() const {
+			return maxAuctionSearchJobs;
+		}
+
 		inline const String& getLogFile() const {
 			return logFile;
 		}
@@ -353,6 +360,14 @@ namespace conf {
 
 		inline bool getPathfinderLogJSON() const {
 			return pathfinderLogJSON;
+		}
+
+		inline int getCleanupMailCount() const {
+			return cleanupMailCount;
+		}
+
+		inline int getRESTPort() const {
+			return restPort;
 		}
 	};
 }

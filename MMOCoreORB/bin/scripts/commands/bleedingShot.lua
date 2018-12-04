@@ -62,7 +62,7 @@ BleedingShotCommand = {
 		MIND,
 		true,
 		0,
-		100,
+		200,
 		30, 
 		30
 	  )

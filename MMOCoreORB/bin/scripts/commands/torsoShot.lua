@@ -72,7 +72,7 @@ TorsoShotCommand = {
 	  )
 	},
 	
-	weaponType = PISTOLWEAPON + CARBINEWEAPON,
+	weaponType = PISTOLWEAPON,
 
 	range = -1
 }
