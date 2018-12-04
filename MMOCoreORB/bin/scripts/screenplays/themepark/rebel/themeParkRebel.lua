@@ -29,7 +29,7 @@ c3po_missions =
 			secondarySpawns = {},
 			itemSpawns =
 			{
-				{ itemTemplate = "object/tangible/medicine/crafted/medpack_enhance_strength_d.iff", itemName = "Supplies" }
+				{ itemTemplate = "object/tangible/loot/misc/worklight.iff", itemName = "Supplies" }
 			},
 			rewards =
 			{
@@ -545,7 +545,7 @@ ackbar_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_jeremes_kelton", npcName = "Jeremes Kelton" }
+				{ npcTemplate = "theme_park_rebel_jeremes_kelton", npcName = "Dabudo Nano" }
 			},
 			secondarySpawns =
 			{
@@ -625,7 +625,7 @@ mon_missions =
 			missionDescription = "MON MOTHMA needs you to ESCORT the CAPTAIN of the Corvette back to the REBEL BASE",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_altapi_tmman", npcName = "Altapi T'mman" }
+				{ npcTemplate = "theme_park_rebel_altapi_tmman", npcName = "Alostt Sharn" }
 			},
 			secondarySpawns =
 			{
@@ -720,7 +720,7 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_imperial_engineer", npcName = "Separatist Contact" }
+				{ npcTemplate = "theme_park_imperial_engineer", npcName = "Republic Engineer" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},
@@ -752,7 +752,7 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_bothan_spy", npcName = "Nateba Kurr" }
+				{ npcTemplate = "cis_battle_droid_pilot", npcName = "Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
@@ -770,7 +770,7 @@ jan_missions =
 			missionDescription = "GENERAL DODONNA needs you to DELIVER the INFORMATION to REBEL PILOT",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_bothan_spy", npcName = "Pilot" }
+				{ npcTemplate = "cis_battle_droid_pilot", npcName = "Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
