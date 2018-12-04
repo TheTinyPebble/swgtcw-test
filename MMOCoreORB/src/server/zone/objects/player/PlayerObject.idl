@@ -248,7 +248,7 @@ class PlayerObject extends IntangibleObject {
 	protected Time lastJediAttackableTimestamp;
 
 	@dereferenced
-	protected Reference<PvpTefRemovalTask> pvpTefTask;
+	protected transient Reference<PvpTefRemovalTask> pvpTefTask;
 
 	@dereferenced
 	protected Time lastDigestion;
