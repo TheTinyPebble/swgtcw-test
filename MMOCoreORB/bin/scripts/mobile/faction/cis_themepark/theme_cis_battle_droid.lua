@@ -27,7 +27,7 @@ theme_cis_battle_droid = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/battle_droid.iff"
+		"object/mobile/death_watch_battle_droid_03.iff"
 	},
 	lootGroups = {
 		{
