@@ -24,7 +24,7 @@ c3po_missions =
 			planetName = "corellia",
 			primarySpawns =
 			{
-				{ npcTemplate = "cis_battle_droid", npcName = "Battle Droid Captain" }
+				{ npcTemplate = "theme_cis_battle_droid", npcName = "Battle Droid Captain" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
