@@ -188,8 +188,8 @@ function EmperorsRetreatScreenPlay:spawnMobiles()
 	spawnMobile("naboo", "clonetrooper", 450, 2367.7, 325, -4095.5, 0, 0)
 
 	--By the emperors retreat
-	spawnMobile("naboo", "at_xt", 900, 2452.61, 292, -3961.49, 108, 0)
-	spawnMobile("naboo", "at_xt", 900, 2463.18, 292.089, -3929.16, -105, 0)
+	spawnMobile("naboo", "rep_at_xt", 900, 2452.61, 292, -3961.49, 108, 0)
+	spawnMobile("naboo", "rep_at_xt", 900, 2463.18, 292.089, -3929.16, -105, 0)
 	spawnMobile("naboo", "clone_commando", 450, 2433.3, 292, -3968.4, 4, 0)
 	spawnMobile("naboo", "clone_commando", 450, 2452, 292, -3912.8, -170, 0)
 	spawnMobile("naboo", "clone_commando", 450, 2434.47, 292, -3932.06, 90, 0)
