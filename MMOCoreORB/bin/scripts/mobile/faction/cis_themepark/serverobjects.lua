@@ -8,3 +8,5 @@ includeFile("faction/cis_themepark/theme_mars_onyo.lua")
 includeFile("faction/cis_themepark/theme_savage_opress.lua")
 includeFile("faction/cis_themepark/theme_sevrance_tann.lua")
 includeFile("faction/cis_themepark/theme_tikkes.lua")
+
+includeFile("faction/cis_themepark/theme_cis_battle_droid.lua")
