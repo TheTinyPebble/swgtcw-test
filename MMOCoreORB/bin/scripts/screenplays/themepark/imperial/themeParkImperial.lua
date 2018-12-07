@@ -64,9 +64,9 @@ kaja_orzee_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "" },
-				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "" },
-				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "" }
+				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "OOM Series Security Droid" },
+				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "OOM Series Security Droid" },
+				{ npcTemplate = "cis_battle_droid_squad_leader",  npcName = "OOM Series Security Droid" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -346,11 +346,11 @@ thrawn_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "cis_battle_droid_commando",  npcName = "" }
+				{ npcTemplate = "cis_battle_droid_commando",  npcName = "A Battle Droid Commando" }
 			},
 			secondarySpawns = {
-				{ npcTemplate = "cis_battle_droid",  npcName = "" },
-				{ npcTemplate = "cis_battle_droid",  npcName = "" }
+				{ npcTemplate = "cis_battle_droid",  npcName = "A Battle Droid" },
+				{ npcTemplate = "cis_battle_droid",  npcName = "A Battle Droid" }
 			},
 			itemSpawns =
 			{
