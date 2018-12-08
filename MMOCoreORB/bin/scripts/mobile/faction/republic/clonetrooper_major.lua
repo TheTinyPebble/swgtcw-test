@@ -28,7 +28,7 @@ clonetrooper_major = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_imperial_major_m.iff"},
+	templates = {"object/mobile/dressed_clone_cadet_black.iff"},
 	lootGroups = {
 		{
 			groups = {

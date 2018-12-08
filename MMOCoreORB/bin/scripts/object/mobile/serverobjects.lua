@@ -2668,3 +2668,8 @@ includeFile("mobile/dressed_jedi_knight_01.lua")
 includeFile("mobile/dressed_jedi_knight_02.lua")
 includeFile("mobile/general_grievous.lua")
 includeFile("mobile/padme_dress.lua")
+includeFile("mobile/dressed_clone_cadet_black.lua")
+includeFile("mobile/dressed_clone_cadet_red.lua")
+includeFile("mobile/kit_fisto_cloak.lua")
+
+

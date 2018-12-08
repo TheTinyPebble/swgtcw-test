@@ -1,5 +1,5 @@
 theme_kit_fisto = Creature:new {
-	objectName = "@mob/creature_names:cis_magnaguard",
+	objectName = "@mob/creature_names:theme_kit_fisto",
 	customName = "Kit Fisto",
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -26,7 +26,7 @@ theme_kit_fisto = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/ep3/general_grievous.iff"},
+	templates = {"object/mobile/kit_fisto_cloak.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "theme_park_imperial_mission_giver_convotemplate",

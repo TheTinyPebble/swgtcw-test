@@ -26,7 +26,7 @@ theme_rex = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_clonetrooper_blue_nh_m.iff"},
+	templates = {"object/mobile/dressed_clone_cadet_black.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "theme_park_imperial_mission_giver_convotemplate",

@@ -1,5 +1,5 @@
 novatrooper_cadet = Creature:new {
-objectName = "@mob/creature_names:clonetrooper_cadet",
+objectName = "@mob/creature_names:clone_cadet",
 randomNameType = NAME_SWAMPTROOPER,
 randomNameTag = true,
 	socialGroup = "imperial",
@@ -26,8 +26,9 @@ randomNameTag = true,
 	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
+	scale = 0.90,
 
-	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
+	templates = {"object/mobile/dressed_clone_cadet_red.iff"},
 
 	lootGroups = {
 		{
