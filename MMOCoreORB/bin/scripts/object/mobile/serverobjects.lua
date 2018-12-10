@@ -2671,5 +2671,5 @@ includeFile("mobile/padme_dress.lua")
 includeFile("mobile/dressed_clone_cadet_black.lua")
 includeFile("mobile/dressed_clone_cadet_red.lua")
 includeFile("mobile/kit_fisto_cloak.lua")
-
+includeFile("mobile/dressed_clone_sandtrooper_m.lua")
 
