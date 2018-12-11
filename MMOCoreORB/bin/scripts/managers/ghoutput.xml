@@ -571,17 +571,6 @@
 </resource>
 
 <resource>
-<SpawnName>Besko</SpawnName>
-<resType>bone_horn_talus</resType>
-<attribute name="res_decay_resist">801</attribute>
-<attribute name="res_malleability">436</attribute>
-<attribute name="res_quality">819</attribute>
-<attribute name="res_shock_resistance">684</attribute>
-<attribute name="res_toughness">269</attribute>
-<planet>talus</planet>
-</resource>
-
-<resource>
 <SpawnName>Biacoutsi</SpawnName>
 <resType>seafood_crustacean_dantooine</resType>
 <attribute name="res_decay_resist">390</attribute>
@@ -3421,6 +3410,17 @@
 <attribute name="res_shock_resistance">451</attribute>
 <attribute name="res_toughness">927</attribute>
 <planet>yavin4</planet>
+</resource>
+
+<resource>
+<SpawnName>Kiarckami</SpawnName>
+<resType>bone_horn_talus</resType>
+<attribute name="res_decay_resist">446</attribute>
+<attribute name="res_malleability">71</attribute>
+<attribute name="res_quality">724</attribute>
+<attribute name="res_shock_resistance">468</attribute>
+<attribute name="res_toughness">339</attribute>
+<planet>talus</planet>
 </resource>
 
 <resource>

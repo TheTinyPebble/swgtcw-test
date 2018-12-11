@@ -132,7 +132,7 @@ function TalusWeaponsDepotScreenPlay:spawnRebels(pBuilding)
 	--2nd floor down
 	BuildingObject(pBuilding):spawnChildCreature("talus", "area_coordinator", 300, 23.4, -20.0, 115.0, -95, 9686165)
 	BuildingObject(pBuilding):spawnChildCreature("talus", "tamed_razor_cat", 300, 19.5, -20.0, 95.5, 175, 9686164)
-	BuildingObject(pBuilding):spawnChildCreature("talus", "network_leader", 300, 18.2, -20.0, 88.3, -90, 9686164)
+	BuildingObject(pBuilding):spawnChildCreature("talus", "cis_battle_droid_specforce", 300, 18.2, -20.0, 88.3, -90, 9686164)
 	BuildingObject(pBuilding):spawnChildCreature("talus", "royal_imperial_guard", 300, 7.0, -20.0, 109.5, -45, 9686165)
 	BuildingObject(pBuilding):spawnChildCreature("talus", "royal_imperial_guard", 300, -14.5, -20.0, 115.1, 90, 9686165)
 	BuildingObject(pBuilding):spawnChildCreature("talus", "bounty_hunter", 300, 1.4, -20.0, 120.0, -1, 9686165)
