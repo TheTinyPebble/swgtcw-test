@@ -624,7 +624,7 @@ darth_vader_missions =
 			missionType = "retrieve",
 			primarySpawns =
 			{
-				{ npcTemplate = "mara_jade",  npcName = "Mara Jade" }
+				{ npcTemplate = "mara_jade",  npcName = "Gilana" }
 			},
 			secondarySpawns =
 			{
