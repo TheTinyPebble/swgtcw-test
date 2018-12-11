@@ -72,7 +72,7 @@ function RoriRebelMilitaryBaseScreenPlay:spawnRebels()
 	-- Left building
 	spawnMobile("rori", "cis_battle_droid", 360, 0.616, 0.125, -5.619, 127.514, 7555635)
 	spawnMobile("rori", "cis_battle_droid", 360, 3.865, 0.125, -4.194, 89.946, 7555637)
-	spawnMobile("rori", "rebel_specforce_colonel", 360, 3.633, 0.125, -2.190, 137.113, 7555637);
+	spawnMobile("rori", "cis_magnaguard", 360, 3.633, 0.125, -2.190, 137.113, 7555637);
 	spawnMobile("rori", "cis_battle_droid_squad_leader", 360, 3.252, 0.125, 3.604, -91.859, 7555636)
 	-- Outside spot 2
 	spawnMobile("rori", "cis_battle_droid", 360, -5337.310, 75.920, 4982.150, 109.938, 0)

@@ -1,18 +1,18 @@
-rebel_specforce_sergeant = Creature:new {
-	objectName = "@mob/creature_names:rebel_specforce_sergeant",
+rebel_pilot = Creature:new {
+	objectName = "@mob/creature_names:cis_pilot",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "rebel",
 	faction = "rebel",
-	level = 21,
-	chanceHit = 0.34,
-	damageMin = 200,
-	damageMax = 210,
-	baseXp = 2006,
-	baseHAM = 5400,
-	baseHAMmax = 6600,
+	level = 20,
+	chanceHit = 0.33,
+	damageMin = 190,
+	damageMax = 200,
+	baseXp = 1803,
+	baseHAM = 5000,
+	baseHAMmax = 6100,
 	armor = 0,
-	resists = {5,5,5,5,5,5,5,-1,-1},
+	resists = {0,0,0,0,0,0,0,-1,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -28,12 +28,11 @@ rebel_specforce_sergeant = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_specforce_sergeant_bothan_male_01.iff",
-		"object/mobile/dressed_rebel_specforce_sergeant_human_male_01.iff",
-		"object/mobile/dressed_rebel_specforce_sergeant_moncal_female_01.iff",
-		"object/mobile/dressed_rebel_specforce_sergeant_moncal_male_01.iff",
-		"object/mobile/dressed_rebel_specforce_sergeant_trandoshan_male_01.iff",
-		"object/mobile/dressed_rebel_specforce_sergeant_twk_female_01.iff"},
+		"object/mobile/dressed_rebel_pilot_human_female_01.iff",
+		"object/mobile/dressed_rebel_pilot_human_male_01.iff",
+		"object/mobile/dressed_rebel_pilot_human_male_02.iff",
+		"object/mobile/dressed_rebel_pilot_rodian_male_01.iff",
+		"object/mobile/dressed_rebel_pilot_sullustan_male_01.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -49,11 +48,11 @@ rebel_specforce_sergeant = Creature:new {
 			}
 		}
 	},
-	weapons = {"ranged_weapons"},
+	weapons = {"rebel_weapons_medium"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
 	attacks = merge(brawlermaster,marksmanmaster)
 }
 
-CreatureTemplates:addCreatureTemplate(rebel_specforce_sergeant, "rebel_specforce_sergeant")
+CreatureTemplates:addCreatureTemplate(rebel_pilot, "rebel_pilot")

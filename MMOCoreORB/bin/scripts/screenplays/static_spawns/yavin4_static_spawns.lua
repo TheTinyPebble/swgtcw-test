@@ -50,24 +50,24 @@ function Yavin4StaticSpawnsScreenPlay:spawnMobiles()
 	spawnMobile("yavin4", "crazed_geonosian_guard",300,-6296.0,25.3,-1504.2,90,0)
 
 	-- Captain Eso & Yith Seenath's base of operations (1591, 1536)
-	spawnMobile("yavin4", "rebel_commando", 360, 1595.0, 102.5, 1531.9, -40, 0)
-	spawnMobile("yavin4", "rebel_commando", 360, 1595.0, 102.5, 1530.4, -30, 0)
-	spawnMobile("yavin4", "rebel_commando", 360, 1597.8, 102.9, 1530.3, -37, 0)
-	spawnMobile("yavin4", "rebel_commando", 360, 1595.3, 102.7, 1527.8, -26, 0)
+	spawnMobile("yavin4", "cis_battle_droid_commando", 360, 1595.0, 102.5, 1531.9, -40, 0)
+	spawnMobile("yavin4", "cis_battle_droid_commando", 360, 1595.0, 102.5, 1530.4, -30, 0)
+	spawnMobile("yavin4", "cis_battle_droid_commando", 360, 1597.8, 102.9, 1530.3, -37, 0)
+	spawnMobile("yavin4", "cis_battle_droid_commando", 360, 1595.3, 102.7, 1527.8, -26, 0)
 
 	-- Imp base camp outside Massassi Temple POI
-	spawnMobile("yavin4", "stormtrooper", 360, -3196.7, 69.6, -3139.5, -100, 0)
-	spawnMobile("yavin4", "stormtrooper", 360, -3195.8, 69.8, -3130.7, -104, 0)
+	spawnMobile("yavin4", "clonetrooper", 360, -3196.7, 69.6, -3139.5, -100, 0)
+	spawnMobile("yavin4", "clonetrooper", 360, -3195.8, 69.8, -3130.7, -104, 0)
 
 	--LJ Shuttle
 	spawnSceneObject("yavin4", "object/building/player/city/shuttleport_corellia.iff", -5656, 102, 4925, 0, 0)
 	spawnMobile("yavin4", "light_jedi_sentinel", 1, -5646.54, 100.005, 4948.13, 180, 0)
 	spawnMobile("yavin4", "light_jedi_sentinel", 1, -5662.64, 98.8252, 4946.8, 167, 0)
-	
+
 	--DJ Shuttle
 	spawnSceneObject("yavin4", "object/building/player/city/shuttleport_corellia.iff", 5061, 71, 412, 0, 0)
 	spawnMobile("yavin4", "dark_jedi_sentinel", 1, 5053.79, 67.9311, 434.323, 177, 0)
-	spawnMobile("yavin4", "dark_jedi_sentinel", 1, 5068.99, 67.4718, 434.442, 177, 0) 
+	spawnMobile("yavin4", "dark_jedi_sentinel", 1, 5068.99, 67.4718, 434.442, 177, 0)
 end
 
 function Yavin4StaticSpawnsScreenPlay:setupSentinel(pSentinel)

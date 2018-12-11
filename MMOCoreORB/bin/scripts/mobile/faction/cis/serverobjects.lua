@@ -17,3 +17,14 @@ includeFile("faction/cis/cis_magnaguard.lua")
 includeFile("faction/cis/general_grievous.lua")
 
 includeFile("faction/cis/cis_resistance_separatist.lua")
+
+includeFile("faction/cis/tamed_gurrcat.lua")
+includeFile("faction/cis/tamed_huurton.lua")
+includeFile("faction/cis/tamed_razor_cat.lua")
+includeFile("faction/cis/tamed_slice_hound.lua")
+
+includeFile("faction/cis/rebel_pilot.lua")
+includeFile("faction/cis/rebel_crewman.lua")
+includeFile("faction/cis/rebel_medic.lua")
+includeFile("faction/cis/novice_creature_handler.lua")
+includeFile("faction/cis/apprentice_creature_handler.lua")

@@ -183,7 +183,7 @@ function RebelHideoutScreenPlay:spawnMobiles()
 	--West Shuttle Pad
 	spawnMobile("corellia", "cis_battle_droid_pilot", 300, -6520.390, 398.000, 6040.800, 39.000, 0)
 	spawnMobile("corellia", "cis_battle_droid_commando", 300, -6518.020, 398.000, 6041.320, -140.642, 0)
-	spawnMobile("corellia", "rebel_major_general", 300, -6508.990, 398.000, 6049.510, 84.004, 0)
+	spawnMobile("corellia", "cis_major_general", 300, -6508.990, 398.000, 6049.510, 84.004, 0)
 
 	--West Building
 	spawnMobile("corellia", "cis_battle_droid", 300, -6555.870, 398.000, 6024.350, 132.165, 0)
@@ -280,7 +280,7 @@ function RebelHideoutScreenPlay:spawnMobiles()
 	spawnMobile("corellia", "cis_battle_droid_commando", 300, -5.0, 0.1, -2.1, 119, 8285414)
 
 	-- Main Building Interior
-	spawnMobile("corellia", "rebel_colonel", 300, 5.9, 7.01, 9.92, 0, 8555482)
+	spawnMobile("corellia", "cis_magnaguard", 300, 5.9, 7.01, 9.92, 0, 8555482)
 	spawnMobile("corellia", "cis_battle_droid", 300, -12.94, 7.00974, 9.54, 0, 8555481)
 	spawnMobile("corellia", "cis_battle_droid", 300, -6.44793, 7.00977, 6.53793, 0, 8555481)
 	spawnMobile("corellia", "cis_battle_droid", 300, -2.37, 7.0096, 6.54, 0, 8555481)

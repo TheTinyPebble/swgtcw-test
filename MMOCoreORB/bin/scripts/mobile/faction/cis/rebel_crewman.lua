@@ -1,18 +1,18 @@
-rebel_colonel = Creature:new {
-	objectName = "@mob/creature_names:rebel_colonel",
+rebel_crewman = Creature:new {
+	objectName = "@mob/creature_names:cis_crewman",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "rebel",
 	faction = "rebel",
-	level = 24,
+	level = 22,
 	chanceHit = 0.35,
-	damageMin = 230,
-	damageMax = 240,
-	baseXp = 2543,
-	baseHAM = 6800,
-	baseHAMmax = 8300,
+	damageMin = 210,
+	damageMax = 220,
+	baseXp = 2219,
+	baseHAM = 5900,
+	baseHAMmax = 7200,
 	armor = 0,
-	resists = {15,15,10,10,10,-1,10,-1,-1},
+	resists = {0,0,0,0,0,0,0,-1,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -24,36 +24,36 @@ rebel_colonel = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED + CONVERSABLE,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_colonel_bothan_male.iff",
-		"object/mobile/dressed_rebel_colonel_fat_zabrak_male.iff",
-		"object/mobile/dressed_rebel_colonel_moncal_female.iff",
-		"object/mobile/dressed_rebel_colonel_old_human_female.iff",
-		"object/mobile/dressed_rebel_colonel_sullustan_male_01.iff",
-		"object/mobile/dressed_rebel_colonel_twk_male_01.iff"},
+		"object/mobile/dressed_rebel_crewman_human_female_01.iff",
+		"object/mobile/dressed_rebel_crewman_human_female_02.iff",
+		"object/mobile/dressed_rebel_crewman_human_male_01.iff",
+		"object/mobile/dressed_rebel_crewman_human_male_02.iff",
+		"object/mobile/dressed_rebel_crewman_human_male_03.iff",
+		"object/mobile/dressed_rebel_crewman_human_male_04.iff"},
 	lootGroups = {
 		{
 			groups = {
 				{group = "color_crystals", chance = 100000},
-				{group = "junk", chance = 4250000},
+				{group = "junk", chance = 4700000},
 				{group = "rifles", chance = 1000000},
 				{group = "pistols", chance = 1000000},
 				{group = "melee_weapons", chance = 1000000},
 				{group = "carbines", chance = 1000000},
 				{group = "clothing_attachments", chance = 100000},
 				{group = "armor_attachments", chance = 100000},
-				{group = "rebel_officer_common", chance = 450000},
 				{group = "wearables_common", chance = 1000000}
 			}
 		}
 	},
-	weapons = {"rebel_weapons_heavy"},
-	conversationTemplate = "rebelRecruiterConvoTemplate",
+	weapons = {"rebel_weapons_medium"},
+	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
+	personalityStf = "@hireling/hireling_military",
 	attacks = merge(brawlermaster,marksmanmaster)
 }
 
-CreatureTemplates:addCreatureTemplate(rebel_colonel, "rebel_colonel")
+CreatureTemplates:addCreatureTemplate(rebel_crewman, "rebel_crewman")

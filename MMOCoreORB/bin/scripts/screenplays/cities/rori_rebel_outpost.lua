@@ -94,7 +94,7 @@ function RoriRebelOutpostScreenPlay:spawnMobiles()
 	spawnMobile("rori", "rebel_medic", 360, -8.5, 0.6, -7.3, 47, 4505636)
 	spawnMobile("rori", "cis_battle_droid", 360, 2.2, 0.6, -2.2, 243, 4505636)
 	spawnMobile("rori", "cis_battle_droid", 360, 2.1, 0.6, -6.5, 280, 4505636)
-	spawnMobile("rori", "rebel_high_general", 360, 7.8, 0.6, -4.4, 270, 4505637)
+	spawnMobile("rori", "cis_major_general", 360, 7.8, 0.6, -4.4, 270, 4505637)
 
 		--Left Storage Shed with quest givers
 	spawnMobile("rori", "cis_battle_droid", 360, 0, 0.1, -6.0, 0, 4505666)

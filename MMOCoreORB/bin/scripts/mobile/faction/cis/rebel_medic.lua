@@ -1,5 +1,5 @@
-rebel_sergeant = Creature:new {
-	objectName = "@mob/creature_names:rebel_sergeant",
+rebel_medic = Creature:new {
+	objectName = "@mob/creature_names:cis_technician",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "rebel",
@@ -12,7 +12,7 @@ rebel_sergeant = Creature:new {
 	baseHAM = 2900,
 	baseHAMmax = 3500,
 	armor = 0,
-	resists = {5,5,5,5,5,5,5,-1,-1},
+	resists = {0,0,0,0,0,0,0,0,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -23,17 +23,13 @@ rebel_sergeant = Creature:new {
 	tamingChance = 0,
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
-	creatureBitmask = PACK,
-	optionsBitmask = AIENABLED,
+	creatureBitmask = PACK + HEALER,
+	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_sergeant_fat_zabrak_male_01.iff",
-		"object/mobile/dressed_rebel_sergeant_human_male_01.iff",
-		"object/mobile/dressed_rebel_sergeant_moncal_male_01.iff",
-		"object/mobile/dressed_rebel_sergeant_rodian_female_01.iff",
-		"object/mobile/dressed_rebel_sergeant_rodian_male_01.iff",
-		"object/mobile/dressed_rebel_sergeant_twilek_female_old_01.iff"},
+		"object/mobile/dressed_rebel_medic3_moncal_female_01.iff",
+		"object/mobile/dressed_rebel_medic1_bothan_male_01.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -49,11 +45,10 @@ rebel_sergeant = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_medium"},
-	conversationTemplate = "",
+	weapons = {"rebel_weapons_heavy"},
+	conversationTemplate = "rebelRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/military",
-	personalityStf = "@hireling/hireling_military",
 	attacks = merge(brawlermaster,marksmanmaster)
 }
 
-CreatureTemplates:addCreatureTemplate(rebel_sergeant, "rebel_sergeant")
+CreatureTemplates:addCreatureTemplate(rebel_medic, "rebel_medic")
