@@ -1,6 +1,5 @@
 theme_cad_bane = Creature:new {
-objectName = "@mob/creature_names:cis_magnaguard",
-customName = "Cad Bane",
+	objectName = "@mob/creature_names:theme_cad_bane",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

@@ -1,6 +1,5 @@
 theme_savage_opress = Creature:new {
-objectName = "@mob/creature_names:cis_magnaguard",
-customName = "Savage Opress",
+	objectName = "@mob/creature_names:theme_savage",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

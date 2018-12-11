@@ -1,6 +1,5 @@
 boba_fett = Creature:new {
-	objectName = "@mob/creature_names:boba_fett",
-	customName = "Mandalorian Warrior",
+	objectName = "@mob/creature_names:theme_mars_onyo",
 	socialGroup = "jabba",
 	faction = "jabba",
 	level = 99,

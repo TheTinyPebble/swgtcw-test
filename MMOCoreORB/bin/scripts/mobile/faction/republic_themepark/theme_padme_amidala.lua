@@ -1,6 +1,5 @@
 theme_padme_amidala = Creature:new {
-	objectName = "@mob/creature_names:cis_magnaguard",
-	customName = "Padme Amidala",
+	objectName = "@mob/creature_names:theme_padme_amidala",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,

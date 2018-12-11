@@ -1,6 +1,5 @@
 theme_sevrance_tann = Creature:new {
-	objectName = "@mob/creature_names:cis_magnaguard",
-	customName = "Sev'rance Tann",
+	objectName = "@mob/creature_names:theme_sevrance",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

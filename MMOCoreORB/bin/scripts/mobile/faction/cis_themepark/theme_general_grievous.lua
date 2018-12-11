@@ -1,6 +1,5 @@
 theme_general_grievous = Creature:new {
-objectName = "@mob/creature_names:cis_magnaguard",
-customName = "General Grievous",
+	objectName = "@mob/creature_names:theme_grievous",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

@@ -1,6 +1,5 @@
 theme_anakin_skywalker = Creature:new {
-	objectName = "@mob/creature_names:cis_magnaguard",
-	customName = "Anakin Skywalker",
+	objectName = "@mob/creature_names:theme_anakin_skywalker",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,

@@ -1,6 +1,5 @@
 theme_palpatine = Creature:new {
-	objectName = "@mob/creature_names:cis_magnaguard",
-	customName = "Supreme Chancellor Palpatine",
+	objectName = "@mob/creature_names:theme_chancellor_palpatine",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,

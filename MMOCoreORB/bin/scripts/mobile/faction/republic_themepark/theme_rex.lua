@@ -1,6 +1,5 @@
 theme_rex = Creature:new {
-	objectName = "@mob/creature_names:cis_magnaguard",
-	customName = "Captain Rex",
+	objectName = "@mob/creature_names:theme_rex",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,

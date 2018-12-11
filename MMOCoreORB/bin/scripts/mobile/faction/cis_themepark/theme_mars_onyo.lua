@@ -1,6 +1,5 @@
 theme_mars_onyo = Creature:new {
-objectName = "@mob/creature_names:cis_magnaguard",
-customName = "Mars Onyo",
+	objectName = "@mob/creature_names:theme_mars_onyo",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

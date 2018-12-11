@@ -1,6 +1,5 @@
 theme_mas_amedda = Creature:new {
-	objectName = "@mob/creature_names:cis_magnaguard",
-	customName = "Mas Amedda",
+	objectName = "@mob/creature_names:theme_mas_amedda",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,

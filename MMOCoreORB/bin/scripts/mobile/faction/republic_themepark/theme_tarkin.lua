@@ -1,6 +1,5 @@
 theme_tarkin = Creature:new {
-	objectName = "@mob/creature_names:cis_battle_droid",
-	customName = "Tarkin",
+	objectName = "@mob/creature_names:theme_tarkin",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,

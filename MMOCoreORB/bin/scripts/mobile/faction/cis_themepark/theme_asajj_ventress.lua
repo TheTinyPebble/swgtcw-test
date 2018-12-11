@@ -1,6 +1,5 @@
 theme_asajj_ventress = Creature:new {
-	objectName = "@mob/creature_names:cis_magnaguard",
-	customName = "Asajj Ventress",
+	objectName = "@mob/creature_names:theme_asajj",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

@@ -1,6 +1,5 @@
 theme_magnaguard = Creature:new {
-	objectName = "@mob/creature_names:cis_magnaguard",
-	customName = "Grievous' Magnaguard",
+	objectName = "@mob/creature_names:theme_magnaguard",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

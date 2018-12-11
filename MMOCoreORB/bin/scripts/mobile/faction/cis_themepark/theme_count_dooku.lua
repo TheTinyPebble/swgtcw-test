@@ -1,6 +1,5 @@
 theme_count_dooku = Creature:new {
-objectName = "@mob/creature_names:cis_magnaguard",
-customName = "Count Dooku",
+	objectName = "@mob/creature_names:theme_count_dooku",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

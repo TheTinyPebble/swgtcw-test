@@ -1,6 +1,5 @@
 theme_kit_fisto = Creature:new {
 	objectName = "@mob/creature_names:theme_kit_fisto",
-	customName = "Kit Fisto",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,
