@@ -41,18 +41,8 @@
 --this exception also makes it possible to release a modified version
 
 
+object_static_vehicle_static_gunship = object_static_vehicle_shared_static_gunship:new {
 
---Children folder includes
-includeFile("static/vehicle/e3/serverobjects.lua")
+}
 
--- Server Objects
-includeFile("static/vehicle/player_shuttle.lua")
-includeFile("static/vehicle/static_lambda_shuttle.lua")
-includeFile("static/vehicle/static_sandcrawler.lua")
-includeFile("static/vehicle/static_speeder_bike.lua")
-includeFile("static/vehicle/static_swoop_bike.lua")
-includeFile("static/vehicle/static_tie_bomber.lua")
-includeFile("static/vehicle/static_tie_fighter.lua")
-includeFile("static/vehicle/static_jedifighter.lua")
-includeFile("static/vehicle/static_arc170.lua")
-includeFile("static/vehicle/static_gunship.lua")
+ObjectTemplates:addTemplate(object_static_vehicle_static_gunship, "object/static/vehicle/static_gunship.iff")

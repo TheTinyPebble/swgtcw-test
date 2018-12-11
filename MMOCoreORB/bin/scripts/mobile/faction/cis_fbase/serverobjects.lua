@@ -1,4 +1,4 @@
-
+includeFile("faction/cis_fbase/fbase_at_xt.lua")
 includeFile("faction/cis_fbase/fbase_rebel_comm_operator.lua")
 includeFile("faction/cis_fbase/fbase_rebel_comm_operator_hard.lua")
 includeFile("faction/cis_fbase/fbase_rebel_recruit.lua")
