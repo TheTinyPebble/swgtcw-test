@@ -28,12 +28,14 @@ rebel_crewman = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_crewman_human_female_01.iff",
-		"object/mobile/dressed_rebel_crewman_human_female_02.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_01.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_02.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_03.iff",
-		"object/mobile/dressed_rebel_crewman_human_male_04.iff"},
+		"object/mobile/dressed_rebel_medic3_moncal_female_01.iff",
+		"object/mobile/selonian_female.iff",
+		"object/mobile/selonian_male.iff",
+		"object/mobile/bothan_female.iff",
+		"object/mobile/bothan_male.iff",
+		"object/mobile/aqualish_female.iff",
+		"object/mobile/aqualish_male.iff",
+		"object/mobile/dressed_rebel_medic1_bothan_male_01.iff"},
 	lootGroups = {
 		{
 			groups = {

@@ -27,7 +27,14 @@ imprisoned_rebel_soldier = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_scout_human_male_01.iff"},
+	templates = {
+		"object/mobile/selonian_female.iff",
+		"object/mobile/selonian_male.iff",
+		"object/mobile/bothan_female.iff",
+		"object/mobile/bothan_male.iff",
+		"object/mobile/aqualish_female.iff",
+		"object/mobile/aqualish_male.iff"},
+		
 	lootGroups = {
 		{
 			groups = {

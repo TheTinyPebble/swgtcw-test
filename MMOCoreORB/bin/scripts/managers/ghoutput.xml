@@ -3402,6 +3402,70 @@
 </resource>
 
 <resource>
+<SpawnName>Kewavasis</SpawnName>
+<resType>gas_inert_methanagen</resType>
+<attribute name="res_decay_resist">618</attribute>
+<attribute name="res_quality">755</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
+<SpawnName>Kewavasis</SpawnName>
+<resType>gas_inert_methanagen</resType>
+<attribute name="res_decay_resist">618</attribute>
+<attribute name="res_quality">755</attribute>
+<planet>dantooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Kewavasis</SpawnName>
+<resType>gas_inert_methanagen</resType>
+<attribute name="res_decay_resist">618</attribute>
+<attribute name="res_quality">755</attribute>
+<planet>dathomir</planet>
+</resource>
+
+<resource>
+<SpawnName>Kewavasis</SpawnName>
+<resType>gas_inert_methanagen</resType>
+<attribute name="res_decay_resist">618</attribute>
+<attribute name="res_quality">755</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
+<SpawnName>Kewavasis</SpawnName>
+<resType>gas_inert_methanagen</resType>
+<attribute name="res_decay_resist">618</attribute>
+<attribute name="res_quality">755</attribute>
+<planet>naboo</planet>
+</resource>
+
+<resource>
+<SpawnName>Kewavasis</SpawnName>
+<resType>gas_inert_methanagen</resType>
+<attribute name="res_decay_resist">618</attribute>
+<attribute name="res_quality">755</attribute>
+<planet>talus</planet>
+</resource>
+
+<resource>
+<SpawnName>Kewavasis</SpawnName>
+<resType>gas_inert_methanagen</resType>
+<attribute name="res_decay_resist">618</attribute>
+<attribute name="res_quality">755</attribute>
+<planet>tatooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Kewavasis</SpawnName>
+<resType>gas_inert_methanagen</resType>
+<attribute name="res_decay_resist">618</attribute>
+<attribute name="res_quality">755</attribute>
+<planet>yavin4</planet>
+</resource>
+
+<resource>
 <SpawnName>Khopa</SpawnName>
 <resType>hide_leathery_yavin4</resType>
 <attribute name="res_decay_resist">353</attribute>
@@ -3410,17 +3474,6 @@
 <attribute name="res_shock_resistance">451</attribute>
 <attribute name="res_toughness">927</attribute>
 <planet>yavin4</planet>
-</resource>
-
-<resource>
-<SpawnName>Kiarckami</SpawnName>
-<resType>bone_horn_talus</resType>
-<attribute name="res_decay_resist">446</attribute>
-<attribute name="res_malleability">71</attribute>
-<attribute name="res_quality">724</attribute>
-<attribute name="res_shock_resistance">468</attribute>
-<attribute name="res_toughness">339</attribute>
-<planet>talus</planet>
 </resource>
 
 <resource>
@@ -5244,118 +5297,6 @@
 </resource>
 
 <resource>
-<SpawnName>Pihi</SpawnName>
-<resType>steel_thoranium</resType>
-<attribute name="res_cold_resist">220</attribute>
-<attribute name="res_conductivity">195</attribute>
-<attribute name="res_decay_resist">667</attribute>
-<attribute name="res_heat_resist">718</attribute>
-<attribute name="res_malleability">164</attribute>
-<attribute name="res_quality">264</attribute>
-<attribute name="res_shock_resistance">691</attribute>
-<attribute name="res_toughness">601</attribute>
-<planet>corellia</planet>
-</resource>
-
-<resource>
-<SpawnName>Pihi</SpawnName>
-<resType>steel_thoranium</resType>
-<attribute name="res_cold_resist">220</attribute>
-<attribute name="res_conductivity">195</attribute>
-<attribute name="res_decay_resist">667</attribute>
-<attribute name="res_heat_resist">718</attribute>
-<attribute name="res_malleability">164</attribute>
-<attribute name="res_quality">264</attribute>
-<attribute name="res_shock_resistance">691</attribute>
-<attribute name="res_toughness">601</attribute>
-<planet>dantooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Pihi</SpawnName>
-<resType>steel_thoranium</resType>
-<attribute name="res_cold_resist">220</attribute>
-<attribute name="res_conductivity">195</attribute>
-<attribute name="res_decay_resist">667</attribute>
-<attribute name="res_heat_resist">718</attribute>
-<attribute name="res_malleability">164</attribute>
-<attribute name="res_quality">264</attribute>
-<attribute name="res_shock_resistance">691</attribute>
-<attribute name="res_toughness">601</attribute>
-<planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Pihi</SpawnName>
-<resType>steel_thoranium</resType>
-<attribute name="res_cold_resist">220</attribute>
-<attribute name="res_conductivity">195</attribute>
-<attribute name="res_decay_resist">667</attribute>
-<attribute name="res_heat_resist">718</attribute>
-<attribute name="res_malleability">164</attribute>
-<attribute name="res_quality">264</attribute>
-<attribute name="res_shock_resistance">691</attribute>
-<attribute name="res_toughness">601</attribute>
-<planet>lok</planet>
-</resource>
-
-<resource>
-<SpawnName>Pihi</SpawnName>
-<resType>steel_thoranium</resType>
-<attribute name="res_cold_resist">220</attribute>
-<attribute name="res_conductivity">195</attribute>
-<attribute name="res_decay_resist">667</attribute>
-<attribute name="res_heat_resist">718</attribute>
-<attribute name="res_malleability">164</attribute>
-<attribute name="res_quality">264</attribute>
-<attribute name="res_shock_resistance">691</attribute>
-<attribute name="res_toughness">601</attribute>
-<planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Pihi</SpawnName>
-<resType>steel_thoranium</resType>
-<attribute name="res_cold_resist">220</attribute>
-<attribute name="res_conductivity">195</attribute>
-<attribute name="res_decay_resist">667</attribute>
-<attribute name="res_heat_resist">718</attribute>
-<attribute name="res_malleability">164</attribute>
-<attribute name="res_quality">264</attribute>
-<attribute name="res_shock_resistance">691</attribute>
-<attribute name="res_toughness">601</attribute>
-<planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Pihi</SpawnName>
-<resType>steel_thoranium</resType>
-<attribute name="res_cold_resist">220</attribute>
-<attribute name="res_conductivity">195</attribute>
-<attribute name="res_decay_resist">667</attribute>
-<attribute name="res_heat_resist">718</attribute>
-<attribute name="res_malleability">164</attribute>
-<attribute name="res_quality">264</attribute>
-<attribute name="res_shock_resistance">691</attribute>
-<attribute name="res_toughness">601</attribute>
-<planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Pihi</SpawnName>
-<resType>steel_thoranium</resType>
-<attribute name="res_cold_resist">220</attribute>
-<attribute name="res_conductivity">195</attribute>
-<attribute name="res_decay_resist">667</attribute>
-<attribute name="res_heat_resist">718</attribute>
-<attribute name="res_malleability">164</attribute>
-<attribute name="res_quality">264</attribute>
-<attribute name="res_shock_resistance">691</attribute>
-<attribute name="res_toughness">601</attribute>
-<planet>yavin4</planet>
-</resource>
-
-<resource>
 <SpawnName>Pilkire</SpawnName>
 <resType>fruit_berries_yavin4</resType>
 <attribute name="res_decay_resist">760</attribute>
@@ -5381,6 +5322,17 @@
 <attribute name="res_potential_energy">411</attribute>
 <attribute name="res_quality">500</attribute>
 <planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Plifoe</SpawnName>
+<resType>bone_horn_talus</resType>
+<attribute name="res_decay_resist">986</attribute>
+<attribute name="res_malleability">21</attribute>
+<attribute name="res_quality">141</attribute>
+<attribute name="res_shock_resistance">680</attribute>
+<attribute name="res_toughness">16</attribute>
+<planet>talus</planet>
 </resource>
 
 <resource>

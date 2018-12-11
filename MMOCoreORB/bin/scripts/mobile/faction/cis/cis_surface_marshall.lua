@@ -1,5 +1,5 @@
 cis_surface_marshall = Creature:new {
-	objectName = "@mob/creature_names:rebel_major_general",
+	objectName = "@mob/creature_names:cis_surface_marshall",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "rebel",

@@ -1,5 +1,5 @@
 cis_general = Creature:new {
-	objectName = "@mob/creature_names:rebel_major_general",
+	objectName = "@mob/creature_names:cis_general",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "rebel",
