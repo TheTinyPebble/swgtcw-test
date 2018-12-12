@@ -77,29 +77,17 @@ rebelRewardData = {
 	},
 
 	hirelingList = {
-		"rebel_trooper", "senior_specforce_heavy_weapons_specialist", "senior_specforce_infiltrator", "senior_specforce_marine", "senior_specforce_pathfinder", "senior_specforce_technician",
-		"senior_specforce_urban_guerrilla", "senior_specforce_wilderness_fighter", "specforce_heavy_weapons_specialist", "specforce_infiltrator", "specforce_interrogator", "specforce_marine",
-		"specforce_procurement_specialist", "specforce_technician",	"specforce_wilderness_operative", "rebel_specforce_guerrilla","at_xt",
+		"battle_droid", "battle_droid_squad_leader", "battle_droid_specforce", "battle_droid_commando", "sbd", "magnaguard", "droideka"
 	},
 
 	hirelings = {
-		rebel_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:rebel_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="rebel_trooper", cost=150},
-		senior_specforce_heavy_weapons_specialist = { type=factionRewardType.hireling, display="@mob/creature_names:senior_specforce_heavy_weapons_specialist", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="senior_specforce_heavy_weapons_specialist", cost=450},
-		senior_specforce_infiltrator = { type=factionRewardType.hireling, display="@mob/creature_names:senior_specforce_infiltrator", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="senior_specforce_infiltrator", cost=450},
-		senior_specforce_marine = { type=factionRewardType.hireling, display="@mob/creature_names:senior_specforce_marine", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="senior_specforce_marine", cost=450},
-		senior_specforce_pathfinder = { type=factionRewardType.hireling, display="@mob/creature_names:senior_specforce_pathfinder", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="senior_specforce_pathfinder", cost=450},
-		senior_specforce_technician = { type=factionRewardType.hireling, display="@mob/creature_names:senior_specforce_technician", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="senior_specforce_technician", cost=450},
-		senior_specforce_urban_guerrilla = { type=factionRewardType.hireling, display="@mob/creature_names:senior_specforce_guerrilla", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="senior_specforce_urban_guerrilla", cost=450},
-		senior_specforce_wilderness_fighter = { type=factionRewardType.hireling, display="@mob/creature_names:senior_specforce_wilderness_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="senior_specforce_wilderness_fighter", cost=450},
-		specforce_heavy_weapons_specialist = { type=factionRewardType.hireling, display="@mob/creature_names:specforce_heavy_weapons_specialist", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="specforce_heavy_weapons_specialist", cost=375},
-		specforce_infiltrator = { type=factionRewardType.hireling, display="@mob/creature_names:specforce_infiltrator", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="specforce_infiltrator", cost=375},
-		specforce_interrogator = { type=factionRewardType.hireling, display="@mob/creature_names:specforce_interrogator", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="specforce_interrogator", cost=375},
-		specforce_marine = { type=factionRewardType.hireling, display="@mob/creature_names:specforce_marine", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="specforce_marine", cost=375},
-		specforce_procurement_specialist = { type=factionRewardType.hireling, display="@mob/creature_names:specforce_procurement_specialist", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="specforce_procurement_specialist", cost=375},
-		specforce_technician = { type=factionRewardType.hireling, display="@mob/creature_names:specforce_technician", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="specforce_technician", cost=375},
-		specforce_wilderness_operative = { type=factionRewardType.hireling, display="@mob/creature_names:specforce_wilderness_operative", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="specforce_wilderness_operative", cost=375},
-		rebel_specforce_guerrilla = { type=factionRewardType.hireling, display="@mob/creature_names:rebel_specforce_guerrilla", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="rebel_specforce_urban_guerrilla", cost=375},
-		at_xt = { type=factionRewardType.hireling, display="@mob/creature_names:at_xt", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="at_xt", cost=9450},
+		battle_droid = { type=factionRewardType.hireling, display="@mob/creature_names:cis_battle_droid", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_battle_droid", cost=150},
+		battle_droid_squad_leader = { type=factionRewardType.hireling, display="@mob/creature_names:cis_battle_droid_squad_leader", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_battle_droid_squad_leader", cost=220},
+		battle_droid_specforce = { type=factionRewardType.hireling, display="@mob/creature_names:cis_battle_droid_specforce", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_battle_droid_specforce", cost=420},
+		battle_droid_commando = { type=factionRewardType.hireling, display="@mob/creature_names:cis_battle_droid_commando", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_battle_droid_commando", cost=420},
+		sbd = { type=factionRewardType.hireling, display="@mob/creature_names:cis_sbd", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_sbd", cost=820},
+		magnaguard = { type=factionRewardType.hireling, display="@mob/creature_names:cis_magnaguard", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_magnaguard", cost=2120},
+		droideka = { type=factionRewardType.hireling, display="@mob/creature_names:cis_droideka", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_droideka", cost=9450},
 	}
 }
 
@@ -194,28 +182,16 @@ imperialRewardData = {
 	},
 
 	hirelingList = {
-		"assault_trooper", "bombardier", "command_security_guard", "compforce_trooper", "dark_trooper", "gunner", "imperial_private", "imperial_trooper", "sand_trooper", "scout_trooper",
-		"storm_commando", "stormtrooper", "stormtrooper_bombardier", "stormtrooper_medic", "stormtrooper_rifleman", "stormtrooper_sniper", "swamp_trooper", "at_st"
+		"clonetrooper", "clonetrooper_bombardier", "clonetrooper_medic", "swamp_trooper", "clonetrooper_sniper", "clone_commando", "at_xt"
 	},
 
 	hirelings = {
-		assault_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:assault_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="assault_trooper", cost=420},
-		bombardier = { type=factionRewardType.hireling, display="@mob/creature_names:bombardier", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="bombardier", cost=105},
-		command_security_guard = { type=factionRewardType.hireling, display="@mob/creature_names:command_security_guard", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="command_security_guard", cost=105},
-		compforce_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:compforce_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="compforce_trooper", cost=367},
-		dark_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:dark_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="dark_trooper", cost=2100},
-		gunner = { type=factionRewardType.hireling, display="@mob/creature_names:gunner", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="gunner", cost=105},
-		imperial_private = { type=factionRewardType.hireling, display="@mob/creature_names:imperial_private", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="imperial_private", cost=105},
-		imperial_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:imperial_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="imperial_trooper", cost=105},
-		sand_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:sand_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="sand_trooper", cost=420},
-		scout_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:scout_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="scout_trooper", cost=420},
-		storm_commando = { type=factionRewardType.hireling, display="@mob/creature_names:storm_commando", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="storm_commando", cost=462},
-		stormtrooper = { type=factionRewardType.hireling, display="@mob/creature_names:stormtrooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="stormtrooper", cost=420},
-		stormtrooper_bombardier = { type=factionRewardType.hireling, display="@mob/creature_names:stormtrooper_bombardier", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="stormtrooper_bombardier", cost=420},
-		stormtrooper_medic = { type=factionRewardType.hireling, display="@mob/creature_names:stormtrooper_medic", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="stormtrooper_medic", cost=420},
-		stormtrooper_rifleman = { type=factionRewardType.hireling, display="@mob/creature_names:stormtrooper_rifleman", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="stormtrooper_rifleman", cost=420},
-		stormtrooper_sniper = { type=factionRewardType.hireling, display="@mob/creature_names:stormtrooper_sniper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="stormtrooper_sniper", cost=420},
+		clonetrooper = { type=factionRewardType.hireling, display="@mob/creature_names:clonetrooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="clonetrooper", cost=420},
+		clonetrooper_bombardier = { type=factionRewardType.hireling, display="@mob/creature_names:clonetrooper_bombardier", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="clonetrooper_bombardier", cost=420},
+		clonetrooper_medic = { type=factionRewardType.hireling, display="@mob/creature_names:clonetrooper_medic", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="clonetrooper_medic", cost=420},
 		swamp_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:swamp_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="swamp_trooper", cost=420},
-		at_st = { type=factionRewardType.hireling, display="@mob/creature_names:at_st", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="at_st", cost=9450},
+		clonetrooper_sniper = { type=factionRewardType.hireling, display="@mob/creature_names:clonetrooper_sniper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="clonetrooper_sniper", cost=420},
+		clone_commando = { type=factionRewardType.hireling, display="@mob/creature_names:clonetrooper_commando", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="clone_commando", cost=2120},
+		at_xt = { type=factionRewardType.hireling, display="@mob/creature_names:at_xt", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="rep_at_xt", cost=9450},
 	},
 }

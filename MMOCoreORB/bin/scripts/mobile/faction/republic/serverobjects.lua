@@ -8,7 +8,7 @@ includeFile("faction/republic/clonetrooper_major.lua")
 includeFile("faction/republic/clonetrooper_medic.lua")
 includeFile("faction/republic/clonetrooper_sniper.lua")
 includeFile("faction/republic/clonetrooper_squad_leader.lua")
-includeFile("faction/republic/rep_jedi_knight.lua")
+
 includeFile("faction/republic/rep_at_xt.lua")
 
 includeFile("faction/republic/rebel_gungan_bomber.lua")
@@ -21,3 +21,6 @@ includeFile("faction/republic/rebel_gungan_kaadu_rider.lua")
 includeFile("faction/republic/rebel_gungan_priest.lua")
 includeFile("faction/republic/rebel_gungan_scout.lua")
 includeFile("faction/republic/rebel_gungan_war_chief.lua")
+
+includeFile("faction/republic/rep_jedi_knight.lua")
+includeFile("faction/republic/rep_jedi_master.lua")
