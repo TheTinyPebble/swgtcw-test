@@ -538,6 +538,7 @@ tatooine = {
 		{"badge_lars_homestead",-2579,-5500,0,10,17},
 		{"badge_sarlacc_pit",-6176,-3372,0,10,16},
 		{"badge_tusken_pool",-3971,6267,1189178,10,13},
+		{"badge_watto",-2898,2427,0,4,147},						
 	},
 
 	navAreas = {
