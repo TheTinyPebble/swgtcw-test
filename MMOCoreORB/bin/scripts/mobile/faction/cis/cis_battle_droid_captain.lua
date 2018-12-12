@@ -47,7 +47,7 @@ cis_battle_droid_captain = Creature:new {
 	},
 	weapons = {"battle_droid_weapons"},
 	conversationTemplate = "rebelRecruiterConvoTemplate",
-	reactionStf = "@npc_reaction/military",
+	reactionStf = "@npc_reaction/battle_droid",
 	attacks = merge(brawlermaster,marksmanmaster)
 }
 

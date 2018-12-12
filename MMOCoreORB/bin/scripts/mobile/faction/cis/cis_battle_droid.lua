@@ -46,7 +46,7 @@ cis_battle_droid = Creature:new {
 	},
 	weapons = {"battle_droid_weapons"},
 	conversationTemplate = "",
-	reactionStf = "@npc_reaction/military",
+	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",
 	attacks = merge(brawlermid,marksmanmid)
 }

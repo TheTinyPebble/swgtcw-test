@@ -47,7 +47,7 @@ cis_sbd = Creature:new {
 	},
 	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
 	conversationTemplate = "",
-	reactionStf = "@npc_reaction/military",
+	reactionStf = "",
 	personalityStf = "@hireling/hireling_military",
 	attacks = merge(brawlermaster,marksmanmaster)
 }

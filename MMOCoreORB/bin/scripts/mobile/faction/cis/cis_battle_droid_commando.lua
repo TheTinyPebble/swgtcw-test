@@ -46,7 +46,7 @@ cis_battle_droid_commando = Creature:new {
 	},
 	weapons = {"rebel_weapons_heavy"},
 	conversationTemplate = "",
-	reactionStf = "@npc_reaction/military",
+	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",
 	attacks = merge(commandomaster,marksmanmaster,brawlermaster,pistoleermaster)
 }
