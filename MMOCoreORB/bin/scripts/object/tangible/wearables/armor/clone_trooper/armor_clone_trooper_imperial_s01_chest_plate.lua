@@ -110,13 +110,15 @@ object_tangible_wearables_armor_clone_trooper_armor_clone_trooper_imperial_s01_c
 	actionEncumbrance = 1,
 	mindEncumbrance = 1,
 
+	maxCondition = 30000,
+
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
 	kinetic = 65,
 	energy = 65,
 	electricity = 65,
-	stun = 0,
+	stun = 5,
 	blast = 65,
 	heat = 65,
 	cold = 65,

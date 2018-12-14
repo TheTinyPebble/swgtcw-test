@@ -26,9 +26,8 @@ cis_battle_droid_pilot = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {
-		"object/mobile/death_watch_battle_droid_02.iff"
-		},
+	templates = {"object/mobile/battle_droid_blue.iff"},
+
 	lootGroups = {
 		{
 			groups = {

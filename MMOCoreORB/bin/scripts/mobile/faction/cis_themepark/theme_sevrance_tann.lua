@@ -25,7 +25,7 @@ theme_sevrance_tann = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/ep3/general_grievous.iff"},
+	templates = {"object/mobile/dressed_sevrance.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "theme_park_rebel_mission_giver_convotemplate",

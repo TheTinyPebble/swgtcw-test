@@ -27,8 +27,9 @@ cis_battle_droid_captain = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/death_watch_battle_droid_03.iff"
-	},
+		"object/mobile/battle_droid_yellow.iff",
+		"object/mobile/battle_droid_yellow_geo.iff",
+		},
 	lootGroups = {
 		{
 			groups = {

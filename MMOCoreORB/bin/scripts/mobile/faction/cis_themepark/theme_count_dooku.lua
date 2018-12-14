@@ -25,7 +25,7 @@ theme_count_dooku = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/ep3/general_grievous.iff"},
+	templates = {"object/mobile/dressed_dooku.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "theme_park_rebel_mission_giver_convotemplate",
