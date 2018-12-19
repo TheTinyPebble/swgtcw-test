@@ -25,6 +25,7 @@ cis_sbd = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED + FACTIONAGGRO,
 	diet = HERBIVORE,
+	scale = 1.30,
 
 	templates = {
 			"object/mobile/death_watch_s_battle_droid_02.iff"
