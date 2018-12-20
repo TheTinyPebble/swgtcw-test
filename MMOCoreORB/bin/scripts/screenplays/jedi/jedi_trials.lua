@@ -169,7 +169,7 @@ function JediTrials:unlockJediKnight(pPlayer)
 		enclaveLoc = { -5575, 4905, "yavin4" }
 		enclaveName = "Light Jedi Enclave"
 		jediState = 4
-		setFactionVal = FACTIONREBEL
+		setFactionVal = FACTIONIMPERIAL
 	elseif (councilType == self.COUNCIL_DARK) then
 		knightRobe = "object/tangible/wearables/robe/robe_jedi_dark_s01.iff"
 		unlockMusic = "sound/music_become_dark_jedi.snd"
@@ -177,7 +177,7 @@ function JediTrials:unlockJediKnight(pPlayer)
 		enclaveLoc = { 5079, 305, "yavin4" }
 		enclaveName = "Dark Jedi Enclave"
 		jediState = 8
-		setFactionVal = FACTIONIMPERIAL
+		setFactionVal = FACTIONREBEL
 	else
 		printLuaError("Invalid council type in JediTrials:unlockJediKnight")
 		return
