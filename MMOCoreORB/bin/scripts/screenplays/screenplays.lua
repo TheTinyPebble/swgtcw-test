@@ -27,10 +27,6 @@ require("sui.custom.SuiProcessorPuzzle")
 require("sui.custom.SuiRadiationSensor")
 require("sui.custom.SuiReceiverPuzzle")
 
--- Custom content
-includeFile("../custom_scripts/screenplays/screenplays.lua")
---includeFile("../custom_scripts/screenplays/glowing.lua")
-
 includeFile("helperfuncs.lua")
 includeFile("playerTriggers.lua")
 
@@ -675,3 +671,6 @@ includeFile("tests/tests.lua")
 --Merchants
 includeFile("merchants/house_merch.lua")
 includeFile("merchants/merchant_system.lua")
+
+--Custom Content
+includeFile("../custom_scripts/screenplays/screenplays.lua")
