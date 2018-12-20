@@ -195,7 +195,7 @@ function EmperorsRetreatScreenPlay:spawnMobiles()
 	spawnMobile("naboo", "clone_commando", 450, 2434.47, 292, -3932.06, 90, 0)
 	spawnMobile("naboo", "clone_commando", 450, 2437.01, 292, -3947.8, 147, 0)
 	spawnMobile("naboo", "clone_commando", 450, 2411.91, 292, -3986.99, -115, 0)
-	spawnMobile("naboo", "imperial_pilot", 450, 2432.33, 292, -3887.25, -131, 0)
+	spawnMobile("naboo", "clonetrooper_captain", 450, 2432.33, 292, -3887.25, -131, 0)
 
 	pNpc = spawnMobile("naboo", "noble", 60, 2443.42, 292, -3893.91, 18, 0)
 	self:setMoodString(pNpc, "conversation")
