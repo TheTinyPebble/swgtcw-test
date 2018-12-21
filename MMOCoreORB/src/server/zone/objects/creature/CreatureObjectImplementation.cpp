@@ -1028,6 +1028,9 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 	if (damageType % 3 != 0 && newValue < 0) // secondaries never should go negative
 		newValue = 0;
 
+	if (damageType == 6 && newValue <= 0)
+		newValue = 1;
+
 	setHAM(damageType, newValue, notifyClient);
 
 	if (attacker == nullptr)
@@ -2409,7 +2412,7 @@ void CreatureObjectImplementation::setIntimidatedState(int durationSeconds) {
 		Locker blocker(multBuff);
 
 		multBuff->setSkillModifier("private_damage_divisor", 1.33);
-	
+
 		addBuff(multBuff);
 	}
 }
@@ -2639,13 +2642,13 @@ void CreatureObjectImplementation::notifySelfPositionUpdate() {
 
 			if (terrainManager != nullptr) {
 				float waterHeight;
-				
+
 				CreatureObject* creature = asCreatureObject();
-				
+
 				if (parent == nullptr && terrainManager->getWaterHeight(getPositionX(), getPositionY(), waterHeight)) {
 					if ((getPositionZ() + getSwimHeight() - waterHeight < 0.2)) {
 						Reference<CreatureObject*> strongRef = asCreatureObject();
-						
+
 						Core::getTaskManager()->executeTask([strongRef] () {
 							Locker locker(strongRef);
 
