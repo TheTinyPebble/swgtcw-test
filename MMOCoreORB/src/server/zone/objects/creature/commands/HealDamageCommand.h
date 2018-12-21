@@ -423,7 +423,10 @@ public:
 			}
 		}
 
-		int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);
+/*		int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);*/
+			int medicineUse = creature->getSkillMod("healing_ability");
+			int combatMedicineUse = creature->getSkillMod("combat_healing_ability");
+			int mindCostNew = 1200-(medicineUse*6)-(combatMedicineUse*2);
 
 		if (!canPerformSkill(creature, targetCreature, stimPack, mindCostNew))
 			return GENERALERROR;
