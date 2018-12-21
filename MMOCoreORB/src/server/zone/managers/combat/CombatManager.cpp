@@ -257,7 +257,7 @@ int CombatManager::doCombatAction(CreatureObject* attacker, WeaponObject* weapon
 				if (defenderCreature != NULL){
 					olocker.release();
 					Locker olocker(defenderCreature, attacker);
-					ManagedReference<PlayerObject*> defenderPlayer = defenderCreature->getPlayerObject(); 
+					ManagedReference<PlayerObject*> defenderPlayer = defenderCreature->getPlayerObject();
 					if (defenderPlayer != NULL && shouldJediTef)
 						defenderPlayer->updateLastPvpCombatActionTimestamp(false, false, true);
 				}
@@ -293,7 +293,7 @@ int CombatManager::doCombatAction(TangibleObject* attacker, WeaponObject* weapon
 
 int CombatManager::doTargetCombatAction(CreatureObject* attacker, WeaponObject* weapon, TangibleObject* tano, const CreatureAttackData& data, bool* shouldGcwTef, bool* shouldBhTef, bool* shouldJediTef) {
 	int damage = 0;
-	
+
 	Locker clocker(tano, attacker);
 
 	if (!tano->isAttackableBy(attacker))
@@ -761,10 +761,10 @@ int CombatManager::getAttackerAccuracyModifier(TangibleObject* attacker, Creatur
 		switch (defender->getWeapon()->getGameObjectType()) {
 		case SceneObjectType::PISTOL:
 			attackerAccuracy += 10.f;
-			
+
 		case SceneObjectType::CARBINE:
 			attackerAccuracy += 15.f;
-			
+
 		case SceneObjectType::RIFLE:
 		case SceneObjectType::MINE:
 		case SceneObjectType::SPECIALHEAVYWEAPON:
@@ -1235,7 +1235,10 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 
 		Locker plocker(psg);
 
-		psg->inflictDamage(psg, 0, damage * 0.1, true, true);
+		if (attacker->isPlayerCreature())
+		damage *= 10;
+
+		psg->inflictDamage(psg, 0, damage * 0.01, true, true);
 
 	}
 
