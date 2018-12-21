@@ -894,7 +894,7 @@ npcMapRebel =
 			missions = {}
 		},
 		{
-			spawnData = { planetName = "corellia", npcTemplate = "theme_tikkes", x = 14.91, z = 1.01, y = -6.68, direction = 0, cellID = 8555475, position = STAND },
+			spawnData = { planetName = "corellia", npcTemplate = "theme_po", x = 14.91, z = 1.01, y = -6.68, direction = 0, cellID = 8555475, position = STAND },
 			worldPosition = { x = -6512.3, y = 6005.2 },
 			npcNumber = 2,
 			stfFile = "@theme_park_rebel/qualdo_herm",
