@@ -752,7 +752,7 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "cis_battle_droid_pilot", npcName = "Battle Droid Pilot" }
+				{ npcTemplate = "theme_cis_battle_droid", npcName = "Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
@@ -770,7 +770,7 @@ jan_missions =
 			missionDescription = "GENERAL DODONNA needs you to DELIVER the INFORMATION to REBEL PILOT",
 			primarySpawns =
 			{
-				{ npcTemplate = "cis_battle_droid_pilot", npcName = "Battle Droid Pilot" }
+				{ npcTemplate = "theme_cis_battle_droid", npcName = "Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
