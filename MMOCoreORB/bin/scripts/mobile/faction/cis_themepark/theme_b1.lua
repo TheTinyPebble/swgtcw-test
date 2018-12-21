@@ -1,6 +1,6 @@
 theme_b1 = Creature:new {
 	objectName = "@mob/creature_names:cis_battle_droid",
-	customName = "Battle Droid B1-389",
+	customName = "Battle Droid B1-268",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

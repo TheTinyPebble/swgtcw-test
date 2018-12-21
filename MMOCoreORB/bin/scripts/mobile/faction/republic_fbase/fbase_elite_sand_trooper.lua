@@ -28,7 +28,7 @@ fbase_elite_sand_trooper = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_stormtrooper_sand_trooper_m.iff"},
+	templates = {"object/mobile/dressed_clone_sandtrooper_m.iff"},
 	lootGroups = {
 		{
 			groups = {

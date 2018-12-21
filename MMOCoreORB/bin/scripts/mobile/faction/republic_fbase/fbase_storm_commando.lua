@@ -28,7 +28,7 @@ fbase_storm_commando = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_clone_commando_m.iff"},
+	templates = {"object/mobile/dressed_clone_arc_m.iff"},
 	lootGroups = {
 		{
 			groups = {
