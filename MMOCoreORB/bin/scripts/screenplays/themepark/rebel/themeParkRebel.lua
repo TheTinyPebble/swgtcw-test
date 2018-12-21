@@ -643,7 +643,7 @@ mon_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "Clonetrooper_squad_leader", npcName = "CT-1132" }
+				{ npcTemplate = "clonetrooper_squad_leader", npcName = "CT-1132" }
 			},
 			secondarySpawns =
 			{
@@ -702,7 +702,7 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "Clonetrooper_squad_leader", npcName = "CT-419" }
+				{ npcTemplate = "clonetrooper_squad_leader", npcName = "CT-419" }
 			},
 			secondarySpawns =
 			{
@@ -734,7 +734,7 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "Clonetrooper_squad_leader", npcName = "CT-770" }
+				{ npcTemplate = "clonetrooper_squad_leader", npcName = "CT-770" }
 			},
 			secondarySpawns =
 			{

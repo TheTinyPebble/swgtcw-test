@@ -24,7 +24,7 @@ public:
 		: QueueCommand(name, server) {
 
 		range = 5;
-		mindCost = 50;
+		mindCost = 250;
 	}
 
 	void deactivateInjuryTreatment(CreatureObject* creature, bool isRangedStim) const {
@@ -310,7 +310,7 @@ public:
 	void handleArea(CreatureObject* creature, CreatureObject* areaCenter, StimPack* pharma, float range) const {
 
 		// TODO: Replace this with a CombatManager::getAreaTargets() call
-		
+
 		Zone* zone = creature->getZone();
 
 		if (zone == NULL)
@@ -387,7 +387,7 @@ public:
 				if (tangibleObject != NULL && tangibleObject->isAttackableBy(creature)) {
 					object = creature;
 				} else {
-					creature->sendSystemMessage("@healing_response:healing_response_62"); //Target must be a player or a creature pet in order to heal damage. 
+					creature->sendSystemMessage("@healing_response:healing_response_62"); //Target must be a player or a creature pet in order to heal damage.
 					return GENERALERROR;
 				}
 			}
