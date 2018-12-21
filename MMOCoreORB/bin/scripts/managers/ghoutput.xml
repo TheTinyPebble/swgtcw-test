@@ -1097,6 +1097,17 @@
 </resource>
 
 <resource>
+<SpawnName>Cekola</SpawnName>
+<resType>hide_bristley_yavin4</resType>
+<attribute name="res_decay_resist">428</attribute>
+<attribute name="res_malleability">884</attribute>
+<attribute name="res_quality">510</attribute>
+<attribute name="res_shock_resistance">283</attribute>
+<attribute name="res_toughness">206</attribute>
+<planet>yavin4</planet>
+</resource>
+
+<resource>
 <SpawnName>Cekro</SpawnName>
 <resType>vegetable_fungi_corellia</resType>
 <attribute name="res_decay_resist">138</attribute>
@@ -3036,17 +3047,6 @@
 <attribute name="res_potential_energy">225</attribute>
 <attribute name="res_quality">988</attribute>
 <planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Hova</SpawnName>
-<resType>hide_bristley_yavin4</resType>
-<attribute name="res_decay_resist">595</attribute>
-<attribute name="res_malleability">968</attribute>
-<attribute name="res_quality">726</attribute>
-<attribute name="res_shock_resistance">738</attribute>
-<attribute name="res_toughness">957</attribute>
-<planet>yavin4</planet>
 </resource>
 
 <resource>

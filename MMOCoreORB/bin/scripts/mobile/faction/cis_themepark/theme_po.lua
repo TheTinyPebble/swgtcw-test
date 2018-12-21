@@ -1,4 +1,4 @@
-theme_tikkes = Creature:new {
+theme_po = Creature:new {
 	objectName = "@mob/creature_names:theme_po",
 	socialGroup = "rebel",
 	faction = "rebel",

@@ -24,7 +24,7 @@ public:
 		: QueueCommand(name, server) {
 
 		range = 5;
-		mindCost = 250;
+		mindCost = 750;
 	}
 
 	void deactivateInjuryTreatment(CreatureObject* creature, bool isRangedStim) const {
