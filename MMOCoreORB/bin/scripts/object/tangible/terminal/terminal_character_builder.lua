@@ -1588,7 +1588,9 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Clone Trooper Chest Plate", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_chest_plate.iff",
 					"Clone Trooper Gloves", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_gloves.iff",
 					"Clone Trooper Helmet", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_helmet.iff",
-					"Clone Trooper Leggings", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_leggings.iff"
+					"Clone Trooper Leggings", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_leggings.iff",
+					"Test Shield", "object/tangible/component/armor/shield_generator_personal_c.iff"
+					"Test Imperial Shield", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff"
 					},
 					"Clone Trooper Coruscant Armor",
 					{
