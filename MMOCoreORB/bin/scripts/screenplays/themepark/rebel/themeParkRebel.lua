@@ -606,12 +606,12 @@ mon_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "Clonetrooper_squad_leader", npcName = "Strike Team Leader" }
+				{ npcTemplate = "clonetrooper_squad_leader", npcName = "Strike Team Leader" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "clonetrooper", npcName = "CT-221" },
-				{ npcTemplate = "clonetrooper", npcName = "CT-982" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-2210" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-9582" }
 			},
 			itemSpawns = {},
 			rewards =
