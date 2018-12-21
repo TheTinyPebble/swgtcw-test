@@ -106,7 +106,7 @@ object_tangible_component_armor_shield_generator_personal_imperial_test = object
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	maxCondition = 30000,
+	maxCondition = 6000,
 
 	kinetic = 0,
 	energy = 25,
