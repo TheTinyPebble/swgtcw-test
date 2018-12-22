@@ -3050,7 +3050,15 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 		return true;
 	}
 
-	if ((ghost->hasJediTef() && ((object->getFaction() != getFaction()) || (object->getFaction() !=0)))  || ((ghost->isJedi() && getWeapon()->isJediWeapon()) && ((object->getFaction() != getFaction()) || (object->getFaction() !=0))) || ((ghost->isJediAttackable() && ((object->getFaction()) != getFaction()) || (object->getFaction() !=0)))){
+	if (ghost->hasJediTef() && (object->getFaction() != getFaction() || object->getFaction() != 0)){ 
+		return true;
+	}
+
+	if (ghost->isJedi() && getWeapon()->isJediWeapon() && (object->getFaction() != getFaction() || object->getFaction() != 0)){
+		return true;
+	}
+
+	if (ghost->isJediAttackable() && (object->getFaction() != getFaction() || object->getFaction() != 0)){
 		return true;
 	}
 
