@@ -252,6 +252,16 @@
 </resource>
 
 <resource>
+<SpawnName>Ano</SpawnName>
+<resType>fruit_fruits_rori</resType>
+<attribute name="res_decay_resist">408</attribute>
+<attribute name="res_flavor">321</attribute>
+<attribute name="res_potential_energy">538</attribute>
+<attribute name="res_quality">939</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
 <SpawnName>Aoli</SpawnName>
 <resType>vegetable_fungi_naboo</resType>
 <attribute name="res_decay_resist">529</attribute>
@@ -1617,16 +1627,6 @@
 <attribute name="res_potential_energy">711</attribute>
 <attribute name="res_quality">601</attribute>
 <planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Drahe</SpawnName>
-<resType>fruit_fruits_rori</resType>
-<attribute name="res_decay_resist">824</attribute>
-<attribute name="res_flavor">140</attribute>
-<attribute name="res_potential_energy">99</attribute>
-<attribute name="res_quality">215</attribute>
-<planet>rori</planet>
 </resource>
 
 <resource>
