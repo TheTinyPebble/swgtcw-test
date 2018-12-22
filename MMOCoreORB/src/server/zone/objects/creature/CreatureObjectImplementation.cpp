@@ -3058,11 +3058,8 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 		return true;
 	}
 
-<<<<<<< Updated upstream
-	if (ghost->hasJediTef() && (object->getFaction() != getFaction() || object->getFaction() != 0)){
-=======
 	if (ghost->hasJediTef() && (object->getFaction() != getFaction() && object->getFaction() != 0)){ 
->>>>>>> Stashed changes
+
 		return true;
 	}
 
