@@ -1017,6 +1017,14 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 
 	int currentValue = hamList.get(damageType);
 
+	if (damageType == 6 && damage > 200){ //pve mind damage capped at 200
+		if (attacker->isPlayerCreature()){
+			damageType = 6;
+		}
+		else
+			damage = 200;
+	}
+
 	int newValue = currentValue - (int) damage;
 
 	if (!destroy && newValue <= 0)
@@ -1028,7 +1036,7 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 	if (damageType % 3 != 0 && newValue < 0) // secondaries never should go negative
 		newValue = 0;
 
-	if (damageType == 6 && newValue <= 0)
+	if (damageType == 6 && newValue <= 0) //no mind incaps
 		newValue = 1;
 
 	setHAM(damageType, newValue, notifyClient);
@@ -3050,7 +3058,7 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 		return true;
 	}
 
-	if (ghost->hasJediTef() && (object->getFaction() != getFaction() || object->getFaction() != 0)){ 
+	if (ghost->hasJediTef() && (object->getFaction() != getFaction() || object->getFaction() != 0)){
 		return true;
 	}
 
