@@ -2904,13 +2904,13 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 
 	if (attackingCreature != nullptr && targetCreature != nullptr && attackingCreature->isPlayerCreature() && targetCreature->isPlayerCreature() && !areInDuel(attackingCreature, targetCreature)) {
 
-		if (!(*shouldJediTef) && (targetCreature->getPlayerObject()->isJedi() && targetCreature->getWeapon()->isJediWeapon()))
+		if (!(*shouldJediTef) && (targetCreature->getPlayerObject()->isJedi() && targetCreature->getWeapon()->isJediWeapon()) && (attackingCreature->getFaction() != targetCreature->getFaction()) && attackingCreature->getFaction() != 0 && targetCreature->getFaction() != 0)
 			*shouldJediTef = true;
 
-		if (!(*shouldJediTef) && (attackingCreature->isPlayerCreature() && attackingCreature->getPlayerObject()->isJedi()))
+		if (!(*shouldJediTef) && (attackingCreature->isPlayerCreature() && attackingCreature->getPlayerObject()->isJedi()) && (attackingCreature->getFaction() != targetCreature->getFaction()) && attackingCreature->getFaction() != 0 && targetCreature->getFaction() != 0)
 			*shouldJediTef = true;
 
-		if (!(*shouldJediTef) && (targetCreature->getPlayerObject()->isJediAttackable() || targetCreature->getPlayerObject()->hasJediTef()))
+		if (!(*shouldJediTef) && (targetCreature->getPlayerObject()->isJediAttackable() || targetCreature->getPlayerObject()->hasJediTef()) && (attackingCreature->getFaction() != targetCreature->getFaction()) && attackingCreature->getFaction() != 0 && targetCreature->getFaction() != 0)
 			*shouldJediTef = true;
 
 		if (!(*shouldGcwTef) && (attackingCreature->getFaction() != targetCreature->getFaction()) && attackingCreature->getFaction() != 0 && targetCreature->getFaction() != 0)

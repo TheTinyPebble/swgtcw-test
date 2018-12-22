@@ -2914,7 +2914,7 @@ bool CreatureObjectImplementation::isAggressiveTo(CreatureObject* object) {
 		return true;
 	}
 
-	if (ghost->hasJediTef())
+	if (ghost->hasJediTef() && (object->getFaction() != getFaction()))
 		return true;
 
 	if (object->getPvpStatusBitmask() & CreatureFlag::TEF && getFaction() != object-> getFaction()){
@@ -3050,7 +3050,7 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 		return true;
 	}
 
-	if (ghost->hasJediTef() || (ghost->isJedi() && getWeapon()->isJediWeapon()) || (ghost->isJediAttackable())){
+	if ((ghost->hasJediTef() && ((object->getFaction() != getFaction()) && (object->getFaction() !=0)))  || ((ghost->isJedi() && getWeapon()->isJediWeapon()) && ((object->getFaction() != getFaction()) && (object->getFaction() !=0))) || ((ghost->isJediAttackable() && ((object->getFaction()) != getFaction()) && (object->getFaction() !=0)))){
 		return true;
 	}
 
