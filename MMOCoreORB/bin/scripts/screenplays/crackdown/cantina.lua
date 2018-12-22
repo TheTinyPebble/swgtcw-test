@@ -10,7 +10,7 @@ CrackdownCantina = ScreenPlay:new {
 	debugNotify = true -- Send system message when successfully triggered (for debugging)
 }
 
-registerScreenPlay("CrackdownCantina", true)
+registerScreenPlay("CrackdownCantina", false)
 
 function CrackdownCantina:start()
 	for i = 1, #self.cantinaPlanets, 1 do
