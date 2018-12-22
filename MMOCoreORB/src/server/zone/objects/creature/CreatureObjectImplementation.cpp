@@ -2922,7 +2922,7 @@ bool CreatureObjectImplementation::isAggressiveTo(CreatureObject* object) {
 		return true;
 	}
 
-	if (ghost->hasJediTef() && (object->getFaction() != getFaction()))
+	if (ghost->hasJediTef() && (object->getFaction() != getFaction() || object->getFaction() != 0))
 		return true;
 
 	if (object->getPvpStatusBitmask() & CreatureFlag::TEF && getFaction() != object-> getFaction()){
@@ -3058,15 +3058,19 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 		return true;
 	}
 
+<<<<<<< Updated upstream
 	if (ghost->hasJediTef() && (object->getFaction() != getFaction() || object->getFaction() != 0)){
+=======
+	if (ghost->hasJediTef() && (object->getFaction() != getFaction() && object->getFaction() != 0)){ 
+>>>>>>> Stashed changes
 		return true;
 	}
 
-	if (ghost->isJedi() && getWeapon()->isJediWeapon() && (object->getFaction() != getFaction() || object->getFaction() != 0)){
+	if (ghost->isJedi() && getWeapon()->isJediWeapon() && (object->getFaction() != getFaction() && object->getFaction() != 0)){
 		return true;
 	}
 
-	if (ghost->isJediAttackable() && (object->getFaction() != getFaction() || object->getFaction() != 0)){
+	if (ghost->isJediAttackable() && (object->getFaction() != getFaction() && object->getFaction() != 0)){
 		return true;
 	}
 
