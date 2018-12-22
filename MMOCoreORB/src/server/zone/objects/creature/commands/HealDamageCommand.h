@@ -24,7 +24,7 @@ public:
 		: QueueCommand(name, server) {
 
 		range = 5;
-		mindCost = 750;
+		mindCost = 5000;
 	}
 
 	void deactivateInjuryTreatment(CreatureObject* creature, bool isRangedStim) const {
@@ -48,7 +48,7 @@ public:
 		}
 
 		//Force the delay to be at least 4 seconds.
-		delay = (delay < 4) ? 4 : delay;
+		delay = (delay < 1) ? 1 : delay;
 
 		StringIdChatParameter message("healing_response", "healing_response_58"); //You are now ready to heal more damage.
 		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatment");
