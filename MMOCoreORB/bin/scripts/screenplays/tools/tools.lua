@@ -2,6 +2,7 @@ StaffTools = {
 	toolsMenu = {
 		{ "Shuttle Dropoff", "openShuttleConfig" },
 		{ "Firework Event", "openFireworkConfig" },
+		{ "Elite Spawns Satus", "openEliteSpawnStatus" },
 	}
 }
 
@@ -47,6 +48,11 @@ end
 function StaffTools.openFireworkConfig(pPlayer)
 	FireworkEvent:showMainUI(pPlayer)
 end
+
+function StaffTools.openFireworkConfig(pPlayer)
+	eliteSpawns:statusSui(pPlayer)
+end
+
 
 function StaffTools:suiShuttleDropoffCallback(pPlayer, pSui, eventIndex, args)
 end
