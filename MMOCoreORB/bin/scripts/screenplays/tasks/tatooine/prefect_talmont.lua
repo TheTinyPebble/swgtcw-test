@@ -25,8 +25,8 @@ wilhalm_skrim_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_scout", npcName = "a Rebel scout" },
-				{ npcTemplate = "rebel_scout", npcName = "a Rebel scout" }
+				{ npcTemplate = "cis_battle_droid_scout", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_scout", npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -46,8 +46,8 @@ wilhalm_skrim_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_scout", npcName = "a Rebel scout" },
-				{ npcTemplate = "rebel_scout", npcName = "a Rebel scout" }
+				{ npcTemplate = "cis_battle_droid_scout", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_scout", npcName = "" }
 			},
 			itemSpawns = {},
 			rewards =
