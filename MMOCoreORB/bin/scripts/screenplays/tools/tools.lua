@@ -49,7 +49,7 @@ function StaffTools.openFireworkConfig(pPlayer)
 	FireworkEvent:showMainUI(pPlayer)
 end
 
-function StaffTools.openFireworkConfig(pPlayer)
+function StaffTools.openEliteSpawnStatus(pPlayer)
 	eliteSpawns:statusSui(pPlayer)
 end
 
