@@ -19,9 +19,9 @@ cx_425_trooper_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rogue", npcName = "a Rebel Sympathizer" },
-				{ npcTemplate = "rogue", npcName = "a Rebel Sympathizer" },
-				{ npcTemplate = "rogue", npcName = "a Rebel Sympathizer" }
+				{ npcTemplate = "rogue", npcName = "a Separatist Sympathizer" },
+				{ npcTemplate = "rogue", npcName = "a Separatist Sympathizer" },
+				{ npcTemplate = "rogue", npcName = "a Separatist Sympathizer" }
 			},
 			itemSpawns =
 			{
