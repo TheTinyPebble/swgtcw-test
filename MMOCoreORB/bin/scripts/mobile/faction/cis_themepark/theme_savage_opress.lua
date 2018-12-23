@@ -24,8 +24,9 @@ theme_savage_opress = Creature:new {
 	creatureBitmask = PACK,
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
+	scale = 1.20,
 
-	templates = {"object/mobile/ep3/general_grievous.iff"},
+	templates = {"object/mobile/savage.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "theme_park_rebel_mission_giver_convotemplate",

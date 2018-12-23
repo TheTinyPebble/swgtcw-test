@@ -25,7 +25,7 @@ theme_palpatine = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/magnaguard.iff"},
+	templates = {"object/mobile/palpatine.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "theme_park_imperial_mission_giver_convotemplate",

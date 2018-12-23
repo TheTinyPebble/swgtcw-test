@@ -24,7 +24,7 @@ theme_general_grievous = Creature:new {
 	creatureBitmask = PACK,
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
-	scale = 1.30,
+	scale = 1.20,
 
 	templates = {"object/mobile/ep3/general_grievous.iff"},
 	lootGroups = {},
