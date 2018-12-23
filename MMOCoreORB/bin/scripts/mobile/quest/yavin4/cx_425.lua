@@ -26,7 +26,7 @@ cx_425 = Creature:new {
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_clonetrooper.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {},
 	weapons = {"imperial_weapons_medium"},
 	conversationTemplate = "cx_425_trooper_mission_giver_convotemplate",
