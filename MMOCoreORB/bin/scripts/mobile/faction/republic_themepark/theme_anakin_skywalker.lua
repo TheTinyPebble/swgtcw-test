@@ -25,7 +25,7 @@ theme_anakin_skywalker = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_nym_pirate_elite_hum_m.iff"},
+	templates = {"object/mobile/anakin_robe.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "theme_park_imperial_mission_giver_convotemplate",
