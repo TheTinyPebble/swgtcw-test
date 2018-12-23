@@ -1235,10 +1235,12 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 
 		Locker plocker(psg);
 
+		float psgPvpMod = 1;
 		if (attacker->isPlayerCreature())
-		damage *= 10;
+			psgPvpMod *= 10;
 
-		psg->inflictDamage(psg, 0, damage * 0.01, true, true);
+		psg->inflictDamage(psg, 0, damage * 0.01 * psgPvpMod, true, true);
+
 
 	}
 
