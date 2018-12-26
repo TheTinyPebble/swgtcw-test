@@ -44,7 +44,9 @@
 object_tangible_wearables_armor_padded_armor_padded_s01_belt = object_tangible_wearables_armor_padded_shared_armor_padded_s01_belt:new {
 	templateType = CLOTHINGOBJECT,
 
-	playerRaces = { "object/creature/player/bothan_male.iff",
+	objectMenuComponent = "ArmorObjectMenuComponent",
+	playerRaces = { 
+				"object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
@@ -93,7 +95,8 @@ object_tangible_wearables_armor_padded_armor_padded_s01_belt = object_tangible_w
 				"object/mobile/vendor/wookiee_female.iff",
 				"object/mobile/vendor/wookiee_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
-				"object/mobile/vendor/zabrak_male.iff" },
+				"object/mobile/vendor/zabrak_male.iff"
+				},
 
 
 	numberExperimentalProperties = {1, 1, 1},

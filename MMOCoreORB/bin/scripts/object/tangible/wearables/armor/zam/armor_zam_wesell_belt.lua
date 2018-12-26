@@ -44,7 +44,9 @@
 object_tangible_wearables_armor_zam_armor_zam_wesell_belt = object_tangible_wearables_armor_zam_shared_armor_zam_wesell_belt:new {
 	templateType = ARMOROBJECT,
 
-	playerRaces = { "object/creature/player/bothan_male.iff",
+	objectMenuComponent = "ArmorObjectMenuComponent",
+	playerRaces = { 
+				"object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
@@ -93,7 +95,9 @@ object_tangible_wearables_armor_zam_armor_zam_wesell_belt = object_tangible_wear
 				"object/mobile/vendor/wookiee_female.iff",
 				"object/mobile/vendor/wookiee_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
-				"object/mobile/vendor/zabrak_male.iff" },
+				"object/mobile/vendor/zabrak_male.iff"
+				},
+
 
 	-- Damage types in WeaponObject
 	vulnerability = ACID + ENERGY + STUN + LIGHTSABER,
