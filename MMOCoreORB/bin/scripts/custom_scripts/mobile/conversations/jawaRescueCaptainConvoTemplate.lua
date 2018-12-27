@@ -7,7 +7,7 @@ jawaRescueCaptainConvoTemplate = ConvoTemplate:new {
 
 quest = ConvoScreen:new {
 	id = "quest",
-	customDialog = "Please tell me you're here to rescue me!", 
+	customDialogText = "Please tell me you're here to rescue me!", 
 	stopConversation = "false",
 	options = {
 		{"It's safe to leave, your companion is waiting in Mos Espa!", "complete_quest"},
@@ -19,7 +19,7 @@ jawaRescueCaptainConvoTemplate:addScreen(quest);
 
 information_one = ConvoScreen:new {
 	id = "information_one",
-	customDialog = "These Tuskens appeared out of nowhere and completely surprised us. It's the first time I've seen Tuskens be this smart.", 
+	customDialogText = "These Tuskens appeared out of nowhere and completely surprised us. It's the first time I've seen Tuskens be this smart.", 
 	stopConversation = "false",
 	options = {
 		{"It's safe to leave, your companion is waiting in Mos Espa!", "complete_quest"},
@@ -31,7 +31,7 @@ jawaRescueCaptainConvoTemplate:addScreen(information_one);
 
 information_two = ConvoScreen:new {
 	id = "information_two",
-	customDialog = "They forced all of us to work, to restore this bunker. They didn't feed or drink us, I managed to survive because I'm the only one who was allowed to work inside.", 
+	customDialogText = "They forced all of us to work, to restore this bunker. They didn't feed or drink us, I managed to survive because I'm the only one who was allowed to work inside.", 
 	stopConversation = "false",
 	options = {
 		{"It's safe to leave, your companion is waiting in Mos Espa!", "complete_quest"},
@@ -42,7 +42,7 @@ jawaRescueCaptainConvoTemplate:addScreen(information_two);
 
 complete_quest = ConvoScreen:new {
 	id = "complete_quest",
-	customDialog = "Thank you, I'll return at once to let him know I'm safe.", 
+	customDialogText = "Thank you, I'll return at once to let him know I'm safe.", 
 	stopConversation = "true",
 	options = {
 	}
@@ -51,7 +51,7 @@ jawaRescueCaptainConvoTemplate:addScreen(complete_quest);
 
 decline = ConvoScreen:new {
 	id = "decline",
-	customDialog = "I'll wait here until it's safe.", 
+	customDialogText = "I'll wait here until it's safe.", 
 	stopConversation = "true",
 	options = {
 	}
@@ -60,7 +60,7 @@ jawaRescueCaptainConvoTemplate:addScreen(decline);
 
 reject = ConvoScreen:new {
 	id = "reject",
-	customDialog = "*He looks at you quizzically*", 
+	customDialogText = "*He looks at you quizzically*", 
 	stopConversation = "true",
 	options = {
 	}
