@@ -361,6 +361,9 @@ QuestManager.quests.WOD_PROLOGUE_WALKABOUT_07			= 195
 QuestManager.quests.WOD_PROLOGUE_WALKABOUT_08			= 196
 QuestManager.quests.WOD_PROLOGUE_WALKABOUT_09			= 197
 QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH	= 198
+QuestManager.quests.JAWA_RESCUE_OP						= 199
+QuestManager.quests.JAWA_RESCUE_OP_TASK					= 200
+QuestManager.quests.JAWA_RESCUE_OP_RETURN				= 201
 
 
 return QuestManager
