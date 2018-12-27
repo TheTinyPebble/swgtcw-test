@@ -39,6 +39,7 @@ death_watch_battle_droid = Creature:new {
 		}
 	},
 	weapons = {"battle_droid_weapons"},
+	defaultAttack = "defaultdroidrangedattack",
 	conversationTemplate = "",
 	attacks = merge(pistoleermaster,carbineermaster,marksmanmaster)
 }
