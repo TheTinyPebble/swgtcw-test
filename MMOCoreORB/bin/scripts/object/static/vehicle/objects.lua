@@ -446,3 +446,13 @@ object_static_vehicle_shared_static_gunship = SharedStaticObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_static_vehicle_shared_static_gunship, "object/static/vehicle/shared_static_gunship.iff")
+
+object_static_worldbuilding_vehicles_shared_barc_speeder_static_destroyed = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/worldbuilding/vehicles/shared_barc_speeder_static_destroyed.iff"
+}
+ObjectTemplates:addClientTemplate(object_static_worldbuilding_vehicles_shared_barc_speeder_static_destroyed, "object/static/worldbuilding/vehicles/shared_barc_speeder_static_destroyed.iff")
+
+object_static_worldbuilding_vehicles_shared_speeder_bike_static_destroyed = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/worldbuilding/vehicles/shared_speeder_bike_static_destroyed.iff"
+}
+ObjectTemplates:addClientTemplate(object_static_worldbuilding_vehicles_shared_speeder_bike_static_destroyed, "object/static/worldbuilding/vehicles/shared_speeder_bike_static_destroyed.iff")

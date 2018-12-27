@@ -464,7 +464,17 @@ public:
 		StringBuffer buffer;
 
 		if (attacker->isDroidObject()) {
-			return "droid_attack" + intensity;
+				if (weapon->isRangedWeapon()) {
+
+						buffer << rangedAttacks[System::random(2)];
+
+						buffer << intensity;
+
+						if (hitLocation == CombatManager::HIT_HEAD)
+								buffer << "_face";
+				} else {
+						return "droid_attack" + intensity;
+				}
 		} else if (!attacker->isCreature()) {
 			if (weapon->isRangedWeapon()) {
 

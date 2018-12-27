@@ -1,5 +1,4 @@
---Copyright (C) 2010 <SWGEmu>
-
+--Copyright (C) 2009 <SWGEmu>
 
 --This File is part of Core3.
 
@@ -39,22 +38,15 @@
 --it is their choice whether to do so. The GNU Lesser General Public License
 --gives permission to release a modified version without this exception;
 --this exception also makes it possible to release a modified version
+--which carries forward this exception.
 
 
+object_static_worldbuilding_vehicles_shared_barc_speeder_static_destroyed = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/worldbuilding/vehicles/shared_barc_speeder_static_destroyed.iff"
+}
+ObjectTemplates:addClientTemplate(object_static_worldbuilding_vehicles_shared_barc_speeder_static_destroyed, "object/static/worldbuilding/vehicles/shared_barc_speeder_static_destroyed.iff")
 
---Children folder includes
-includeFile("static/vehicle/e3/serverobjects.lua")
-
--- Server Objects
-includeFile("static/vehicle/player_shuttle.lua")
-includeFile("static/vehicle/static_lambda_shuttle.lua")
-includeFile("static/vehicle/static_sandcrawler.lua")
-includeFile("static/vehicle/static_speeder_bike.lua")
-includeFile("static/vehicle/static_swoop_bike.lua")
-includeFile("static/vehicle/static_tie_bomber.lua")
-includeFile("static/vehicle/static_tie_fighter.lua")
-includeFile("static/vehicle/static_jedifighter.lua")
-includeFile("static/vehicle/static_arc170.lua")
-includeFile("static/vehicle/static_gunship.lua")
-includeFile("static/vehicle/barc_speeder_static_destroyed.lua")
-includeFile("static/vehicle/speeder_bike_static_destroyed.lua")
+object_static_worldbuilding_vehicles_shared_speeder_bike_static_destroyed = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/worldbuilding/vehicles/shared_speeder_bike_static_destroyed.iff"
+}
+ObjectTemplates:addClientTemplate(object_static_worldbuilding_vehicles_shared_speeder_bike_static_destroyed, "object/static/worldbuilding/vehicles/shared_speeder_bike_static_destroyed.iff")

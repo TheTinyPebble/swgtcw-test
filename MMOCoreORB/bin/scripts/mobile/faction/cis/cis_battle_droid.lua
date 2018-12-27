@@ -44,6 +44,7 @@ cis_battle_droid = Creature:new {
 			}
 		}
 	},
+	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
 	weapons = {"battle_droid_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
