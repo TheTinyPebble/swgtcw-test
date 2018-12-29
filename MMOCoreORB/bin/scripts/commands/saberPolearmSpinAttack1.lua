@@ -54,12 +54,12 @@ SaberPolearmSpinAttack1Command = {
 	areaRange = 16,
 	visMod = 25,
 
-	animation = "counter_low_left", 
+	animation = "counter_low_left",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "saberpolearmspinattack1",
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+  poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE,
 
 	weaponType = POLEARMJEDIWEAPON,
 
@@ -67,4 +67,3 @@ SaberPolearmSpinAttack1Command = {
 }
 
 AddCommand(SaberPolearmSpinAttack1Command)
-

@@ -52,24 +52,24 @@ Saber1hComboHit3Command = {
 	forceCostMultiplier = 2.25,
 	visMod = 25,
 
-	animation = "showoff_1", 
+	animation = "showoff_1",
 	animType = GENERATE_INTENSITY,
 
 	stateEffects = {
-	  StateEffect( 
-		POSTUREDOWN_EFFECT, 
-		{ "postureDownRecovery" }, 
-		{ "posture_change_down_defense" }, 
+	  StateEffect(
+		POSTUREDOWN_EFFECT,
+		{ "postureDownRecovery" },
+		{ "posture_change_down_defense" },
 		{},
-		40, 
-		0, 
-		0 
+		40,
+		0,
+		0
 	  )
 	},
 
 	combatSpam = "saber1hcombohit3",
 
-	poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE + MIND_ATTRIBUTE,
+  poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE,
 
 	weaponType = ONEHANDJEDIWEAPON,
 
@@ -77,4 +77,3 @@ Saber1hComboHit3Command = {
 }
 
 AddCommand(Saber1hComboHit3Command)
-

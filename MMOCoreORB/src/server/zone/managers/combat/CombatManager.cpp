@@ -1550,7 +1550,7 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 
 	// PvP Damage Reduction.
 	if (attacker->isPlayerCreature() && defender->isPlayerCreature() && !data.isForceAttack())
-		damage *= 0.15;
+		damage *= 0.25;
 
 	if (damage < 1) damage = 1;
 
