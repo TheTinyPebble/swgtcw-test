@@ -55,7 +55,6 @@ Saber2hSweep3Command = {
 	visMod = 25,
 
 	animation = "lower_posture_2hmelee_3",
-  animType = GENERATE_INTENSITY,
 
 	combatSpam = "saber2hsweep3",
 
