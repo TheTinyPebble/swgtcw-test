@@ -47,7 +47,7 @@ ForceLightningSingle2Command = {
 	minDamage = 800,
 	maxDamage = 1600,
 	speed = 4.0,
-	forceCost = 200,
+	forceCost = 125,
 	visMod = 25,
 	accuracySkillMod = "forcelightning_accuracy",
 
@@ -78,7 +78,7 @@ ForceLightningSingle2Command = {
 	frsDarkMinDamageModifier = 10,
 	frsDarkMaxDamageModifier = 10,
 
-	range = 32
+	range = 40
 }
 
 AddCommand(ForceLightningSingle2Command)

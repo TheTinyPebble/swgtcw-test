@@ -10,7 +10,7 @@
 class ForceChokeCommand : public ForcePowersQueueCommand {
 protected:
 	String tarSkillName = "forcechoke"; // Skill Name
-	int tarDelay = 31;
+	int tarDelay = 4;
 public:
 
 	ForceChokeCommand(const String& name, ZoneProcessServer* server)
@@ -44,7 +44,7 @@ public:
 		}
 		int res = doCombatAction(creature, target);
 
-		if (res == SUCCESS) 
+		if (res == SUCCESS)
 			targetCreature->updateCooldownTimer(tarSkillName, tarDelay * 1000);
 
 		return res;

@@ -60,7 +60,7 @@ ForceChokeCommand = {
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	damageType = LIGHTSABER_DAMAGE,
 
-	range = 32,
+	range = 16,
 
 	dotEffects = {
 		DotEffect(
