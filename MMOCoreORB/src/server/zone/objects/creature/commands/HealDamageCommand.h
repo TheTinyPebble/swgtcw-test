@@ -46,10 +46,10 @@ public:
 				delay = round(delay * (100.0f - percent) / 100.0f);
 			}
 		}
-7
+
 		//Force the delay to be at least 4 seconds.
 	//	delay = (delay < 1) ? 1 : delay;
-	delay = 4;
+		delay = 4;
 
 		StringIdChatParameter message("healing_response", "healing_response_58"); //You are now ready to heal more damage.
 		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatment");
