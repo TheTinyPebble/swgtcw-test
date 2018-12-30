@@ -68,7 +68,7 @@ ForceLightningSingle2Command = {
 
 	combatSpam = "forcelightningsingle2",
 
-	poolsToDamage = HEALTH_ATTRIBUTE, ACTION_ATTRIBUTE,
+  poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE,
 
 	forceAttack = true,
 	damageType = LIGHTSABER_DAMAGE,

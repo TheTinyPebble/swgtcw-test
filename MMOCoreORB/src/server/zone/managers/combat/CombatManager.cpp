@@ -1989,16 +1989,14 @@ void CombatManager::applyStates(CreatureObject* creature, CreatureObject* target
 
 int CombatManager::calculatePoolsToDamage(int poolsToDamage) {
 	if (poolsToDamage & RANDOM) {
-		int rand = System::random(100);
+	        int rand = System::random(100);
 
-		if (rand < 50) {
-			poolsToDamage = HEALTH;
-		} else if (rand < 85) {
-			poolsToDamage = ACTION;
-		} else {
-			poolsToDamage = MIND;
-		}
-	}
+	        if (rand < 50) {
+	            poolsToDamage = HEALTH;
+	        } else {
+	            poolsToDamage = ACTION;
+	        }
+	    }
 
 	return poolsToDamage;
 }
