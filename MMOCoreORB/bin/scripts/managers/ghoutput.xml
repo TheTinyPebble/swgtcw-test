@@ -89,94 +89,6 @@
 </resource>
 
 <resource>
-<SpawnName>Akriiam</SpawnName>
-<resType>petrochem_inert_polymer</resType>
-<attribute name="res_decay_resist">902</attribute>
-<attribute name="res_malleability">324</attribute>
-<attribute name="res_quality">319</attribute>
-<attribute name="res_shock_resistance">533</attribute>
-<attribute name="res_toughness">53</attribute>
-<planet>corellia</planet>
-</resource>
-
-<resource>
-<SpawnName>Akriiam</SpawnName>
-<resType>petrochem_inert_polymer</resType>
-<attribute name="res_decay_resist">902</attribute>
-<attribute name="res_malleability">324</attribute>
-<attribute name="res_quality">319</attribute>
-<attribute name="res_shock_resistance">533</attribute>
-<attribute name="res_toughness">53</attribute>
-<planet>dantooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Akriiam</SpawnName>
-<resType>petrochem_inert_polymer</resType>
-<attribute name="res_decay_resist">902</attribute>
-<attribute name="res_malleability">324</attribute>
-<attribute name="res_quality">319</attribute>
-<attribute name="res_shock_resistance">533</attribute>
-<attribute name="res_toughness">53</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
-<SpawnName>Akriiam</SpawnName>
-<resType>petrochem_inert_polymer</resType>
-<attribute name="res_decay_resist">902</attribute>
-<attribute name="res_malleability">324</attribute>
-<attribute name="res_quality">319</attribute>
-<attribute name="res_shock_resistance">533</attribute>
-<attribute name="res_toughness">53</attribute>
-<planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Akriiam</SpawnName>
-<resType>petrochem_inert_polymer</resType>
-<attribute name="res_decay_resist">902</attribute>
-<attribute name="res_malleability">324</attribute>
-<attribute name="res_quality">319</attribute>
-<attribute name="res_shock_resistance">533</attribute>
-<attribute name="res_toughness">53</attribute>
-<planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Akriiam</SpawnName>
-<resType>petrochem_inert_polymer</resType>
-<attribute name="res_decay_resist">902</attribute>
-<attribute name="res_malleability">324</attribute>
-<attribute name="res_quality">319</attribute>
-<attribute name="res_shock_resistance">533</attribute>
-<attribute name="res_toughness">53</attribute>
-<planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Akriiam</SpawnName>
-<resType>petrochem_inert_polymer</resType>
-<attribute name="res_decay_resist">902</attribute>
-<attribute name="res_malleability">324</attribute>
-<attribute name="res_quality">319</attribute>
-<attribute name="res_shock_resistance">533</attribute>
-<attribute name="res_toughness">53</attribute>
-<planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Akriiam</SpawnName>
-<resType>petrochem_inert_polymer</resType>
-<attribute name="res_decay_resist">902</attribute>
-<attribute name="res_malleability">324</attribute>
-<attribute name="res_quality">319</attribute>
-<attribute name="res_shock_resistance">533</attribute>
-<attribute name="res_toughness">53</attribute>
-<planet>tatooine</planet>
-</resource>
-
-<resource>
 <SpawnName>Alegeaian</SpawnName>
 <resType>iron_polonium</resType>
 <attribute name="res_cold_resist">138</attribute>
@@ -267,17 +179,6 @@
 <attribute name="res_potential_energy">46</attribute>
 <attribute name="res_quality">9</attribute>
 <planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Aspao</SpawnName>
-<resType>fiberplast_naboo</resType>
-<attribute name="res_decay_resist">589</attribute>
-<attribute name="res_malleability">433</attribute>
-<attribute name="res_quality">446</attribute>
-<attribute name="res_shock_resistance">4</attribute>
-<attribute name="res_toughness">170</attribute>
-<planet>naboo</planet>
 </resource>
 
 <resource>
@@ -1236,17 +1137,6 @@
 </resource>
 
 <resource>
-<SpawnName>Codoi</SpawnName>
-<resType>fiberplast_rori</resType>
-<attribute name="res_decay_resist">171</attribute>
-<attribute name="res_malleability">320</attribute>
-<attribute name="res_quality">741</attribute>
-<attribute name="res_shock_resistance">87</attribute>
-<attribute name="res_toughness">741</attribute>
-<planet>rori</planet>
-</resource>
-
-<resource>
 <SpawnName>Codoiam</SpawnName>
 <resType>energy_renewable_unlimited_wind_dathomir</resType>
 <attribute name="res_potential_energy">277</attribute>
@@ -1419,6 +1309,16 @@
 <attribute name="res_potential_energy">683</attribute>
 <attribute name="res_quality">353</attribute>
 <planet>yavin4</planet>
+</resource>
+
+<resource>
+<SpawnName>Crici</SpawnName>
+<resType>fruit_fruits_talus</resType>
+<attribute name="res_decay_resist">21</attribute>
+<attribute name="res_flavor">197</attribute>
+<attribute name="res_potential_energy">288</attribute>
+<attribute name="res_quality">834</attribute>
+<planet>talus</planet>
 </resource>
 
 <resource>
@@ -1695,6 +1595,16 @@
 </resource>
 
 <resource>
+<SpawnName>Dosso</SpawnName>
+<resType>seafood_crustacean_rori</resType>
+<attribute name="res_decay_resist">83</attribute>
+<attribute name="res_flavor">152</attribute>
+<attribute name="res_potential_energy">831</attribute>
+<attribute name="res_quality">709</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
 <SpawnName>Dowisso</SpawnName>
 <resType>meat_carnivore_yavin4</resType>
 <attribute name="res_decay_resist">785</attribute>
@@ -1751,16 +1661,6 @@
 <attribute name="res_potential_energy">627</attribute>
 <attribute name="res_quality">614</attribute>
 <planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Ebeoke</SpawnName>
-<resType>fruit_flowers_dathomir</resType>
-<attribute name="res_decay_resist">305</attribute>
-<attribute name="res_flavor">803</attribute>
-<attribute name="res_potential_energy">365</attribute>
-<attribute name="res_quality">845</attribute>
-<planet>dathomir</planet>
 </resource>
 
 <resource>
@@ -1964,14 +1864,6 @@
 <attribute name="res_shock_resistance">522</attribute>
 <attribute name="res_toughness">54</attribute>
 <planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Eslethe</SpawnName>
-<resType>water_vapor_corellia</resType>
-<attribute name="res_decay_resist">133</attribute>
-<attribute name="res_quality">635</attribute>
-<planet>corellia</planet>
 </resource>
 
 <resource>
@@ -2240,6 +2132,16 @@
 </resource>
 
 <resource>
+<SpawnName>Ferpae</SpawnName>
+<resType>vegetable_tubers_dathomir</resType>
+<attribute name="res_decay_resist">621</attribute>
+<attribute name="res_flavor">123</attribute>
+<attribute name="res_potential_energy">53</attribute>
+<attribute name="res_quality">226</attribute>
+<planet>dathomir</planet>
+</resource>
+
+<resource>
 <SpawnName>Feso</SpawnName>
 <resType>vegetable_beans_talus</resType>
 <attribute name="res_decay_resist">842</attribute>
@@ -2417,6 +2319,16 @@
 <attribute name="res_flavor">335</attribute>
 <attribute name="res_potential_energy">616</attribute>
 <attribute name="res_quality">454</attribute>
+<planet>dathomir</planet>
+</resource>
+
+<resource>
+<SpawnName>Foedi</SpawnName>
+<resType>fruit_flowers_dathomir</resType>
+<attribute name="res_decay_resist">344</attribute>
+<attribute name="res_flavor">19</attribute>
+<attribute name="res_potential_energy">572</attribute>
+<attribute name="res_quality">683</attribute>
 <planet>dathomir</planet>
 </resource>
 
@@ -2667,6 +2579,17 @@
 </resource>
 
 <resource>
+<SpawnName>Geapa</SpawnName>
+<resType>softwood_conifer_yavin4</resType>
+<attribute name="res_decay_resist">355</attribute>
+<attribute name="res_malleability">938</attribute>
+<attribute name="res_quality">51</attribute>
+<attribute name="res_shock_resistance">305</attribute>
+<attribute name="res_toughness">153</attribute>
+<planet>yavin4</planet>
+</resource>
+
+<resource>
 <SpawnName>Geemea</SpawnName>
 <resType>rice_domesticated_rori</resType>
 <attribute name="res_decay_resist">788</attribute>
@@ -2677,13 +2600,14 @@
 </resource>
 
 <resource>
-<SpawnName>Geevo</SpawnName>
-<resType>fruit_fruits_talus</resType>
-<attribute name="res_decay_resist">511</attribute>
-<attribute name="res_flavor">137</attribute>
-<attribute name="res_potential_energy">636</attribute>
-<attribute name="res_quality">344</attribute>
-<planet>talus</planet>
+<SpawnName>Gefo</SpawnName>
+<resType>fiberplast_rori</resType>
+<attribute name="res_decay_resist">128</attribute>
+<attribute name="res_malleability">378</attribute>
+<attribute name="res_quality">140</attribute>
+<attribute name="res_shock_resistance">268</attribute>
+<attribute name="res_toughness">198</attribute>
+<planet>rori</planet>
 </resource>
 
 <resource>
@@ -2832,12 +2756,31 @@
 </resource>
 
 <resource>
+<SpawnName>Gowre</SpawnName>
+<resType>water_vapor_rori</resType>
+<attribute name="res_decay_resist">21</attribute>
+<attribute name="res_quality">858</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
 <SpawnName>Grarre</SpawnName>
 <resType>oats_wild_dathomir</resType>
 <attribute name="res_decay_resist">681</attribute>
 <attribute name="res_flavor">825</attribute>
 <attribute name="res_potential_energy">352</attribute>
 <attribute name="res_quality">923</attribute>
+<planet>dathomir</planet>
+</resource>
+
+<resource>
+<SpawnName>Grasnoipte</SpawnName>
+<resType>hide_bristley_dathomir</resType>
+<attribute name="res_decay_resist">611</attribute>
+<attribute name="res_malleability">177</attribute>
+<attribute name="res_quality">595</attribute>
+<attribute name="res_shock_resistance">478</attribute>
+<attribute name="res_toughness">338</attribute>
 <planet>dathomir</planet>
 </resource>
 
@@ -3306,28 +3249,6 @@
 </resource>
 
 <resource>
-<SpawnName>Hoke</SpawnName>
-<resType>hide_bristley_dathomir</resType>
-<attribute name="res_decay_resist">967</attribute>
-<attribute name="res_malleability">990</attribute>
-<attribute name="res_quality">301</attribute>
-<attribute name="res_shock_resistance">302</attribute>
-<attribute name="res_toughness">822</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
-<SpawnName>Hone</SpawnName>
-<resType>bone_horn_endor</resType>
-<attribute name="res_decay_resist">659</attribute>
-<attribute name="res_malleability">142</attribute>
-<attribute name="res_quality">860</attribute>
-<attribute name="res_shock_resistance">655</attribute>
-<attribute name="res_toughness">288</attribute>
-<planet>endor</planet>
-</resource>
-
-<resource>
 <SpawnName>Hoogo</SpawnName>
 <resType>milk_domesticated_rori</resType>
 <attribute name="res_decay_resist">467</attribute>
@@ -3335,17 +3256,6 @@
 <attribute name="res_potential_energy">392</attribute>
 <attribute name="res_quality">378</attribute>
 <planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Hose</SpawnName>
-<resType>hide_bristley_talus</resType>
-<attribute name="res_decay_resist">560</attribute>
-<attribute name="res_malleability">100</attribute>
-<attribute name="res_quality">440</attribute>
-<attribute name="res_shock_resistance">690</attribute>
-<attribute name="res_toughness">78</attribute>
-<planet>talus</planet>
 </resource>
 
 <resource>
@@ -3584,6 +3494,16 @@
 </resource>
 
 <resource>
+<SpawnName>Irbe</SpawnName>
+<resType>milk_domesticated_endor</resType>
+<attribute name="res_decay_resist">206</attribute>
+<attribute name="res_flavor">554</attribute>
+<attribute name="res_potential_energy">323</attribute>
+<attribute name="res_quality">789</attribute>
+<planet>endor</planet>
+</resource>
+
+<resource>
 <SpawnName>Irki</SpawnName>
 <resType>bone_horn_tatooine</resType>
 <attribute name="res_decay_resist">569</attribute>
@@ -3631,6 +3551,48 @@
 <attribute name="res_potential_energy">434</attribute>
 <attribute name="res_quality">793</attribute>
 <planet>dathomir</planet>
+</resource>
+
+<resource>
+<SpawnName>Ivipa</SpawnName>
+<resType>iron_doonium</resType>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_conductivity">394</attribute>
+<attribute name="res_decay_resist">813</attribute>
+<attribute name="res_heat_resist">878</attribute>
+<attribute name="res_malleability">486</attribute>
+<attribute name="res_quality">330</attribute>
+<attribute name="res_shock_resistance">838</attribute>
+<attribute name="res_toughness">852</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
+<SpawnName>Ivipa</SpawnName>
+<resType>iron_doonium</resType>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_conductivity">394</attribute>
+<attribute name="res_decay_resist">813</attribute>
+<attribute name="res_heat_resist">878</attribute>
+<attribute name="res_malleability">486</attribute>
+<attribute name="res_quality">330</attribute>
+<attribute name="res_shock_resistance">838</attribute>
+<attribute name="res_toughness">852</attribute>
+<planet>naboo</planet>
+</resource>
+
+<resource>
+<SpawnName>Ivipa</SpawnName>
+<resType>iron_doonium</resType>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_conductivity">394</attribute>
+<attribute name="res_decay_resist">813</attribute>
+<attribute name="res_heat_resist">878</attribute>
+<attribute name="res_malleability">486</attribute>
+<attribute name="res_quality">330</attribute>
+<attribute name="res_shock_resistance">838</attribute>
+<attribute name="res_toughness">852</attribute>
+<planet>tatooine</planet>
 </resource>
 
 <resource>
@@ -3705,20 +3667,6 @@
 <attribute name="res_potential_energy">299</attribute>
 <attribute name="res_quality">596</attribute>
 <planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Kafeiism</SpawnName>
-<resType>iron_plumbum</resType>
-<attribute name="res_cold_resist">64</attribute>
-<attribute name="res_conductivity">71</attribute>
-<attribute name="res_decay_resist">324</attribute>
-<attribute name="res_heat_resist">525</attribute>
-<attribute name="res_malleability">91</attribute>
-<attribute name="res_quality">281</attribute>
-<attribute name="res_shock_resistance">413</attribute>
-<attribute name="res_toughness">408</attribute>
-<planet>tatooine</planet>
 </resource>
 
 <resource>
@@ -4253,6 +4201,17 @@
 </resource>
 
 <resource>
+<SpawnName>Laro</SpawnName>
+<resType>hide_bristley_lok</resType>
+<attribute name="res_decay_resist">761</attribute>
+<attribute name="res_malleability">977</attribute>
+<attribute name="res_quality">111</attribute>
+<attribute name="res_shock_resistance">391</attribute>
+<attribute name="res_toughness">573</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
 <SpawnName>Lasi</SpawnName>
 <resType>hide_leathery_yavin4</resType>
 <attribute name="res_decay_resist">379</attribute>
@@ -4372,17 +4331,6 @@
 <attribute name="res_potential_energy">196</attribute>
 <attribute name="res_quality">327</attribute>
 <planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Lidwi</SpawnName>
-<resType>bone_avian_talus</resType>
-<attribute name="res_decay_resist">163</attribute>
-<attribute name="res_malleability">301</attribute>
-<attribute name="res_quality">733</attribute>
-<attribute name="res_shock_resistance">241</attribute>
-<attribute name="res_toughness">297</attribute>
-<planet>talus</planet>
 </resource>
 
 <resource>
@@ -4528,6 +4476,17 @@
 </resource>
 
 <resource>
+<SpawnName>Livie</SpawnName>
+<resType>hide_bristley_talus</resType>
+<attribute name="res_decay_resist">185</attribute>
+<attribute name="res_malleability">21</attribute>
+<attribute name="res_quality">340</attribute>
+<attribute name="res_shock_resistance">126</attribute>
+<attribute name="res_toughness">899</attribute>
+<planet>talus</planet>
+</resource>
+
+<resource>
 <SpawnName>Lketo</SpawnName>
 <resType>rice_wild_yavin4</resType>
 <attribute name="res_decay_resist">293</attribute>
@@ -4594,6 +4553,16 @@
 <attribute name="res_potential_energy">295</attribute>
 <attribute name="res_quality">984</attribute>
 <planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Loukra</SpawnName>
+<resType>milk_domesticated_yavin4</resType>
+<attribute name="res_decay_resist">214</attribute>
+<attribute name="res_flavor">474</attribute>
+<attribute name="res_potential_energy">476</attribute>
+<attribute name="res_quality">508</attribute>
+<planet>yavin4</planet>
 </resource>
 
 <resource>
@@ -4764,6 +4733,16 @@
 </resource>
 
 <resource>
+<SpawnName>Mooci</SpawnName>
+<resType>meat_reptilian_dantooine</resType>
+<attribute name="res_decay_resist">777</attribute>
+<attribute name="res_flavor">882</attribute>
+<attribute name="res_potential_energy">423</attribute>
+<attribute name="res_quality">213</attribute>
+<planet>dantooine</planet>
+</resource>
+
+<resource>
 <SpawnName>Moowe</SpawnName>
 <resType>fruit_fruits_dathomir</resType>
 <attribute name="res_decay_resist">745</attribute>
@@ -4771,16 +4750,6 @@
 <attribute name="res_potential_energy">517</attribute>
 <attribute name="res_quality">313</attribute>
 <planet>dathomir</planet>
-</resource>
-
-<resource>
-<SpawnName>Mopo</SpawnName>
-<resType>milk_domesticated_yavin4</resType>
-<attribute name="res_decay_resist">8</attribute>
-<attribute name="res_flavor">226</attribute>
-<attribute name="res_potential_energy">396</attribute>
-<attribute name="res_quality">670</attribute>
-<planet>yavin4</planet>
 </resource>
 
 <resource>
@@ -4970,27 +4939,6 @@
 <attribute name="res_potential_energy">557</attribute>
 <attribute name="res_quality">671</attribute>
 <planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Ocemi</SpawnName>
-<resType>fruit_flowers_corellia</resType>
-<attribute name="res_decay_resist">864</attribute>
-<attribute name="res_flavor">535</attribute>
-<attribute name="res_potential_energy">22</attribute>
-<attribute name="res_quality">962</attribute>
-<planet>corellia</planet>
-</resource>
-
-<resource>
-<SpawnName>Odisto</SpawnName>
-<resType>hide_bristley_lok</resType>
-<attribute name="res_decay_resist">865</attribute>
-<attribute name="res_malleability">516</attribute>
-<attribute name="res_quality">464</attribute>
-<attribute name="res_shock_resistance">338</attribute>
-<attribute name="res_toughness">869</attribute>
-<planet>lok</planet>
 </resource>
 
 <resource>
@@ -5412,6 +5360,48 @@
 </resource>
 
 <resource>
+<SpawnName>Pipiris</SpawnName>
+<resType>iron_kammris</resType>
+<attribute name="res_cold_resist">714</attribute>
+<attribute name="res_conductivity">468</attribute>
+<attribute name="res_decay_resist">911</attribute>
+<attribute name="res_heat_resist">934</attribute>
+<attribute name="res_malleability">527</attribute>
+<attribute name="res_quality">265</attribute>
+<attribute name="res_shock_resistance">942</attribute>
+<attribute name="res_toughness">954</attribute>
+<planet>dantooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Pipiris</SpawnName>
+<resType>iron_kammris</resType>
+<attribute name="res_cold_resist">714</attribute>
+<attribute name="res_conductivity">468</attribute>
+<attribute name="res_decay_resist">911</attribute>
+<attribute name="res_heat_resist">934</attribute>
+<attribute name="res_malleability">527</attribute>
+<attribute name="res_quality">265</attribute>
+<attribute name="res_shock_resistance">942</attribute>
+<attribute name="res_toughness">954</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Pipiris</SpawnName>
+<resType>iron_kammris</resType>
+<attribute name="res_cold_resist">714</attribute>
+<attribute name="res_conductivity">468</attribute>
+<attribute name="res_decay_resist">911</attribute>
+<attribute name="res_heat_resist">934</attribute>
+<attribute name="res_malleability">527</attribute>
+<attribute name="res_quality">265</attribute>
+<attribute name="res_shock_resistance">942</attribute>
+<attribute name="res_toughness">954</attribute>
+<planet>talus</planet>
+</resource>
+
+<resource>
 <SpawnName>Ploumi</SpawnName>
 <resType>hide_scaley_dathomir</resType>
 <attribute name="res_decay_resist">27</attribute>
@@ -5688,6 +5678,14 @@
 </resource>
 
 <resource>
+<SpawnName>Raspi</SpawnName>
+<resType>water_vapor_corellia</resType>
+<attribute name="res_decay_resist">688</attribute>
+<attribute name="res_quality">638</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
 <SpawnName>Rberdite</SpawnName>
 <resType>vegetable_fungi_lok</resType>
 <attribute name="res_decay_resist">929</attribute>
@@ -5791,16 +5789,6 @@
 </resource>
 
 <resource>
-<SpawnName>Rifeewi</SpawnName>
-<resType>meat_reptilian_dantooine</resType>
-<attribute name="res_decay_resist">532</attribute>
-<attribute name="res_flavor">596</attribute>
-<attribute name="res_potential_energy">922</attribute>
-<attribute name="res_quality">778</attribute>
-<planet>dantooine</planet>
-</resource>
-
-<resource>
 <SpawnName>Rifoi</SpawnName>
 <resType>fruit_berries_dathomir</resType>
 <attribute name="res_decay_resist">941</attribute>
@@ -5859,14 +5847,6 @@
 <attribute name="res_potential_energy">888</attribute>
 <attribute name="res_quality">54</attribute>
 <planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Rqise</SpawnName>
-<resType>water_vapor_rori</resType>
-<attribute name="res_decay_resist">82</attribute>
-<attribute name="res_quality">904</attribute>
-<planet>rori</planet>
 </resource>
 
 <resource>
@@ -6157,6 +6137,17 @@
 </resource>
 
 <resource>
+<SpawnName>Seyio</SpawnName>
+<resType>bone_avian_talus</resType>
+<attribute name="res_decay_resist">54</attribute>
+<attribute name="res_malleability">570</attribute>
+<attribute name="res_quality">535</attribute>
+<attribute name="res_shock_resistance">110</attribute>
+<attribute name="res_toughness">163</attribute>
+<planet>talus</planet>
+</resource>
+
+<resource>
 <SpawnName>Shehoca</SpawnName>
 <resType>meat_domesticated_endor</resType>
 <attribute name="res_decay_resist">426</attribute>
@@ -6361,17 +6352,6 @@
 </resource>
 
 <resource>
-<SpawnName>Smela</SpawnName>
-<resType>softwood_conifer_yavin4</resType>
-<attribute name="res_decay_resist">104</attribute>
-<attribute name="res_malleability">977</attribute>
-<attribute name="res_quality">426</attribute>
-<attribute name="res_shock_resistance">127</attribute>
-<attribute name="res_toughness">167</attribute>
-<planet>yavin4</planet>
-</resource>
-
-<resource>
 <SpawnName>Sneko</SpawnName>
 <resType>wood_deciduous_naboo</resType>
 <attribute name="res_decay_resist">267</attribute>
@@ -6428,6 +6408,70 @@
 <attribute name="res_potential_energy">421</attribute>
 <attribute name="res_quality">496</attribute>
 <planet>tatooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Sposro</SpawnName>
+<resType>gas_inert_hurlothrombic</resType>
+<attribute name="res_decay_resist">404</attribute>
+<attribute name="res_quality">900</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
+<SpawnName>Sposro</SpawnName>
+<resType>gas_inert_hurlothrombic</resType>
+<attribute name="res_decay_resist">404</attribute>
+<attribute name="res_quality">900</attribute>
+<planet>dathomir</planet>
+</resource>
+
+<resource>
+<SpawnName>Sposro</SpawnName>
+<resType>gas_inert_hurlothrombic</resType>
+<attribute name="res_decay_resist">404</attribute>
+<attribute name="res_quality">900</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
+<SpawnName>Sposro</SpawnName>
+<resType>gas_inert_hurlothrombic</resType>
+<attribute name="res_decay_resist">404</attribute>
+<attribute name="res_quality">900</attribute>
+<planet>naboo</planet>
+</resource>
+
+<resource>
+<SpawnName>Sposro</SpawnName>
+<resType>gas_inert_hurlothrombic</resType>
+<attribute name="res_decay_resist">404</attribute>
+<attribute name="res_quality">900</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Sposro</SpawnName>
+<resType>gas_inert_hurlothrombic</resType>
+<attribute name="res_decay_resist">404</attribute>
+<attribute name="res_quality">900</attribute>
+<planet>talus</planet>
+</resource>
+
+<resource>
+<SpawnName>Sposro</SpawnName>
+<resType>gas_inert_hurlothrombic</resType>
+<attribute name="res_decay_resist">404</attribute>
+<attribute name="res_quality">900</attribute>
+<planet>tatooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Sposro</SpawnName>
+<resType>gas_inert_hurlothrombic</resType>
+<attribute name="res_decay_resist">404</attribute>
+<attribute name="res_quality">900</attribute>
+<planet>yavin4</planet>
 </resource>
 
 <resource>
@@ -6495,16 +6539,6 @@
 </resource>
 
 <resource>
-<SpawnName>Srijoava</SpawnName>
-<resType>vegetable_tubers_dathomir</resType>
-<attribute name="res_decay_resist">245</attribute>
-<attribute name="res_flavor">689</attribute>
-<attribute name="res_potential_energy">272</attribute>
-<attribute name="res_quality">438</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
 <SpawnName>Sroafecoe</SpawnName>
 <resType>water_vapor_endor</resType>
 <attribute name="res_decay_resist">522</attribute>
@@ -6520,6 +6554,17 @@
 <attribute name="res_potential_energy">853</attribute>
 <attribute name="res_quality">598</attribute>
 <planet>dantooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Srofa</SpawnName>
+<resType>fiberplast_naboo</resType>
+<attribute name="res_decay_resist">658</attribute>
+<attribute name="res_malleability">464</attribute>
+<attribute name="res_quality">11</attribute>
+<attribute name="res_shock_resistance">657</attribute>
+<attribute name="res_toughness">749</attribute>
+<planet>naboo</planet>
 </resource>
 
 <resource>
@@ -6742,6 +6787,17 @@
 </resource>
 
 <resource>
+<SpawnName>Tapee</SpawnName>
+<resType>bone_horn_endor</resType>
+<attribute name="res_decay_resist">993</attribute>
+<attribute name="res_malleability">494</attribute>
+<attribute name="res_quality">195</attribute>
+<attribute name="res_shock_resistance">662</attribute>
+<attribute name="res_toughness">432</attribute>
+<planet>endor</planet>
+</resource>
+
+<resource>
 <SpawnName>Tastau</SpawnName>
 <resType>hide_wooly_lok</resType>
 <attribute name="res_decay_resist">487</attribute>
@@ -6750,16 +6806,6 @@
 <attribute name="res_shock_resistance">365</attribute>
 <attribute name="res_toughness">764</attribute>
 <planet>lok</planet>
-</resource>
-
-<resource>
-<SpawnName>Terio</SpawnName>
-<resType>seafood_crustacean_rori</resType>
-<attribute name="res_decay_resist">28</attribute>
-<attribute name="res_flavor">944</attribute>
-<attribute name="res_potential_energy">548</attribute>
-<attribute name="res_quality">949</attribute>
-<planet>rori</planet>
 </resource>
 
 <resource>
@@ -6909,6 +6955,16 @@
 <attribute name="res_potential_energy">942</attribute>
 <attribute name="res_quality">575</attribute>
 <planet>dathomir</planet>
+</resource>
+
+<resource>
+<SpawnName>Tixo</SpawnName>
+<resType>fruit_flowers_corellia</resType>
+<attribute name="res_decay_resist">782</attribute>
+<attribute name="res_flavor">342</attribute>
+<attribute name="res_potential_energy">372</attribute>
+<attribute name="res_quality">136</attribute>
+<planet>corellia</planet>
 </resource>
 
 <resource>
@@ -7141,48 +7197,6 @@
 <attribute name="res_shock_resistance">698</attribute>
 <attribute name="res_toughness">666</attribute>
 <planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Toone</SpawnName>
-<resType>iron_axidite</resType>
-<attribute name="res_cold_resist">272</attribute>
-<attribute name="res_conductivity">113</attribute>
-<attribute name="res_decay_resist">568</attribute>
-<attribute name="res_heat_resist">664</attribute>
-<attribute name="res_malleability">232</attribute>
-<attribute name="res_quality">760</attribute>
-<attribute name="res_shock_resistance">626</attribute>
-<attribute name="res_toughness">612</attribute>
-<planet>dantooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Toone</SpawnName>
-<resType>iron_axidite</resType>
-<attribute name="res_cold_resist">272</attribute>
-<attribute name="res_conductivity">113</attribute>
-<attribute name="res_decay_resist">568</attribute>
-<attribute name="res_heat_resist">664</attribute>
-<attribute name="res_malleability">232</attribute>
-<attribute name="res_quality">760</attribute>
-<attribute name="res_shock_resistance">626</attribute>
-<attribute name="res_toughness">612</attribute>
-<planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Toone</SpawnName>
-<resType>iron_axidite</resType>
-<attribute name="res_cold_resist">272</attribute>
-<attribute name="res_conductivity">113</attribute>
-<attribute name="res_decay_resist">568</attribute>
-<attribute name="res_heat_resist">664</attribute>
-<attribute name="res_malleability">232</attribute>
-<attribute name="res_quality">760</attribute>
-<attribute name="res_shock_resistance">626</attribute>
-<attribute name="res_toughness">612</attribute>
-<planet>yavin4</planet>
 </resource>
 
 <resource>
@@ -7842,16 +7856,6 @@
 <attribute name="res_potential_energy">617</attribute>
 <attribute name="res_quality">924</attribute>
 <planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Wupony</SpawnName>
-<resType>milk_domesticated_endor</resType>
-<attribute name="res_decay_resist">405</attribute>
-<attribute name="res_flavor">638</attribute>
-<attribute name="res_potential_energy">597</attribute>
-<attribute name="res_quality">390</attribute>
-<planet>endor</planet>
 </resource>
 
 <resource>

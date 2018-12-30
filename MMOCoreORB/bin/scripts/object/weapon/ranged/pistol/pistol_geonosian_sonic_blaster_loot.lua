@@ -114,8 +114,8 @@ object_weapon_ranged_pistol_pistol_geonosian_sonic_blaster_loot = object_weapon_
 	maxRange = 45,
 	maxRangeAccuracy = 5,
 
-	minDamage = 18,
-	maxDamage = 88,
+	minDamage = 418,
+	maxDamage = 1100,
 
 	attackSpeed = 4,
 
