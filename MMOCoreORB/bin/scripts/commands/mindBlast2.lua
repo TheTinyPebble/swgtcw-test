@@ -46,7 +46,7 @@ MindBlast2Command = {
 
 	minDamage = 250,
 	maxDamage = 500,
-	speed = 4.0,
+	speed = 2.0,
 	forceCost = 160,
 	visMod = 25,
 	accuracySkillMod = "mindblast_accuracy";
@@ -77,9 +77,9 @@ MindBlast2Command = {
 		StateEffect(
 			DIZZY_EFFECT,
 			{},
-			{},
+			{ "dizzy_defense" },
 			{ "jedi_state_defense" },
-			85,
+			90,
 			0,
 			30
 		)
@@ -90,7 +90,7 @@ MindBlast2Command = {
 
 	combatSpam = "mindblast2",
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = MIND_ATTRIBUTE,
 
 	forceAttack = true,
 	damageType = LIGHTSABER_DAMAGE,

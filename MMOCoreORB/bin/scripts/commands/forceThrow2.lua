@@ -45,11 +45,39 @@ ForceThrow2Command = {
 	name = "forcethrow2",
 
 	minDamage = 250,
-	maxDamage = 500,
+	maxDamage = 250,
 	speed = 4.0,
 	forceCost = 56,
 	visMod = 25,
 	accuracySkillMod = "forcethrow_accuracy",
+
+	dotEffects = {
+		DotEffect(
+		BLEEDING,
+		{ "resistance_bleeding", "bleed_resist" },
+		HEALTH,
+		false,
+		0,
+		1000,
+		75,
+		60,
+		16.66,
+		16.66
+		),
+
+			DotEffect(
+		BLEEDING,
+		{ "resistance_bleeding", "bleed_resist" },
+		ACTION,
+		false,
+		0,
+		1000,
+		75,
+		60,
+		16.66,
+		16.66
+		),
+	},
 
 	stateEffects = {
 		StateEffect(
