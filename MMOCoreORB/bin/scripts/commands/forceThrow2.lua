@@ -71,7 +71,7 @@ ForceThrow2Command = {
 		ACTION,
 		false,
 		0,
-		0,
+		100,
 		7500,
 		15,
 		100,
