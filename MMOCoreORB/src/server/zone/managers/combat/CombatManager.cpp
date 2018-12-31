@@ -561,6 +561,9 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 		if (potency == 0) {
 			potency = 150;
 		}
+		if (potency == 7500 && defender->isPlayerCreature()) {
+			potency = 300;
+		}
 
 		uint8 pool = effect.getDotPool();
 
