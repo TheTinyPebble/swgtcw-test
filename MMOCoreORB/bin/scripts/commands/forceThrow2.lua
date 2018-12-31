@@ -57,12 +57,12 @@ ForceThrow2Command = {
 		{ "resistance_bleeding", "bleed_resist" },
 		HEALTH,
 		false,
-		65,
-		1000,
-		800,
-		60,
-		16.66,
-		16.66
+		0,
+		0,
+		7500,
+		0,
+		100,
+		1
 		),
 
 			DotEffect(
@@ -70,12 +70,12 @@ ForceThrow2Command = {
 		{ "resistance_bleeding", "bleed_resist" },
 		ACTION,
 		false,
-		65,
-		1000,
-		800,
-		60,
-		16.66,
-		16.66
+		0,
+		0,
+		7500,
+		0,
+		100,
+		1
 		),
 	},
 
