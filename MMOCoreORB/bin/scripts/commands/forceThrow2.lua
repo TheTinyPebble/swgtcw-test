@@ -59,7 +59,7 @@ ForceThrow2Command = {
 		false,
 		0,
 		1000,
-		75,
+		7500,
 		60,
 		16.66,
 		16.66
@@ -72,7 +72,7 @@ ForceThrow2Command = {
 		false,
 		0,
 		1000,
-		75,
+		7500,
 		60,
 		16.66,
 		16.66
