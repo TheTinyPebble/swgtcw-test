@@ -58,9 +58,9 @@ ForceThrow2Command = {
 		HEALTH,
 		false,
 		0,
-		0,
+		100,
 		7500,
-		15,
+		62,
 		100,
 		1
 		),
@@ -70,12 +70,12 @@ ForceThrow2Command = {
 		{ "resistance_bleeding", "bleed_resist" },
 		ACTION,
 		false,
-		0,
-		100,
-		7500,
-		15,
-		100,
-		1
+		0, --??
+		100, --potency
+		7500, --strength
+		62, --duration
+		100, --??
+		1 --??
 		),
 	},
 
