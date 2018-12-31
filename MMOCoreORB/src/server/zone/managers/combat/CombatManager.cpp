@@ -557,12 +557,13 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 		}
 
 		int potency = effect.getDotPotency();
-
+		int dotstrength = effect.getDotStrength();
 		if (potency == 0) {
 			potency = 150;
 		}
-		if (potency == 7500 && defender->isPlayerCreature()) {
+		if (potency > 7000 && defender->isPlayerCreature()) {
 			potency = 300;
+			dotstrength = 100;
 		}
 
 		uint8 pool = effect.getDotPool();
@@ -575,10 +576,10 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 		float damMod = attacker->isAiAgent() ? cast<AiAgent*>(attacker)->getSpecialDamageMult() : 1.f;
 		defender->addDotState(attacker, dotType, data.getCommand()->getNameCRC(),
 				effect.isDotDamageofHit() ? damageToApply * effect.getPrimaryPercent() / 100.0f
-					: effect.getDotStrength() * damMod,
+					: dotstrength * damMod,
 				pool, effect.getDotDuration(), potency, resist,
 				effect.isDotDamageofHit() ? damageToApply * effect.getSecondaryPercent() / 100.0f
-					: effect.getDotStrength() * damMod);
+					: dotstrength * damMod);
 	}
 }
 
