@@ -561,7 +561,7 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 		if (potency == 0) {
 			potency = 150;
 		}
-		if (dotStrength > 999 && defender->isPlayerCreature()) {
+		if (dotstrength > 999 && defender->isPlayerCreature()) {
 			potency = 300;
 			dotstrength = 100;
 		}
