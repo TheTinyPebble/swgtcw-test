@@ -47,7 +47,7 @@ ForceThrow2Command = {
 	minDamage = 250,
 	maxDamage = 250,
 	speed = 4.0,
-	forceCost = 56,
+	forceCost = 200,
 	visMod = 25,
 	accuracySkillMod = "forcethrow_accuracy",
 
@@ -57,9 +57,9 @@ ForceThrow2Command = {
 		{ "resistance_bleeding", "bleed_resist" },
 		HEALTH,
 		false,
-		0,
+		65,
 		1000,
-		7500,
+		800,
 		60,
 		16.66,
 		16.66
@@ -70,9 +70,9 @@ ForceThrow2Command = {
 		{ "resistance_bleeding", "bleed_resist" },
 		ACTION,
 		false,
-		0,
+		65,
 		1000,
-		7500,
+		800,
 		60,
 		16.66,
 		16.66
