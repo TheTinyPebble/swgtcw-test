@@ -47,7 +47,7 @@ ForceThrow1Command = {
 	minDamage = 250,
 	maxDamage = 250,
 	speed = 1.0,
-	forceCost = 28,
+	forceCost = 100,
 	coneAngle = 30,
 	coneAction = true,
 	visMod = 25,
@@ -58,26 +58,26 @@ ForceThrow1Command = {
 		BLEEDING,
 		{ "resistance_bleeding", "bleed_resist" },
 		HEALTH,
-		true,
+		false,
 		0,
 		100,
-		75,
-		60,
-		16.66,
-		16.66
+		3000,
+		62,
+		100,
+		1
 		),
 
 			DotEffect(
 		BLEEDING,
 		{ "resistance_bleeding", "bleed_resist" },
 		ACTION,
-		true,
-		0,
-		100,
-		75,
-		60,
-		16.66,
-		16.66
+		false,
+		0, --??
+		100, --potency
+		3000, --strength
+		62, --duration
+		100, --??
+		1 --??
 		),
 	},
 
