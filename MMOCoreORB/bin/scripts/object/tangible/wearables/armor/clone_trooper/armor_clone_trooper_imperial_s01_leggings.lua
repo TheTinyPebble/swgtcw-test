@@ -115,14 +115,14 @@ object_tangible_wearables_armor_clone_trooper_armor_clone_trooper_imperial_s01_l
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	kinetic = 65,
-	energy = 65,
-	electricity = 65,
-	stun = 5,
-	blast = 65,
-	heat = 65,
-	cold = 65,
-	acid = 65,
+	Kinetic = 60,
+	energy = 60,
+	electricity = 50,
+	stun = 0,
+	blast = 50,
+	heat = 50,
+	cold = 50,
+	acid = 0,
 	lightSaber = 0
 }
 
