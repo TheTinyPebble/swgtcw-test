@@ -115,7 +115,7 @@ playerRaces = { "object/creature/player/bothan_male.iff",
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	Kinetic = 60,
+	kinetic = 60,
 	energy = 60,
 	electricity = 50,
 	stun = 0,
