@@ -118,11 +118,11 @@ object_tangible_wearables_armor_clone_trooper_armor_clone_trooper_rebel_s01_boot
 	kinetic = 60,
 	energy = 60,
 	electricity = 50,
-	stun = 50,
+	stun = 0,
 	blast = 50,
 	heat = 50,
 	cold = 50,
-	acid = 50,
+	acid = 0,
 	lightSaber = 0
 }
 

@@ -106,9 +106,9 @@ object_tangible_wearables_armor_clone_trooper_armor_clone_trooper_rebel_s01_helm
 	vulnerability = LIGHTSABER,
 
 	-- These are default Blue Frog stats
-	healthEncumbrance = 1,
-	actionEncumbrance = 1,
-	mindEncumbrance = 1,
+	healthEncumbrance = 150,
+	actionEncumbrance = 150,
+	mindEncumbrance = 150,
 
 	maxCondition = 30000,
 
@@ -118,11 +118,11 @@ object_tangible_wearables_armor_clone_trooper_armor_clone_trooper_rebel_s01_helm
 	kinetic = 60,
 	energy = 60,
 	electricity = 50,
-	stun = 50,
+	stun = 0,
 	blast = 50,
 	heat = 50,
 	cold = 50,
-	acid = 50,
+	acid = 0,
 	lightSaber = 0
 }
 
