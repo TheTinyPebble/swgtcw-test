@@ -69,7 +69,7 @@ object_weapon_melee_polearm_lance_staff_magna_guard = object_weapon_melee_polear
 	attackType = MELEEATTACK,
 
 	-- ENERGY, KINETIC, ELECTRICITY, STUN, BLAST, HEAT, COLD, ACID, FORCE, LIGHTSABER
-	damageType = STUN,
+	damageType = ELECTRICITY,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
 	armorPiercing = MEDIUM,
@@ -106,13 +106,13 @@ object_weapon_melee_polearm_lance_staff_magna_guard = object_weapon_melee_polear
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = -45,
+	pointBlankAccuracy = -5,
 
 	idealRange = 5,
-	idealAccuracy = -45,
+	idealAccuracy = -5,
 
 	maxRange = 7,
-	maxRangeAccuracy = -45,
+	maxRangeAccuracy = -5,
 
 	minDamage = 500,
 	maxDamage = 1050,
