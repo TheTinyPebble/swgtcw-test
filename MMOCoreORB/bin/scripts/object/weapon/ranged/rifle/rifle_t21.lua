@@ -109,7 +109,7 @@ object_weapon_ranged_rifle_rifle_t21 = object_weapon_ranged_rifle_shared_rifle_t
 	pointBlankAccuracy = -90,
 
 	idealRange = 50,
-	idealAccuracy = +28,
+	idealAccuracy = 28,
 
 	maxRange = 64,
 	maxRangeAccuracy = 10,
