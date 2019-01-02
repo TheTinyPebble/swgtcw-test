@@ -106,18 +106,18 @@ object_weapon_melee_2h_sword_2h_sword_maul = object_weapon_melee_2h_sword_shared
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = -35,
+	pointBlankAccuracy = -20,
 
 	idealRange = 3,
-	idealAccuracy = -35,
+	idealAccuracy = -20,
 
 	maxRange = 5,
-	maxRangeAccuracy = -35,
+	maxRangeAccuracy = -20,
 
 	minDamage = 200,
 	maxDamage = 950,
 
-	attackSpeed = 3,
+	attackSpeed = 4,
 
 	woundsRatio = 45,
 

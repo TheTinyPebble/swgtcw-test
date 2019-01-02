@@ -106,17 +106,17 @@ object_weapon_melee_polearm_lance_staff_magna_guard = object_weapon_melee_polear
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = -5,
+	pointBlankAccuracy = 0,
 
 	idealRange = 5,
-	idealAccuracy = -5,
+	idealAccuracy = 0,
 
 	maxRange = 7,
-	maxRangeAccuracy = -5,
+	maxRangeAccuracy = 0,
 
 	minDamage = 500,
-	maxDamage = 1050,
-	attackSpeed = 5,
+	maxDamage = 950,
+	attackSpeed = 3,
 
 	woundsRatio = 33,
 
