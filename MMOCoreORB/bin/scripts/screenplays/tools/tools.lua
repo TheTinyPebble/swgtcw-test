@@ -3,6 +3,7 @@ StaffTools = {
 		{ "Shuttle Dropoff", "openShuttleConfig" },
 		{ "Firework Event", "openFireworkConfig" },
 		{ "Elite Spawns Satus", "openEliteSpawnStatus" },
+		{ "Test ODST", "openOdstConfig" },
 	}
 }
 
@@ -51,6 +52,10 @@ end
 
 function StaffTools.openEliteSpawnStatus(pPlayer)
 	eliteSpawns:statusSui(pPlayer)
+end
+
+function StaffTools.openOdstConfig(pPlayer)
+	callODST:showMainUI(pPlayer)
 end
 
 
