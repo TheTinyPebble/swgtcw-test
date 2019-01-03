@@ -831,7 +831,7 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 
 	if (ghost != NULL) {
 		ghost->resetIncapacitationTimes();
-		
+
 		if(ghost->hasPvpTef()) {
 			ghost->schedulePvpTefRemovalTask(true, true, true);
 		}
@@ -855,16 +855,16 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 				StringBuffer zBroadcast;
 				String killerFaction, playerFaction;
 				if (attacker->isRebel())
-					killerFaction = "\\#FF9933 Rebel";
+					killerFaction = "\\#FF9933 Separatist";
 				else if (attacker->isImperial())
-					killerFaction = "\\#7133FF Imperial";
+					killerFaction = "\\#7133FF Republic";
 				else
 					killerFaction = "\\#c1be13 Civilian";
 
 				if (player->isRebel())
-					playerFaction = "\\#FF9933 Rebel";
+					playerFaction = "\\#FF9933 Separatist";
 				else if (player->isImperial())
-					playerFaction = "\\#7133FF Imperial";
+					playerFaction = "\\#7133FF Republic";
 				else
 					playerFaction = "\\#c1be13 Civilian";
 				if (!CombatManager::instance()->areInDuel(attackerCreature, player))
@@ -1737,13 +1737,13 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
 			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
-			info ("entBonus: " + String::valueOf(entBonus), true); 
+			info ("entBonus: " + String::valueOf(entBonus), true);
 
 		}
 		xp = playerObject->addExperience(xpType, (amount * 2 * entBonus * speciesModifier));
 
 	} else if (xpType == "imagedesigner" ||
-		xpType == "music" || 
+		xpType == "music" ||
 		xpType == "dance" ||
 		xpType == "entertainer_healing" ||
 		xpType == "bio_engineer_dna_harvesting"){
@@ -1753,7 +1753,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 			if (amount > 0){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 				entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
-				(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f; 
+				(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
 				info ("entBonus: " + String::valueOf(entBonus), true);
 			}
 			if (applyModifiers)
@@ -1769,7 +1769,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
 			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
-			info ("entBonus: " + String::valueOf(entBonus), true); 
+			info ("entBonus: " + String::valueOf(entBonus), true);
 		}
 		if (applyModifiers)
 			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * entBonus * globalExpMultiplier));
@@ -5294,7 +5294,7 @@ void PlayerManagerImplementation::enhanceCharacter(CreatureObject* player, int t
 
 			if (message && player->isPlayerCreature())
 				player->sendSystemMessage("An unknown force strengthens you for battles yet to come.");
-			
+
 	} else if (type == 0){
 
 		message = message && doEnhanceCharacter(0x98321369, player, medicalBuff, medicalDuration, BuffType::MEDICAL, 0); // medical_enhance_health
@@ -5312,7 +5312,7 @@ void PlayerManagerImplementation::enhanceCharacter(CreatureObject* player, int t
 		player->sendSystemMessage("An ADMIN uses an unknown force to strengthen you for battles yet to come.");
 	}
 
-	
+
 }
 
 void PlayerManagerImplementation::sendAdminJediList(CreatureObject* player) {

@@ -9,8 +9,8 @@ clone_commando = Creature:new {
 	damageMin = 300,
 	damageMax = 310,
 	baseXp = 3005,
-	baseHAM = 6100,
-	baseHAMmax = 9900,
+	baseHAM = 16100,
+	baseHAMmax = 19900,
 	armor = 1,
 	resists = {40,40,40,40,40,40,40,40,-1},
 	meatType = "",
@@ -47,7 +47,7 @@ clone_commando = Creature:new {
 	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	personalityStf = "@hireling/hireling_stormtrooper",	
+	personalityStf = "@hireling/hireling_stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
 }
 

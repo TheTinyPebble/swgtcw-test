@@ -5,11 +5,11 @@ cis_sbd = Creature:new {
 	faction = "rebel",
 	level = 20,
 	chanceHit = 0.33,
-	damageMin = 190,
-	damageMax = 200,
+	damageMin = 290,
+	damageMax = 300,
 	baseXp = 2006,
-	baseHAM = 5000,
-	baseHAMmax = 6100,
+	baseHAM = 10000,
+	baseHAMmax = 16100,
 	armor = 1,
 	resists = {40,40,40,40,40,40,40,40,-1},
 	meatType = "",
@@ -25,7 +25,7 @@ cis_sbd = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	optionsBitmask = AIENABLED + FACTIONAGGRO,
 	diet = HERBIVORE,
-	scale = 1.30,
+	scale = 1.10,
 
 	templates = {
 			"object/mobile/death_watch_s_battle_droid_02.iff"
