@@ -1519,10 +1519,13 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Enhance Character", "enhance_character",
 			"Jedi",
 			{
-				"Unlock Jedi Initiate", "unlock_jedi_initiate",
-				"Unlock Jedi Master", "unlock_jedi_master",
-				"Unlock FRS Light Side", "frs_light_side",
-				"Unlock FRS Dark Side", "frs_dark_side"
+--				"Unlock Jedi Initiate", "unlock_jedi_initiate",
+				"Unlock Soresu Master(Tank)", "unlock_jedi_tank",
+				"Unlock Healer Master", "unlock_jedi_healer",
+				"Unlock Ataru Master(Powers)", "unlock_jedi_powers",
+				"Unlock Shien Master(Sabers)", "unlock_jedi_sabers",
+--				"Unlock FRS Light Side", "frs_light_side",
+--				"Unlock FRS Dark Side", "frs_dark_side"
 			},
 			"Fill Force Bar", "fill_force_bar",
 			"Reset Buffs", "reset_buffs",
