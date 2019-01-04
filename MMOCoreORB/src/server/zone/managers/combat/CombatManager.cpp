@@ -1995,7 +1995,7 @@ int CombatManager::calculatePoolsToDamage(int poolsToDamage) {
 	if (poolsToDamage & RANDOM) {
 	        int rand = System::random(100);
 
-	        if (rand < 50) {
+	        if (rand < 60) {
 	            poolsToDamage = HEALTH;
 	        } else {
 	            poolsToDamage = ACTION;
