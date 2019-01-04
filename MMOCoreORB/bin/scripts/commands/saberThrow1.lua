@@ -42,9 +42,9 @@
 --true = 1, false = 0
 
 SaberThrow1Command = {
-        name = "saberthrow1",                
+        name = "saberthrow1",
 
-	damageMultiplier = 1.5,
+	damageMultiplier = 1.0,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
@@ -52,7 +52,7 @@ SaberThrow1Command = {
 	forceCostMultiplier = 1.5,
 	visMod = 25,
 
-	animation = "saberthrow", 
+	animation = "saberthrow",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "saberthrow1",
@@ -65,4 +65,3 @@ SaberThrow1Command = {
 }
 
 AddCommand(SaberThrow1Command)
-
