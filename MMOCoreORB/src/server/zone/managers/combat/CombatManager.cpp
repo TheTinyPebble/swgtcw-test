@@ -1305,7 +1305,7 @@ float CombatManager::getArmorPiercing(TangibleObject* defender, int armorPiercin
 	}
 
 	if (armorPiercing > armorReduction)
-		return pow(1.25, armorPiercing - armorReduction);
+		return pow(1.125, armorPiercing - armorReduction);
     else
         return pow(0.50, armorReduction - armorPiercing);
 }
