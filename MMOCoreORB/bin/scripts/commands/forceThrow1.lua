@@ -62,7 +62,7 @@ ForceThrow1Command = {
 		0,
 		100,
 		3000,
-		62,
+		32,
 		100,
 		1
 		),
@@ -75,7 +75,7 @@ ForceThrow1Command = {
 		0, --??
 		100, --potency
 		3000, --strength
-		62, --duration
+		32, --duration
 		100, --??
 		1 --??
 		),

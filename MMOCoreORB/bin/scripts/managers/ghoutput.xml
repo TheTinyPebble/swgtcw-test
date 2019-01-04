@@ -232,16 +232,6 @@
 </resource>
 
 <resource>
-<SpawnName>Apotae</SpawnName>
-<resType>seafood_crustacean_tatooine</resType>
-<attribute name="res_decay_resist">937</attribute>
-<attribute name="res_flavor">321</attribute>
-<attribute name="res_potential_energy">46</attribute>
-<attribute name="res_quality">9</attribute>
-<planet>tatooine</planet>
-</resource>
-
-<resource>
 <SpawnName>Arikeu</SpawnName>
 <resType>meat_reptilian_tatooine</resType>
 <attribute name="res_decay_resist">318</attribute>
@@ -321,16 +311,6 @@
 <attribute name="res_potential_energy">126</attribute>
 <attribute name="res_quality">264</attribute>
 <planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Bairio</SpawnName>
-<resType>meat_insect_corellia</resType>
-<attribute name="res_decay_resist">138</attribute>
-<attribute name="res_flavor">267</attribute>
-<attribute name="res_potential_energy">799</attribute>
-<attribute name="res_quality">540</attribute>
-<planet>corellia</planet>
 </resource>
 
 <resource>
@@ -1812,6 +1792,17 @@
 </resource>
 
 <resource>
+<SpawnName>Fidi</SpawnName>
+<resType>fiberplast_talus</resType>
+<attribute name="res_decay_resist">370</attribute>
+<attribute name="res_malleability">438</attribute>
+<attribute name="res_quality">747</attribute>
+<attribute name="res_shock_resistance">372</attribute>
+<attribute name="res_toughness">104</attribute>
+<planet>talus</planet>
+</resource>
+
+<resource>
 <SpawnName>Figaian</SpawnName>
 <resType>iron_kammris</resType>
 <attribute name="res_cold_resist">719</attribute>
@@ -3169,17 +3160,6 @@
 </resource>
 
 <resource>
-<SpawnName>Ilisi</SpawnName>
-<resType>bone_mammal_dathomir</resType>
-<attribute name="res_decay_resist">836</attribute>
-<attribute name="res_malleability">284</attribute>
-<attribute name="res_quality">869</attribute>
-<attribute name="res_shock_resistance">427</attribute>
-<attribute name="res_toughness">986</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
 <SpawnName>Imagaium</SpawnName>
 <resType>iron_axidite</resType>
 <attribute name="res_cold_resist">316</attribute>
@@ -4064,6 +4044,16 @@
 </resource>
 
 <resource>
+<SpawnName>Megro</SpawnName>
+<resType>meat_insect_corellia</resType>
+<attribute name="res_decay_resist">153</attribute>
+<attribute name="res_flavor">267</attribute>
+<attribute name="res_potential_energy">929</attribute>
+<attribute name="res_quality">609</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
 <SpawnName>Mekou</SpawnName>
 <resType>vegetable_fungi_rori</resType>
 <attribute name="res_decay_resist">785</attribute>
@@ -4607,6 +4597,16 @@
 <attribute name="res_decay_resist">490</attribute>
 <attribute name="res_quality">821</attribute>
 <planet>naboo</planet>
+</resource>
+
+<resource>
+<SpawnName>Nipetea</SpawnName>
+<resType>fruit_berries_dathomir</resType>
+<attribute name="res_decay_resist">231</attribute>
+<attribute name="res_flavor">537</attribute>
+<attribute name="res_potential_energy">885</attribute>
+<attribute name="res_quality">421</attribute>
+<planet>dathomir</planet>
 </resource>
 
 <resource>
@@ -5310,16 +5310,6 @@
 </resource>
 
 <resource>
-<SpawnName>Poxu</SpawnName>
-<resType>meat_egg_talus</resType>
-<attribute name="res_decay_resist">517</attribute>
-<attribute name="res_flavor">275</attribute>
-<attribute name="res_potential_energy">369</attribute>
-<attribute name="res_quality">554</attribute>
-<planet>talus</planet>
-</resource>
-
-<resource>
 <SpawnName>Prasebleo</SpawnName>
 <resType>meat_insect_yavin4</resType>
 <attribute name="res_decay_resist">143</attribute>
@@ -5700,16 +5690,6 @@
 <attribute name="res_shock_resistance">290</attribute>
 <attribute name="res_toughness">57</attribute>
 <planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Rifoi</SpawnName>
-<resType>fruit_berries_dathomir</resType>
-<attribute name="res_decay_resist">941</attribute>
-<attribute name="res_flavor">41</attribute>
-<attribute name="res_potential_energy">353</attribute>
-<attribute name="res_quality">492</attribute>
-<planet>dathomir</planet>
 </resource>
 
 <resource>
@@ -6298,6 +6278,17 @@
 </resource>
 
 <resource>
+<SpawnName>Soka</SpawnName>
+<resType>bone_mammal_dathomir</resType>
+<attribute name="res_decay_resist">881</attribute>
+<attribute name="res_malleability">40</attribute>
+<attribute name="res_quality">163</attribute>
+<attribute name="res_shock_resistance">873</attribute>
+<attribute name="res_toughness">943</attribute>
+<planet>dathomir</planet>
+</resource>
+
+<resource>
 <SpawnName>Somiva</SpawnName>
 <resType>fruit_flowers_lok</resType>
 <attribute name="res_decay_resist">123</attribute>
@@ -6324,6 +6315,16 @@
 <attribute name="res_flavor">416</attribute>
 <attribute name="res_potential_energy">421</attribute>
 <attribute name="res_quality">496</attribute>
+<planet>tatooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Spife</SpawnName>
+<resType>seafood_crustacean_tatooine</resType>
+<attribute name="res_decay_resist">680</attribute>
+<attribute name="res_flavor">408</attribute>
+<attribute name="res_potential_energy">333</attribute>
+<attribute name="res_quality">231</attribute>
 <planet>tatooine</planet>
 </resource>
 
@@ -6452,17 +6453,6 @@
 <attribute name="res_shock_resistance">657</attribute>
 <attribute name="res_toughness">749</attribute>
 <planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Srovoolu</SpawnName>
-<resType>fiberplast_talus</resType>
-<attribute name="res_decay_resist">801</attribute>
-<attribute name="res_malleability">558</attribute>
-<attribute name="res_quality">59</attribute>
-<attribute name="res_shock_resistance">497</attribute>
-<attribute name="res_toughness">675</attribute>
-<planet>talus</planet>
 </resource>
 
 <resource>
@@ -6669,6 +6659,16 @@
 <attribute name="res_potential_energy">386</attribute>
 <attribute name="res_quality">291</attribute>
 <planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Thievvetee</SpawnName>
+<resType>meat_egg_talus</resType>
+<attribute name="res_decay_resist">383</attribute>
+<attribute name="res_flavor">969</attribute>
+<attribute name="res_potential_energy">129</attribute>
+<attribute name="res_quality">288</attribute>
+<planet>talus</planet>
 </resource>
 
 <resource>

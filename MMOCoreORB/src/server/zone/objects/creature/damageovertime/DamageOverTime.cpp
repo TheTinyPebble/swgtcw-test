@@ -152,7 +152,7 @@ uint32 DamageOverTime::initDot(CreatureObject* victim, CreatureObject* attacker)
 	switch(type) {
 	case CreatureState::BLEEDING:
 		absorptionMod = Math::max(0, Math::min(50, victim->getSkillMod("absorption_bleeding")));
-		nextTick.addMiliTime(20000);
+		nextTick.addMiliTime(5000);
 		break;
 	case CreatureState::ONFIRE:
 		absorptionMod = Math::max(0, Math::min(50, victim->getSkillMod("absorption_fire")));
