@@ -121,7 +121,7 @@ uint32 DamageOverTime::applyDot(CreatureObject* victim) {
 	switch(type) {
 	case CreatureState::BLEEDING:
 		power = doBleedingTick(victim, attacker);
-		nextTick.addMiliTime(20000);
+		nextTick.addMiliTime(5000);
 		break;
 	case CreatureState::POISONED:
 		power = doPoisonTick(victim, attacker);
@@ -276,7 +276,7 @@ uint32 DamageOverTime::doPoisonTick(CreatureObject* victim, CreatureObject* atta
 	uint32 attr = victim->getHAM(attribute);
 
 	int absorptionMod = Math::max(0, Math::min(50, victim->getSkillMod("absorption_poison")));
-	
+
 
 	int damage = (int)(strength);
 	int damagePrt0;
@@ -291,7 +291,7 @@ uint32 DamageOverTime::doPoisonTick(CreatureObject* victim, CreatureObject* atta
 	if (damage > 1000){
 		damagePrt2 = damage - 1000;
 		damagePrt1 = 600;
-	} 
+	}
 	//int totalDamage = damage;
 	//int tempDamage = 0;
 
@@ -339,7 +339,7 @@ uint32 DamageOverTime::doDiseaseTick(CreatureObject* victim, CreatureObject* att
 	int absorptionMod = 0;
 	if (strength > 400 && victim->isPlayerCreature())
 		absorptionMod = 75;
-	
+
 	// absorption reduces the strength of a dot by the given %.
 	// make sure that the CM dots modify the strength
 	int damage = (int)(strength * (1.f - absorptionMod / 100.f) * (1.f + victim->getShockWounds() / 100.0f));

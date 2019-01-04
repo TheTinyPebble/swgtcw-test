@@ -1341,6 +1341,7 @@ void PlayerObjectImplementation::notifyOnline() {
 		}
 	}
 
+	ManagedReference<PlayerObject*> ghost = playerCreature->getPlayerObject();
 
 	if (ghost != NULL && ghost->getRatingReset() != 1){
 		ghost->setPvpRating(1200);
