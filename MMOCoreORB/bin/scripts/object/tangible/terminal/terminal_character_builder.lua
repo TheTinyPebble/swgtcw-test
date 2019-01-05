@@ -1610,6 +1610,22 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Test Shield", "object/tangible/component/armor/shield_generator_personal_c.iff",
 						"Test Imperial Shield", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff"
 						},
+
+						"Sep Infil Armour",
+						{
+							"Sep Infil Armor Belt", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_belt.iff",
+							"Sep Infil Armor Left Bicep", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bicep_l.iff",
+							"Sep Infil Armor Right Bicep", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bicep_r.iff",
+							"Sep Infil Armor Boots", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_boots.iff",
+							"Sep Infil Armor Left Bracer", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bracer_l.iff",
+							"Sep Infil Armor Right Bracer", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bracer_r.iff",
+							"Sep Infil Armor Chest Plate", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_chest_plate.iff",
+							"Sep Infil Armor Gloves", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_gloves.iff",
+							"Sep Infil Armor Helmet", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_helmet.iff",
+							"Sep Infil Armor Leggings", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_leggings.iff",
+							"Test Shield", "object/tangible/component/armor/shield_generator_personal_c.iff",
+							"Test Imperial Shield", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff"
+							},
 					"Clone Trooper Coruscant Armor",
 					{
 						"Clone Trooper Belt", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_belt.iff",

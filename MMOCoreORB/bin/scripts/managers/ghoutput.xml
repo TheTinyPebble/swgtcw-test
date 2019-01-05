@@ -580,16 +580,6 @@
 </resource>
 
 <resource>
-<SpawnName>Berima</SpawnName>
-<resType>seafood_crustacean_corellia</resType>
-<attribute name="res_decay_resist">839</attribute>
-<attribute name="res_flavor">634</attribute>
-<attribute name="res_potential_energy">290</attribute>
-<attribute name="res_quality">930</attribute>
-<planet>corellia</planet>
-</resource>
-
-<resource>
 <SpawnName>Bicheni</SpawnName>
 <resType>vegetable_tubers_corellia</resType>
 <attribute name="res_decay_resist">486</attribute>
@@ -686,6 +676,16 @@
 <attribute name="res_potential_energy">336</attribute>
 <attribute name="res_quality">110</attribute>
 <planet>endor</planet>
+</resource>
+
+<resource>
+<SpawnName>Bosi</SpawnName>
+<resType>meat_wild_naboo</resType>
+<attribute name="res_decay_resist">102</attribute>
+<attribute name="res_flavor">668</attribute>
+<attribute name="res_potential_energy">489</attribute>
+<attribute name="res_quality">245</attribute>
+<planet>naboo</planet>
 </resource>
 
 <resource>
@@ -1008,6 +1008,17 @@
 <attribute name="res_shock_resistance">774</attribute>
 <attribute name="res_toughness">761</attribute>
 <planet>yavin4</planet>
+</resource>
+
+<resource>
+<SpawnName>Coirli</SpawnName>
+<resType>bone_horn_tatooine</resType>
+<attribute name="res_decay_resist">634</attribute>
+<attribute name="res_malleability">257</attribute>
+<attribute name="res_quality">617</attribute>
+<attribute name="res_shock_resistance">699</attribute>
+<attribute name="res_toughness">400</attribute>
+<planet>tatooine</planet>
 </resource>
 
 <resource>
@@ -1389,16 +1400,6 @@
 <attribute name="res_potential_energy">231</attribute>
 <attribute name="res_quality">500</attribute>
 <planet>dantooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Egiowo</SpawnName>
-<resType>meat_wild_naboo</resType>
-<attribute name="res_decay_resist">825</attribute>
-<attribute name="res_flavor">57</attribute>
-<attribute name="res_potential_energy">489</attribute>
-<attribute name="res_quality">9</attribute>
-<planet>naboo</planet>
 </resource>
 
 <resource>
@@ -2748,6 +2749,16 @@
 </resource>
 
 <resource>
+<SpawnName>Haca</SpawnName>
+<resType>seafood_crustacean_corellia</resType>
+<attribute name="res_decay_resist">335</attribute>
+<attribute name="res_flavor">130</attribute>
+<attribute name="res_potential_energy">387</attribute>
+<attribute name="res_quality">428</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
 <SpawnName>Haczewo</SpawnName>
 <resType>hide_scaley_tatooine</resType>
 <attribute name="res_decay_resist">43</attribute>
@@ -3332,17 +3343,6 @@
 </resource>
 
 <resource>
-<SpawnName>Irki</SpawnName>
-<resType>bone_horn_tatooine</resType>
-<attribute name="res_decay_resist">569</attribute>
-<attribute name="res_malleability">198</attribute>
-<attribute name="res_quality">944</attribute>
-<attribute name="res_shock_resistance">652</attribute>
-<attribute name="res_toughness">289</attribute>
-<planet>tatooine</planet>
-</resource>
-
-<resource>
 <SpawnName>Isnabe</SpawnName>
 <resType>wood_deciduous_dantooine</resType>
 <attribute name="res_decay_resist">357</attribute>
@@ -3631,6 +3631,16 @@
 <attribute name="res_potential_energy">189</attribute>
 <attribute name="res_quality">504</attribute>
 <planet>lok</planet>
+</resource>
+
+<resource>
+<SpawnName>Kevadhou</SpawnName>
+<resType>seafood_crustacean_dantooine</resType>
+<attribute name="res_decay_resist">557</attribute>
+<attribute name="res_flavor">625</attribute>
+<attribute name="res_potential_energy">292</attribute>
+<attribute name="res_quality">845</attribute>
+<planet>dantooine</planet>
 </resource>
 
 <resource>
@@ -4994,16 +5004,6 @@
 <attribute name="res_quality">384</attribute>
 <attribute name="res_shock_resistance">58</attribute>
 <attribute name="res_toughness">271</attribute>
-<planet>dantooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Ootio</SpawnName>
-<resType>seafood_crustacean_dantooine</resType>
-<attribute name="res_decay_resist">808</attribute>
-<attribute name="res_flavor">228</attribute>
-<attribute name="res_potential_energy">256</attribute>
-<attribute name="res_quality">879</attribute>
 <planet>dantooine</planet>
 </resource>
 
