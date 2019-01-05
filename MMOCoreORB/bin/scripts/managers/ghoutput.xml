@@ -1869,6 +1869,17 @@
 </resource>
 
 <resource>
+<SpawnName>Ffesi</SpawnName>
+<resType>wood_deciduous_yavin4</resType>
+<attribute name="res_decay_resist">663</attribute>
+<attribute name="res_malleability">704</attribute>
+<attribute name="res_quality">660</attribute>
+<attribute name="res_shock_resistance">604</attribute>
+<attribute name="res_toughness">189</attribute>
+<planet>yavin4</planet>
+</resource>
+
+<resource>
 <SpawnName>Fice</SpawnName>
 <resType>hide_bristley_rori</resType>
 <attribute name="res_decay_resist">748</attribute>
@@ -2625,6 +2636,118 @@
 </resource>
 
 <resource>
+<SpawnName>Grofisis</SpawnName>
+<resType>crystalline_sormahil_firegem</resType>
+<attribute name="entangle_resistance">893</attribute>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_decay_resist">660</attribute>
+<attribute name="res_heat_resist">895</attribute>
+<attribute name="res_malleability">258</attribute>
+<attribute name="res_quality">215</attribute>
+<attribute name="res_shock_resistance">784</attribute>
+<attribute name="res_toughness">748</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
+<SpawnName>Grofisis</SpawnName>
+<resType>crystalline_sormahil_firegem</resType>
+<attribute name="entangle_resistance">893</attribute>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_decay_resist">660</attribute>
+<attribute name="res_heat_resist">895</attribute>
+<attribute name="res_malleability">258</attribute>
+<attribute name="res_quality">215</attribute>
+<attribute name="res_shock_resistance">784</attribute>
+<attribute name="res_toughness">748</attribute>
+<planet>dantooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Grofisis</SpawnName>
+<resType>crystalline_sormahil_firegem</resType>
+<attribute name="entangle_resistance">893</attribute>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_decay_resist">660</attribute>
+<attribute name="res_heat_resist">895</attribute>
+<attribute name="res_malleability">258</attribute>
+<attribute name="res_quality">215</attribute>
+<attribute name="res_shock_resistance">784</attribute>
+<attribute name="res_toughness">748</attribute>
+<planet>dathomir</planet>
+</resource>
+
+<resource>
+<SpawnName>Grofisis</SpawnName>
+<resType>crystalline_sormahil_firegem</resType>
+<attribute name="entangle_resistance">893</attribute>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_decay_resist">660</attribute>
+<attribute name="res_heat_resist">895</attribute>
+<attribute name="res_malleability">258</attribute>
+<attribute name="res_quality">215</attribute>
+<attribute name="res_shock_resistance">784</attribute>
+<attribute name="res_toughness">748</attribute>
+<planet>endor</planet>
+</resource>
+
+<resource>
+<SpawnName>Grofisis</SpawnName>
+<resType>crystalline_sormahil_firegem</resType>
+<attribute name="entangle_resistance">893</attribute>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_decay_resist">660</attribute>
+<attribute name="res_heat_resist">895</attribute>
+<attribute name="res_malleability">258</attribute>
+<attribute name="res_quality">215</attribute>
+<attribute name="res_shock_resistance">784</attribute>
+<attribute name="res_toughness">748</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
+<SpawnName>Grofisis</SpawnName>
+<resType>crystalline_sormahil_firegem</resType>
+<attribute name="entangle_resistance">893</attribute>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_decay_resist">660</attribute>
+<attribute name="res_heat_resist">895</attribute>
+<attribute name="res_malleability">258</attribute>
+<attribute name="res_quality">215</attribute>
+<attribute name="res_shock_resistance">784</attribute>
+<attribute name="res_toughness">748</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Grofisis</SpawnName>
+<resType>crystalline_sormahil_firegem</resType>
+<attribute name="entangle_resistance">893</attribute>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_decay_resist">660</attribute>
+<attribute name="res_heat_resist">895</attribute>
+<attribute name="res_malleability">258</attribute>
+<attribute name="res_quality">215</attribute>
+<attribute name="res_shock_resistance">784</attribute>
+<attribute name="res_toughness">748</attribute>
+<planet>talus</planet>
+</resource>
+
+<resource>
+<SpawnName>Grofisis</SpawnName>
+<resType>crystalline_sormahil_firegem</resType>
+<attribute name="entangle_resistance">893</attribute>
+<attribute name="res_cold_resist">725</attribute>
+<attribute name="res_decay_resist">660</attribute>
+<attribute name="res_heat_resist">895</attribute>
+<attribute name="res_malleability">258</attribute>
+<attribute name="res_quality">215</attribute>
+<attribute name="res_shock_resistance">784</attribute>
+<attribute name="res_toughness">748</attribute>
+<planet>tatooine</planet>
+</resource>
+
+<resource>
 <SpawnName>Haczewo</SpawnName>
 <resType>hide_scaley_tatooine</resType>
 <attribute name="res_decay_resist">43</attribute>
@@ -3144,17 +3267,6 @@
 <attribute name="res_potential_energy">85</attribute>
 <attribute name="res_quality">737</attribute>
 <planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Ihao</SpawnName>
-<resType>wood_deciduous_yavin4</resType>
-<attribute name="res_decay_resist">198</attribute>
-<attribute name="res_malleability">401</attribute>
-<attribute name="res_quality">447</attribute>
-<attribute name="res_shock_resistance">611</attribute>
-<attribute name="res_toughness">621</attribute>
-<planet>yavin4</planet>
 </resource>
 
 <resource>
@@ -6380,70 +6492,6 @@
 <attribute name="res_potential_energy">543</attribute>
 <attribute name="res_quality">606</attribute>
 <planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Sposro</SpawnName>
-<resType>gas_inert_hurlothrombic</resType>
-<attribute name="res_decay_resist">404</attribute>
-<attribute name="res_quality">900</attribute>
-<planet>corellia</planet>
-</resource>
-
-<resource>
-<SpawnName>Sposro</SpawnName>
-<resType>gas_inert_hurlothrombic</resType>
-<attribute name="res_decay_resist">404</attribute>
-<attribute name="res_quality">900</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
-<SpawnName>Sposro</SpawnName>
-<resType>gas_inert_hurlothrombic</resType>
-<attribute name="res_decay_resist">404</attribute>
-<attribute name="res_quality">900</attribute>
-<planet>lok</planet>
-</resource>
-
-<resource>
-<SpawnName>Sposro</SpawnName>
-<resType>gas_inert_hurlothrombic</resType>
-<attribute name="res_decay_resist">404</attribute>
-<attribute name="res_quality">900</attribute>
-<planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Sposro</SpawnName>
-<resType>gas_inert_hurlothrombic</resType>
-<attribute name="res_decay_resist">404</attribute>
-<attribute name="res_quality">900</attribute>
-<planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Sposro</SpawnName>
-<resType>gas_inert_hurlothrombic</resType>
-<attribute name="res_decay_resist">404</attribute>
-<attribute name="res_quality">900</attribute>
-<planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Sposro</SpawnName>
-<resType>gas_inert_hurlothrombic</resType>
-<attribute name="res_decay_resist">404</attribute>
-<attribute name="res_quality">900</attribute>
-<planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Sposro</SpawnName>
-<resType>gas_inert_hurlothrombic</resType>
-<attribute name="res_decay_resist">404</attribute>
-<attribute name="res_quality">900</attribute>
-<planet>yavin4</planet>
 </resource>
 
 <resource>
