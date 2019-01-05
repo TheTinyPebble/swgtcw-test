@@ -101,7 +101,7 @@ function SithShadowEncounter:onEncounterSpawned(pPlayer, spawnedObjects)
 
 	createObserver(LOOTCREATURE, self.taskName, "onLoot", spawnedObjects[1])
 	createObserver(OBJECTDESTRUCTION, self.taskName, "onPlayerKilled", pPlayer)
-	FsIntro:setCurrentStep(pPlayer, 4)
+	CustomUnlock:setCurrentStep(pPlayer, 4)
 	QuestManager.activateQuest(pPlayer, QuestManager.quests.TWO_MILITARY)
 end
 
@@ -152,7 +152,7 @@ function SithShadowEncounter:useWaypointDatapad(pSceneObject, pPlayer)
 		SceneObject(pSceneObject):destroyObjectFromWorld()
 		SceneObject(pSceneObject):destroyObjectFromDatabase()
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.LOOT_DATAPAD_1)
-		FsIntro:setCurrentStep(pPlayer, 6)
+		CustomUnlock:setCurrentStep(pPlayer, 6)
 	else
 		CreatureObject(pPlayer):sendSystemMessage(READ_DISK_ERROR_STRING)
 	end
@@ -163,10 +163,10 @@ function SithShadowEncounter:taskFinish(pPlayer)
 		return true
 	end
 
-	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.GOT_DATAPAD) and FsIntro:getCurrentStep(pPlayer) == 4) then
-		FsIntro:setCurrentStep(pPlayer, 5)
+	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.GOT_DATAPAD) and CustomUnlock:getCurrentStep(pPlayer) == 4) then
+		CustomUnlock:setCurrentStep(pPlayer, 5)
 	elseif not OldManIntroEncounter:hasForceCrystal(pPlayer) then
-		FsIntro:startStepDelay(pPlayer, 1)
+		CustomUnlock:startStepDelay(pPlayer, 1)
 	end
 
 	return true

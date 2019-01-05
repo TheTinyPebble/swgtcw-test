@@ -35,7 +35,7 @@ function OldManIntroEncounter:onEncounterInRange(pPlayer, oldManPointerList)
 	greetingString:setTT(CreatureObject(pPlayer):getFirstName())
 	spatialChat(oldManPointerList[1], greetingString:_getObject())
 
-	FsIntro:setCurrentStep(pPlayer, 2)
+	CustomUnlock:setCurrentStep(pPlayer, 2)
 	QuestManager.activateQuest(pPlayer, QuestManager.quests.OLD_MAN_INITIAL)
 end
 
@@ -81,11 +81,11 @@ function OldManIntroEncounter:giveForceCrystalToPlayer(pPlayer)
 		CreatureObject(pPlayer):removeScreenPlayState(0xFFFFFFFFFFFFFFFF, self.taskName .. OLD_MAN_FORCE_CRYSTAL_ID_STRING)
 		CreatureObject(pPlayer):setScreenPlayState(SceneObject(pCrystal):getObjectID(), self.taskName .. OLD_MAN_FORCE_CRYSTAL_ID_STRING)
 
-		VillageJediManagerCommon.setJediProgressionScreenPlayState(pPlayer, VILLAGE_JEDI_PROGRESSION_HAS_CRYSTAL)
+		CustomJediManagerCommon.setJediProgressionScreenPlayState(pPlayer, CUSTOM_JEDI_PROGRESSION_HAS_CRYSTAL)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.OLD_MAN_INITIAL)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.OLD_MAN_FORCE_CRYSTAL)
 		CreatureObject(pPlayer):sendSystemMessage("@quest/force_sensitive/intro:crystal_message")
-		writeScreenPlayData(pPlayer, "VillageJediProgression", "FsIntroOldManVisits", 0)
+		writeScreenPlayData(pPlayer, "CustomJediProgression", "CustomUnlockOldManVisits", 0)
 	end
 end
 
@@ -154,7 +154,7 @@ function OldManIntroEncounter:taskFinish(pPlayer)
 		return true
 	end
 	
-	local oldManVisits = readScreenPlayData(pPlayer, "VillageJediProgression", "FsIntroOldManVisits")
+	local oldManVisits = readScreenPlayData(pPlayer, "CustomJediProgression", "CustomUnlockOldManVisits")
 	
 	if (oldManVisits == "") then
 		oldManVisits = 1
@@ -162,13 +162,13 @@ function OldManIntroEncounter:taskFinish(pPlayer)
 		oldManVisits = tonumber(oldManVisits) + 1
 	end
 	
-	writeScreenPlayData(pPlayer, "VillageJediProgression", "FsIntroOldManVisits", oldManVisits)
+	writeScreenPlayData(pPlayer, "CustomJediProgression", "CustomUnlockOldManVisits", oldManVisits)
 
 	if (self:isEncounterFinished(pPlayer)) then
-		FsIntro:startStepDelay(pPlayer, 3)
+		CustomUnlock:startStepDelay(pPlayer, 3)
 	else
 		QuestManager.resetQuest(pPlayer, QuestManager.quests.OLD_MAN_INITIAL)
-		FsIntro:startStepDelay(pPlayer, 1)
+		CustomUnlock:startStepDelay(pPlayer, 1)
 	end
 
 	return true

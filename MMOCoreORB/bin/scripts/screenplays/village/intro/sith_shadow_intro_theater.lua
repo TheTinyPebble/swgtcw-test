@@ -86,7 +86,7 @@ function SithShadowIntroTheater:onLoot(pLootedCreature, pLooter, nothing)
 	if QuestManager.hasActiveQuest(pLooter, QuestManager.quests.FS_THEATER_CAMP) then
 		if self:isTheFirstSithShadowOfThePlayer(pLootedCreature, pLooter) then
 			self:addWaypointDatapadAsLoot(pLootedCreature)
-			FsIntro:setCurrentStep(pLooter, 7)
+			CustomUnlock:setCurrentStep(pLooter, 7)
 			QuestManager.completeQuest(pLooter, QuestManager.quests.FS_THEATER_CAMP)
 			QuestManager.completeQuest(pLooter, QuestManager.quests.GOT_DATAPAD_2)
 			return 1
@@ -147,8 +147,8 @@ function SithShadowIntroTheater:useTheaterDatapad(pSceneObject, pPlayer)
 		SceneObject(pSceneObject):destroyObjectFromDatabase()
 
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.LOOT_DATAPAD_2)
-		FsIntro:setCurrentStep(pPlayer, 8)
-		GoToDathomir:start(pPlayer)
+		CustomUnlock:setCurrentStep(pPlayer, 8)
+		MellichaeOutroTheater:start(pPlayer)
 	else
 		CreatureObject(pPlayer):sendSystemMessage(READ_DISK_ERROR_STRING)
 	end
