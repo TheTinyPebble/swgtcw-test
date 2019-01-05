@@ -122,7 +122,7 @@ function WeaponFacilityScreenPlay:spawnImperials(pBuilding)
 	BuildingObject(pBuilding):spawnChildCreature("clone_commando", 300, -75.7, -20.0, 29.5, 61, 6335645)
 
 	--Cell [6335646]
-	BuildingObject(pBuilding):spawnChildCreature("imperial_inquisitor", 600, -46.7, -20.0, 12.9, -84, 6335646)
+	BuildingObject(pBuilding):spawnChildCreature("rep_jedi_knight", 600, -46.7, -20.0, 12.9, -84, 6335646)
 	BuildingObject(pBuilding):spawnChildCreature("imperial_second_lieutenant", 300, -68.2, -20.0, 18.0, 178, 6335646)
 	BuildingObject(pBuilding):spawnChildCreature("clonetrooper", 300, -68.2, -20.0, 11.5, -176, 6335646)
 	BuildingObject(pBuilding):spawnChildCreature("clone_commando", 300, -74.5, -20.0, 7.2, -149, 6335646)
