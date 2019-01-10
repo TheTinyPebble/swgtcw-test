@@ -28,14 +28,6 @@
 </resource>
 
 <resource>
-<SpawnName>Acheoris</SpawnName>
-<resType>energy_renewable_unlimited_wind_rori</resType>
-<attribute name="res_potential_energy">273</attribute>
-<attribute name="res_quality">500</attribute>
-<planet>rori</planet>
-</resource>
-
-<resource>
 <SpawnName>Acheweo</SpawnName>
 <resType>vegetable_fungi_rori</resType>
 <attribute name="res_decay_resist">650</attribute>
@@ -74,17 +66,6 @@
 <attribute name="res_potential_energy">954</attribute>
 <attribute name="res_quality">712</attribute>
 <planet>dathomir</planet>
-</resource>
-
-<resource>
-<SpawnName>Aglene</SpawnName>
-<resType>hide_bristley_dantooine</resType>
-<attribute name="res_decay_resist">628</attribute>
-<attribute name="res_malleability">527</attribute>
-<attribute name="res_quality">130</attribute>
-<attribute name="res_shock_resistance">124</attribute>
-<attribute name="res_toughness">392</attribute>
-<planet>dantooine</planet>
 </resource>
 
 <resource>
@@ -226,6 +207,17 @@
 <attribute name="res_potential_energy">622</attribute>
 <attribute name="res_quality">239</attribute>
 <planet>tatooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Asau</SpawnName>
+<resType>hide_bristley_dantooine</resType>
+<attribute name="res_decay_resist">370</attribute>
+<attribute name="res_malleability">167</attribute>
+<attribute name="res_quality">275</attribute>
+<attribute name="res_shock_resistance">736</attribute>
+<attribute name="res_toughness">773</attribute>
+<planet>dantooine</planet>
 </resource>
 
 <resource>
@@ -936,6 +928,14 @@
 <attribute name="res_potential_energy">5</attribute>
 <attribute name="res_quality">904</attribute>
 <planet>corellia</planet>
+</resource>
+
+<resource>
+<SpawnName>Dahahaine</SpawnName>
+<resType>energy_renewable_unlimited_wind_rori</resType>
+<attribute name="res_potential_energy">262</attribute>
+<attribute name="res_quality">500</attribute>
+<planet>rori</planet>
 </resource>
 
 <resource>
@@ -2999,16 +2999,6 @@
 <attribute name="res_shock_resistance">736</attribute>
 <attribute name="res_toughness">360</attribute>
 <planet>corellia</planet>
-</resource>
-
-<resource>
-<SpawnName>Hoogo</SpawnName>
-<resType>milk_domesticated_rori</resType>
-<attribute name="res_decay_resist">467</attribute>
-<attribute name="res_flavor">131</attribute>
-<attribute name="res_potential_energy">392</attribute>
-<attribute name="res_quality">378</attribute>
-<planet>rori</planet>
 </resource>
 
 <resource>
@@ -5806,6 +5796,16 @@
 </resource>
 
 <resource>
+<SpawnName>Reostona</SpawnName>
+<resType>rice_domesticated_dantooine</resType>
+<attribute name="res_decay_resist">125</attribute>
+<attribute name="res_flavor">135</attribute>
+<attribute name="res_potential_energy">669</attribute>
+<attribute name="res_quality">54</attribute>
+<planet>dantooine</planet>
+</resource>
+
+<resource>
 <SpawnName>Reuba</SpawnName>
 <resType>vegetable_beans_yavin4</resType>
 <attribute name="res_decay_resist">875</attribute>
@@ -5929,17 +5929,6 @@
 <attribute name="res_potential_energy">934</attribute>
 <attribute name="res_quality">558</attribute>
 <planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Rroitify</SpawnName>
-<resType>bone_horn_dantooine</resType>
-<attribute name="res_decay_resist">808</attribute>
-<attribute name="res_malleability">426</attribute>
-<attribute name="res_quality">600</attribute>
-<attribute name="res_shock_resistance">499</attribute>
-<attribute name="res_toughness">265</attribute>
-<planet>dantooine</planet>
 </resource>
 
 <resource>
@@ -6407,6 +6396,16 @@
 <attribute name="res_potential_energy">565</attribute>
 <attribute name="res_quality">3</attribute>
 <planet>corellia</planet>
+</resource>
+
+<resource>
+<SpawnName>Sothoce</SpawnName>
+<resType>milk_domesticated_rori</resType>
+<attribute name="res_decay_resist">854</attribute>
+<attribute name="res_flavor">317</attribute>
+<attribute name="res_potential_energy">421</attribute>
+<attribute name="res_quality">533</attribute>
+<planet>rori</planet>
 </resource>
 
 <resource>
@@ -7780,16 +7779,6 @@
 </resource>
 
 <resource>
-<SpawnName>Wewe</SpawnName>
-<resType>rice_domesticated_dantooine</resType>
-<attribute name="res_decay_resist">753</attribute>
-<attribute name="res_flavor">602</attribute>
-<attribute name="res_potential_energy">959</attribute>
-<attribute name="res_quality">622</attribute>
-<planet>dantooine</planet>
-</resource>
-
-<resource>
 <SpawnName>Wico</SpawnName>
 <resType>iron_colat</resType>
 <attribute name="res_cold_resist">518</attribute>
@@ -7874,6 +7863,17 @@
 <attribute name="res_potential_energy">36</attribute>
 <attribute name="res_quality">500</attribute>
 <planet>tatooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Wofeu</SpawnName>
+<resType>bone_horn_dantooine</resType>
+<attribute name="res_decay_resist">272</attribute>
+<attribute name="res_malleability">469</attribute>
+<attribute name="res_quality">471</attribute>
+<attribute name="res_shock_resistance">608</attribute>
+<attribute name="res_toughness">59</attribute>
+<planet>dantooine</planet>
 </resource>
 
 <resource>
