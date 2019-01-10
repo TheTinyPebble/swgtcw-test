@@ -24837,3 +24837,9 @@ object_draft_schematic_clothing_shared_clothing_armor_marine_helmet_crafted = Sh
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_helmet_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marine_helmet_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_robe_jedi_padawan = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_robe_jedi_padawan.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_robe_jedi_padawan, "object/draft_schematic/clothing/shared_clothing_robe_jedi_padawan.iff")

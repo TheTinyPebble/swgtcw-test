@@ -1841,4 +1841,6 @@ schematics = {
 	{path="object/draft_schematic/weapon/lance_staff_cryo.iff"},
 	{path="object/draft_schematic/weapon/lightsaber/lightsaber_polearm_s1.iff"},
 	{path="object/draft_schematic/weapon/carbine_geo.iff"},
+
+	{path="object/draft_schematic/clothing/clothing_robe_jedi_padawan.iff"},
 };
