@@ -73,9 +73,9 @@ object_draft_schematic_clothing_clothing_robe_jedi_padawan = object_draft_schema
    targetTemplate = "object/tangible/wearables/robe/robe_jedi_padawan.iff",
 
    additionalTemplates = {
-            "object/tangible/wearables/robe/robe_jedi_padawan.iff",
-            "object/tangible/wearables/robe/robe_jedi_light_s01.iff",
-            "object/tangible/wearables/robe/robe_jedi_light_s02.iff",
+            "object/tangible/wearables/robe/shared_robe_jedi_padawan.iff",
+            "object/tangible/wearables/robe/shared_robe_jedi_light_s01.iff",
+            "object/tangible/wearables/robe/shared_robe_jedi_light_s02.iff",
              }
 
 }

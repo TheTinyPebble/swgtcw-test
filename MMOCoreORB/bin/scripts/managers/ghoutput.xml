@@ -377,6 +377,14 @@
 </resource>
 
 <resource>
+<SpawnName>Befe</SpawnName>
+<resType>energy_renewable_unlimited_solar_rori</resType>
+<attribute name="res_potential_energy">224</attribute>
+<attribute name="res_quality">500</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
 <SpawnName>Beko</SpawnName>
 <resType>fruit_flowers_lok</resType>
 <attribute name="res_decay_resist">376</attribute>
@@ -483,70 +491,6 @@
 <attribute name="res_potential_energy">462</attribute>
 <attribute name="res_quality">130</attribute>
 <planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Brucoris</SpawnName>
-<resType>petrochem_inert_lubricating_oil</resType>
-<attribute name="res_decay_resist">296</attribute>
-<attribute name="res_quality">306</attribute>
-<planet>corellia</planet>
-</resource>
-
-<resource>
-<SpawnName>Brucoris</SpawnName>
-<resType>petrochem_inert_lubricating_oil</resType>
-<attribute name="res_decay_resist">296</attribute>
-<attribute name="res_quality">306</attribute>
-<planet>dantooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Brucoris</SpawnName>
-<resType>petrochem_inert_lubricating_oil</resType>
-<attribute name="res_decay_resist">296</attribute>
-<attribute name="res_quality">306</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
-<SpawnName>Brucoris</SpawnName>
-<resType>petrochem_inert_lubricating_oil</resType>
-<attribute name="res_decay_resist">296</attribute>
-<attribute name="res_quality">306</attribute>
-<planet>lok</planet>
-</resource>
-
-<resource>
-<SpawnName>Brucoris</SpawnName>
-<resType>petrochem_inert_lubricating_oil</resType>
-<attribute name="res_decay_resist">296</attribute>
-<attribute name="res_quality">306</attribute>
-<planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Brucoris</SpawnName>
-<resType>petrochem_inert_lubricating_oil</resType>
-<attribute name="res_decay_resist">296</attribute>
-<attribute name="res_quality">306</attribute>
-<planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Brucoris</SpawnName>
-<resType>petrochem_inert_lubricating_oil</resType>
-<attribute name="res_decay_resist">296</attribute>
-<attribute name="res_quality">306</attribute>
-<planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Brucoris</SpawnName>
-<resType>petrochem_inert_lubricating_oil</resType>
-<attribute name="res_decay_resist">296</attribute>
-<attribute name="res_quality">306</attribute>
-<planet>yavin4</planet>
 </resource>
 
 <resource>
@@ -1579,6 +1523,16 @@
 <attribute name="res_potential_energy">306</attribute>
 <attribute name="res_quality">108</attribute>
 <planet>talus</planet>
+</resource>
+
+<resource>
+<SpawnName>Etriopi</SpawnName>
+<resType>fruit_fruits_dathomir</resType>
+<attribute name="res_decay_resist">230</attribute>
+<attribute name="res_flavor">441</attribute>
+<attribute name="res_potential_energy">935</attribute>
+<attribute name="res_quality">437</attribute>
+<planet>dathomir</planet>
 </resource>
 
 <resource>
@@ -3152,6 +3106,14 @@
 <attribute name="res_potential_energy">351</attribute>
 <attribute name="res_quality">442</attribute>
 <planet>naboo</planet>
+</resource>
+
+<resource>
+<SpawnName>Iriveate</SpawnName>
+<resType>energy_renewable_unlimited_solar_dathomir</resType>
+<attribute name="res_potential_energy">292</attribute>
+<attribute name="res_quality">500</attribute>
+<planet>dathomir</planet>
 </resource>
 
 <resource>
@@ -4967,6 +4929,16 @@
 </resource>
 
 <resource>
+<SpawnName>Oeme</SpawnName>
+<resType>fruit_flowers_endor</resType>
+<attribute name="res_decay_resist">356</attribute>
+<attribute name="res_flavor">461</attribute>
+<attribute name="res_potential_energy">180</attribute>
+<attribute name="res_quality">797</attribute>
+<planet>endor</planet>
+</resource>
+
+<resource>
 <SpawnName>Oepho</SpawnName>
 <resType>rice_wild_talus</resType>
 <attribute name="res_decay_resist">271</attribute>
@@ -4998,16 +4970,6 @@
 <attribute name="res_potential_energy">350</attribute>
 <attribute name="res_quality">772</attribute>
 <planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Ogobo</SpawnName>
-<resType>fruit_fruits_dathomir</resType>
-<attribute name="res_decay_resist">405</attribute>
-<attribute name="res_flavor">919</attribute>
-<attribute name="res_potential_energy">302</attribute>
-<attribute name="res_quality">761</attribute>
-<planet>dathomir</planet>
 </resource>
 
 <resource>
@@ -5096,14 +5058,6 @@
 <attribute name="res_flavor">413</attribute>
 <attribute name="res_potential_energy">940</attribute>
 <attribute name="res_quality">32</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
-<SpawnName>Opreate</SpawnName>
-<resType>energy_renewable_unlimited_solar_dathomir</resType>
-<attribute name="res_potential_energy">481</attribute>
-<attribute name="res_quality">500</attribute>
 <planet>dathomir</planet>
 </resource>
 
@@ -5226,6 +5180,16 @@
 <attribute name="res_quality">726</attribute>
 <attribute name="res_shock_resistance">699</attribute>
 <attribute name="res_toughness">808</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Pihofa</SpawnName>
+<resType>oats_domesticated_rori</resType>
+<attribute name="res_decay_resist">678</attribute>
+<attribute name="res_flavor">674</attribute>
+<attribute name="res_potential_energy">830</attribute>
+<attribute name="res_quality">477</attribute>
 <planet>rori</planet>
 </resource>
 
@@ -6037,16 +6001,6 @@
 <attribute name="res_shock_resistance">549</attribute>
 <attribute name="res_toughness">633</attribute>
 <planet>lok</planet>
-</resource>
-
-<resource>
-<SpawnName>Sceicathmo</SpawnName>
-<resType>fruit_flowers_endor</resType>
-<attribute name="res_decay_resist">10</attribute>
-<attribute name="res_flavor">881</attribute>
-<attribute name="res_potential_energy">399</attribute>
-<attribute name="res_quality">743</attribute>
-<planet>endor</planet>
 </resource>
 
 <resource>
@@ -7284,14 +7238,6 @@
 </resource>
 
 <resource>
-<SpawnName>Vahetsiic</SpawnName>
-<resType>energy_renewable_unlimited_solar_rori</resType>
-<attribute name="res_potential_energy">347</attribute>
-<attribute name="res_quality">500</attribute>
-<planet>rori</planet>
-</resource>
-
-<resource>
 <SpawnName>Vaikardo</SpawnName>
 <resType>iron_plumbum</resType>
 <attribute name="res_cold_resist">10</attribute>
@@ -7837,6 +7783,70 @@
 </resource>
 
 <resource>
+<SpawnName>Wisxaira</SpawnName>
+<resType>gas_reactive_methane</resType>
+<attribute name="res_decay_resist">679</attribute>
+<attribute name="res_quality">828</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
+<SpawnName>Wisxaira</SpawnName>
+<resType>gas_reactive_methane</resType>
+<attribute name="res_decay_resist">679</attribute>
+<attribute name="res_quality">828</attribute>
+<planet>dantooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Wisxaira</SpawnName>
+<resType>gas_reactive_methane</resType>
+<attribute name="res_decay_resist">679</attribute>
+<attribute name="res_quality">828</attribute>
+<planet>dathomir</planet>
+</resource>
+
+<resource>
+<SpawnName>Wisxaira</SpawnName>
+<resType>gas_reactive_methane</resType>
+<attribute name="res_decay_resist">679</attribute>
+<attribute name="res_quality">828</attribute>
+<planet>endor</planet>
+</resource>
+
+<resource>
+<SpawnName>Wisxaira</SpawnName>
+<resType>gas_reactive_methane</resType>
+<attribute name="res_decay_resist">679</attribute>
+<attribute name="res_quality">828</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
+<SpawnName>Wisxaira</SpawnName>
+<resType>gas_reactive_methane</resType>
+<attribute name="res_decay_resist">679</attribute>
+<attribute name="res_quality">828</attribute>
+<planet>naboo</planet>
+</resource>
+
+<resource>
+<SpawnName>Wisxaira</SpawnName>
+<resType>gas_reactive_methane</resType>
+<attribute name="res_decay_resist">679</attribute>
+<attribute name="res_quality">828</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Wisxaira</SpawnName>
+<resType>gas_reactive_methane</resType>
+<attribute name="res_decay_resist">679</attribute>
+<attribute name="res_quality">828</attribute>
+<planet>tatooine</planet>
+</resource>
+
+<resource>
 <SpawnName>Wite</SpawnName>
 <resType>seafood_fish_endor</resType>
 <attribute name="res_decay_resist">644</attribute>
@@ -7965,16 +7975,6 @@
 <attribute name="res_potential_energy">679</attribute>
 <attribute name="res_quality">519</attribute>
 <planet>corellia</planet>
-</resource>
-
-<resource>
-<SpawnName>Wrowo</SpawnName>
-<resType>oats_domesticated_rori</resType>
-<attribute name="res_decay_resist">807</attribute>
-<attribute name="res_flavor">699</attribute>
-<attribute name="res_potential_energy">617</attribute>
-<attribute name="res_quality">924</attribute>
-<planet>rori</planet>
 </resource>
 
 <resource>
