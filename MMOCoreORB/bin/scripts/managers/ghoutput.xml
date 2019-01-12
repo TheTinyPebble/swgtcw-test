@@ -1925,20 +1925,6 @@
 </resource>
 
 <resource>
-<SpawnName>Fada</SpawnName>
-<resType>iron_doonium</resType>
-<attribute name="res_cold_resist">712</attribute>
-<attribute name="res_conductivity">376</attribute>
-<attribute name="res_decay_resist">876</attribute>
-<attribute name="res_heat_resist">928</attribute>
-<attribute name="res_malleability">504</attribute>
-<attribute name="res_quality">901</attribute>
-<attribute name="res_shock_resistance">853</attribute>
-<attribute name="res_toughness">913</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
 <SpawnName>Fagliavoide</SpawnName>
 <resType>iron_polonium</resType>
 <attribute name="res_cold_resist">115</attribute>
@@ -5122,6 +5108,14 @@
 </resource>
 
 <resource>
+<SpawnName>Ouquirto</SpawnName>
+<resType>energy_renewable_unlimited_wind_tatooine</resType>
+<attribute name="res_potential_energy">214</attribute>
+<attribute name="res_quality">500</attribute>
+<planet>tatooine</planet>
+</resource>
+
+<resource>
 <SpawnName>Ourisnaate</SpawnName>
 <resType>energy_renewable_unlimited_solar_talus</resType>
 <attribute name="res_potential_energy">255</attribute>
@@ -7505,6 +7499,20 @@
 </resource>
 
 <resource>
+<SpawnName>Voboism</SpawnName>
+<resType>iron_plumbum</resType>
+<attribute name="res_cold_resist">6</attribute>
+<attribute name="res_conductivity">1</attribute>
+<attribute name="res_decay_resist">329</attribute>
+<attribute name="res_heat_resist">545</attribute>
+<attribute name="res_malleability">73</attribute>
+<attribute name="res_quality">89</attribute>
+<attribute name="res_shock_resistance">435</attribute>
+<attribute name="res_toughness">470</attribute>
+<planet>tatooine</planet>
+</resource>
+
+<resource>
 <SpawnName>Volle</SpawnName>
 <resType>metal_nonferrous_unknown</resType>
 <attribute name="res_cold_resist">29</attribute>
@@ -7807,14 +7815,6 @@
 <attribute name="res_potential_energy">473</attribute>
 <attribute name="res_quality">481</attribute>
 <planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Wodaite</SpawnName>
-<resType>energy_renewable_unlimited_wind_tatooine</resType>
-<attribute name="res_potential_energy">36</attribute>
-<attribute name="res_quality">500</attribute>
-<planet>tatooine</planet>
 </resource>
 
 <resource>
