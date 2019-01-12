@@ -219,7 +219,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
 				groupPlayerManager->awardExperience(player, "gcw_currency_rebel", dividedKill);
 				StringBuffer sysMessage;
-				sysMessage << "You have received " << dividedKill << " GCW XP for your kill participation!";
+				sysMessage << "You have received " << dividedKill << " CW XP for your kill participation!";
 				player->sendSystemMessage(sysMessage.toString());
 
 			}
@@ -271,7 +271,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
 				groupPlayerManager->awardExperience(player, "gcw_currency_imperial", dividedKill);
 				StringBuffer sysMessage;
-				sysMessage << "You have received " << dividedKill << " GCW XP for your kill participation!";
+				sysMessage << "You have received " << dividedKill << " CW XP for your kill participation!";
 				player->sendSystemMessage(sysMessage.toString());
 
 			}

@@ -508,12 +508,12 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 					return;
 				uint32 winningFaction = gcwMan->getWinningFaction();
 				if (winningFaction != Factions::FACTIONREBEL ){
-					player->sendSystemMessage("This planet is not owned by the Rebels!");
+					player->sendSystemMessage("This planet is not owned by the Separatists!");
 					return;
 				}
 				int gcwCurrency = ghost->getExperience("gcw_currency_rebel");
 				if (gcwCurrency < 4000){
-					player->sendSystemMessage("You do not have enough GCW Currency for a loot roll");
+					player->sendSystemMessage("You do not have enough CW Currency for a loot roll");
 					return;
 				}
 				ManagedReference<LootManager*> lootManager = player->getZoneServer()->getLootManager();
@@ -542,12 +542,12 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 					return;
 				uint32 winningFaction = gcwMan->getWinningFaction();
 				if (winningFaction != Factions::FACTIONIMPERIAL ){
-					player->sendSystemMessage("This planet is not owned by the Imperials!");
+					player->sendSystemMessage("This planet is not owned by the Republic!");
 					return;
 				}
 				int gcwCurrency = ghost->getExperience("gcw_currency_imperial");
 				if (gcwCurrency < 4000){
-					player->sendSystemMessage("You do not have enough GCW Currency for a loot roll");
+					player->sendSystemMessage("You do not have enough CW Currency for a loot roll");
 					return;
 				}
 				ManagedReference<LootManager*> lootManager = player->getZoneServer()->getLootManager();
@@ -577,12 +577,12 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 					return;
 				uint32 winningFaction = gcwMan->getWinningFaction();
 				if (winningFaction != Factions::FACTIONREBEL ){
-					player->sendSystemMessage("This planet is not owned by the Rebels!");
+					player->sendSystemMessage("This planet is not owned by the Separatists!");
 					return;
 				}
 				int gcwCurrency = ghost->getExperience("gcw_currency_rebel");
 				if (gcwCurrency < 4000){
-					player->sendSystemMessage("You do not have enough GCW Currency for a loot roll");
+					player->sendSystemMessage("You do not have enough CW Currency for a loot roll");
 					return;
 				}
 				ManagedReference<LootManager*> lootManager = player->getZoneServer()->getLootManager();
@@ -618,12 +618,12 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 					return;
 				uint32 winningFaction = gcwMan->getWinningFaction();
 				if (winningFaction != Factions::FACTIONIMPERIAL ){
-					player->sendSystemMessage("This planet is not owned by the Imperials!");
+					player->sendSystemMessage("This planet is not owned by the Republic!");
 					return;
 				}
 				int gcwCurrency = ghost->getExperience("gcw_currency_imperial");
 				if (gcwCurrency < 4000){
-					player->sendSystemMessage("You do not have enough GCW Currency for a loot roll");
+					player->sendSystemMessage("You do not have enough CW Currency for a loot roll");
 					return;
 				}
 				ManagedReference<LootManager*> lootManager = player->getZoneServer()->getLootManager();
@@ -659,12 +659,12 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 					return;
 				uint32 winningFaction = gcwMan->getWinningFaction();
 				if (winningFaction != Factions::FACTIONIMPERIAL ){
-					player->sendSystemMessage("This planet is not owned by the Imperials!");
+					player->sendSystemMessage("This planet is not owned by the Republic!");
 					return;
 				}
 				int gcwCurrency = ghost->getExperience("gcw_currency_imperial");
 				if (gcwCurrency < 4000){
-					player->sendSystemMessage("You do not have enough GCW Currency for a loot roll");
+					player->sendSystemMessage("You do not have enough CW Currency for a loot roll");
 					return;
 				}
 				ManagedReference<LootManager*> lootManager = player->getZoneServer()->getLootManager();
@@ -700,12 +700,12 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 					return;
 				uint32 winningFaction = gcwMan->getWinningFaction();
 				if (winningFaction != Factions::FACTIONREBEL ){
-					player->sendSystemMessage("This planet is not owned by the Rebels!");
+					player->sendSystemMessage("This planet is not owned by the Separatists!");
 					return;
 				}
 				int gcwCurrency = ghost->getExperience("gcw_currency_rebel");
 				if (gcwCurrency < 4000){
-					player->sendSystemMessage("You do not have enough GCW Currency for a loot roll");
+					player->sendSystemMessage("You do not have enough CW Currency for a loot roll");
 					return;
 				}
 				ManagedReference<LootManager*> lootManager = player->getZoneServer()->getLootManager();
@@ -741,12 +741,12 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 					return;
 				uint32 winningFaction = gcwMan->getWinningFaction();
 				if (winningFaction != Factions::FACTIONREBEL ){
-					player->sendSystemMessage("This planet is not owned by the Rebels!");
+					player->sendSystemMessage("This planet is not owned by the Separatists!");
 					return;
 				}
 				int gcwCurrency = ghost->getExperience("gcw_currency_rebel");
 				if (gcwCurrency < 4000){
-					player->sendSystemMessage("You do not have enough GCW Currency for a loot roll");
+					player->sendSystemMessage("You do not have enough CW Currency for a loot roll");
 					return;
 				}
 				ManagedReference<LootManager*> lootManager = player->getZoneServer()->getLootManager();
@@ -778,12 +778,12 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 					return;
 				uint32 winningFaction = gcwMan->getWinningFaction();
 				if (winningFaction != Factions::FACTIONIMPERIAL ){
-					player->sendSystemMessage("This planet is not owned by the Imperials!");
+					player->sendSystemMessage("This planet is not owned by the Republic!");
 					return;
 				}
 				int gcwCurrency = ghost->getExperience("gcw_currency_imperial");
 				if (gcwCurrency < 4000){
-					player->sendSystemMessage("You do not have enough GCW Currency for a loot roll");
+					player->sendSystemMessage("You do not have enough CW Currency for a loot roll");
 					return;
 				}
 				ManagedReference<LootManager*> lootManager = player->getZoneServer()->getLootManager();
