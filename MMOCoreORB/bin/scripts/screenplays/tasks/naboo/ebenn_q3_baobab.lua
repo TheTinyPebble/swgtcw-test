@@ -102,7 +102,7 @@ EbennQ3Baobab = ThemeParkLogic:new {
 	distance = 1000,
 }
 
-registerScreenPlay("EbennQ3Baobab", true)
+registerScreenPlay("EbennQ3Baobab", false)
 
 ebenn_q3_baobab_mission_giver_conv_handler = mission_giver_conv_handler:new {
 	themePark = EbennQ3Baobab
