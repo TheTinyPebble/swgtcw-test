@@ -8,7 +8,7 @@ drakka_judarrl = Creature:new {
 	damageMin = 645,
 	damageMax = 1000,
 	baseXp = 9429,
-	baseHAM = 54000,
+	baseHAM = 64000,
 	baseHAMmax = 94000,
 	armor = 0,
 	resists = {45,45,45,45,45,45,45,45,45},
@@ -28,7 +28,7 @@ drakka_judarrl = Creature:new {
 
 	templates = {"object/mobile/dressed_drakka_judarrl.iff"},
 	lootGroups = {},
-	weapons = {"light_jedi_weapons"},
+	weapons = {"light_jedi_weapons_basic"},
 	conversationTemplate = "drakka_judarrl_mission_giver_convotemplate",
 	attacks = merge(lightsabermaster)
 }
