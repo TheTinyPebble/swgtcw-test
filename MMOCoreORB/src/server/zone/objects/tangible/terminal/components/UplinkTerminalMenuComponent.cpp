@@ -77,7 +77,7 @@ int UplinkTerminalMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject
 		player->sendSystemMessage("You are too far away from the uplink to continue jamming!");
 		return 1;
 	} else if (!player->hasSkill("base_bust_novice")) {
-		player->sendSystemMessage("Only a Base Demolishionist could expect to jam this uplink!");
+		player->sendSystemMessage("Only a Base Demolitionist could expect to jam this uplink!");
 		return 1;
 	}
 
