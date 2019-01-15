@@ -4,15 +4,15 @@ fbase_rebel_heavy_trooper_extreme = Creature:new {
 	randomNameTag = true,
 	socialGroup = "rebel",
 	faction = "rebel",
-	level = 200,
-	chanceHit = 11.0,
-	damageMin = 1145,
-	damageMax = 2000,
-	baseXp = 20000,
+	level = 300,
+	chanceHit = 18,
+	damageMin = 1200,
+	damageMax = 2300,
+	baseXp = 19000,
 	baseHAM = 149000,
-	baseHAMmax = 205000,
-	armor = 3,
-	resists = {140,120,115,150,150,150,150,125,-1},
+	baseHAMmax = 200000,
+	armor = 2,
+	resists = {85,95,100,60,100,25,40,85,-1},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -45,10 +45,10 @@ fbase_rebel_heavy_trooper_extreme = Creature:new {
 			}
 		}
 	},
-	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,riflemanmaster,carbineermaster)
+	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
+	defaultAttack = "attack"
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_rebel_heavy_trooper_extreme, "fbase_rebel_heavy_trooper_extreme")
