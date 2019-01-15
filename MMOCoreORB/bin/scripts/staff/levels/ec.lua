@@ -1,7 +1,7 @@
 ec = {
 	level = 4,
 	name = "ec",
-	tag = "Aftermath-EC",
+	tag = "Malevolence-EC",
 	skills = {
 		"admin_base",
 		"admin_debug_01",
