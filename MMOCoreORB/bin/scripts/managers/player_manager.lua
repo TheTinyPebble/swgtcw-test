@@ -44,7 +44,7 @@
 --GENERAL PLAYER SETTINGS
 -----------------------------------
 
-onlineCharactersPerAccount = 3 --How many characters are allowed online from a single account.
+onlineCharactersPerAccount = 2 --How many characters are allowed online from a single account.
 
 allowSameAccountPvpRatingCredit = 1
 
@@ -68,7 +68,7 @@ expensiveMedicalSubBuff = 500
 groupExpMultiplier = 1.2
 
 --Sets a global experience multiplier
-globalExpMultiplier = 6
+globalExpMultiplier = 4
 
 --Sets the base number of control devices of each type that a player can have in their datapad at once
 --For creature pets, A Creature Handler will have the base number + their stored pets skill mod as limit
@@ -101,8 +101,6 @@ veteranRewards = {
 		--{templateFile = "object/tangible/veteran_reward/resource.iff", milestone=180, oneTime=true, description="@veteran_new:resourcecrate"},
 		{templateFile = "object/tangible/veteran_reward/frn_couch_falcon_corner_s01.iff", milestone=60, oneTime=false, description="@veteran_new:falconcouch"},
 		{templateFile = "object/tangible/veteran_reward/frn_couch_falcon_section_s01.iff", milestone=60, oneTime=false, description="@veteran_new:falconchair"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_tie_fighter_toy.iff", milestone=60, oneTime=false, description="@veteran_new:mini_tiefighter"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_x_wing_toy.iff", milestone=60, oneTime=false, description="@veteran_new:mini_xwing"},
 
 		-- 270 Day Rewards
 		{templateFile = "object/tangible/deed/vehicle_deed/speederbike_flash_deed.iff", milestone=90, oneTime=true},
@@ -112,7 +110,6 @@ veteranRewards = {
 		{templateFile = "object/tangible/wearables/goggles/goggles_s04.iff", milestone=90, oneTime=false, description="Special Edition Goggles Style 4"},
 		{templateFile = "object/tangible/wearables/goggles/goggles_s05.iff", milestone=90, oneTime=false, description="Special Edition Goggles Style 5"},
 		{templateFile = "object/tangible/wearables/goggles/goggles_s06.iff", milestone=90, oneTime=false, description="Special Edition Goggles Style 6"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_darth_vader_toy.iff", milestone=90, oneTime=false, description="@veteran_new:mini_darthvader"},
 
 		-- 360 Day Rewards
 		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_a.iff", milestone=120, oneTime=false, description="@veteran_new:techconsole_a"},
@@ -120,7 +117,6 @@ veteranRewards = {
 		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_c.iff", milestone=120, oneTime=false, description="@veteran_new:techconsole_c"},
 		{templateFile = "object/tangible/veteran_reward/frn_tech_console_sectional_d.iff", milestone=120, oneTime=false, description="@veteran_new:techconsole_d"},
 		{templateFile = "object/tangible/veteran_reward/frn_vet_jabba_toy.iff", milestone=120, oneTime=false, description="@veteran_new:mini_jabba"},
-		{templateFile = "object/tangible/veteran_reward/frn_vet_stormtrooper_toy.iff", milestone=120, oneTime=false, description="@veteran_new:mini_stormtrooper"},
 		--{templateFile = "object/tangible/veteran_reward/antidecay.iff", milestone=360, oneTime=true, description="@veteran_new:antidecay"},
 
 		-- 450 Day Rewards

@@ -1757,7 +1757,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 				info ("entBonus: " + String::valueOf(entBonus), true);
 			}
 			if (applyModifiers)
-				xp = playerObject->addExperience(xpType, (amount * 10 * entBonus * speciesModifier));
+				xp = playerObject->addExperience(xpType, (amount * 7 * entBonus * speciesModifier));
 			else
 				xp = playerObject->addExperience(xpType, (int)amount);
 
