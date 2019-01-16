@@ -93,7 +93,7 @@ corellia = {
 	},
 
 	planetObjects = {
-
+		{templateFile = "object/tangible/beta/beta_terminal_xp.iff", ox = 0, oy = 0.999748, oz = 0, ow = 0.02224263, x = -141.286, z = 28, y = -4663.79, parentid = 0}
 	}
 }
 
@@ -132,7 +132,7 @@ dantooine = {
 	},
 
 	planetObjects = {
-
+		{templateFile = "object/tangible/beta/beta_terminal_resource.iff", ox = 0, oy = -0.476911, oz = 0, ow = 0.878952, x = -644.499, z = 3, y = 2445.84, parentid = 0}
 	}
 }
 
@@ -327,7 +327,7 @@ naboo = {
 	},
 
 	planetObjects = {
-
+		{templateFile = "object/tangible/beta/beta_terminal_food.iff", ox = 0, oy = -0.403191, oz = 0, ow = 0.915116, x = -4793.04, z = 6, y = 4115.76, parentid = 0},
 	}
 }
 
@@ -550,7 +550,7 @@ tatooine = {
 	},
 
 	planetObjects = {
-
+		{templateFile = "object/tangible/beta/beta_terminal_warp.iff", ox = 0, oy = -0.676595, oz = 0, ow = 0.736356, x = 3534.64, z = 5, y = -4811.41, parentid = 0},
 	}
 }
 
