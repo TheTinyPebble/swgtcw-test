@@ -136,8 +136,8 @@ public:
 
 		body << "beehive, blossom, brainstorm, bubblehead\n";
 		body << "bullhorns, butterflies, champagne, haunted\n";
-		body << "hearts, hologlitter, holonotes, imperial\n";
-		body << "kitty, phonytail, rebel, sparky\n";
+		body << "hearts, hologlitter, holonotes, republic\n";
+		body << "kitty, phonytail, cis, sparky\n";
 
 		ManagedReference<SuiMessageBox*> box = new SuiMessageBox(player, SuiWindowType::HOLO_EMOTE_HELP);
 		box->setPromptTitle("HOLO-EMOTE HELP");
@@ -176,11 +176,11 @@ public:
 		    arg == "hearts" ||
 		    arg == "hologlitter" ||
 		    arg == "holonotes" ||
-		    arg == "imperial" ||
+		    arg == "republic" ||
 		    arg == "technokitty" ||
 		    arg == "kitty" ||		// Alias for technokitty
 		    arg == "phonytail" ||
-		    arg == "rebel" ||
+		    arg == "cis" ||
 		    arg == "sparky" ||
 		    arg == "delete" ){
 			return true;
