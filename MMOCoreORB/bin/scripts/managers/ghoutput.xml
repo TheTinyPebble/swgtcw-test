@@ -2767,6 +2767,16 @@
 </resource>
 
 <resource>
+<SpawnName>Hoofo</SpawnName>
+<resType>rice_domesticated_corellia</resType>
+<attribute name="res_decay_resist">592</attribute>
+<attribute name="res_flavor">627</attribute>
+<attribute name="res_potential_energy">477</attribute>
+<attribute name="res_quality">390</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
 <SpawnName>Hosimo</SpawnName>
 <resType>fruit_berries_corellia</resType>
 <attribute name="res_decay_resist">55</attribute>
@@ -2878,16 +2888,6 @@
 <attribute name="res_shock_resistance">635</attribute>
 <attribute name="res_toughness">623</attribute>
 <planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Igeiva</SpawnName>
-<resType>rice_wild_talus</resType>
-<attribute name="res_decay_resist">232</attribute>
-<attribute name="res_flavor">661</attribute>
-<attribute name="res_potential_energy">102</attribute>
-<attribute name="res_quality">234</attribute>
-<planet>talus</planet>
 </resource>
 
 <resource>
@@ -4850,6 +4850,16 @@
 <attribute name="res_potential_energy">980</attribute>
 <attribute name="res_quality">528</attribute>
 <planet>dantooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Noummau</SpawnName>
+<resType>rice_wild_talus</resType>
+<attribute name="res_decay_resist">883</attribute>
+<attribute name="res_flavor">831</attribute>
+<attribute name="res_potential_energy">654</attribute>
+<attribute name="res_quality">180</attribute>
+<planet>talus</planet>
 </resource>
 
 <resource>
@@ -7746,16 +7756,6 @@
 <attribute name="res_decay_resist">670</attribute>
 <attribute name="res_quality">339</attribute>
 <planet>yavin4</planet>
-</resource>
-
-<resource>
-<SpawnName>Xahy</SpawnName>
-<resType>rice_domesticated_corellia</resType>
-<attribute name="res_decay_resist">325</attribute>
-<attribute name="res_flavor">215</attribute>
-<attribute name="res_potential_energy">991</attribute>
-<attribute name="res_quality">217</attribute>
-<planet>corellia</planet>
 </resource>
 
 <resource>
