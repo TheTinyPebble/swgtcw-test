@@ -56,7 +56,7 @@ object_draft_schematic_clothing_clothing_armor_clonetrooper_utility_belt_crafted
 
    assemblySkill = "armor_assembly",
    experimentingSkill = "armor_experimentation",
-   customizationSkill = "armor_customization",
+   customizationSkill = "",
 
    customizationOptions = {},
    customizationStringNames = {},
@@ -71,7 +71,7 @@ object_draft_schematic_clothing_clothing_armor_clonetrooper_utility_belt_crafted
 
 
 
-   targetTemplate = "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_neutral_s01_belt.iff",
+   targetTemplate = "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_belt.iff",
 
    additionalTemplates = {
              }
