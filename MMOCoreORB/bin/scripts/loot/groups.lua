@@ -309,6 +309,10 @@ includeFile("groups/theme_park_loot/theme_park_loot_shipping_manifest.lua")
 includeFile("groups/theme_park_loot/theme_park_loot_transponder.lua")
 
 -- theme_park_reward sub-folder
+includeFile("groups/theme_park_reward/republic/theme_park_reward_republic_helmet.lua")
+includeFile("groups/theme_park_reward/republic/theme_park_reward_republic_chest.lua")
+includeFile("groups/theme_park_reward/republic/theme_park_reward_republic_leggings.lua")
+includeFile("groups/theme_park_reward/republic/theme_park_reward_republic_boots.lua")
 includeFile("groups/theme_park_reward/theme_park_reward_smc_vurlene_stims.lua")
 includeFile("groups/theme_park_reward/theme_park_reward_smc_vhaunda_polearm.lua")
 includeFile("groups/theme_park_reward/theme_park_reward_ns_diax_stimb.lua")
@@ -393,4 +397,3 @@ includeFile("groups/aftermath/exclusive11.lua")
 includeFile("groups/aftermath/exclusive12.lua")
 includeFile("groups/aftermath/exclusive13.lua")
 includeFile("groups/aftermath/exclusive14.lua")
-

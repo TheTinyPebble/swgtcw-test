@@ -15,7 +15,11 @@ kaja_orzee_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 750 }
+				{ rewardType = "credits", amount = 750 },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_helmet" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_chest" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_leggings" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_boots" }
 			}
 		},
 		{
@@ -709,7 +713,7 @@ darth_vader_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "imperial", amount = 425 },
+				{ rewardType = "faction", faction = "imperial", amount = 4250 },
 				{ rewardType = "credits", amount = 24000 },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_imperial_vader" },
 				{ rewardType = "badge", badge = THEME_PARK_IMPERIAL_BADGE }

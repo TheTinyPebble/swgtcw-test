@@ -720,6 +720,10 @@ includeFile("items/themepark_loot/themepark_loot_shipping_manifest.lua")
 includeFile("items/themepark_loot/themepark_loot_transponder.lua")
 
 --themepark_reward sub-folder
+includeFile("items/themepark_reward/republic/armor_clonetrooper_helmet.lua")
+includeFile("items/themepark_reward/republic/armor_clonetrooper_chest.lua")
+includeFile("items/themepark_reward/republic/armor_clonetrooper_leggings.lua")
+includeFile("items/themepark_reward/republic/armor_clonetrooper_boots.lua")
 includeFile("items/themepark_reward/stim_d_smc_vurlene.lua")
 includeFile("items/themepark_reward/stim_c_smc_vurlene.lua")
 includeFile("items/themepark_reward/stim_b_smc_vurlene.lua")
