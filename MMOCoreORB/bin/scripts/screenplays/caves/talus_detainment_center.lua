@@ -82,7 +82,7 @@ function TalusDetainmentCenterScreenPlay:spawnImperials(pBuilding)
 	BuildingObject(pBuilding):spawnChildCreature("imperial_first_lieutenant", 300, 7.1, -23.0, 198.5, -135, 9686217)
 	BuildingObject(pBuilding):spawnChildCreature("rep_jedi_master", 900, -80.5, -23.0, 259.4, 88, 9686223)
 	BuildingObject(pBuilding):spawnChildCreature("rep_jedi_knight", 600, 45.2, -23.0, 276.3, -179, 9686225)
-	BuildingObject(pBuilding):spawnChildCreature("lesser_prophet_of_the_light_side", 10800, -2.7, -23.0, 268.5, 90, 9686224)
+	BuildingObject(pBuilding):spawnChildCreature("rep_jedi_knight", 10800, -2.7, -23.0, 268.5, 90, 9686224)
 end
 
 function TalusDetainmentCenterScreenPlay:spawnRebels(pBuilding)
@@ -121,5 +121,5 @@ function TalusDetainmentCenterScreenPlay:spawnRebels(pBuilding)
 	BuildingObject(pBuilding):spawnChildCreature("cis_sbd", 300, 6.8, -23.0, 203.1, -9, 9686217)
 	BuildingObject(pBuilding):spawnChildCreature("cis_sbd", 600, -79.8, -23.0, 259.1, 89, 9686223)
 	BuildingObject(pBuilding):spawnChildCreature("specops_alliance_free_agent", 600, 43.2, -23.0, 278.3, -177, 9686225)
-	BuildingObject(pBuilding):spawnChildCreature("senior_prophet_of_the_dark_side", 10800, -3.7, -23.0, 269.5, 90, 9686224)
+	BuildingObject(pBuilding):spawnChildCreature("cis_magnaguard", 10800, -3.7, -23.0, 269.5, 90, 9686224)
 end
