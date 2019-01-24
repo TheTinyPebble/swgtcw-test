@@ -1843,4 +1843,14 @@ schematics = {
 	{path="object/draft_schematic/weapon/carbine_geo.iff"},
 
 	{path="object/draft_schematic/clothing/clothing_robe_jedi_padawan.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_chest_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_helmet_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_bicep_l_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_bicep_r_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_bracer_r_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_bracer_l_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_boots_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_gloves_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_utility_belt_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_leggings_crafted.iff"},
 };

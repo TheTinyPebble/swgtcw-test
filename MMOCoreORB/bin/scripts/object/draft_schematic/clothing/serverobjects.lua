@@ -574,3 +574,13 @@ includeFile("draft_schematic/clothing/clothing_armor_marine_helmet_crafted.lua")
 
 
 includeFile("draft_schematic/clothing/clothing_robe_jedi_padawan.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_chest_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_helmet_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_bicep_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_bicep_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_bracer_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_bracer_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_boots_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_gloves_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_utility_belt_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_leggings_crafted.lua")
