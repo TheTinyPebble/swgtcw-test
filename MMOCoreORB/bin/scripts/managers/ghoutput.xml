@@ -7565,6 +7565,16 @@
 </resource>
 
 <resource>
+<SpawnName>Wideela</SpawnName>
+<resType>rice_domesticated_talus</resType>
+<attribute name="res_decay_resist">482</attribute>
+<attribute name="res_flavor">630</attribute>
+<attribute name="res_potential_energy">795</attribute>
+<attribute name="res_quality">501</attribute>
+<planet>talus</planet>
+</resource>
+
+<resource>
 <SpawnName>Wigiine</SpawnName>
 <resType>ore_siliclastic_fermionic</resType>
 <attribute name="res_cold_resist">868</attribute>
@@ -7770,16 +7780,6 @@
 <attribute name="res_potential_energy">453</attribute>
 <attribute name="res_quality">506</attribute>
 <planet>lok</planet>
-</resource>
-
-<resource>
-<SpawnName>Yathihio</SpawnName>
-<resType>rice_domesticated_talus</resType>
-<attribute name="res_decay_resist">888</attribute>
-<attribute name="res_flavor">455</attribute>
-<attribute name="res_potential_energy">876</attribute>
-<attribute name="res_quality">659</attribute>
-<planet>talus</planet>
 </resource>
 
 <resource>
