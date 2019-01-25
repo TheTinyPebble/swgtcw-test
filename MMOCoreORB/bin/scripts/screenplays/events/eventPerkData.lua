@@ -28,16 +28,16 @@ eventPerkDecorationDeeds = {
 }
 
 eventPerkImperialDecorationDeeds = {
-	{ template = "atat_static_deed", cost = 9000, displayName = "@event_perk:pro_atat_static" },
-	{ template = "atst_static_deed", cost = 7000, displayName = "@event_perk:pro_atst_static" },
+--	{ template = "atat_static_deed", cost = 9000, displayName = "@event_perk:pro_atat_static" },
+--	{ template = "atst_static_deed", cost = 7000, displayName = "@event_perk:pro_atst_static" },
 	{ template = "imperial_banner_static_deed", cost = 315, displayName = "@event_perk:pro_imperial_banner_static" },
 	{ template = "lambda_shuttle_static_deed", cost = 2000, displayName = "@event_perk:pro_lambda_shuttle_static" },
-	{ template = "tie_bomber_static_deed", cost = 2000, displayName = "@event_perk:pro_tie_bomber_static_deed" },
+--	{ template = "tie_bomber_static_deed", cost = 2000, displayName = "@event_perk:pro_tie_bomber_static_deed" },
 }
 
 eventPerkRebelDecorationDeeds = {
 	{ template = "rebel_banner_static_deed", cost = 315, displayName = "@event_perk:pro_rebel_banner_static" },
-	{ template = "xwing_static_deed", cost = 2000, displayName = "@event_perk:pro_xwing_static" },
+--	{ template = "xwing_static_deed", cost = 2000, displayName = "@event_perk:pro_xwing_static" },
 }
 
 eventPerkVenueDeeds = {
@@ -56,8 +56,8 @@ eventPerkVenueDeeds = {
 }
 
 eventPerkImperialVenueDeeds = {
-	{ template = "crashed_xwing_theater_deed", cost = 4500, displayName = "@event_perk:pro_crashed_xwing_theater" },
-	{ template = "imperial_landing_party_atat_theater_deed", cost = 10000, displayName = "@event_perk:pro_imp_landing_party_theater" },
+--	{ template = "crashed_xwing_theater_deed", cost = 4500, displayName = "@event_perk:pro_crashed_xwing_theater" },
+--	{ template = "imperial_landing_party_atat_theater_deed", cost = 10000, displayName = "@event_perk:pro_imp_landing_party_theater" },
 	{ template = "imperial_landing_party_lambda_theater_deed", cost = 10000, displayName = "@event_perk:pro_imp_landing_lambda_theater" },
 	{ template = "imperial_recruiting_station_theater_deed", cost = 15000, displayName = "@event_perk:pro_imp_recruiting_theater" },
 	{ template = "imperial_stage_theater_deed", cost = 2500, displayName = "@event_perk:pro_imp_stage_theater" },
@@ -65,9 +65,9 @@ eventPerkImperialVenueDeeds = {
 }
 
 eventPerkRebelVenueDeeds = {
-	{ template = "crashed_tie_bomber_theater_deed", cost = 4500, displayName = "@event_perk:pro_crashed_tie_bomber_theater" },
-	{ template = "crashed_tie_fighter_theater_deed", cost = 4500, displayName = "@event_perk:pro_crashed_tie_fighter_theater" },
-	{ template = "destroyed_atat_theater_deed", cost = 4500, displayName = "@event_perk:pro_destroyed_atat_theater" },
+--	{ template = "crashed_tie_bomber_theater_deed", cost = 4500, displayName = "@event_perk:pro_crashed_tie_bomber_theater" },
+--	{ template = "crashed_tie_fighter_theater_deed", cost = 4500, displayName = "@event_perk:pro_crashed_tie_fighter_theater" },
+--	{ template = "destroyed_atat_theater_deed", cost = 4500, displayName = "@event_perk:pro_destroyed_atat_theater" },
 	{ template = "rebel_recruiting_station_theater_deed", cost = 1500, displayName = "@event_perk:pro_rebel_recruiting_theater" },
 	{ template = "rebel_stage_theater_deed", cost = 2500, displayName = "@event_perk:pro_rebel_stage_theater" },
 	{ template = "wedding_garden_rebel_large_theater_deed", cost = 4500, displayName = "@event_perk:pro_wedding_garden_reb_lg_theater" },
@@ -106,16 +106,16 @@ eventPerkPersonnelDeeds = {
 
 eventPerkImperialPersonnelDeeds = {
 	{ template = "imperial_recruiter_deed", cost = 10000, displayName = "@event_perk:pro_imp_recruiter_person" },
-	{ template = "imperial_1x10_honorguard_deed", cost = 5000, displayName = "@event_perk:pro_imperial_1_person" },
-	{ template = "imperial_2x10_honorguard_deed", cost = 10000, displayName = "@event_perk:pro_imperial_2_person" },
-	{ template = "imperial_3x10_honorguard_deed", cost = 15000, displayName = "@event_perk:pro_imperial_3_person" },
-	{ template = "imperial_4x10_honorguard_deed", cost = 20000, displayName = "@event_perk:pro_imperial_4_person" },
+--	{ template = "imperial_1x10_honorguard_deed", cost = 5000, displayName = "@event_perk:pro_imperial_1_person" },
+--	{ template = "imperial_2x10_honorguard_deed", cost = 10000, displayName = "@event_perk:pro_imperial_2_person" },
+--	{ template = "imperial_3x10_honorguard_deed", cost = 15000, displayName = "@event_perk:pro_imperial_3_person" },
+--	{ template = "imperial_4x10_honorguard_deed", cost = 20000, displayName = "@event_perk:pro_imperial_4_person" },
 }
 
 eventPerkRebelPersonnelDeeds = {
 	{ template = "rebel_recruiter_deed", cost = 10000, displayName = "@event_perk:pro_rebel_recruiter_static" },
-	{ template = "rebel_1x10_honorguard_deed", cost = 5000, displayName = "@event_perk:pro_rebel_1_person" },
-	{ template = "rebel_2x10_honorguard_deed", cost = 10000, displayName = "@event_perk:pro_rebel_2_person" },
-	{ template = "rebel_3x10_honorguard_deed", cost = 15000, displayName = "@event_perk:pro_rebel_3_person" },
-	{ template = "rebel_4x10_honorguard_deed", cost = 20000, displayName = "@event_perk:pro_rebel_4_person" },
+--	{ template = "rebel_1x10_honorguard_deed", cost = 5000, displayName = "@event_perk:pro_rebel_1_person" },
+--	{ template = "rebel_2x10_honorguard_deed", cost = 10000, displayName = "@event_perk:pro_rebel_2_person" },
+--	{ template = "rebel_3x10_honorguard_deed", cost = 15000, displayName = "@event_perk:pro_rebel_3_person" },
+--	{ template = "rebel_4x10_honorguard_deed", cost = 20000, displayName = "@event_perk:pro_rebel_4_person" },
 }
