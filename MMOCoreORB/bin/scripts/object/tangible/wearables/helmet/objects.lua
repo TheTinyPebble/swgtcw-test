@@ -571,3 +571,11 @@ object_tangible_wearables_helmet_shared_helmet_tusken_raider_s02 = SharedTangibl
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_helmet_shared_helmet_tusken_raider_s02, "object/tangible/wearables/helmet/shared_helmet_tusken_raider_s02.iff")
+
+--***********
+
+object_tangible_wearables_helmet_shared_helmet_atat2 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/helmet/shared_helmet_atat2.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_helmet_shared_helmet_atat2, "object/tangible/wearables/helmet/shared_helmet_atat2.iff")

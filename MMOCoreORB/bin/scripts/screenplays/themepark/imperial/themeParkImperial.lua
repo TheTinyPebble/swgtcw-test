@@ -19,6 +19,12 @@ kaja_orzee_missions =
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_helmet" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_chest" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_leggings" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bracer_l" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bracer_r" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bicep_l" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bicep_r" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_gloves" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_belt" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_boots" }
 			}
 		},
@@ -724,7 +730,7 @@ darth_vader_missions =
 npcMapImperial =
 	{
 		{
-			spawnData = {  npcTemplate = "theme_mas_amedda", x = 1.1, z = 0.2, y = -13.3, direction = 0, cellID = 1418872, position = STAND },
+			spawnData = {  npcTemplate = "theme_gregor", x = 1.1, z = 0.2, y = -13.3, direction = 0, cellID = 1418872, position = STAND },
 			worldPosition = { x = 2407.8, y = -3944.5 },
 			npcNumber = 1,
 			stfFile = "@theme_park_imperial/kaja_orzee",

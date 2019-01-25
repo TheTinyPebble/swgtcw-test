@@ -13,12 +13,12 @@ armor_clonetrooper_leggings = {
 					{"blasteffectiveness",10,10,0},
 	        {"armor_integrity",45000,45000,0},
 	        {"armor_health_encumbrance",100,100,0},
-	        {"armor_action_encumbrance",100,100,0},
-	        {"armor_mind_encumbrance",300,300,0},
+	        {"armor_action_encumbrance",150,150,0},
+	        {"armor_mind_encumbrance",100,100,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {},
-	skillMods = {{"blind_defense", 5}, {"melee_defense", 3}}
+	skillMods = {{"dizzy_defense", 5}, {"melee_defense", 3}}
 }
 
 addLootItemTemplate("armor_clonetrooper_leggings", armor_clonetrooper_leggings)
