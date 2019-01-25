@@ -718,7 +718,6 @@ darth_vader_missions =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 4250 },
 				{ rewardType = "credits", amount = 24000 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_imperial_vader" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_chest" },
 				{ rewardType = "badge", badge = THEME_PARK_IMPERIAL_BADGE }
 			}
