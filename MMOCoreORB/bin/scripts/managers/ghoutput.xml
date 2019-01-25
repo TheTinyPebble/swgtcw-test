@@ -771,17 +771,6 @@
 </resource>
 
 <resource>
-<SpawnName>Cheugedi</SpawnName>
-<resType>bone_mammal_lok</resType>
-<attribute name="res_decay_resist">851</attribute>
-<attribute name="res_malleability">410</attribute>
-<attribute name="res_quality">523</attribute>
-<attribute name="res_shock_resistance">615</attribute>
-<attribute name="res_toughness">848</attribute>
-<planet>lok</planet>
-</resource>
-
-<resource>
 <SpawnName>Chreusno</SpawnName>
 <resType>vegetable_greens_dantooine</resType>
 <attribute name="res_decay_resist">593</attribute>
@@ -5853,6 +5842,17 @@
 </resource>
 
 <resource>
+<SpawnName>Sabirle</SpawnName>
+<resType>bone_mammal_lok</resType>
+<attribute name="res_decay_resist">818</attribute>
+<attribute name="res_malleability">173</attribute>
+<attribute name="res_quality">807</attribute>
+<attribute name="res_shock_resistance">935</attribute>
+<attribute name="res_toughness">503</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
 <SpawnName>Salatche</SpawnName>
 <resType>oats_domesticated_corellia</resType>
 <attribute name="res_decay_resist">387</attribute>
@@ -6944,16 +6944,6 @@
 </resource>
 
 <resource>
-<SpawnName>Vica</SpawnName>
-<resType>meat_avian_endor</resType>
-<attribute name="res_decay_resist">213</attribute>
-<attribute name="res_flavor">647</attribute>
-<attribute name="res_potential_energy">937</attribute>
-<attribute name="res_quality">605</attribute>
-<planet>endor</planet>
-</resource>
-
-<resource>
 <SpawnName>Vievi</SpawnName>
 <resType>vegetable_greens_lok</resType>
 <attribute name="res_decay_resist">61</attribute>
@@ -7743,6 +7733,16 @@
 <attribute name="res_shock_resistance">628</attribute>
 <attribute name="res_toughness">545</attribute>
 <planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Wreigie</SpawnName>
+<resType>meat_avian_endor</resType>
+<attribute name="res_decay_resist">550</attribute>
+<attribute name="res_flavor">230</attribute>
+<attribute name="res_potential_energy">895</attribute>
+<attribute name="res_quality">569</attribute>
+<planet>endor</planet>
 </resource>
 
 <resource>
