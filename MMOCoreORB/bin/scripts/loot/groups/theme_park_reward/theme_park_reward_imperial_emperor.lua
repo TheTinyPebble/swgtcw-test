@@ -5,7 +5,7 @@ theme_park_reward_imperial_emperor = {
 	minimumLevel = 0,
 	maximumLevel = 0,
 	lootItems = {
-		{itemTemplate = "grooved_two_handed_sword", weight = 10000000}
+		{itemTemplate = "light_weight_vibro_unit", weight = 10000000}
 	}
 }
 

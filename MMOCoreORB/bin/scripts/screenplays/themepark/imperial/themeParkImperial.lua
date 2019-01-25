@@ -162,6 +162,7 @@ loam_redge_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 125 },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_imperial_redge" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_leggings" }
 			}
 		}
@@ -361,7 +362,9 @@ thrawn_missions =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 225 },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bracer_l" },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bracer_r" }
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bracer_r" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_imperial_thrawn" },
+
 			}
 		},
 	}
@@ -719,6 +722,7 @@ darth_vader_missions =
 				{ rewardType = "faction", faction = "imperial", amount = 4250 },
 				{ rewardType = "credits", amount = 24000 },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_chest" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_imperial_vader" },
 				{ rewardType = "badge", badge = THEME_PARK_IMPERIAL_BADGE }
 			}
 		}
