@@ -578,7 +578,7 @@ palpatine_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1950 }
+				{ rewardType = "credits", amount = 19500 }
 			}
 		},
 
