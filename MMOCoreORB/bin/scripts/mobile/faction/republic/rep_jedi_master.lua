@@ -33,7 +33,20 @@ rep_jedi_master = Creature:new {
 		"object/mobile/dressed_neja_bertolo.iff"
 		},
 
-	lootGroups = {},
+		lootGroups = {
+			{
+				groups = {
+					{group = "power_crystals", chance = 800000},
+					{group = "color_crystals", chance = 700000},
+					{group = "holocron_light", chance = 4000000},
+					{group = "melee_weapons", chance = 1000000},
+					{group = "armor_attachments", chance = 1000000},
+					{group = "clothing_attachments", chance = 1000000},
+					{group = "wearables_all", chance = 1400000},
+					{group = "force_hunter_rare", chance = 100000}
+				}
+			}
+		},
 	weapons = {"light_jedi_weapons_basic"},
 	conversationTemplate = "imperialRecruiterConvoTemplate",
 	attacks = merge(lightsabermaster,forcepowermaster)
