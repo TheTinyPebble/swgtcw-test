@@ -440,7 +440,7 @@ veers_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1500 }
+				{ rewardType = "credits", amount = 15000 }
 			}
 		},
 
