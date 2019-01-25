@@ -608,6 +608,17 @@
 </resource>
 
 <resource>
+<SpawnName>Boilo</SpawnName>
+<resType>bone_mammal_lok</resType>
+<attribute name="res_decay_resist">959</attribute>
+<attribute name="res_malleability">318</attribute>
+<attribute name="res_quality">562</attribute>
+<attribute name="res_shock_resistance">589</attribute>
+<attribute name="res_toughness">82</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
 <SpawnName>Boreite</SpawnName>
 <resType>petrochem_fuel_liquid_type2</resType>
 <attribute name="res_decay_resist">90</attribute>
@@ -878,16 +889,6 @@
 <attribute name="res_potential_energy">405</attribute>
 <attribute name="res_quality">25</attribute>
 <planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Ctohnoi</SpawnName>
-<resType>fruit_fruits_endor</resType>
-<attribute name="res_decay_resist">869</attribute>
-<attribute name="res_flavor">668</attribute>
-<attribute name="res_potential_energy">436</attribute>
-<attribute name="res_quality">3</attribute>
-<planet>endor</planet>
 </resource>
 
 <resource>
@@ -3952,6 +3953,16 @@
 </resource>
 
 <resource>
+<SpawnName>Lleci</SpawnName>
+<resType>meat_avian_endor</resType>
+<attribute name="res_decay_resist">45</attribute>
+<attribute name="res_flavor">556</attribute>
+<attribute name="res_potential_energy">420</attribute>
+<attribute name="res_quality">281</attribute>
+<planet>endor</planet>
+</resource>
+
+<resource>
 <SpawnName>Llede</SpawnName>
 <resType>wheat_wild_lok</resType>
 <attribute name="res_decay_resist">871</attribute>
@@ -5842,17 +5853,6 @@
 </resource>
 
 <resource>
-<SpawnName>Sabirle</SpawnName>
-<resType>bone_mammal_lok</resType>
-<attribute name="res_decay_resist">818</attribute>
-<attribute name="res_malleability">173</attribute>
-<attribute name="res_quality">807</attribute>
-<attribute name="res_shock_resistance">935</attribute>
-<attribute name="res_toughness">503</attribute>
-<planet>lok</planet>
-</resource>
-
-<resource>
 <SpawnName>Salatche</SpawnName>
 <resType>oats_domesticated_corellia</resType>
 <attribute name="res_decay_resist">387</attribute>
@@ -6565,6 +6565,16 @@
 <attribute name="res_potential_energy">860</attribute>
 <attribute name="res_quality">944</attribute>
 <planet>endor</planet>
+</resource>
+
+<resource>
+<SpawnName>Thieka</SpawnName>
+<resType>meat_domesticated_rori</resType>
+<attribute name="res_decay_resist">794</attribute>
+<attribute name="res_flavor">973</attribute>
+<attribute name="res_potential_energy">205</attribute>
+<attribute name="res_quality">701</attribute>
+<planet>rori</planet>
 </resource>
 
 <resource>
@@ -7684,16 +7694,6 @@
 </resource>
 
 <resource>
-<SpawnName>Wotho</SpawnName>
-<resType>meat_domesticated_rori</resType>
-<attribute name="res_decay_resist">951</attribute>
-<attribute name="res_flavor">788</attribute>
-<attribute name="res_potential_energy">501</attribute>
-<attribute name="res_quality">888</attribute>
-<planet>rori</planet>
-</resource>
-
-<resource>
 <SpawnName>Wowaian</SpawnName>
 <resType>iron_axidite</resType>
 <attribute name="res_cold_resist">259</attribute>
@@ -7733,16 +7733,6 @@
 <attribute name="res_shock_resistance">628</attribute>
 <attribute name="res_toughness">545</attribute>
 <planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Wreigie</SpawnName>
-<resType>meat_avian_endor</resType>
-<attribute name="res_decay_resist">550</attribute>
-<attribute name="res_flavor">230</attribute>
-<attribute name="res_potential_energy">895</attribute>
-<attribute name="res_quality">569</attribute>
-<planet>endor</planet>
 </resource>
 
 <resource>
@@ -7789,6 +7779,16 @@
 <attribute name="res_potential_energy">574</attribute>
 <attribute name="res_quality">457</attribute>
 <planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Zazeucie</SpawnName>
+<resType>fruit_fruits_endor</resType>
+<attribute name="res_decay_resist">296</attribute>
+<attribute name="res_flavor">13</attribute>
+<attribute name="res_potential_energy">566</attribute>
+<attribute name="res_quality">993</attribute>
+<planet>endor</planet>
 </resource>
 
 <resource>
