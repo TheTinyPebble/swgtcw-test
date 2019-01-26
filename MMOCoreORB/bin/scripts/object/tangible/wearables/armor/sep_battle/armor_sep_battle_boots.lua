@@ -46,7 +46,7 @@ object_tangible_wearables_armor_rebel_battle_armor_rebel_battle_boots = object_t
 
 	--objectMenuComponent = {"cpp", "ArmorObjectMenuComponent"},
 
-	faction = "Imperial",
+	faction = "Rebel",
 
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
@@ -93,8 +93,6 @@ object_tangible_wearables_armor_rebel_battle_armor_rebel_battle_boots = object_t
 				"object/creature/player/rodian_female.iff",
 				"object/creature/player/sullustan_male.iff",
 				"object/creature/player/sullustan_female.iff",
-				"object/creature/player/trandoshan_male.iff",
-				"object/creature/player/trandoshan_female.iff",
 				"object/creature/player/twilek_male.iff",
 				"object/creature/player/twilek_female.iff",
 				"object/creature/player/wookiee_male.iff",
@@ -103,27 +101,38 @@ object_tangible_wearables_armor_rebel_battle_armor_rebel_battle_boots = object_t
 				"object/creature/player/zabrak_female.iff" },
 
 	-- The damage types in WeaponObject
-	vulnerability = LIGHTSABER,
+	vulnerability = STUN + LIGHTSABER + HEAT,
+	specialResists = ENERGY + KINETIC + BLAST,
 
 	-- These are default Blue Frog stats
-	healthEncumbrance = 225,
-	actionEncumbrance = 225,
-	mindEncumbrance = 225,
+	healthEncumbrance = 1,
+	actionEncumbrance = 1,
+	mindEncumbrance = 1,
 
-	maxCondition = 30000,
+	maxCondition = 40000,
 
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	kinetic = 60,
-	energy = 60,
-	electricity = 50,
-	stun = 0,
-	blast = 50,
-	heat = 50,
-	cold = 50,
-	acid = 50,
-	lightSaber = 0
+	kinetic = 80,
+	energy = 80,
+	electricity = 70,
+	stun = 10,
+	blast = 70,
+	heat = 70,
+	cold = 70,
+	acid = 70,
+	lightsaber = 0,
+
+	numberExperimentalProperties = {1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1},
+	experimentalProperties = {"XX", "XX", "XX", "XX", "OQ", "SR", "OQ", "UT", "MA", "OQ", "MA", "OQ", "MA", "OQ", "XX", "XX", "OQ", "SR", "XX"},
+	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+	experimentalGroupTitles = {"null", "null", "null", "exp_durability", "exp_quality", "exp_resistance", "exp_durability", "exp_durability", "exp_durability", "null", "null", "exp_resistance", "null"},
+	experimentalSubGroupTitles = {"null", "null", "sockets", "hit_points", "armor_effectiveness", "armor_integrity", "armor_health_encumbrance", "armor_action_encumbrance", "armor_mind_encumbrance", "armor_rating", "armor_special_type", "armor_special_effectiveness", "armor_special_integrity"},
+	experimentalMin = {0, 0, 0, 1000, 1, 30000, 250, 75, 25, 1, 256, 0, 0},
+	experimentalMax = {0, 0, 0, 1000, 20, 50000, 150, 45, 15, 1, 256, 0, 0},
+	experimentalPrecision = {0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
+	experimentalCombineType = {0, 0, 4, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1},
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_armor_rebel_battle_armor_rebel_battle_boots, "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_boots.iff")

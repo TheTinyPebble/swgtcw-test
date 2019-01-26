@@ -46,3 +46,43 @@ object_tangible_wearables_cosmetics_shared_clone_trooper_neutral_s01_boots = Sha
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_cosmetics_shared_clone_trooper_neutral_s01_boots, "object/tangible/wearables/cosmetics/shared_clone_trooper_neutral_s01_boots.iff")
+
+--***********************************************************************************************************************************************************
+
+object_tangible_wearables_cosmetics_shared_rebel_battle_bicep_r = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/cosmetics/shared_rebel_battle_bicep_r.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_cosmetics_shared_rebel_battle_bicep_r, "object/tangible/wearables/cosmetics/shared_rebel_battle_bicep_r.iff")
+
+--***********
+
+object_tangible_wearables_cosmetics_shared_rebel_battle_bicep_l = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/cosmetics/shared_rebel_battle_bicep_l.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_cosmetics_shared_rebel_battle_bicep_l, "object/tangible/wearables/cosmetics/shared_rebel_battle_bicep_l.iff")
+
+--***********
+
+object_tangible_wearables_cosmetics_shared_rebel_battle_bracer_r = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/cosmetics/shared_rebel_battle_bracer_r.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_cosmetics_shared_rebel_battle_bracer_r, "object/tangible/wearables/cosmetics/shared_rebel_battle_bracer_r.iff")
+
+--***********
+
+object_tangible_wearables_cosmetics_shared_rebel_battle_bracer_l = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/cosmetics/shared_rebel_battle_bracer_l.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_cosmetics_shared_rebel_battle_bracer_l, "object/tangible/wearables/cosmetics/shared_rebel_battle_bracer_l.iff")
+
+--***********
+
+object_tangible_wearables_cosmetics_shared_rebel_battle_boots = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/cosmetics/shared_rebel_battle_boots.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_cosmetics_shared_rebel_battle_boots, "object/tangible/wearables/cosmetics/shared_rebel_battle_boots.iff")

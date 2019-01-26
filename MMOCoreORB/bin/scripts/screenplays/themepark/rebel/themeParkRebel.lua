@@ -17,6 +17,28 @@ c3po_missions =
 			rewards =
 			{
 				{ rewardType = "credits", amount = 500 }
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_1"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_boots" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_2"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_leggings" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_3"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_belt" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_4"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_gloves" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_5"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bracer_r" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_6"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bracer_l" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_7"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_r" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_8"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_l" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_9"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_chest" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_cis_banner"},
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_cis_ring"},
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_republic_banner"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_helmet" }
 			}
 		},
 		{
@@ -66,7 +88,8 @@ c3po_missions =
 			{
 				{ rewardType = "credits", amount = 2000 },
 				{ rewardType = "faction", faction = "rebel", amount = 50 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_c_3po" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_1"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_boots" }
 			}
 		}
 	}
@@ -140,7 +163,8 @@ qualdo_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 75 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_rebel_qualdo_herm" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_2"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_leggings"}
 			}
 		}
 	}
@@ -238,7 +262,9 @@ wedge_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 100 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_rebel_wedge_antilles" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_3"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_ring" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_belt" }
 			}
 		}
 	}
@@ -327,7 +353,8 @@ leia_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 125 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_rebel_leia_organa" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_4"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bracer_l" }
 			}
 		}
 	}
@@ -391,7 +418,8 @@ nien_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 150 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_rebel_nien_nunb" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_5"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bracer_r" }
 			}
 		}
 	}
@@ -483,7 +511,8 @@ han_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 175 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_han_solo" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_6"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_l" }
 			}
 		}
 	}
@@ -577,7 +606,8 @@ ackbar_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 200 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_captain_ackbar" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_7"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_l" }
 			}
 		}
 	}
@@ -690,7 +720,7 @@ mon_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 225 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_mon_mothma" }
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_gloves" }
 			}
 		},
 	}
@@ -780,7 +810,8 @@ jan_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 250 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_jan_dodonna" },
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_8"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_helmet" },
 				{ rewardType = "permission", permissionGroup = "temple_of_exar_kun2" }
 			}
 		},
@@ -864,9 +895,11 @@ luke_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "rebel", amount = 300 },
+				{ rewardType = "faction", faction = "rebel", amount = 3000 },
 				{ rewardType = "credits", amount = 19500 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_luke_skywalker" },
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_9"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_chest" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_banner" },
 				{ rewardType = "badge", badge = THEME_PARK_REBEL_BADGE }
 			}
 		},

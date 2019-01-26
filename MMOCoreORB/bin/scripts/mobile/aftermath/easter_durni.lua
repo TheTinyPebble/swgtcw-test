@@ -32,8 +32,7 @@ easter_durni = Creature:new {
 		{
 			groups = {
 				{group = "clothing_attachments", chance = 2500000},
-				{group = "armor_attachments", chance = 2500000},
-				{group = "theme_park_reward_imperial_kaja", chance = 2500000},
+				{group = "armor_attachments", chance = 5000000},
 				{group = "task_reward_xaan_talmaron", chance = 2500000},
 			}
 		}

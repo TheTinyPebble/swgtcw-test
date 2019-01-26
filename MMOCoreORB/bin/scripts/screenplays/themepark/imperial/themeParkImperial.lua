@@ -88,7 +88,7 @@ kaja_orzee_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 75 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_imperial_kaja"} ,
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_1"} ,
 				{ rewardType = "permission", permissionGroup = "emperors_retreat2" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_boots" }
 			}
@@ -162,7 +162,7 @@ loam_redge_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 125 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_imperial_redge" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_joint_2" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_leggings" }
 			}
 		}
@@ -252,7 +252,8 @@ lord_hethrir_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 175 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_imperial_hethrir"},
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_3"},
+				{ rewardType = "loot", lootGroup = "theme_park_reward_republic_medal"},
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_belt" }
 			}
 		},
@@ -363,7 +364,7 @@ thrawn_missions =
 				{ rewardType = "faction", faction = "imperial", amount = 225 },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bracer_l" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bracer_r" },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_imperial_thrawn" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_joint_4" },
 
 			}
 		},
@@ -464,7 +465,7 @@ veers_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 275 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_imperial_veers"},
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_5"},
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bicep_l" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bicep_r" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_gloves" }
@@ -603,7 +604,8 @@ palpatine_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 325 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_imperial_emperor"},
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_6"},
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_7"},
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_helmet" }
 			}
 		}
@@ -722,7 +724,9 @@ darth_vader_missions =
 				{ rewardType = "faction", faction = "imperial", amount = 4250 },
 				{ rewardType = "credits", amount = 24000 },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_chest" },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_imperial_vader" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_banner" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_joint_8" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_joint_9" },
 				{ rewardType = "badge", badge = THEME_PARK_IMPERIAL_BADGE }
 			}
 		}

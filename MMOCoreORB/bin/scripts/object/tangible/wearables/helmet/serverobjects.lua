@@ -46,7 +46,6 @@
 
 -- Server Objects
 includeFile("tangible/wearables/helmet/helmet_atat.lua")
-includeFile("tangible/wearables/helmet/helmet_atat2.lua")
 includeFile("tangible/wearables/helmet/helmet_fighter_blacksun_ace.lua")
 includeFile("tangible/wearables/helmet/helmet_fighter_imperial_ace.lua")
 includeFile("tangible/wearables/helmet/helmet_fighter_privateer_ace.lua")
