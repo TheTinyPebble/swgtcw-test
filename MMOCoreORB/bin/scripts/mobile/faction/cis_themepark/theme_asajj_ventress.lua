@@ -25,7 +25,7 @@ theme_asajj_ventress = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_jedi_knight_02.iff"},
+	templates = {"object/mobile/dressed_ventress.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "theme_park_rebel_mission_giver_convotemplate",
