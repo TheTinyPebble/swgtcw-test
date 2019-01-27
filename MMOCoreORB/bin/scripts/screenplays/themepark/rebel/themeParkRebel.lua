@@ -895,7 +895,7 @@ luke_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "rebel", amount = 3000 },
+				{ rewardType = "faction", faction = "rebel", amount = 4250 },
 				{ rewardType = "credits", amount = 19500 },
 				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_9"},
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_chest" },
