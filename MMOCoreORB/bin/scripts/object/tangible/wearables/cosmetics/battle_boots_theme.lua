@@ -42,7 +42,7 @@
 
 
 object_tangible_wearables_cosmetics_rebel_battle_boots = object_tangible_wearables_cosmetics_shared_rebel_battle_boots:new {
-	faction = "Imperial",
+	faction = "Rebel",
 
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/smc_female.iff",
