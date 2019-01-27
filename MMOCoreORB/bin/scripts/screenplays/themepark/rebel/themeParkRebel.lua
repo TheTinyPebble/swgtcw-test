@@ -607,7 +607,7 @@ ackbar_missions =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 200 },
 				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_7"},
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_l" }
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_r" }
 			}
 		}
 	}
