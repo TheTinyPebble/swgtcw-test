@@ -253,7 +253,6 @@ lord_hethrir_missions =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 175 },
 				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_3"},
-				{ rewardType = "loot", lootGroup = "theme_park_reward_republic_medal"},
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_belt" }
 			}
 		},
@@ -466,6 +465,7 @@ veers_missions =
 			{
 				{ rewardType = "faction", faction = "imperial", amount = 275 },
 				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_5"},
+				{ rewardType = "loot", lootGroup = "theme_park_reward_republic_medal"},
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bicep_l" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_bicep_r" },
 				{ rewardType = "loot",  lootGroup = "theme_park_reward_republic_gloves" }

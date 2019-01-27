@@ -5,7 +5,8 @@ theme_park_reward_republic_medal = {
 	minimumLevel = 0,
 	maximumLevel = 0,
 	lootItems = {
-		{itemTemplate = "imperial_medallion", weight = 10000000},
+		{itemTemplate = "imperial_medallion", weight = 0},
+		{itemTemplate = "rebel_signet_ring", weight = 10000000}
 	}
 }
 
