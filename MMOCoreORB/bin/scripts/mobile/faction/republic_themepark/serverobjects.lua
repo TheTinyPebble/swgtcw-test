@@ -5,3 +5,6 @@ includeFile("faction/republic_themepark/theme_padme_amidala.lua")
 includeFile("faction/republic_themepark/theme_palpatine.lua")
 includeFile("faction/republic_themepark/theme_rex.lua")
 includeFile("faction/republic_themepark/theme_tarkin.lua")
+
+
+includeFile("faction/republic_themepark/restuss_kit_fisto.lua")

@@ -1,5 +1,6 @@
 fbase_at_xt = Creature:new {
-	objectName = "@mob/creature_names:fbase_at_xt",
+	objectName = "",
+	customName = "A Hailfire Droid",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 205,
@@ -25,7 +26,7 @@ fbase_at_xt = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = NONE,
 
-	templates = {"object/mobile/atxt.iff"},
+	templates = {"object/mobile/hailfire_droid.iff"},
 	lootGroups = {},
 	conversationTemplate = "",
 	defaultAttack = "defaultdroidattack",

@@ -674,3 +674,5 @@ includeFile("merchants/merchant_system.lua")
 
 --Custom Content
 includeFile("../custom_scripts/screenplays/screenplays.lua")
+
+includeFile("tasks/rori/restuss_fisto.lua")
