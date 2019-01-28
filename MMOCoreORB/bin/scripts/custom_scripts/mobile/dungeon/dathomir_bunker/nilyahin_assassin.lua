@@ -34,7 +34,7 @@ nilyahin_assassin = Creature:new {
 			groups = {
 				{group = "geonosian_cubes", chance = 2500000},
 				{group = "weapon_components", chance = 800000},
-				{group = "skill_buffs", chance = 4200000}
+				{group = "skill_buffs", chance = 4200000},
 				{group = "junk", chance = 2500000}
 			},
 			lootChance = 6000000

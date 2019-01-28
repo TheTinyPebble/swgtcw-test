@@ -32,10 +32,10 @@ nilyahin_apprentice = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "geonosian_cubes", chance = 2500000},,
+				{group = "geonosian_cubes", chance = 2500000},
 				{group = "weapon_components", chance = 500000},
-				{group = "skill_buffs", chance = 2000000}
-				{group = "junk", chance = 5000000},
+				{group = "skill_buffs", chance = 2000000},
+				{group = "junk", chance = 5000000}
 			},
 			lootChance = 7000000
 		},
