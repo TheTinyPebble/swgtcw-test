@@ -30,7 +30,65 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 		
-		return doCombatAction(creature, target);
+		int res = doCombatAction(creature, target);
+
+		if (res == SUCCESS) {
+
+			// Setup debuff.
+
+
+			if (targetCreature != NULL) {
+				Locker clocker(targetCreature, creature);
+
+				ManagedReference<Buff*> buff = new Buff(targetCreature, getNameCRC(), 6, BuffType::OTHER);
+
+				Locker locker(buff);
+				if (targetCreature->hasBuff(STRING_HASHCODE("burstrun")) || targetCreature->hasBuff(STRING_HASHCODE("retreat")) || targetCreature->hasBuff(BuffCRC::JEDI_FORCE_RUN_1)) {
+					targetCreature->removeBuff(STRING_HASHCODE("burstrun"));
+					targetCreature->removeBuff(STRING_HASHCODE("retreat"));
+					targetCreature->removeBuff(BuffCRC::JEDI_FORCE_RUN_1);
+				}
+
+				buff->setSpeedMultiplierMod(0.01f);
+				buff->setAccelerationMultiplierMod(0.01f);
+				targetCreature->setSnaredState(6);
+				StringBuffer targetRootMessage;
+
+				targetRootMessage << "You have been ROOTED for 6 seconds";
+				targetCreature->sendSystemMessage(targetRootMessage.toString());
+
+				targetCreature->addBuff(buff);
+				creature->updateCooldownTimer(skillName, delay * 1000);
+				targetCreature->updateCooldownTimer(tarSkillName, tarDelay * 1000);
+
+			}
+
+		}
+		return res;
+	}
+
+	String getCooldownString(uint32 delta) const {
+
+		int seconds = delta / 1000;
+
+		int hours = seconds / 3600;
+		seconds -= hours * 3600;
+
+		int minutes = seconds / 60;
+		seconds -= minutes * 60;
+
+		StringBuffer buffer;
+
+		if (hours > 0)
+			buffer << hours << "h ";
+
+		if (minutes > 0)
+			buffer << minutes << "m ";
+
+		if (seconds > 0)
+			buffer << seconds << "s";
+
+		return buffer.toString();
 	}
 
 };

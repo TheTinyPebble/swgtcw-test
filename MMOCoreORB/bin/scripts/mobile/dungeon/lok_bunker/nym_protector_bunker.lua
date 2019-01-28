@@ -34,10 +34,10 @@ nym_protector_bunker = Creature:new {
 		{
 			groups = {
 				{group = "junk", chance = 3500000},
-				{group = "nyms_common", chance = 1000000},
-				{group = "armor_attachments", chance = 2500000},
-				{group = "clothing_attachments", chance = 2500000},
-				{group = "tailor_components", chance = 500000}
+				{group = "nyms_common", chance = 1500000},
+				{group = "armor_attachments", chance = 2000000},
+				{group = "clothing_attachments", chance = 2000000},
+				{group = "tailor_components", chance = 1000000}
 			},
 			lootChance = 4500000
 		}

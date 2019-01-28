@@ -32,12 +32,10 @@ nilyahin_smuggler = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "geonosian_cubes", chance = 3400000},
-				{group = "blacksun_rare", chance = 100000},
-				{group = "tfa_paintings", chance = 100000},
-				{group = "weapon_components", chance = 1700000},
-				{group = "skill_buffs", chance = 3500000},
-				{group = "junk", chance = 1200000}
+				{group = "geonosian_cubes", chance = 2500000},
+				{group = "weapon_components", chance = 800000},
+				{group = "skill_buffs", chance = 4400000},
+				{group = "junk", chance = 2300000}
 			},
 			lootChance = 6000000
 		}

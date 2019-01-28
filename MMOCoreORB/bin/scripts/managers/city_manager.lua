@@ -55,10 +55,10 @@ CitySpecializationCooldown = 604800000
 TreasuryWithdrawalCooldown = 86400000
 
 --The number of city update cycles that must pass before mayoral voting process is complete.
-CityVotingCycles = 1
+CityVotingCycles = 3
 
 --The number of city update cyles after which to lock the mayoral voting race registration.
-CityVotingCyclesUntilLocked = 1
+CityVotingCyclesUntilLocked = 2
 
 --The amount of time in minutes before the city performs an update.
 CityUpdateInterval = 10080
@@ -73,7 +73,7 @@ OldCityGracePeriod = 4320
 EnableCityWarn = false
 
 --The number of citizens required to achieve each city rank. (Outpost, Village, Township, City, Metropolis)
-CitizensPerRank = {1, 2, 4, 8, 16}
+CitizensPerRank = {2, 4, 6, 8, 10}
 --CitizensPerRank = {10, 20, 35, 55, 85}
 
 --The radius in meters of the city at each city rank. (Outpost, Village, Township, City, Metropolis)
