@@ -1,4 +1,4 @@
-culocal ObjectManager = require("managers.object.object_manager")
+local ObjectManager = require("managers.object.object_manager")
 local QuestManager = require("managers.quest.quest_manager")
 local SpawnMobiles = require("utils.spawn_mobiles")
 require("utils.helpers")
