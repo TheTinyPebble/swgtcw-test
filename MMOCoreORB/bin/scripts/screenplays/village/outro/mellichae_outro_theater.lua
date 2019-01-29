@@ -1,4 +1,4 @@
-local ObjectManager = require("managers.object.object_manager")
+culocal ObjectManager = require("managers.object.object_manager")
 local QuestManager = require("managers.quest.quest_manager")
 local SpawnMobiles = require("utils.spawn_mobiles")
 require("utils.helpers")
@@ -126,7 +126,7 @@ function MellichaeOutroTheater:onMellichaeKilled(pMellichae, pKiller)
 	dropObserver(OBJECTDESTRUCTION, self.taskName, "onPlayerKilled", pOwner)
 	QuestManager.completeQuest(pOwner, QuestManager.quests.FS_THEATER_FINAL)
 	CreatureObject(pOwner):sendSystemMessage("@quest/force_sensitive/exit:final_complete") --	Congratulations, you have completed the Force sensitive quests! You are now qualified to begin the Jedi Padawan Trials.
-	CustomJediManagerCommon.setJediProgressionScreenPlayState(pOwner, CUSTOM_JEDI_PROGRESSION_DEFEATED_MELLIACHAE) -- Killed him.
+	CustomJediManagerCommon.setJediProgressionScreenPlayState(pOwner, CUSTOM_JEDI_PROGRESSION_DEFEATED_MELLICHAE) -- Killed him.
 
 	local pActiveArea = spawnActiveArea(CreatureObject(pOwner):getZoneName(), "object/active_area.iff", SceneObject(pTheater):getWorldPositionX(), 0, SceneObject(pTheater):getWorldPositionY(), 150, 0)
 
