@@ -1,4 +1,4 @@
-fbase_at_st = Creature:new {
+fbase_at_xt = Creature:new {
 	objectName = "@mob/creature_names:at_xt",
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -32,4 +32,4 @@ fbase_at_st = Creature:new {
 	defaultWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
 }
 
-CreatureTemplates:addCreatureTemplate(fbase_at_st, "fbase_at_st")
+CreatureTemplates:addCreatureTemplate(fbase_at_xt, "fbase_at_xt")

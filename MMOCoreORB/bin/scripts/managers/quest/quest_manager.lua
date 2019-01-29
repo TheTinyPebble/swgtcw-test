@@ -364,6 +364,8 @@ QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH	= 198
 QuestManager.quests.JAWA_RESCUE_OP						= 199
 QuestManager.quests.JAWA_RESCUE_OP_TASK					= 200
 QuestManager.quests.JAWA_RESCUE_OP_RETURN				= 201
-
+QuestManager.quests.REPUBLIC_RESTUSS_OP						= 202
+QuestManager.quests.REPUBLIC_RESTUSS_OP_TASK					= 203
+QuestManager.quests.REPUBLIC_RESTUSS_OP_RETURN				= 204
 
 return QuestManager

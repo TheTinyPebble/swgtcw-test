@@ -1,4 +1,4 @@
-fbase_at_xt = Creature:new {
+fbase_hailfire = Creature:new {
 	objectName = "",
 	customName = "A Hailfire Droid",
 	socialGroup = "rebel",
@@ -33,5 +33,4 @@ fbase_at_xt = Creature:new {
 	defaultWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
 }
 
-CreatureTemplates:addCreatureTemplate(fbase_at_xt, "fbase_at_xt")
-
+CreatureTemplates:addCreatureTemplate(fbase_hailfire, "fbase_hailfire")
