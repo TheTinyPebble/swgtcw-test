@@ -55,7 +55,7 @@ function CustomJediManager:onPlayerLoggedIn(pPlayer)
 		CustomUnlock:onLoggedIn(pPlayer)
 	end
 
-	CustomJediTrials:onPlayerLoggedIn(pPlayer)
+	--CustomJediTrials:onPlayerLoggedIn(pPlayer)
 end
 
 registerScreenPlay("CustomJediManager", true)
