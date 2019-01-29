@@ -8,3 +8,4 @@ includeFile("faction/republic_themepark/theme_tarkin.lua")
 
 
 includeFile("faction/republic_themepark/restuss_kit_fisto.lua")
+includeFile("faction/republic_themepark/restuss_anakin_skywalker.lua")

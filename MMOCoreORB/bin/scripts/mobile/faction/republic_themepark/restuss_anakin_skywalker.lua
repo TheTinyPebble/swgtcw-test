@@ -1,5 +1,5 @@
-restuss_kit_fisto = Creature:new {
-	objectName = "@mob/creature_names:theme_kit_fisto",
+restuss_anakin_skywalker = Creature:new {
+	objectName = "@mob/creature_names:theme_anakin_skywalker",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,
@@ -22,15 +22,15 @@ restuss_kit_fisto = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
-	optionsBitmask = INVULNERABLE + CONVERSABLE,
+	optionsBitmask = INVULNERABLE + CONVERSABLE + INTERESTING,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/kit_fisto_cloak.iff"},
+	templates = {"object/mobile/anakin_robe.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "republicRestussCaptainConvoTemplate",
+	conversationTemplate = "restussanakinGiverConvoTemplate",
 	attacks = {
 	}
 }
 
-CreatureTemplates:addCreatureTemplate(restuss_kit_fisto, "restuss_kit_fisto")
+CreatureTemplates:addCreatureTemplate(restuss_anakin_skywalker, "restuss_anakin_skywalker")
