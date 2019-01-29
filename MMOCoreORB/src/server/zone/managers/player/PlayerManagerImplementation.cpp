@@ -107,6 +107,10 @@
 #include "server/zone/managers/mission/MissionManager.h"
 #include "server/zone/managers/frs/FrsManager.h"
 
+#include "server/zone/objects/creature/buffs/PrivateBuff.h"
+#include "server/zone/objects/creature/buffs/PrivateSkillMultiplierBuff.h"
+
+
 
 
 PlayerManagerImplementation::PlayerManagerImplementation(ZoneServer* zoneServer, ZoneProcessServer* impl) :
@@ -854,6 +858,17 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 				String killerName = attackerCreature->getFirstName();
 				StringBuffer zBroadcast;
 				String killerFaction, playerFaction;
+				// Apply grogginess debuff
+				ManagedReference<PrivateBuff *> pvpDebuff = new PrivateBuff(player, STRING_HASHCODE("private_pvp_debuff"), 300, BuffType::JEDI);
+				Locker pvpLocker(pvpDebuff);
+
+				for(int i=0; i<CreatureAttribute::ARRAYSIZE; i++)
+					pvpDebuff->setAttributeModifier(i, -3500);
+				// TODO: Find potential end message for groggy debuff
+
+				// Add buffs to player
+				player->addBuff(pvpDebuff);
+
 				if (attacker->isRebel())
 					killerFaction = "\\#FF9933 Separatist";
 				else if (attacker->isImperial())
@@ -873,6 +888,9 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 					zBroadcast << playerFaction <<"\\#00e604 " << playerName << "\\#e60000 was slain in a duel by" << killerFaction << "\\#00cc99 " << killerName;
 
 				ghost->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
+				//send hard coded buff messages
+				player->sendSystemMessage("Due to your recent PVP Death your stats have been greatly reduced for 5 minutes");
+
 		}
 
 	}
