@@ -106,8 +106,13 @@ void FactionManager::awardFactionStanding(CreatureObject* player, const String& 
 
 	if (!faction.isPlayerAllowed())
 		return;
+	
+	float entBonus = 1.f;
+	entBonus = (player->getSkillMod("private_ent_faction_gain") / 100);
+	(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
 
-	float gain = level * faction.getAdjustFactor() * globalFactionMultiplier;
+
+	float gain = level * faction.getAdjustFactor() * globalFactionMultiplier * entBonus;
 	float lose = gain * 2;
 
 	ghost->decreaseFactionStanding(factionName, lose);
