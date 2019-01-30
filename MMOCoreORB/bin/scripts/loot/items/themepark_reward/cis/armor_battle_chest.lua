@@ -4,7 +4,7 @@ armor_battle_chest = {
 	minimumLevel = 0,
 	maximumLevel = -1,
 	customObjectName = "Kamino Assault Chest Plate",
-	directObjectTemplate = "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_chest_plate.iff",
+	directObjectTemplate = "object/tangible/wearables/armor/sep_battle_theme/armor_sep_theme_chest_plate.iff",
 	craftingValues = {
 		{"armor_rating",1,1,0},
 	        {"armor_effectiveness",50,50,0},

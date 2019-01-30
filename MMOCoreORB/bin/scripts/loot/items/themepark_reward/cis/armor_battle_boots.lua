@@ -4,7 +4,7 @@ armor_battle_boots = {
 	minimumLevel = 0,
 	maximumLevel = -1,
 	customObjectName = "Kamino Assault Boots",
-	directObjectTemplate = "object/tangible/wearables/cosmetics/rebel_battle_boots.iff",
+	directObjectTemplate = "object/tangible/wearables/cosmetics/sep_theme_boots.iff",
 	craftingValues = {
 	},
 	customizationStringNames = {},

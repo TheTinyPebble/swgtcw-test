@@ -22,13 +22,15 @@ restuss_anakin_skywalker = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
-	optionsBitmask = INVULNERABLE + CONVERSABLE + INTERESTING,
+	--optionsBitmask = INVULNERABLE + CONVERSABLE + INTERESTING,
+	optionsBitmask = INVULNERABLE + INTERESTING,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/anakin_robe.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "restussanakinGiverConvoTemplate",
+	conversationTemplate = "",
+	--conversationTemplate = "restussanakinGiverConvoTemplate",
 	attacks = {
 	}
 }

@@ -41,7 +41,7 @@
 --this exception also makes it possible to release a modified version
 
 
-object_tangible_wearables_cosmetics_rebel_battle_bracer_r = object_tangible_wearables_cosmetics_shared_rebel_battle_bracer_r:new {
+object_tangible_wearables_cosmetics_sep_theme_bracer_r = object_tangible_wearables_cosmetics_shared_sep_theme_bracer_r:new {
 	faction = "Rebel",
 
 	playerRaces = { "object/creature/player/bothan_male.iff",
@@ -101,4 +101,4 @@ object_tangible_wearables_cosmetics_rebel_battle_bracer_r = object_tangible_wear
         clientGameObjectType = 16777226
 }
 
-ObjectTemplates:addTemplate(object_tangible_wearables_cosmetics_rebel_battle_bracer_r, "object/tangible/wearables/cosmetics/rebel_battle_bracer_r.iff")
+ObjectTemplates:addTemplate(object_tangible_wearables_cosmetics_sep_theme_bracer_r, "object/tangible/wearables/cosmetics/sep_theme_bracer_r.iff")

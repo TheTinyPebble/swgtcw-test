@@ -41,7 +41,11 @@
 --this exception also makes it possible to release a modified version
 
 
-object_tangible_wearables_cosmetics_sep_theme_bracer_l = object_tangible_wearables_cosmetics_shared_sep_theme_bracer_l:new {
+object_tangible_wearables_armor_sep_battle_theme_sep_theme_chest_plate = object_tangible_wearables_armor_sep_battle_theme_shared_armor_sep_theme_chest_plate:new {
+	templateType = ARMOROBJECT,
+
+	--objectMenuComponent = {"cpp", "ArmorObjectMenuComponent"},
+
 	faction = "Rebel",
 
 	playerRaces = { "object/creature/player/bothan_male.iff",
@@ -97,8 +101,40 @@ object_tangible_wearables_cosmetics_sep_theme_bracer_l = object_tangible_wearabl
 				"object/creature/player/wookiee_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
-				gameObjectType = 16777226,
-        clientGameObjectType = 16777226
+
+	-- The damage types in WeaponObject
+	vulnerability = STUN + LIGHTSABER + HEAT,
+	specialResists = ENERGY + KINETIC + BLAST,
+
+	-- These are default Blue Frog stats
+	healthEncumbrance = 1,
+	actionEncumbrance = 1,
+	mindEncumbrance = 1,
+
+	maxCondition = 40000,
+
+	-- LIGHT, MEDIUM, HEAVY
+	rating = LIGHT,
+
+	kinetic = 80,
+	energy = 80,
+	electricity = 70,
+	stun = 10,
+	blast = 70,
+	heat = 70,
+	cold = 70,
+	acid = 70,
+	lightsaber = 0,
+
+	numberExperimentalProperties = {1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1},
+	experimentalProperties = {"XX", "XX", "XX", "XX", "OQ", "SR", "OQ", "UT", "MA", "OQ", "MA", "OQ", "MA", "OQ", "XX", "XX", "OQ", "SR", "XX"},
+	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+	experimentalGroupTitles = {"null", "null", "null", "exp_durability", "exp_quality", "exp_resistance", "exp_durability", "exp_durability", "exp_durability", "null", "null", "exp_resistance", "null"},
+	experimentalSubGroupTitles = {"null", "null", "sockets", "hit_points", "armor_effectiveness", "armor_integrity", "armor_health_encumbrance", "armor_action_encumbrance", "armor_mind_encumbrance", "armor_rating", "armor_special_type", "armor_special_effectiveness", "armor_special_integrity"},
+	experimentalMin = {0, 0, 0, 1000, 1, 30000, 400, 200, 200, 1, 256, 0, 0},
+	experimentalMax = {0, 0, 0, 1000, 20, 50000, 200, 125, 125, 1, 256, 0, 0},
+	experimentalPrecision = {0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
+	experimentalCombineType = {0, 0, 4, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1},
 }
 
-ObjectTemplates:addTemplate(object_tangible_wearables_cosmetics_sep_theme_bracer_l, "object/tangible/wearables/cosmetics/sep_theme_bracer_l.iff")
+ObjectTemplates:addTemplate(object_tangible_wearables_armor_sep_battle_theme_sep_theme_chest_plate, "object/tangible/wearables/armor/sep_battle_theme/armor_sep_theme_chest_plate.iff")

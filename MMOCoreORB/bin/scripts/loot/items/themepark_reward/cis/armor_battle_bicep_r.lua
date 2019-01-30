@@ -4,7 +4,7 @@ armor_battle_bicep_r = {
 	minimumLevel = 0,
 	maximumLevel = -1,
 	customObjectName = "Kamino Assault Right Bicep",
-	directObjectTemplate = "object/tangible/wearables/cosmetics/rebel_battle_bicep_r.iff",
+	directObjectTemplate = "object/tangible/wearables/cosmetics/sep_theme_bicep_r.iff",
 	craftingValues = {
 	},
 	customizationStringNames = {},

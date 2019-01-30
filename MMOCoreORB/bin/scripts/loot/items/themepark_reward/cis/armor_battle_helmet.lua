@@ -4,7 +4,7 @@ armor_battle_helmet = {
 	minimumLevel = 0,
 	maximumLevel = -1,
 	customObjectName = "Kamino Assault Helmet",
-	directObjectTemplate = "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_helmet.iff",
+	directObjectTemplate = "object/tangible/wearables/armor/sep_battle_theme/armor_sep_theme_helmet.iff",
 	craftingValues = {
 		{"armor_rating",1,1,0},
 	        {"armor_effectiveness",50,50,0},

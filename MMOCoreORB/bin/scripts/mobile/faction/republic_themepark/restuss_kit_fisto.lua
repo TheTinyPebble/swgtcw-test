@@ -22,13 +22,15 @@ restuss_kit_fisto = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
-	optionsBitmask = INVULNERABLE + CONVERSABLE,
+	optionsBitmask = INVULNERABLE,
+	--optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/kit_fisto_cloak.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "republicRestussCaptainConvoTemplate",
+	conversationTemplate = "",
+	--conversationTemplate = "republicRestussCaptainConvoTemplate",
 	attacks = {
 	}
 }

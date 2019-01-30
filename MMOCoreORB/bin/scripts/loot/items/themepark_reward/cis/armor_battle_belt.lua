@@ -4,7 +4,7 @@ armor_battle_belt = {
 	minimumLevel = 0,
 	maximumLevel = -1,
 	customObjectName = "Kamino Assault Belt",
-	directObjectTemplate = "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_belt.iff",
+	directObjectTemplate = "object/tangible/wearables/armor/sep_battle_theme/armor_sep_theme_belt.iff",
 	craftingValues = {
 		{"armor_rating",1,1,0},
 	        {"armor_effectiveness",50,50,0},

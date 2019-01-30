@@ -4,7 +4,7 @@ armor_battle_bracer_l = {
 	minimumLevel = 0,
 	maximumLevel = -1,
 	customObjectName = "Kamino Assault Left Bracer",
-	directObjectTemplate = "object/tangible/wearables/cosmetics/rebel_battle_bracer_l.iff",
+	directObjectTemplate = "object/tangible/wearables/cosmetics/sep_theme_bracer_l.iff",
 	craftingValues = {
 	},
 	customizationStringNames = {},
