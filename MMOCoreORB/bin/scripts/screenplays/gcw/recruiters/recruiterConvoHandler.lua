@@ -48,7 +48,7 @@ function RecruiterConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, s
 		writeData(CreatureObject(pPlayer):getObjectID() .. ":changingFactionStatus", 1)
 		createEvent(300000, "recruiterScreenplay", "handleGoCovert", pPlayer, "")
 	elseif (screenID == "accepted_resign") then
-		if (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice") then
+		if (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice")) then
 			CreatureObject(pPlayer):sendSystemMessage("@faction_recruiter:jedi_cant_resign")
 			return
 		end
