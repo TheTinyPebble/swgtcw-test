@@ -3,11 +3,11 @@ ForceShrineMenuComponent = {}
 function ForceShrineMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
 
-	if (CreatureObject(pPlayer):hasSkill("force_title_jedi_novice")) then
+	if (CustomJediManagerCommon.hasJediProgressionScreenPlayState(pPlayer, CUSTOM_JEDI_PROGRESSION_COMPLETED_HOLOCRON_TASKS)) then
 		menuResponse:addRadialMenuItem(120, 3, "@jedi_trials:meditate") -- Meditate
 	end
 
-	if (CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_02")) then
+	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice")) then
 		menuResponse:addRadialMenuItem(121, 3, "@force_rank:recover_jedi_items") -- Recover Jedi Items
 	end
 
@@ -18,13 +18,13 @@ function ForceShrineMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selec
 		return 0
 	end
 
-	if (selectedID == 120 and CreatureObject(pPlayer):hasSkill("force_title_jedi_novice")) then
+	if (selectedID == 120 and CustomJediManagerCommon.hasJediProgressionScreenPlayState(pPlayer, CUSTOM_JEDI_PROGRESSION_COMPLETED_HOLOCRON_TASKS)) then
 		if (CreatureObject(pPlayer):getPosture() ~= CROUCHED) then
 			CreatureObject(pPlayer):sendSystemMessage("@jedi_trials:show_respect") -- Must respect
 		else
 			self:doMeditate(pObject, pPlayer)
 		end
-	elseif (selectedID == 121 and CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_02")) then
+	elseif (selectedID == 121 and CreatureObject(pPlayer):hasSkill("jedi_padawan_novice")) then
 		self:recoverRobe(pPlayer)
 	end
 
@@ -32,50 +32,46 @@ function ForceShrineMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selec
 end
 
 function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
-	if (tonumber(readScreenPlayData(pPlayer, "KnightTrials", "completedTrials")) == 1 and not CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_03")) then
-		KnightTrials:resetCompletedTrialsToStart(pPlayer)
+	if (pPlayer == nil) then
+		return
 	end
-
-	if (not CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_02") and CreatureObject(pPlayer):hasScreenPlayState(32, "VillageJediProgression")) then
-		local currentTrial = JediTrials:getCurrentTrial(pPlayer)
-
-		if (not JediTrials:isOnPadawanTrials(pPlayer)) then
-			PadawanTrials:startPadawanTrials(pObject, pPlayer)
-		elseif (currentTrial == 0) then
-			PadawanTrials:startNextPadawanTrial(pObject, pPlayer)
-		else
-			PadawanTrials:showCurrentTrial(pObject, pPlayer)
-		end
-	elseif (JediTrials:isOnKnightTrials(pPlayer)) then
-		local pPlayerShrine = KnightTrials:getTrialShrine(pPlayer)
-
-		if (pPlayerShrine ~= nil and pObject ~= pPlayerShrine) then
-			local correctShrineZone = SceneObject(pPlayerShrine):getZoneName()
-			if (correctShrineZone ~= SceneObject(pObject):getZoneName()) then
-				local messageString = LuaStringIdChatParameter("@jedi_trials:knight_shrine_reminder")
-				messageString:setTO(getStringId("@jedi_trials:" .. correctShrineZone))
-				CreatureObject(pPlayer):sendSystemMessage(messageString:_getObject())
-			else
-				CreatureObject(pPlayer):sendSystemMessage("@jedi_trials:knight_shrine_wrong")
-			end
-			return
-		end
-
-		local currentTrial = JediTrials:getCurrentTrial(pPlayer)
-		local trialsCompleted = JediTrials:getTrialsCompleted(pPlayer)
-
-		if (currentTrial == 0 and trialsCompleted == 0) then
-			local sui = SuiMessageBox.new("KnightTrials", "startNextKnightTrial")
-			sui.setTitle("@jedi_trials:knight_trials_title")
-			sui.setPrompt("@jedi_trials:knight_trials_start_query")
-			sui.setOkButtonText("@jedi_trials:button_yes")
-			sui.setCancelButtonText("@jedi_trials:button_no")
-			sui.sendTo(pPlayer)
-		else
-			KnightTrials:showCurrentTrial(pPlayer)
-		end
+	
+	if (CreatureObject(pPlayer):getFaction() == 0) then
+		CustomJediManagerCommon:sendFactionChoiceSui(pPlayer)
+	end
+	
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+	
+	if (pGhost == nil) then
+		return
+	end
+	
+	local sui = SuiMessageBox.new("CustomJediManagerCommon", "emptyCallback")
+	sui.setTitle("@jedi_trials:padawan_trials_title")
+	sui.setPrompt("@jedi_trials:padawan_trials_completed")
+	sui.sendTo(pPlayer)
+	
+	awardSkill(pPlayer, "jedi_padawan_novice")
+	CreatureObject(pPlayer):playEffect("clienteffect/trap_electric_01.cef", "")
+	CreatureObject(pPlayer):playMusicMessage("sound/music_become_jedi.snd")
+	
+	PlayerObject(pGhost):setJediState(2)
+	
+	local pInventory = SceneObject(pPlayer):getSlottedObject("inventory")
+	
+	if (pInventory == nil or SceneObject(pInventory):isContainerFullRecursive()) then
+		CreatureObject(pPlayer):sendSystemMessage("@jedi_spam:inventory_full_jedi_robe")
 	else
-		CreatureObject(pPlayer):sendSystemMessage("@jedi_trials:force_shrine_wisdom_" .. getRandomNumber(1, 15))
+		local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
+		local pItem = giveItem(pInventory, "object/tangible/wearables/robe/robe_jedi_padawan.iff", -1)
+	end
+	
+	sendMail("system", "@jedi_spam:welcome_subject", "@jedi_spam:welcome_body", CreatureObject(pPlayer):getFirstName())
+	
+	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL) then
+		PlayerObject(pGhost):addWaypoint("yavin4", "Light Jedi Enclave", "", -5575, 4905, WAYPOINTYELLOW, true, true, 0)
+	else
+		PlayerObject(pGhost):addWaypoint("yavin4", "Dark Jedi Enclave", "", 5079, 305, WAYPOINTYELLOW, true, true, 0)
 	end
 end
 
