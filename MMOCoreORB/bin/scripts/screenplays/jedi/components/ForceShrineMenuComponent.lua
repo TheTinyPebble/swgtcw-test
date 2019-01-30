@@ -67,6 +67,12 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 	end
 	
 	sendMail("system", "@jedi_spam:welcome_subject", "@jedi_spam:welcome_body", CreatureObject(pPlayer):getFirstName())
+	
+	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL) then
+		PlayerObject(pGhost):addWaypoint("yavin4", "Light Jedi Enclave", "", -5575, 4905, WAYPOINTYELLOW, true, true, 0)
+	else
+		PlayerObject(pGhost):addWaypoint("yavin4", "Dark Jedi Enclave", "", 5079, 305, WAYPOINTYELLOW, true, true, 0)
+	end
 end
 
 function ForceShrineMenuComponent:recoverRobe(pPlayer)
