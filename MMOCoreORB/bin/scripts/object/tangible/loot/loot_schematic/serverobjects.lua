@@ -152,6 +152,7 @@ includeFile("tangible/loot/loot_schematic/musty_house_loot_schem.lua")
 includeFile("tangible/loot/loot_schematic/vehicle_house_loot_schem.lua")
 includeFile("tangible/loot/loot_schematic/bespin_house_loot_schem.lua")
 
+--clone armour
 includeFile("tangible/loot/loot_schematic/clonetrooper_chest_plate_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/clonetrooper_helmet_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/clonetrooper_bicep_l_crafted_schematic.lua")
@@ -162,3 +163,15 @@ includeFile("tangible/loot/loot_schematic/clonetrooper_boots_crafted_schematic.l
 includeFile("tangible/loot/loot_schematic/clonetrooper_gloves_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/clonetrooper_utility_belt_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/clonetrooper_leggings_crafted_schematic.lua")
+
+--sep battle armour
+includeFile("tangible/loot/loot_schematic/sep_battle_chest_plate_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_helmet_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_bicep_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_bicep_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_bracer_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_bracer_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_boots_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_gloves_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_utility_belt_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_leggings_crafted_schematic.lua")

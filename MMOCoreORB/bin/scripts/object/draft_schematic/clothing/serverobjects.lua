@@ -572,8 +572,10 @@ includeFile("draft_schematic/clothing/clothing_armor_marine_bicep_l_crafted.lua"
 includeFile("draft_schematic/clothing/clothing_armor_marine_bicep_r_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_marine_helmet_crafted.lua")
 
-
+-- jedi robes
 includeFile("draft_schematic/clothing/clothing_robe_jedi_padawan.lua")
+
+--clone armour
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_chest_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_helmet_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_bicep_l_crafted.lua")
@@ -584,3 +586,15 @@ includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_boots_crafted.
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_gloves_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_utility_belt_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_leggings_crafted.lua")
+
+--sep battle armour
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_chest_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_helmet_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_bicep_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_bicep_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_bracer_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_bracer_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_boots_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_gloves_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_utility_belt_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_battle_leggings_crafted.lua")

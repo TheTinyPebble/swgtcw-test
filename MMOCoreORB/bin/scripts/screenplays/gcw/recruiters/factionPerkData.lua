@@ -11,18 +11,22 @@ factionRewardType = {
 
 rebelRewardData = {
 	weaponsArmorList = {
-		"armor_marine_backpack", "armor_marine_helmet", "armor_marine_chest_plate", "armor_marine_leggings", "armor_marine_boots", "armor_marine_bicep_l",
-		"armor_marine_bicep_r", "weapon_recruiter_electrostaff", "carbine_laser", "pistol_scout_blaster", "rocket_launcher", "mine_drx", "mine_xg",
+	"armor_sep_battle_helmet", "armor_sep_battle_chest_plate", "armor_sep_battle_leggings", "armor_sep_battle_boots", "armor_sep_battle_bicep_l", "armor_sep_battle_bicep_r",
+	"armor_sep_battle_bracer_l", "armor_sep_battle_bracer_r", "armor_sep_battle_gloves", "armor_sep_battle_utility_belt",
+	"weapon_recruiter_electrostaff", "carbine_laser", "pistol_scout_blaster", "rocket_launcher", "mine_drx", "mine_xg",
 	},
 
 	weaponsArmor = {
-		armor_marine_backpack = { index=0, type=factionRewardType.armor, display="@wearables_name:armor_marine_backpack", item="object/tangible/wearables/armor/marine/armor_marine_backpack.iff",cost=1500},
-		armor_marine_bicep_l = { index=1, type=factionRewardType.armor, display="@wearables_name:armor_marine_chest_plate", item="object/tangible/loot/loot_schematic/marine_chest_plate_rebel_crafted_schematic.iff",cost=20000},
-		armor_marine_bicep_r = { index=2, type=factionRewardType.armor, display="@wearables_name:armor_marine_helmet", item="object/tangible/loot/loot_schematic/marine_helmet_crafted_schematic.iff",cost=20000},
-		armor_marine_boots = { index=3, type=factionRewardType.armor, display="@wearables_name:armor_marine_boots", item="object/tangible/loot/loot_schematic/marine_boots_crafted_schematic.iff",cost=20000},
-		armor_marine_chest_plate = { index=4, type=factionRewardType.armor, display="@wearables_name:armor_marine_leggings", item="object/tangible/loot/loot_schematic/marine_leggings_crafted_schematic.iff",cost=20000},
-		armor_marine_helmet = { index=5, type=factionRewardType.armor, display="@wearables_name:armor_marine_bicep_l", item="object/tangible/loot/loot_schematic/marine_bicep_l_crafted_schematic.iff",cost=20000},
-		armor_marine_leggings = { index=6, type=factionRewardType.armor, display="@wearables_name:armor_marine_bicep_r", item="object/tangible/loot/loot_schematic/marine_bicep_r_crafted_schematic.iff",cost=20000},
+	armor_sep_battle_bicep_l = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_bicep_l_schematic", item="object/tangible/loot/loot_schematic/sep_battle_bicep_l_crafted_schematic.iff",cost=20000},
+	armor_sep_battle_bicep_r = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_bicep_r_schematic", item="object/tangible/loot/loot_schematic/sep_battle_bicep_r_crafted_schematic.iff",cost=20000},
+	armor_sep_battle_boots = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_boots_schematic", item="object/tangible/loot/loot_schematic/sep_battle_boots_crafted_schematic.iff",cost=20000},
+	armor_sep_battle_chest_plate = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_chest_schematic", item="object/tangible/loot/loot_schematic/sep_battle_chest_plate_crafted_schematic.iff", cost=20000},
+	armor_sep_battle_helmet = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_helmet_schematic", item="object/tangible/loot/loot_schematic/sep_battle_helmet_crafted_schematic.iff", cost=20000},
+	armor_sep_battle_leggings = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_leggings_schematic", item="object/tangible/loot/loot_schematic/sep_battle_leggings_crafted_schematic.iff",cost=20000},
+	armor_sep_battle_bracer_l = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_bracer_l_schematic", item="object/tangible/loot/loot_schematic/sep_battle_bracer_l_crafted_schematic.iff",cost=20000},
+	armor_sep_battle_bracer_r = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_bracer_r_schematic", item="object/tangible/loot/loot_schematic/sep_battle_bracer_r_crafted_schematic.iff",cost=20000},
+	armor_sep_battle_gloves = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_gloves_schematic", item="object/tangible/loot/loot_schematic/sep_battle_gloves_crafted_schematic.iff",cost=20000},
+	armor_sep_battle_utility_belt = { type=factionRewardType.armor, display="@craft_item_ingredients_n:armor_sep_battle_utility_belt_schematic", item="object/tangible/loot/loot_schematic/sep_battle_utility_belt_crafted_schematic.iff",cost=1400},
 		carbine_laser = { index=7, type=factionRewardType.weapon, display="@weapon_name:carbine_laser", item="object/weapon/ranged/carbine/carbine_laser.iff", cost=1500},
 		pistol_scout_blaster = { index=11, type=factionRewardType.weapon, display="@weapon_name:pistol_scout_blaster", item="object/weapon/ranged/pistol/pistol_scout_blaster.iff", cost=1000},
 		metal_staff = { index=9, type=factionRewardType.weapon, display="@weapon_name:sword_02", item="object/weapon/ranged/melee/sword/sword_02.iff", cost=1000},
