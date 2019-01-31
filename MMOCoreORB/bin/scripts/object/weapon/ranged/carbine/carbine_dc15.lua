@@ -114,8 +114,8 @@ object_weapon_ranged_carbine_ep3_carbine_dc15 = object_weapon_ranged_carbine_ep3
 	maxRange = 64,
 	maxRangeAccuracy = -20,
 
-	minDamage = 340,
-	maxDamage = 995,
+	minDamage = 125,
+	maxDamage = 375,
 
 	attackSpeed = 2.5,
 
