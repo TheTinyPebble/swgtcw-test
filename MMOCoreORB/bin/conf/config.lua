@@ -145,9 +145,9 @@ ZonesEnabled = {
 TrePath = "/home/swgemu/Desktop/SWGEmu"
 
 TreFiles = {
-	"aftermath_1.tre",
-	"aftermath_NGE.tre",
-	"aftermath_house.tre",
+	"tcw_1.tre",
+	"tcw_NGE.tre",
+	"tcw_house.tre",
 	"mtg_patch_022.tre",
 	"mtg_planets.tre",
 	"mtg_patch_021.tre",
