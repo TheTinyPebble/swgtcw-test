@@ -4107,3 +4107,9 @@ object_draft_schematic_weapon_shared_turbo_laser = SharedDraftSchematicObjectTem
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_turbo_laser, "object/draft_schematic/weapon/shared_turbo_laser.iff")
+
+object_draft_schematic_weapon_shared_lance_magnaguard = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_lance_magnaguard.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_lance_magnaguard, "object/draft_schematic/weapon/shared_lance_magnaguard.iff")

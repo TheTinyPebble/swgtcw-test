@@ -1782,6 +1782,7 @@ schematics = {
 	{path="object/draft_schematic/weapon/2h_sword_scythe.iff"},
 	{path="object/draft_schematic/weapon/executioners_hack.iff"},
 	{path="object/draft_schematic/weapon/lance_nightsister.iff"},
+	{path="object/draft_schematic/weapon/lance_magnaguard.iff"},
 	{path="object/draft_schematic/weapon/pistol_de_10.iff"},
 	{path="object/draft_schematic/weapon/pistol_flechette_fwg5_quest.iff"},
 	{path="object/draft_schematic/weapon/pistol_geo_sonic_blaster.iff"},
