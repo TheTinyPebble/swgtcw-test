@@ -38,7 +38,7 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 	
 	local skillManager = LuaSkillManager()
 	
-	if (not skillManager:canLearnSkill(pPlayer, "jedi_padawan_novice", true) then
+	if (not skillManager:canLearnSkill(pPlayer, "jedi_padawan_novice", true)) then
 		CreatureObject(pPlayer):sendSystemMessage("You need to free up 50 skill points to continue.")
 	end
 	
