@@ -108,8 +108,8 @@ object_weapon_ranged_carbine_ep3_carbine_dc15 = object_weapon_ranged_carbine_ep3
 	pointBlankRange = 0,
 	pointBlankAccuracy = -20,
 
-	idealRange = 30,
-	idealAccuracy = 20,
+	idealRange = 22,
+	idealAccuracy = 66,
 
 	maxRange = 64,
 	maxRangeAccuracy = -20,
@@ -117,9 +117,9 @@ object_weapon_ranged_carbine_ep3_carbine_dc15 = object_weapon_ranged_carbine_ep3
 	minDamage = 340,
 	maxDamage = 995,
 
-	attackSpeed = 2.3,
+	attackSpeed = 2.5,
 
-	woundsRatio = 50,
+	woundsRatio = 40,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},
