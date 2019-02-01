@@ -68,7 +68,7 @@ object_draft_schematic_chemistry_medpack_enhance_quickness_d = object_draft_sche
 	ingredientSlotType = {0, 0, 1, 1},
 	resourceTypes = {"meat_avian", "gas_reactive", "object/tangible/component/chemistry/shared_solid_delivery_shell.iff", "object/tangible/component/chemistry/shared_release_mechanism_duration.iff"},
 	resourceQuantities = {22, 22, 1, 2},
-	contribution = {100, 100, 100, 100},
+	contribution = {100, 100, 75, 75},
 
 	targetTemplate = "object/tangible/medicine/crafted/medpack_enhance_quickness_d.iff",
 
