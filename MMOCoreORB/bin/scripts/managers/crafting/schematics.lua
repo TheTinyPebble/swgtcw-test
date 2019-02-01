@@ -1854,4 +1854,15 @@ schematics = {
 	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_gloves_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_utility_belt_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_leggings_crafted.iff"},
+
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_chest_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_helmet_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_bicep_l_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_bicep_r_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_bracer_r_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_bracer_l_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_boots_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_gloves_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_utility_belt_crafted.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_leggings_crafted.iff"},
 };
