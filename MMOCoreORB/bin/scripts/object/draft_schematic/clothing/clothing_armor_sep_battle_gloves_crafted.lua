@@ -70,7 +70,7 @@ object_draft_schematic_clothing_clothing_armor_sep_battle_gloves_crafted = objec
    contribution = {100, 100, 100, 100, 100, 100, 100, 100, 100},
 
 
-   targetTemplate = "object/tangible/wearables/armor/rebel_battle/shared_armor_rebel_battle_gloves.iff",
+   targetTemplate = "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_gloves.iff",
 
    additionalTemplates = {
              }

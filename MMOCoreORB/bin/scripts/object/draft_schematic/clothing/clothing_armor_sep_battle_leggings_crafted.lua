@@ -70,7 +70,7 @@ object_draft_schematic_clothing_clothing_armor_sep_battle_leggings_crafted = obj
    contribution = {100, 100, 100, 100, 100, 100, 100, 100, 100},
 
 
-   targetTemplate = "object/tangible/wearables/armor/rebel_battle/shared_armor_rebel_battle_leggings.iff",
+   targetTemplate = "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_leggings.iff",
 
    additionalTemplates = {
              }

@@ -71,7 +71,7 @@ object_draft_schematic_clothing_clothing_armor_sep_battle_utility_belt_crafted =
 
 
 
-   targetTemplate = "object/tangible/wearables/armor/rebel_battle/shared_armor_rebel_battle_belt.iff",
+   targetTemplate = "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_belt.iff",
 
    additionalTemplates = {
              }

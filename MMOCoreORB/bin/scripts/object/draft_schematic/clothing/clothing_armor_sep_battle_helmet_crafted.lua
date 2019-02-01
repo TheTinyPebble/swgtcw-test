@@ -58,8 +58,8 @@ object_draft_schematic_clothing_clothing_armor_sep_battle_helmet_crafted = objec
    experimentingSkill = "armor_experimentation",
    customizationSkill = "",
 
-   customizationOptions = {2},
-   customizationStringNames = {"/private/index_color_1"},
+   customizationOptions = {0},
+   customizationStringNames = {""},
    customizationDefaults = {0},
 
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
@@ -70,7 +70,7 @@ object_draft_schematic_clothing_clothing_armor_sep_battle_helmet_crafted = objec
    contribution = {100, 100, 100, 100, 100, 100, 100, 100, 100},
 
 
-   targetTemplate = "object/tangible/wearables/armor/rebel_battle/shared_armor_rebel_battle_helmet.iff",
+   targetTemplate = "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_helmet.iff",
 
    additionalTemplates = {
              }
