@@ -60,7 +60,7 @@ bren_kingal_missions =
 			secondarySpawns =	{},
 			itemSpawns =
 			{
-				{ itemTemplate = "object/tangible/mission/quest_item/bren_kingal_q4_needed.iff", itemName = "AT-ST pilot's helmet" }
+				{ itemTemplate = "object/tangible/mission/quest_item/bren_kingal_q4_needed.iff", itemName = "Pilot's helmet" }
 			},
 			staticObjects =
 			{
