@@ -63,8 +63,8 @@ object_draft_schematic_chemistry_medpack_enhance_health_c = object_draft_schemat
 	customizationStringNames = {},
 	customizationDefaults = {},
 
-	ingredientTemplateNames = {"craft_chemical_ingredients_n", "craft_chemical_ingredients_n", "craft_chemical_ingredients_n", "craft_chemical_ingredients_n", "craft_chemical_ingredients_n"},
-	ingredientTitleNames = {"organic_element", "inorganic_element", "delivery_medium", "drug_duration_compound", "drug_strength_compound"},
+	ingredientTemplateNames = {"craft_chemical_ingredients_n", "craft_chemical_ingredients_n", "craft_chemical_ingredients_n", "craft_chemical_ingredients_n"},
+	ingredientTitleNames = {"organic_element", "inorganic_element", "delivery_medium", "drug_duration_compound"},
 	ingredientSlotType = {0, 0, 1, 1},
 	resourceTypes = {"meat_avian", "gas_reactive", "object/tangible/component/chemistry/shared_solid_delivery_shell.iff", "object/tangible/component/chemistry/shared_release_mechanism_duration.iff"},
 	resourceQuantities = {22, 22, 1, 2},
