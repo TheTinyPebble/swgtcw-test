@@ -132,3 +132,4 @@ includeFile("draft_schematic/weapon/sword_ryyk_blade.lua")
 includeFile("draft_schematic/weapon/turbo_laser.lua")
 
 includeFile("draft_schematic/weapon/lance_magnaguard.lua")
+includeFile("draft_schematic/weapon/carbine_dc15.lua")

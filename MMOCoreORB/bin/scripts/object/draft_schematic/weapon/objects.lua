@@ -4113,3 +4113,9 @@ object_draft_schematic_weapon_shared_lance_magnaguard = SharedDraftSchematicObje
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_lance_magnaguard, "object/draft_schematic/weapon/shared_lance_magnaguard.iff")
+
+object_draft_schematic_weapon_shared_carbine_dc15 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/weapon/shared_carbine_dc15.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_weapon_shared_carbine_dc15, "object/draft_schematic/weapon/shared_carbine_dc15.iff")
