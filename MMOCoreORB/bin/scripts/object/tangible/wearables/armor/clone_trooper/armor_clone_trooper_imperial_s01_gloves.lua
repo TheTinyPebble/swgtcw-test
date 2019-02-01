@@ -103,7 +103,8 @@ object_tangible_wearables_armor_clone_trooper_armor_clone_trooper_imperial_s01_g
 				"object/creature/player/zabrak_female.iff" },
 
 	-- The damage types in WeaponObject
-	vulnerability = LIGHTSABER,
+	vulnerability = STUN + LIGHTSABER + HEAT,
+	specialResists = ENERGY + KINETIC + BLAST,
 
 	-- These are default Blue Frog stats
 	healthEncumbrance = 225,
