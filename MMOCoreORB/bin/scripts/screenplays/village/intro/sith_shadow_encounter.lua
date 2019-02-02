@@ -5,7 +5,8 @@ local Logger = require("utils.logger")
 
 SITH_SHADOW_THREATEN_STRING = "@quest/force_sensitive/intro:military_threaten"
 SITH_SHADOW_MILITARY_TAKE_CRYSTAL = "@quest/force_sensitive/intro:military_take_crystal"
-local READ_DISK_1_STRING = "@quest/force_sensitive/intro:read_disk1"
+--local READ_DISK_1_STRING = "@quest/force_sensitive/intro:read_disk1"
+local READ_DISK_1_STRING = "You sense a disturbance... An immense power. You feel the force guiding your will. Seek out the force wielder Mellichae."
 local READ_DISK_ERROR_STRING = "@quest/force_sensitive/intro:read_disk_error"
 
 SithShadowEncounter = Encounter:new {
