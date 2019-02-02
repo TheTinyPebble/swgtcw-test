@@ -8,8 +8,8 @@ cis_battle_droid = Creature:new {
 	damageMin = 160,
 	damageMax = 170,
 	baseXp = 831,
-	baseHAM = 2400,
-	baseHAMmax = 3000,
+	baseHAM = 5400,
+	baseHAMmax = 6000,
 	armor = 0,
 	resists = {5,5,5,5,5,5,5,5,-1},
 	meatType = "",
@@ -44,7 +44,7 @@ cis_battle_droid = Creature:new {
 			}
 		}
 	},
-	
+
 	weapons = {"battle_droid_weapons"},
 	defaultAttack = "defaultdroidrangedattack",
 	conversationTemplate = "",

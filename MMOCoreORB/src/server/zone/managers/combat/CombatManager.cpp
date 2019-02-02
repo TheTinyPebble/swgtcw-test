@@ -565,6 +565,10 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 			potency = 300;
 			dotstrength = 100;
 		}
+		if (dotstrength = 3000 && defender->isPlayerCreature()) {//Reduces Force Throw DOT for pvp
+			potency = 300;
+			dotstrength = 100;
+		}
 		if (dotType == CreatureState::BLEEDING){
 			dotstrength = dotstrength/4;
 		}

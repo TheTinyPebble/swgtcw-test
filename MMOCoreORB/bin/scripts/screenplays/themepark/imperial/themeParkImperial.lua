@@ -377,7 +377,7 @@ veers_missions =
 			primarySpawns =
 			{
 				{ npcTemplate = "theme_park_imperial_rebel_trooper",  npcName = "a Separatist Trooper" },
-				{ npcTemplate = "thug",  npcName = "a Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
 				{ npcTemplate = "borvos_thug",  npcName = "Borvo's Thug" },
 			},
 			secondarySpawns = {
@@ -396,8 +396,8 @@ veers_missions =
 			primarySpawns =
 			{
 				{ npcTemplate = "cis_battle_droid",  npcName = "" },
-				{ npcTemplate = "thug",  npcName = "a Thug" },
-				{ npcTemplate = "thug",  npcName = "a Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
 			},
 			secondarySpawns = {
 			},
@@ -416,7 +416,7 @@ veers_missions =
 				{ npcTemplate = "theme_park_imperial_borvos_thug",  npcName = "Borvo's Thug" },
 			},
 			secondarySpawns = {
-				{ npcTemplate = "thug",  npcName = "a Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
 				{ npcTemplate = "thug",  npcName = "a Thug" },
 			},
 			itemSpawns =
@@ -437,8 +437,8 @@ veers_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "thug",  npcName = "a Thug" },
-				{ npcTemplate = "thug",  npcName = "a Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
 			},
 			itemSpawns = {},
 			rewards =
@@ -451,9 +451,9 @@ veers_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "thug",  npcName = "a Thug" },
-				{ npcTemplate = "thug",  npcName = "a Thug" },
-				{ npcTemplate = "thug",  npcName = "a Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
 				{ npcTemplate = "theme_park_imperial_mercenary",  npcName = "a Mercenary" },
 			},
 			secondarySpawns = {
@@ -516,8 +516,8 @@ palpatine_missions =
 				{ npcTemplate = "rsf_security_officer",  npcName = "a Security Officer" },
 			},
 			secondarySpawns = {
-				{ npcTemplate = "thug",  npcName = "a Thug" },
-				{ npcTemplate = "thug",  npcName = "a Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
 				{ npcTemplate = "thug",  npcName = "a Thug" },
 				{ npcTemplate = "thug",  npcName = "a Thug" }
 			},
@@ -551,7 +551,7 @@ palpatine_missions =
 			primarySpawns =
 			{
 				{ npcTemplate = "theme_park_imperial_thug_ringleader",  npcName = "a Thug Ringleader" },
-				{ npcTemplate = "thug",  npcName = "a Thug" },
+				{ npcTemplate = "cis_resistance_separatist",  npcName = "a Separatist Thug" },
 				{ npcTemplate = "thug",  npcName = "a Thug" },
 				{ npcTemplate = "thug",  npcName = "a Thug" }
 			},
