@@ -1,7 +1,5 @@
 fbase_rebel_army_captain = Creature:new {
 	objectName = "@mob/creature_names:fbase_cis_army_captain",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 31,

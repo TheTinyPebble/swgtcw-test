@@ -1,7 +1,5 @@
 fbase_rebel_sharpshooter_hard = Creature:new {
 	objectName = "@mob/creature_names:fbase_cis_sharpshooter_hard",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 54,
