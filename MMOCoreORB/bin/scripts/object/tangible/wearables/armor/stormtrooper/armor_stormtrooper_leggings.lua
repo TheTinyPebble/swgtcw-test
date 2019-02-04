@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 --Copyright (C) 2010 <SWGEmu>
 
 

@@ -97,7 +97,6 @@ object_tangible_wearables_armor_marine_armor_marine_helmet = object_tangible_wea
 				"object/mobile/vendor/wookiee_female.iff",
 				"object/mobile/vendor/wookiee_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
-<<<<<<< HEAD
 				"object/mobile/vendor/zabrak_male.iff"
 				},
 
