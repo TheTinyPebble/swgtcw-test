@@ -6,6 +6,7 @@
 #define PRONECOMMAND_H_
 
 #include "server/zone/objects/scene/SceneObject.h"
+#include "server/zone/objects/tangible/terminal/characterbuilder/CharacterBuilderTerminal.h"
 
 class ProneCommand : public QueueCommand {
 public:
@@ -25,7 +26,8 @@ public:
 		if (creature->hasAttackDelay())
 			return GENERALERROR;
 
-		creature->setPosture(CreaturePosture::PRONE);
+		// TODO: DELETE STARTING HERE
+		UnicodeTokenizer args(arguments);
 
 		if (args.hasMoreTokens()) {
 			if (creature->isPlayerCreature()) {
