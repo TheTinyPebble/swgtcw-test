@@ -1244,6 +1244,20 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 
 	}
 
+	//Apply grogginess debuff
+	if (typeofdeath == 1) {
+		ManagedReference<PrivateBuff *> pvpDebuff = new PrivateBuff(player, STRING_HASHCODE("private_pvp_debuff"), 300, BuffType::JEDI);
+		Locker pvpLocker(pvpDebuff);
+
+		for(int i=0; i<CreatureAttribute::ARRAYSIZE; i++)
+			pvpDebuff->setAttributeModifier(i, -3500);
+		// TODO: Find potential end message for groggy debuff
+
+		// Add buffs to player
+		player->addBuff(pvpDebuff);
+
+	}
+
 
 
 	Reference<Task*> task = new PlayerIncapacitationRecoverTask(player, true);
