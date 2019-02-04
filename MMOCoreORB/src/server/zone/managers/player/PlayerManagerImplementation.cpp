@@ -107,6 +107,10 @@
 #include "server/zone/managers/mission/MissionManager.h"
 #include "server/zone/managers/frs/FrsManager.h"
 
+#include "server/zone/objects/creature/buffs/PrivateBuff.h"
+#include "server/zone/objects/creature/buffs/PrivateSkillMultiplierBuff.h"
+
+
 
 
 PlayerManagerImplementation::PlayerManagerImplementation(ZoneServer* zoneServer, ZoneProcessServer* impl) :
