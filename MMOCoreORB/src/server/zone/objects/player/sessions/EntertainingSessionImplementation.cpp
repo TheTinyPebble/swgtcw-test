@@ -924,11 +924,17 @@ void EntertainingSessionImplementation::activateEntertainerBuff(CreatureObject* 
 			//ManagedReference<PerformanceBuff*> focusBuff = new PerformanceBuff(creature, focusBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::MUSIC_FOCUS);
 			ManagedReference<PrivateSkillMultiplierBuff *> musicBuff = new PrivateSkillMultiplierBuff(creature, focusBuffCRC, buffDuration * 60, BuffType::PERFORMANCE);
 			//ManagedReference<PerformanceBuff*> willBuff = new PerformanceBuff(creature, willBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::MUSIC_WILLPOWER);
+			ManagedReference<PrivateSkillMultiplierBuff *> musicGcwBuff = new PrivateSkillMultiplierBuff(creature, willBuffCRC, buffDuration * 60, BuffType::PERFORMANCE);
 
 			Locker locker(musicBuff);
 			musicBuff->setSkillModifier("private_ent_xp_gain", buffStrength);
 			creature->addBuff(musicBuff);
 			locker.release();
+
+			Locker lockerGcw(musicGcwBuff);
+			musicBuff->setSkillModifier("private_ent_gcw_gain", buffStrength);
+			creature->addBuff(musicGcwBuff);
+			lockerGcw.release();
 
 			//Locker locker2(willBuff);
 			//creature->addBuff(willBuff);
