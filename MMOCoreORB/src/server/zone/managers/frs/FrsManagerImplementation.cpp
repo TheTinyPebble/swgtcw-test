@@ -26,6 +26,14 @@ void FrsManagerImplementation::initialize() {
 	if (!frsEnabled)
 		return;
 
+	Zone* zone = zoneServer->getZone("yavin4");
+
+	if (zone == nullptr) {
+		error("Unable to initialize frs manager, yavin4 disabled.");
+		frsEnabled = false;
+		return;
+	}
+
 	setupEnclaves();
 	loadFrsData();
 
@@ -314,9 +322,12 @@ void FrsManagerImplementation::verifyRoomAccess(CreatureObject* player, int play
 
 	short buildingType = 0;
 
-	if (bldg->getObjectID() == lightEnclave.get()->getObjectID())
+	ManagedReference<BuildingObject*> lightBldg = lightEnclave.get();
+	ManagedReference<BuildingObject*> darkBldg = darkEnclave.get();
+
+	if (lightBldg != nullptr && bldg->getObjectID() == lightBldg->getObjectID())
 		buildingType = COUNCIL_LIGHT;
-	else if (bldg->getObjectID() == darkEnclave.get()->getObjectID())
+	else if (darkBldg != nullptr && bldg->getObjectID() == darkBldg->getObjectID())
 		buildingType = COUNCIL_DARK;
 	else
 		return;
@@ -1711,8 +1722,6 @@ void FrsManagerImplementation::runChallengeVoteUpdate() {
 		int challengedRank = challengeData->getPlayerRank();
 
 		if (playerRank != challengedRank || councilType != COUNCIL_LIGHT) {
-			demotePlayer(challenged);
-
 			Core::getTaskManager()->executeTask([strongRef, challengedRank, challengedName] () {
 				StringIdChatParameter mailBody("@force_rank:challenge_vote_cancelled_body"); // The no-confidence vote on %TO has been cancelled due to a change in the member's ranking.
 				mailBody.setTO(challengedName);
@@ -2715,12 +2724,14 @@ void FrsManagerImplementation::recoverJediItems(CreatureObject* player) {
 }
 
 bool FrsManagerImplementation::isPlayerInEnclave(CreatureObject* player) {
-	if (player->getParentID() == 0)
+	if (!frsEnabled || player->getParentID() == 0)
 		return false;
 
 	ManagedReference<BuildingObject*> bldg = player->getParentRecursively(SceneObjectType::BUILDING).castTo<BuildingObject*>();
+	ManagedReference<BuildingObject*> lightBldg = lightEnclave.get();
+	ManagedReference<BuildingObject*> darkBldg = darkEnclave.get();
 
-	return bldg != nullptr && (bldg->getObjectID() == lightEnclave.get()->getObjectID() || bldg->getObjectID() == darkEnclave.get()->getObjectID());
+	return bldg != nullptr && ((lightBldg != nullptr && bldg->getObjectID() == lightBldg->getObjectID()) || (darkBldg != nullptr && bldg->getObjectID() == darkBldg->getObjectID()));
 }
 
 void FrsManagerImplementation::sendRankPlayerList(CreatureObject* player, int councilType, int rank) {
