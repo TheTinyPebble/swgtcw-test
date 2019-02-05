@@ -932,7 +932,7 @@ void EntertainingSessionImplementation::activateEntertainerBuff(CreatureObject* 
 			locker.release();
 
 			Locker lockerGcw(musicGcwBuff);
-			musicBuff->setSkillModifier("private_ent_gcw_gain", buffStrength);
+			musicGcwBuff->setSkillModifier("private_ent_gcw_gain", buffStrength);
 			creature->addBuff(musicGcwBuff);
 			lockerGcw.release();
 
