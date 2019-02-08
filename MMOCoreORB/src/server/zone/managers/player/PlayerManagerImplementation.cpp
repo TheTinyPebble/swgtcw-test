@@ -1236,7 +1236,7 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 		Locker pvpLocker(pvpDebuff);
 
 		for(int i=0; i<CreatureAttribute::ARRAYSIZE; i++)
-			pvpDebuff->setAttributeModifier(i, -3500);
+			pvpDebuff->setAttributeModifier(i, -2500);
 		// TODO: Find potential end message for groggy debuff
 
 		// Add buffs to player

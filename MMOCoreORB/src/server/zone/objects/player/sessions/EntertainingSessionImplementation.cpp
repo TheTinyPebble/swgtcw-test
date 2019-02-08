@@ -946,7 +946,7 @@ void EntertainingSessionImplementation::activateEntertainerBuff(CreatureObject* 
 			if (oldBuff != NULL && oldBuff->getBuffStrength() > buffStrength)
 				return;
 			//ManagedReference<PerformanceBuff*> mindBuff = new PerformanceBuff(creature, mindBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::DANCE_MIND);
-			ManagedReference<PrivateSkillMultiplierBuff *> danceBuff = new PrivateSkillMultiplierBuff(creature, mindBuffCRC, buffDuration * 60, BuffType::PERFORMANCE);
+			ManagedReference<PrivateSkillMultiplierBuff *> danceBuff = new PrivateSkillMultiplierBuff(creature, mindBuffCRC, buffDuration * 60, BuffType::OTHER);
 
 			Locker locker(danceBuff);
 			danceBuff->setSkillModifier("private_ent_faction_gain", buffStrength);
