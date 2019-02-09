@@ -11,23 +11,24 @@
 #include "server/zone/objects/creature/buffs/PerformanceBuffType.h"
 
 void PerformanceBuffImplementation::activate(bool applyModifiers) {
+	ManagedReference<CreatureObject*> strongCreo = creature.get();
 
 	if(type == PerformanceBuffType::DANCE_MIND) {
 		int mindStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::MIND));
-		setAttributeModifier(CreatureAttribute::MIND, mindStrength);
-		creature.get()->sendSystemMessage("@healing:performance_enhance_dance_mind_d");
+		creature.get()->sendSystemMessage("Your Faction point gain rate has been enhanced by a Dancer");
+		strongCreo->addSkillMod(SkillModManager::BUFF, "ent_faction_gain", mindStrength, true);
 
 	}
 	else if(type == PerformanceBuffType::MUSIC_FOCUS) {
 		int focusStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::FOCUS));
-		setAttributeModifier(CreatureAttribute::FOCUS, focusStrength);
-		creature.get()->sendSystemMessage("@healing:performance_enhance_music_focus_d");
+		creature.get()->sendSystemMessage("Your Experience point gain rate has been enhanced by a Musician");
+		strongCreo->addSkillMod(SkillModManager::BUFF, "ent_xp_gain", focusStrength, true);
 
 	}
 	else if(type == PerformanceBuffType::MUSIC_WILLPOWER) {
 		int willStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::WILLPOWER));
-		setAttributeModifier(CreatureAttribute::WILLPOWER, willStrength);
-		creature.get()->sendSystemMessage("@healing:performance_enhance_music_willpower_d");
+		creature.get()->sendSystemMessage("Your Experience point gain rate has been enhanced by a Musician");
+		strongCreo->addSkillMod(SkillModManager::BUFF, "ent_cw_gain", willStrength, true);
 	}
 
 	BuffImplementation::activate(true);
