@@ -125,9 +125,10 @@ function MellichaeOutroTheater:onMellichaeKilled(pMellichae, pKiller)
 
 	dropObserver(OBJECTDESTRUCTION, self.taskName, "onPlayerKilled", pOwner)
 	QuestManager.completeQuest(pOwner, QuestManager.quests.FS_THEATER_FINAL)
-	CreatureObject(pOwner):sendSystemMessage("@quest/force_sensitive/exit:final_complete") --	Congratulations, you have completed the Force sensitive quests! You are now qualified to begin the Jedi Padawan Trials.
+	CreatureObject(pOwner):sendSystemMessage("Congrats, you killed Melly-poo. This has been a test message.")
 	CustomJediManagerCommon.setJediProgressionScreenPlayState(pOwner, CUSTOM_JEDI_PROGRESSION_DEFEATED_MELLICHAE) -- Killed him.
-
+	CustomUnlock:setCurrentStep(pOwner, 9)
+	
 	local pActiveArea = spawnActiveArea(CreatureObject(pOwner):getZoneName(), "object/active_area.iff", SceneObject(pTheater):getWorldPositionX(), 0, SceneObject(pTheater):getWorldPositionY(), 150, 0)
 
 	if (pActiveArea ~= nil) then

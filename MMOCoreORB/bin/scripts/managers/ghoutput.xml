@@ -21,6 +21,17 @@
 </resource>
 
 <resource>
+<SpawnName>Adaewoa</SpawnName>
+<resType>softwood_evergreen_corellia</resType>
+<attribute name="res_decay_resist">400</attribute>
+<attribute name="res_malleability">826</attribute>
+<attribute name="res_quality">499</attribute>
+<attribute name="res_shock_resistance">165</attribute>
+<attribute name="res_toughness">16</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
 <SpawnName>Aeho</SpawnName>
 <resType>hide_bristley_lok</resType>
 <attribute name="res_decay_resist">467</attribute>
@@ -692,16 +703,6 @@
 </resource>
 
 <resource>
-<SpawnName>Bino</SpawnName>
-<resType>rice_wild_lok</resType>
-<attribute name="res_decay_resist">172</attribute>
-<attribute name="res_flavor">813</attribute>
-<attribute name="res_potential_energy">698</attribute>
-<attribute name="res_quality">299</attribute>
-<planet>lok</planet>
-</resource>
-
-<resource>
 <SpawnName>Bisko</SpawnName>
 <resType>oats_domesticated_tatooine</resType>
 <attribute name="res_decay_resist">594</attribute>
@@ -1312,6 +1313,16 @@
 </resource>
 
 <resource>
+<SpawnName>Cloegna</SpawnName>
+<resType>corn_wild_corellia</resType>
+<attribute name="res_decay_resist">493</attribute>
+<attribute name="res_flavor">993</attribute>
+<attribute name="res_potential_energy">607</attribute>
+<attribute name="res_quality">357</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
 <SpawnName>Coboiam</SpawnName>
 <resType>iron_kammris</resType>
 <attribute name="res_cold_resist">782</attribute>
@@ -1384,16 +1395,6 @@
 <attribute name="res_shock_resistance">370</attribute>
 <attribute name="res_toughness">53</attribute>
 <planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Dawa</SpawnName>
-<resType>fruit_berries_tatooine</resType>
-<attribute name="res_decay_resist">668</attribute>
-<attribute name="res_flavor">412</attribute>
-<attribute name="res_potential_energy">933</attribute>
-<attribute name="res_quality">423</attribute>
-<planet>tatooine</planet>
 </resource>
 
 <resource>
@@ -1705,6 +1706,16 @@
 </resource>
 
 <resource>
+<SpawnName>Ekoo</SpawnName>
+<resType>meat_reptilian_corellia</resType>
+<attribute name="res_decay_resist">932</attribute>
+<attribute name="res_flavor">605</attribute>
+<attribute name="res_potential_energy">76</attribute>
+<attribute name="res_quality">243</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
 <SpawnName>Elijoo</SpawnName>
 <resType>meat_avian_tatooine</resType>
 <attribute name="res_decay_resist">351</attribute>
@@ -1805,16 +1816,6 @@
 </resource>
 
 <resource>
-<SpawnName>Eubau</SpawnName>
-<resType>fruit_flowers_yavin4</resType>
-<attribute name="res_decay_resist">986</attribute>
-<attribute name="res_flavor">131</attribute>
-<attribute name="res_potential_energy">681</attribute>
-<attribute name="res_quality">593</attribute>
-<planet>yavin4</planet>
-</resource>
-
-<resource>
 <SpawnName>Euga</SpawnName>
 <resType>meat_carnivore_tatooine</resType>
 <attribute name="res_decay_resist">745</attribute>
@@ -1822,16 +1823,6 @@
 <attribute name="res_potential_energy">962</attribute>
 <attribute name="res_quality">113</attribute>
 <planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Eusri</SpawnName>
-<resType>vegetable_tubers_yavin4</resType>
-<attribute name="res_decay_resist">596</attribute>
-<attribute name="res_flavor">295</attribute>
-<attribute name="res_potential_energy">434</attribute>
-<attribute name="res_quality">16</attribute>
-<planet>yavin4</planet>
 </resource>
 
 <resource>
@@ -2323,6 +2314,16 @@
 <attribute name="res_potential_energy">474</attribute>
 <attribute name="res_quality">610</attribute>
 <planet>talus</planet>
+</resource>
+
+<resource>
+<SpawnName>Gefee</SpawnName>
+<resType>vegetable_tubers_yavin4</resType>
+<attribute name="res_decay_resist">124</attribute>
+<attribute name="res_flavor">143</attribute>
+<attribute name="res_potential_energy">419</attribute>
+<attribute name="res_quality">37</attribute>
+<planet>yavin4</planet>
 </resource>
 
 <resource>
@@ -2901,6 +2902,16 @@
 </resource>
 
 <resource>
+<SpawnName>Ightati</SpawnName>
+<resType>vegetable_beans_dantooine</resType>
+<attribute name="res_decay_resist">804</attribute>
+<attribute name="res_flavor">444</attribute>
+<attribute name="res_potential_energy">230</attribute>
+<attribute name="res_quality">346</attribute>
+<planet>dantooine</planet>
+</resource>
+
+<resource>
 <SpawnName>Igido</SpawnName>
 <resType>petrochem_inert_lubricating_oil</resType>
 <attribute name="res_decay_resist">659</attribute>
@@ -3298,6 +3309,16 @@
 </resource>
 
 <resource>
+<SpawnName>Kebru</SpawnName>
+<resType>meat_herbivore_rori</resType>
+<attribute name="res_decay_resist">789</attribute>
+<attribute name="res_flavor">50</attribute>
+<attribute name="res_potential_energy">535</attribute>
+<attribute name="res_quality">809</attribute>
+<planet>rori</planet>
+</resource>
+
+<resource>
 <SpawnName>Keroa</SpawnName>
 <resType>softwood_conifer_corellia</resType>
 <attribute name="res_decay_resist">438</attribute>
@@ -3451,6 +3472,16 @@
 </resource>
 
 <resource>
+<SpawnName>Kihakao</SpawnName>
+<resType>seafood_mollusk_talus</resType>
+<attribute name="res_decay_resist">854</attribute>
+<attribute name="res_flavor">668</attribute>
+<attribute name="res_potential_energy">346</attribute>
+<attribute name="res_quality">154</attribute>
+<planet>talus</planet>
+</resource>
+
+<resource>
 <SpawnName>Kimeo</SpawnName>
 <resType>oats_wild_talus</resType>
 <attribute name="res_decay_resist">67</attribute>
@@ -3523,16 +3554,6 @@
 </resource>
 
 <resource>
-<SpawnName>Kraceoke</SpawnName>
-<resType>meat_reptilian_corellia</resType>
-<attribute name="res_decay_resist">197</attribute>
-<attribute name="res_flavor">439</attribute>
-<attribute name="res_potential_energy">821</attribute>
-<attribute name="res_quality">54</attribute>
-<planet>corellia</planet>
-</resource>
-
-<resource>
 <SpawnName>Kraheshe</SpawnName>
 <resType>meat_insect_endor</resType>
 <attribute name="res_decay_resist">480</attribute>
@@ -3560,16 +3581,6 @@
 <attribute name="res_potential_energy">236</attribute>
 <attribute name="res_quality">994</attribute>
 <planet>talus</planet>
-</resource>
-
-<resource>
-<SpawnName>Kyovi</SpawnName>
-<resType>meat_herbivore_rori</resType>
-<attribute name="res_decay_resist">343</attribute>
-<attribute name="res_flavor">521</attribute>
-<attribute name="res_potential_energy">667</attribute>
-<attribute name="res_quality">530</attribute>
-<planet>rori</planet>
 </resource>
 
 <resource>
@@ -3713,16 +3724,6 @@
 <attribute name="res_shock_resistance">382</attribute>
 <attribute name="res_toughness">370</attribute>
 <planet>yavin4</planet>
-</resource>
-
-<resource>
-<SpawnName>Lehi</SpawnName>
-<resType>corn_wild_corellia</resType>
-<attribute name="res_decay_resist">636</attribute>
-<attribute name="res_flavor">421</attribute>
-<attribute name="res_potential_energy">126</attribute>
-<attribute name="res_quality">179</attribute>
-<planet>corellia</planet>
 </resource>
 
 <resource>
@@ -3981,16 +3982,6 @@
 </resource>
 
 <resource>
-<SpawnName>Lipoagi</SpawnName>
-<resType>seafood_mollusk_talus</resType>
-<attribute name="res_decay_resist">630</attribute>
-<attribute name="res_flavor">334</attribute>
-<attribute name="res_potential_energy">444</attribute>
-<attribute name="res_quality">518</attribute>
-<planet>talus</planet>
-</resource>
-
-<resource>
 <SpawnName>Lirkaga</SpawnName>
 <resType>rice_domesticated_dantooine</resType>
 <attribute name="res_decay_resist">100</attribute>
@@ -4008,6 +3999,16 @@
 <attribute name="res_potential_energy">787</attribute>
 <attribute name="res_quality">346</attribute>
 <planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Llawiasra</SpawnName>
+<resType>rice_wild_lok</resType>
+<attribute name="res_decay_resist">265</attribute>
+<attribute name="res_flavor">781</attribute>
+<attribute name="res_potential_energy">95</attribute>
+<attribute name="res_quality">665</attribute>
+<planet>lok</planet>
 </resource>
 
 <resource>
@@ -4699,6 +4700,16 @@
 </resource>
 
 <resource>
+<SpawnName>Oasi</SpawnName>
+<resType>fruit_flowers_yavin4</resType>
+<attribute name="res_decay_resist">60</attribute>
+<attribute name="res_flavor">652</attribute>
+<attribute name="res_potential_energy">336</attribute>
+<attribute name="res_quality">690</attribute>
+<planet>yavin4</planet>
+</resource>
+
+<resource>
 <SpawnName>Oboate</SpawnName>
 <resType>energy_renewable_unlimited_solar_rori</resType>
 <attribute name="res_potential_energy">280</attribute>
@@ -4788,6 +4799,16 @@
 <attribute name="res_potential_energy">878</attribute>
 <attribute name="res_quality">855</attribute>
 <planet>yavin4</planet>
+</resource>
+
+<resource>
+<SpawnName>Okali</SpawnName>
+<resType>meat_wild_rori</resType>
+<attribute name="res_decay_resist">263</attribute>
+<attribute name="res_flavor">298</attribute>
+<attribute name="res_potential_energy">875</attribute>
+<attribute name="res_quality">853</attribute>
+<planet>rori</planet>
 </resource>
 
 <resource>
@@ -5836,17 +5857,6 @@
 </resource>
 
 <resource>
-<SpawnName>Regi</SpawnName>
-<resType>softwood_evergreen_corellia</resType>
-<attribute name="res_decay_resist">185</attribute>
-<attribute name="res_malleability">895</attribute>
-<attribute name="res_quality">608</attribute>
-<attribute name="res_shock_resistance">110</attribute>
-<attribute name="res_toughness">191</attribute>
-<planet>corellia</planet>
-</resource>
-
-<resource>
 <SpawnName>Reneciide</SpawnName>
 <resType>steel_bicorbantium</resType>
 <attribute name="res_cold_resist">724</attribute>
@@ -6066,6 +6076,16 @@
 <attribute name="res_potential_energy">511</attribute>
 <attribute name="res_quality">588</attribute>
 <planet>yavin4</planet>
+</resource>
+
+<resource>
+<SpawnName>Sakei</SpawnName>
+<resType>fruit_berries_tatooine</resType>
+<attribute name="res_decay_resist">992</attribute>
+<attribute name="res_flavor">958</attribute>
+<attribute name="res_potential_energy">76</attribute>
+<attribute name="res_quality">63</attribute>
+<planet>tatooine</planet>
 </resource>
 
 <resource>
@@ -7307,16 +7327,6 @@
 </resource>
 
 <resource>
-<SpawnName>Voeri</SpawnName>
-<resType>vegetable_beans_dantooine</resType>
-<attribute name="res_decay_resist">596</attribute>
-<attribute name="res_flavor">792</attribute>
-<attribute name="res_potential_energy">287</attribute>
-<attribute name="res_quality">68</attribute>
-<planet>dantooine</planet>
-</resource>
-
-<resource>
 <SpawnName>Voerli</SpawnName>
 <resType>meat_domesticated_rori</resType>
 <attribute name="res_decay_resist">682</attribute>
@@ -7797,16 +7807,6 @@
 <attribute name="res_potential_energy">739</attribute>
 <attribute name="res_quality">426</attribute>
 <planet>endor</planet>
-</resource>
-
-<resource>
-<SpawnName>Xaubro</SpawnName>
-<resType>meat_wild_rori</resType>
-<attribute name="res_decay_resist">888</attribute>
-<attribute name="res_flavor">124</attribute>
-<attribute name="res_potential_energy">481</attribute>
-<attribute name="res_quality">297</attribute>
-<planet>rori</planet>
 </resource>
 
 <resource>
