@@ -15,7 +15,7 @@ public:
 	FirstAidCommand(const String& name, ZoneProcessServer* server)
 		: QueueCommand(name, server) {
 
-		mindCost = 0;
+		mindCost = 100;
 		range = 6;
 	}
 
