@@ -921,18 +921,18 @@ void EntertainingSessionImplementation::activateEntertainerBuff(CreatureObject* 
 			oldBuff = cast<PerformanceBuff*>(creature->getBuff(focusBuffCRC));
 			if (oldBuff != NULL && oldBuff->getBuffStrength() > buffStrength)
 				return;
-			//ManagedReference<PerformanceBuff*> focusBuff = new PerformanceBuff(creature, focusBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::MUSIC_FOCUS);
-			ManagedReference<PrivateSkillMultiplierBuff *> musicBuff = new PrivateSkillMultiplierBuff(creature, focusBuffCRC, buffDuration * 60, BuffType::OTHER);
-			//ManagedReference<PerformanceBuff*> willBuff = new PerformanceBuff(creature, willBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::MUSIC_WILLPOWER);
-			ManagedReference<PrivateSkillMultiplierBuff *> musicGcwBuff = new PrivateSkillMultiplierBuff(creature, willBuffCRC, buffDuration * 60, BuffType::OTHER);
+			ManagedReference<PerformanceBuff*> focusBuff = new PerformanceBuff(creature, focusBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::MUSIC_FOCUS);
+			//ManagedReference<PrivateSkillMultiplierBuff *> musicBuff = new PrivateSkillMultiplierBuff(creature, focusBuffCRC, buffDuration * 60, BuffType::OTHER);
+			ManagedReference<PerformanceBuff*> willBuff = new PerformanceBuff(creature, willBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::MUSIC_WILLPOWER);
+			//ManagedReference<PrivateSkillMultiplierBuff *> musicGcwBuff = new PrivateSkillMultiplierBuff(creature, willBuffCRC, buffDuration * 60, BuffType::OTHER);
 
 			Locker locker(musicBuff);
-			musicBuff->setSkillModifier("private_ent_xp_gain", buffStrength);
+			//musicBuff->setSkillModifier("private_ent_xp_gain", buffStrength);
 			creature->addBuff(musicBuff);
 			locker.release();
 
 			Locker lockerGcw(musicGcwBuff);
-			musicGcwBuff->setSkillModifier("private_ent_gcw_gain", buffStrength);
+			//musicGcwBuff->setSkillModifier("private_ent_gcw_gain", buffStrength);
 			creature->addBuff(musicGcwBuff);
 
 			//Locker locker2(willBuff);
@@ -945,11 +945,11 @@ void EntertainingSessionImplementation::activateEntertainerBuff(CreatureObject* 
 			oldBuff = cast<PerformanceBuff*>(creature->getBuff(mindBuffCRC));
 			if (oldBuff != NULL && oldBuff->getBuffStrength() > buffStrength)
 				return;
-			//ManagedReference<PerformanceBuff*> mindBuff = new PerformanceBuff(creature, mindBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::DANCE_MIND);
-			ManagedReference<PrivateSkillMultiplierBuff *> danceBuff = new PrivateSkillMultiplierBuff(creature, mindBuffCRC, buffDuration * 60, BuffType::OTHER);
+			ManagedReference<PerformanceBuff*> mindBuff = new PerformanceBuff(creature, mindBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::DANCE_MIND);
+			//ManagedReference<PrivateSkillMultiplierBuff *> danceBuff = new PrivateSkillMultiplierBuff(creature, mindBuffCRC, buffDuration * 60, BuffType::OTHER);
 
 			Locker locker(danceBuff);
-			danceBuff->setSkillModifier("private_ent_faction_gain", buffStrength);
+			//danceBuff->setSkillModifier("private_ent_faction_gain", buffStrength);
 			creature->addBuff(danceBuff);
 			break;
 		}
