@@ -713,6 +713,17 @@
 </resource>
 
 <resource>
+<SpawnName>Bitcho</SpawnName>
+<resType>wood_deciduous_lok</resType>
+<attribute name="res_decay_resist">347</attribute>
+<attribute name="res_malleability">603</attribute>
+<attribute name="res_quality">335</attribute>
+<attribute name="res_shock_resistance">566</attribute>
+<attribute name="res_toughness">17</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
 <SpawnName>Boadlago</SpawnName>
 <resType>corn_wild_dantooine</resType>
 <attribute name="res_decay_resist">673</attribute>
@@ -842,16 +853,6 @@
 <attribute name="res_potential_energy">679</attribute>
 <attribute name="res_quality">967</attribute>
 <planet>yavin4</planet>
-</resource>
-
-<resource>
-<SpawnName>Broli</SpawnName>
-<resType>fruit_berries_lok</resType>
-<attribute name="res_decay_resist">996</attribute>
-<attribute name="res_flavor">532</attribute>
-<attribute name="res_potential_energy">294</attribute>
-<attribute name="res_quality">949</attribute>
-<planet>lok</planet>
 </resource>
 
 <resource>
@@ -1207,16 +1208,6 @@
 <attribute name="res_shock_resistance">664</attribute>
 <attribute name="res_toughness">681</attribute>
 <planet>tatooine</planet>
-</resource>
-
-<resource>
-<SpawnName>Cihosko</SpawnName>
-<resType>vegetable_beans_corellia</resType>
-<attribute name="res_decay_resist">49</attribute>
-<attribute name="res_flavor">327</attribute>
-<attribute name="res_potential_energy">807</attribute>
-<attribute name="res_quality">216</attribute>
-<planet>corellia</planet>
 </resource>
 
 <resource>
@@ -1826,17 +1817,6 @@
 </resource>
 
 <resource>
-<SpawnName>Ezaca</SpawnName>
-<resType>bone_horn_dathomir</resType>
-<attribute name="res_decay_resist">375</attribute>
-<attribute name="res_malleability">17</attribute>
-<attribute name="res_quality">499</attribute>
-<attribute name="res_shock_resistance">312</attribute>
-<attribute name="res_toughness">454</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
 <SpawnName>Fadre</SpawnName>
 <resType>seafood_fish_yavin4</resType>
 <attribute name="res_decay_resist">434</attribute>
@@ -2181,16 +2161,6 @@
 <attribute name="res_potential_energy">506</attribute>
 <attribute name="res_quality">816</attribute>
 <planet>naboo</planet>
-</resource>
-
-<resource>
-<SpawnName>Fiwo</SpawnName>
-<resType>oats_wild_lok</resType>
-<attribute name="res_decay_resist">223</attribute>
-<attribute name="res_flavor">575</attribute>
-<attribute name="res_potential_energy">147</attribute>
-<attribute name="res_quality">823</attribute>
-<planet>lok</planet>
 </resource>
 
 <resource>
@@ -3105,16 +3075,6 @@
 <attribute name="res_potential_energy">115</attribute>
 <attribute name="res_quality">200</attribute>
 <planet>yavin4</planet>
-</resource>
-
-<resource>
-<SpawnName>Jeke</SpawnName>
-<resType>vegetable_fungi_lok</resType>
-<attribute name="res_decay_resist">875</attribute>
-<attribute name="res_flavor">408</attribute>
-<attribute name="res_potential_energy">17</attribute>
-<attribute name="res_quality">107</attribute>
-<planet>lok</planet>
 </resource>
 
 <resource>
@@ -4064,6 +4024,17 @@
 </resource>
 
 <resource>
+<SpawnName>Lopfe</SpawnName>
+<resType>bone_avian_lok</resType>
+<attribute name="res_decay_resist">174</attribute>
+<attribute name="res_malleability">59</attribute>
+<attribute name="res_quality">824</attribute>
+<attribute name="res_shock_resistance">331</attribute>
+<attribute name="res_toughness">225</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
 <SpawnName>Lota</SpawnName>
 <resType>gas_reactive_methane</resType>
 <attribute name="res_decay_resist">532</attribute>
@@ -4208,17 +4179,6 @@
 </resource>
 
 <resource>
-<SpawnName>Merigia</SpawnName>
-<resType>bone_avian_lok</resType>
-<attribute name="res_decay_resist">384</attribute>
-<attribute name="res_malleability">66</attribute>
-<attribute name="res_quality">132</attribute>
-<attribute name="res_shock_resistance">211</attribute>
-<attribute name="res_toughness">444</attribute>
-<planet>lok</planet>
-</resource>
-
-<resource>
 <SpawnName>Meroma</SpawnName>
 <resType>meat_domesticated_dathomir</resType>
 <attribute name="res_decay_resist">957</attribute>
@@ -4288,17 +4248,6 @@
 <attribute name="res_potential_energy">387</attribute>
 <attribute name="res_quality">89</attribute>
 <planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Mokao</SpawnName>
-<resType>wood_deciduous_lok</resType>
-<attribute name="res_decay_resist">35</attribute>
-<attribute name="res_malleability">643</attribute>
-<attribute name="res_quality">258</attribute>
-<attribute name="res_shock_resistance">433</attribute>
-<attribute name="res_toughness">371</attribute>
-<planet>lok</planet>
 </resource>
 
 <resource>
@@ -5825,6 +5774,16 @@
 </resource>
 
 <resource>
+<SpawnName>Rareme</SpawnName>
+<resType>vegetable_beans_corellia</resType>
+<attribute name="res_decay_resist">858</attribute>
+<attribute name="res_flavor">597</attribute>
+<attribute name="res_potential_energy">930</attribute>
+<attribute name="res_quality">343</attribute>
+<planet>corellia</planet>
+</resource>
+
+<resource>
 <SpawnName>Raule</SpawnName>
 <resType>hide_bristley_rori</resType>
 <attribute name="res_decay_resist">852</attribute>
@@ -6076,6 +6035,16 @@
 <attribute name="res_potential_energy">511</attribute>
 <attribute name="res_quality">588</attribute>
 <planet>yavin4</planet>
+</resource>
+
+<resource>
+<SpawnName>Saho</SpawnName>
+<resType>oats_wild_lok</resType>
+<attribute name="res_decay_resist">169</attribute>
+<attribute name="res_flavor">321</attribute>
+<attribute name="res_potential_energy">398</attribute>
+<attribute name="res_quality">121</attribute>
+<planet>lok</planet>
 </resource>
 
 <resource>
@@ -6632,6 +6601,16 @@
 </resource>
 
 <resource>
+<SpawnName>Sxotou</SpawnName>
+<resType>vegetable_fungi_lok</resType>
+<attribute name="res_decay_resist">763</attribute>
+<attribute name="res_flavor">949</attribute>
+<attribute name="res_potential_energy">770</attribute>
+<attribute name="res_quality">9</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
 <SpawnName>Syoge</SpawnName>
 <resType>softwood_conifer_rori</resType>
 <attribute name="res_decay_resist">249</attribute>
@@ -7087,6 +7066,16 @@
 </resource>
 
 <resource>
+<SpawnName>Toola</SpawnName>
+<resType>fruit_berries_lok</resType>
+<attribute name="res_decay_resist">70</attribute>
+<attribute name="res_flavor">567</attribute>
+<attribute name="res_potential_energy">261</attribute>
+<attribute name="res_quality">144</attribute>
+<planet>lok</planet>
+</resource>
+
+<resource>
 <SpawnName>Toweu</SpawnName>
 <resType>rice_domesticated_talus</resType>
 <attribute name="res_decay_resist">860</attribute>
@@ -7375,6 +7364,17 @@
 <attribute name="res_potential_energy">82</attribute>
 <attribute name="res_quality">985</attribute>
 <planet>rori</planet>
+</resource>
+
+<resource>
+<SpawnName>Wameno</SpawnName>
+<resType>bone_horn_dathomir</resType>
+<attribute name="res_decay_resist">225</attribute>
+<attribute name="res_malleability">4</attribute>
+<attribute name="res_quality">772</attribute>
+<attribute name="res_shock_resistance">470</attribute>
+<attribute name="res_toughness">26</attribute>
+<planet>dathomir</planet>
 </resource>
 
 <resource>
