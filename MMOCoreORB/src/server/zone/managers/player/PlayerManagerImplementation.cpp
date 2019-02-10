@@ -1752,7 +1752,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 	} else if (xpType == "jedi_general" ) {
 		float speciesModifier = 1.f;
 		float entBonus = 1.f;
-		info("XP before calculation" + String::valueOf(amount), true);
+		info("XP before calculation: " + String::valueOf(amount), true);
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = (player->getSkillMod("ent_xp_gain") / 10);
@@ -1769,7 +1769,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		xpType == "bio_engineer_dna_harvesting"){
 			float speciesModifier = 1.f;
 			float entBonus = 1.f;
-			info("XP before calculation" + String::valueOf(amount), true);
+			info("XP before calculation: " + String::valueOf(amount), true);
 			if (amount > 0){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 				entBonus = (player->getSkillMod("ent_xp_gain") / 10);
@@ -1784,7 +1784,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 	} else {
 		float speciesModifier = 1.f;
 		float entBonus = 1.f;
-		info("XP before calculation" + String::valueOf(amount), true);
+		info("XP before calculation: " + String::valueOf(amount), true);
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = (player->getSkillMod("ent_xp_gain") / 10);
