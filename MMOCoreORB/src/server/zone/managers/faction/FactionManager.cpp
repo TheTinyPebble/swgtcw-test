@@ -109,7 +109,7 @@ void FactionManager::awardFactionStanding(CreatureObject* player, const String& 
 	
 	float entBonus = 1.f;
 	entBonus = (player->getSkillMod("ent_faction_gain") / 20);
-	(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
+	(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
 
 
 	float gain = level * faction.getAdjustFactor() * globalFactionMultiplier * entBonus;
@@ -183,7 +183,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			killedGhost->decreaseFactionStanding("imperial", 45);
 			float entBonus = 1.f;
 			entBonus = (killerCreature->getSkillMod("ent_cw_gain") / 20);
-			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
+			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
 
 			playerManager->awardExperience(killerCreature, "gcw_currency_rebel", 1000 * entBonus);
 			group = killerCreature->getGroup();
@@ -240,8 +240,8 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			killedGhost->decreaseFactionStanding("rebel", 45);
 			float entBonus = 1.f;
 			entBonus = (killerCreature->getSkillMod("ent_cw_gain") / 20);
-			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
-			playerManager->awardExperience(killerCreature, "gcw_currency_imperial", 1000 * entBonus);
+			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
+			playerManager->awardExperience(killerCreature, "gcw_currency_imperial", 1000.f * entBonus);
 			group = killerCreature->getGroup();
 			Vector<ManagedReference<CreatureObject*> > players;
 			int playerCount = 1;
