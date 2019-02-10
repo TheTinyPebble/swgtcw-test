@@ -1756,8 +1756,9 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = (player->getSkillMod("ent_xp_gain") / 20);
-			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
-			info ("entBonus: " + String::valueOf(entBonus), true);
+			info ("Pre entBonus: " + String::valueOf(entBonus), true);
+			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
+			info ("Post entBonus: " + String::valueOf(entBonus), true);
 
 		}
 		xp = playerObject->addExperience(xpType, (amount * 2 * entBonus * speciesModifier));
@@ -1770,11 +1771,12 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 			float speciesModifier = 1.f;
 			float entBonus = 1.f;
 			info("XP before calculation: " + String::valueOf(amount), true);
-			if (amount > 0){
+			if (amount > 0.f){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 				entBonus = (player->getSkillMod("ent_xp_gain") / 20);
-				(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
-				info ("entBonus: " + String::valueOf(entBonus), true);
+				info ("Pre entBonus: " + String::valueOf(entBonus), true);
+				(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
+				info ("Post entBonus: " + String::valueOf(entBonus), true);
 			}
 			if (applyModifiers)
 				xp = playerObject->addExperience(xpType, (amount * 7 * entBonus * speciesModifier));
@@ -1788,8 +1790,9 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = (player->getSkillMod("ent_xp_gain") / 20);
-			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
-			info ("entBonus: " + String::valueOf(entBonus), true);
+			info ("Pre entBonus: " + String::valueOf(entBonus), true);
+			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
+			info ("Post entBonus: " + String::valueOf(entBonus), true);
 		}
 		if (applyModifiers)
 			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * entBonus * globalExpMultiplier));
