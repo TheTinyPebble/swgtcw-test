@@ -108,7 +108,7 @@ void FactionManager::awardFactionStanding(CreatureObject* player, const String& 
 		return;
 	
 	float entBonus = 1.f;
-	entBonus = (player->getSkillMod("ent_faction_gain") / 10);
+	entBonus = (player->getSkillMod("ent_faction_gain") / 20);
 	(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
 
 
@@ -182,7 +182,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 
 			killedGhost->decreaseFactionStanding("imperial", 45);
 			float entBonus = 1.f;
-			entBonus = (killerCreature->getSkillMod("ent_cw_gain") / 10);
+			entBonus = (killerCreature->getSkillMod("ent_cw_gain") / 20);
 			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
 
 			playerManager->awardExperience(killerCreature, "gcw_currency_rebel", 1000 * entBonus);
@@ -239,7 +239,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 
 			killedGhost->decreaseFactionStanding("rebel", 45);
 			float entBonus = 1.f;
-			entBonus = (killerCreature->getSkillMod("ent_cw_gain") / 10);
+			entBonus = (killerCreature->getSkillMod("ent_cw_gain") / 20);
 			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
 			playerManager->awardExperience(killerCreature, "gcw_currency_imperial", 1000 * entBonus);
 			group = killerCreature->getGroup();
