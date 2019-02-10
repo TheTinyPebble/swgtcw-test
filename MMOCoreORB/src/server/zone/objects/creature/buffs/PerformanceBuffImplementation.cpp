@@ -14,22 +14,19 @@ void PerformanceBuffImplementation::activate(bool applyModifiers) {
 	ManagedReference<CreatureObject*> strongCreo = creature.get();
 
 	if(type == PerformanceBuffType::DANCE_MIND) {
-		int mindStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::MIND));
-		mindStrength = mindStrength / 100;
+		int mindStrength = strength;
 		creature.get()->sendSystemMessage("Your Faction point gain rate has been enhanced by a Dancer");
 		strongCreo->addSkillMod(SkillModManager::BUFF, "ent_faction_gain", mindStrength, true);
 
 	}
 	else if(type == PerformanceBuffType::MUSIC_FOCUS) {
-		int focusStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::FOCUS));
-		focusStrength = focusStrength/100;
+		int focusStrength = strength;
 		creature.get()->sendSystemMessage("Your Experience point gain rate has been enhanced by a Musician");
 		strongCreo->addSkillMod(SkillModManager::BUFF, "ent_xp_gain", focusStrength, true);
 
 	}
 	else if(type == PerformanceBuffType::MUSIC_WILLPOWER) {
-		int willStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::WILLPOWER));
-		willStrength = willStrength / 100;
+		int willStrength = strength;
 		creature.get()->sendSystemMessage("Your Experience point gain rate has been enhanced by a Musician");
 		strongCreo->addSkillMod(SkillModManager::BUFF, "ent_cw_gain", willStrength, true);
 	}

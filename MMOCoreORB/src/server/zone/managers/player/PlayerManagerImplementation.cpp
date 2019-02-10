@@ -1755,13 +1755,13 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		info("XP before calculation: " + String::valueOf(amount), true);
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-			entBonus = (player->getSkillMod("ent_xp_gain") / 20);
+			entBonus = player->getSkillMod("ent_xp_gain");
 			info ("Pre entBonus: " + String::valueOf(entBonus), true);
 			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
 			info ("Post entBonus: " + String::valueOf(entBonus), true);
 
 		}
-		xp = playerObject->addExperience(xpType, (amount * 2 * entBonus * speciesModifier));
+		xp = playerObject->addExperience(xpType, (int)(amount * entBonus * speciesModifier));
 
 	} else if (xpType == "imagedesigner" ||
 		xpType == "music" ||
@@ -1773,15 +1773,17 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 			info("XP before calculation: " + String::valueOf(amount), true);
 			if (amount > 0.f){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-				entBonus = (player->getSkillMod("ent_xp_gain") / 20);
+				entBonus = player->getSkillMod("ent_xp_gain");
 				info ("Pre entBonus: " + String::valueOf(entBonus), true);
 				(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
 				info ("Post entBonus: " + String::valueOf(entBonus), true);
 			}
-			if (applyModifiers)
-				xp = playerObject->addExperience(xpType, (amount * 7 * entBonus * speciesModifier));
-			else
+			if (applyModifiers){
+				float xpBonus = 7 + entBonus;
+				xp = playerObject->addExperience(xpType, (int)(amount * entBonus * speciesModifier));
+			}else{
 				xp = playerObject->addExperience(xpType, (int)amount);
+			}
 
 	} else {
 		float speciesModifier = 1.f;
@@ -1789,15 +1791,17 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		info("XP before calculation: " + String::valueOf(amount), true);
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-			entBonus = (player->getSkillMod("ent_xp_gain") / 20);
+			entBonus = player->getSkillMod("ent_xp_gain");
 			info ("Pre entBonus: " + String::valueOf(entBonus), true);
 			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
 			info ("Post entBonus: " + String::valueOf(entBonus), true);
 		}
-		if (applyModifiers)
-			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * entBonus * globalExpMultiplier));
-		else
+		if (applyModifiers){
+			float finalXp = entBonus + globalExpMultiplier;
+			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * finalXp));
+		}else{
 			xp = playerObject->addExperience(xpType, (int)amount);
+		}
 	}
 	player->notifyObservers(ObserverEventType::XPAWARDED, player, xp);
 
