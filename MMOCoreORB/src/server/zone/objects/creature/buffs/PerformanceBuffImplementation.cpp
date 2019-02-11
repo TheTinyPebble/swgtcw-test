@@ -36,5 +36,7 @@ void PerformanceBuffImplementation::activate(bool applyModifiers) {
 }
 
 void PerformanceBuffImplementation::deactivate(bool removeModifiers) {
+	ManagedReference<CreatureObject*> strongCreo = creature.get();
+	strongCreo->removeAllSkillModsOfType(SkillModManager::BUFF,true);
 	BuffImplementation::deactivate(true);
 }
