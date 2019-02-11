@@ -1752,13 +1752,10 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 	} else if (xpType == "jedi_general" ) {
 		float speciesModifier = 1.f;
 		float entBonus = 1.f;
-		info("XP before calculation: " + String::valueOf(amount), true);
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = player->getSkillMod("ent_xp_gain");
-			info ("Pre entBonus: " + String::valueOf(entBonus), true);
 			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
-			info ("Post entBonus: " + String::valueOf(entBonus), true);
 
 		}
 		xp = playerObject->addExperience(xpType, (int)(amount * entBonus * speciesModifier));
@@ -1769,14 +1766,11 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		xpType == "entertainer_healing" ||
 		xpType == "bio_engineer_dna_harvesting"){
 			float speciesModifier = 1.f;
-			float entBonus = 1.f;
-			info("XP before calculation: " + String::valueOf(amount), true);
+			float entBonus = 0;
 			if (amount > 0.f){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 				entBonus = player->getSkillMod("ent_xp_gain");
-				info ("Pre entBonus: " + String::valueOf(entBonus), true);
-				(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
-				info ("Post entBonus: " + String::valueOf(entBonus), true);
+				(entBonus > 0) ? entBonus = entBonus : entBonus = 0;
 			}
 			if (applyModifiers){
 				float xpBonus = 7 + entBonus;
@@ -1787,14 +1781,11 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 
 	} else {
 		float speciesModifier = 1.f;
-		float entBonus = 1.f;
-		info("XP before calculation: " + String::valueOf(amount), true);
+		float entBonus = 0;
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = player->getSkillMod("ent_xp_gain");
-			info ("Pre entBonus: " + String::valueOf(entBonus), true);
-			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
-			info ("Post entBonus: " + String::valueOf(entBonus), true);
+			(entBonus > 0) ? entBonus = entBonus : entBonus = 0;
 		}
 		if (applyModifiers){
 			float finalXp = entBonus + globalExpMultiplier;
