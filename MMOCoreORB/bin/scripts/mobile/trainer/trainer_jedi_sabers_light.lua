@@ -1,9 +1,7 @@
 trainer_jedi_sabers_light = Creature:new {
-	objectName = "@mob/creature_names:trainer_jedi_sabers_light",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	socialGroup = "",
-	faction = "",
+	objectName = "@mob/creature_names:theme_anakin_skywalker",
+	socialGroup = "imperial",
+	faction = "imperial",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,
@@ -27,9 +25,7 @@ trainer_jedi_sabers_light = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {
-		"object/mobile/dressed_1handsword_trainer_01.iff",
-	},
+	templates = {"object/mobile/anakin_robe.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "jediSabersLightTrainerConvoTemplate",
