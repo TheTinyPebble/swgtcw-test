@@ -1073,4 +1073,24 @@ trainerSkills = {
 		"force_discipline_defender_preternatural_defense_03",
 		"force_discipline_defender_preternatural_defense_04"
 	},
+
+	trainer_basebuster = {
+		"base_bust_novice",
+		"base_bust_security_hacker_01",
+		"base_bust_genetic_decrypter_01",
+		"base_bust_power_disruptor_01",
+		"base_bust_destruction_sequencer_01",
+		"base_bust_security_hacker_02",
+		"base_bust_genetic_decrypter_02",
+		"base_bust_power_disruptor_02",
+		"base_bust_destruction_sequencer_02",
+		"base_bust_security_hacker_03",
+		"base_bust_genetic_decrypter_03",
+		"base_bust_power_disruptor_03",
+		"base_bust_destruction_sequencer_03",
+		"base_bust_security_hacker_04",
+		"base_bust_genetic_decrypter_04",
+		"base_bust_power_disruptor_04",
+		"base_bust_destruction_sequencer_04"
+	},
 }
