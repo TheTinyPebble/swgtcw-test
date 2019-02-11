@@ -40,6 +40,7 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 	
 	if (not skillManager:canLearnSkill(pPlayer, "jedi_padawan_novice", true)) then
 		CreatureObject(pPlayer):sendSystemMessage("You need to free up 50 skill points to continue.")
+		--return
 	end
 	
 	if (CreatureObject(pPlayer):getFaction() == 0) then
@@ -59,6 +60,7 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 	sui.sendTo(pPlayer)
 	
 	awardSkill(pPlayer, "jedi_padawan_novice")
+	awardSkill(pPlayer, "force_title_jedi_rank_01")
 	CreatureObject(pPlayer):playEffect("clienteffect/trap_electric_01.cef", "")
 	CreatureObject(pPlayer):playMusicMessage("sound/music_become_jedi.snd")
 	

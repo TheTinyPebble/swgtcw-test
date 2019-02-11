@@ -109,6 +109,12 @@ function MellichaeOutroTheater:onMellichaeKilled(pMellichae, pKiller)
 	if (pOwner == nil) then
 		return 1
 	end
+	
+	local pGhost = CreatureObject(pOwner):getPlayerObject()
+	
+	if (pGhost == nil or not PlayerObject(pGhost):isOnline()) then
+		return 1
+	end
 
 	local pTheater = self:getTheaterObject(pOwner)
 
@@ -128,6 +134,12 @@ function MellichaeOutroTheater:onMellichaeKilled(pMellichae, pKiller)
 	CreatureObject(pOwner):sendSystemMessage("Congrats, you killed Melly-poo. This has been a test message.")
 	CustomJediManagerCommon.setJediProgressionScreenPlayState(pOwner, CUSTOM_JEDI_PROGRESSION_DEFEATED_MELLICHAE) -- Killed him.
 	CustomUnlock:setCurrentStep(pOwner, 9)
+	
+	if (not PlayerObject(pGhost):isJedi()) then
+		PlayerObject(pGhost):setJediState(1)
+	end
+
+	awardSkill(pPlayer, "force_title_jedi_novice")
 	
 	local pActiveArea = spawnActiveArea(CreatureObject(pOwner):getZoneName(), "object/active_area.iff", SceneObject(pTheater):getWorldPositionX(), 0, SceneObject(pTheater):getWorldPositionY(), 150, 0)
 
