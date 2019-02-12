@@ -118,7 +118,7 @@ end
 function Yavin4StaticSpawnsScreenPlay:setupSentinel(pSentinel)
 	AiAgent(pSentinel):setAiTemplate("enclavesentinel")
 	createObserver(OBJECTDESTRUCTION, "Yavin4StaticSpawnsScreenPlay", "notifySentinelDead", pSentinel)
-	createEvent(300 * 1000, "Yavin4StaticSpawnsScreenPlay", "rotateSentinel", pSentinel, "")
+	createEvent(30, "Yavin4StaticSpawnsScreenPlay", "rotateSentinel", pSentinel, "")
 end
 
 function Yavin4StaticSpawnsScreenPlay:rotateSentinel(pSentinel)
@@ -127,7 +127,7 @@ function Yavin4StaticSpawnsScreenPlay:rotateSentinel(pSentinel)
 	end
 
 	if (CreatureObject(pSentinel):isInCombat()) then
-		createEvent(300 * 1000, "Yavin4StaticSpawnsScreenPlay", "rotateSentinel", pSentinel, "")
+		createEvent(30, "Yavin4StaticSpawnsScreenPlay", "rotateSentinel", pSentinel, "")
 		return
 	end
 
@@ -139,7 +139,7 @@ function Yavin4StaticSpawnsScreenPlay:rotateSentinel(pSentinel)
 		SceneObject(pSentinel):updateDirection(90)
 	end
 
-	createEvent(300 * 1000, "Yavin4StaticSpawnsScreenPlay", "rotateSentinel", pSentinel, "")
+	createEvent(30, "Yavin4StaticSpawnsScreenPlay", "rotateSentinel", pSentinel, "")
 end
 
 function Yavin4StaticSpawnsScreenPlay:notifySentinelDead(pSentinel, pKiller)
@@ -153,9 +153,9 @@ function Yavin4StaticSpawnsScreenPlay:notifySentinelDead(pSentinel, pKiller)
 	deleteData(objID .. ":sentinelID")
 
 	if (objName == "rep_jedi_master") then
-		createEvent(300 * 1000, "Yavin4StaticSpawnsScreenPlay", "respawnLightSentinel", pSentinel, sentinelID)
+		createEvent(30, "Yavin4StaticSpawnsScreenPlay", "respawnLightSentinel", pSentinel, sentinelID)
 	elseif (objName == "cis_jedi_master") then
-		createEvent(300 * 1000, "Yavin4StaticSpawnsScreenPlay", "respawnDarkSentinel", pSentinel, sentinelID)
+		createEvent(30, "Yavin4StaticSpawnsScreenPlay", "respawnDarkSentinel", pSentinel, sentinelID)
 	end
 
 	return 1

@@ -5690,17 +5690,6 @@
 </resource>
 
 <resource>
-<SpawnName>Parcke</SpawnName>
-<resType>hide_leathery_tatooine</resType>
-<attribute name="res_decay_resist">524</attribute>
-<attribute name="res_malleability">843</attribute>
-<attribute name="res_quality">522</attribute>
-<attribute name="res_shock_resistance">109</attribute>
-<attribute name="res_toughness">567</attribute>
-<planet>tatooine</planet>
-</resource>
-
-<resource>
 <SpawnName>Pari</SpawnName>
 <resType>fruit_fruits_dathomir</resType>
 <attribute name="res_decay_resist">164</attribute>
@@ -8149,6 +8138,17 @@
 <attribute name="res_shock_resistance">575</attribute>
 <attribute name="res_toughness">300</attribute>
 <planet>yavin4</planet>
+</resource>
+
+<resource>
+<SpawnName>Xerpo</SpawnName>
+<resType>hide_leathery_tatooine</resType>
+<attribute name="res_decay_resist">815</attribute>
+<attribute name="res_malleability">342</attribute>
+<attribute name="res_quality">153</attribute>
+<attribute name="res_shock_resistance">349</attribute>
+<attribute name="res_toughness">668</attribute>
+<planet>tatooine</planet>
 </resource>
 
 <resource>
