@@ -14,14 +14,14 @@ end
 
 function Yavin4StaticSpawnsScreenPlay:spawnMobiles()
 	-- Light Jedi Enclave (-5575, 4910)
-	local pSentinel = spawnMobile("yavin4", "light_jedi_sentinel", 0, -5579.0, 87.7, 4908.5, -179, 0)
+	local pSentinel = spawnMobile("yavin4", "rep_jedi_master", 0, -5579.0, 87.7, 4908.5, -179, 0)
 
 	if (pSentinel ~= nil) then
 		writeData(SceneObject(pSentinel):getObjectID() .. ":sentinelID", 1)
 		createEvent(10, "Yavin4StaticSpawnsScreenPlay", "setupSentinel", pSentinel, "")
 	end
 
-	pSentinel = spawnMobile("yavin4", "light_jedi_sentinel", 0, -5572.6, 87.7, 4908.2, -179, 0)
+	pSentinel = spawnMobile("yavin4", "rep_jedi_master", 0, -5572.6, 87.7, 4908.2, -179, 0)
 
 	if (pSentinel ~= nil) then
 		writeData(SceneObject(pSentinel):getObjectID() .. ":sentinelID", 2)
@@ -29,14 +29,14 @@ function Yavin4StaticSpawnsScreenPlay:spawnMobiles()
 	end
 
 	-- Dark Jedi Enclave (5068, 310)
-	pSentinel = spawnMobile("yavin4", "dark_jedi_sentinel", 0, 5074.2, 78.8, 313.9, 90, 0)
+	pSentinel = spawnMobile("yavin4", "cis_jedi_master", 0, 5074.2, 78.8, 313.9, 90, 0)
 
 	if (pSentinel ~= nil) then
 		writeData(SceneObject(pSentinel):getObjectID() .. ":sentinelID", 1)
 		createEvent(10, "Yavin4StaticSpawnsScreenPlay", "setupSentinel", pSentinel, "")
 	end
 
-	pSentinel = spawnMobile("yavin4", "dark_jedi_sentinel", 0, 5074.3, 79.2, 306.4, 90, 0)
+	pSentinel = spawnMobile("yavin4", "cis_jedi_master", 0, 5074.3, 79.2, 306.4, 90, 0)
 
 	if (pSentinel ~= nil) then
 		writeData(SceneObject(pSentinel):getObjectID() .. ":sentinelID", 2)
@@ -61,13 +61,13 @@ function Yavin4StaticSpawnsScreenPlay:spawnMobiles()
 
 	--LJ Shuttle
 	spawnSceneObject("yavin4", "object/building/player/city/shuttleport_corellia.iff", -5656, 102, 4925, 0, 0)
-	spawnMobile("yavin4", "light_jedi_sentinel", 1, -5646.54, 100.005, 4948.13, 180, 0)
-	spawnMobile("yavin4", "light_jedi_sentinel", 1, -5662.64, 98.8252, 4946.8, 167, 0)
+	spawnMobile("yavin4", "rep_jedi_master", 1, -5646.54, 100.005, 4948.13, 180, 0)
+	spawnMobile("yavin4", "rep_jedi_master", 1, -5662.64, 98.8252, 4946.8, 167, 0)
 
 	--DJ Shuttle
 	spawnSceneObject("yavin4", "object/building/player/city/shuttleport_corellia.iff", 5061, 71, 412, 0, 0)
-	spawnMobile("yavin4", "dark_jedi_sentinel", 1, 5053.79, 67.9311, 434.323, 177, 0)
-	spawnMobile("yavin4", "dark_jedi_sentinel", 1, 5068.99, 67.4718, 434.442, 177, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 1, 5053.79, 67.9311, 434.323, 177, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 1, 5068.99, 67.4718, 434.442, 177, 0)
 
 	--Dark Enclave Trainers
 	spawnMobile("yavin4", "trainer_padawan", 1, -15.9204, -43.4244, -36.8648, 1, 3435634)
@@ -89,7 +89,7 @@ function Yavin4StaticSpawnsScreenPlay:spawnMobiles()
 	spawnMobile("yavin4", "cis_magnaguard", 300, 5034.67, 95.9667, 268.402, 163, 0)
 	spawnMobile("yavin4", "cis_magnaguard", 300, 5040.54, 95.6813, 266.73, 179, 0)
 	spawnMobile("yavin4", "cis_magnaguard", 300, 5054.07, 95.165, 260.945, 172, 0)
-	spawnMobile("yavin4", "cis_magnaguard", 300, 5061.67, 95.7812, 259.195, 172, 0) 
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5061.67, 95.7812, 259.195, 172, 0)
 	spawnMobile("yavin4", "cis_magnaguard", 300, 5071.66, 97.2403, 256.842, 168, 0)
 	spawnMobile("yavin4", "cis_magnaguard", 300, 5084.55, 98.428, 258.879, 141, 0)
 	spawnMobile("yavin4", "cis_magnaguard", 300, 5092.03, 98.0961, 261.389, 149, 0)
@@ -133,9 +133,9 @@ function Yavin4StaticSpawnsScreenPlay:rotateSentinel(pSentinel)
 
 	local objName = SceneObject(pSentinel):getObjectName()
 
-	if (objName == "light_jedi_sentinel") then
+	if (objName == "rep_jedi_master") then
 		SceneObject(pSentinel):updateDirection(-179)
-	elseif (objName == "dark_jedi_sentinel") then
+	elseif (objName == "cis_jedi_master") then
 		SceneObject(pSentinel):updateDirection(90)
 	end
 
@@ -152,9 +152,9 @@ function Yavin4StaticSpawnsScreenPlay:notifySentinelDead(pSentinel, pKiller)
 	local sentinelID = readData(objID .. ":sentinelID")
 	deleteData(objID .. ":sentinelID")
 
-	if (objName == "light_jedi_sentinel") then
+	if (objName == "rep_jedi_master") then
 		createEvent(300 * 1000, "Yavin4StaticSpawnsScreenPlay", "respawnLightSentinel", pSentinel, sentinelID)
-	elseif (objName == "dark_jedi_sentinel") then
+	elseif (objName == "cis_jedi_master") then
 		createEvent(300 * 1000, "Yavin4StaticSpawnsScreenPlay", "respawnDarkSentinel", pSentinel, sentinelID)
 	end
 
@@ -184,7 +184,7 @@ function Yavin4StaticSpawnsScreenPlay:respawnLightSentinel(pOldSentinel, sentine
 		return
 	end
 
-	local pSentinel = spawnMobile("yavin4", "light_jedi_sentinel", 0, spawnLoc[1], spawnLoc[2], spawnLoc[3], spawnLoc[4], 0)
+	local pSentinel = spawnMobile("yavin4", "rep_jedi_master", 0, spawnLoc[1], spawnLoc[2], spawnLoc[3], spawnLoc[4], 0)
 
 	if (pSentinel ~= nil) then
 		writeData(SceneObject(pSentinel):getObjectID() .. ":sentinelID", sentinelID)
@@ -205,7 +205,7 @@ function Yavin4StaticSpawnsScreenPlay:respawnDarkSentinel(pOldSentinel, sentinel
 		return
 	end
 
-	local pSentinel = spawnMobile("yavin4", "dark_jedi_sentinel", 0, spawnLoc[1], spawnLoc[2], spawnLoc[3], spawnLoc[4], 0)
+	local pSentinel = spawnMobile("yavin4", "cis_jedi_master", 0, spawnLoc[1], spawnLoc[2], spawnLoc[3], spawnLoc[4], 0)
 
 	if (pSentinel ~= nil) then
 		writeData(SceneObject(pSentinel):getObjectID() .. ":sentinelID", sentinelID)
