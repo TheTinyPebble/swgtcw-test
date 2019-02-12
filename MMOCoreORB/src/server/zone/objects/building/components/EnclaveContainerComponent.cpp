@@ -7,6 +7,8 @@
 #include "server/zone/objects/intangible/tasks/PetControlDeviceStoreObjectTask.h"
 #include "server/zone/managers/frs/FrsManager.h"
 
+#include "templates/faction/Factions.h"
+
 bool EnclaveContainerComponent::checkContainerPermission(SceneObject* sceneObject, CreatureObject* creature, uint16 permission) const {
 	if (sceneObject->isBuildingObject())
 		return checkBuildingPermission(sceneObject, creature, permission);
@@ -50,6 +52,16 @@ bool EnclaveContainerComponent::checkBuildingPermission(SceneObject* sceneObject
 		return true;
 
 	int enclaveType = 0;
+	int councilType = 0;
+
+	if (creature->getFaction() == Factions::FACTIONIMPERIAL){
+		councilType = 1;
+		creature->sendSystemMessage("debug REP");
+	}
+	if (creature->getFaction() == Factions::FACTIONREBEL){
+		councilType = 2;
+		creature->sendSystemMessage("debug CIS");
+	}
 
 	if (sceneObject->getServerObjectCRC() == STRING_HASHCODE("object/building/yavin/light_enclave.iff"))
 		enclaveType = FrsManager::COUNCIL_LIGHT;
@@ -58,12 +70,12 @@ bool EnclaveContainerComponent::checkBuildingPermission(SceneObject* sceneObject
 	else
 		return false;
 
-	FrsData* frsData = ghost->getFrsData();
+	//FrsData* frsData = ghost->getFrsData();
 
-	if (frsData == nullptr)
-		return false;
+	//if (frsData == nullptr)
+	//	return false;
 
-	if (frsData->getCouncilType() == enclaveType)
+	if (creature->hasSkill("jedi_padawan_novice") && councilType == enclaveType)
 		return true;
 
 	creature->sendSystemMessage("@pvp_rating:enclave_deny_entry"); // A strange force repels you and keeps you from entering.
@@ -88,7 +100,17 @@ bool EnclaveContainerComponent::checkCellPermission(SceneObject* sceneObject, Cr
 		return true;
 
 	int enclaveType = 0;
+	int councilType = 0;
 
+	if (creature->getFaction() == Factions::FACTIONIMPERIAL){
+		councilType = 1;
+		creature->sendSystemMessage("debug REP");
+	}
+	if (creature->getFaction() == Factions::FACTIONREBEL){
+		councilType = 2;
+		creature->sendSystemMessage("debug CIS");
+	}
+	
 	ManagedReference<SceneObject*> enclave = sceneObject->getParent().get();
 
 	if (enclave == nullptr)
@@ -101,13 +123,18 @@ bool EnclaveContainerComponent::checkCellPermission(SceneObject* sceneObject, Cr
 	else
 		return false;
 
-	FrsData* frsData = ghost->getFrsData();
+	if (creature->hasSkill("jedi_padawan_novice") && councilType == enclaveType)
+		return true;
 
-	if (frsData == nullptr)
-		return false;
+//	creature->sendSystemMessage("@pvp_rating:enclave_deny_entry"); // A strange force repels you and keeps you from entering.
 
-	if (frsData->getCouncilType() != enclaveType)
-		return false;
+	//FrsData* frsData = ghost->getFrsData();
+
+	//if (frsData == nullptr)
+	//	return false;
+
+	//if (frsData->getCouncilType() != enclaveType)
+	//	return false;
 
 	SortedVector<String>* groups = ghost->getPermissionGroups();
 	ContainerPermissions* permissions = sceneObject->getContainerPermissions();

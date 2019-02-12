@@ -1,4 +1,4 @@
-frsEnabled = 0
+frsEnabled = 1
 
 -- Object ID of Enclave buildings
 lightEnclaveID = 8525417
@@ -90,12 +90,12 @@ darkRankingData = {
 enclaveRoomRequirements = {
 	-- Light enclave
 	{ 8525444, -1 }, -- entrancehall1
-	{ 8525421, 1 }, -- tier1hall1
-	{ 8525420, 1 }, -- tier1room
-	{ 8525419, 1 }, -- tier1hall2
-	{ 8525424, 5 }, -- tier2hall1
-	{ 8525423, 5 }, -- tier2room
-	{ 8525422, 5 }, -- tier2hall2
+	{ 8525421, -1 }, -- tier1hall1
+	{ 8525420, -1 }, -- tier1room
+	{ 8525419, -1 }, -- tier1hall2
+	{ 8525424, -1 }, -- tier2hall1
+	{ 8525423, -1 }, -- tier2room
+	{ 8525422, -1 }, -- tier2hall2
 	{ 8525433, 8 }, -- tier3hall1
 	{ 8525432, 8 }, -- tier3room
 	{ 8525431, 8 }, -- tier3hall2
