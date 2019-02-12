@@ -2699,16 +2699,6 @@
 </resource>
 
 <resource>
-<SpawnName>Gahoe</SpawnName>
-<resType>milk_wild_dathomir</resType>
-<attribute name="res_decay_resist">751</attribute>
-<attribute name="res_flavor">980</attribute>
-<attribute name="res_potential_energy">5</attribute>
-<attribute name="res_quality">704</attribute>
-<planet>dathomir</planet>
-</resource>
-
-<resource>
 <SpawnName>Gastopai</SpawnName>
 <resType>seafood_fish_corellia</resType>
 <attribute name="res_decay_resist">365</attribute>
@@ -2948,6 +2938,16 @@
 <attribute name="res_potential_energy">776</attribute>
 <attribute name="res_quality">932</attribute>
 <planet>dantooine</planet>
+</resource>
+
+<resource>
+<SpawnName>Henaobai</SpawnName>
+<resType>milk_wild_dathomir</resType>
+<attribute name="res_decay_resist">769</attribute>
+<attribute name="res_flavor">690</attribute>
+<attribute name="res_potential_energy">246</attribute>
+<attribute name="res_quality">966</attribute>
+<planet>dathomir</planet>
 </resource>
 
 <resource>
@@ -4719,16 +4719,6 @@
 <attribute name="res_shock_resistance">291</attribute>
 <attribute name="res_toughness">212</attribute>
 <planet>yavin4</planet>
-</resource>
-
-<resource>
-<SpawnName>Moro</SpawnName>
-<resType>meat_egg_tatooine</resType>
-<attribute name="res_decay_resist">850</attribute>
-<attribute name="res_flavor">363</attribute>
-<attribute name="res_potential_energy">325</attribute>
-<attribute name="res_quality">926</attribute>
-<planet>tatooine</planet>
 </resource>
 
 <resource>
@@ -7492,6 +7482,16 @@
 <attribute name="res_shock_resistance">122</attribute>
 <attribute name="res_toughness">487</attribute>
 <planet>naboo</planet>
+</resource>
+
+<resource>
+<SpawnName>Tiogape</SpawnName>
+<resType>meat_egg_tatooine</resType>
+<attribute name="res_decay_resist">13</attribute>
+<attribute name="res_flavor">144</attribute>
+<attribute name="res_potential_energy">950</attribute>
+<attribute name="res_quality">953</attribute>
+<planet>tatooine</planet>
 </resource>
 
 <resource>
