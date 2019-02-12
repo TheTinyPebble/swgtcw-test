@@ -1,9 +1,7 @@
 trainer_padawan = Creature:new {
-	objectName = "@mob/creature_names:trainer_padawan",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	socialGroup = "",
-	faction = "",
+	objectName = "@mob/creature_names:theme_asajj",
+	socialGroup = "rebel",
+	faction = "rebel",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,
@@ -27,9 +25,7 @@ trainer_padawan = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {
-		"object/mobile/dressed_1handsword_trainer_01.iff",
-	},
+	templates = {"object/mobile/dressed_ventress.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "jediPadawanTrainerConvoTemplate",

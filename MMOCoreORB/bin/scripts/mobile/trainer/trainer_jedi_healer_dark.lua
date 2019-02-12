@@ -2,8 +2,8 @@ trainer_jedi_healer_dark = Creature:new {
 	objectName = "@mob/creature_names:trainer_jedi_healer_dark",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
-	socialGroup = "",
-	faction = "",
+	socialGroup = "rebel",
+	faction = "rebel",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,
@@ -28,8 +28,9 @@ trainer_jedi_healer_dark = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_1handsword_trainer_01.iff",
-	},
+		"object/mobile/dressed_dark_jedi_human_male_01.iff",
+		"object/mobile/dressed_dark_jedi_human_female_01.iff"
+		},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "jediHealerDarkTrainerConvoTemplate",

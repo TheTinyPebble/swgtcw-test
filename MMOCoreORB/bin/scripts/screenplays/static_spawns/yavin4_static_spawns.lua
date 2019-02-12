@@ -68,6 +68,33 @@ function Yavin4StaticSpawnsScreenPlay:spawnMobiles()
 	spawnSceneObject("yavin4", "object/building/player/city/shuttleport_corellia.iff", 5061, 71, 412, 0, 0)
 	spawnMobile("yavin4", "dark_jedi_sentinel", 1, 5053.79, 67.9311, 434.323, 177, 0)
 	spawnMobile("yavin4", "dark_jedi_sentinel", 1, 5068.99, 67.4718, 434.442, 177, 0)
+
+	--Dark Enclave Trainers
+	spawnMobile("yavin4", "trainer_padawan", 1, -15.9204, -43.4244, -36.8648, 1, 3435634)
+	spawnMobile("yavin4", "trainer_jedi_sabers_dark", 300, -44.5964, -43.4244, -28.9613, 118, 3435635)
+	spawnMobile("yavin4", "trainer_jedi_defender_dark", 300, 17.301, -43.4244, -36.8122, 3, 3435634)
+	spawnMobile("yavin4", "trainer_jedi_powers_dark", 300, -0.0248166, -43.2978, -153.507, 359, 3435642)
+	spawnMobile("yavin4", "trainer_jedi_healer_dark", 300, 6.09723, -43.4244, -56.8031, 189, 3435643)
+
+	--Dark Enclave Interior
+	spawnMobile("yavin4", "cis_magnaguard", 300, 1.56346, -43.4244, -15.2571, 348, 3435633)
+	spawnMobile("yavin4", "cis_magnaguard", 300, -1.4056, -43.4244, -15.1717, 15, 3435633)
+
+	--Dark Enclave Perimeter
+	spawnMobile("yavin4", "cis_magnaguard", 300, 4994.72, 81.4558, 283.775, 269, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 4995.03, 79.5013, 304.117, 268, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 4994.45, 78.5773, 314.563, 279, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 4996.78, 78.9238, 323.67, 285, 0) 
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5000.14, 79.8354, 334.018, 288, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5004.95, 79.3638, 345.879, 299, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5012.27, 78.1859, 359.026, 307, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5019.25, 70.6185, 373.765, 300, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5028.14, 67.3409, 388.882, 299, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5011.68, 77.8007, 386.998, 301, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5024.52, 77.3106, 424.933, 314, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5034.77, 78.3632, 437.344, 334, 0)
+	spawnMobile("yavin4", "cis_magnaguard", 300, 5012.21, 78.6302, 415.431, 306, 0)
+
 end
 
 function Yavin4StaticSpawnsScreenPlay:setupSentinel(pSentinel)

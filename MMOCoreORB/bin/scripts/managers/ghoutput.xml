@@ -1077,6 +1077,17 @@
 </resource>
 
 <resource>
+<SpawnName>Boixe</SpawnName>
+<resType>bone_horn_dantooine</resType>
+<attribute name="res_decay_resist">696</attribute>
+<attribute name="res_malleability">305</attribute>
+<attribute name="res_quality">628</attribute>
+<attribute name="res_shock_resistance">524</attribute>
+<attribute name="res_toughness">295</attribute>
+<planet>dantooine</planet>
+</resource>
+
+<resource>
 <SpawnName>Boky</SpawnName>
 <resType>softwood_evergreen_dantooine</resType>
 <attribute name="res_decay_resist">308</attribute>
@@ -1899,6 +1910,17 @@
 </resource>
 
 <resource>
+<SpawnName>Dire</SpawnName>
+<resType>bone_avian_naboo</resType>
+<attribute name="res_decay_resist">137</attribute>
+<attribute name="res_malleability">164</attribute>
+<attribute name="res_quality">660</attribute>
+<attribute name="res_shock_resistance">103</attribute>
+<attribute name="res_toughness">463</attribute>
+<planet>naboo</planet>
+</resource>
+
+<resource>
 <SpawnName>Doagone</SpawnName>
 <resType>meat_reptilian_tatooine</resType>
 <attribute name="res_decay_resist">320</attribute>
@@ -2142,17 +2164,6 @@
 <attribute name="res_potential_energy">5</attribute>
 <attribute name="res_quality">81</attribute>
 <planet>rori</planet>
-</resource>
-
-<resource>
-<SpawnName>Estole</SpawnName>
-<resType>bone_avian_naboo</resType>
-<attribute name="res_decay_resist">493</attribute>
-<attribute name="res_malleability">171</attribute>
-<attribute name="res_quality">656</attribute>
-<attribute name="res_shock_resistance">150</attribute>
-<attribute name="res_toughness">433</attribute>
-<planet>naboo</planet>
 </resource>
 
 <resource>
@@ -5103,17 +5114,6 @@
 <attribute name="res_potential_energy">30</attribute>
 <attribute name="res_quality">273</attribute>
 <planet>dathomir</planet>
-</resource>
-
-<resource>
-<SpawnName>Nofadai</SpawnName>
-<resType>bone_horn_dantooine</resType>
-<attribute name="res_decay_resist">915</attribute>
-<attribute name="res_malleability">344</attribute>
-<attribute name="res_quality">672</attribute>
-<attribute name="res_shock_resistance">643</attribute>
-<attribute name="res_toughness">474</attribute>
-<planet>dantooine</planet>
 </resource>
 
 <resource>
