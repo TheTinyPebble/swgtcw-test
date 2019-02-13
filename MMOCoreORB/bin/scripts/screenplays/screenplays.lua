@@ -55,6 +55,7 @@ includeFile("themepark/smc/themeParkSmcVurleneAujante.lua")
 
 -- Screenplay utilities
 includeFile("utils/quest_spawner.lua")
+includeFile("utils/versafunction88.lua")
 
 -- Staff tools
 includeFile("tools/tools.lua")
