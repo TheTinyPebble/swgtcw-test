@@ -858,17 +858,6 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 				String killerName = attackerCreature->getFirstName();
 				StringBuffer zBroadcast;
 				String killerFaction, playerFaction;
-				// Apply grogginess debuff
-				ManagedReference<PrivateBuff *> pvpDebuff = new PrivateBuff(player, STRING_HASHCODE("private_pvp_debuff"), 300, BuffType::JEDI);
-				Locker pvpLocker(pvpDebuff);
-
-				for(int i=0; i<CreatureAttribute::ARRAYSIZE; i++)
-					pvpDebuff->setAttributeModifier(i, -3500);
-				// TODO: Find potential end message for groggy debuff
-
-				// Add buffs to player
-				player->addBuff(pvpDebuff);
-
 				if (attacker->isRebel())
 					killerFaction = "\\#FF9933 Separatist";
 				else if (attacker->isImperial())
@@ -888,9 +877,6 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 					zBroadcast << playerFaction <<"\\#00e604 " << playerName << "\\#e60000 was slain in a duel by" << killerFaction << "\\#00cc99 " << killerName;
 
 				ghost->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
-				//send hard coded buff messages
-				player->sendSystemMessage("Due to your recent PVP Death your stats have been greatly reduced for 5 minutes");
-
 		}
 
 	}
@@ -1244,6 +1230,21 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 
 	}
 
+	//Apply grogginess debuff
+	if (typeofdeath == 1) {
+		doEnhanceCharacter(0x2412A7EC, player, -2500, 300, BuffType::OTHER, 0);//debuff health and add icon
+		ManagedReference<PrivateBuff *> pvpDebuff = new PrivateBuff(player, STRING_HASHCODE("private_pvp_debuff"), 300, BuffType::JEDI);
+		Locker pvpLocker(pvpDebuff);
+
+		for(int i=1; i<CreatureAttribute::ARRAYSIZE; i++)
+			pvpDebuff->setAttributeModifier(i, -2500);
+		// TODO: Find potential end message for groggy debuff
+
+		// Add buffs to player
+		player->addBuff(pvpDebuff);
+	}
+
+	//player->removeAllSkillModsOfType(SkillModManager::BUFF,true);//buff removal on death
 
 
 	Reference<Task*> task = new PlayerIncapacitationRecoverTask(player, true);
@@ -1750,15 +1751,13 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 	} else if (xpType == "jedi_general" ) {
 		float speciesModifier = 1.f;
 		float entBonus = 1.f;
-		info("XP before calculation" + String::valueOf(amount), true);
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
-			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
-			info ("entBonus: " + String::valueOf(entBonus), true);
+			entBonus = player->getSkillMod("ent_xp_gain");
+			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
 
 		}
-		xp = playerObject->addExperience(xpType, (amount * 2 * entBonus * speciesModifier));
+		xp = playerObject->addExperience(xpType, (int)(amount * entBonus * speciesModifier));
 
 	} else if (xpType == "imagedesigner" ||
 		xpType == "music" ||
@@ -1766,33 +1765,33 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		xpType == "entertainer_healing" ||
 		xpType == "bio_engineer_dna_harvesting"){
 			float speciesModifier = 1.f;
-			float entBonus = 1.f;
-			info("XP before calculation" + String::valueOf(amount), true);
-			if (amount > 0){
+			float entBonus = 0;
+			if (amount > 0.f){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-				entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
-				(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
-				info ("entBonus: " + String::valueOf(entBonus), true);
+				entBonus = player->getSkillMod("ent_xp_gain");
+				(entBonus > 0) ? entBonus = entBonus : entBonus = 0;
 			}
-			if (applyModifiers)
-				xp = playerObject->addExperience(xpType, (amount * 7 * entBonus * speciesModifier));
-			else
+			if (applyModifiers){
+				float xpBonus = 7 + entBonus;
+				xp = playerObject->addExperience(xpType, (int)(amount * entBonus * speciesModifier));
+			}else{
 				xp = playerObject->addExperience(xpType, (int)amount);
+			}
 
 	} else {
 		float speciesModifier = 1.f;
-		float entBonus = 1.f;
-		info("XP before calculation" + String::valueOf(amount), true);
+		float entBonus = 0;
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
-			entBonus = (player->getSkillMod("private_ent_xp_gain") / 100);
-			(entBonus > 0) ? entBonus = entBonus : entBonus = 1.f;
-			info ("entBonus: " + String::valueOf(entBonus), true);
+			entBonus = player->getSkillMod("ent_xp_gain");
+			(entBonus > 0) ? entBonus = entBonus : entBonus = 0;
 		}
-		if (applyModifiers)
-			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * entBonus * globalExpMultiplier));
-		else
+		if (applyModifiers){
+			float finalXp = entBonus + globalExpMultiplier;
+			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * localMultiplier * finalXp));
+		}else{
 			xp = playerObject->addExperience(xpType, (int)amount);
+		}
 	}
 	player->notifyObservers(ObserverEventType::XPAWARDED, player, xp);
 

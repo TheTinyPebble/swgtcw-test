@@ -65,6 +65,12 @@ public:
 		if( arg == "kitty" )
 			arg = "technokitty";
 
+		if( arg == "cis" )
+			arg = "rebel";
+
+		if( arg == "republic" )
+			arg = "imperial";
+
 		// Emote string matches string saved during image design session and the client effect file name
 		String emote = "holoemote_" + arg;
 
@@ -177,10 +183,12 @@ public:
 		    arg == "hologlitter" ||
 		    arg == "holonotes" ||
 		    arg == "republic" ||
+				arg == "imperial" ||
 		    arg == "technokitty" ||
 		    arg == "kitty" ||		// Alias for technokitty
 		    arg == "phonytail" ||
 		    arg == "cis" ||
+				arg == "rebel" ||
 		    arg == "sparky" ||
 		    arg == "delete" ){
 			return true;

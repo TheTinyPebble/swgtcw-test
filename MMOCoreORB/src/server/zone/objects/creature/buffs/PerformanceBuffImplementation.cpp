@@ -11,29 +11,34 @@
 #include "server/zone/objects/creature/buffs/PerformanceBuffType.h"
 
 void PerformanceBuffImplementation::activate(bool applyModifiers) {
+    if(type == PerformanceBuffType::DANCE_MIND) {
+        int mindStrength = strength;
+        creature.get()->sendSystemMessage("Your Faction point gain rate has been enhanced by a Dancer");
+        ManagedReference<Buff*> buff = new Buff(creature.get(), buffCRC, buffDuration, BuffType::SKILL);
+        buff->setSkillModifier("ent_faction_gain", mindStrength);
+        creature.get()->addBuff(buff);
 
-	if(type == PerformanceBuffType::DANCE_MIND) {
-		int mindStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::MIND));
-		setAttributeModifier(CreatureAttribute::MIND, mindStrength);
-		creature.get()->sendSystemMessage("@healing:performance_enhance_dance_mind_d");
+    }
+    else if(type == PerformanceBuffType::MUSIC_FOCUS) {
+        int focusStrength = strength;
+        creature.get()->sendSystemMessage("Your Experience point gain rate has been enhanced by a Musician");
+        ManagedReference<Buff*> buff = new Buff(creature.get(), buffCRC, buffDuration, BuffType::SKILL);
+        buff->setSkillModifier("ent_xp_gain", focusStrength);
+        creature.get()->addBuff(buff);
 
-	}
-	else if(type == PerformanceBuffType::MUSIC_FOCUS) {
-		int focusStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::FOCUS));
-		setAttributeModifier(CreatureAttribute::FOCUS, focusStrength);
-		creature.get()->sendSystemMessage("@healing:performance_enhance_music_focus_d");
+    }
+    else if(type == PerformanceBuffType::MUSIC_WILLPOWER) {
+        int willStrength = strength;
+        creature.get()->sendSystemMessage("Your Experience point gain rate has been enhanced by a Musician");
+        ManagedReference<Buff*> buff = new Buff(creature.get(), buffCRC, buffDuration, BuffType::SKILL);
+        buff->setSkillModifier("ent_cw_gain", willStrength);
+        creature.get()->addBuff(buff);
+    }
 
-	}
-	else if(type == PerformanceBuffType::MUSIC_WILLPOWER) {
-		int willStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::WILLPOWER));
-		setAttributeModifier(CreatureAttribute::WILLPOWER, willStrength);
-		creature.get()->sendSystemMessage("@healing:performance_enhance_music_willpower_d");
-	}
-
-	BuffImplementation::activate(true);
+    BuffImplementation::activate(true);
 
 }
 
 void PerformanceBuffImplementation::deactivate(bool removeModifiers) {
-	BuffImplementation::deactivate(true);
+    BuffImplementation::deactivate(true);
 }

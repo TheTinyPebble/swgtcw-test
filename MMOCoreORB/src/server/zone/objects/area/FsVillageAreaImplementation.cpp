@@ -38,12 +38,7 @@ void FsVillageAreaImplementation::notifyEnter(SceneObject* player) {
 		if (ghost->hasGodMode())
 			return;
 
-		if (!ghost->hasActiveQuestBitSet(PlayerQuestData::FS_VILLAGE_ELDER) && !ghost->hasCompletedQuestsBitSet(PlayerQuestData::FS_VILLAGE_ELDER)) {
-			playerCreature->teleport(newPosX, getZone()->getHeight(newPosX, newPosY), newPosY, 0);
-			playerCreature->sendSystemMessage("@base_player:fs_village_unavailable");
-		} else if (playerCreature->isInCombat()) {
-			playerCreature->teleport(newPosX, getZone()->getHeight(newPosX, newPosY), newPosY, 0);
-			playerCreature->sendSystemMessage("@base_player:fs_village_no_combat");
-		}
+		playerCreature->teleport(newPosX, getZone()->getHeight(newPosX, newPosY), newPosY, 0);
+		playerCreature->sendSystemMessage("@base_player:fs_village_unavailable");
 	}
 }
