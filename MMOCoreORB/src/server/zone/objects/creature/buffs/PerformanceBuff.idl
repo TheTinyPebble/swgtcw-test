@@ -1,6 +1,6 @@
 /*
-				Copyright <SWGEmu>
-		See file COPYING for copying conditions.*/
+                Copyright <SWGEmu>
+        See file COPYING for copying conditions.*/
 
 package server.zone.objects.creature.buffs;
 
@@ -9,21 +9,23 @@ import server.zone.objects.creature.buffs.Buff;
 include server.zone.objects.creature.buffs.BuffType;
 
 class PerformanceBuff extends Buff {
-	protected float strength;
-	protected int type;
+    protected float strength;
+    protected int type;
+    protected int buffDuration;
 
-	public PerformanceBuff(CreatureObject creo, unsigned int buffCRC, float value, int duration, int typeOfBuff) {
-		super(creo, buffCRC, duration, BuffType.PERFORMANCE);
-		strength = value;
-		type = typeOfBuff;
-	}
+    public PerformanceBuff(CreatureObject creo, unsigned int buffCRC, float value, int duration, int typeOfBuff) {
+        super(creo, buffCRC, duration, BuffType.PERFORMANCE);
+        strength = value;
+        type = typeOfBuff;
+        buffDuration = duration;
+    }
 
-	public native void activate(boolean applyModifiers);
+    public native void activate(boolean applyModifiers);
 
-	@read
-	public float getBuffStrength() {
-		return strength;
-	}
+    @read
+    public float getBuffStrength() {
+        return strength;
+    }
 
-	public native void deactivate(boolean removeModifiers);
+    public native void deactivate(boolean removeModifiers);
 }

@@ -1244,7 +1244,7 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 		player->addBuff(pvpDebuff);
 	}
 
-	player->removeAllSkillModsOfType(SkillModManager::BUFF,true);//buff removal on death
+	//player->removeAllSkillModsOfType(SkillModManager::BUFF,true);//buff removal on death
 
 
 	Reference<Task*> task = new PlayerIncapacitationRecoverTask(player, true);
