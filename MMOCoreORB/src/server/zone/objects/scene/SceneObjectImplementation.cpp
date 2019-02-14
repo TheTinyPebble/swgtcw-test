@@ -35,6 +35,7 @@
 #include "server/zone/objects/scene/components/ZoneComponent.h"
 #include "server/zone/objects/scene/components/ObjectMenuComponent.h"
 #include "server/zone/objects/scene/components/LuaObjectMenuComponent.h"
+#include "server/zone/objects/scene/components/LuaAttributeListComponent.h"
 #include "server/zone/objects/scene/components/ContainerComponent.h"
 #include "server/zone/objects/scene/components/LuaContainerComponent.h"
 //#include "PositionUpdateTask.h"
@@ -190,24 +191,44 @@ void SceneObjectImplementation::createComponents() {
 		}
 
 		createObjectMenuComponent();
-
-		String attributeListComponentName = templateObject->getAttributeListComponent();
-		if (!attributeListComponentName.isEmpty()) {
-			attributeListComponent = ComponentManager::instance()->getComponent<AttributeListComponent*>(attributeListComponentName);
-
-			if (attributeListComponent == NULL) {
-				info("attributeList component null for " + templateObject->getFullTemplateString());
-			}
-		}
-
+		createAttributeListComponent();
 		createContainerComponent();
 
-	} else
-		error("NULL TEMPLATE OBJECT");
+		} else
+			error("NULL TEMPLATE OBJECT");
 
 	if (zoneComponent == NULL) {
 		zoneComponent = ComponentManager::instance()->getComponent<ZoneComponent*>("ZoneComponent");
 	}
+}
+
+void SceneObjectImplementation::createAttributeListComponent()
+{
+    setAttributeListComponent(templateObject->getAttributeListComponent());
+}
+
+void SceneObjectImplementation::setAttributeListComponent(const String& name)
+{
+    if (templateObject != NULL) {
+        String attributeListComponentName = templateObject->getAttributeListComponent();
+        if (!attributeListComponentName.isEmpty()) {
+            attributeListComponent = ComponentManager::instance()->getComponent<AttributeListComponent*>(name);
+            if (attributeListComponent == NULL) {
+                Lua* lua = DirectorManager::instance()->getLuaInstance();
+                LuaObject test = lua->getGlobalObject(name);
+
+                if (test.isValidTable()) {
+                    attributeListComponent = new LuaAttributeListComponent(name);
+                } 
+                else 
+                {
+                    error("ObjectMenuComponent not found: '" + name + "' for " + templateObject->getFullTemplateString());
+                }
+
+                test.pop();
+            }
+        }
+    }
 }
 
 void SceneObjectImplementation::close(SceneObject* client) {
