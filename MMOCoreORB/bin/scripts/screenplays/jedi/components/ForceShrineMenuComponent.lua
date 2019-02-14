@@ -24,7 +24,7 @@ function ForceShrineMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selec
 		else
 			self:doMeditate(pObject, pPlayer)
 		end
-	elseif (selectedID == 121 and (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice") or CreatureObject(pPlayer):hasSkill("dark_padawan_novice")) then
+	elseif (selectedID == 121 and (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice") or CreatureObject(pPlayer):hasSkill("dark_padawan_novice"))) then
 		self:recoverRobe(pPlayer)
 	end
 
