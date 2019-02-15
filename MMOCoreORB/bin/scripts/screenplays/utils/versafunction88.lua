@@ -21,16 +21,13 @@ function Versafunction88AttributeListComponent:fillAttributeList(pALM, pCreature
 	local ALM = LuaAttributeListMessage(pALM)
 	
 	for i = 1, #Versafunction88ScreenPlayStates do
-		print(CreatureObject(pCreature):hasScreenPlayState(Versafunction88ScreenPlayStates[i][1], Versafunction88ScreenPlayString))
 		if (CreatureObject(pCreature):hasScreenPlayState(Versafunction88ScreenPlayStates[i][1], Versafunction88ScreenPlayString)) then
-			print("test")
 			self[Versafunction88ScreenPlayStates[i][2]](pALM, pCreature, pObject)
 			return
 		end
 	end
 	
 	ALM:insertNewAttribute("Please select a display to show information on your Versafunction88 Datapad.", "versafunction_no_display") -- the 2nd value has to derive from obj_attr_n.stf
-	
 end
 
 function Versafunction88AttributeListComponent.tokenDisplay(pALM, pCreature, pObject)
@@ -106,6 +103,6 @@ function Versafunction88MenuComponent:displaySuiCallback(pPlayer, pSui, eventInd
 	for i = 1, #Versafunction88ScreenPlayStates do
 		CreatureObject(pPlayer):removeScreenPlayState(Versafunction88ScreenPlayStates[i][1], Versafunction88ScreenPlayString)
 	end
-	print(chosenDisplay, Versafunction88ScreenPlayStates[chosenDisplay][1])
+	
 	CreatureObject(pPlayer):setScreenPlayState(Versafunction88ScreenPlayStates[chosenDisplay][1], Versafunction88ScreenPlayString)
 end
