@@ -5,6 +5,7 @@ StaffTools = {
 		{ "Elite Spawns Satus", "openEliteSpawnStatus" },
 		{ "Test ODST", "openOdstConfig" },
 		{ "Test Versafunction", "testVersaFunction"},
+		{ "Test Event Spawn Manager", "testESM" },
 	}
 }
 
@@ -62,6 +63,10 @@ end
 function StaffTools.testVersaFunction(pPlayer)
 	writeScreenPlayData(pPlayer, "vendorToken", "event_token", tonumber(readScreenPlayData(pPlayer, "vendorToken", "event_token")) + 5)
 	writeScreenPlayData(pPlayer, "vendorToken", "test_token", tonumber(readScreenPlayData(pPlayer, "vendorToken", "test_token")) + 1)
+end
+
+function StaffTools.testESM(pPlayer)
+	eventSpawnManager:openSUI(pPlayer)
 end
 
 function StaffTools:suiShuttleDropoffCallback(pPlayer, pSui, eventIndex, args)

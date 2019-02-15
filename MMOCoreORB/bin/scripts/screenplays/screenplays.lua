@@ -61,6 +61,7 @@ includeFile("utils/versafunction88.lua")
 includeFile("tools/tools.lua")
 includeFile("tools/shuttle_dropoff.lua")
 includeFile("tools/firework_event.lua")
+includeFile("tools/event_spawn_manager.lua")
 
 includeFile("trainers/trainerData.lua")
 includeFile("trainers/skillTrainer.lua")
