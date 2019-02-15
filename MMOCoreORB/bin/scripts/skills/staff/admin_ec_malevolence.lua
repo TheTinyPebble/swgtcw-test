@@ -52,7 +52,8 @@ admin_ec_malevolence = {
 		"broadcastPlanet",  		-- Broadcast Messaage
 		"createCreature", 			-- Create an Creature
 		"createNPC",  				-- Create an NPC
-		"setName" 					-- Sets the name of the targeted object. This can be used on NPCs as well as Players, so they need to be careful.
+		"setName", 					-- Sets the name of the targeted object. This can be used on NPCs as well as Players, so they need to be careful.
+		"gmEventTools",				-- Custom event tools
 	},
 	skillModifiers = {},
 	schematicsGranted = {},
