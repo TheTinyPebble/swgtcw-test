@@ -36,21 +36,26 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 		return
 	end
 	
-	local skillManager = LuaSkillManager()
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 	
-	if (not skillManager:canLearnSkill(pPlayer, "jedi_padawan_novice", true)) then
+	if (pGhost == nil) then
+		return
+	end
+	
+	local skillManager = LuaSkillManager()
+	local pSkill = skillManager:getSkill("jedi_padawan_novice")
+	
+	local skillObject = LuaSkill(pSkill)
+	local pointsReq = skillObject:getSkillPointsRequired()
+	local freePoints = PlayerObject(pGhost):getSkillPoints()
+	
+	if (pointsReq >= freePoints) then
 		CreatureObject(pPlayer):sendSystemMessage("You need to free up 50 skill points to continue.")
 		return
 	end
 	
 	if (CreatureObject(pPlayer):getFaction() == 0) then
 		CustomJediManagerCommon:sendFactionChoiceSui(pPlayer)
-		return
-	end
-	
-	local pGhost = CreatureObject(pPlayer):getPlayerObject()
-	
-	if (pGhost == nil) then
 		return
 	end
 	
