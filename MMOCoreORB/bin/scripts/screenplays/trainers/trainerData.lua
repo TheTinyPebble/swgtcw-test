@@ -717,7 +717,7 @@ trainerSkills = {
 	},
 
 	-- Jedi trainers
-	trainer_padawan = {
+	trainer_padawan_light = {
 		"jedi_padawan_novice",
 		"jedi_padawan_master",
 		"jedi_padawan_saber_01",
@@ -736,6 +736,27 @@ trainerSkills = {
 		"jedi_padawan_force_manipulation_02",
 		"jedi_padawan_force_manipulation_03",
 		"jedi_padawan_force_manipulation_04"
+	},
+	
+	trainer_padawan_dark = {
+		"dark_padawan_novice",
+		"dark_padawan_master",
+		"dark_padawan_saber_01",
+		"dark_padawan_saber_02",
+		"dark_padawan_saber_03",
+		"dark_padawan_saber_04",
+		"dark_padawan_healing_01",
+		"dark_padawan_healing_02",
+		"dark_padawan_healing_03",
+		"dark_padawan_healing_04",
+		"dark_padawan_force_power_01",
+		"dark_padawan_force_power_02",
+		"dark_padawan_force_power_03",
+		"dark_padawan_force_power_04",
+		"dark_padawan_force_manipulation_01",
+		"dark_padawan_force_manipulation_02",
+		"dark_padawan_force_manipulation_03",
+		"dark_padawan_force_manipulation_04"
 	},
 	
 	trainer_jedi_defender_light = {

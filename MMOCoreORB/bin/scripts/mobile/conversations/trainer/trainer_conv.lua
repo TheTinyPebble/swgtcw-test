@@ -146,7 +146,8 @@ createTrainerConversationTemplate("tailorTrainerConvoTemplate", "trainer_tailor"
 createTrainerConversationTemplate("unarmedTrainerConvoTemplate", "trainer_unarmed")
 createTrainerConversationTemplate("weaponsmithTrainerConvoTemplate", "trainer_weaponsmith")
 
-createTrainerConversationTemplate("jediPadawanTrainerConvoTemplate", "trainer_padawan")
+createTrainerConversationTemplate("jediPadawanLightTrainerConvoTemplate", "trainer_padawan_light")
+createTrainerConversationTemplate("jediPadawanDarkTrainerConvoTemplate", "trainer_padawan_dark")
 createTrainerConversationTemplate("jediDefenderLightTrainerConvoTemplate", "trainer_jedi_defender_light")
 createTrainerConversationTemplate("jediSabersLightTrainerConvoTemplate", "trainer_jedi_sabers_light")
 createTrainerConversationTemplate("jediHealerLightTrainerConvoTemplate", "trainer_jedi_healer_light")
