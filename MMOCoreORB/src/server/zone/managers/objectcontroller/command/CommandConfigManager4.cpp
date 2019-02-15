@@ -110,6 +110,7 @@
 #include "server/zone/objects/creature/commands/UnsnoopCommand.h"
 #include "server/zone/objects/creature/commands/UseReconDroneCommand.h"
 #include "server/zone/objects/creature/commands/UseSkillBuffCommand.h"
+#include "server/zone/objects/creature/commands/VendorTokenTransferCommand.h"
 #include "server/zone/objects/creature/commands/VentriloquismCommand.h"
 #include "server/zone/objects/creature/commands/ToggleCombatTauntsCommand.h"
 #include "server/zone/objects/creature/commands/VertFurnitureCommand.h"
@@ -254,6 +255,7 @@ void CommandConfigManager::registerCommands4() {
 	commandFactory.registerCommand<UnsnoopCommand>(String("unsnoop").toLowerCase());
 	commandFactory.registerCommand<UseReconDroneCommand>(String("useReconDrone").toLowerCase());
 	commandFactory.registerCommand<UseSkillBuffCommand>(String("useSkillBuff").toLowerCase());
+	commandFactory.registerCommand<VendorTokenTransferCommand>(String("vendorTokenTransfer").toLowerCase());
 	commandFactory.registerCommand<VentriloquismCommand>(String("ventriloquism").toLowerCase());
 	commandFactory.registerCommand<ToggleCombatTauntsCommand>(String("toggleCombatTaunts").toLowerCase());
 	commandFactory.registerCommand<VertFurnitureCommand>(String("vertFurniture").toLowerCase());
