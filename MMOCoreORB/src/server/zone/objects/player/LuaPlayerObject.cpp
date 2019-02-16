@@ -81,6 +81,9 @@ Luna<LuaPlayerObject>::RegType LuaPlayerObject::Register[] = {
 		{ "getFrsCouncil", &LuaPlayerObject::getFrsCouncil },
 		{ "startSlicingSession", &LuaPlayerObject::startSlicingSession },
 		{ "setVisibility", &LuaPlayerObject::setVisibility },
+		{ "getSkillPoints", &LuaPlayerObject::getSkillPoints },
+		{ "getTotalOwnedStructureCount", &LuaPlayerObject::getTotalOwnedStructureCount },
+		{ "getOwnedStructure", &LuaPlayerObject::getOwnedStructure },
 		{ 0, 0 }
 };
 
@@ -732,4 +735,24 @@ int LuaPlayerObject::startSlicingSession(lua_State* L) {
 	session->initalizeSlicingMenu(player, objToSlice);
 
 	return 0;
+}
+
+int LuaPlayerObject::getSkillPoints(lua_State* L) {
+	lua_pushinteger(L, realObject->getSkillPoints());
+
+	return 1;
+}
+
+int LuaPlayerObject::getTotalOwnedStructureCount(lua_State* L) {
+	lua_pushinteger(L, realObject->getTotalOwnedStructureCount());
+
+	return 1;
+}
+
+int LuaPlayerObject::getOwnedStructure(lua_State* L) {
+	int structure = lua_tointeger(L, -1);
+	
+	lua_pushinteger(L, realObject->getOwnedStructure(structure));
+
+	return 1;
 }

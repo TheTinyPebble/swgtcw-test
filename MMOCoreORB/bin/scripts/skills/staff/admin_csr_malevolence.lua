@@ -82,7 +82,8 @@ admin_csr_malevolence = {
 		"createSpawningElement",	-- Creates a spawning element based on a predefined script at the player's current location
 		"createSpawningElementWithDifficulty",	-- Creates a spawning element based on a predefined script with a defined dificulty.
 		"setName",								-- Sets an object or player's name
-		"spawnStatus"							-- ?
+		"spawnStatus",							-- ?
+		"gmStaffTools"							-- Custom Staff Tools
 	},
 	skillModifiers = {},
 	schematicsGranted = {},

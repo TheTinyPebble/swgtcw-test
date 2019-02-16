@@ -294,10 +294,12 @@
 #include "server/zone/objects/creature/commands/GmForceCommandCommand.h"
 #include "server/zone/objects/creature/commands/GmCreateClassResourceCommand.h"
 #include "server/zone/objects/creature/commands/GmCreateSpecificResourceCommand.h"
+#include "server/zone/objects/creature/commands/GmEventToolsCommand.h"
 #include "server/zone/objects/creature/commands/GmForceRankCommand.h"
 #include "server/zone/objects/creature/commands/GmFsVillageCommand.h"
 #include "server/zone/objects/creature/commands/GmJediStateCommand.h"
 #include "server/zone/objects/creature/commands/GmReviveCommand.h"
+#include "server/zone/objects/creature/commands/GmStaffToolsCommand.h"
 #include "server/zone/objects/creature/commands/GotoCommand.h"
 #include "server/zone/objects/creature/commands/GrantBadgeCommand.h"
 #include "server/zone/objects/creature/commands/GrantPadawanTrialsEligibilityCommand.h"
@@ -698,10 +700,12 @@ void CommandConfigManager::registerCommands2() {
 	commandFactory.registerCommand<GmForceCommandCommand>(String("gmForceCommand").toLowerCase());
 	commandFactory.registerCommand<GmCreateClassResourceCommand>(String("gmCreateClassResource").toLowerCase());
 	commandFactory.registerCommand<GmCreateSpecificResourceCommand>(String("gmCreateSpecificResource").toLowerCase());
+	commandFactory.registerCommand<GmEventToolsCommand>(String("gmEventTools").toLowerCase());
 	commandFactory.registerCommand<GmForceRankCommand>(String("gmForceRank").toLowerCase());
 	commandFactory.registerCommand<GmFsVillageCommand>(String("gmFsVillage").toLowerCase());
 	commandFactory.registerCommand<GmJediStateCommand>(String("gmJediState").toLowerCase());
 	commandFactory.registerCommand<GmReviveCommand>(String("gmRevive").toLowerCase());
+	commandFactory.registerCommand<GmStaffToolsCommand>(String("gmStaffTools").toLowerCase());
 	commandFactory.registerCommand<GotoCommand>(String("goto").toLowerCase());
 	commandFactory.registerCommand<GrantBadgeCommand>(String("grantBadge").toLowerCase());
 	commandFactory.registerCommand<GrantPadawanTrialsEligibilityCommand>(String("grantPadawanTrialsEligibility").toLowerCase());

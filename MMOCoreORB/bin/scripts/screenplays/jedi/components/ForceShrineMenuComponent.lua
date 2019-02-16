@@ -7,7 +7,7 @@ function ForceShrineMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResp
 		menuResponse:addRadialMenuItem(120, 3, "@jedi_trials:meditate") -- Meditate
 	end
 
-	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice")) then
+	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice") or CreatureObject(pPlayer):hasSkill("dark_padawan_novice")) then
 		menuResponse:addRadialMenuItem(121, 3, "@force_rank:recover_jedi_items") -- Recover Jedi Items
 	end
 
@@ -24,7 +24,7 @@ function ForceShrineMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selec
 		else
 			self:doMeditate(pObject, pPlayer)
 		end
-	elseif (selectedID == 121 and CreatureObject(pPlayer):hasSkill("jedi_padawan_novice")) then
+	elseif (selectedID == 121 and (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice") or CreatureObject(pPlayer):hasSkill("dark_padawan_novice"))) then
 		self:recoverRobe(pPlayer)
 	end
 
@@ -36,21 +36,26 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 		return
 	end
 	
-	local skillManager = LuaSkillManager()
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 	
-	if (not skillManager:canLearnSkill(pPlayer, "jedi_padawan_novice", true)) then
+	if (pGhost == nil) then
+		return
+	end
+	
+	local skillManager = LuaSkillManager()
+	local pSkill = skillManager:getSkill("jedi_padawan_novice")
+	
+	local skillObject = LuaSkill(pSkill)
+	local pointsReq = skillObject:getSkillPointsRequired()
+	local freePoints = PlayerObject(pGhost):getSkillPoints()
+	
+	if (pointsReq >= freePoints) then
 		CreatureObject(pPlayer):sendSystemMessage("You need to free up 50 skill points to continue.")
-		--return
+		return
 	end
 	
 	if (CreatureObject(pPlayer):getFaction() == 0) then
 		CustomJediManagerCommon:sendFactionChoiceSui(pPlayer)
-		return
-	end
-	
-	local pGhost = CreatureObject(pPlayer):getPlayerObject()
-	
-	if (pGhost == nil) then
 		return
 	end
 	
@@ -59,7 +64,6 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 	sui.setPrompt("@jedi_trials:padawan_trials_completed")
 	sui.sendTo(pPlayer)
 	
-	awardSkill(pPlayer, "jedi_padawan_novice")
 	awardSkill(pPlayer, "force_title_jedi_rank_01")
 	CreatureObject(pPlayer):playEffect("clienteffect/trap_electric_01.cef", "")
 	CreatureObject(pPlayer):playMusicMessage("sound/music_become_jedi.snd")
@@ -79,8 +83,10 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 	
 	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL) then
 		PlayerObject(pGhost):addWaypoint("yavin4", "Light Jedi Enclave", "", -5575, 4905, WAYPOINTYELLOW, true, true, 0)
+		awardSkill(pPlayer, "jedi_padawan_novice")
 	else
 		PlayerObject(pGhost):addWaypoint("yavin4", "Dark Jedi Enclave", "", 5079, 305, WAYPOINTYELLOW, true, true, 0)
+		awardSkill(pPlayer, "dark_padawan_novice")
 	end
 end
 

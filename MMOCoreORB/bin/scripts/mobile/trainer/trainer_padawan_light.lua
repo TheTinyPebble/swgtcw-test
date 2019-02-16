@@ -1,4 +1,4 @@
-trainer_padawan = Creature:new {
+trainer_padawan_light = Creature:new {
 	objectName = "@mob/creature_names:theme_asajj",
 	socialGroup = "rebel",
 	faction = "rebel",
@@ -28,8 +28,8 @@ trainer_padawan = Creature:new {
 	templates = {"object/mobile/dressed_ventress.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "jediPadawanTrainerConvoTemplate",
+	conversationTemplate = "jediPadawanLightTrainerConvoTemplate",
 	attacks = {}
 }
 
-CreatureTemplates:addCreatureTemplate(trainer_padawan, "trainer_padawan")
+CreatureTemplates:addCreatureTemplate(trainer_padawan_light, "trainer_padawan_light")

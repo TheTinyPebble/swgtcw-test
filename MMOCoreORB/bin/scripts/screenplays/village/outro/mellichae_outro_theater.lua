@@ -131,7 +131,7 @@ function MellichaeOutroTheater:onMellichaeKilled(pMellichae, pKiller)
 
 	dropObserver(OBJECTDESTRUCTION, self.taskName, "onPlayerKilled", pOwner)
 	QuestManager.completeQuest(pOwner, QuestManager.quests.FS_THEATER_FINAL)
-	CreatureObject(pOwner):sendSystemMessage("Congrats, you killed Melly-poo. This has been a test message.")
+	CreatureObject(pOwner):sendSystemMessage("You have just taken your first step towards something greater.")
 	CustomJediManagerCommon.setJediProgressionScreenPlayState(pOwner, CUSTOM_JEDI_PROGRESSION_DEFEATED_MELLICHAE) -- Killed him.
 	CustomUnlock:setCurrentStep(pOwner, 9)
 	

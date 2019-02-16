@@ -55,11 +55,13 @@ includeFile("themepark/smc/themeParkSmcVurleneAujante.lua")
 
 -- Screenplay utilities
 includeFile("utils/quest_spawner.lua")
+includeFile("utils/versafunction88.lua")
 
 -- Staff tools
 includeFile("tools/tools.lua")
 includeFile("tools/shuttle_dropoff.lua")
 includeFile("tools/firework_event.lua")
+includeFile("tools/event_spawn_manager.lua")
 
 includeFile("trainers/trainerData.lua")
 includeFile("trainers/skillTrainer.lua")

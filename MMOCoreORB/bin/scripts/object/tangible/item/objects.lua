@@ -340,3 +340,8 @@ object_tangible_shared_clothing_sea_removal_tool = SharedTangibleObjectTemplate:
 	clientTemplateFileName = "object/tangible/item/shared_clothing_sea_removal_tool.iff"
 }
 ObjectTemplates:addClientTemplate(object_tangible_shared_clothing_sea_removal_tool, "object/tangible/item/shared_clothing_sea_removal_tool.iff")
+
+object_tangible_shared_versafunction88 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/item/shared_versafunction88.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_shared_versafunction88, "object/tangible/item/shared_versafunction88.iff")
