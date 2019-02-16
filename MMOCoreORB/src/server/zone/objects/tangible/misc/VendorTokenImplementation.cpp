@@ -22,7 +22,7 @@ void VendorTokenImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuR
 	SceneObject* sceno = cast <SceneObject*>(_this.getReferenceUnsafeStaticCast());
 	String fullTemplate = getObjectTemplate()->getFullTemplateString();
 	
-	menuResponse->addRadialMenuItem(20,3,"Split Tokens");
+	menuResponse->addRadialMenuItem(40,3,"Split Tokens");
 }
 
 int VendorTokenImplementation::handleObjectMenuSelect(CreatureObject* player, byte selectedID) {

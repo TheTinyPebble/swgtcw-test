@@ -1,19 +1,26 @@
 Versafunction88ScreenPlayString = "versafunction88"
-Versafunction88ScreenPlayStates = { --Used to select what to display on /examine.
+Versafunction88ScreenPlayStates = { --Used to select what to display on the '/examine' side bar.
 	{1, "tokenDisplay", "Display Tokens"},
 	{2, "factionControlDisplay", "Display Faction Control"},
 }
 
 Versafunction88FactionZones = {
 	"corellia",
+	"dantooine",
+	--"dathomir",
+	--"endor",
+	"lok",
 	"naboo",
+	"rori",
+	"talus",
 	"tatooine",
+	--"yavin4",
 }
 
 Versafunction88TokenData = {
-		{"vendorToken", "event_token"},
-		{"vendorToken", "test_token"},
-	}
+	{"vendorToken", "event_token"},
+	--{"vendorToken", "test_token"},
+}
 
 Versafunction88AttributeListComponent = {}
 
@@ -27,11 +34,14 @@ function Versafunction88AttributeListComponent:fillAttributeList(pALM, pCreature
 		end
 	end
 	
-	ALM:insertNewAttribute("Please select a display to show information on your Versafunction88 Datapad.", "versafunction_no_display") -- the 2nd value has to derive from obj_attr_n.stf
+	ALM:insertNewAttribute("versafunction_display", "Information")
+	ALM:insertNewAttribute("versafunction_instructions", "Please select a display to show information on your Versafunction88 Datapad.") -- the 2nd value has to derive from obj_attr_n.stf
 end
 
 function Versafunction88AttributeListComponent.tokenDisplay(pALM, pCreature, pObject)
 	local ALM = LuaAttributeListMessage(pALM)
+	
+	ALM:insertNewAttribute("versafunction_display", "Stored Tokens")
 	
 	for i = 1, #Versafunction88TokenData do
 		local tokenData = tonumber(readScreenPlayData(pCreature, Versafunction88TokenData[i][1], Versafunction88TokenData[i][2]))
@@ -39,12 +49,14 @@ function Versafunction88AttributeListComponent.tokenDisplay(pALM, pCreature, pOb
 			tokenData = 0
 		end
 		
-		ALM:insertNewAttribute(tokenData, "versafunction_token" .. i)
+		ALM:insertNewAttribute("versafunction_token" .. i, tokenData)
 	end
 end
 
 function Versafunction88AttributeListComponent.factionControlDisplay(pALM, pCreature, pObject)
 	local ALM = LuaAttributeListMessage(pALM)
+	
+	ALM:insertNewAttribute("versafunction_display", "Faction Control")
 	
 	local controllingFaction = ""
 	for i = 1, #Versafunction88FactionZones do
