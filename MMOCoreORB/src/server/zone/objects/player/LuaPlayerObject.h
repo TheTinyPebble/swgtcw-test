@@ -89,6 +89,8 @@ namespace player {
 		int startSlicingSession(lua_State* L);
 		int setVisibility(lua_State* L);
 		int getSkillPoints(lua_State* L);
+		int getTotalOwnedStructureCount(lua_State* L);
+		int getOwnedStructure(lua_State* L);
 
 	private:
 		// The pointer to the 'real object' defined in object.cc

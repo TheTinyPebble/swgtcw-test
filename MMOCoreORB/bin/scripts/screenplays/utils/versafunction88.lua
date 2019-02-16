@@ -67,11 +67,18 @@ Versafunction88MenuComponent = {}
 function Versafunction88MenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
 	
-	menuResponse:addRadialMenuItem(120, 3, "Set Display")	
+	menuResponse:addRadialMenuItem(120, 3, "Set Display")
+	menuResponse:addRadialMenuItem(121, 3, "Lot Information")
 end
 
 function Versafunction88MenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedID)
 	if (pPlayer == nil or pObject == nil) then
+		return 0
+	end
+	
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+	
+	if (pGhost == nil) then
 		return 0
 	end
 	
@@ -87,6 +94,32 @@ function Versafunction88MenuComponent:handleObjectMenuSelect(pObject, pPlayer, s
 			sui.add(Versafunction88ScreenPlayStates[i][3], "")
 		end
 		
+		sui.sendTo(pPlayer)
+	end
+	if (selectedID == 121) then
+		local sui = SuiMessageBox.new("Versafunction88MenuComponent", "lotInformationCallback")
+		sui.setTitle("Lot Information")
+		sui.setOkButtonText("Close")
+		sui.hideCancelButton()
+		sui.setProperty("", "Size", "250,350")
+		local prompt = ""
+		
+		for i = 1, PlayerObject(pGhost):getTotalOwnedStructureCount() do
+			local pStructure = getSceneObject(PlayerObject(pGhost):getOwnedStructure(i - 1))
+			
+			prompt = prompt .. "Structure " .. i .. ": "
+			
+			if (pStructure == nil) then
+				prompt = prompt .. "empty structure\n\n"
+			else
+				local structure = LuaSceneObject(pStructure)
+			
+				prompt = prompt .. structure:getCustomObjectName() .. "\n"
+				prompt = prompt .. "Type: " .. structure:getObjectName() .. "\n"
+				prompt = prompt .. "Location - Planet: " .. structure:getZoneName():gsub("^%l", string.upper) .. ", X: " .. math.floor(structure:getWorldPositionX()) .. ", Y: " .. math.floor(structure:getWorldPositionY()) .. "\n\n"
+			end
+		end
+		sui.setPrompt(prompt)
 		sui.sendTo(pPlayer)
 	end
 end
@@ -105,4 +138,7 @@ function Versafunction88MenuComponent:displaySuiCallback(pPlayer, pSui, eventInd
 	end
 	
 	CreatureObject(pPlayer):setScreenPlayState(Versafunction88ScreenPlayStates[chosenDisplay][1], Versafunction88ScreenPlayString)
+end
+
+function Versafunction88MenuComponent:lotInformationCallback(pPlayer, pSui, eventIndex)
 end

@@ -41,7 +41,10 @@ public:
 				String commandType;
 				args.getStringToken(commandType);
 				
-				if (commandType.beginsWith("eventtoken")) {
+				if (commandType.beginsWith("help")) {
+					creature->sendSystemMessage("SYNTAX: /gmEventTools");
+					creature->sendSystemMessage("SYNTAX: /gmEventTools eventtoken [<quantity>] [<range>]");
+				} else if (commandType.beginsWith("eventtoken")) {
 					
 					int quantity = 1;
 					if (args.hasMoreTokens())
