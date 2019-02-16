@@ -22,6 +22,8 @@ admin_server_admin_02 = {
 	skillAbility = {},
 	commands = {
 		"cityInfo",
+		"gmEventTools",
+		"gmStaffTools",
 		"resendLoginMessageToAll",
 		"setLoginMessage",
 		"setLoginTitle",
