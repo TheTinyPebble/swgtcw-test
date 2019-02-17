@@ -148,8 +148,9 @@ public:
 
 		int mindCostNew = (healPower/2);
 		if (creature->getHAM(CreatureAttribute::MIND) < mindCostNew) {
-			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
-			return GENERALERROR;
+			healPower = mindCostNew/2;
+			//creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
+			//return GENERALERROR;
 		}
 
 		int healedMind = creatureTarget->healDamage(creature, CreatureAttribute::MIND, healPower);

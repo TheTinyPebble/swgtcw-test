@@ -49,18 +49,18 @@ Intimidate1Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
-	
+
 	accuracySkillMod = "intimidate",
 
 	stateEffects = {
-	  StateEffect( 
-		INTIMIDATE_EFFECT, 
-		{}, 
-		{}, 
+	  StateEffect(
+		INTIMIDATE_EFFECT,
 		{},
-		100, 
-		0, 
-		30 
+		{},
+		{},
+		100,
+		0,
+		30
 	  )
 	},
 
@@ -68,9 +68,9 @@ Intimidate1Command = {
 	animation = "intimidate",
 	effectString = "clienteffect/combat_special_attacker_intimidate.cef",
 	range = 24,
+	MindCost = 150,
 
 	poolsToDamage = NO_ATTRIBUTE
 }
 
 AddCommand(Intimidate1Command)
-
