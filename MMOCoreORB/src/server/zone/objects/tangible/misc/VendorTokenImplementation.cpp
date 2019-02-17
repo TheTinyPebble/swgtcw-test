@@ -44,7 +44,7 @@ int VendorTokenImplementation::handleObjectMenuSelect(CreatureObject* player, by
 	SceneObject* sceno = cast <SceneObject*>(_this.getReferenceUnsafeStaticCast());
 	String fullTemplate = sceno->getObjectTemplate()->getFullTemplateString();
 	int itemCount = 0;
-
+	
 	if (selectedID == 40) {
 		if (!isASubChildOf(inventory)) {
 			player->sendSystemMessage("You cannot split items if they are not in your inventory.");
@@ -59,8 +59,8 @@ int VendorTokenImplementation::handleObjectMenuSelect(CreatureObject* player, by
 		ManagedReference<SuiTransferBox*> transfer = new SuiTransferBox(player, SuiWindowType::OBJECT_NAME);
 		transfer->setPromptTitle("Split Items");
 		transfer->setPromptText("Select how many items go into each stack.");
-		transfer->addFrom("Original Stack", "0", "0", "1");
-		transfer->addTo("New Stack", String::valueOf(getUseCount()), String::valueOf(getUseCount()), "1");
+		transfer->addFrom("Original Stack", String::valueOf(getUseCount()), String::valueOf(getUseCount()), "1");
+		transfer->addTo("New Stack", "0", "0", "1");
 		transfer->setUsingObject(_this.getReferenceUnsafeStaticCast());
 		transfer->setForceCloseDistance(1024.f);
 		transfer->setCallback(new SplitTokenSuiCallback(player->getZoneServer(), sceno));
