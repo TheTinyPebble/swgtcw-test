@@ -1036,7 +1036,7 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 	if (damageType % 3 != 0 && newValue < 0) // secondaries never should go negative
 		newValue = 0;
 
-	if (damageType == 6 && newValue <= 0) //no mind incaps
+	if (isPlayerCreature() && damageType == 6 && newValue <= 0) //no mind incaps
 		newValue = 1;
 
 	setHAM(damageType, newValue, notifyClient);
@@ -2602,11 +2602,18 @@ void CreatureObjectImplementation::notifyPostureChange(int newPosture) {
 
 void CreatureObjectImplementation::updateGroupMFDPositions() {
 	Reference<CreatureObject*> creo = _this.getReferenceUnsafeStaticCast();
+	auto group = this->group;
 
 	if (group != nullptr) {
 		GroupList* list = group->getGroupList();
 		if (list != nullptr) {
-			ClientMfdStatusUpdateMessage* msg = new ClientMfdStatusUpdateMessage(creo);
+			auto zone = getZone();
+
+			if (zone == nullptr) {
+				return;
+			}
+
+			ClientMfdStatusUpdateMessage* msg = new ClientMfdStatusUpdateMessage(creo, zone->getZoneName());
 
 #ifdef LOCKFREE_BCLIENT_BUFFERS
 			Reference<BasePacket*> pack = msg;
@@ -2614,7 +2621,7 @@ void CreatureObjectImplementation::updateGroupMFDPositions() {
 
 			for (int i = 0; i < list->size(); i++) {
 
-				Reference<CreatureObject*> member = list->get(i).get();
+				Reference<CreatureObject*> member = list->getSafe(i).get();
 
 				if (member == nullptr || creo == member || !member->isPlayerCreature())
 					continue;

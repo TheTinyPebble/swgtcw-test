@@ -181,10 +181,11 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 
 			killedGhost->decreaseFactionStanding("imperial", 45);
 			float entBonus = 1.f;
+			float finalBonus;
 			entBonus = killerCreature->getSkillMod("ent_cw_gain");
-			entBonus = entBonus - 0.80;
-			(entBonus >= 1.f) ? entBonus = entBonus : entBonus = 1.f;
-			float finalXp = 1000.f * entBonus;
+			finalBonus = 1.f + (entBonus / 10.f);
+			(finalBonus >= 1.f) ? finalBonus = finalBonus : finalBonus = 1.f;
+			float finalXp = 1000.f * finalBonus;
 
 
 			playerManager->awardExperience(killerCreature, "gcw_currency_rebel", (int)(finalXp));
