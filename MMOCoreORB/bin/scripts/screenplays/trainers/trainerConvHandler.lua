@@ -33,7 +33,7 @@ function trainerConvHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, sele
 		return pConvScreen
 	end
 
-	if (trainerType == "trainer_jedi") then
+	if (string.match(trainerType, "jedi") or string.match(trainerType, "padawan")) then
 		isJediTrainer = true
 		stringTable = "@jedi_trainer:"
 	end
@@ -244,7 +244,11 @@ function trainerConvHandler:handleConfirmLearnScreen(pConvTemplate, pPlayer, pNp
 	end
 
 	local success = skillManager:awardSkill(pPlayer, skillName)
-
+	
+	if (skillName == "jedi_padawan_master" or skillName == "dark_padawan_master") then
+		awardSkill(pPlayer, "force_title_jedi_rank_02")
+	end
+	
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
 
