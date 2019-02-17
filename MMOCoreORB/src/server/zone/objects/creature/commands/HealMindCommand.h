@@ -117,11 +117,6 @@ public:
 			return GENERALERROR;
 		}
 
-		if (creature->getHAM(CreatureAttribute::MIND) < mindCost) {
-			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
-			return GENERALERROR;
-		}
-
 		if (creatureTarget->getHAM(CreatureAttribute::MIND) == 0 || !(creatureTarget->hasDamage(CreatureAttribute::MIND))) {
 			if (creatureTarget->isPlayerCreature()) {
 				StringIdChatParameter stringId("healing", "no_mind_to_heal_target"); //%NT has no mind to heal.
@@ -151,6 +146,12 @@ public:
 		// Check BF
 		healPower = (int) (healPower * creature->calculateBFRatio());
 
+		int mindCostNew = (healPower/2);
+		if (creature->getHAM(CreatureAttribute::MIND) < mindCostNew) {
+			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
+			return GENERALERROR;
+		}
+
 		int healedMind = creatureTarget->healDamage(creature, CreatureAttribute::MIND, healPower);
 
 		if (creature->isPlayerCreature()) {
@@ -161,24 +162,20 @@ public:
 		int mindWound = (int) healedMind * .05; // 5% of mind healed in wounds
 		int mindDamage = (int) healedMind* .5; //50% of mind healed as mind damage
 
-		if (creature->getHAM(CreatureAttribute::MIND) < mindDamage) {
-			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
-			return GENERALERROR;
-		}
+			creature->inflictDamage(creature, CreatureAttribute::MIND, mindDamage, false);
 
-		creature->inflictDamage(creature, CreatureAttribute::MIND, mindWound, false);
+			creature->addWounds(CreatureAttribute::MIND, mindWound, true, false);
+			creature->addWounds(CreatureAttribute::FOCUS, mindWound, true, false);
+			creature->addWounds(CreatureAttribute::WILLPOWER, mindWound, true, false);
 
-		creature->addWounds(CreatureAttribute::MIND, mindWound, true, false);
-		creature->addWounds(CreatureAttribute::FOCUS, mindWound, true, false);
-		creature->addWounds(CreatureAttribute::WILLPOWER, mindWound, true, false);
+			creature->addShockWounds(mindWound); // 5% of mind healed in bf
 
-		creature->addShockWounds(mindWound); // 5% of mind healed in bf
+			doAnimations(creature, creatureTarget);
 
-		doAnimations(creature, creatureTarget);
+			checkForTef(creature, creatureTarget);
 
-		checkForTef(creature, creatureTarget);
+			return SUCCESS;
 
-		return SUCCESS;
 	}
 
 };
