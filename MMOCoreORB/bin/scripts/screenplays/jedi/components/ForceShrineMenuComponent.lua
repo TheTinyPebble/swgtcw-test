@@ -64,11 +64,11 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 	sui.setPrompt("@jedi_trials:padawan_trials_completed")
 	sui.sendTo(pPlayer)
 	
-	awardSkill(pPlayer, "force_title_jedi_rank_01")
 	CreatureObject(pPlayer):playEffect("clienteffect/trap_electric_01.cef", "")
 	CreatureObject(pPlayer):playMusicMessage("sound/music_become_jedi.snd")
 	
 	PlayerObject(pGhost):setJediState(2)
+	awardSkill(pPlayer, "force_title_jedi_rank_01")
 	
 	local pInventory = SceneObject(pPlayer):getSlottedObject("inventory")
 	
