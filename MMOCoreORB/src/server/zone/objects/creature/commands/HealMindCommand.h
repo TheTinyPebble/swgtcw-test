@@ -147,7 +147,7 @@ public:
 		healPower = (int) (healPower * creature->calculateBFRatio());
 
 		int mindCostNew = (healPower/2);
-		if (creature->getHAM(CreatureAttribute::MIND) < mindCostNew) {
+		if (creature->getHAM(CreatureAttribute::MIND) < mindCostNew) { //Lowers heal amount if not enough mind available.
 			healPower = mindCostNew/2;
 			//creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
 			//return GENERALERROR;
