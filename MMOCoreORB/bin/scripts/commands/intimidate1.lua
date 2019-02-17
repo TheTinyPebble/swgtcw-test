@@ -68,7 +68,6 @@ Intimidate1Command = {
 	animation = "intimidate",
 	effectString = "clienteffect/combat_special_attacker_intimidate.cef",
 	range = 24,
-	MindCost = 150,
 
 	poolsToDamage = NO_ATTRIBUTE
 }

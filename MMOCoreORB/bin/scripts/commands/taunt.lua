@@ -45,8 +45,7 @@ TauntCommand = {
         name = "taunt",
         combatSpam = "taunt",
 	effectString = "clienteffect/combat_special_attacker_taunt.cef",
-	range = 15
-  MindCost = 100,
+	range = 15,
 }
 
 AddCommand(TauntCommand)
