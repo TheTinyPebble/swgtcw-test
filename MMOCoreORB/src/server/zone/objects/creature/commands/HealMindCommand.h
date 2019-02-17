@@ -17,7 +17,7 @@ public:
 	HealMindCommand(const String& name, ZoneProcessServer* server)
 		: QueueCommand(name, server) {
 
-		mindCost = 250;
+		//mindCost = 250;
 		mindWoundCost = 250;
 		range = 5;
 	}
@@ -117,10 +117,12 @@ public:
 			return GENERALERROR;
 		}
 
+		/*
 		if (creature->getHAM(CreatureAttribute::MIND) < mindCost) {
 			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
 			return GENERALERROR;
 		}
+		* */
 
 		if (creatureTarget->getHAM(CreatureAttribute::MIND) == 0 || !(creatureTarget->hasDamage(CreatureAttribute::MIND))) {
 			if (creatureTarget->isPlayerCreature()) {
@@ -147,26 +149,27 @@ public:
 
 		float modSkill = (float) creature->getSkillMod("combat_medic_effectiveness");
 		int healPower = (int) (System::random(500)+800) * modSkill / 100;
-
+		
 		// Check BF
 		healPower = (int) (healPower * creature->calculateBFRatio());
-
+		float mindHeal = floor((float)((((creatureTarget->getMaxHAM(CreatureAttribute::MIND) - creatureTarget->getHAM(CreatureAttribute::MIND)) - healPower > 0) ? healPower : creatureTarget->getMaxHAM(CreatureAttribute::MIND) - creatureTarget->getHAM(CreatureAttribute::MIND))));
+		int mindDamage = floor(mindHeal * .5); //50% of mind healed as mind damage
+		
+		if (creature->getHAM(CreatureAttribute::MIND) < mindDamage) {
+			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
+			return GENERALERROR;
+		}
+		
 		int healedMind = creatureTarget->healDamage(creature, CreatureAttribute::MIND, healPower);
-
+		int mindWound = (int) healedMind * .05; // 5% of mind healed in wounds
+		
 		if (creature->isPlayerCreature()) {
 			playerManager->sendBattleFatigueMessage(creature, creatureTarget);
 		}
 
 		sendHealMessage(creature, creatureTarget, healedMind);
-		int mindWound = (int) healedMind * .05; // 5% of mind healed in wounds
-		int mindDamage = (int) healedMind* .5; //50% of mind healed as mind damage
 
-		if (creature->getHAM(CreatureAttribute::MIND) < mindDamage) {
-			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
-			return GENERALERROR;
-		}
-
-		creature->inflictDamage(creature, CreatureAttribute::MIND, mindWound, false);
+		creature->inflictDamage(creature, CreatureAttribute::MIND, mindDamage, false);
 
 		creature->addWounds(CreatureAttribute::MIND, mindWound, true, false);
 		creature->addWounds(CreatureAttribute::FOCUS, mindWound, true, false);
