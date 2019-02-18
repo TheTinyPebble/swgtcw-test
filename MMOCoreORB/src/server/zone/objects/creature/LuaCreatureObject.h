@@ -118,6 +118,7 @@ namespace creature {
 		int getHealingThreatList(lua_State* L);
 		int getSkillMod(lua_State* L);
 		int getGender(lua_State* L);
+		int setAlternateAppearance(lua_State* L);
 	private:
 		// The pointer to the 'real object' defined in object.cc
 		CreatureObject* realObject;

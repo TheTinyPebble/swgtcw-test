@@ -137,6 +137,7 @@ Luna<LuaCreatureObject>::RegType LuaCreatureObject::Register[] = {
 		{ "getHealingThreatList", &LuaCreatureObject::getHealingThreatList },
 		{ "getSkillMod", &LuaCreatureObject::getSkillMod },
 		{ "getGender", &LuaCreatureObject::getGender },
+		{ "setAlternateAppearance", &LuaCreatureObject::setAlternateAppearance },
 		{ 0, 0 }
 };
 
@@ -1054,4 +1055,14 @@ int LuaCreatureObject::getGender(lua_State* L) {
 	lua_pushnumber(L, realObject->getGender());
 
 	return 1;
+}
+
+int LuaCreatureObject::setAlternateAppearance(lua_State* L) {
+	String appearance = lua_tostring(L, -1);
+	
+	Locker locker(realObject);
+
+	realObject->setAlternateAppearance(appearance, true);
+	
+	return 0;
 }
