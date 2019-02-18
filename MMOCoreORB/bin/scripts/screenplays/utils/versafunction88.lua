@@ -82,6 +82,7 @@ function Versafunction88MenuComponent:fillObjectMenuResponse(pSceneObject, pMenu
 	menuResponse:addRadialMenuItem(120, 3, "Set Display")
 	menuResponse:addRadialMenuItem(121, 3, "Lot Information")
 	menuResponse:addRadialMenuItem(122, 3, "Withdraw Tokens")
+	--menuResponse:addRadialMenuItem(123, 3, "Read Patch Notes")
 end
 
 function Versafunction88MenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedID)
@@ -151,6 +152,9 @@ function Versafunction88MenuComponent:handleObjectMenuSelect(pObject, pPlayer, s
 		end
 		
 		sui.sendTo(pPlayer)
+	end
+	if (selectedID == 123) then
+		NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, 20)
 	end
 end
 
