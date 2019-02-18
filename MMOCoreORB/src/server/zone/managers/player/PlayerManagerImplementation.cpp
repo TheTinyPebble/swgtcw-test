@@ -1754,7 +1754,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = player->getSkillMod("ent_xp_gain");
-			entBonus *= 100;
+			entBonus /= 100;
 			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
 
 		}
@@ -1770,7 +1770,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 			if (amount > 0.f){
 				speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 				entBonus = player->getSkillMod("ent_xp_gain");
-				entBonus *= 100;
+				entBonus /= 100;
 				(entBonus > 0) ? entBonus = entBonus : entBonus = 0;
 			}
 			if (applyModifiers){
@@ -1786,7 +1786,7 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 		if (amount > 0){
 			speciesModifier = getSpeciesXpModifier(player->getSpeciesName(), xpType);
 			entBonus = player->getSkillMod("ent_xp_gain");
-			entBonus *= 100;
+			entBonus /= 100;
 			(entBonus > 0) ? entBonus = entBonus : entBonus = 0;
 		}
 		if (applyModifiers){
