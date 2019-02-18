@@ -12,7 +12,7 @@
 
 void PerformanceBuffImplementation::activate(bool applyModifiers) {
     if(type == PerformanceBuffType::DANCE_MIND) {
-        int mindStrength = strength;
+        int mindStrength = strength * 100;
         creature.get()->sendSystemMessage("Your Faction point gain rate has been enhanced by a Dancer");
         ManagedReference<Buff*> buff = new Buff(creature.get(), buffCRC, buffDuration, BuffType::SKILL);
         buff->setSkillModifier("ent_faction_gain", mindStrength);
@@ -20,7 +20,7 @@ void PerformanceBuffImplementation::activate(bool applyModifiers) {
 
     }
     else if(type == PerformanceBuffType::MUSIC_FOCUS) {
-        int focusStrength = strength;
+        int focusStrength = strength * 100;
         creature.get()->sendSystemMessage("Your Experience point gain rate has been enhanced by a Musician");
         ManagedReference<Buff*> buff = new Buff(creature.get(), buffCRC, buffDuration, BuffType::SKILL);
         buff->setSkillModifier("ent_xp_gain", focusStrength);
@@ -28,7 +28,7 @@ void PerformanceBuffImplementation::activate(bool applyModifiers) {
 
     }
     else if(type == PerformanceBuffType::MUSIC_WILLPOWER) {
-        int willStrength = strength;
+        int willStrength = strength * 100;
         creature.get()->sendSystemMessage("Your Experience point gain rate has been enhanced by a Musician");
         ManagedReference<Buff*> buff = new Buff(creature.get(), buffCRC, buffDuration, BuffType::SKILL);
         buff->setSkillModifier("ent_cw_gain", willStrength);
