@@ -31,8 +31,8 @@ int LuaAttributeListMessage::_setObject(lua_State* L) {
 
 int LuaAttributeListMessage::insertNewAttribute(lua_State* L)
 {
-    String value = lua_tostring(L, -2);
-    const String attribute = lua_tostring(L, -1);
+    const String attribute = lua_tostring(L, -2);
+    String value = lua_tostring(L, -1);
 
     realObject->insertAttribute(attribute, value);
 

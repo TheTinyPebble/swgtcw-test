@@ -70,7 +70,7 @@ function Yavin4StaticSpawnsScreenPlay:spawnMobiles()
 	spawnMobile("yavin4", "cis_magnaguard", 1, 5068.99, 67.4718, 434.442, 177, 0)
 
 	--Dark Enclave Trainers
-	spawnMobile("yavin4", "trainer_padawan", 1, -15.9204, -43.4244, -36.8648, 1, 3435634)
+	spawnMobile("yavin4", "trainer_padawan_dark", 1, -15.9204, -43.4244, -36.8648, 1, 3435634)
 	spawnMobile("yavin4", "trainer_jedi_sabers_dark", 300, -44.5964, -43.4244, -28.9613, 118, 3435635)
 	spawnMobile("yavin4", "trainer_jedi_defender_dark", 300, 17.301, -43.4244, -36.8122, 3, 3435634)
 	spawnMobile("yavin4", "trainer_jedi_powers_dark", 300, -0.0248166, -43.2978, -153.507, 359, 3435642)

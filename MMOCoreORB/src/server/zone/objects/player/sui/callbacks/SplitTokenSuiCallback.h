@@ -30,7 +30,6 @@ public:
 			return;
 		}
 
-		int value = Integer::valueOf(args->get(1).toString());
 		SceneObject* sceno = scenObj.get();
 		
 		String fullTemplate = sceno->getObjectTemplate()->getFullTemplateString();
@@ -42,6 +41,13 @@ public:
 		}
 		
 		Locker locker(tano);
+		
+		int value = Integer::valueOf(args->get(1).toString());
+		
+		if (value == 0 || value == tano->getUseCount()) {
+			return;
+		}
+		
 		tano->setUseCount(tano->getUseCount() - value, true);
 		
 		Locker newTokenLocker(newToken);

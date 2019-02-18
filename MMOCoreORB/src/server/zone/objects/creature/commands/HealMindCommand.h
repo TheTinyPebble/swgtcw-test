@@ -16,7 +16,7 @@ public:
 
 	HealMindCommand(const String& name, ZoneProcessServer* server)
 		: QueueCommand(name, server) {
-		
+
 		mindCost = 250;
 		mindWoundCost = 250;
 		range = 5;
@@ -100,7 +100,7 @@ public:
 		if (creatureTarget == creature) {
 			creature->sendSystemMessage("@healing:no_heal_mind_self"); //You can not heal your own mind.
 			return GENERALERROR;
-		}		
+		}
 
 		if (creatureTarget->isDead() || (creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject()) {
 			creature->sendSystemMessage("@healing:heal_mind_invalid_target"); // Target must be a player or a creature pet in order to heal mind.
@@ -117,16 +117,11 @@ public:
 			return GENERALERROR;
 		}
 
-		if (creature->getHAM(CreatureAttribute::MIND) < mindCost) {
-			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
-			return GENERALERROR;
-		}
-
 		if (creatureTarget->getHAM(CreatureAttribute::MIND) == 0 || !(creatureTarget->hasDamage(CreatureAttribute::MIND))) {
 			if (creatureTarget->isPlayerCreature()) {
 				StringIdChatParameter stringId("healing", "no_mind_to_heal_target"); //%NT has no mind to heal.
 				stringId.setTT(creatureTarget->getObjectID());
-				creature->sendSystemMessage(stringId); 
+				creature->sendSystemMessage(stringId);
 			} else {
 				StringBuffer message;
 				message << creatureTarget->getDisplayedName() << " has no mind to heal.";
@@ -151,6 +146,14 @@ public:
 		// Check BF
 		healPower = (int) (healPower * creature->calculateBFRatio());
 
+		int mindCostNew = (healPower/2);
+		int currentMind = creature->getHAM(CreatureAttribute::MIND);
+		if (currentMind < mindCostNew) { //Lowers heal amount if not enough mind available.
+			healPower = currentMind*2;
+			//creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
+			//return GENERALERROR;
+		}
+
 		int healedMind = creatureTarget->healDamage(creature, CreatureAttribute::MIND, healPower);
 
 		if (creature->isPlayerCreature()) {
@@ -159,18 +162,22 @@ public:
 
 		sendHealMessage(creature, creatureTarget, healedMind);
 		int mindWound = (int) healedMind * .05; // 5% of mind healed in wounds
+		int mindDamage = (int) healedMind* .5; //50% of mind healed as mind damage
 
-		creature->addWounds(CreatureAttribute::MIND, mindWound, true, false);
-		creature->addWounds(CreatureAttribute::FOCUS, mindWound, true, false);
-		creature->addWounds(CreatureAttribute::WILLPOWER, mindWound, true, false);
+			creature->inflictDamage(creature, CreatureAttribute::MIND, mindDamage, false);
 
-		creature->addShockWounds(mindWound); // 5% of mind healed in bf
+			creature->addWounds(CreatureAttribute::MIND, mindWound, true, false);
+			creature->addWounds(CreatureAttribute::FOCUS, mindWound, true, false);
+			creature->addWounds(CreatureAttribute::WILLPOWER, mindWound, true, false);
 
-		doAnimations(creature, creatureTarget);
+			creature->addShockWounds(mindWound); // 5% of mind healed in bf
 
-		checkForTef(creature, creatureTarget);
+			doAnimations(creature, creatureTarget);
 
-		return SUCCESS;
+			checkForTef(creature, creatureTarget);
+
+			return SUCCESS;
+
 	}
 
 };
