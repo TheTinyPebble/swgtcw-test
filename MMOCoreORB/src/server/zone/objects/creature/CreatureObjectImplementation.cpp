@@ -1036,7 +1036,7 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 	if (damageType % 3 != 0 && newValue < 0) // secondaries never should go negative
 		newValue = 0;
 
-	if (isPlayerCreature() && damageType == 6 && newValue <= 0) //no mind incaps
+	if (damageType == 6 && newValue <= 0) //no mind incaps
 		newValue = 1;
 
 	setHAM(damageType, newValue, notifyClient);

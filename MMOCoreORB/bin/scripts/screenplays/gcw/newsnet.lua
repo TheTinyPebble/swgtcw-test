@@ -15,13 +15,14 @@ NewsnetMenuComponent = { }
 
 function NewsnetMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
-
-	menuResponse:addRadialMenuItem(20, 3, "Upcoming Events") -- Read Headline
-	menuResponse:addRadialMenuItem(40, 3, "Patch Notes") -- Read Headline
-	menuResponse:addRadialMenuItem(80, 1, "War News") -- Read Headline
+	
+	
+	menuResponse:addRadialMenuItem(20, 3, "Patch Notes")
+	--menuResponse:addRadialMenuItem(40, 3, "Upcoming Events")
+	menuResponse:addRadialMenuItem(80, 1, "War News")
 	menuResponse:addRadialMenuItemToRadialID(80, 81, 3, "Headlines") -- Read Headline
-	menuResponse:addRadialMenuItemToRadialID(80, 82, 3, "War Correspondent") -- Read Headline
-	menuResponse:addRadialMenuItem(100, 3, "Around the Galaxy") -- Read Headline
+	--menuResponse:addRadialMenuItemToRadialID(80, 82, 3, "War Correspondent")
+	--menuResponse:addRadialMenuItem(100, 3, "Around the Galaxy")
 end
 
 
@@ -33,24 +34,23 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 	end
 	
 	local body, title = ""
-
-	--Upcoming Events text
+	
+	--Patch Notes text
 	if (selectedID == 20) then
-		body = http.request("http://www.empireinflames.com/wp-content/uploads/eif-events.txt")
-		title = "Upcoming Events"
+		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
+		title = "Patch Notes"
+
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
 		if (pGhost ~= nil) then
 			PlayerObject(pGhost):closeSuiWindowType(NEWSNET_INFO)
 		end
 	end
-
-
-	--Patch Notes text
+	
+	--Upcoming Events text
 	if (selectedID == 40) then
-		body = http.request("http://www.empireinflames.com/wp-content/uploads/eif-patch.txt")
-		title = "Patch Notes"
-
+		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
+		title = "Upcoming Events"
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
 		if (pGhost ~= nil) then
@@ -98,7 +98,7 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 
 	--GCW Correspondence text
 	if (selectedID == 82) then
-		body = http.request("http://www.empireinflames.com/wp-content/uploads/zatgGCWReport.txt")
+		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
 		title = "Report From The Front"
 		
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()
@@ -109,7 +109,7 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 	end
 
 	if (selectedID == 100) then
-		body = http.request("http://www.empireinflames.com/wp-content/uploads/eif-zatg.txt")
+		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
 		title = "Around the Galaxy"
 		
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()

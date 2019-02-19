@@ -24,8 +24,16 @@ function trainerConvHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, sele
 	local playerID = SceneObject(pPlayer):getObjectID()
 	local stringTable = "@skill_teacher:"
 	local isJediTrainer = false
+	
+	if ((trainerType == "trainer_padawan_light" and CreatureObject(pPlayer):getFaction() ~= FACTIONIMPERIAL) or (trainerType == "trainer_padawan_dark" and CreatureObject(pPlayer):getFaction() ~= FACTIONREBEL)) then
+		local pConvScreen = screen:cloneScreen()
+		local clonedConversation = LuaConversationScreen(pConvScreen)
+		clonedConversation:setCustomDialogText("I have nothing to teach you.")
+		clonedConversation:setStopConversation(true)
+		return pConvScreen
+	end
 
-	if (trainerType == "trainer_jedi") then
+	if (string.match(trainerType, "jedi") or string.match(trainerType, "padawan")) then
 		isJediTrainer = true
 		stringTable = "@jedi_trainer:"
 	end
@@ -236,7 +244,11 @@ function trainerConvHandler:handleConfirmLearnScreen(pConvTemplate, pPlayer, pNp
 	end
 
 	local success = skillManager:awardSkill(pPlayer, skillName)
-
+	
+	if (skillName == "jedi_padawan_master" or skillName == "dark_padawan_master") then
+		awardSkill(pPlayer, "force_title_jedi_rank_02")
+	end
+	
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
 

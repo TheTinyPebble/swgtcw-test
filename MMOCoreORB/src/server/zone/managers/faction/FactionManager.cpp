@@ -183,7 +183,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			float entBonus = 1.f;
 			float finalBonus;
 			entBonus = killerCreature->getSkillMod("ent_cw_gain");
-			finalBonus = 1.f + (entBonus / 10.f);
+			finalBonus = 1.f + (entBonus / 1000.f);
 			(finalBonus >= 1.f) ? finalBonus = finalBonus : finalBonus = 1.f;
 			float finalXp = 1000.f * finalBonus;
 
