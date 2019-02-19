@@ -86,7 +86,15 @@ public:
 		departurePoint = departurePoint.replaceAll("_", " ");
 		arrivalPlanet = arrivalPlanet.replaceAll("_", " ");
 		arrivalPoint = arrivalPoint.replaceAll("_", " ");
-
+		
+		if (arrivalPoint == "Jedi Shuttleport" && !creature->hasSkill("jedi_padawan_novice")) {
+			creature->sendSystemMessage("You are not elligible to travel to this location.");
+			return GENERALERROR;
+		} else if (arrivalPoint == "Dark Jedi Shuttleport" && !creature->hasSkill("dark_padawan_novice")) {
+			creature->sendSystemMessage("You are not elligible to travel to this location.");
+			return GENERALERROR;
+		}
+		
 		ManagedReference<Zone*> departureZone = server->getZoneServer()->getZone(departurePlanet);
 		ManagedReference<Zone*> arrivalZone = server->getZoneServer()->getZone(arrivalPlanet);
 
