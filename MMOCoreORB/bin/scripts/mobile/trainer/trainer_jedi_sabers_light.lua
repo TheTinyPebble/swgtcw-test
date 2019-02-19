@@ -1,5 +1,5 @@
 trainer_jedi_sabers_light = Creature:new {
-	objectName = "@mob/creature_names:theme_anakin_skywalker",
+	objectName = "@mob/creature_names:trainer_jedi_sabers_light",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,

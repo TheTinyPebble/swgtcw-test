@@ -1,5 +1,5 @@
 trainer_padawan_light = Creature:new {
-	objectName = "@mob/creature_names:theme_kit_fisto",
+	objectName = "@mob/creature_names:trainer_padawan_light",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,

@@ -2,8 +2,8 @@ trainer_jedi_defender_light = Creature:new {
 	objectName = "@mob/creature_names:trainer_jedi_defender_light",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
-	socialGroup = "",
-	faction = "",
+	socialGroup = "imperial",
+	faction = "imperial",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,
@@ -28,7 +28,7 @@ trainer_jedi_defender_light = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_1handsword_trainer_01.iff",
+		"object/mobile/dressed_jedi_trainer_nikto_male_01.iff", --nikto male
 	},
 	lootGroups = {},
 	weapons = {},

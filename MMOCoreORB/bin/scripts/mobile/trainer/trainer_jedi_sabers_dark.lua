@@ -1,5 +1,5 @@
 trainer_jedi_sabers_dark = Creature:new {
-	objectName = "@mob/creature_names:theme_savage",
+	objectName = "@mob/creature_names:trainer_jedi_sabers_dark",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,
