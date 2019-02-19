@@ -28,9 +28,9 @@ rep_jedi_master = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_jedi_knight_01.iff",
-		"object/mobile/dressed_jedi_knight_02.iff",
-		"object/mobile/dressed_neja_bertolo.iff"
+		"object/mobile/dressed_jedi_trainer_old_human_male_01.iff", --old human male
+		"object/mobile/dressed_jedi_trainer_chiss_male_01.iff", --chiss
+		"object/mobile/kit_fisto_cloak.iff" --nautolan
 		},
 
 		lootGroups = {

@@ -1,7 +1,7 @@
 trainer_padawan_light = Creature:new {
-	objectName = "@mob/creature_names:theme_asajj",
-	socialGroup = "rebel",
-	faction = "rebel",
+	objectName = "@mob/creature_names:theme_kit_fisto",
+	socialGroup = "imperial",
+	faction = "imperial",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,
@@ -25,7 +25,7 @@ trainer_padawan_light = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_ventress.iff"},
+	templates = {"object/mobile/kit_fisto_cloak.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "jediPadawanLightTrainerConvoTemplate",
