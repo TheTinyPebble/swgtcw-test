@@ -55,7 +55,6 @@ includeFile("themepark/smc/themeParkSmcVurleneAujante.lua")
 
 -- Screenplay utilities
 includeFile("utils/quest_spawner.lua")
-includeFile("utils/versafunction88.lua")
 
 -- Staff tools
 includeFile("tools/tools.lua")
@@ -653,6 +652,9 @@ includeFile("static_spawns/yavin4_static_spawns.lua")
 
 --Magic Eight Ball
 includeFile("tools/MagicEightBallMenuComponent.lua")
+
+--Versafunction88
+includeFile("tools/versafunction88.lua")
 
 --Treasure Maps
 includeFile("treasure_map/EncodedDiskMenuComponent.lua")
