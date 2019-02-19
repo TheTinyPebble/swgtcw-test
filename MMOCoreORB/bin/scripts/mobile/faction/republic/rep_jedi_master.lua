@@ -28,9 +28,19 @@ rep_jedi_master = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_jedi_trainer_old_human_male_01.iff", --old human male
+		"object/mobile/dressed_jedi_knight_01.iff",--knight robe, blonde 
+		"object/mobile/dressed_jedi_knight_02.iff", --dathomirian
+		"object/mobile/dressed_neja_bertolo.iff", --twilek grey robes
+		"object/mobile/dressed_jedi_knight_03.iff", --elder robe 
+		"object/mobile/dressed_jedi_knight_04.iff", --elder robe
+		"object/mobile/dressed_jedi_knight_05.iff", --knight robe --mohawk/red
+		"object/mobile/dressed_jedi_knight_06.iff", --knight robe --mohawk/red
+		"object/mobile/dressed_jedi_trainer_twilek_female_01.iff", --female twilek cloak
+		"object/mobile/dressed_jedi_trainer_nikto_male_01.iff", --nikto male
+		"object/mobile/dressed_jedi_trainer_old_human_male_01.iff", --old human male, dark skin
 		"object/mobile/dressed_jedi_trainer_chiss_male_01.iff", --chiss
-		"object/mobile/kit_fisto_cloak.iff" --nautolan
+		"object/mobile/kit_fisto_cloak.iff", --nautolan
+		"object/mobile/dressed_tiberus_anderlock.iff" --old human male, white
 		},
 
 		lootGroups = {
