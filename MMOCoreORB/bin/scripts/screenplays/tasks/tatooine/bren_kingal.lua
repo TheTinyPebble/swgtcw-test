@@ -13,7 +13,7 @@ bren_kingal_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 },
+				{ rewardType = "credits", amount = 300 },
 				{ rewardType = "loot",  lootGroup = "task_reward_bren_kingal_q1" },
 			}
 		},
@@ -30,7 +30,7 @@ bren_kingal_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 },
+				{ rewardType = "credits", amount = 300 },
 				{ rewardType = "loot",  lootGroup = "task_reward_bren_kingal_q2" },
 			}
 		},
@@ -47,7 +47,7 @@ bren_kingal_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 },
+				{ rewardType = "credits", amount = 300 },
 				{ rewardType = "loot",  lootGroup = "task_reward_bren_kingal_q3" },
 			}
 		},
@@ -68,7 +68,7 @@ bren_kingal_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 },
+				{ rewardType = "credits", amount = 30000 },
 				{ rewardType = "loot",  lootGroup = "task_reward_bren_kingal_q4" },
 			}
 		}
