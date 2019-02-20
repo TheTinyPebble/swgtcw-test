@@ -17,7 +17,7 @@ vana_sage_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -34,7 +34,7 @@ vana_sage_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1000 },
+				{ rewardType = "credits", amount = 10000 },
 			}
 		},
 		{
