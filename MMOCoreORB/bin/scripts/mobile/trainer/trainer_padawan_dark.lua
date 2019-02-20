@@ -1,5 +1,5 @@
 trainer_padawan_dark = Creature:new {
-	objectName = "@mob/creature_names:theme_asajj",
+	objectName = "@mob/creature_names:trainer_padawan_dark",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

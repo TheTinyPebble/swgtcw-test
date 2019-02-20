@@ -75,7 +75,7 @@ MetricsPort = 8125
 MetricsPrefix = ""
 
 --AutoReg = 0
-AutoReg = 1
+AutoReg = 0
 
 ProgressMonitors = "true"
 
@@ -149,7 +149,7 @@ TreFiles = {
 	"tcw_NGE.tre",
 	"tcw_house.tre",
 	"mtg_patch_022.tre",
-	"mtg_planets.tre",
+	--"mtg_planets.tre",
 	"mtg_patch_021.tre",
 	--"mtg_patch_020.tre",
 	"mtg_patch_019.tre",

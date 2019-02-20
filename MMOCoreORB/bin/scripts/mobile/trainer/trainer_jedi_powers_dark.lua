@@ -1,5 +1,5 @@
 trainer_jedi_powers_dark = Creature:new {
-	objectName = "@mob/creature_names:theme_count_dooku",
+	objectName = "@mob/creature_names:trainer_jedi_powers_dark",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

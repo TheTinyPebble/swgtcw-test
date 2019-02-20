@@ -125,6 +125,14 @@ public:
 			creature->sendSystemMessage("@travel:route_not_available"); //This ticket's route is no longer available.
 			return GENERALERROR;
 		}
+		
+		if (arrivalPointName == "Jedi Shuttleport" && !creature->hasSkill("jedi_padawan_novice")) {
+			creature->sendSystemMessage("You are not elligible to travel to this location.");
+			return GENERALERROR;
+		} else if (arrivalPointName == "Dark Jedi Shuttleport" && !creature->hasSkill("dark_padawan_novice")) {
+			creature->sendSystemMessage("You are not elligible to travel to this location.");
+			return GENERALERROR;
+		}
 
 		Reference<PlanetTravelPoint*> arrivalPoint = arrivalZone->getPlanetManager()->getPlanetTravelPoint(arrivalPointName);
 

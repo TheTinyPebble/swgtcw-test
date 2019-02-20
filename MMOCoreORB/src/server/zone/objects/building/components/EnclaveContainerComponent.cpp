@@ -56,11 +56,11 @@ bool EnclaveContainerComponent::checkBuildingPermission(SceneObject* sceneObject
 
 	if (creature->getFaction() == Factions::FACTIONIMPERIAL){
 		councilType = 1;
-		creature->sendSystemMessage("debug REP");
+	//	creature->sendSystemMessage("debug REP");
 	}
 	if (creature->getFaction() == Factions::FACTIONREBEL){
 		councilType = 2;
-		creature->sendSystemMessage("debug CIS");
+	//	creature->sendSystemMessage("debug CIS");
 	}
 
 	if (sceneObject->getServerObjectCRC() == STRING_HASHCODE("object/building/yavin/light_enclave.iff"))
@@ -104,13 +104,13 @@ bool EnclaveContainerComponent::checkCellPermission(SceneObject* sceneObject, Cr
 
 	if (creature->getFaction() == Factions::FACTIONIMPERIAL){
 		councilType = 1;
-		creature->sendSystemMessage("debug REP");
+	//	creature->sendSystemMessage("debug REP");
 	}
 	if (creature->getFaction() == Factions::FACTIONREBEL){
 		councilType = 2;
-		creature->sendSystemMessage("debug CIS");
+	//	creature->sendSystemMessage("debug CIS");
 	}
-	
+
 	ManagedReference<SceneObject*> enclave = sceneObject->getParent().get();
 
 	if (enclave == nullptr)

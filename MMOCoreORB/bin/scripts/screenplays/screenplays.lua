@@ -55,7 +55,6 @@ includeFile("themepark/smc/themeParkSmcVurleneAujante.lua")
 
 -- Screenplay utilities
 includeFile("utils/quest_spawner.lua")
-includeFile("utils/versafunction88.lua")
 
 -- Staff tools
 includeFile("tools/tools.lua")
@@ -158,6 +157,7 @@ includeFile("dungeon/corellian_corvette/ticket_takers/ds_297.lua")
 includeFile("dungeon/corellian_corvette/ticket_takers/klaatu.lua")
 includeFile("dungeon/corellian_corvette/ticket_takers/lt_lance.lua")
 includeFile("dungeon/lok_bunker/lok_bunker.lua")
+includeFile("dungeon/dath_bunker/dath_bunker.lua")
 
 
 -- Village
@@ -654,6 +654,9 @@ includeFile("static_spawns/yavin4_static_spawns.lua")
 --Magic Eight Ball
 includeFile("tools/MagicEightBallMenuComponent.lua")
 
+--Versafunction88
+includeFile("tools/versafunction88.lua")
+
 --Treasure Maps
 includeFile("treasure_map/EncodedDiskMenuComponent.lua")
 includeFile("treasure_map/TreasureMapMenuComponent.lua")
@@ -673,6 +676,10 @@ includeFile("tests/tests.lua")
 --Merchants
 includeFile("merchants/house_merch.lua")
 includeFile("merchants/merchant_system.lua")
+
+--Elite Spawns
+includeFile("elite_spawns/eliteSpawns.lua")
+includeFile("elite_spawns/eliteSpawnMap.lua")
 
 --Custom Content
 includeFile("../custom_scripts/screenplays/screenplays.lua")

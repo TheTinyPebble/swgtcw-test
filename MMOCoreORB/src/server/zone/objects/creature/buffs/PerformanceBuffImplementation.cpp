@@ -59,5 +59,4 @@ void PerformanceBuffImplementation::activate(bool applyModifiers) {
 }
 
 void PerformanceBuffImplementation::deactivate(bool removeModifiers) {
-    BuffImplementation::deactivate(true);
 }
