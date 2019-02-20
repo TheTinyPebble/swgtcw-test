@@ -1,3 +1,9 @@
+# The Clone Wars #
+
+## What is The Clone Wars? ##
+
+Star Wars Galaxies The Clone Wars is an emulated version of the MMORPG Star Wars Galaxies based off of the open source Core3 code created by the SWGEmu team. We are fully AGPL compliant and have all of our work listed within this repo as per the agreement with SWGEmu. If you would like to install your own server with Core3 on it, please read the instructions below. Our credits for the Clone Wars server can be found at the bottom of this page.
+
 # SWGEmu Core3 #
 
 ## What is SWGEmu? ##
@@ -52,3 +58,22 @@ At SWGEmu, Emulator refers to the software the SWGEmu team is building. This Emu
     You should have received a copy of the GNU Affero General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 For more information, see https://review.swgemu.com.
+
+## Clone Wars Credits and Thanks ##
+
+A big thank you to everyone who has helped make Clone Wars a reality and also to the members of the SWGEmu community who also share their work for the benefit of others. Thank you and full credit to the following people:
+
+SWGEmu - Core3 usage and the reason we are all here today.
+ModTheGalaxy - ModTheGalaxy tres including all of the CU and NGE items/content.
+Holocron Team - Being helpful and providing guidance when needed.
+Aftermath - Aftermath base code work via the public repo.
+Timbab - Jawa Toolbox usage.
+Halyn - Sitting through hours of us DMing him questions and being a huge help with multiple things.
+TheTinyPebble - Custom Armour system originally created for the Sentinels Republic server.
+Deztia, Slight, Sallorn, Fanta and Eawah - Testing help during Clone Wars development.
+Empire in Flames server - Useful Newsnet terminal mod.
+Infinity server - CA/AAs working with skirts, Covert Hat, Clothes breaking on 0 condition, RegrantSkills Command and the SEA Removal Tool.
+Sentinels Republic server - Healing Battle Fatigue in a Ranger Camp.
+Reckoning server - City Mail spam bug fix.
+Progor - Relics of Corbantis open source launcher base.
+Tyclo - Sentinels Republic open source launcher base, based on the RoC launcher listed above.
