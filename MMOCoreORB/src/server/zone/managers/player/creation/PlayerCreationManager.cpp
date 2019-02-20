@@ -602,6 +602,8 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 	//Join auction chat room
 	ghost->addChatRoom(chatManager->getAuctionRoom()->getRoomID());
+	//Join general chat room
+	ghost->addChatRoom(chatManager->getGeneralRoom()->getRoomID());
 
 	ManagedReference<SuiMessageBox*> box = new SuiMessageBox(playerCreature, SuiWindowType::NONE);
 	box->setPromptTitle("PLEASE NOTE");
