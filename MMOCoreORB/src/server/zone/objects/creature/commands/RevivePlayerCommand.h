@@ -235,8 +235,8 @@ public:
 		if (revivePack == NULL)
 			revivePack = findRevivePack(creature);
 
-		int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);
-
+		//int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);
+		int mindCostNew = 1000;
 		if (!canPerformSkill(creature, creatureTarget, revivePack, mindCostNew))
 			return 0;
 
@@ -249,7 +249,7 @@ public:
 		int healedMind = creatureTarget->healDamage(creature, CreatureAttribute::MIND, mindToHeal);
 
 		creatureTarget->setPosture(CreaturePosture::UPRIGHT);
-		
+
 		creatureTarget->removeFeignedDeath();
 
 		int healedHealthWounds = creatureTarget->healWound(creature, CreatureAttribute::HEALTH, (int) (round(revivePack->getHealthWoundHealed())));
