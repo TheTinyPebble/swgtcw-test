@@ -156,9 +156,9 @@ public:
 
 		int healedMind = creatureTarget->healDamage(creature, CreatureAttribute::MIND, healPower);
 
-		if (creature->isPlayerCreature()) {
-			playerManager->sendBattleFatigueMessage(creature, creatureTarget);
-		}
+		//if (creature->isPlayerCreature()) {
+		//	playerManager->sendBattleFatigueMessage(creature, creatureTarget);
+		//}
 
 		sendHealMessage(creature, creatureTarget, healedMind);
 		int mindWound = (int) healedMind * .05; // 5% of mind healed in wounds
