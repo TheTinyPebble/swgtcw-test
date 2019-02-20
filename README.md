@@ -63,17 +63,18 @@ For more information, see https://review.swgemu.com.
 
 A big thank you to everyone who has helped make Clone Wars a reality and also to the members of the SWGEmu community who also share their work for the benefit of others. Thank you and full credit to the following people:
 
-SWGEmu - Core3 usage and the reason we are all here today.
-ModTheGalaxy - ModTheGalaxy tres including all of the CU and NGE items/content.
-Holocron Team - Being helpful and providing guidance when needed.
-Aftermath - Aftermath base code work via the public repo.
-Timbab - Jawa Toolbox usage.
-Halyn - Sitting through hours of us DMing him questions and being a huge help with multiple things.
-TheTinyPebble - Custom Armour system originally created for the Sentinels Republic server.
-Deztia, Slight, Sallorn, Fanta and Eawah - Testing help during Clone Wars development.
-Empire in Flames server - Useful Newsnet terminal mod.
-Infinity server - CA/AAs working with skirts, Covert Hat, Clothes breaking on 0 condition, RegrantSkills Command and the SEA Removal Tool.
-Sentinels Republic server - Healing Battle Fatigue in a Ranger Camp.
-Reckoning server - City Mail spam bug fix.
-Progor - Relics of Corbantis open source launcher base and DiscordBot.
-Tyclo - Sentinels Republic open source launcher base, based on the RoC launcher listed above.
+  * SWGEmu - Core3 usage and the reason we are all here today.
+  * ModTheGalaxy - ModTheGalaxy tres including all of the CU and NGE items/content.
+  * Holocron Team - Being helpful and providing guidance when needed.
+  * Aftermath - Aftermath base code work via the public repo.
+  * Timbab - Jawa Toolbox usage.
+  * Halyn - Sitting through hours of us DMing him questions and being a huge help with multiple things.
+  * TheTinyPebble - Custom Armour system originally created for the Sentinels Republic server.
+  * Deztia, Slight, Sallorn, Fanta and Eawah - Testing help during Clone Wars development.
+  * Empire in Flames server - Useful Newsnet terminal mod.
+  * Infinity server - CA/AAs working with skirts, Covert Hat, Clothes breaking on 0 condition, RegrantSkills Command and the SEA Removal Tool.
+  * Sentinels Republic server - Healing Battle Fatigue in a Ranger Camp.
+  * Reckoning server - City Mail spam bug fix.
+  * Progor - Relics of Corbantis open source launcher base and DiscordBot.
+  * Tyclo - Sentinels Republic open source launcher base, based on the RoC launcher listed above.
+  * Phoenix - LUA Attribute Component.
