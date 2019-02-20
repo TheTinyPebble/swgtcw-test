@@ -66,12 +66,12 @@ public:
 		ManagedReference<SceneObject*> obj = zoneServer->getObject(target);
 
 		if (obj == NULL || !obj->isTangibleObject() || obj->isPlayerCreature() || obj->isPet()) {
-			if (ghost->getAdminLevel() >= 15) {
-				creature->sendSystemMessage("Ingoring Movement Check - Trusted Players Only"); //What do you want to move?
-			} else {
+			//if (ghost->getAdminLevel() >= 15) {
+			//	creature->sendSystemMessage("Ingoring Movement Check - Trusted Players Only"); //What do you want to move?
+			//} else {
 				creature->sendSystemMessage("@player_structure:rotate_what"); //What do you want to rotate?
 				return GENERALERROR;
-			}
+			//}
 		}
 
 		ManagedReference<SceneObject*> rootParent = creature->getRootParent();
@@ -110,12 +110,12 @@ public:
 				}
 
 				if (obj->getRootParent() != buildingObject || buildingObject->containsChildObject(obj)) {
-					if (ghost->getAdminLevel() >= 15) {
-						creature->sendSystemMessage("Ingoring Movement Check - Trusted Players Only"); //What do you want to move?
-					} else {
+					//if (ghost->getAdminLevel() >= 15) {
+					//	creature->sendSystemMessage("Ingoring Movement Check - Trusted Players Only"); //What do you want to move?
+					//} else {
 						creature->sendSystemMessage("@player_structure:rotate_what"); //What do you want to rotate?
 						return GENERALERROR;
-					}
+					//}
 				}
 
 				if (buildingObject->isGCWBase()) {
