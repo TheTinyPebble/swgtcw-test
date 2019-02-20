@@ -68,7 +68,7 @@ boss_nass_missions =
 			rewards =
 			{
 				{ rewardType = "credits", amount = 50000 },
-			}credits
+			}
 		},
 	}
 
