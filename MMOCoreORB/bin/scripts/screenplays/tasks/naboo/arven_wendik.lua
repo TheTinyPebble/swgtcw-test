@@ -13,7 +13,7 @@ arven_wendik_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 250 },
+				{ rewardType = "credits", amount = 2500 },
 			}
 		},
 		{
@@ -31,7 +31,7 @@ arven_wendik_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -50,7 +50,7 @@ arven_wendik_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1000 },
+				{ rewardType = "credits", amount = 25000 },
 			}
 		}
 	}

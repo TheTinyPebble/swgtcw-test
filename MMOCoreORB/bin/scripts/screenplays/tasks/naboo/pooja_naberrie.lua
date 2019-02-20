@@ -16,7 +16,7 @@ pooja_naberrie_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
+				{ rewardType = "credits", amount = 2500 },
 			}
 		},
 		{
@@ -33,7 +33,7 @@ pooja_naberrie_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -54,7 +54,7 @@ pooja_naberrie_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 75 },
+				{ rewardType = "credits", amount = 7500 },
 			}
 		},
 		{
@@ -73,7 +73,7 @@ pooja_naberrie_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
+				{ rewardType = "credits", amount = 10000 },
 			}
 		},
 		{
@@ -92,7 +92,7 @@ pooja_naberrie_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 125 },
+				{ rewardType = "credits", amount = 12500 },
 			}
 		},
 		{
@@ -112,7 +112,7 @@ pooja_naberrie_missions =
 			itemSpawns = {	},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 150 },
+				{ rewardType = "credits", amount = 15000 },
 			}
 		},
 	}

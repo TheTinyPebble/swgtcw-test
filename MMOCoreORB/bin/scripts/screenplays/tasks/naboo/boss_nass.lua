@@ -17,7 +17,7 @@ boss_nass_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -30,7 +30,7 @@ boss_nass_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 },
+				{ rewardType = "credits", amount = 15000 },
 			}
 		},
 		{
@@ -47,7 +47,7 @@ boss_nass_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1500 },
+				{ rewardType = "credits", amount = 25000 },
 			}
 		},
 		{
@@ -67,8 +67,8 @@ boss_nass_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 5000 },
-			}
+				{ rewardType = "credits", amount = 50000 },
+			}credits
 		},
 	}
 

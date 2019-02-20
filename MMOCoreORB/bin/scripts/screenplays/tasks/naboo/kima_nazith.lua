@@ -14,7 +14,7 @@ kima_nazith_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
+				{ rewardType = "credits", amount = 2500 },
 			}
 		},
 		{
@@ -33,7 +33,7 @@ kima_nazith_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -52,7 +52,7 @@ kima_nazith_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 75 },
+				{ rewardType = "credits", amount = 7500 },
 			}
 		},
 	}
