@@ -1324,8 +1324,8 @@ void PlayerObjectImplementation::notifyOnline() {
 
 	schedulePvpTefRemovalTask();
 
-	playerCreature->sendExecuteConsoleCommand("/chatRoom join SWG.Malevolence.General");
-	playerCreature->sendExecuteConsoleCommand("/chatRoom join SWG.Malevolence.PvP");
+	//playerCreature->sendExecuteConsoleCommand("/chatRoom join SWG.Malevolence.General");
+	//playerCreature->sendExecuteConsoleCommand("/chatRoom join SWG.Malevolence.PvP");
 
 	MissionManager* missionManager = zoneServer->getMissionManager();
 

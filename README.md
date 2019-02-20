@@ -78,3 +78,4 @@ A big thank you to everyone who has helped make Clone Wars a reality and also to
   * Progor - Relics of Corbantis open source launcher base and DiscordBot.
   * Tyclo - Sentinels Republic open source launcher base, based on the RoC launcher listed above.
   * Phoenix - LUA Attribute Component.
+  * Liakhara - Gas Recycler implementation.

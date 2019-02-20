@@ -51,11 +51,11 @@ Melee1hScatterHit2Command = {
 	mindCostMultiplier = 2.0,
         accuracyBonus = 25,
 
-	animation = "combo_5b", 
+	animation = "combo_5b",
 	animType = GENERATE_INTENSITY,
 
-	poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE + MIND_ATTRIBUTE,
-	
+	poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE,
+
 	weaponType = ONEHANDMELEEWEAPON,
 
 	combatSpam = "scattershiak",
@@ -64,4 +64,3 @@ Melee1hScatterHit2Command = {
 }
 
 AddCommand(Melee1hScatterHit2Command)
-

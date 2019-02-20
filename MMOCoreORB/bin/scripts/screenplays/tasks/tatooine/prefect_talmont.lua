@@ -70,7 +70,7 @@ prefect_talmont_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1000 },
+				{ rewardType = "credits", amount = 10000 },
 				{ rewardType = "faction", faction = "imperial", amount = 50 }
 			}
 		},
@@ -84,7 +84,7 @@ prefect_talmont_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 2000 },
+				{ rewardType = "credits", amount = 20000 },
 				{ rewardType = "faction", faction = "imperial", amount = 100 }
 			}
 		},
@@ -138,7 +138,7 @@ prefect_talmont_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 10000 },
+				{ rewardType = "credits", amount = 40000 },
 			}
 		}
 	}

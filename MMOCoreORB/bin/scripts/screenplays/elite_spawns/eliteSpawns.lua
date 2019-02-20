@@ -299,7 +299,8 @@ function eliteSpawns:getMovePoint(pMobile)
 	end
 end
 
---Staff status SUI
+--Staff status SUI. 
+--Credit: Tyclo @ SR for this idea.
 function eliteSpawns:statusSui(pPlayer)
 	if (pPlayer == nil) then
 		return

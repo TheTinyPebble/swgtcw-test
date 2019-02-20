@@ -78,6 +78,8 @@ void ChatManagerImplementation::stop() {
 	groupRoom = NULL;
 	guildRoom = NULL;
 	auctionRoom = NULL;
+	generalRoom = NULL;
+	pvpRoom = NULL;
 	gameRooms.removeAll();
 }
 
@@ -1643,6 +1645,84 @@ void ChatManagerImplementation::handleAuctionChat(CreatureObject* sender, const 
 	if (auctionRoom != NULL) {
 		BaseMessage* msg = new ChatRoomMessage(fullName, server->getGalaxyName(), formattedMessage, auctionRoom->getRoomID());
 		auctionRoom->broadcastMessageCheckIgnore(msg, name);
+	}
+
+}
+
+void ChatManagerImplementation::handleGeneralChat(CreatureObject* sender, const UnicodeString& message) {
+	String name = sender->getFirstName();
+	String fullName = "";
+
+	if (sender->isPlayerCreature()) {
+		ManagedReference<PlayerObject*> senderGhost = sender->getPlayerObject();
+
+		if (senderGhost == NULL)
+			return;
+
+		if (senderGhost->isMuted()) {
+			String reason = senderGhost->getMutedReason();
+
+			if (reason != "")
+				sender->sendSystemMessage("Your chat abilities are currently disabled by Customer Support for '" + reason + "'.");
+			else
+				sender->sendSystemMessage("Your chat abilities are currently disabled by Customer Support.");
+
+			return;
+		}
+
+		fullName = getTaggedName(senderGhost, name);
+	}
+
+	StringTokenizer args(message.toString());
+	if (!args.hasMoreTokens()) {
+		sender->sendSystemMessage("@ui:im_no_message"); // You need to include a message!
+		return;
+	}
+
+	UnicodeString formattedMessage(formatMessage(message));
+
+	if (generalRoom != NULL) {
+		BaseMessage* msg = new ChatRoomMessage(fullName, server->getGalaxyName(), formattedMessage, generalRoom->getRoomID());
+		generalRoom->broadcastMessageCheckIgnore(msg, name);
+	}
+
+}
+
+void ChatManagerImplementation::handlePvpChat(CreatureObject* sender, const UnicodeString& message) {
+	String name = sender->getFirstName();
+	String fullName = "";
+
+	if (sender->isPlayerCreature()) {
+		ManagedReference<PlayerObject*> senderGhost = sender->getPlayerObject();
+
+		if (senderGhost == NULL)
+			return;
+
+		if (senderGhost->isMuted()) {
+			String reason = senderGhost->getMutedReason();
+
+			if (reason != "")
+				sender->sendSystemMessage("Your chat abilities are currently disabled by Customer Support for '" + reason + "'.");
+			else
+				sender->sendSystemMessage("Your chat abilities are currently disabled by Customer Support.");
+
+			return;
+		}
+
+		fullName = getTaggedName(senderGhost, name);
+	}
+
+	StringTokenizer args(message.toString());
+	if (!args.hasMoreTokens()) {
+		sender->sendSystemMessage("@ui:im_no_message"); // You need to include a message!
+		return;
+	}
+
+	UnicodeString formattedMessage(formatMessage(message));
+
+	if (pvpRoom != NULL) {
+		BaseMessage* msg = new ChatRoomMessage(fullName, server->getGalaxyName(), formattedMessage, pvpRoom->getRoomID());
+		pvpRoom->broadcastMessageCheckIgnore(msg, name);
 	}
 
 }
