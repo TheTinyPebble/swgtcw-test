@@ -18,7 +18,7 @@ public:
 	RevivePlayerCommand(const String& name, ZoneProcessServer* server)
 		: QueueCommand(name, server) {
 
-		mindCost = 200;
+		mindCost = 1000;
 		range = 7;
 	}
 
@@ -235,7 +235,8 @@ public:
 		if (revivePack == NULL)
 			revivePack = findRevivePack(creature);
 
-		int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);
+		//int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);
+		int mindcostNew = 1000;
 
 		if (!canPerformSkill(creature, creatureTarget, revivePack, mindCostNew))
 			return 0;
