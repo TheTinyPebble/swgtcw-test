@@ -1,6 +1,7 @@
 includeFile("../custom_scripts/object/draft_schematic/weapon/objects.lua")
 includeFile("../custom_scripts/object/mobile/wod/objects.lua")
 includeFile("../custom_scripts/object/mobile/tatooine/objects.lua")
+includeFile("../custom_scripts/object/mobile/meatlumps/objects.lua")
 includeFile("../custom_scripts/object/mobile/skeleton/objects.lua")
 includeFile("../custom_scripts/object/weapon/melee/polearm/objects.lua")
 includeFile("../custom_scripts/object/weapon/ranged/carbine/objects.lua")

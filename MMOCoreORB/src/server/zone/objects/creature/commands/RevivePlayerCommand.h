@@ -236,7 +236,7 @@ public:
 			revivePack = findRevivePack(creature);
 
 		//int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);
-		int mindcostNew = 1000;
+		int mindCostNew = 1000;
 
 		if (!canPerformSkill(creature, creatureTarget, revivePack, mindCostNew))
 			return 0;
