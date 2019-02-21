@@ -2050,6 +2050,13 @@ object_draft_schematic_item_shared_item_recycler_chemical = SharedDraftSchematic
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_item_shared_item_recycler_chemical, "object/draft_schematic/item/shared_item_recycler_chemical.iff")
 
+object_draft_schematic_item_shared_item_recycler_gas = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/item/shared_item_recycler_gas.iff"
+	
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_item_shared_item_recycler_gas, "object/draft_schematic/item/shared_item_recycler_gas.iff")	
+
 object_draft_schematic_item_shared_item_recycler_creature = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/item/shared_item_recycler_creature.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
@@ -3476,4 +3483,8 @@ object_draft_schematic_item_shared_clothing_sea_removal_tool = SharedDraftSchema
 	clientTemplateFileName = "object/draft_schematic/item/shared_clothing_sea_removal_tool.iff"
 }
 ObjectTemplates:addClientTemplate(object_draft_schematic_item_shared_clothing_sea_removal_tool, "object/draft_schematic/item/shared_clothing_sea_removal_tool.iff")
+<<<<<<< HEAD
 								  
+=======
+								  
+>>>>>>> cfa9c1ef8dc813fd20d43f98d2c6ac7cbd9a0988

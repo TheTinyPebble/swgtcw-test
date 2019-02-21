@@ -51,3 +51,4 @@ bin/screenlog*
 bin/scripts/managers/resource_manager_spawns.lua
 utils/googletest-release-1.8.0/googlemock/lib/libgtest.a
 compile_commands.json
+bin/scripts/custom_scripts/screenplays*

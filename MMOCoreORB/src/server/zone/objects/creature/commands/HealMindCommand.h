@@ -149,7 +149,7 @@ public:
 		int mindCostNew = (healPower/2);
 		int currentMind = creature->getHAM(CreatureAttribute::MIND);
 		if (currentMind < mindCostNew) { //Lowers heal amount if not enough mind available.
-			healPower = (currentMind*2) * creature->calculateBFRatio();
+			healPower = (currentMind * 2) * creature->calculateBFRatio();
 			//creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
 			//return GENERALERROR;
 		}
@@ -164,19 +164,19 @@ public:
 		int mindWound = (int) healedMind * .05; // 5% of mind healed in wounds
 		int mindDamage = (int) healedMind* .5; //50% of mind healed as mind damage
 
-			creature->inflictDamage(creature, CreatureAttribute::MIND, mindDamage, false);
+		creature->inflictDamage(creature, CreatureAttribute::MIND, mindDamage, false);
 
-			creature->addWounds(CreatureAttribute::MIND, mindWound, true, false);
-			creature->addWounds(CreatureAttribute::FOCUS, mindWound, true, false);
-			creature->addWounds(CreatureAttribute::WILLPOWER, mindWound, true, false);
+		creature->addWounds(CreatureAttribute::MIND, mindWound, true, false);
+		creature->addWounds(CreatureAttribute::FOCUS, mindWound, true, false);
+		creature->addWounds(CreatureAttribute::WILLPOWER, mindWound, true, false);
 
-			creature->addShockWounds(mindWound); // 5% of mind healed in bf
+		creature->addShockWounds(mindWound); // 5% of mind healed in bf
 
-			doAnimations(creature, creatureTarget);
+		doAnimations(creature, creatureTarget);
 
-			checkForTef(creature, creatureTarget);
+		checkForTef(creature, creatureTarget);
 
-			return SUCCESS;
+		return SUCCESS;
 
 	}
 

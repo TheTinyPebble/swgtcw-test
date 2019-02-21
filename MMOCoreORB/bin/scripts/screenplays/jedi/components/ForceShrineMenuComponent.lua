@@ -50,7 +50,7 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 	local freePoints = PlayerObject(pGhost):getSkillPoints()
 	
 	if (pointsReq >= freePoints) then
-		CreatureObject(pPlayer):sendSystemMessage("You need to free up 50 skill points to continue.")
+		CreatureObject(pPlayer):sendSystemMessage("You need to free up " .. pointsReq .. " skill points to continue.")
 		return
 	end
 	

@@ -867,6 +867,12 @@ object_tangible_loot_loot_schematic_shared_chemical_recycler_schematic = SharedT
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_chemical_recycler_schematic, "object/tangible/loot/loot_schematic/shared_chemical_recycler_schematic.iff")
 
+object_tangible_loot_loot_schematic_shared_gas_recycler_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_gas_recycler_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_gas_recycler_schematic, "object/tangible/loot/loot_schematic/shared_gas_recycler_schematic.iff")
+
 object_tangible_loot_loot_schematic_shared_command_console_schematic = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_command_console_schematic.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups

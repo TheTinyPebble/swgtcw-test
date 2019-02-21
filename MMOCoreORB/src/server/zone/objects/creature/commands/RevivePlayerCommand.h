@@ -18,7 +18,7 @@ public:
 	RevivePlayerCommand(const String& name, ZoneProcessServer* server)
 		: QueueCommand(name, server) {
 
-		mindCost = 200;
+		mindCost = 1000;
 		range = 7;
 	}
 
@@ -249,7 +249,6 @@ public:
 		int healedMind = creatureTarget->healDamage(creature, CreatureAttribute::MIND, mindToHeal);
 
 		creatureTarget->setPosture(CreaturePosture::UPRIGHT);
-
 		creatureTarget->removeFeignedDeath();
 
 		int healedHealthWounds = creatureTarget->healWound(creature, CreatureAttribute::HEALTH, (int) (round(revivePack->getHealthWoundHealed())));

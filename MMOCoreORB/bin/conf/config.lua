@@ -76,6 +76,7 @@ MetricsPrefix = ""
 
 --AutoReg = 0
 AutoReg = 1
+AutoReg = 0
 
 ProgressMonitors = "true"
 
