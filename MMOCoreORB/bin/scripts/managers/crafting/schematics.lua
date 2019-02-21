@@ -1765,6 +1765,7 @@ schematics = {
 	{path="object/draft_schematic/item/item_recycler_chemical.iff"},
 	{path="object/draft_schematic/item/item_recycler_creature.iff"},
 	{path="object/draft_schematic/item/item_recycler_flora.iff"},
+	{path="object/draft_schematic/item/item_recycler_gas.iff"},
 	{path="object/draft_schematic/item/item_recycler_metal.iff"},
 	{path="object/draft_schematic/item/item_recycler_ore.iff"},
 	{path="object/draft_schematic/item/item_tumble_blender.iff"},

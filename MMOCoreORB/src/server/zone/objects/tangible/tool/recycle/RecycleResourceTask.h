@@ -96,6 +96,12 @@ public:
 			removeFromRecycler();
 			return;
 		}
+		//Debug Message, leave in for posterity
+		/*StringBuffer resType;
+		resType << resourceRecycleType << " is the resource recycle type, and the recycler selected type is " << recyclerSelectedType << ". The resource type of the resource you're trying to use is " << resource->getType();
+		String stringresType = resType.toString();
+		player->sendSystemMessage(stringresType); //Debug message
+		*/
 
 		if(resourceRecycleType != recyclerSelectedType) {
 			removeFromRecycler();

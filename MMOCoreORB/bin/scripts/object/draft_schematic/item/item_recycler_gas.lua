@@ -41,13 +41,37 @@
 --this exception also makes it possible to release a modified version 
 
 
+object_draft_schematic_item_item_recycler_gas = object_draft_schematic_item_shared_item_recycler_gas:new {
 
---Children folder includes
+	templateType = DRAFTSCHEMATIC,
 
--- Server Objects
-includeFile("tangible/recycler/chemical_recycler.lua")
-includeFile("tangible/recycler/creature_recycler.lua")
-includeFile("tangible/recycler/flora_recycler.lua")
-includeFile("tangible/recycler/metal_recycler.lua")
-includeFile("tangible/recycler/ore_recycler.lua")
-includeFile("tangible/recycler/gas_recycler.lua")
+	customObjectName = "Chemical Recycler Schematic",
+
+	craftingToolTab = 524288, -- (See DraftSchematicObjectTemplate.h)
+	complexity = 12,
+	size = 1,
+	factoryCrateSize = 0,
+
+	xpType = "crafting_general",
+	xp = 28,
+
+	assemblySkill = "general_assembly",
+	experimentingSkill = "general_experimentation",
+	customizationSkill = "general_customization",
+
+	customizationOptions = {},
+	customizationStringNames = {},
+	customizationDefaults = {},
+
+	ingredientTemplateNames = {"craft_item_ingredients_n", "craft_item_ingredients_n", "craft_item_ingredients_n", "craft_item_ingredients_n", "craft_item_ingredients_n"},
+	ingredientTitleNames = {"power_motor", "heating_element", "feed_tubes", "chemical_tubing", "casing"},
+	ingredientSlotType = {1, 1, 1, 0, 0},
+	resourceTypes = {"object/tangible/loot/simple_kit/shared_motor_small_blue.iff", "object/tangible/loot/simple_kit/shared_heating_element.iff", "object/tangible/loot/simple_kit/shared_feed_tubes.iff", "fiberplast", "iron"},
+	resourceQuantities = {1, 1, 1, 50, 30},
+	contribution = {100, 100, 100, 100, 100},
+
+	targetTemplate = "object/tangible/recycler/gas_recycler.iff",
+
+	additionalTemplates = {}
+}
+ObjectTemplates:addTemplate(object_draft_schematic_item_item_recycler_gas, "object/draft_schematic/item/item_recycler_gas.iff")

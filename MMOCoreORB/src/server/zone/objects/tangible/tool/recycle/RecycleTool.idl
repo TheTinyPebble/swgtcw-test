@@ -54,6 +54,9 @@ class RecycleTool extends Container {
 	public static final int IGNEOUS = 22;
 	public static final int SEDIMENTARY = 23;
 	public static final int GEMSTONE = 24;
+	
+	//gas tool
+	public static final int GAS = 25;
 
 
 	public RecycleTool() {

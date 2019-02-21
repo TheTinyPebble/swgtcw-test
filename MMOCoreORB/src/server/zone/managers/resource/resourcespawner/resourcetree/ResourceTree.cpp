@@ -190,9 +190,8 @@ void ResourceTree::setSurveyToolType(ResourceTreeEntry* entry) {
 	else if(entry->isType("gas"))
 		entry->setSurveyToolType(SurveyTool::GAS);
 
-	else if(entry->isType("mineral")) {
+	else if(entry->isType("mineral"))
 		entry->setSurveyToolType(SurveyTool::MINERAL);
-	}
 
 	else if(entry->isType("water"))
 		entry->setSurveyToolType(SurveyTool::WATER);
@@ -249,6 +248,10 @@ void ResourceTree::setRecycleToolType(ResourceTreeEntry* entry) {
 		entry->setRecycleToolType(RecycleTool::SEDIMENTARY);
 	} else if (entry->isType("gemstone")) {
 		entry->setRecycleToolType(RecycleTool::GEMSTONE);
+	}
+	
+	else if (entry->isType("gas")) {
+		entry->setRecycleToolType(RecycleTool::GAS);
 	}
 
 	else {
