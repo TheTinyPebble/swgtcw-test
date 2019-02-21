@@ -3483,8 +3483,3 @@ object_draft_schematic_item_shared_clothing_sea_removal_tool = SharedDraftSchema
 	clientTemplateFileName = "object/draft_schematic/item/shared_clothing_sea_removal_tool.iff"
 }
 ObjectTemplates:addClientTemplate(object_draft_schematic_item_shared_clothing_sea_removal_tool, "object/draft_schematic/item/shared_clothing_sea_removal_tool.iff")
-<<<<<<< HEAD
-								  
-=======
-								  
->>>>>>> cfa9c1ef8dc813fd20d43f98d2c6ac7cbd9a0988
