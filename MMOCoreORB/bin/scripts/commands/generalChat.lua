@@ -1,5 +1,4 @@
---Copyright (C) 2010 <SWGEmu>
-
+--Copyright (C) 2007 <SWGEmu>
 
 --This File is part of Core3.
 
@@ -39,22 +38,12 @@
 --it is their choice whether to do so. The GNU Lesser General Public License
 --gives permission to release a modified version without this exception;
 --this exception also makes it possible to release a modified version
+--which carries forward this exception.
+--true = 1, false = 0
 
-
-object_building_yavin_dark_enclave = object_building_yavin_shared_dark_enclave:new {
-	containerComponent = "EnclaveContainerComponent",
-	planetMapCategory = "cloningfacility",
-	templateType = CLONINGBUILDING,
-	facilityType = CLONER_DARK_JEDI_ONLY,
-
-	spawningPoints = {
-		{ x = -39, z = -43, y = -31, ow = -0.706572, ox = 0, oz = 0, oy = 0.707641, cellid = 9 }
-	},
-
-	childObjects = {
-		--{templateFile = "object/tangible/terminal/terminal_dark_enclave_voting.iff", x = -2.5, z = -43.42, y = -56.14, ow = 1, ox = 0, oy = 0, oz = 0, cellid = 17, containmentType = -1},
-		--{templateFile = "object/tangible/terminal/terminal_dark_enclave_challenge.iff", x = 2.5, z = -43.42, y = -56.14, ow = 1, ox = 0, oy = 0, oz = 0, cellid = 17, containmentType = -1},
-	},
+GeneralChatCommand = {
+        name = "generalChat",
 }
 
-ObjectTemplates:addTemplate(object_building_yavin_dark_enclave, "object/building/yavin/dark_enclave.iff")
+AddCommand(GeneralChatCommand)
+

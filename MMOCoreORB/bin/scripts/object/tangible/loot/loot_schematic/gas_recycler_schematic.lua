@@ -1,7 +1,7 @@
 --Copyright (C) 2010 <SWGEmu>
 
 
---This File is part of Core3.
+--This File is part of Cgas3.
 
 --This program is free software; you can redistribute 
 --it and/or modify it under the terms of the GNU Lesser 
@@ -13,7 +13,7 @@
 --but WITHOUT ANY WARRANTY; without even the implied warranty of 
 --MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 --See the GNU Lesser General Public License for
---more details.
+--mgas details.
 
 --You should have received a copy of the GNU Lesser General 
 --Public License along with this program; if not, write to
@@ -27,7 +27,7 @@
 --In addition, as a special exception, the copyright holders of Engine3 
 --give you permission to combine Engine3 program with free software 
 --programs or libraries that are released under the GNU LGPL and with 
---code included in the standard release of Core3 under the GNU LGPL 
+--code included in the standard release of Cgas3 under the GNU LGPL 
 --license (or modified versions of such code, with unchanged license). 
 --You may copy and distribute such a system following the terms of the 
 --GNU LGPL for Engine3 and the licenses of the other code concerned, 
@@ -41,13 +41,13 @@
 --this exception also makes it possible to release a modified version 
 
 
+object_tangible_loot_loot_schematic_gas_recycler_schematic = object_tangible_loot_loot_schematic_shared_gas_recycler_schematic:new {
+	templateType = LOOTSCHEMATIC,
+	objectMenuComponent = "LootSchematicMenuComponent",
+	attributeListComponent = "LootSchematicAttributeListComponent",
+	requiredSkill = "crafting_artisan_engineering_01",
+	targetDraftSchematic = "object/draft_schematic/item/item_recycler_gas.iff",
+	targetUseCount = 1,
+}
 
---Children folder includes
-
--- Server Objects
-includeFile("tangible/recycler/chemical_recycler.lua")
-includeFile("tangible/recycler/creature_recycler.lua")
-includeFile("tangible/recycler/flora_recycler.lua")
-includeFile("tangible/recycler/metal_recycler.lua")
-includeFile("tangible/recycler/ore_recycler.lua")
-includeFile("tangible/recycler/gas_recycler.lua")
+ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_gas_recycler_schematic, "object/tangible/loot/loot_schematic/gas_recycler_schematic.iff")
