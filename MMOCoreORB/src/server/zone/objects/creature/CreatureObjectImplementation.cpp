@@ -2419,7 +2419,7 @@ void CreatureObjectImplementation::setIntimidatedState(int durationSeconds) {
 
 		Locker blocker(multBuff);
 
-		multBuff->setSkillModifier("private_damage_divisor", 1.33);
+		multBuff->setSkillModifier("private_damage_divisor", 2);
 
 		addBuff(multBuff);
 	}

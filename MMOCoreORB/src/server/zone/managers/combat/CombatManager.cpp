@@ -986,7 +986,7 @@ float CombatManager::applyDamageModifiers(CreatureObject* attacker, WeaponObject
 
 	if (damageDivisor != 0){
 		if (damageDivisor == 2)
-			damage /= 1.25;
+			damage /= 1.33;
 		else
 			damage /= damageDivisor;
 	}
