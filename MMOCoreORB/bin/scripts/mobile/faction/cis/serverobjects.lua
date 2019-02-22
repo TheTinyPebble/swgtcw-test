@@ -10,6 +10,7 @@ includeFile("faction/cis/cis_battle_droid_commando.lua")
 includeFile("faction/cis/cis_sbd.lua")
 
 includeFile("faction/cis/cis_droideka.lua")
+includeFile("faction/cis/cis_hailfire.lua")
 
 includeFile("faction/cis/cis_major_general.lua")
 includeFile("faction/cis/cis_general.lua")
