@@ -185,7 +185,7 @@ void ZoneServerImplementation::initialize() {
 
 	startManagers();
 
-	serverState = LOCKED;
+	serverState = ONLINE;
 	//serverState = ONLINE; //Test Center does not need to apply this change, but would be convenient for Dev Servers.
 
 	ObjectDatabaseManager::instance()->commitLocalTransaction();
