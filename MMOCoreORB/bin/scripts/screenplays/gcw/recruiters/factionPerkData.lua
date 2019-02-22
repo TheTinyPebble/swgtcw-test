@@ -81,7 +81,7 @@ rebelRewardData = {
 	},
 
 	hirelingList = {
-		"battle_droid", "battle_droid_squad_leader", "battle_droid_specforce", "battle_droid_commando", "sbd", "magnaguard", "droideka"
+		"battle_droid", "battle_droid_squad_leader", "battle_droid_specforce", "battle_droid_commando", "sbd", "magnaguard", "hailfire"
 	},
 
 	hirelings = {
@@ -91,7 +91,7 @@ rebelRewardData = {
 		battle_droid_commando = { type=factionRewardType.hireling, display="@mob/creature_names:cis_battle_droid_commando", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_battle_droid_commando", cost=420},
 		sbd = { type=factionRewardType.hireling, display="@mob/creature_names:cis_sbd", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_sbd", cost=820},
 		magnaguard = { type=factionRewardType.hireling, display="@mob/creature_names:cis_magnaguard", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_magnaguard", cost=2120},
-		droideka = { type=factionRewardType.hireling, display="@mob/creature_names:cis_droideka", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_droideka", cost=9450},
+		hailfire = { type=factionRewardType.hireling, display="@mob/creature_names:recruiter_hailfire", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_hailfire", cost=9450},
 	}
 }
 

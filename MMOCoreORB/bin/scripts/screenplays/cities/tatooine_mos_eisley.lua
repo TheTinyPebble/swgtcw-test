@@ -76,6 +76,7 @@ end
 function TatooineMosEisleyScreenPlay:spawnMobiles()
 
 	--Starport
+	spawnMobile("tatooine", "rebel_recruiter", 300, 3535.69, 5, -4823.4, 272, 0) 
 	local pNpc = spawnMobile(self.planet, "chassis_dealer",60,2.32807,0.639422,67.8972,165.339,1106372)
 	self:setMoodString(pNpc, "neutral")
 	pNpc = spawnMobile(self.planet, "ecik",60,1.1,0.639421,66.3,101.522,1106372)
