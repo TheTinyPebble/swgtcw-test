@@ -8,9 +8,9 @@ armor_battle_leggings = {
 	craftingValues = {
 		{"armor_rating",1,1,0},
 	        {"armor_effectiveness",50,50,0},
-					{"energyeffectiveness",10,10,0},
-					{"kineticeffectiveness",10,10,0},
-					{"blasteffectiveness",10,10,0},
+					{"energyeffectiveness",0,0,0},
+					{"kineticeffectiveness",0,0,0},
+					{"blasteffectiveness",0,0,0},
 	        {"armor_integrity",45000,45000,0},
 	        {"armor_health_encumbrance",175,175,0},
 	        {"armor_action_encumbrance",300,300,0},
