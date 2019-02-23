@@ -31,10 +31,10 @@ public:
 		if (!args.hasMoreTokens()) {
 			Lua* lua = DirectorManager::instance()->getLuaInstance();
 
-			Reference<LuaFunction*> staffTools = lua->createFunction("StaffTools", "openToolsSUI", 0);
-			*staffTools << creature;
+			Reference<LuaFunction*> eventTools = lua->createFunction("EventTools", "openToolsSUI", 0);
+			*eventTools << creature;
 
-			staffTools->callFunction();
+			eventTools->callFunction();
 
 		} else {
 			try {
