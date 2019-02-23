@@ -1,4 +1,4 @@
-evousTHEME_PARK_REBEL_BADGE = 107
+THEME_PARK_REBEL_BADGE = 107
 
 c3po_missions =
 	{
