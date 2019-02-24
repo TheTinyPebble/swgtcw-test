@@ -58,6 +58,16 @@ function CustomJediManager:onPlayerLoggedIn(pPlayer)
 	--CustomJediTrials:onPlayerLoggedIn(pPlayer)
 end
 
+function CustomJediManager:onPlayerLoggedOut(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+	
+	if (CustomUnlock:isOnIntro(pPlayer)) then
+		CustomUnlock:onLoggedOut(pPlayer)
+	end
+end
+
 registerScreenPlay("CustomJediManager", true)
 
 return CustomJediManager
