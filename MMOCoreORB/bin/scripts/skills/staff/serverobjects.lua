@@ -48,7 +48,6 @@ includeFile("staff/admin_dev_basilisk.lua")
 -- Malevolence Staff Skills
 includeFile("staff/admin_csr_malevolence.lua")
 includeFile("staff/admin_ec_malevolence.lua")
-includeFile("staff/admin_dev_malevolence.lua")
 
 includeFile("staff/admin_base.lua")
 includeFile("staff/admin_debug_01.lua")
