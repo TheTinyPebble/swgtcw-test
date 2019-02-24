@@ -1,5 +1,5 @@
 admin_csr_malevolence = {
-	skillName = "admin_dev_malevolence",
+	skillName = "admin_csr_malevolence",
 	parentName = "",
 	graphType = 4,
 	godOnly = 1,
