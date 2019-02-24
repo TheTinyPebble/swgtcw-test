@@ -569,10 +569,12 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 			potency = 300;
 			dotstrength = 100;
 		}
-		if (dotType == CreatureState::BLEEDING){
-			dotstrength = dotstrength/4;
+		if (attacker->isPlayerCreature() && dotType == CreatureState::BLEEDING){
+			dotstrength = dotstrength*0.25;
 		}
-
+		if (!attacker->isPlayerCreature() && dotType == CreatureState::BLEEDING){
+			dotstrength = dotstrength*0.20;
+		}
 		uint8 pool = effect.getDotPool();
 
 		if (pool == CreatureAttribute::UNKNOWN) {
