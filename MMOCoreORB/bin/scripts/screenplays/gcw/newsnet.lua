@@ -35,6 +35,14 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 	
 	local body, title = ""
 	
+	local sui = SuiMessageBox.new("NewsnetMenuComponent", "notifyOkPressed")
+	
+	sui.setTargetNetworkId(SceneObject(pPlayer):getObjectID())
+	
+	sui.setOkButtonText("Close")
+	sui.hideCancelButton()
+	sui.setWindowType(NEWSNET_INFO)
+	
 	--Patch Notes text
 	if (selectedID == 20) then
 		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
@@ -45,6 +53,10 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 		if (pGhost ~= nil) then
 			PlayerObject(pGhost):closeSuiWindowType(NEWSNET_INFO)
 		end
+		
+		sui.setTitle(title)
+		sui.setPrompt(body)
+		sui.sendTo(pPlayer)
 	end
 	
 	--Upcoming Events text
@@ -56,6 +68,10 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 		if (pGhost ~= nil) then
 			PlayerObject(pGhost):closeSuiWindowType(NEWSNET_INFO)
 		end
+		
+		sui.setTitle(title)
+		sui.setPrompt(body)
+		sui.sendTo(pPlayer)
 	end
 
 	--GCW News text on drop-down radial
@@ -94,6 +110,10 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 		title = "@gcw:" .. planet .. "_newsnet_name"
 		body = "@gcw:" .. headline
 		--end original SWGEmu Newsnet script
+		
+		sui.setTitle(title)
+		sui.setPrompt(body)
+		sui.sendTo(pPlayer)
 	end
 
 	--GCW Correspondence text
@@ -106,6 +126,10 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 		if (pGhost ~= nil) then
 			PlayerObject(pGhost):closeSuiWindowType(NEWSNET_INFO)
 		end
+		
+		sui.setTitle(title)
+		sui.setPrompt(body)
+		sui.sendTo(pPlayer)
 	end
 
 	if (selectedID == 100) then
@@ -117,15 +141,11 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 		if (pGhost ~= nil) then
 			PlayerObject(pGhost):closeSuiWindowType(NEWSNET_INFO)
 		end
+		
+		sui.setTitle(title)
+		sui.setPrompt(body)
+		sui.sendTo(pPlayer)
 	end
-	
-	local sui = SuiMessageBox.new("NewsnetMenuComponent", "notifyOkPressed")
-	sui.setOkButtonText("Close")
-	sui.hideCancelButton()
-	sui.setWindowType(NEWSNET_INFO)
-	sui.setTitle(title)
-	sui.setPrompt(body)
-	sui.sendTo(pPlayer)
 	
 	return 0
 end
