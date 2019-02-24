@@ -1,5 +1,5 @@
 admin_csr_malevolence = {
-	skillName = "admin_dev_malevolence",
+	skillName = "admin_csr_malevolence",
 	parentName = "",
 	graphType = 4,
 	godOnly = 1,
@@ -97,4 +97,4 @@ admin_csr_malevolence = {
 	searchable = 0
 }
 
-addSkill(admin_dev_malevolence)
+addSkill(admin_csr_malevolence)
