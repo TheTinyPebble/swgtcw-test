@@ -5,7 +5,7 @@ dev = {
 	tag = "Malevolence-Dev",
 	skills = {
 		"admin_base",
-		"admin_dev_malevolence"
+		"admin_csr_malevolence"
 	}
 }
 
