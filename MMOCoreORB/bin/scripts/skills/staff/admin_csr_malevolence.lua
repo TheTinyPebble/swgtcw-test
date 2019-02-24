@@ -97,4 +97,4 @@ admin_csr_malevolence = {
 	searchable = 0
 }
 
-addSkill(admin_dev_malevolence)
+addSkill(admin_csr_malevolence)
