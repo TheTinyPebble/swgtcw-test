@@ -109,6 +109,7 @@ void FactionManager::awardFactionStanding(CreatureObject* player, const String& 
 	
 	float entBonus = 0;
 	entBonus = player->getSkillMod("ent_faction_gain");
+	entBonus /= 100;
 
 
 	float gain = level * faction.getAdjustFactor() * (globalFactionMultiplier + entBonus);
