@@ -3,6 +3,8 @@
 StaffTools = {
 	toolsMenu = {
 		{ "Lookup CRC", "lookupCRC" },
+		--{ "Place Test Vendor", "placeVendor" },
+		{ "Troubleshoot Holocron Trials", "holocronTroubleshoot" },
 	}
 }
 
@@ -76,10 +78,95 @@ function StaffTools:lookupCrcCallback(pPlayer, pSui, eventIndex, args)
 			CreatureObject(pPlayer):sendSystemMessage("The object you are trying to look up does not exist.")
 		end
 		local crcName = SceneObject(pCrc):getCustomObjectName()
+		local zone = SceneObject(pCrc):getZoneName()
+		local x = math.floor(SceneObject(pCrc):getWorldPositionX())
+		local y = math.floor(SceneObject(pCrc):getWorldPositionY())
 		CreatureObject(pPlayer):sendSystemMessage("The name of the object you looked up: " .. crcName)
+		CreatureObject(pPlayer):sendSystemMessage("Location: " .. zone .. ", co-ords: " .. x .. ", " .. y)
 	else
 		CreatureObject(pPlayer):sendSystemMessage("You need to input a hex or a decimal number.")
 	end
+end
+
+function StaffTools.placeVendor(pPlayer)
+	local pMobile = spawnMobile("naboo", "commoner", 300, -4910, 6, 4150, 0, 0)
+	CreatureObject(pMobile):setOptionBit(CONVERSABLE)
+	AiAgent(pMobile):setConvoTemplate("eventVendorConvoTemplate")
+end
+
+function StaffTools.holocronTroubleshoot(pPlayer)
+	local targetID = CreatureObject(pPlayer):getTargetID()
+	
+	if (targetID == nil) then
+		return
+	end
+	
+	local pTarget = getSceneObject(targetID)
+	
+	if (pTarget == nil) then
+		return
+	end
+	
+	if (not SceneObject(pTarget):isPlayerCreature()) then
+		CreatureObject(pPlayer):sendSystemMessage("You need to target a player.")
+		return
+	end
+	
+	local unlockStepIndex = {
+		"OLDMANWAIT",
+		"OLDMANMEET",
+		"SITHWAIT",
+		"SITHATTACK",
+		"USEDATAPADONE",
+		"SITHTHEATER",
+		"USEDATAPADTWO",
+		"MELLICHAETHEATER",
+		"HOLOCRONTASKS",
+	}
+	
+	local name = SceneObject(pTarget):getCustomObjectName()
+	
+	local melState = tostring(CustomJediManagerCommon.hasJediProgressionScreenPlayState(pTarget, CUSTOM_JEDI_PROGRESSION_DEFEATED_MELLICHAE))
+	local hasActiveTask = tostring(CustomJediManagerHolocron:hasTheaterTask(pTarget))
+	local activeHolocronTask = readScreenPlayData(pTarget, "CustomJediProgression", "ActiveHolocronTask")
+	
+	if (activeHolocronTask == "" or activeHolocronTask == nil) then
+		activeHolocronTask = "none active"
+	end
+	
+	local holocronStep = readScreenPlayData(pTarget, "CustomJediProgression", "HolocronStep")
+	
+	if (holocronStep == "" or holocronStep == nil) then
+		holocronStep = 0
+	end
+	
+	local unlockStep = readScreenPlayData(pTarget, "CustomJediProgression", "CustomUnlockStep")
+	
+	if (unlockStep == "" or unlockStep == nil) then
+		unlockStep = 0
+	end
+	
+	local unlockStepString = unlockStepIndex[tonumber(unlockStep)]
+	print(unlockStepString)
+	if (unlockStepString == "" or unlockStepString == nil) then
+		unlockStepString = "Not glowing yet.\n"
+	else
+		unlockStepString = unlockStepString .. " (" .. unlockStep .. ")\n"
+	end
+	
+	local message = "Jedi Unlock Troubleshoot for: " .. name .. "\n\n"
+	message = message .. "Is on the following unlockstep: " .. unlockStepString
+	message = message .. "Has completed Mellichae: " .. melState .. "\n"
+	message = message .. "Has active holocron theater: " .. hasActiveTask .. "\n"
+	message = message .. "Active holocron trial: " .. activeHolocronTask .. "\n"
+	message = message .. "Holocron trials completed: " .. holocronStep 
+	
+	local suiManager = LuaSuiManager()
+	suiManager:sendConfirmSui(pPlayer, pPlayer, "StaffTools", "HolocronTroubleshootCallback", message, "Close")
+	return 
+end
+
+function StaffTools:HolocronTroubleshootCallback()
 end
 
 return StaffTools
