@@ -137,9 +137,8 @@ function MellichaeOutroTheater:onMellichaeKilled(pMellichae, pKiller)
 	
 	if (not PlayerObject(pGhost):isJedi()) then
 		PlayerObject(pGhost):setJediState(1)
+		awardSkill(pOwner, "force_title_jedi_novice")
 	end
-
-	awardSkill(pPlayer, "force_title_jedi_novice")
 	
 	local pActiveArea = spawnActiveArea(CreatureObject(pOwner):getZoneName(), "object/active_area.iff", SceneObject(pTheater):getWorldPositionX(), 0, SceneObject(pTheater):getWorldPositionY(), 150, 0)
 
