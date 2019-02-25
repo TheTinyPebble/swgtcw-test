@@ -420,7 +420,6 @@ void BuffImplementation::removeSkillModifiers() {
 
 		String key = entry->getKey();
 		int value = entry->getValue();
-		info(creo->getFirstName() + ": Buff: " + key + " " + String::valueOf(value), true);
 
 		creo->addSkillMod(SkillModManager::BUFF, key, -value, true);
 
