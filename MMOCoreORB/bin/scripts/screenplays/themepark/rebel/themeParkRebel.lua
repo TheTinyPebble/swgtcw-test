@@ -652,7 +652,7 @@ mon_missions =
 		{
 			missionType = "escort",
 			planetName = "dantooine",
-			missionDescription = "MON MOTHMA needs you to ESCORT the CAPTAIN of the Corvette back to the REBEL BASE",
+			missionDescription = "GENERAL GREVIOUS needs you to ESCORT the CAPTAIN of the CIS SHIP back to the SEPARATIST BASE",
 			primarySpawns =
 			{
 				{ npcTemplate = "theme_park_rebel_altapi_tmman", npcName = "Alostt Sharn" }
@@ -797,7 +797,7 @@ jan_missions =
 		{
 			missionType = "deliver",
 			planetName = "yavin4",
-			missionDescription = "GENERAL DODONNA needs you to DELIVER the INFORMATION to REBEL PILOT",
+			missionDescription = "SAVAGE OPRESS needs you to DELIVER the INFORMATION to BATTLE DROID PILOT",
 			primarySpawns =
 			{
 				{ npcTemplate = "theme_cis_battle_droid", npcName = "Battle Droid Pilot" }
