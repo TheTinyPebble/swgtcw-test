@@ -51,12 +51,12 @@ object_tangible_beta_beta_terminal_food = object_tangible_beta_shared_beta_termi
 	templateType = CHARACTERBUILDERTERMINAL,
 
      suiBoxTitle = "CW Rewards",
-     suiBoxText = "Welcome Soldier! Try your luck on a reward from Acklay.",
+     suiBoxText = "Welcome Soldier! Try your luck on a reward from the Acklay.",
 
 
 	itemList = {
-			"[CIS] Roll Acklay loot (4,000 CW Currency)", "acklay_roll_rebel",
-			"[Republic] Roll Acklay loot (4,000 CW Currency)", "acklay_roll_imperial",
+			"[CIS] Roll Acklay loot (8,000 CW Currency)", "acklay_roll_rebel",
+			"[Republic] Roll Acklay loot (8,000 CW Currency)", "acklay_roll_imperial",
 
 	}
 
