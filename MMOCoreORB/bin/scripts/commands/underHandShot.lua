@@ -67,7 +67,7 @@ UnderHandShotCommand = {
 
 	combatSpam = "underhandshot",
 
-	weaponType = CARBINEWEAPON + PISTOLWEAPON + RIFLEWEAPON + SPECIALHEAVYWEAPON,
+	weaponType = CARBINEWEAPON + PISTOLWEAPON + SPECIALHEAVYWEAPON,
 
 	range = -1
 }
