@@ -52,30 +52,29 @@ TorsoShotCommand = {
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
-	animation = "fire_3_special_single", 
+	animation = "fire_3_special_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "torsoshot",
 
 	dotEffects = {
-	  DotEffect( 
-		ONFIRE, 
+	  DotEffect(
+		ONFIRE,
 		{ "resistance_fire", "fire_resist" },
 		HEALTH,
 		true,
 		0,
 		100,
-		30, 
+		30,
 		30,
 		50,
 		10
 	  )
 	},
-	
-	weaponType = PISTOLWEAPON,
+
+	weaponType = CARBINEWEAPON + PISTOLWEAPON + RIFLEWEAPON,
 
 	range = -1
 }
 
 AddCommand(TorsoShotCommand)
-
