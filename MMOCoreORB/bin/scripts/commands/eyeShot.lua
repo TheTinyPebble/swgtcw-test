@@ -53,26 +53,25 @@ EyeShotCommand = {
 	poolsToDamage = MIND_ATTRIBUTE,
 
 	stateEffects = {
-	  StateEffect( 
-		BLIND_EFFECT, 
-		{}, 
-		{ "blind_defense" }, 
+	  StateEffect(
+		BLIND_EFFECT,
+		{},
+		{ "blind_defense" },
 		{ "jedi_state_defense", "resistance_states" },
-		100, 
-		0, 
-		40 
+		100,
+		0,
+		40
 	  )
 	},
 
-	animation = "fire_3_special_single", 
+	animation = "fire_3_special_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "eyeshot",
-	
-	weaponType = PISTOLWEAPON,
+
+	weaponType = CARBINEWEAPON + PISTOLWEAPON + RIFLEWEAPON,
 
 	range = -1
 }
 
 AddCommand(EyeShotCommand)
-
