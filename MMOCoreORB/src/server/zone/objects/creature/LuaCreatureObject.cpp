@@ -138,6 +138,7 @@ Luna<LuaCreatureObject>::RegType LuaCreatureObject::Register[] = {
 		{ "getSkillMod", &LuaCreatureObject::getSkillMod },
 		{ "getGender", &LuaCreatureObject::getGender },
 		{ "setAlternateAppearance", &LuaCreatureObject::setAlternateAppearance },
+		{ "doCombatAnimation", &LuaCreatureObject::doCombatAnimation },
 		{ 0, 0 }
 };
 
@@ -1064,5 +1065,17 @@ int LuaCreatureObject::setAlternateAppearance(lua_State* L) {
 
 	realObject->setAlternateAppearance(appearance, true);
 	
+	return 0;
+}
+
+int LuaCreatureObject::doCombatAnimation(lua_State* L) {
+	CreatureObject* enemy = (CreatureObject*)lua_touserdata(L, -2);
+	String animString = lua_tostring(L, -1);
+
+	Locker locker(realObject);
+
+	if (enemy != NULL)
+		realObject->doCombatAnimation(enemy, animString.hashCode(), 0, 0xFF);
+
 	return 0;
 }
