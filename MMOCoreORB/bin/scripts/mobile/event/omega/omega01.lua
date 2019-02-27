@@ -1,5 +1,7 @@
-restuss_kit_fisto = Creature:new {
-	objectName = "@mob/creature_names:theme_kit_fisto",
+omega01 = Creature:new {
+	objectName = "@mob/creature_names:clonetrooper_commando",
+	randomNameType = NAME_DARKTROOPER,
+	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,
@@ -23,16 +25,16 @@ restuss_kit_fisto = Creature:new {
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
 	optionsBitmask = INVULNERABLE,
-	--optionsBitmask = INVULNERABLE + CONVERSABLE,
+	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/kit_fisto_cloak.iff"},
+	templates = {"object/mobile/dressed_clone_commando_m.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
-	--conversationTemplate = "republicRestussCaptainConvoTemplate",
+	conversationTemplate = "omega01ConvoTemplate",
 	attacks = {
 	}
 }
 
-CreatureTemplates:addCreatureTemplate(restuss_kit_fisto, "restuss_kit_fisto")
+CreatureTemplates:addCreatureTemplate(omega01, "omega01")
