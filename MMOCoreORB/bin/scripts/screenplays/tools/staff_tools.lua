@@ -5,6 +5,7 @@ StaffTools = {
 		{ "Lookup CRC", "lookupCRC" },
 		--{ "Place Test Vendor", "placeVendor" },
 		{ "Troubleshoot Holocron Trials", "holocronTroubleshoot" },
+		{ "Fix Jedi", "fixJedi" },
 	}
 }
 
@@ -104,11 +105,18 @@ function StaffTools.holocronTroubleshoot(pPlayer)
 	local pTarget = getSceneObject(targetID)
 	
 	if (pTarget == nil) then
+		CreatureObject(pPlayer):sendSystemMessage("You need a target for this option.")
 		return
 	end
 	
 	if (not SceneObject(pTarget):isPlayerCreature()) then
 		CreatureObject(pPlayer):sendSystemMessage("You need to target a player.")
+		return
+	end
+	
+	local pTargetGhost = CreatureObject(pTarget):getPlayerObject()
+	
+	if (pTargetGhost == nil) then
 		return
 	end
 	
@@ -159,10 +167,44 @@ function StaffTools.holocronTroubleshoot(pPlayer)
 	message = message .. "Has completed Mellichae: " .. melState .. "\n"
 	message = message .. "Has active holocron theater: " .. hasActiveTask .. "\n"
 	message = message .. "Active holocron trial: " .. activeHolocronTask .. "\n"
-	message = message .. "Holocron trials completed: " .. holocronStep 
+	message = message .. "Holocron trials completed: " .. holocronStep .. "\n"
+	message = message .. "Jedi State: " .. PlayerObject(pTargetGhost):getJediState()
 	
 	local suiManager = LuaSuiManager()
-	suiManager:sendConfirmSui(pPlayer, pPlayer, "StaffTools", "HolocronTroubleshootCallback", message, "Close")
+	suiManager:sendConfirmSui(pPlayer, pPlayer, "StaffTools", "HolocronTroubleshootCallback", message, "Ok")
+	return 
+end
+
+
+function StaffTools.fixJedi(pPlayer)
+	local targetID = CreatureObject(pPlayer):getTargetID()
+	
+	if (targetID == nil) then
+		return
+	end
+	
+	local pTarget = getSceneObject(targetID)
+	
+	if (pTarget == nil) then
+		CreatureObject(pPlayer):sendSystemMessage("You need a target for this option.")
+		return
+	end
+	
+	if (not SceneObject(pTarget):isPlayerCreature()) then
+		CreatureObject(pPlayer):sendSystemMessage("You need to target a player.")
+		return
+	end
+	
+	local pTargetGhost = CreatureObject(pTarget):getPlayerObject()
+	
+	if (pTargetGhost == nil) then
+		return
+	end
+	
+	if (CustomJediManagerCommon.hasJediProgressionScreenPlayState(pPlayer, CUSTOM_JEDI_PROGRESSION_COMPLETED_HOLOCRON_TASKS)) then
+		PlayerObject(pTargetGhost):setJediState(2)
+		awardSkill(pTarget, "force_title_jedi_rank_01")
+	end
 	return 
 end
 
