@@ -54,8 +54,20 @@ function CustomJediManager:onPlayerLoggedIn(pPlayer)
 	if (CustomUnlock:isOnIntro(pPlayer)) then
 		CustomUnlock:onLoggedIn(pPlayer)
 	end
-
-	--CustomJediTrials:onPlayerLoggedIn(pPlayer)
+	
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+	
+	if (pGhost == nil) then
+		return
+	end
+	
+	if (CustomJediManagerCommon.hasJediProgressionScreenPlayState(pPlayer, CUSTOM_JEDI_PROGRESSION_DEFEATED_MELLICHAE) and not CreatureObject(pPlayer):hasSkill("force_title_jedi_novice")) then
+		awardSkill(pPlayer, "force_title_jedi_novice")
+	end
+	
+	if (CustomJediManagerCommon.hasJediProgressionScreenPlayState(pPlayer, CUSTOM_JEDI_PROGRESSION_COMPLETED_HOLOCRON_TASKS) and not CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_01")) then
+		awardSkill(pPlayer, "force_title_jedi_rank_01")
+	end
 end
 
 function CustomJediManager:onPlayerLoggedOut(pPlayer)
@@ -66,6 +78,14 @@ function CustomJediManager:onPlayerLoggedOut(pPlayer)
 	if (CustomUnlock:isOnIntro(pPlayer)) then
 		CustomUnlock:onLoggedOut(pPlayer)
 	end
+end
+
+function CustomJediManager:canLearnSkill(pPlayer, skillName)
+	return true
+end
+
+function CustomJediManager:canSurrenderSkill(pPlayer, skillName)
+	return true
 end
 
 registerScreenPlay("CustomJediManager", true)
