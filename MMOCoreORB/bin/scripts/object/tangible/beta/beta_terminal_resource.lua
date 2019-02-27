@@ -51,12 +51,12 @@ object_tangible_beta_beta_terminal_resource = object_tangible_beta_shared_beta_t
 	templateType = CHARACTERBUILDERTERMINAL,
 
      suiBoxTitle = "CW Rewards",
-     suiBoxText = "Welcome Soldier! Try your luck on a reward from Fire Spider.",
+     suiBoxText = "Welcome Soldier! Try your luck on a reward from the Fire Spider.",
 
 
 	itemList = {
-			"[CIS] Roll Fire Spider loot (4,000 CW Currency)", "firespider_roll_rebel",
-			"[Republic] Roll Fire Spider loot (4,000 CW Currency)", "firespider_roll_imperial",
+			"[CIS] Roll Fire Spider loot (8,000 CW Currency)", "firespider_roll_rebel",
+			"[Republic] Roll Fire Spider loot (8,000 CW Currency)", "firespider_roll_imperial",
 
 	}
 

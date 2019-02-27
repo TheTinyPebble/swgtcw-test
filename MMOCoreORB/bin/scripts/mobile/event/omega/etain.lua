@@ -1,4 +1,4 @@
-restuss_anakin_skywalker = Creature:new {
+etain = Creature:new {
 	objectName = "@mob/creature_names:theme_anakin_skywalker",
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -22,7 +22,7 @@ restuss_anakin_skywalker = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
-	--optionsBitmask = INVULNERABLE + CONVERSABLE + INTERESTING,
+	optionsBitmask = INVULNERABLE + CONVERSABLE + INTERESTING,
 	optionsBitmask = INVULNERABLE + INTERESTING,
 	diet = HERBIVORE,
 
@@ -30,9 +30,9 @@ restuss_anakin_skywalker = Creature:new {
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",
-	--conversationTemplate = "restussanakinGiverConvoTemplate",
+	conversationTemplate = "omegaEtainConvoTemplate",
 	attacks = {
 	}
 }
 
-CreatureTemplates:addCreatureTemplate(restuss_anakin_skywalker, "restuss_anakin_skywalker")
+CreatureTemplates:addCreatureTemplate(etain, "etain")
