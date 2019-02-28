@@ -63,11 +63,6 @@ object_tangible_wearables_robe_robe_jedi_light_s01 = object_tangible_wearables_r
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
 
-				skillMods = {
-				},
-
-				noTrade = 1,
-
 				objectMenuComponent = "RobeObjectMenuComponent",
 
                 certificationsRequired = {"force_title_jedi_rank_01"},
