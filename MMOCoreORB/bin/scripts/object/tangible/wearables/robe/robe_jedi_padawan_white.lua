@@ -66,7 +66,6 @@ object_tangible_wearables_robe_robe_jedi_padawan_white = object_tangible_wearabl
 				objectMenuComponent = "RobeObjectMenuComponent",
 
                 certificationsRequired = {"force_title_jedi_rank_01"},
-                attributeListComponent = "JediRobeAttributeListComponent",
 
 				numberExperimentalProperties = {1, 1, 1, 1},
 				experimentalProperties = {"XX", "XX", "XX", "XX"},
