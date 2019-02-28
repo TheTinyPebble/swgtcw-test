@@ -75,7 +75,7 @@ bool EnclaveContainerComponent::checkBuildingPermission(SceneObject* sceneObject
 	//if (frsData == nullptr)
 	//	return false;
 
-	if (creature->hasSkill("jedi_padawan_novice") && councilType == enclaveType)
+	if (creature->hasSkill("force_title_jedi_rank_01") && councilType == enclaveType)
 		return true;
 
 	creature->sendSystemMessage("@pvp_rating:enclave_deny_entry"); // A strange force repels you and keeps you from entering.
@@ -123,7 +123,7 @@ bool EnclaveContainerComponent::checkCellPermission(SceneObject* sceneObject, Cr
 	else
 		return false;
 
-	if (creature->hasSkill("jedi_padawan_novice") && councilType == enclaveType)
+	if (creature->hasSkill("force_title_jedi_rank_01") && councilType == enclaveType)
 		return true;
 
 //	creature->sendSystemMessage("@pvp_rating:enclave_deny_entry"); // A strange force repels you and keeps you from entering.
