@@ -27,7 +27,7 @@ public:
 			return NOJEDIARMOR;
 		}
 
-		return doCombatAction(creature, target, args);
+		return doCombatAction(creature, target);
 	}
 
 };
