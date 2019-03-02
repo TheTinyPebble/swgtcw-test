@@ -43,26 +43,25 @@
 
 Saber2hBodyHit1Command = {
         name = "saber2hbodyhit1",
-        
-    damageMultiplier = 1.5,
+
+    damageMultiplier = 1.25,
 	speedMultiplier = 1.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
-	forceCostMultiplier = 1.25,
+	forceCostMultiplier = 1.0,
 	visMod = 25,
 
-	animation = "combo_3b", 
+	animation = "combo_3b",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "saber2hbodyhit1",
-	
+
 	poolsToDamage = HEALTH_ATTRIBUTE,
-	
+
 	weaponType = JEDIWEAPON,
 
 	range = -1
 }
 
 AddCommand(Saber2hBodyHit1Command)
-
