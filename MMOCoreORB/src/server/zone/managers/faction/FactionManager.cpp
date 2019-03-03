@@ -241,7 +241,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			ghost->increaseFactionStanding("imperial", 30);
 			ghost->decreaseFactionStanding("rebel", 45);
 
-			killedGhost->decreaseFactionStanding("imperial", 45);
+			killedGhost->decreaseFactionStanding("rebel", 45);
 			float entBonus = 1.f;
 			float finalBonus;
 			entBonus = killerCreature->getSkillMod("ent_cw_gain");
