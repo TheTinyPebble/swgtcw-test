@@ -11,6 +11,7 @@
 
 --Sets a global faction multiplier
 globalFactionMultiplier = 1.0
+globalGcwMultiplier = 1.0
 
 factionList = {
 	{ "rebel", true, "imperial", "", 1.0 },
