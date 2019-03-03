@@ -186,8 +186,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			entBonus = killerCreature->getSkillMod("ent_cw_gain");
 			finalBonus = 1.f + (entBonus / 1000.f);
 			(finalBonus >= 1.f) ? finalBonus = finalBonus : finalBonus = 1.f;
-			//float finalXp = 1000.f * finalBonus;
-			float finalXp = 0;
+			float finalXp = 1000.f * finalBonus;
 
 
 			playerManager->awardExperience(killerCreature, "gcw_currency_rebel", (int)(finalXp));
@@ -228,8 +227,6 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			int dividedKill = 5000 / players.size();
 			if (players.size() == 1)
 				dividedKill = 2500;
-			//REMOVE AFTER FIXING CW XP
-			dividedKill = 0;
 			for (int i = 0; i < players.size(); i++){
 				ManagedReference<CreatureObject*> player = players.get(i);
 				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
@@ -248,8 +245,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			float entBonus = 1.f;
 			entBonus = killerCreature->getSkillMod("ent_cw_gain");
 			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
-			//float finalXp = (entBonus - 0.5) * 1000.f;
-			float finalXp = 0;
+			float finalXp = (entBonus - 0.5) * 1000.f;
 			playerManager->awardExperience(killerCreature, "gcw_currency_imperial", (int)(finalXp));
 			group = killerCreature->getGroup();
 			Vector<ManagedReference<CreatureObject*> > players;
@@ -287,8 +283,6 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			int dividedKill = 5000 / players.size();
 			if (players.size() == 1)
 				dividedKill = 2500;
-			//REMOVE AFTER FIXING CW XP
-			dividedKill = 0;
 			for (int i = 0; i < players.size(); i++){
 				ManagedReference<CreatureObject*> player = players.get(i);
 				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
