@@ -187,9 +187,10 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			finalBonus = 1.f + (entBonus / 1000.f);
 			(finalBonus >= 1.f) ? finalBonus = finalBonus : finalBonus = 1.f;
 			//float finalXp = 1000.f * finalBonus;
-			//float finalXp = 0;
+			float finalXp = 0;
 
-			//playerManager->awardExperience(killerCreature, "gcw_currency_rebel", (int)(finalXp));
+
+			playerManager->awardExperience(killerCreature, "gcw_currency_rebel", (int)(finalXp));
 			group = killerCreature->getGroup();
 			Vector<ManagedReference<CreatureObject*> > players;
 			int playerCount = 1;
@@ -227,12 +228,14 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			int dividedKill = 5000 / players.size();
 			if (players.size() == 1)
 				dividedKill = 2500;
+			//REMOVE AFTER FIXING CW XP
+			dividedKill = 0;
 			for (int i = 0; i < players.size(); i++){
 				ManagedReference<CreatureObject*> player = players.get(i);
 				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
-				groupPlayerManager->awardExperience(player, "gcw_currency_rebel", dividedKill * finalBonus);
+				groupPlayerManager->awardExperience(player, "gcw_currency_rebel", dividedKill * entBonus);
 				StringBuffer sysMessage;
-				sysMessage << "You have received " << dividedKill * finalBonus << " CW XP for your kill participation!";
+				sysMessage << "You have received " << dividedKill * entBonus << " CW XP for your kill participation!";
 				player->sendSystemMessage(sysMessage.toString());
 
 			}
@@ -241,16 +244,13 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			ghost->increaseFactionStanding("imperial", 30);
 			ghost->decreaseFactionStanding("rebel", 45);
 
-			killedGhost->decreaseFactionStanding("imperial", 45);
+			killedGhost->decreaseFactionStanding("rebel", 45);
 			float entBonus = 1.f;
-			float finalBonus;
 			entBonus = killerCreature->getSkillMod("ent_cw_gain");
-			finalBonus = 1.f + (entBonus / 1000.f);
-			(finalBonus >= 1.f) ? finalBonus = finalBonus : finalBonus = 1.f;
-			//float finalXp = 1000.f * finalBonus;
-			//float finalXp = 0;
-			
-			//playerManager->awardExperience(killerCreature, "gcw_currency_imperial", (int)(finalXp));
+			(entBonus > 1.f) ? entBonus = entBonus : entBonus = 1.f;
+			//float finalXp = (entBonus - 0.5) * 1000.f;
+			float finalXp = 0;
+			playerManager->awardExperience(killerCreature, "gcw_currency_imperial", (int)(finalXp));
 			group = killerCreature->getGroup();
 			Vector<ManagedReference<CreatureObject*> > players;
 			int playerCount = 1;
@@ -287,12 +287,14 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			int dividedKill = 5000 / players.size();
 			if (players.size() == 1)
 				dividedKill = 2500;
+			//REMOVE AFTER FIXING CW XP
+			dividedKill = 0;
 			for (int i = 0; i < players.size(); i++){
 				ManagedReference<CreatureObject*> player = players.get(i);
 				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
-				groupPlayerManager->awardExperience(player, "gcw_currency_imperial", dividedKill * finalBonus);
+				groupPlayerManager->awardExperience(player, "gcw_currency_imperial", dividedKill * entBonus);
 				StringBuffer sysMessage;
-				sysMessage << "You have received " << dividedKill * finalBonus << " CW XP for your kill participation!";
+				sysMessage << "You have received " << dividedKill * entBonus << " CW XP for your kill participation!";
 				player->sendSystemMessage(sysMessage.toString());
 
 			}
