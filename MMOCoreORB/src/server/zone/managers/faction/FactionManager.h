@@ -16,6 +16,7 @@ class FactionManager : public Singleton<FactionManager>, public Logger, public O
 	FactionMap factionMap;
 	FactionRanks factionRanks;
 	float globalFactionMultiplier;
+	float globalGcwMultiplier;
 
 public:
 	FactionManager();
