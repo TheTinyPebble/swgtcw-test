@@ -227,7 +227,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 
 			int dividedKill = 5000 / players.size();
 			if (players.size() == 1)
-				dividedKill = 2500 * finalCwBonus;
+				dividedKill = 2500;
 			for (int i = 0; i < players.size(); i++){
 				ManagedReference<CreatureObject*> player = players.get(i);
 				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
@@ -286,7 +286,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 
 			int dividedKill = 5000 / players.size();
 			if (players.size() == 1)
-				dividedKill = 2500 * finalCwBonus;
+				dividedKill = 2500;
 			for (int i = 0; i < players.size(); i++){
 				ManagedReference<CreatureObject*> player = players.get(i);
 				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
