@@ -185,7 +185,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			float entBonus = 1.f;
 			float finalCwBonus;
 			entBonus = killerCreature->getSkillMod("ent_cw_gain");
-			finalCwBonus = globalGcwMultiplier + (entBonus/200);
+			finalCwBonus = globalGcwMultiplier + (entBonus/250);
 			(finalCwBonus >= 1.f) ? finalCwBonus = finalCwBonus : finalCwBonus = 1.f;
 			float finalXp = 1000.f * finalCwBonus;
 
@@ -247,7 +247,7 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 			float entBonus = 1.f;
 			float finalCwBonus;
 			entBonus = killerCreature->getSkillMod("ent_cw_gain");
-			finalCwBonus = globalGcwMultiplier + (entBonus/200);
+			finalCwBonus = globalGcwMultiplier + (entBonus/250);
 			(finalCwBonus >= 1.f) ? finalCwBonus = finalCwBonus : finalCwBonus = 1.f;
 			float finalXp = 1000.f * finalCwBonus;
 			playerManager->awardExperience(killerCreature, "gcw_currency_imperial", (int)(finalXp));
