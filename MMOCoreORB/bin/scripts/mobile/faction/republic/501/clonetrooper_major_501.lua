@@ -49,7 +49,7 @@ clonetrooper_major_501 = Creature:new {
 			}
 		}
 	},
-	weapons = {"clonetrooper_weapons"},
+	weapons = {"clonetrooper_weapons_mix"},
 	conversationTemplate = "imperialRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)

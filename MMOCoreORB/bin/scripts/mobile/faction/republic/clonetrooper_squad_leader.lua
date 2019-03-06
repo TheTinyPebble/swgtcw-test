@@ -46,7 +46,7 @@ clonetrooper_squad_leader = Creature:new {
 			}
 		}
 	},
-	weapons = {"clonetrooper_weapons"},
+	weapons = {"clonetrooper_weapons_mix"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	personalityStf = "@hireling/hireling_stormtrooper",

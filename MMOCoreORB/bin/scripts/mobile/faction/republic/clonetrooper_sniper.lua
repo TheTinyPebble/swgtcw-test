@@ -48,7 +48,7 @@ clonetrooper_sniper = Creature:new {
 			}
 		}
 	},
-	weapons = {"st_sniper_weapons"},
+	weapons = {"clonetrooper_heavy_weapons"},
 	reactionStf = "@npc_reaction/stormtrooper",
 	personalityStf = "@hireling/hireling_stormtrooper",
 	attacks = merge(riflemanmaster,brawlermaster)
