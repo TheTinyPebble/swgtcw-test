@@ -30,7 +30,7 @@ clonetrooper_captain_501 = Creature:new {
 
 	templates = {
 		"object/mobile/dressed_clone_arc_501.iff",
-		"object/mobile/dressed_clonetrooper_blue_nh_m.iff",
+		"object/mobile/dressed_clone_arc_nh_501.iff"
 	},
 	lootGroups = {
 		{
