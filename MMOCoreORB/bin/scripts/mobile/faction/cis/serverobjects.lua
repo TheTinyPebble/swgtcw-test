@@ -1,3 +1,5 @@
+includeFile("faction/cis/tat/serverobjects.lua")
+
 includeFile("faction/cis/rebel_recruiter.lua")
 
 includeFile("faction/cis/cis_battle_droid_scout.lua")

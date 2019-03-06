@@ -23,7 +23,6 @@ etain = Creature:new {
 	pvpBitmask = NONE,
 	creatureBitmask = PACK,
 	optionsBitmask = INVULNERABLE + CONVERSABLE + INTERESTING,
-	optionsBitmask = INVULNERABLE + INTERESTING,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/anakin_robe.iff"},

@@ -1,3 +1,5 @@
+includeFile("faction/republic/501/serverobjects.lua")
+
 includeFile("faction/republic/clone_commando.lua")
 includeFile("faction/republic/clone_sand_trooper.lua")
 includeFile("faction/republic/clone_scout_trooper.lua")
