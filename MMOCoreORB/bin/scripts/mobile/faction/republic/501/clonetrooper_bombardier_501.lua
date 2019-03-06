@@ -6,8 +6,8 @@ clonetrooper_bombardier_501 = Creature:new {
 	faction = "imperial",
 	level = 25,
 	chanceHit = 0.36,
-	damageMin = 270,
-	damageMax = 280,
+	damageMin = 350,
+	damageMax = 370,
 	baseXp = 2637,
 	baseHAM = 5900,
 	baseHAMmax = 7200,
@@ -29,7 +29,7 @@ clonetrooper_bombardier_501 = Creature:new {
 	scale = 1.05,
 
 	templates = {
-		"object/mobile/dressed_clonetrooper_blue_m.iff"
+		"object/mobile/dressed_clonetrooper_heavy_501.iff"
 	},
 	lootGroups = {
 		{
