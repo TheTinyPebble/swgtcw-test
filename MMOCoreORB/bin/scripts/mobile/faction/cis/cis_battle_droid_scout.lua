@@ -45,6 +45,7 @@ cis_battle_droid_scout = Creature:new {
 		}
 	},
 	weapons = {"battle_droid_weapons"},
+	defaultAttack = "defaultdroidrangedattack",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",

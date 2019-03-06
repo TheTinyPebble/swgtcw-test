@@ -45,6 +45,7 @@ cis_battle_droid_commando = Creature:new {
 		}
 	},
 	weapons = {"rebel_weapons_heavy"},
+	defaultAttack = "defaultdroidrangedattack",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",

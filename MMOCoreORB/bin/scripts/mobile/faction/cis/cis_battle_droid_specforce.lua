@@ -44,7 +44,8 @@ cis_battle_droid_specforce = Creature:new {
 			}
 		}
 	},
-	weapons = {"ranged_weapons"},
+	weapons = {"battle_droid_weapons"},
+	defaultAttack = "defaultdroidrangedattack",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",
