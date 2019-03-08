@@ -54,6 +54,9 @@ Saber1hComboHit2Command = {
 	areaRange = 16,
 	visMod = 25,
 
+  animation = "combo_5b",
+	animType = GENERATE_INTENSITY,
+
 	combatSpam = "saber1hcombohit2",
 
   poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE,
