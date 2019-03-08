@@ -539,12 +539,12 @@ end
 function nightsisterShapeshifter:shuffleTable(tInput)
 	math.randomseed(os.time())
 	local tReturn = {}
-    for i = #tInput, 1, -1 do
-        local j = math.random(i)
-        tInput[i], tInput[j] = tInput[j], tInput[i]
-        table.insert(tReturn, tInput[i])
-    end
-    return tReturn
+	for i = #tInput, 1, -1 do
+		local j = math.random(i)
+		tInput[i], tInput[j] = tInput[j], tInput[i]
+		table.insert(tReturn, tInput[i])
+	end
+	return tReturn
 end
 
 -- Calculating evenly spaced points on the perimeter of a circle
@@ -552,28 +552,28 @@ function nightsisterShapeshifter:getCircleSpawnPoints(centerX, centerY, radius, 
 	local pivotX, pivotY
 	local spawnPoints = {}
 	local theta = ((math.pi * 2) / totalPoints);
-    
+	
 	for i = 1, totalPoints do
 		local angle = theta * i
 		pivotX = radius * math.cos(angle) + centerX;
 		pivotY = radius * math.sin(angle) + centerY;
 		table.insert(spawnPoints, {x = pivotX, y = pivotY})
 	end
-    return spawnPoints
+	return spawnPoints
 end
 
 -- Boss state logic
 function nightsisterShapeshifter:bossStateLogic(pBoss, percent, stateString, checkState)
-    if (pBoss == nil) then
+	if (pBoss == nil) then
 		return false
-    end
-    
-    if (readData(stateString) == checkState) then
-        for i = 0, 6, 3 do
+	end
+	
+	if (readData(stateString) == checkState) then
+		for i = 0, 6, 3 do
 			if (CreatureObject(pBoss):getHAM(i) <= CreatureObject(pBoss):getMaxHAM(i) * percent) then
 				return true
 			end
-        end
-    end
-    return false
+		end
+	end
+	return false
 end

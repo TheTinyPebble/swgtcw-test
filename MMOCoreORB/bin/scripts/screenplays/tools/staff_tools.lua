@@ -8,6 +8,7 @@ StaffTools = {
 		{ "Fix Jedi", "fixJedi" },
 		{ "Start Nightsister Shapeshifter", "startNSWB" },
 		{ "End NS Shapeshifter", "endNSWB" },
+		{ "Test WOD convo", "testWODConvo" },
 	}
 }
 
@@ -219,6 +220,12 @@ end
 
 function StaffTools.endNSWB()
 	nightsisterShapeshifter:cleanupScene()
+end
+
+function StaffTools.testWODConvo()
+	local pMobile = spawnMobile("naboo", "commoner", 300, -4900, 6, 4150, 0, 0)
+	CreatureObject(pMobile):setOptionBit(CONVERSABLE)
+	AiAgent(pMobile):setConvoTemplate("wod_ns_witch_food")
 end
 
 return StaffTools
