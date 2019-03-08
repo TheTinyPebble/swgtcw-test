@@ -68,6 +68,10 @@ function CustomJediManager:onPlayerLoggedIn(pPlayer)
 	if (CustomJediManagerCommon.hasJediProgressionScreenPlayState(pPlayer, CUSTOM_JEDI_PROGRESSION_COMPLETED_HOLOCRON_TASKS) and not CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_01")) then
 		awardSkill(pPlayer, "force_title_jedi_rank_01")
 	end
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_master") or CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
+		awardSkill(pPlayer, "force_title_jedi_rank_02")
+	end
 end
 
 function CustomJediManager:onPlayerLoggedOut(pPlayer)
