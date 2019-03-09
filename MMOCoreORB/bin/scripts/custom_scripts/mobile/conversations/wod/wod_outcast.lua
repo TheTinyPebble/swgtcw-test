@@ -61,18 +61,18 @@ function createWODOutcastConvoTemplate(templateName)
 
 	supported_clan = ConvoScreen:new {
 		id = "supported_clan",
-		customDialogText = "", --"conversation/" .. templateName .. ":s_104+110", --Handle in Convo handler
+		leftDialog = "", --"conversation/" .. templateName .. ":s_104+110", --Handle in Convo handler
 		stopConversation = "false",
 		options = {
-			{"conversation/" .. templateName .. ":s_112", "end_screen"}, -- Handle in convo handler
-			{"conversation/" .. templateName .. ":s_106", "end_screen"},
+			--{"conversation/" .. templateName .. ":s_112", "end_screen"}, -- Handle in convo handler
+			--{"conversation/" .. templateName .. ":s_106", "end_screen"},
 		}
 	}
 	wod_outcast:addScreen(supported_clan)
 
 	end_screen = ConvoScreen:new {
 		id = "end_screen",
-		customDialogText = "", --"conversation/" .. templateName .. ":s_108+114", --Handle in Convo handler
+		leftDialog = "", --"conversation/" .. templateName .. ":s_108+114", --Handle in Convo handler
 		stopConversation = "true",
 		options = {
 		}
