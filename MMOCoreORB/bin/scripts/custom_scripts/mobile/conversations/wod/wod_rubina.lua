@@ -317,7 +317,7 @@ wod_rubina:addScreen(info_task)
 
 favor = ConvoScreen:new {
 	id = "favor",
-	customDialogText = "",
+	leftDialog = "",
 	stopConversation = "true",
 	options = {
 	}
@@ -389,87 +389,114 @@ return_wisdom_ns = ConvoScreen:new {
 	leftDialog = "@conversation/wod_rubina:s_27",
 	stopConversation = "false",
 	options = {
-		{"@conversation/wod_rubina:s_29", "return_wisdom_complete"},
+		{"@conversation/wod_rubina:s_29", "return_wisdom_complete_ns"},
 	}
 }
 wod_rubina:addScreen(return_wisdom_ns)
+
+return_wisdom_complete_ns = ConvoScreen:new {
+	id = "return_wisdom_complete_ns",
+	leftDialog = "@conversation/wod_rubina:s_207",
+	stopConversation = "true",
+	options = {
+	}
+}
+wod_rubina:addScreen(return_wisdom_complete_ns)
 
 return_wisdom_sm = ConvoScreen:new {
 	id = "return_wisdom_sm",
 	leftDialog = "@conversation/wod_rubina:s_31",
 	stopConversation = "false",
 	options = {
-		{"@conversation/wod_rubina:s_33", "return_wisdom_complete"},
+		{"@conversation/wod_rubina:s_33", "return_wisdom_complete_sm"},
 	}
 }
 wod_rubina:addScreen(return_wisdom_sm)
 
-return_wisdom_complete = ConvoScreen:new {
-	id = "return_wisdom_complete",
+return_wisdom_complete_sm = ConvoScreen:new {
+	id = "return_wisdom_complete_sm",
 	leftDialog = "@conversation/wod_rubina:s_207",
 	stopConversation = "true",
 	options = {
 	}
 }
-wod_rubina:addScreen(return_wisdom_complete)
+wod_rubina:addScreen(return_wisdom_complete_sm)
 
 return_eliminate_ns = ConvoScreen:new {
 	id = "return_eliminate_ns",
 	leftDialog = "@conversation/wod_rubina:s_35",
 	stopConversation = "false",
 	options = {
-		{"@conversation/wod_rubina:s_37", "return_eliminate_complete"},
+		{"@conversation/wod_rubina:s_37", "return_eliminate_complete_ns"},
 	}
 }
 wod_rubina:addScreen(return_eliminate_ns)
+
+return_eliminate_complete_ns = ConvoScreen:new {
+	id = "return_eliminate_complete_ns",
+	leftDialog = "@conversation/wod_rubina:s_208",
+	stopConversation = "true",
+	options = {
+	}
+}
+wod_rubina:addScreen(return_eliminate_complete_ns)
 
 return_eliminate_sm = ConvoScreen:new {
 	id = "return_eliminate_sm",
 	leftDialog = "@conversation/wod_rubina:s_39",
 	stopConversation = "false",
 	options = {
-		{"@conversation/wod_rubina:s_41", "return_eliminate_complete"},
+		{"@conversation/wod_rubina:s_41", "return_eliminate_complete_sm"},
 	}
 }
 wod_rubina:addScreen(return_eliminate_sm)
 
-return_eliminate_complete = ConvoScreen:new {
-	id = "return_eliminate_complete",
+return_eliminate_complete_sm = ConvoScreen:new {
+	id = "return_eliminate_complete_sm",
 	leftDialog = "@conversation/wod_rubina:s_208",
 	stopConversation = "true",
 	options = {
 	}
 }
-wod_rubina:addScreen(return_eliminate_complete)
+wod_rubina:addScreen(return_eliminate_complete_sm)
 
 return_herbs_ns = ConvoScreen:new {
 	id = "return_herbs_ns",
 	leftDialog = "@conversation/wod_rubina:s_43",
 	stopConversation = "false",
 	options = {
-		{"@conversation/wod_rubina:s_45", "return_herbs_complete"},
+		{"@conversation/wod_rubina:s_45", "return_herbs_complete_ns"},
 	}
 }
 wod_rubina:addScreen(return_herbs_ns)
+
+return_herbs_complete_ns = ConvoScreen:new {
+	id = "return_herbs_complete_ns",
+	leftDialog = "@conversation/wod_rubina:s_206",
+	stopConversation = "true",
+	options = {
+	}
+}
+wod_rubina:addScreen(return_herbs_complete_ns)
 
 return_herbs_sm = ConvoScreen:new {
 	id = "return_herbs_sm",
 	leftDialog = "@conversation/wod_rubina:s_47",
 	stopConversation = "false",
 	options = {
-		{"@conversation/wod_rubina:s_49", "return_herbs_complete"},
+		{"@conversation/wod_rubina:s_49", "return_herbs_complete_sm"},
 	}
 }
 wod_rubina:addScreen(return_herbs_sm)
 
-return_herbs_complete = ConvoScreen:new {
-	id = "return_herbs_complete",
+return_herbs_complete_sm = ConvoScreen:new {
+	id = "return_herbs_complete_sm",
 	leftDialog = "@conversation/wod_rubina:s_206",
 	stopConversation = "true",
 	options = {
 	}
 }
-wod_rubina:addScreen(return_herbs_complete)
+wod_rubina:addScreen(return_herbs_complete_sm)
 
 cache_init = ConvoScreen:new {
 	id = "cache_init",

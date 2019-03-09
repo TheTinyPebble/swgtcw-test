@@ -31,53 +31,80 @@ function createWODOutcastConvoTemplate(templateName)
 		leftDialog = "@conversation/" .. templateName .. ":s_14",
 		stopConversation = "false",
 		options = {
-			{"conversation/" .. templateName .. ":s_18", "dilemma_two_sm"},
-			{"conversation/" .. templateName .. ":s_17", "dilemma_two_ns"},
+			{"@conversation/" .. templateName .. ":s_18", "dilemma_one_sm"},
+			{"@conversation/" .. templateName .. ":s_17", "dilemma_one_ns"},
 		}
 	}
 	wod_outcast:addScreen(dilemma_one)
 
 	dilemma_two = ConvoScreen:new {
-		id = "dilemma_two_sm",
+		id = "dilemma_two",
 		leftDialog = "@conversation/" .. templateName .. ":s_86",
 		stopConversation = "false",
 		options = {
-			{"conversation/" .. templateName .. ":s_90", "dilemma_three_sm"},
-			{"conversation/" .. templateName .. ":s_88", "dilemma_three_ns"},
+			{"@conversation/" .. templateName .. ":s_90", "dilemma_two_sm"},
+			{"@conversation/" .. templateName .. ":s_88", "dilemma_two_ns"},
 		}
 	}
 	wod_outcast:addScreen(dilemma_two)
 
 	dilemma_three = ConvoScreen:new {
-		id = "dilemma_three_sm",
+		id = "dilemma_three",
 		leftDialog = "@conversation/" .. templateName .. ":s_95",
 		stopConversation = "false",
 		options = {
-			{"conversation/" .. templateName .. ":s_97", "dilemma_four_sm"},
-			{"conversation/" .. templateName .. ":s_99", "dilemma_four_ns"},
+			{"@conversation/" .. templateName .. ":s_97", "dilemma_three_sm"},
+			{"@conversation/" .. templateName .. ":s_99", "dilemma_three_ns"},
 		}
 	}
 	wod_outcast:addScreen(dilemma_three)
 
 	supported_clan = ConvoScreen:new {
 		id = "supported_clan",
-		leftDialog = "", --"conversation/" .. templateName .. ":s_104+110", --Handle in Convo handler
+		leftDialog = "@conversation/" .. templateName .. ":s_100",
 		stopConversation = "false",
 		options = {
-			--{"conversation/" .. templateName .. ":s_112", "end_screen"}, -- Handle in convo handler
-			--{"conversation/" .. templateName .. ":s_106", "end_screen"},
+			{"@conversation/" .. templateName .. ":s_102", "supported_clan_confirm"},
 		}
 	}
 	wod_outcast:addScreen(supported_clan)
+	
+	supported_clan_confirm = ConvoScreen:new {
+		id = "supported_clan_confirm",
+		leftDialog = "",
+		stopConversation = "false",
+		options = {
+		}
+	}
+	wod_outcast:addScreen(supported_clan_confirm)
 
 	end_screen = ConvoScreen:new {
 		id = "end_screen",
-		leftDialog = "", --"conversation/" .. templateName .. ":s_108+114", --Handle in Convo handler
+		leftDialog = "",
 		stopConversation = "true",
 		options = {
 		}
 	}
 	wod_outcast:addScreen(end_screen)
+	
+	not_elligible = ConvoScreen:new {
+		id = "not_elligible",
+		leftDialog = "@conversation/" .. templateName .. ":s_4",
+		stopConversation = "false",
+		options = {
+			{"@conversation/" .. templateName .. ":s_6", "not_elligible_end"},
+		}
+	}
+	wod_outcast:addScreen(not_elligible)
+	
+	not_elligible_end = ConvoScreen:new {
+		id = "not_elligible_end",
+		leftDialog = "@conversation/" .. templateName .. ":s_8",
+		stopConversation = "true",
+		options = {
+		}
+	}
+	wod_outcast:addScreen(not_elligible_end)
 
 	addConversationTemplate(templateName, wod_outcast);
 end

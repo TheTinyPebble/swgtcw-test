@@ -69,13 +69,13 @@ walkabout_complete = ConvoScreen:new {
 	leftDialog = "@conversation/wod_omogg_rep:s_13",
 	stopConversation = "false",
 	options = {
-		{"@conversation/wod_omogg_rep:s_35", "walkabout_two_init"},
+		{"@conversation/wod_omogg_rep:s_35", "walkabout_two_first_screen"},
 	}
 }
 wod_omogg_rep:addScreen(walkabout_complete)
 
-walkabout_two_init = ConvoScreen:new {
-	id = "walkabout_two_init",
+walkabout_two_first_screen = ConvoScreen:new {
+	id = "walkabout_two_first_screen",
 	leftDialog = "@conversation/wod_omogg_rep:s_36",
 	stopConversation = "false",
 	options = {
@@ -83,7 +83,18 @@ walkabout_two_init = ConvoScreen:new {
 		{"@conversation/wod_omogg_rep:s_48", "walkabout_two_decline"},
 	}
 }
-wod_omogg_rep:addScreen(walkabout_two_init)
+wod_omogg_rep:addScreen(walkabout_two_first_screen)
+
+walkabout_two_init_alt = ConvoScreen:new {
+	id = "walkabout_two_init_alt",
+	leftDialog = "@conversation/wod_omogg_rep:s_42",
+	stopConversation = "false",
+	options = {
+		{"@conversation/wod_omogg_rep:s_44", "walkabout_two_start"},
+		{"@conversation/wod_omogg_rep:s_48", "walkabout_two_decline"},
+	}
+}
+wod_omogg_rep:addScreen(walkabout_two_init_alt)
 
 walkabout_two_start = ConvoScreen:new {
 	id = "walkabout_two_start",
@@ -102,15 +113,6 @@ walkabout_two_decline = ConvoScreen:new {
 	}
 }
 wod_omogg_rep:addScreen(walkabout_two_decline)
-
-walkabout_two_init_alt = ConvoScreen:new {
-	id = "walkabout_two_init_alt",
-	leftDialog = "@conversation/wod_omogg_rep:s_42",
-	stopConversation = "false",
-	options = {
-	}
-}
-wod_omogg_rep:addScreen(walkabout_two_init_alt)
 
 walkabout_two_return_init = ConvoScreen:new {
 	id = "walkabout_two_return_init",
