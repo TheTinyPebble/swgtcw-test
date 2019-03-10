@@ -6,15 +6,14 @@ registerScreenPlay("wodPrologueScreenplay", true)
 
 local QuestManager = require("managers.quest.quest_manager")
 
+--TODO: Mobiles
 --TODO: Spawn mobiles
---TODO: Setup herbal plants
 --TODO: On logged in events
 --TODO: Reward handling
 
 function wodPrologueScreenplay:start()
 	if (isZoneEnabled("dathomir")) then
 		self:spawnMobiles()
-		self:setupHerbalPlants()
 	end
 end
 
@@ -33,10 +32,6 @@ function wodPrologueScreenplay:spawnMobiles()
 
 end
 
-function wodPrologueScreenplay:setupHerbalPlants()
-
-end
-
 --Reward handling
 function wodPrologueScreenplay:addToCollection(pPlayer, key)
 	if (pPlayer == nil) then
@@ -45,7 +40,7 @@ function wodPrologueScreenplay:addToCollection(pPlayer, key)
 	
 	local curCount = tonumber(readScreenPlayData(pPlayer, "wodThemepark:prologue:collection", key))
 	
-	if (curCount == nil) then
+	if (curCount == nil or curCount == "") then
 		curCount = 0
 	end
 	
@@ -213,7 +208,7 @@ function wodPrologueScreenplay:notifyKilledHuntTarget(pPlayer, pVictim)
 	return 0
 end
 
---Rubina favor status
+--Rubina favor
 function wodPrologueScreenplay:addToFavor(pPlayer, key)
 	if (pPlayer == nil) then
 		return
@@ -227,13 +222,13 @@ function wodPrologueScreenplay:addToFavor(pPlayer, key)
 	
 	curNSFavor = tonumber(readScreenPlayData(pPlayer, "wodThemepark:prologue:favor", "nsFavor"))
 		
-	if (curNSFavor == nil) then
+	if (curNSFavor == nil or curNSFavor == "") then
 		curNSFavor = 0
 	end
 	
 	curSMFavor = tonumber(readScreenPlayData(pPlayer, "wodThemepark:prologue:favor", "smFavor"))
 		
-	if (curSMFavor == nil) then
+	if (curSMFavor == nil or curSMFavor == "") then
 		curSMFavor = 0
 	end
 	
@@ -263,7 +258,7 @@ function wodPrologueScreenplay:addToFavor(pPlayer, key)
 	
 	local curCount = tonumber(readScreenPlayData(pPlayer, "wodThemepark:prologue:collection", key))
 	
-	if (curCount == nil) then
+	if (curCount == nil or curCount == "") then
 		curCount = 0
 	end
 	
@@ -281,13 +276,13 @@ function wodPrologueScreenplay:getFavorStatus(pPlayer)
 	
 	curNSFavor = tonumber(readScreenPlayData(pPlayer, "wodThemepark:prologue:favor", "nsFavor"))
 		
-	if (curNSFavor == nil) then
+	if (curNSFavor == nil or curNSFavor == "") then
 		curNSFavor = 0
 	end
 	
 	curSMFavor = tonumber(readScreenPlayData(pPlayer, "wodThemepark:prologue:favor", "smFavor"))
 		
-	if (curSMFavor == nil) then
+	if (curSMFavor == nil or curSMFavor == "") then
 		curSMFavor = 0
 	end
 	

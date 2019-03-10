@@ -1,9 +1,13 @@
+includeFile("wod/wod_herbal_plants.lua")
+
 --Prologue
 includeFile("wod/prologue/wod_prologue_screenplay.lua")
 includeFile("wod/prologue/wod_mysterious_witch_goto.lua")
 includeFile("wod/prologue/wod_prologue_rancor_goto.lua")
 includeFile("wod/prologue/wod_prologue_spiderclan_goto.lua")
 includeFile("wod/prologue/wod_rubina_return.lua")
+
+--Prologue outcasts
 includeFile("wod/prologue/outcast/wod_outcast1_goto.lua")
 includeFile("wod/prologue/outcast/wod_outcast2_goto.lua")
 includeFile("wod/prologue/outcast/wod_outcast3_goto.lua")
@@ -11,6 +15,8 @@ includeFile("wod/prologue/outcast/wod_outcast4_goto.lua")
 includeFile("wod/prologue/outcast/wod_outcast5_goto.lua")
 includeFile("wod/prologue/outcast/wod_outcast6_goto.lua")
 includeFile("wod/prologue/outcast/wod_outcast7_goto.lua")
+
+--Prologue walkabout
 includeFile("wod/prologue/walkabout/wod_walkabout1_goto.lua")
 includeFile("wod/prologue/walkabout/wod_walkabout2_goto.lua")
 includeFile("wod/prologue/walkabout/wod_walkabout3_goto.lua")
@@ -43,3 +49,6 @@ includeFile("wod/convo_handlers/wod_third_sister_convo_handler.lua")
 includeFile("wod/convo_handlers/wod_vendor_convo_handler.lua")
 includeFile("wod/convo_handlers/wod_witch_food_convo_handler.lua")
 includeFile("wod/convo_handlers/wod_witch_herbs_convo_handler.lua")
+
+--Menu components
+includeFile("wod/menu_components/wod_herb_plant_menu_component.lua")
