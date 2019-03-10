@@ -1,7 +1,9 @@
+includeFile("wod/witches_of_dathomir.lua")
 includeFile("wod/wod_herbal_plants.lua")
+includeFile("wod/wod_reward_manager.lua")
 
 --Prologue
-includeFile("wod/prologue/wod_prologue_screenplay.lua")
+includeFile("wod/prologue/wod_prologue.lua")
 includeFile("wod/prologue/wod_mysterious_witch_goto.lua")
 includeFile("wod/prologue/wod_prologue_rancor_goto.lua")
 includeFile("wod/prologue/wod_prologue_spiderclan_goto.lua")
@@ -52,4 +54,4 @@ includeFile("wod/convo_handlers/wod_witch_herbs_convo_handler.lua")
 
 --Menu components
 includeFile("wod/menu_components/wod_herb_plant_menu_component.lua")
-includeFile("wod/menu_components/wod_prologue_basket_menu_component.lua")
+includeFile("wod/menu_components/wod_basket_menu_components.lua")

@@ -1,0 +1,40 @@
+object_tangible_furniture_all_wod_pro_sm_seed_jar_01 = object_tangible_furniture_all_shared_wod_pro_sm_seed_jar_01:new {
+}
+
+ObjectTemplates:addTemplate(object_tangible_furniture_all_wod_pro_sm_seed_jar_01, "object/tangible/furniture/all/wod_pro_sm_seed_jar_01.iff")
+
+object_tangible_furniture_all_wod_pro_sm_seed_jar_02 = object_tangible_furniture_all_shared_wod_pro_sm_seed_jar_02:new {
+}
+
+ObjectTemplates:addTemplate(object_tangible_furniture_all_wod_pro_sm_seed_jar_02, "object/tangible/furniture/all/wod_pro_sm_seed_jar_02.iff")
+
+object_tangible_furniture_all_wod_pro_sm_seed_jar_03 = object_tangible_furniture_all_shared_wod_pro_sm_seed_jar_03:new {
+}
+
+ObjectTemplates:addTemplate(object_tangible_furniture_all_wod_pro_sm_seed_jar_03, "object/tangible/furniture/all/wod_pro_sm_seed_jar_03.iff")
+
+object_tangible_furniture_all_wod_pro_sm_seed_jar_04 = object_tangible_furniture_all_shared_wod_pro_sm_seed_jar_04:new {
+}
+
+ObjectTemplates:addTemplate(object_tangible_furniture_all_wod_pro_sm_seed_jar_04, "object/tangible/furniture/all/wod_pro_sm_seed_jar_04.iff")
+
+object_tangible_furniture_all_wod_pro_sm_seed_jar_05 = object_tangible_furniture_all_shared_wod_pro_sm_seed_jar_05:new {
+}
+
+ObjectTemplates:addTemplate(object_tangible_furniture_all_wod_pro_sm_seed_jar_05, "object/tangible/furniture/all/wod_pro_sm_seed_jar_05.iff")
+
+object_tangible_furniture_all_wod_pro_sm_seed_jar_06 = object_tangible_furniture_all_shared_wod_pro_sm_seed_jar_06:new {
+}
+
+ObjectTemplates:addTemplate(object_tangible_furniture_all_wod_pro_sm_seed_jar_06, "object/tangible/furniture/all/wod_pro_sm_seed_jar_06.iff")
+
+object_tangible_furniture_all_wod_pro_sm_seed_jar_07 = object_tangible_furniture_all_shared_wod_pro_sm_seed_jar_07:new {
+}
+
+ObjectTemplates:addTemplate(object_tangible_furniture_all_wod_pro_sm_seed_jar_07, "object/tangible/furniture/all/wod_pro_sm_seed_jar_07.iff")
+
+object_tangible_furniture_all_wod_pro_sm_seed_jar_08 = object_tangible_furniture_all_shared_wod_pro_sm_seed_jar_08:new {
+}
+
+ObjectTemplates:addTemplate(object_tangible_furniture_all_wod_pro_sm_seed_jar_08, "object/tangible/furniture/all/wod_pro_sm_seed_jar_08.iff")
+

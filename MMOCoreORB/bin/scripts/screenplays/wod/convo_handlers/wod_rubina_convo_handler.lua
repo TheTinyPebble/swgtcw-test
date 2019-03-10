@@ -79,13 +79,13 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	if (screenID == "return_herbs_complete_ns") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_08)
-		wodPrologueScreenplay:addToCollection(pPlayer, "herbs")
+		wodPrologueScreenplay:addToCollection(pPlayer, "herbsNS")
 		wodPrologueScreenplay:addToFavor(pPlayer, "ns")
 		wodPrologueScreenplay:handleReward(pPlayer, "herbs")
 	elseif (screenID == "return_herbs_complete_sm") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_09)
-		wodPrologueScreenplay:addToCollection(pPlayer, "herbs")
+		wodPrologueScreenplay:addToCollection(pPlayer, "herbsSM")
 		wodPrologueScreenplay:addToFavor(pPlayer, "sm")
 		wodPrologueScreenplay:handleReward(pPlayer, "herbs")
 	end
@@ -157,13 +157,13 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	if (screenID == "return_wisdom_ns") then
 		deleteScreenPlayData(pPlayer, "wodThemepark:prologue", "outcastSM")
 		deleteScreenPlayData(pPlayer, "wodThemepark:prologue", "outcastNS")
-		wodPrologueScreenplay:addToCollection(pPlayer, "outcastNS")
+		wodPrologueScreenplay:addToCollection(pPlayer, "wisdomNS")
 		wodPrologueScreenplay:addToFavor(pPlayer, "ns")
 		wodPrologueScreenplay:handleReward(pPlayer, "wisdom")
 	elseif (screenID == "return_wisdom_sm") then
 		deleteScreenPlayData(pPlayer, "wodThemepark:prologue", "outcastSM")
 		deleteScreenPlayData(pPlayer, "wodThemepark:prologue", "outcastNS")
-		wodPrologueScreenplay:addToCollection(pPlayer, "outcastSM")
+		wodPrologueScreenplay:addToCollection(pPlayer, "wisdomSM")
 		wodPrologueScreenplay:addToFavor(pPlayer, "sm")
 		wodPrologueScreenplay:handleReward(pPlayer, "wisdom")
 	end

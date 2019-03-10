@@ -6,6 +6,7 @@ function PlayerTriggers:playerLoggedIn(pPlayer)
 	end
 	
 	BestineElection:playerLoggedIn(pPlayer)
+	witchesOfDathomirScreenplay:onPlayerLoggedIn(pPlayer)
 end
 
 function PlayerTriggers:playerLoggedOut(pPlayer)
