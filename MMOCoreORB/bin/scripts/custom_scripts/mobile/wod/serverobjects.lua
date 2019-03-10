@@ -1,4 +1,3 @@
-includeFile("../custom_scripts/mobile/conversations/conversations.lua")
-includeFile("../custom_scripts/mobile/dungeon/dathomir_bunker/serverobjects.lua")
-includeFile("../custom_scripts/mobile/tatooine/serverobjects.lua")
-includeFile("../custom_scripts/mobile/wod/serverobjects.lua")
+includeFile("../custom_scripts/mobile/wod/wod_rubina.lua")
+includeFile("../custom_scripts/mobile/wod/wod_omogg_rep.lua")
+includeFile("../custom_scripts/mobile/wod/wod_outcasts.lua")

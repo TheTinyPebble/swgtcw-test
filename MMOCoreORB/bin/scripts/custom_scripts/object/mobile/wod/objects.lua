@@ -1,3 +1,9 @@
+object_mobile_shared_dressed_gray_witch = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_gray_witch.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_gray_witch, "object/mobile/shared_dressed_gray_witch.iff")
+
 object_mobile_shared_dressed_wod_ghost_clan_mother = SharedCreatureObjectTemplate:new {
 	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_clan_mother.iff"
 }

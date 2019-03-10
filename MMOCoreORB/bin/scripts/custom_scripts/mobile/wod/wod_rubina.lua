@@ -1,5 +1,5 @@
-wod_omogg_rep = Creature:new {
-	customName = "Temporary Name: Omogg Repp",
+wod_rubina = Creature:new {
+	customName = "Temporary Name: Rubina",
 	socialGroup = "",
 	faction = "",
 	level = 100,
@@ -26,12 +26,12 @@ wod_omogg_rep = Creature:new {
 	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_wod_omogg_rep.iff"},
+	templates = {"object/mobile/dressed_gray_witch.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "wod_omogg_rep",
+	conversationTemplate = "wod_rubina",
 	attacks = {
 	}
 }
 
-CreatureTemplates:addCreatureTemplate(wod_omogg_rep, "wod_omogg_rep")
+CreatureTemplates:addCreatureTemplate(wod_rubina, "wod_rubina")

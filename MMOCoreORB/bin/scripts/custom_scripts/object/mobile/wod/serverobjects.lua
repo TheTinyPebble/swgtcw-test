@@ -1,3 +1,4 @@
+includeFile("../custom_scripts/object/mobile/wod/dressed_gray_witch.lua")
 includeFile("../custom_scripts/object/mobile/wod/dressed_wod_ghost_clan_mother.lua")
 includeFile("../custom_scripts/object/mobile/wod/dressed_wod_ghost_guide_comm.lua")
 includeFile("../custom_scripts/object/mobile/wod/dressed_wod_ghost_wod_gray_outcasts.lua")
