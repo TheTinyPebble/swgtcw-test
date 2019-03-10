@@ -87,19 +87,12 @@ function wodHerbalPlants:spawnHerbalPlants(..., loc)
 	writeData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pObject):getObjectID(), n)
 end
 
-function wodHerbalPlants:gatherHerbalPlant(pPlayer, plantID)
-	if (pPlayer == nil or plantID == nil) then
-		return
-	end
-
-	local pPlant = getSceneObject(tonumber(plantID))
-	
-	if (not CreatureObject(pPlayer):isInRangeWithObject(pPlant, 5)) then
-		CreatureObject(pPlayer):sendSystemMessage("You moved out of range while gathering.")
+function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
+	if (pPlayer == nil or pPlant == nil) then
 		return
 	end
 	
-	local plantLoc = readData("wodThemepark:herbPlantLoc:" .. tonumber(plantID))
+	local plantLoc = readData("wodThemepark:herbPlantLoc:" .. SceneObject(pPlant):getObjectID())
 	local plantTemplateNum = readData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pObject):getObjectID())
 	
 	createEvent(self.respawnTimeSecs * 1000, "wodHerbalPlants", "respawnHerbalPlant", nil, plantLoc)

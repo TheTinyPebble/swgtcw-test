@@ -43,9 +43,7 @@ function wodHerbalPlantMenuComponent:handleObjectMenuSelect(pSceneObject, pPlaye
 			end
 		end
 		
-		writeData("wodThemepark:plantID:" .. SceneObject(pPlayer):getObjectID(), SceneObject(pSceneObject):getObjectID())
-		
-		createEvent(3 * 1000, "wodHerbalPlants", "gatherHerbalPlant", pPlayer, readData("wodThemepark:plantID:" .. SceneObject(pPlayer):getObjectID()))
+		wodHerbalPlants:gatherHerbalPlant(pPlayer, pSceneObject)
 	end
 	return 0
 end
