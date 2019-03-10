@@ -15,13 +15,14 @@ wodHerbalPlants = ScreenPlay:new {
 	},
 	respawnTimeSecs = 60,
 	plantTemplates = {
-		"object/tangible/collection/col_wod_herb_01.iff", -- Lesset plant
-		"object/tangible/collection/col_wod_herb_02.iff", -- Ongmuel plant
-		"object/tangible/collection/col_wod_herb_03.iff", -- Greybush plant
-		"object/tangible/collection/col_wod_herb_04.iff", -- Redweed plant
-		"object/tangible/collection/col_wod_herb_05.iff", -- Rinor plant
-		"object/tangible/collection/col_wod_herb_06.iff", -- Remmy plant (filler plant)
-		"object/tangible/collection/col_wod_herb_07.iff", -- Forest mushroom (filler plant)
+		"object/tangible/furniture/wod_themepark/wod_themepark_herb_01.iff", -- Lesset plant
+		"object/tangible/furniture/wod_themepark/wod_themepark_herb_02.iff", -- Ongmuel plant
+		"object/tangible/furniture/wod_themepark/wod_themepark_herb_03.iff", -- Greybush plant
+		"object/tangible/furniture/wod_themepark/wod_themepark_herb_04.iff", -- Redweed plant
+		"object/tangible/furniture/wod_themepark/wod_themepark_herb_05.iff", -- Rinor plant
+		"object/tangible/furniture/wod_themepark/wod_themepark_herb_06.iff", -- Remmy plant (filler plant)
+		"object/tangible/furniture/wod_themepark/wod_themepark_herb_07.iff", -- Forest mushroom (filler plant)
+		"object/tangible/furniture/wod_themepark/wod_trampled_plant.iff", -- Trampled plant (filler plant)
 	},
 	gatherMessage = {
 		"@wod_theme_park/messages:herb_zip_bar_lesset", -- Gathering Lesset Leaves
@@ -31,6 +32,7 @@ wodHerbalPlants = ScreenPlay:new {
 		"@wod_theme_park/messages:herb_zip_bar_rinor", -- Gathering Rinor Leaves
 		"@wod_theme_park/messages:herb_zip_bar_remmy", -- Gathering Remmy Stalks
 		"@wod_theme_park/messages:herb_zip_bar_shroom", -- Gathering Forest Mushroom Cap
+		"@wod_theme_park/messages:herb_zip_bar", -- Gathering Herb
 	},
 	screenPlayDataKey = { --Corresponds with number of herbs to gather
 		"lesset",
@@ -99,6 +101,8 @@ function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
 	
 	if (plantTemplateNum >= 5) then --TODO: Magic Number
 		self:collectQuestHerb(pPlayer, plantTemplateNum)
+	elseif (plantTemplateNum == 8) then --TODO: Magic Number, trampled plant
+		CreatureObject(pPlayer):sendSystemMessage("You didn't manage to get anything useful from the trampled plant.")
 	else
 		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:dont_need_herb")
 		createEvent(5 * 1000, "wodHerbalPlants", "addBankCredits", pPlayer, "")
