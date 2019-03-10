@@ -95,11 +95,11 @@ function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
 	end
 	
 	local plantLoc = readData("wodThemepark:herbPlantLoc:" .. SceneObject(pPlant):getObjectID())
-	local plantTemplateNum = readData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pObject):getObjectID())
+	local plantTemplateNum = readData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pPlant):getObjectID())
 	
 	createEvent(self.respawnTimeSecs * 1000, "wodHerbalPlants", "respawnHerbalPlant", nil, plantLoc)
 	
-	if (plantTemplateNum >= 5) then --TODO: Magic Number
+	if (plantTemplateNum <= 5) then --TODO: Magic Number
 		self:collectQuestHerb(pPlayer, plantTemplateNum)
 	elseif (plantTemplateNum == 8) then --TODO: Magic Number, trampled plant
 		CreatureObject(pPlayer):sendSystemMessage("You didn't manage to get anything useful from the trampled plant.")

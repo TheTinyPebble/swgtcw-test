@@ -8,6 +8,7 @@ local QuestManager = require("managers.quest.quest_manager")
 
 --TODO: Mobiles
 --TODO: Spawn mobiles
+--TODO: Spawn Scene Objects
 --TODO: On logged in events
 --TODO: Reward handling
 
