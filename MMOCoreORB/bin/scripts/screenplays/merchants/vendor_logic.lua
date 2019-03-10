@@ -109,6 +109,7 @@ function VendorLogic:buyItem(pPlayer, itemSelected)
 			end
 		end	
 		CreatureObject(pPlayer):sendSystemMessage("You have purchased " .. merch.name)
+		giveItem(pInventory, merch.template, -1)
 	else
 		CreatureObject(pPlayer):sendSystemMessage("You can't afford the selected item.")
 	end
@@ -251,6 +252,4 @@ function VendorLogic:payTokens(pPlayer, selectedItem, num)
 		local tokenData = tonumber(readScreenPlayData(pPlayer, self.currencies[i].ScreenPlayDataString, self.currencies[i].ScreenPlayDataKey))
 		writeScreenPlayData(pPlayer, self.currencies[i].ScreenPlayDataString, self.currencies[i].ScreenPlayDataKey, tokenData - screenPlayTokenCost)
 	end
-	
-	giveItem(pInventory, merch.template, -1)
 end

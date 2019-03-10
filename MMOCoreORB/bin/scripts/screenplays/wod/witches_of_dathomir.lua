@@ -8,7 +8,6 @@ local QuestManager = require("managers.quest.quest_manager")
 
 --TODO: Spawn Scene Objects
 --TODO: On logged in events
---TODO: Reward handling
 --TODO: Remove old spawns at locations (outcasts)
 
 function witchesOfDathomirScreenplay:start()
