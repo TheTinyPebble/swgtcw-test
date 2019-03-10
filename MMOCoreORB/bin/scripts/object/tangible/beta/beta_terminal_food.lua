@@ -55,8 +55,8 @@ object_tangible_beta_beta_terminal_food = object_tangible_beta_shared_beta_termi
 
 
 	itemList = {
-			"[CIS] Roll Acklay loot (8,000 CW Currency)", "acklay_roll_rebel",
-			"[Republic] Roll Acklay loot (8,000 CW Currency)", "acklay_roll_imperial",
+			"[CIS] Roll Acklay loot (20,000 CW Currency)", "acklay_roll_rebel",
+			"[Republic] Roll Acklay loot (20,000 CW Currency)", "acklay_roll_imperial",
 
 	}
 
