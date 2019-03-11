@@ -1,7 +1,8 @@
-wod_rubina = Creature:new {
-	customName = "Temporary Name: Rubina",
-	socialGroup = "",
-	faction = "",
+wod_zideera = Creature:new {
+	objectName = "",
+	customName = "Zideera",
+	socialGroup = "mtn_clan",
+	faction = "mtn_clan",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,
@@ -26,12 +27,12 @@ wod_rubina = Creature:new {
 	optionsBitmask = AIENABLED + INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_gray_witch.iff"},
+	templates = {"object/mobile/dressed_zideera.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "wod_rubina",
+	conversationTemplate = "wod_sm_rancor_tamer_zideera",
 	attacks = {
 	}
 }
 
-CreatureTemplates:addCreatureTemplate(wod_rubina, "wod_rubina")
+CreatureTemplates:addCreatureTemplate(wod_zideera, "wod_zideera")

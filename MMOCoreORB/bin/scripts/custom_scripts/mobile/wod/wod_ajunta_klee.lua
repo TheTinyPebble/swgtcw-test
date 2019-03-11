@@ -1,7 +1,7 @@
-wod_rubina = Creature:new {
-	customName = "Temporary Name: Rubina",
-	socialGroup = "",
-	faction = "",
+wod_aujante_klee = Creature:new {
+	objectName = "@mob/creature_names:aujante_klee",
+	socialGroup = "mtn_clan",
+	faction = "mtn_clan"
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,
@@ -26,12 +26,12 @@ wod_rubina = Creature:new {
 	optionsBitmask = AIENABLED + INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_gray_witch.iff"},
+	templates = {"object/mobile/dressed_aujante_klee.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "wod_rubina",
+	conversationTemplate = "wod_klee",
 	attacks = {
 	}
 }
 
-CreatureTemplates:addCreatureTemplate(wod_rubina, "wod_rubina")
+CreatureTemplates:addCreatureTemplate(wod_aujante_klee, "wod_aujante_klee")

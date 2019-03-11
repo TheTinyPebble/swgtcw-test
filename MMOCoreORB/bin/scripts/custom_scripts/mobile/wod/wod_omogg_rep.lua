@@ -23,7 +23,7 @@ wod_omogg_rep = Creature:new {
 	pvpBitmask = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = NONE,
-	optionsBitmask = INVULNERABLE + CONVERSABLE,
+	optionsBitmask = AIENABLED + INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_wod_omogg_rep.iff"},

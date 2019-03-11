@@ -23,7 +23,7 @@ function createOutcastNPC(num)
 		ferocity = 0,
 		pvpBitmask = NONE,
 		creatureBitmask = NONE,
-		optionsBitmask = INVULNERABLE + CONVERSABLE,
+		optionsBitmask = AIENABLED + INVULNERABLE + CONVERSABLE,
 		diet = HERBIVORE,
 	
 		templates = {
