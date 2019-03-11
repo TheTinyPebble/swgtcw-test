@@ -2,15 +2,15 @@ SMWodVendorLogic = VendorLogic:new {
 	scriptName = "SMWodVendorLogic",
 	curenncies = {
 	--For Tokens: Displayed Name, full template string (without shared_), if applicable: ScreenPlayData string, ScreenPlayData key
-		{currency = "token", name = "Dathomir Amber", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
-		{currency = "token", name = "Rare Dried Herbs", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
-		{currency = "token", name = "Rancor Teeth", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
-		{currency = "token", name = "Spider Silk", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
-		{currency = "token", name = "Whuffa Leather", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
+		{currency = "token", name = "Dathomir Amber", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "amber"},
+		{currency = "token", name = "Rare Dried Herbs", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "herbs"},
+		{currency = "token", name = "Rancor Teeth", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "teeth"},
+		{currency = "token", name = "Spider Silk", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "silk"},
+		{currency = "token", name = "Whuffa Leather", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "leather"},
 	},
 	--Displayed Name, full template string (without shared_), cost in {}, use the same structure as currencies
 	merchandise = {
-		{name = "Allya's Redemption", template = "", cost = {25,5,5,5,5}},
+		--{name = "Allya's Redemption", template = "", cost = {25,5,5,5,5}},
 		{name = "Schematic: SMC Journey Boots", template = "", cost = {0,0,0,6,4}},
 		{name = "Schematic: SMC Dawn Wrap", template = "", cost = {0,0,0,6,4}},
 		{name = "Scehmatic: SMC Striker Shroud", template = "", cost = {0,0,0,6,4}},
@@ -33,11 +33,11 @@ SMWodVendorLogic = VendorLogic:new {
 		{name = "Schematic: Twin-Bladed Glaive", template = "", cost = {5,5,20,5,5}},
 		{name = "Singing Mountain Clan Tapestry", template = "", cost = {0,0,0,4,4}},
 		{name = "Schematic: SMC-style Hut", template = "", cost = {5,30,3,3,9}},
-		{name = "Witches of Dathomir Sign (Hanging)", template = "", cost = {6,6,6,6,6}},
-		{name = "Witches of Dathomir Sign (Standing)", template = "", cost = {6,6,6,6,6}},
-		{name = "Witches of Dathomir Banner Style I (standing)", template = "", cost = {6,6,6,6,6}},
-		{name = "Witches of Dathomir Banner Style II (standing)", template = "", cost = {6,6,6,6,6}},
-		{name = "Witches of Dathomir Banner Style III (standing)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Sign (Hanging)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Sign (Standing)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Banner Style I (standing)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Banner Style II (standing)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Banner Style III (standing)", template = "", cost = {6,6,6,6,6}},
 	},
 }
 
@@ -47,15 +47,15 @@ NSWodVendorLogic = VendorLogic:new {
 	scriptName = "NSWodVendorLogic",
 	curenncies = {
 	--For Tokens: Displayed Name, full template string (without shared_), if applicable: ScreenPlayData string, ScreenPlayData key
-		{currency = "token", name = "Dathomir Amber", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
-		{currency = "token", name = "Rare Dried Herbs", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
-		{currency = "token", name = "Rancor Teeth", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
-		{currency = "token", name = "Spider Silk", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
-		{currency = "token", name = "Whuffa Leather", template = "", ScreenPlayDataString = "", ScreenPlayDataKey = ""},
+		{currency = "token", name = "Dathomir Amber", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "amber"},
+		{currency = "token", name = "Rare Dried Herbs", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "herbs"},
+		{currency = "token", name = "Rancor Teeth", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "teeth"},
+		{currency = "token", name = "Spider Silk", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "silk"},
+		{currency = "token", name = "Whuffa Leather", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "leather"},
 	},
 	--Displayed Name, full template string (without shared_), cost in {}, use the same structure as currencies
 	merchandise = {
-		{name = "Allya's Exile", template = "", cost = {25,5,5,5,5}},
+		--{name = "Allya's Exile", template = "", cost = {25,5,5,5,5}},
 		{name = "Schematic: NS Intricate Boots", template = "", cost = {0,0,0,6,4}},
 		{name = "Schematic: NS Vibrant Dread Shroud", template = "", cost = {0,0,0,6,4}},
 		{name = "Scehmatic: NS Pestilence Leggings", template = "", cost = {0,0,0,6,4}},
@@ -78,11 +78,11 @@ NSWodVendorLogic = VendorLogic:new {
 		{name = "Schematic: Twin-Bladed Glaive", template = "", cost = {5,5,20,5,5}},
 		{name = "Nightsister Tapestry", template = "", cost = {0,0,0,4,4}},
 		{name = "Schematic: NS-style Hut", template = "", cost = {5,30,3,3,9}},
-		{name = "Witches of Dathomir Sign (Hanging)", template = "", cost = {6,6,6,6,6}},
-		{name = "Witches of Dathomir Sign (Standing)", template = "", cost = {6,6,6,6,6}},
-		{name = "Witches of Dathomir Banner Style I (standing)", template = "", cost = {6,6,6,6,6}},
-		{name = "Witches of Dathomir Banner Style II (standing)", template = "", cost = {6,6,6,6,6}},
-		{name = "Witches of Dathomir Banner Style III (standing)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Sign (Hanging)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Sign (Standing)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Banner Style I (standing)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Banner Style II (standing)", template = "", cost = {6,6,6,6,6}},
+		{name = "WOD Banner Style III (standing)", template = "", cost = {6,6,6,6,6}},
 	},
 }
 

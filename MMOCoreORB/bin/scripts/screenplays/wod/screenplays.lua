@@ -1,8 +1,7 @@
 includeFile("wod/witches_of_dathomir.lua")
 includeFile("wod/wod_herbal_plants.lua")
 includeFile("wod/wod_reward_manager.lua")
-includeFile("wod/wod_vendor_logic.lua")
-includeFile("wod/wod_vendor_logic.lua")
+includeFile("wod/wod_vendor_data.lua")
 
 --Prologue
 includeFile("wod/prologue/wod_prologue.lua")
