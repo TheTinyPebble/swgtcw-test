@@ -33,7 +33,7 @@ function trainerConvHandler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, sele
 		return pConvScreen
 	end
 
-	if (string.match(trainerType, "jedi") or string.match(trainerType, "padawan")) then
+	if ((string.match(trainerType, "jedi") or string.match(trainerType, "padawan")) and not trainerType == "trainer_jedi") then
 		isJediTrainer = true
 		stringTable = "@jedi_trainer:"
 	end
