@@ -55,8 +55,8 @@ object_tangible_beta_beta_terminal_resource = object_tangible_beta_shared_beta_t
 
 
 	itemList = {
-			"[CIS] Roll Fire Spider loot (20,000 CW Currency)", "firespider_roll_rebel",
-			"[Republic] Roll Fire Spider loot (20,000 CW Currency)", "firespider_roll_imperial",
+			"[CIS] Roll Fire Spider loot (8,000 CW Currency)", "firespider_roll_rebel",
+			"[Republic] Roll Fire Spider loot (8,000 CW Currency)", "firespider_roll_imperial",
 
 	}
 
