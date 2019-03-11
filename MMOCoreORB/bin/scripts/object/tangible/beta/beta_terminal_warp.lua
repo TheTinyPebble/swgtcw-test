@@ -55,8 +55,8 @@ object_tangible_beta_beta_terminal_warp = object_tangible_beta_shared_beta_termi
 
 
 	itemList = {
-			"[CIS] Roll Krayt Dragon loot (8,000 CW Currency)", "ancient_roll_rebel",
-			"[Republic] Roll Krayt Dragon loot (8,000 CW Currency)", "ancient_roll_imperial",
+			"[CIS] Roll Krayt Dragon loot (20,000 CW Currency)", "ancient_roll_rebel",
+			"[Republic] Roll Krayt Dragon loot (20,000 CW Currency)", "ancient_roll_imperial",
 
 	}
 
