@@ -8,14 +8,18 @@
 #include "server/zone/objects/scene/SceneObject.h"
 
 class TauntCommand : public CombatQueueCommand {
+		float mindCost;
 public:
 
 	TauntCommand(const String& name, ZoneProcessServer* server)
 		: CombatQueueCommand(name, server) {
 
+		mindCost = 750;
 	}
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) const {
+
+		creature->inflictDamage(creature, CreatureAttribute::MIND, mindCost, false);
 
 		if (!checkStateMask(creature))
 			return INVALIDSTATE;
@@ -42,7 +46,7 @@ public:
 			Locker clocker(targetCreature, creature);
 
 			targetCreature->getThreatMap()->addAggro(creature, creature->getSkillMod("taunt") * 100, 0);
-			targetCreature->getThreatMap()->setThreatState(creature, ThreatStates::TAUNTED,(uint64)20000, (uint64)0);
+			targetCreature->getThreatMap()->setThreatState(creature, ThreatStates::TAUNTED,(uint64)creature->getSkillMod("taunt")*200, (uint64)0);
 
 			//creature->doCombatAnimation(creature,STRING_HASHCODE("taunt"),0,0xFF);
 			creature->doAnimation("taunt");
