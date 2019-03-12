@@ -42,7 +42,7 @@ public:
 			Locker clocker(targetCreature, creature);
 
 			targetCreature->getThreatMap()->addAggro(creature, creature->getSkillMod("taunt") * 100, 0);
-			targetCreature->getThreatMap()->setThreatState(creature, ThreatStates::TAUNTED,(uint64)creature->getSkillMod("taunt") / 5, (uint64)-1);
+			targetCreature->getThreatMap()->setThreatState(creature, ThreatStates::TAUNTED,(uint64)20000, (uint64)0);
 
 			//creature->doCombatAnimation(creature,STRING_HASHCODE("taunt"),0,0xFF);
 			creature->doAnimation("taunt");
