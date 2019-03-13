@@ -12,14 +12,6 @@ function wod_rubina_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 		return convoTemplate("initial")
 	end
 	
-	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)) then
-		return convoTemplate("cache_init")
-	end
-	
-	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_03)) then
-		return convoTemplate("left_behind_return")
-	end
-	
 	if (favor.count == 8) then
 		if (favor.clan == "ns" and not (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS) or QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS))) then
 			return convoTemplate("ns_ready")
