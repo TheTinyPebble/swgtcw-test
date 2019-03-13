@@ -15,8 +15,10 @@ function wod_witch_food_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTempl
 		return convoTemplate("wrong_alignment")
 	end
 
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting_02")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing_02"))) then
+		return convoTemplate("return_food")
+	end
 	
-
 	return convoTemplate("initial")
 end
 
