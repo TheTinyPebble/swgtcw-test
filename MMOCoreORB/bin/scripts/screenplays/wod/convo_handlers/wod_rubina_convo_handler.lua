@@ -2,7 +2,7 @@ wod_rubina_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
---TODO: Add left behind quest
+--TODO: Handle left behind reward
 
 function wod_rubina_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
@@ -10,6 +10,14 @@ function wod_rubina_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH)) then
 		return convoTemplate("initial")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)) then
+		return convoTemplate("cache_init")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_03)) then
+		return convoTemplate("left_behind_return")
 	end
 	
 	if (favor.count == 8) then
@@ -196,11 +204,14 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	end
 	
 	if (screenID == "left_behind_start") then
-		--TODO: Add left behind quest
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_01)
 	end
 	
 	if (screenID == "left_behind_complete_quest") then
-		--TODO: Add left behind quest
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_03)
+		--Handle reward
 	end
 	
     return pConvScreen
