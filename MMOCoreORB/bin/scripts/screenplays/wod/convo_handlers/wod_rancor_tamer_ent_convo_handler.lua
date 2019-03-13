@@ -1,44 +1,72 @@
-wod_rancor_tamer_ent_convo_handler = Object:new {
-}
-function wod_rancor_tamer_ent_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
-    -- Assign the player to variable creature for use inside this function.
-    local creature = LuaCreatureObject(conversingPlayer)
-    -- Get the last conversation to determine whetehr or not we're  on the first screen
-    local convosession = creature:getConversationSession()
-    lastConversation = nil
-    local conversation = LuaConversationTemplate(conversationTemplate)
+wod_rancor_tamer_ent_convo_handler = Object:new {}
 
+local QuestManager = require("managers.quest.quest_manager")
 
-    -- If there is a conversation open, do stuff with it
-    if ( conversation ~= nil ) then
-    -- check to see if we have a next screen
-        if ( convosession ~= nil ) then
-            local session = LuaConversationSession(convosession)
-            if ( session ~= nil ) then
-                lastConversationScreen = session:getLastConversationScreen()
-            end
-        end
-        -- Last conversation was nil, so get the first screen
-        if ( lastConversationScreen == nil ) then
-            nextConversationScreen = conversation:getScreen("initial")
-        else
-            -- Start playing the rest of the conversation based on user input
-            local luaLastConversationScreen = LuaConversationScreen(lastConversationScreen)
-            -- Set variable to track what option the player picked and get the option picked
-            local optionLink = luaLastConversationScreen:getOptionLink(selectedOption)
-            nextConversationScreen = conversation:getScreen(optionLink)
-        end
-    end
--- end of the conversation logic.
-return nextConversationScreen
+-- TODO: Reward Handling
+
+function wod_rancor_tamer_ent_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local rancorTamer = self:getRancorTamer(pPlayer, pNpc, pConvTemplate)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (clan == "" or clan "" nil) then
+		return convoTemplate("not_elligible")
+	elseif ((rancorTamer == "wod_ns_rancor_tamer_diax" and clan == "sm") or (rancorTamer == "wod_sm_rancor_tamer_zideera" and clan == "ns")) then
+		return convoTemplate("wrong_alignment")
+	end
+
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_01")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_02"))) then
+		return convoTemplate("quest_in_progress")
+	end
+	
+	if (not CreatureObject(pPlayer):hasSkill("social_entertainer_novice")) then
+		return convoTemplate("not_entertainer")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_03")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_04"))) then
+		return convoTemplate("return_init")
+	end
+
+	return convoTemplate("initial")
 end
 
-function wod_rancor_tamer_ent_convo_handler:runScreenHandlers(conversationTemplate, conversingPlayer, conversingNPC, selectedOption, conversationScreen)
-    -- Plays the screens of the conversation.
-    local player = LuaSceneObject(conversingPlayer)
-    local screen = LuaConversationScreen(conversationScreen)
-    local screenID = screen:getScreenID()
-    local pConvScreen = screen:cloneScreen()
-    local clonedConversation = LuaConversationScreen(pConvScreen)
+function wod_rancor_tamer_ent_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local screen = LuaConversationScreen(pConvScreen)
+	local screenID = screen:getScreenID()
+	local pConvScreen = screen:cloneScreen()
+	local clonedConversation = LuaConversationScreen(pConvScreen)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (screenID == "return_init") then
+		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_03"))) then
+			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_03"))
+			--Handle reward
+		else
+			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_04"))
+		end
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer"))
+	end
+	
+	if (screenID == "quest_start") then
+		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer")) or QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer"))) then
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_01"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_02"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_03"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_04"))
+		end
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer"))
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_01"))
+	end
+
     return pConvScreen
+end
+
+function wod_rancor_tamer_ent_convo_handler:getRancorTamer(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local pScreen = convoTemplate:getScreen("rancorTamer")
+	local screen = LuaConversationScreen(pScreen)
+
+	return screen:getOptionLink(0)
 end
