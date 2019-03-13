@@ -1,44 +1,56 @@
-wod_witch_herbs_convo_handler = Object:new {
-}
-function wod_witch_herbs_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
-    -- Assign the player to variable creature for use inside this function.
-    local creature = LuaCreatureObject(conversingPlayer)
-    -- Get the last conversation to determine whetehr or not we're  on the first screen
-    local convosession = creature:getConversationSession()
-    lastConversation = nil
-    local conversation = LuaConversationTemplate(conversationTemplate)
+wod_witch_herbs_convo_handler = Object:new {}
 
+local QuestManager = require("managers.quest.quest_manager")
 
-    -- If there is a conversation open, do stuff with it
-    if ( conversation ~= nil ) then
-    -- check to see if we have a next screen
-        if ( convosession ~= nil ) then
-            local session = LuaConversationSession(convosession)
-            if ( session ~= nil ) then
-                lastConversationScreen = session:getLastConversationScreen()
-            end
-        end
-        -- Last conversation was nil, so get the first screen
-        if ( lastConversationScreen == nil ) then
-            nextConversationScreen = conversation:getScreen("initial")
-        else
-            -- Start playing the rest of the conversation based on user input
-            local luaLastConversationScreen = LuaConversationScreen(lastConversationScreen)
-            -- Set variable to track what option the player picked and get the option picked
-            local optionLink = luaLastConversationScreen:getOptionLink(selectedOption)
-            nextConversationScreen = conversation:getScreen(optionLink)
-        end
-    end
--- end of the conversation logic.
-return nextConversationScreen
+-- TODO: Reward Handling
+
+function wod_witch_herbs_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local witchHerbsType = self:getWitchHerbsType(pPlayer, pNpc, pConvTemplate)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (clan == "" or clan "" nil) then
+		return convoTemplate("not_elligible")
+	elseif ((witchHerbsType == "wod_ns_witch_herbs" and clan == "sm") or (witchHerbsType == "wod_sm_witch_herbs" and clan == "ns")) then
+		return convoTemplate("wrong_alignment")
+	end
+
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering")) and not QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_08"))) then
+		return convoTemplate("quest_in_progress")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_08"))) then
+		return convoTemplate("return_complete_quest")
+	end
+	
+	return convoTemplate("initial")
 end
 
-function wod_witch_herbs_convo_handler:runScreenHandlers(conversationTemplate, conversingPlayer, conversingNPC, selectedOption, conversationScreen)
-    -- Plays the screens of the conversation.
-    local player = LuaSceneObject(conversingPlayer)
-    local screen = LuaConversationScreen(conversationScreen)
-    local screenID = screen:getScreenID()
-    local pConvScreen = screen:cloneScreen()
-    local clonedConversation = LuaConversationScreen(pConvScreen)
+function wod_witch_herbs_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local screen = LuaConversationScreen(pConvScreen)
+	local screenID = screen:getScreenID()
+	local pConvScreen = screen:cloneScreen()
+	local clonedConversation = LuaConversationScreen(pConvScreen)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (screenID == "quest_start" or screenID == "quest_start_alt") then	
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering"))
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_01"))
+	end
+	
+	if (screenID == "return_complete_quest") then	
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_08"))
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering"))
+	end
+
     return pConvScreen
+end
+
+function wod_witch_herbs_convo_handler:getWitchFoodType(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local pScreen = convoTemplate:getScreen("witchHerbsType")
+	local screen = LuaConversationScreen(pScreen)
+
+	return screen:getOptionLink(0)
 end
