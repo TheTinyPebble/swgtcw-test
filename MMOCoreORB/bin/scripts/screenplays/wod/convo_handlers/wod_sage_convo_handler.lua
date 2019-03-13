@@ -1,44 +1,76 @@
-wod_sage_convo_handler = Object:new {
-}
-function wod_sage_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
-    -- Assign the player to variable creature for use inside this function.
-    local creature = LuaCreatureObject(conversingPlayer)
-    -- Get the last conversation to determine whetehr or not we're  on the first screen
-    local convosession = creature:getConversationSession()
-    lastConversation = nil
-    local conversation = LuaConversationTemplate(conversationTemplate)
+wod_sage_convo_handler = Object:new {}
 
+local QuestManager = require("managers.quest.quest_manager")
 
-    -- If there is a conversation open, do stuff with it
-    if ( conversation ~= nil ) then
-    -- check to see if we have a next screen
-        if ( convosession ~= nil ) then
-            local session = LuaConversationSession(convosession)
-            if ( session ~= nil ) then
-                lastConversationScreen = session:getLastConversationScreen()
-            end
-        end
-        -- Last conversation was nil, so get the first screen
-        if ( lastConversationScreen == nil ) then
-            nextConversationScreen = conversation:getScreen("initial")
-        else
-            -- Start playing the rest of the conversation based on user input
-            local luaLastConversationScreen = LuaConversationScreen(lastConversationScreen)
-            -- Set variable to track what option the player picked and get the option picked
-            local optionLink = luaLastConversationScreen:getOptionLink(selectedOption)
-            nextConversationScreen = conversation:getScreen(optionLink)
-        end
-    end
--- end of the conversation logic.
-return nextConversationScreen
+function wod_sage_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local sage = self:getSageType(pPlayer, pNpc, pConvTemplate)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (clan == "" or clan "" nil) then
+		return convoTemplate("not_elligible")
+	elseif ((sage == "wod_ns_sage" and clan == "sm") or (sage == "wod_sm_sage" and clan == "ns")) then
+		return convoTemplate("wrong_alignment")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04"))) then
+		return convoTemplate("quest_in_progress")
+	elseif (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04"))) then
+		return convoTemplate("quest_completed")
+	end
+	
+	if (not CreatureObject(pPlayer):hasSkill("crafting_artisan_novice")) then
+		return convoTemplate("not_crafter")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04_04")) or QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04_04"))) then
+		return convoTemplate("init_fifth")
+	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03_04")) or QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03_04"))) then
+		return convoTemplate("init_fourth")
+	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02_04")) or QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02_04"))) then
+		return convoTemplate("init_third")
+	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01_04")) or QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01_04"))) then
+		return convoTemplate("init_second")
+	end
+
+	return convoTemplate("initial")
 end
 
-function wod_sage_convo_handler:runScreenHandlers(conversationTemplate, conversingPlayer, conversingNPC, selectedOption, conversationScreen)
-    -- Plays the screens of the conversation.
-    local player = LuaSceneObject(conversingPlayer)
-    local screen = LuaConversationScreen(conversationScreen)
-    local screenID = screen:getScreenID()
-    local pConvScreen = screen:cloneScreen()
-    local clonedConversation = LuaConversationScreen(pConvScreen)
+function wod_sage_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local screen = LuaConversationScreen(pConvScreen)
+	local screenID = screen:getScreenID()
+	local pConvScreen = screen:cloneScreen()
+	local clonedConversation = LuaConversationScreen(pConvScreen)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (screenID == "quest_start_first") then
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01_01"))
+	elseif (screenID == "quest_start_second") then
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02_01"))
+	elseif (screenID == "quest_start_third") then
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03_01"))
+	elseif (screenID == "quest_start_fourth") then
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04_01"))
+	end
+
+	if (screenID == "init_second") then
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01_04"))
+	elseif (screenID == "init_third") then
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02_04"))
+	elseif (screenID == "init_fourth") then
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03_04"))
+	elseif (screenID == "init_fifth") then
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04_04"))
+	end
+
     return pConvScreen
+end
+
+function wod_sage_convo_handler:getSageType(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local pScreen = convoTemplate:getScreen("sageType")
+	local screen = LuaConversationScreen(pScreen)
+
+	return screen:getOptionLink(0)
 end
