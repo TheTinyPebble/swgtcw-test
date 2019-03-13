@@ -138,7 +138,7 @@ int ForceHealQueueCommand::runCommand(CreatureObject* creature, CreatureObject* 
 	// Battle fatigue
 	if (totalCost < currentForce && healBattleFatigue != 0) {
 		int battleFatigue = targetCreature->getShockWounds();
-		
+
 
 		if (healBattleFatigue > 0 && battleFatigue > healBattleFatigue)
 			battleFatigue = healBattleFatigue;
@@ -390,7 +390,7 @@ int ForceHealQueueCommand::runCommandWithTarget(CreatureObject* creature, Creatu
 	if (creature->getObjectID() == targetCreature->getObjectID()) // no self healing
 		return GENERALERROR;
 
-	if ((!targetCreature->isPlayerCreature() && !targetCreature->isPet()) || targetCreature->isDroidObject() || targetCreature->isWalkerSpecies())
+	if ((!targetCreature->isPlayerCreature() && !targetCreature->isPet()) || targetCreature->isDroidObject() || targetCreature->isWalkerSpecies() || targetCreature->isDroidSpecies())
 		return INVALIDTARGET;
 
 	if (targetCreature->isDead() || targetCreature->isAttackableBy(creature))
