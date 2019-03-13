@@ -54,17 +54,17 @@ function createWODVendorConvoTemplate(templateName)
 	}
 	wod_vendor:addScreen(wrong_alignment)
 
-	not_enough_faction = ConvoScreen:new {
-		id = "not_enough_faction",
+	not_elligible = ConvoScreen:new {
+		id = "not_elligible",
 		leftDialog = "@conversation/" .. templateName .. ":s_14",
 		stopConversation = "true",
 		options = {
 		}
 	}
-	wod_vendor:addScreen(not_enough_faction)
+	wod_vendor:addScreen(not_elligible)
 
 	addConversationTemplate(templateName, wod_vendor);
 end
 
 createWODVendorConvoTemplate("wod_ns_vendor")
-createWODVendorConvoTemplate("wod_ss_vendor")
+createWODVendorConvoTemplate("wod_sm_vendor")

@@ -1,6 +1,6 @@
 wod_zideera = Creature:new {
 	objectName = "",
-	customName = "Zideera",
+	customName = "Temp Name: Zideera",
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
 	level = 100,
