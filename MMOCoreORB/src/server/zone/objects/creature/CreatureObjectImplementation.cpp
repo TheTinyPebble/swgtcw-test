@@ -3100,8 +3100,8 @@ bool CreatureObjectImplementation::isHealableBy(CreatureObject* object) {
 	if (ghost == nullptr)
 		return false;
 	//Comment out BH TEF check for healing
-	//if (ghost->hasBhTef())
-	//	return false;
+	if (ghost->hasBhTef() && !ghost->hasJediTef())
+		return false;
 
 	//if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
 
