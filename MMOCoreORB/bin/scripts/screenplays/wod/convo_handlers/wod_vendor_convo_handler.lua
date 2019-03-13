@@ -4,6 +4,11 @@ function wod_vendor_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local vendor = self:getVendorType(pPlayer, pNpc, pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+	if (pGhost == nil) then
+		return
+	end
 	
 	if (clan == "" or clan "" nil) then
 		return convoTemplate("not_elligible")
@@ -11,7 +16,13 @@ function wod_vendor_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 		return convoTemplate("wrong_alignment")
 	end
 	
-	return convoTemplate("initial")
+	local nsFaction = PlayerObject(pGhost):getFactionStanding("nightsister")
+	local smFaction = PlayerObject(pGhost):getFactionStanding("mtn_clan")
+	if ((vendor == "wod_ns_vendor" and nsFaction > 3000) or (vendor == "wod_sm_vendor" and smFaction > 300)) then
+		return convoTemplate("initial")
+	else
+		return convoTemplate("not_enough_faction")
+	end
 end
 
 function wod_vendor_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)

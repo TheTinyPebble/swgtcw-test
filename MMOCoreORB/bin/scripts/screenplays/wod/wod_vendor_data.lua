@@ -10,7 +10,7 @@ SMWodVendorLogic = VendorLogic:new {
 	},
 	--Displayed Name, full template string (without shared_), cost in {}, use the same structure as currencies
 	merchandise = {
-		--{name = "Allya's Redemption", template = "", cost = {25,5,5,5,5}},
+		{name = "Color Crystal: Allya's Redemption", template = "", color = , cost = {25,5,5,5,5}},
 		{name = "Schematic: SMC Journey Boots", template = "", cost = {0,0,0,6,4}},
 		{name = "Schematic: SMC Dawn Wrap", template = "", cost = {0,0,0,6,4}},
 		{name = "Scehmatic: SMC Striker Shroud", template = "", cost = {0,0,0,6,4}},
@@ -55,7 +55,7 @@ NSWodVendorLogic = VendorLogic:new {
 	},
 	--Displayed Name, full template string (without shared_), cost in {}, use the same structure as currencies
 	merchandise = {
-		--{name = "Allya's Exile", template = "", cost = {25,5,5,5,5}},
+		{name = "Color Crystal: Allya's Exile", template = "", color = , cost = {25,5,5,5,5}},
 		{name = "Schematic: NS Intricate Boots", template = "", cost = {0,0,0,6,4}},
 		{name = "Schematic: NS Vibrant Dread Shroud", template = "", cost = {0,0,0,6,4}},
 		{name = "Scehmatic: NS Pestilence Leggings", template = "", cost = {0,0,0,6,4}},
