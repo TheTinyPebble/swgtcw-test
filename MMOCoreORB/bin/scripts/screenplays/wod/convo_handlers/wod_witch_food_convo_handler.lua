@@ -1,44 +1,74 @@
-wod_witch_food_convo_handler = Object:new {
-}
-function wod_witch_food_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
-    -- Assign the player to variable creature for use inside this function.
-    local creature = LuaCreatureObject(conversingPlayer)
-    -- Get the last conversation to determine whetehr or not we're  on the first screen
-    local convosession = creature:getConversationSession()
-    lastConversation = nil
-    local conversation = LuaConversationTemplate(conversationTemplate)
+wod_witch_food_convo_handler = Object:new {}
 
+local QuestManager = require("managers.quest.quest_manager")
 
-    -- If there is a conversation open, do stuff witch it
-    if ( conversation ~= nil ) then
-    -- check to see if we have a next screen
-        if ( convosession ~= nil ) then
-            local session = LuaConversationSession(convosession)
-            if ( session ~= nil ) then
-                lastConversationScreen = session:getLastConversationScreen()
-            end
-        end
-        -- Last conversation was nil, so get the first screen
-        if ( lastConversationScreen == nil ) then
-            nextConversationScreen = conversation:getScreen("initial")
-        else
-            -- Start playing the rest of the conversation based on user input
-            local luaLastConversationScreen = LuaConversationScreen(lastConversationScreen)
-            -- Set variable to track what option the player picked and get the option picked
-            local optionLink = luaLastConversationScreen:getOptionLink(selectedOption)
-            nextConversationScreen = conversation:getScreen(optionLink)
-        end
-    end
--- end of the conversation logic.
-return nextConversationScreen
+-- TODO: Reward Handling
+
+function wod_witch_food_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local witchFoodType = self:getWitchFoodType(pPlayer, pNpc, pConvTemplate)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (clan == "" or clan "" nil) then
+		return convoTemplate("not_elligible")
+	elseif ((witchFoodType == "wod_ns_witch_food" and clan == "sm") or (witchFoodType == "wod_sm_witch_food" and clan == "ns")) then
+		return convoTemplate("wrong_alignment")
+	end
+
+	
+
+	return convoTemplate("initial")
 end
 
-function wod_witch_food_convo_handler:runScreenHandlers(conversationTemplate, conversingPlayer, conversingNPC, selectedOption, conversationScreen)
-    -- Plays the screens of the conversation.
-    local player = LuaSceneObject(conversingPlayer)
-    local screen = LuaConversationScreen(conversationScreen)
-    local screenID = screen:getScreenID()
-    local pConvScreen = screen:cloneScreen()
-    local clonedConversation = LuaConversationScreen(pConvScreen)
+function wod_witch_food_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local screen = LuaConversationScreen(pConvScreen)
+	local screenID = screen:getScreenID()
+	local pConvScreen = screen:cloneScreen()
+	local clonedConversation = LuaConversationScreen(pConvScreen)
+	local witchFoodType = self:getWitchFoodType(pPlayer, pNpc, pConvTemplate)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (screenID == "bolma_start") then	
+		if ((witchFoodType == "wod_ns_witch_food" and clan == QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING)) or (witchFoodType == "wod_sm_witch_food" and QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING))) then
+			return convoTemplate("other_faction_in_progress")
+		elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))) then
+			return convoTemplate("bolma_in_progress")
+		else
+			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))
+			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting_01"))
+		end
+	end
+	
+	if (screenID == "fish_start") then	
+		if ((witchFoodType == "wod_ns_witch_food" and clan == QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING)) or (witchFoodType == "wod_sm_witch_food" and QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING))) then
+			return convoTemplate("other_faction_in_progress")
+		elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))) then
+			return convoTemplate("fish_in_progress")
+		else
+			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))
+			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing_01"))
+		end
+	end
+	
+	if (screenID == "return_food") then
+		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))) then
+			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting_02"))
+			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))
+		end
+		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))) then
+			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing_02"))
+			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))
+		end
+	end
+
     return pConvScreen
+end
+
+function wod_witch_food_convo_handler:getWitchFoodType(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local pScreen = convoTemplate:getScreen("witchFoodType")
+	local screen = LuaConversationScreen(pScreen)
+
+	return screen:getOptionLink(0)
 end
