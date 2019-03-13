@@ -24,4 +24,13 @@ start_fight = ConvoScreen:new {
 }
 wod_first_sister:addScreen(start_fight)
 
+not_elligible = ConvoScreen:new {
+	id = "not_elligible",
+	leftDialog = "@conversation/wod_first_sister:s_10",
+	stopConversation = "true",
+	options = {
+	}
+}
+wod_second_sister:addScreen(not_elligible)
+
 addConversationTemplate("wod_first_sister", wod_first_sister);

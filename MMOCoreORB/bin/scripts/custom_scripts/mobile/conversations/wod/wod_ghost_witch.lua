@@ -289,7 +289,7 @@ wod_ghost_witch:addScreen(third_sister_first_screen)
 
 third_sister_complete_quest = ConvoScreen:new {
 	id = "third_sister_complete_quest",
-	leftDialog = "", --"@conversation/wod_ghost_witch:s_40-97",
+	leftDialog = "", --Handled in the convo handler
 	stopConversation = "true",
 	options = {
 	}

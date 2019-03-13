@@ -13,6 +13,7 @@ includeFile("../custom_scripts/mobile/conversations/wod/wod_rancor_tamer_ent.lua
 includeFile("../custom_scripts/mobile/conversations/wod/wod_rescue_initiate.lua")
 includeFile("../custom_scripts/mobile/conversations/wod/wod_rubina.lua")
 includeFile("../custom_scripts/mobile/conversations/wod/wod_sage.lua")
+includeFile("../custom_scripts/mobile/conversations/wod/wod_second_sister.lua")
 includeFile("../custom_scripts/mobile/conversations/wod/wod_sm_azzenaj.lua")
 includeFile("../custom_scripts/mobile/conversations/wod/wod_sm_guide.lua")
 includeFile("../custom_scripts/mobile/conversations/wod/wod_sm_rancor_tamer.lua")

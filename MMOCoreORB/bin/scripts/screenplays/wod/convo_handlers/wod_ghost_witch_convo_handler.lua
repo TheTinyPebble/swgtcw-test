@@ -1,44 +1,86 @@
-wod_ghost_witch_convo_handler = Object:new {
-}
-function wod_ghost_witch_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
-    -- Assign the player to variable creature for use inside this function.
-    local creature = LuaCreatureObject(conversingPlayer)
-    -- Get the last conversation to determine whetehr or not we're  on the first screen
-    local convosession = creature:getConversationSession()
-    lastConversation = nil
-    local conversation = LuaConversationTemplate(conversationTemplate)
+wod_ghost_witch_convo_handler = Object:new {}
 
+local QuestManager = require("managers.quest.quest_manager")
 
-    -- If there is a conversation open, do stuff with it
-    if ( conversation ~= nil ) then
-    -- check to see if we have a next screen
-        if ( convosession ~= nil ) then
-            local session = LuaConversationSession(convosession)
-            if ( session ~= nil ) then
-                lastConversationScreen = session:getLastConversationScreen()
-            end
-        end
-        -- Last conversation was nil, so get the first screen
-        if ( lastConversationScreen == nil ) then
-            nextConversationScreen = conversation:getScreen("initial")
-        else
-            -- Start playing the rest of the conversation based on user input
-            local luaLastConversationScreen = LuaConversationScreen(lastConversationScreen)
-            -- Set variable to track what option the player picked and get the option picked
-            local optionLink = luaLastConversationScreen:getOptionLink(selectedOption)
-            nextConversationScreen = conversation:getScreen(optionLink)
-        end
-    end
--- end of the conversation logic.
-return nextConversationScreen
+-- TODO: Start encounter
+
+function wod_ghost_witch_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (clan == "" or clan == nil) then
+		return convoTemplate("not_elligible")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3"))) then
+		return convoTemplate("quest_completed")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3")) and not QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3_05"))) then
+		return convoTemplate("third_sister_in_progress")
+	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2")) and not QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2_05"))) then
+		return convoTemplate("second_sister_in_progress")
+	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1")) and not QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_05"))) then
+		return convoTemplate("first_sister_in_progress")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3_05"))) then
+		return convoTemplate("third_sister_return")
+	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2_05"))) then
+		return convoTemplate("second_sister_return")
+	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_05"))) then
+		return convoTemplate("first_sister_return")
+	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_recon_02"))) then
+		return convoTemplate("initial")
+	end
+	
+	return convoTemplate("not_elligible")
 end
 
-function wod_ghost_witch_convo_handler:runScreenHandlers(conversationTemplate, conversingPlayer, conversingNPC, selectedOption, conversationScreen)
-    -- Plays the screens of the conversation.
-    local player = LuaSceneObject(conversingPlayer)
-    local screen = LuaConversationScreen(conversationScreen)
-    local screenID = screen:getScreenID()
-    local pConvScreen = screen:cloneScreen()
-    local clonedConversation = LuaConversationScreen(pConvScreen)
+function wod_ghost_witch_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local screen = LuaConversationScreen(pConvScreen)
+	local screenID = screen:getScreenID()
+	local pConvScreen = screen:cloneScreen()
+	local clonedConversation = LuaConversationScreen(pConvScreen)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+
+	if (screenID == "quest_start") then
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_recon_02"))
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1"))
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_01"))
+	end
+	
+	if (screenID == "first_sister_complete_quest") then
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_05"))
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1"))
+	end
+	
+	if (screenID == "second_sister_start") then
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2"))
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2_01"))
+	end
+	
+	if (screenID == "second_sister_complete_quest") then
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2_05"))
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2"))
+	end
+	
+	if (screenID == "third_sister_start") then
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2"))
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2_01"))
+	end
+	
+	if (screenID == "third_sister_complete_quest") then
+		if (clan == "ns") then 
+			clonedConversation:setDialogTextStringId("@conversation/wod_ghost_witch:s_40")
+		else
+			clonedConversation:setDialogTextStringId("@conversation/wod_ghost_witch:s_97")
+		end
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3_05"))
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3"))
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_ghost_reward"))
+	end
+
     return pConvScreen
 end
