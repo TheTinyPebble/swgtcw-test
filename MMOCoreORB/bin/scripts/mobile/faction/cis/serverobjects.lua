@@ -13,6 +13,7 @@ includeFile("faction/cis/cis_sbd.lua")
 
 includeFile("faction/cis/cis_droideka.lua")
 includeFile("faction/cis/cis_hailfire.lua")
+includeFile("faction/cis/cis_hailfire_pet.lua")
 
 includeFile("faction/cis/cis_major_general.lua")
 includeFile("faction/cis/cis_general.lua")

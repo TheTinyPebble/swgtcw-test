@@ -12,6 +12,7 @@ includeFile("faction/republic/clonetrooper_sniper.lua")
 includeFile("faction/republic/clonetrooper_squad_leader.lua")
 
 includeFile("faction/republic/rep_at_xt.lua")
+includeFile("faction/republic/rep_at_xt_pet.lua")
 
 includeFile("faction/republic/rebel_gungan_bomber.lua")
 includeFile("faction/republic/rebel_gungan_boss.lua")
