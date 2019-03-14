@@ -4,15 +4,17 @@ includeFile("wod/wod_reward_manager.lua")
 includeFile("wod/wod_vendor_data.lua")
 includeFile("wod/wod_stronghold_goto.lua")
 
---Hunting Quests
-includeFile("wod/hunting_quests/wod_hunting.lua")
-includeFile("wod/hunting_quests/wod_hunting_return.lua")
-includeFile("wod/hunting_quests/wod_fishing.lua")
-includeFile("wod/hunting_quests/wod_fishing_return.lua")
-includeFile("wod/hunting_quests/wod_kill_other_clan.lua")
-includeFile("wod/hunting_quests/wod_kill_other_clan_return.lua")
-includeFile("wod/hunting_quests/wod_kill_spiderclan.lua")
-includeFile("wod/hunting_quests/wod_kill_spiderclan_return.lua")
+--Repeatable Quests
+includeFile("wod/repeatable_quests/wod_hunting.lua")
+includeFile("wod/repeatable_quests/wod_hunting_return.lua")
+includeFile("wod/repeatable_quests/wod_fishing.lua")
+includeFile("wod/repeatable_quests/wod_fishing_return.lua")
+includeFile("wod/repeatable_quests/wod_kill_other_clan.lua")
+includeFile("wod/repeatable_quests/wod_kill_other_clan_return.lua")
+includeFile("wod/repeatable_quests/wod_kill_spiderclan.lua")
+includeFile("wod/repeatable_quests/wod_kill_spiderclan_return.lua")
+includeFile("wod/repeatable_quests/wod_entertainer_quest.lua")
+includeFile("wod/repeatable_quests/wod_entertainer_quest_return.lua")
 
 --Prologue
 includeFile("wod/prologue/wod_prologue.lua")
