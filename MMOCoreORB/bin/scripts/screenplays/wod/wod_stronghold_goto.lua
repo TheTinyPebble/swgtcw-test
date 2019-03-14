@@ -35,6 +35,8 @@ function wodStrongholdNSGoto:onSuccessfulSpawn(pPlayer)
 	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS)
 end
 
+return wodStrongholdNSGoto
+
 --SM Mountain
 wodStrongholdSMGoto = GoToLocation:new {
 	-- Task properties
@@ -68,3 +70,5 @@ function wodStrongholdSMGoto:onSuccessfulSpawn(pPlayer)
 
 	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_SM)
 end
+
+return wodStrongholdSMGoto

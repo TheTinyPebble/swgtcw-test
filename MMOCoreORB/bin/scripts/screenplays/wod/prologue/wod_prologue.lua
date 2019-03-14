@@ -266,7 +266,7 @@ function wodPrologueScreenplay:notifyKilledHuntTarget(pPlayer, pVictim)
 			writeScreenPlayData(pPlayer, "wodThemepark:prologue", "huntTarget", "spiderclan_acolyte;spiderclan_auspex;spiderclan_crawler;spiderclan_elder;spiderclan_protector;spiderclan_sentinel;spiderclan_sentry;spiderclan_stalker;spiderclan_web_dancer") --TODO: Magic string
 			newTarget = "spiderclan_acolyte;spiderclan_auspex;spiderclan_crawler;spiderclan_elder;spiderclan_protector;spiderclan_sentinel;spiderclan_sentry;spiderclan_stalker;spiderclan_web_dancer" --TODO: Magic string
 		end
-		printLuaError("KnightTrials:notifyKilledHuntTarget, nil huntTarget for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pVictim):getObjectName() .. "). Setting to " .. newTarget .. ".")
+		printLuaError("wodPrologueScreenplay:notifyKilledHuntTarget, nil huntTarget for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pVictim):getObjectName() .. "). Setting to " .. newTarget .. ".")
 		huntTarget = newTarget
 	end
 

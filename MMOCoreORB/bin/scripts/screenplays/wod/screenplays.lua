@@ -2,6 +2,15 @@ includeFile("wod/witches_of_dathomir.lua")
 includeFile("wod/wod_herbal_plants.lua")
 includeFile("wod/wod_reward_manager.lua")
 includeFile("wod/wod_vendor_data.lua")
+includeFile("wod/wod_stronghold_goto.lua")
+
+--Kill Quests
+includeFile("wod/kill_quests/wod_hunting.lua")
+includeFile("wod/kill_quests/wod_hunting_return.lua")
+includeFile("wod/kill_quests/wod_kill_other_clan.lua")
+includeFile("wod/kill_quests/wod_kill_other_clan_return.lua")
+includeFile("wod/kill_quests/wod_kill_spiderclan.lua")
+includeFile("wod/kill_quests/wod_kill_spiderclan_return.lua")
 
 --Prologue
 includeFile("wod/prologue/wod_prologue.lua")
