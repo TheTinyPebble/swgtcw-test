@@ -11,8 +11,7 @@ initial = ConvoScreen:new {
 	stopConversation = "false",
 	options = {
 		{"@conversation/wod_gethzerion:s_88", "spiderclan"},
-		{"@conversation/wod_gethzerion:s_79", "singing_mountain"},
-		{"@conversation/wod_gethzerion:s_53", "other"},
+		{"@conversation/wod_gethzerion:s_79", "other_clan"},
 	}
 }
 wod_gethzerion:addScreen(initial)
@@ -37,25 +36,25 @@ spiderclan_start = ConvoScreen:new {
 }
 wod_gethzerion:addScreen(spiderclan_start)
 
-singing_mountain = ConvoScreen:new {
-	id = "singing_mountain",
+other_clan = ConvoScreen:new {
+	id = "other_clan",
 	leftDialog = "@conversation/wod_gethzerion:s_81",
 	stopConversation = "false",
 	options = {
-		{"@conversation/wod_gethzerion:s_91", "singing_mountain_start"},
+		{"@conversation/wod_gethzerion:s_91", "other_clan_start"},
 		{"@conversation/wod_gethzerion:s_95", "initial"},
 	}
 }
-wod_gethzerion:addScreen(singing_mountain)
+wod_gethzerion:addScreen(other_clan)
 
-singing_mountain_start = ConvoScreen:new {
-	id = "singing_mountain_start",
+other_clan_start = ConvoScreen:new {
+	id = "other_clan_start",
 	leftDialog = "@conversation/wod_gethzerion:s_93",
 	stopConversation = "true",
 	options = {
 	}
 }
-wod_gethzerion:addScreen(singing_mountain_start)
+wod_gethzerion:addScreen(other_clan_start)
 
 other = ConvoScreen:new {
 	id = "other",
@@ -116,15 +115,15 @@ spiderclan_return = ConvoScreen:new {
 }
 wod_gethzerion:addScreen(spiderclan_return)
 
-singing_mountain_return = ConvoScreen:new {
-	id = "singing_mountain_return",
+other_clan_return = ConvoScreen:new {
+	id = "other_clan_return",
 	leftDialog = "@conversation/wod_gethzerion:s_9",
 	stopConversation = "false",
 	options = {
 		{"@conversation/wod_gethzerion:s_33", "init_alt"},
 	}
 }
-wod_gethzerion:addScreen(singing_mountain_return)
+wod_gethzerion:addScreen(other_clan_return)
 
 init_alt = ConvoScreen:new {
 	id = "init_alt",
@@ -132,8 +131,7 @@ init_alt = ConvoScreen:new {
 	stopConversation = "false",
 	options = {
 		{"@conversation/wod_gethzerion:s_88", "spiderclan"},
-		{"@conversation/wod_gethzerion:s_79", "singing_mountain"},
-		{"@conversation/wod_gethzerion:s_53", "other"},
+		{"@conversation/wod_gethzerion:s_79", "other_clan"},
 	}
 }
 wod_gethzerion:addScreen(init_alt)

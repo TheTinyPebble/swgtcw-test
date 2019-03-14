@@ -1,44 +1,84 @@
-wod_gethzerion_convo_handler = Object:new {
-}
-function wod_gethzerion_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
-    -- Assign the player to variable creature for use inside this function.
-    local creature = LuaCreatureObject(conversingPlayer)
-    -- Get the last conversation to determine whetehr or not we're  on the first screen
-    local convosession = creature:getConversationSession()
-    lastConversation = nil
-    local conversation = LuaConversationTemplate(conversationTemplate)
+wod_gethzerion_convo_handler = Object:new {}
 
+local QuestManager = require("managers.quest.quest_manager")
 
-    -- If there is a conversation open, do stuff with it
-    if ( conversation ~= nil ) then
-    -- check to see if we have a next screen
-        if ( convosession ~= nil ) then
-            local session = LuaConversationSession(convosession)
-            if ( session ~= nil ) then
-                lastConversationScreen = session:getLastConversationScreen()
-            end
-        end
-        -- Last conversation was nil, so get the first screen
-        if ( lastConversationScreen == nil ) then
-            nextConversationScreen = conversation:getScreen("initial")
-        else
-            -- Start playing the rest of the conversation based on user input
-            local luaLastConversationScreen = LuaConversationScreen(lastConversationScreen)
-            -- Set variable to track what option the player picked and get the option picked
-            local optionLink = luaLastConversationScreen:getOptionLink(selectedOption)
-            nextConversationScreen = conversation:getScreen(optionLink)
-        end
-    end
--- end of the conversation logic.
-return nextConversationScreen
+-- TODO: Reward Handling
+
+function wod_gethzerion_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+
+	if (clan == "" or clan == nil) then
+		return convoTemplate("not_elligible")
+	elseif (clan == "sm") then
+		return convoTemplate("wrong_alignment")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RECON)) then
+		return convoTemplate("quest_in_progress")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_02)) then
+		return convoTemplate("spiderclan_return")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_02)) then
+		return convoTemplate("other_clan_return")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RECON_02)) then
+		return convoTemplate("recon_return")
+	end
+	
+	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_RECON) and (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST) or QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST))) then
+		return convoTemplate("init_recon_complete")
+	end
+	
+	return convoTemplate("initial")
 end
 
-function wod_gethzerion_convo_handler:runScreenHandlers(conversationTemplate, conversingPlayer, conversingNPC, selectedOption, conversationScreen)
-    -- Plays the screens of the conversation.
-    local player = LuaSceneObject(conversingPlayer)
-    local screen = LuaConversationScreen(conversationScreen)
-    local screenID = screen:getScreenID()
-    local pConvScreen = screen:cloneScreen()
-    local clonedConversation = LuaConversationScreen(pConvScreen)
+function wod_gethzerion_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local screen = LuaConversationScreen(pConvScreen)
+	local screenID = screen:getScreenID()
+	local pConvScreen = screen:cloneScreen()
+	local clonedConversation = LuaConversationScreen(pConvScreen)
+	
+	if (screenID == "initial" or screenID == "init_alt") then
+		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_RECON)) then
+			clonedConversation:addOption("@conversation/wod_gethzerion:s_53", "other")
+		end
+	end
+
+	if (screenID == "spiderclan_start") then
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_01)
+	end
+	
+	if (screenID == "other_clan_start") then
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_01)
+	end
+	
+	if (screenID == "two_clans_start") then
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_RECON)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_RECON_01)
+	end
+	
+	if (screenID == "cache_start") then
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)
+	end
+
+	if (screenID == "spiderclan_return") then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_02)
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)
+	end
+	
+	if (screenID == "other_clan_return") then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_02)
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)
+	end
+	
+	if (screenID == "recon_return") then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_RECON_02)
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_RECON)
+	end
+
     return pConvScreen
 end

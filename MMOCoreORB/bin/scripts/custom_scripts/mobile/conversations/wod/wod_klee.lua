@@ -11,8 +11,7 @@ initial = ConvoScreen:new {
 	stopConversation = "false",
 	options = {
 		{"@conversation/wod_klee:s_44", "spiderclan"},
-		{"@conversation/wod_klee:s_34", "nightsister"},
-		{"@conversation/wod_klee:s_35", "other"},
+		{"@conversation/wod_klee:s_34", "other_clan"},
 	}
 }
 wod_klee:addScreen(initial)
@@ -37,25 +36,25 @@ spiderclan_start = ConvoScreen:new {
 }
 wod_klee:addScreen(spiderclan_start)
 
-nightsister = ConvoScreen:new {
-	id = "nightsister",
+other_clan = ConvoScreen:new {
+	id = "other_clan",
 	leftDialog = "@conversation/wod_klee:s_89",
 	stopConversation = "false",
 	options = {
-		{"@conversation/wod_klee:s_91", "nightsister_start"},
+		{"@conversation/wod_klee:s_91", "other_clan_start"},
 		{"@conversation/wod_klee:s_95", "initial"},
 	}
 }
-wod_klee:addScreen(nightsister)
+wod_klee:addScreen(other_clan)
 
-nightsister_start = ConvoScreen:new {
-	id = "nightsister_start",
+other_clan_start = ConvoScreen:new {
+	id = "other_clan_start",
 	leftDialog = "@conversation/wod_klee:s_93",
 	stopConversation = "true",
 	options = {
 	}
 }
-wod_klee:addScreen(nightsister_start)
+wod_klee:addScreen(other_clan_start)
 
 other = ConvoScreen:new {
 	id = "other",
@@ -116,15 +115,15 @@ spiderclan_return = ConvoScreen:new {
 }
 wod_klee:addScreen(spiderclan_return)
 
-nightsister_return = ConvoScreen:new {
-	id = "nightsister_return",
+other_clan_return = ConvoScreen:new {
+	id = "other_clan_return",
 	leftDialog = "@conversation/wod_klee:s_10",
 	stopConversation = "false",
 	options = {
 		{"@conversation/wod_klee:s_31", "init_alt"},
 	}
 }
-wod_klee:addScreen(nightsister_return)
+wod_klee:addScreen(other_clan_return)
 
 init_alt = ConvoScreen:new {
 	id = "init_alt",
@@ -132,8 +131,7 @@ init_alt = ConvoScreen:new {
 	stopConversation = "false",
 	options = {
 		{"@conversation/wod_klee:s_44", "spiderclan"},
-		{"@conversation/wod_klee:s_34", "nightsister"},
-		{"@conversation/wod_klee:s_35", "other"},
+		{"@conversation/wod_klee:s_34", "other_clan"},
 	}
 }
 wod_klee:addScreen(init_alt)
