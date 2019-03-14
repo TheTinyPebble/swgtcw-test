@@ -79,11 +79,11 @@ function wodEntertainerQuest:notifyFlourishObserver(pPlayer, pPlayer2, flourishI
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER)) then
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_01)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_02)
-			wodEntNSReturnGoto:start(pPlayer)
+			wodEntNSReturnGoto:start(pPlayer, pTarget)
 		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER)) then
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_01)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_02)
-			wodEntSMReturnGoto:start(pPlayer)
+			wodEntSMReturnGoto:start(pPlayer, pTarget)
 		end
 		dropObserver(STARTENTERTAIN, pPlayer)
 		return 1

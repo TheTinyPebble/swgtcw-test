@@ -1,50 +1,39 @@
 local QuestManager = require("managers.quest.quest_manager")
 require("utils.helpers")
 
-wodEntNSReturnGoto = GoToLocation:new {
+local QuestManager = require("managers.quest.quest_manager")
+local Logger = require("utils.logger")
+
+wodEntNSReturnEscort = Escort:new {
 	-- Task properties
-	taskName = "wodEntNSReturnGoto",
+	taskName = "wodEntNSReturnEscort",
 	-- GoToLocation properties
 	waypointDescription = "@theme_park_wod/wod_ns_rancor_tamer:task02_waypoint_name",
-	spawnPoint = {x = -4086, y = -156},
-	spawnPlanet = "dathomir",
-	spawnRadius = 5,
+	returnPoint = {x = -4086, y = -156},
+	returnPlanet = "dathomir",
+	areaRadius = 16,
 }
 
--- Event handler for the enter active area event.
--- The event will complete the task.
--- @param pPlayer pointer to the creature object of the player.
-function wodEntNSReturnGoto:onEnteredActiveArea(pPlayer)
-	if (pPlayer == nil) then
-		return 1
-	end
-
-	self:finish(pPlayer)
-	return 1
+function wodEntNSReturnEscort:onEnteredActiveArea(pPlayer)
+	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_02)
+	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_03)
 end
 
-return wodEntNSReturnGoto
+return wodEntNSReturnEscort
 
-wodEntSMReturnGoto = GoToLocation:new {
+wodEntSMReturnEscort = Escort:new {
 	-- Task properties
-	taskName = "wodEntSMReturnGoto",
+	taskName = "wodEntSMReturnEscort",
 	-- GoToLocation properties
 	waypointDescription = "@theme_park_wod/wod_sm_rancor_tamer:task02_waypoint_name",
-	spawnPoint = {x = 139, y = 4489},
-	spawnPlanet = "dathomir",
+	returnPoint = {x = 139, y = 4489},
+	returnPlanet = "dathomir",
 	spawnRadius = 5,
 }
 
--- Event handler for the enter active area event.
--- The event will complete the task.
--- @param pPlayer pointer to the creature object of the player.
-function wodEntSMReturnGoto:onEnteredActiveArea(pPlayer)
-	if (pPlayer == nil) then
-		return 1
-	end
-
-	self:finish(pPlayer)
-	return 1
+function wodEntSMReturnEscort:onEnteredActiveArea(pPlayer)
+	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_02)
+	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_03)
 end
 
-return wodEntSMReturnGoto
+return wodEntSMReturnEscort
