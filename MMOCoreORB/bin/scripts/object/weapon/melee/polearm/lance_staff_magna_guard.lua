@@ -115,7 +115,7 @@ object_weapon_melee_polearm_lance_staff_magna_guard = object_weapon_melee_polear
 	maxRangeAccuracy = 16,
 
 	minDamage = 100,
-	maxDamage = 250,
+	maxDamage = 175,
 	attackSpeed = 3.2,
 
 	woundsRatio = 40,
