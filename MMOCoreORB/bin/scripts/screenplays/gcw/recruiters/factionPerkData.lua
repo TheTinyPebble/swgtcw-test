@@ -91,7 +91,7 @@ rebelRewardData = {
 		battle_droid_commando = { type=factionRewardType.hireling, display="@mob/creature_names:cis_battle_droid_commando", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_battle_droid_commando", cost=420},
 		sbd = { type=factionRewardType.hireling, display="@mob/creature_names:cis_sbd", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_sbd", cost=820},
 		magnaguard = { type=factionRewardType.hireling, display="@mob/creature_names:cis_magnaguard", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_magnaguard", cost=2120},
-		hailfire = { type=factionRewardType.hireling, display="@mob/creature_names:recruiter_hailfire", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_hailfire", cost=9450},
+		hailfire = { type=factionRewardType.hireling, display="@mob/creature_names:recruiter_hailfire", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_hailfire_pet", cost=9450},
 	}
 }
 
@@ -216,6 +216,6 @@ imperialRewardData = {
 		swamp_trooper = { type=factionRewardType.hireling, display="@mob/creature_names:swamp_trooper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="swamp_trooper", cost=420},
 		clonetrooper_sniper = { type=factionRewardType.hireling, display="@mob/creature_names:clonetrooper_sniper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="clonetrooper_sniper", cost=420},
 		clone_commando = { type=factionRewardType.hireling, display="@mob/creature_names:clonetrooper_commando", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="clone_commando", cost=2120},
-		at_xt = { type=factionRewardType.hireling, display="@mob/creature_names:at_xt", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="rep_at_xt", cost=9450},
+		at_xt = { type=factionRewardType.hireling, display="@mob/creature_names:at_xt", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="rep_at_xt_pet", cost=9450},
 	},
 }
