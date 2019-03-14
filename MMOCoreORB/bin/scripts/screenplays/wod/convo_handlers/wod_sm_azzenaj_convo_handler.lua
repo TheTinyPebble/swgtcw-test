@@ -1,44 +1,76 @@
-wod_sm_azzenaj_convo_handler = Object:new {
-}
-function wod_sm_azzenaj_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
-    -- Assign the player to variable creature for use inside this function.
-    local creature = LuaCreatureObject(conversingPlayer)
-    -- Get the last conversation to determine whetehr or not we're  on the first screen
-    local convosession = creature:getConversationSession()
-    lastConversation = nil
-    local conversation = LuaConversationTemplate(conversationTemplate)
+wod_sm_azzenaj_convo_handler = Object:new {}
 
+local QuestManager = require("managers.quest.quest_manager")
 
-    -- If there is a conversation open, do stuff with it
-    if ( conversation ~= nil ) then
-    -- check to see if we have a next screen
-        if ( convosession ~= nil ) then
-            local session = LuaConversationSession(convosession)
-            if ( session ~= nil ) then
-                lastConversationScreen = session:getLastConversationScreen()
-            end
-        end
-        -- Last conversation was nil, so get the first screen
-        if ( lastConversationScreen == nil ) then
-            nextConversationScreen = conversation:getScreen("initial")
-        else
-            -- Start playing the rest of the conversation based on user input
-            local luaLastConversationScreen = LuaConversationScreen(lastConversationScreen)
-            -- Set variable to track what option the player picked and get the option picked
-            local optionLink = luaLastConversationScreen:getOptionLink(selectedOption)
-            nextConversationScreen = conversation:getScreen(optionLink)
-        end
-    end
--- end of the conversation logic.
-return nextConversationScreen
+-- TODO: Reward Handling
+
+function wod_sm_azzenaj_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+
+	if (clan == "" or clan == nil) then
+		return convoTemplate("not_elligible")
+	elseif (clan == "ns") then
+		return convoTemplate("wrong_alignment")
+	end
+	
+	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT)) then
+		return convoTemplate("quest_complete")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT)) then
+		return convoTemplate("quest_challenge_in_progress")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_04)) then
+		return convoTemplate("quest_hate_in_progress")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_05)) then
+		return convoTemplate("quest_investigation_in_progress")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_05)) then
+		return convoTemplate("quest_lost_in_progress")
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_04)) then
+		return convoTemplate("quest_hate_return")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_05)) then
+		return convoTemplate("quest_found_return")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_05)) then
+		return convoTemplate("quest_lost_return")
+	end
+	
+	return convoTemplate("initial")
 end
 
-function wod_sm_azzenaj_convo_handler:runScreenHandlers(conversationTemplate, conversingPlayer, conversingNPC, selectedOption, conversationScreen)
-    -- Plays the screens of the conversation.
-    local player = LuaSceneObject(conversingPlayer)
-    local screen = LuaConversationScreen(conversationScreen)
-    local screenID = screen:getScreenID()
-    local pConvScreen = screen:cloneScreen()
-    local clonedConversation = LuaConversationScreen(pConvScreen)
+function wod_sm_azzenaj_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
+	local convoTemplate = LuaConversationTemplate(pConvTemplate)
+	local screen = LuaConversationScreen(pConvScreen)
+	local screenID = screen:getScreenID()
+	local pConvScreen = screen:cloneScreen()
+	local clonedConversation = LuaConversationScreen(pConvScreen)
+
+	if (screenID == "start_quest_lost") then
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_01)
+	end
+	
+	if (screenID == "start_quest_found") then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_05)
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)
+	end
+	
+	if (screenID == "start_quest_hate") then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_05)
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)
+	end
+	
+	if (screenID == "start_quest_challenge") then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_05)
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_EHS)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_01)
+	end
+
     return pConvScreen
 end
