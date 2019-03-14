@@ -91,11 +91,11 @@ function wodHunting:notifyKilledHuntTarget(pPlayer, pVictim)
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_02)
-				--Return to Kais
+				wodHuntingNSReturnGoto:start(pPlayer)
 			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_02)
-				--Return to Vhaunda
+				wodHuntingSMReturnGoto:start(pPlayer)
 			end
 			return 1
 		end

@@ -91,11 +91,11 @@ function wodKillSpiderclan:notifyKilledHuntTarget(pPlayer, pVictim)
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_01)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_02)
-				--Return to Gethzerion
+				wodKillSpiderclanNSReturnGoto:start(pPlayer)
 			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN_01)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN_02)
-				--Return to Aujunta K'Lee
+				wodKillSpiderclanSMReturnGoto:start(pPlayer)
 			end
 			return 1
 		end

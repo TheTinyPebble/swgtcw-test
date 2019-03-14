@@ -99,11 +99,11 @@ function wodKillOtherClan:notifyKilledHuntTarget(pPlayer, pVictim)
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_01)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_02)
-				--Return to Gethzerion
+				wodKillOtherClanNSReturnGoto:start(pPlayer)
 			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_01)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_02)
-				--Return to Aujunta K'Lee
+				wodKillOtherClanSMReturnGoto:start(pPlayer)
 			end
 			return 1
 		end

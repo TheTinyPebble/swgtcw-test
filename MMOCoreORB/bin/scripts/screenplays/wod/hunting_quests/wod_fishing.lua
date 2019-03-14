@@ -12,7 +12,7 @@ function wodFishing:startEliminateQuest(pPlayer)
 		return
 	end
 	
-	dropObserver(ITEMLOOTED, "wodFishing", "notifyFishLooted", pPlayer)
+	dropObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
 	deleteScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTarget")
 	deleteScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTargetCount")
 	deleteScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTargetGoal")
@@ -21,39 +21,39 @@ function wodFishing:startEliminateQuest(pPlayer)
 	writeScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTargetGoal", 5) -- TODO: Magic number
 	writeScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTarget", "blackfish;blowfish;bluefish;faa;laa;ray;striped") --TODO: Magic string
 	
-	createObserver(ITEMLOOTED, "wodFishing", "notifyFishLooted", pPlayer)
+	createObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
 end
 
-function wodFishing:notifyFishLooted(pItem, pLooter)
-	if (pItem == nil or pLooter == nil) then
+function wodFishing:notifyFishingSuccess(pItem, pPlayer)
+	if (pItem == nil or pPlayer == nil) then
 		return 0
 	end
 	
-	if (not QuestManager.hasActiveQuest(pLooter, QuestManager.quests.WOD_NS_FISHING_01) and not QuestManager.hasActiveQuest(pLooter, QuestManager.quests.WOD_SM_FISHING_01)) then
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING_01) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING_01)) then
 		return 0
 	end
 
-	local fishTarget = readScreenPlayData(pLooter, "wodThemepark:fishing", "fishTarget")
-	local targetCount = tonumber(readScreenPlayData(pLooter, "wodThemepark:fishing", "fishTargetCount"))
-	local targetGoal = tonumber(readScreenPlayData(pLooter, "wodThemepark:fishing", "fishTargetGoal"))
+	local fishTarget = readScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTarget")
+	local targetCount = tonumber(readScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTargetCount"))
+	local targetGoal = tonumber(readScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTargetGoal"))
 
 	if (targetCount == nil) then
-		printLuaError("wodFishing:notifyFishLooted, nil targetCount for player: " .. SceneObject(pLooter):getCustomObjectName() .. " (player killed target: " .. SceneObject(pItem):getObjectName() .. "). Setting to 0.")
-		writeScreenPlayData(pLooter, "wodThemepark:fishing", "fishTargetCount", 0)
+		printLuaError("wodFishing:notifyFishingSuccess, nil targetCount for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pItem):getObjectName() .. "). Setting to 0.")
+		writeScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTargetCount", 0)
 		targetCount = 0
 	end
 
 	if (targetGoal == nil) then
-		printLuaError("wodFishing:notifyFishLooted, nil targetGoal for player: " .. SceneObject(pLooter):getCustomObjectName() .. " (player killed target: " .. SceneObject(pItem):getObjectName() .. "). Setting to 5.") -- TODO: Magic numbe
-		writeScreenPlayData(pLooter, "wodThemepark:fishing", "fishTargetGoal", 5) -- TODO: Magic number
+		printLuaError("wodFishing:notifyFishingSuccess, nil targetGoal for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pItem):getObjectName() .. "). Setting to 5.") -- TODO: Magic numbe
+		writeScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTargetGoal", 5) -- TODO: Magic number
 		targetGoal = 5 -- TODO: Magic number
 	end
 
 	if (fishTarget == nil or fishTarget == "") then
 		local newTarget = ""
-		writeScreenPlayData(pLooter, "wodThemepark:fishing", "fishTarget", "blackfish;blowfish;bluefish;faa;laa;ray;striped") --TODO: Magic string
+		writeScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTarget", "blackfish;blowfish;bluefish;faa;laa;ray;striped") --TODO: Magic string
 		newTarget = "blackfish;blowfish;bluefish;faa;laa;ray;striped" --TODO: Magic string
-		printLuaError("wodFishing:notifyFishLooted, nil fishTarget for player: " .. SceneObject(pLooter):getCustomObjectName() .. " (player killed target: " .. SceneObject(pItem):getObjectName() .. "). Setting to " .. newTarget .. ".")
+		printLuaError("wodFishing:notifyFishingSuccess, nil fishTarget for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pItem):getObjectName() .. "). Setting to " .. newTarget .. ".")
 		fishTarget = newTarget
 	end
 
@@ -66,32 +66,32 @@ function wodFishing:notifyFishLooted(pItem, pLooter)
 		end
 		
 		targetCount = targetCount + 1
-		writeScreenPlayData(pLooter, "wodThemepark:fishing", "fishTargetCount", targetCount)
+		writeScreenPlayData(pPlayer, "wodThemepark:fishing", "fishTargetCount", targetCount)
 		
 		local remaining = targetGoal - targetCount
-		if (QuestManager.hasActiveQuest(pLooter, QuestManager.quests.WOD_NS_FISHING)) then
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING)) then
 			if (remaining == 0) then
-				CreatureObject(pLooter):sendSystemMessage("You have caught all the necessary fish, return to Kais.")
+				CreatureObject(pPlayer):sendSystemMessage("You have caught all the necessary fish, return to Kais.")
 			else
-				CreatureObject(pLooter):sendSystemMessage("You have caught a fish, " .. remaining .. " remaining.")
+				CreatureObject(pPlayer):sendSystemMessage("You have caught a fish, " .. remaining .. " remaining.")
 			end
-		elseif (QuestManager.hasActiveQuest(pLooter, QuestManager.quests.WOD_SM_FISHING)) then
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING)) then
 			if (remaining == 0) then
-				CreatureObject(pLooter):sendSystemMessage("You have caught all the necessary fish, return to Vhaunda.")
+				CreatureObject(pPlayer):sendSystemMessage("You have caught all the necessary fish, return to Vhaunda.")
 			else
-				CreatureObject(pLooter):sendSystemMessage("You have caught a fish, " .. remaining .. " remaining.")
+				CreatureObject(pPlayer):sendSystemMessage("You have caught a fish, " .. remaining .. " remaining.")
 			end
 		end
 
 		if (targetCount >= targetGoal) then
-			if (QuestManager.hasActiveQuest(pLooter, QuestManager.quests.WOD_NS_FISHING)) then
-				QuestManager.completeQuest(pLooter, QuestManager.quests.WOD_NS_FISHING_01)
-				QuestManager.activateQuest(pLooter, QuestManager.quests.WOD_NS_FISHING_02)
-				--Return to Kais
-			elseif (QuestManager.hasActiveQuest(pLooter, QuestManager.quests.WOD_SM_FISHING)) then
-				QuestManager.completeQuest(pLooter, QuestManager.quests.WOD_SM_FISHING_01)
-				QuestManager.activateQuest(pLooter, QuestManager.quests.WOD_SM_FISHING_02)
-				--Return to Vhaunda
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING)) then
+				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING_01)
+				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING_02)
+				wodFishingNSReturnGoto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING)) then
+				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING_01)
+				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING_02)
+				wodFishingSMReturnGoto:start(pPlayer)
 			end
 			return 1
 		end

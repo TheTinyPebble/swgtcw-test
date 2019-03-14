@@ -523,6 +523,8 @@ void FishingManagerImplementation::sendReward(CreatureObject* player, SceneObjec
 			loot->getObjectName()->getFullPath(itemName);
 			body.setTT(itemName);
 			player->sendSystemMessage(body);
+			
+			loot->notifyObservers(ObserverEventType::FISHINGSUCCESS, player, 0);
 		} else {
 			loot->destroyObjectFromDatabase(true);
 		}
