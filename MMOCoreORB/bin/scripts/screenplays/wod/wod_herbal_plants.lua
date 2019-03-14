@@ -1,11 +1,11 @@
 wodHerbalPlants = ScreenPlay:new {
 	spawnAreas = { --x coord, y coord, spawn radius, plant count
-		{x = -3177, y = 3184, radius = 25, count = 10}, -- Outcast 1
+		{x = 866, y = 1095, radius = 25, count = 10}, -- Outcast 1
 		{x = -1000, y = 862, radius = 25, count = 10}, -- Outcast 2
 		{x = -2597, y = 4952, radius = 25, count = 10}, -- Outcast 3
 		{x = 1482, y = 3515, radius = 25, count = 10}, -- Outcast 4
 		{x = 1125, y = -1022, radius = 25, count = 10}, -- Outcast 5
-		{x = 866, y = 1095, radius = 25, count = 10}, -- Outcast 6
+		{x = -856, y = 2788, radius = 25, count = 10}, -- Outcast 6
 		{x = -7121, y = 2933, radius = 25, count = 10}, -- Outcast 7
 		{x = -3177, y = 3184, radius = 25, count = 10}, -- Rubina
 		{x = -2080, y = 3143, radius = 50, count = 20}, -- Sarlacc Area
