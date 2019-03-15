@@ -3054,8 +3054,10 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 	if (getGroupID() != 0 && getGroupID() == object->getGroupID())
 		return false;
 
-	if (ghost->hasBhTef() && ghost->hasJediTef())
+	if (ghost->hasBhTef() && ghost->hasJediTef()){
+		info("Target has both BH and Jedi TEF and should be attackable", true);
 		return true;
+	}
 
 	if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
 		return true;
