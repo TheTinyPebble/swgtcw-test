@@ -2931,6 +2931,13 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 
 		if (!(*shouldBhTef) && (attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->hasBountyMissionFor(attackingCreature)))
 			*shouldBhTef = true;
+
+		if (!(*shouldBhTef) && (targetCreature->getPlayerObject()->hasBhTef() && targetCreature->getPlayerObject()->hasJediTef()))
+			*shouldBhTef = true;
+
+		if (!(*shouldJediTef) && (targetCreature->getPlayerObject()->isJedi() && targetCreature->getWeapon()->isJediWeapon()) && (targetCreature->hasBountyMissionFor(attackingCreature) || attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->getPlayerObject()->hasBhTef()))
+			*shouldJediTef = true;
+
 	} else if (attackingCreature != NULL && targetCreature != NULL && attackingCreature->isPlayerCreature() && targetCreature->getFaction() != 0 && targetCreature->getFaction() != attackingCreature->getFaction()){
 		*shouldGcwTef = true;
 	}

@@ -3054,6 +3054,9 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 	if (getGroupID() != 0 && getGroupID() == object->getGroupID())
 		return false;
 
+	if (ghost->hasBhTef() && ghost->hasJediTef())
+		return true;
+
 	if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
 		return true;
 
@@ -3100,8 +3103,8 @@ bool CreatureObjectImplementation::isHealableBy(CreatureObject* object) {
 	if (ghost == nullptr)
 		return false;
 	//Comment out BH TEF check for healing
-	if (ghost->hasBhTef() && !ghost->hasJediTef())
-		return false;
+	//if (ghost->hasBhTef() && !ghost->hasJediTef())
+	//	return false;
 
 	//if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
 
