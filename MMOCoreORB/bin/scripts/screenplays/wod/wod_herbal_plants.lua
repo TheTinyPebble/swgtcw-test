@@ -99,7 +99,13 @@ function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
 	elseif (plantTemplateNum == 8) then --TODO: Magic Number, trampled plant
 		CreatureObject(pPlayer):sendSystemMessage("You didn't manage to get anything useful from the trampled plant.")
 	else
-		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:dont_need_herb")
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
+			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:dont_need_herb_ns")
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
+			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:dont_need_herb_sm")
+		else
+			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:dont_need_herb")
+		end
 		createEvent(5 * 1000, "wodHerbalPlants", "addBankCredits", pPlayer, "")
 	end
 	
@@ -163,7 +169,14 @@ function wodHerbalPlants:addBankCredits(pPlayer)
 		return
 	end
 	
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
+		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits_ns")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
+		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits_sm")
+	else
+		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits")
+	end
+	
 	local bankCredits = CreatureObject(pPlayer):getBankCredits()
 	CreatureObject(pPlayer):setBankCredits(bankCredits + 100) -- TODO: Magic number
-	CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits")
 end
