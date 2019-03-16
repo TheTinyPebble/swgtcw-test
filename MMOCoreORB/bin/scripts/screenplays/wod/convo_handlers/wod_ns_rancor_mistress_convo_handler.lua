@@ -41,6 +41,7 @@ function wod_ns_rancor_mistress_convo_handler:runScreenHandlers(pConvTemplate, p
 	if (screenID == "start_quest_whole_truth") then
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_01)
+		wodNSWholeTruth01Goto:start(pPlayer)
 	end
 
 	if (screenID == "complete_quest_whole_truth") then
@@ -49,6 +50,7 @@ function wod_ns_rancor_mistress_convo_handler:runScreenHandlers(pConvTemplate, p
 
 	if (screenID == "start_quest_whole_truth_two") then
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_04)
+		wodNSWholeTruth04Goto:start(pPlayer)
 	end
 
 	if (screenID == "return_whole_truth_two") then

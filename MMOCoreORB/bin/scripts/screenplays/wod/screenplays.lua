@@ -27,6 +27,14 @@ includeFile("wod/spiderclan_arc/wod_lost_e02_04.lua")
 includeFile("wod/spiderclan_arc/wod_queen_mother_goto.lua")
 includeFile("wod/spiderclan_arc/wod_spiderclan_arc.lua")
 
+--Whole Truth Arc
+includeFile("wod/whole_truth_arc/wod_kyrisa_cave_goto.lua")
+includeFile("wod/whole_truth_arc/wod_whole_truth_01_goto.lua")
+includeFile("wod/whole_truth_arc/wod_whole_truth_03_goto.lua")
+includeFile("wod/whole_truth_arc/wod_whole_truth_04_goto.lua")
+includeFile("wod/whole_truth_arc/wod_whole_truth_06_goto.lua")
+includeFile("wod/whole_truth_arc/wod_whole_truth_arc.lua")
+
 --Prologue
 includeFile("wod/prologue/wod_prologue.lua")
 includeFile("wod/prologue/wod_mysterious_witch_goto.lua")

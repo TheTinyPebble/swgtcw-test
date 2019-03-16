@@ -41,6 +41,7 @@ function wod_sm_rancor_tamer_convo_handler:runScreenHandlers(pConvTemplate, pPla
 	if (screenID == "start_quest_whole_truth") then
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_01)
+		wodSMWholeTruth01Goto:start(pPlayer)
 	end
 
 	if (screenID == "complete_quest_whole_truth") then
@@ -49,6 +50,7 @@ function wod_sm_rancor_tamer_convo_handler:runScreenHandlers(pConvTemplate, pPla
 
 	if (screenID == "start_quest_whole_truth_two") then
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_04)
+		wodSMWholeTruth04Goto:start(pPlayer)
 	end
 
 	if (screenID == "return_whole_truth_two") then

@@ -45,8 +45,8 @@ function wod_queen_mother_convo_handler:runScreenHandlers(pConvTemplate, pPlayer
 		if (readData("wodThemepark:queenMotherBossFight:active") == 1) then
 			return convoTemplate("busy")
 		elseif (self:checkGroupStatus(pPlayer)) then
-			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight"))
-			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight_01"))
+			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight_02"))
+			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight_03"))
 			wodSpiderclanArc:startBossFight(pPlayer)
 		else
 			return convoTemplate("not_in_group")
