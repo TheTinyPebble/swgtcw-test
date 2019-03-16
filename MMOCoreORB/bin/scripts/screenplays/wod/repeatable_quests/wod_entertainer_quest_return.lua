@@ -14,6 +14,8 @@ wodEntNSReturnEscort = Escort:new {
 function wodEntNSReturnEscort:onEnteredActiveArea(pPlayer)
 	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_02)
 	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_03)
+	dropObserver(STARTENTERTAIN, pPlayer)
+	CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:rancor_returned_ns")
 end
 
 return wodEntNSReturnEscort
@@ -31,6 +33,8 @@ wodEntSMReturnEscort = Escort:new {
 function wodEntSMReturnEscort:onEnteredActiveArea(pPlayer)
 	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_02)
 	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_03)
+	dropObserver(STARTENTERTAIN, pPlayer)
+	CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:rancor_returned_sm")
 end
 
 return wodEntSMReturnEscort

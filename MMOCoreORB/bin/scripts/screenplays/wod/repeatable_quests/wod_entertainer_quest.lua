@@ -16,31 +16,31 @@ function wodEntertainerQuest:notifyPerformanceObserver(pPlayer, pPlayer2)
 	if (pPlayer == nil) then
 		return 1
 	end
-	
-	if (self:isTargetCorrect(pPlayer)) then
+
+	if (self:isCorrectTarget(pPlayer)) then
 		createObserver(FLOURISH, "wodEntertainerQuest", "notifyFlourishObserver", pPlayer)
 	end
 
 	return 0
 end
 
-function wodEntertainerQuest:isTargetCorrect(pPlayer)
+function wodEntertainerQuest:isCorrectTarget(pPlayer)
 	if (pPlayer == nil) then
 		return false
 	end
-	
+
 	local targetID = CreatureObject(pPlayer):getTargetID()
-	
+
 	if (targetID == nil) then
 		return false
 	end
-	
+
 	local pTarget = getSceneObject(targetID)
-	
+
 	if (pTarget == nil) then
 		return false
 	end
-	
+
 	local targetList = HelperFuncs:splitString(self.targetList, ";")
 
 	if (self.targetList == SceneObject(pTarget):getObjectName() or HelperFuncs:tableContainsValue(targetList, SceneObject(pTarget):getObjectName())) then
@@ -55,41 +55,93 @@ function wodEntertainerQuest:notifyFlourishObserver(pPlayer, pPlayer2, flourishI
 	if (pPlayer == nil) then
 		return 1
 	end
-	
+
 	local pTarget = getSceneObject(readData("wodThemepark:rancorTamer:" .. SceneObject(pPlayer):getObjectID()))
-	
+
+	if (pTarget == nil or pTarget == "") then
+		return 1
+	end
+
 	if (CreatureObject(pTarget):isInCombat() or CreatureObject(pTarget):isDead() or not CreatureObject(pTarget):isAiAgent()) then
 		return 1
 	end
-	
+
+	local targetID = SceneObject(pTarget):getObjectID()
 	local n = getRandomNumber(1, 10)
-	
+
 	if (n == 10) then
 		dropObserver(FLOURISH, pPlayer)
 		CreatureObject(pTarget):engageCombat(pPlayer)
-		CreatureObject(pPlayer):sendSystemMessage("The rancor notices you and is angered by your actions, run!")
+		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:got_control")
 		return 1
 	end
-	
-	if (n <= 2) then
+
+	if (n <= 3) then
 		CreatureObject(pTarget):setPvpStatusBitmask(0)
 		AiAgent(pTarget):setAiTemplate("escort")
 		AiAgent(pTarget):setFollowObject(pPlayer)
-		CreatureObject(pPlayer):sendSystemMessage("The rancor is intrigued by your actions and starts following you.")
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER)) then
+		if (readData("wodThemepark:rancorEntTamed:" .. targetID) == 1) then
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:renew_control")
+			writeData("wodThemepark:rancorEntState:" .. rancorID, 0)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER)) then
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_01)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_02)
 			wodEntNSReturnGoto:start(pPlayer, pTarget)
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:got_control")
 		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER)) then
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_01)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_02)
 			wodEntSMReturnGoto:start(pPlayer, pTarget)
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:got_control")
 		end
-		dropObserver(STARTENTERTAIN, pPlayer)
+		writeData("wodThemepark:rancorEntTamed:" .. targetID, 1)
+		createEvent(30 * 1000, "wodEntertainerQuest", "checkControl", pPlayer, targetID)
 		return 1
+	else
+		if (n <= 5) then
+			local i = getRandomNumber(1, 4)
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:rancor_flavor_" .. i)
+		end
 	end
-	
 	return 0
 end
 
+function wodEntertainerQuest:checkControl(pPlayer, rancorID)
+	if (pPlayer == nil or rancorID == nil) then
+		return
+	end
 
+	if (readData("wodThemepark:rancorEntTamed:" .. SceneObject(pPlayer):getObjectID()) ~= 1) then
+		return
+	end
+
+	local pRancor = getSceneObject(rancorID)
+
+	if (not CreatureObject(pRancor):isInRangeWithObject(pPlayer, 64)) then
+		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:stop_following")
+		AiAgent(pTarget):setFollowObject(nil)
+		AiAgent(pRancor):setHomeLocation(SceneObject(pRancor):getWorldPositionX(), SceneObject(pRancor):getWorldPositionZ(), SceneObject(pRancor):getWorldPositionY(), SceneObject(pRancor):getParent())
+		CreatureObject(pTarget):setPvpStatusBitmask(AGGRESSIVE + ATTACKABLE + ENEMY)
+		deleteData("wodThemepark:rancorEntState:" .. rancorID)
+	end
+
+	local n = getRandomNumber (1, 10)
+
+	if (readData("wodThemepark:rancorEntState:" .. rancorID) == 1) then
+		if (n > 4) then
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:lost_control")
+			AiAgent(pTarget):setFollowObject(nil)
+			AiAgent(pRancor):setHomeLocation(SceneObject(pRancor):getWorldPositionX(), SceneObject(pRancor):getWorldPositionZ(), SceneObject(pRancor):getWorldPositionY(), SceneObject(pRancor):getParent())
+			CreatureObject(pTarget):setPvpStatusBitmask(AGGRESSIVE + ATTACKABLE + ENEMY)
+			CreatureObject(pRancor):engageCombat(pPlayer)
+			deleteData("wodThemepark:rancorEntState:" .. rancorID)
+			return
+		end
+	else
+		if (n == 10) then
+			writeData("wodThemepark:rancorEntState:" .. rancorID, 1)
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:control_warning")
+		end
+	end
+	createEvent(30 * 1000, "wodEntertainerQuest", "checkControl", pPlayer, targetID)
+end
