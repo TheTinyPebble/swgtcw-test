@@ -16,6 +16,17 @@ includeFile("wod/repeatable_quests/wod_kill_spiderclan_return.lua")
 includeFile("wod/repeatable_quests/wod_entertainer_quest.lua")
 includeFile("wod/repeatable_quests/wod_entertainer_quest_return.lua")
 
+--Spiderclan Arc
+includeFile("wod/spiderclan_arc/wod_ehs_goto.lua")
+includeFile("wod/spiderclan_arc/wod_ehs_return_goto.lua")
+includeFile("wod/spiderclan_arc/wod_lost_e01_01.lua")
+includeFile("wod/spiderclan_arc/wod_lost_e01_02.lua")
+includeFile("wod/spiderclan_arc/wod_lost_e01_04.lua")
+includeFile("wod/spiderclan_arc/wod_lost_e01_05.lua")
+includeFile("wod/spiderclan_arc/wod_lost_e02_04.lua")
+includeFile("wod/spiderclan_arc/wod_queen_mother_goto.lua")
+includeFile("wod/spiderclan_arc/wod_spiderclan_arc.lua")
+
 --Prologue
 includeFile("wod/prologue/wod_prologue.lua")
 includeFile("wod/prologue/wod_mysterious_witch_goto.lua")
