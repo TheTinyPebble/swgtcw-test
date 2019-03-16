@@ -97,9 +97,15 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 		local n = getRandomNumber(1, 2)
 		wodPrologueScreenplay:resetQuest(pPlayer, "enemies")
 		if (n == 1) then
-			wodProKillRancorGoto:start(pPlayer)
+			PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_prologue_kill_rancor:task01_waypoint_name", "", 3968, -5536, WAYPOINTYELLOW, true, true, 0)
+			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR)
+			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_01)
+			wodPrologueScreenplay:startEliminateQuest(pPlayer)
 		else
-			wodProKillSpiderclanGoto:start(pPlayer)
+			PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_prologue_kill_spider_clan:task01_waypoint_name", "", 5723, -1887, WAYPOINTYELLOW, true, true, 0)
+			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN)
+			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_01)
+			wodPrologueScreenplay:startEliminateQuest(pPlayer)
 		end
 	end
 	

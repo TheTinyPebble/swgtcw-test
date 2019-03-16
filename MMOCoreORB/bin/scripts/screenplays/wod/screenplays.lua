@@ -30,8 +30,6 @@ includeFile("wod/spiderclan_arc/wod_spiderclan_arc.lua")
 --Prologue
 includeFile("wod/prologue/wod_prologue.lua")
 includeFile("wod/prologue/wod_mysterious_witch_goto.lua")
-includeFile("wod/prologue/wod_prologue_rancor_goto.lua")
-includeFile("wod/prologue/wod_prologue_spiderclan_goto.lua")
 includeFile("wod/prologue/wod_rubina_return.lua")
 
 --Prologue outcasts
