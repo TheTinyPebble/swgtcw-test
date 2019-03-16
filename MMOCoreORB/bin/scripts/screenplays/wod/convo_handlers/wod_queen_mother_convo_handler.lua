@@ -36,6 +36,11 @@ function wod_queen_mother_convo_handler:runScreenHandlers(pConvTemplate, pPlayer
 	if (screenID == "complete_spiderclan_secret") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_ehs_03"))
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_ehs_04"))
+		if (clan == "ns") then
+			wodNSEHSReturnGoto:start(pPlayer)
+		else
+			wodSMEHSReturnGoto:start(pPlayer)
+		end
 	end
 
 	if (screenID == "hunting_start_quest") then

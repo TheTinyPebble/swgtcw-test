@@ -25,8 +25,9 @@ function wod_rescue_initiate_convo_handler:runScreenHandlers(pConvTemplate, pPla
 	local clonedConversation = LuaConversationScreen(pConvScreen)
 
 	if (screenID == "complete_quest_" .. clan) then
-		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_lost_e02_03"))
-		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_lost_e02_04"))
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_lost_e02_02"))
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_lost_e02_03"))
+		wodSpiderclanArc:startEliminateQuest(pPlayer)
 	end
 
     return pConvScreen

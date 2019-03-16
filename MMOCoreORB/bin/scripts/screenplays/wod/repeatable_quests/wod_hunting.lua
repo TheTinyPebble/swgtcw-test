@@ -8,7 +8,7 @@ local QuestManager = require("managers.quest.quest_manager")
 
 --Eliminate quest
 function wodHunting:startEliminateQuest(pPlayer)
-	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)) then
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)) then
 		return
 	end
 	
@@ -29,7 +29,7 @@ function wodHunting:notifyKilledHuntTarget(pPlayer, pVictim)
 		return 0
 	end
 	
-	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)) then
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)) then
 		return 0
 	end
 

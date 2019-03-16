@@ -8,7 +8,7 @@ local QuestManager = require("managers.quest.quest_manager")
 
 --Eliminate quest
 function wodKillOtherClan:startEliminateQuest(pPlayer)
-	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_01) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_01)) then
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_01) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_01)) then
 		return
 	end
 	
@@ -32,7 +32,7 @@ function wodKillOtherClan:notifyKilledHuntTarget(pPlayer, pVictim)
 		return 0
 	end
 	
-	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_01) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_01)) then
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_01) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_01)) then
 		return 0
 	end
 

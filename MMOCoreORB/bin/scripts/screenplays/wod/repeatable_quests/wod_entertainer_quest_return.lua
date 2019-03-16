@@ -1,9 +1,6 @@
 local QuestManager = require("managers.quest.quest_manager")
 require("utils.helpers")
 
-local QuestManager = require("managers.quest.quest_manager")
-local Logger = require("utils.logger")
-
 wodEntNSReturnEscort = Escort:new {
 	-- Task properties
 	taskName = "wodEntNSReturnEscort",
