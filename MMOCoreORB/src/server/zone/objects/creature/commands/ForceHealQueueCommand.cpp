@@ -283,6 +283,7 @@ int ForceHealQueueCommand::runCommand(CreatureObject* creature, CreatureObject* 
 		}
 
 		VisibilityManager::instance()->increaseVisibility(creature, visMod);
+		checkForTef(creature, targetCreature);
 		return SUCCESS;
 	} else {
 		if (selfHeal) {

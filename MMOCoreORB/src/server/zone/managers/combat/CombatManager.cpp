@@ -2932,11 +2932,15 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 		if (!(*shouldBhTef) && (attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->hasBountyMissionFor(attackingCreature)))
 			*shouldBhTef = true;
 
-		if (!(*shouldBhTef) && targetCreature->getPlayerObject()->hasBhTef() && (targetCreature->getPlayerObject()->isJediAttackable() || targetCreature->getPlayerObject()->hasJediTef()))
+		if (!(*shouldBhTef) && targetCreature->getPlayerObject()->hasBhTef() && (targetCreature->getPlayerObject()->isJediAttackable() || targetCreature->getPlayerObject()->hasJediTef())){
+			info("Give BH tef in jedi fight");
 			*shouldBhTef = true;
+		}
 
-		if (!(*shouldJediTef) && (targetCreature->getPlayerObject()->isJedi() && targetCreature->getWeapon()->isJediWeapon()) && (attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->getPlayerObject()->hasBhTef()))
+		if (!(*shouldJediTef) && (targetCreature->getPlayerObject()->isJedi() && targetCreature->getWeapon()->isJediWeapon()) && (attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->getPlayerObject()->hasBhTef())){
+			info("Give jedi tef in BH fight", true);
 			*shouldJediTef = true;
+		}
 
 	}
 }
