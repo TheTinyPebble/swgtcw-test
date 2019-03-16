@@ -6,6 +6,8 @@ registerScreenPlay("wodSpiderclanArc", false)
 
 local QuestManager = require("managers.quest.quest_manager")
 
+-- TODO: Boss Fight
+
 --Eliminate quest
 function wodSpiderclanArc:startEliminateQuest(pPlayer)
 	

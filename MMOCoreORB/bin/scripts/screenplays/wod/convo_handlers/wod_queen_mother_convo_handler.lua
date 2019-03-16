@@ -3,8 +3,6 @@ wod_queen_mother_convo_handler = Object:new {}
 local QuestManager = require("managers.quest.quest_manager")
 
 -- TODO: Reward Handling
--- TODO: Busy check
--- TODO: Group check
 
 function wod_queen_mother_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
@@ -44,11 +42,34 @@ function wod_queen_mother_convo_handler:runScreenHandlers(pConvTemplate, pPlayer
 	end
 
 	if (screenID == "hunting_start_quest") then
-		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight"))
-		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight_01"))
-		--Busy check
-		--Group check
+		if (readData("wodThemepark:queenMotherBossFight:active") == 1) then
+			return convoTemplate("busy")
+		elseif (self:checkGroupStatus(pPlayer)) then
+			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight"))
+			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight_01"))
+			wodSpiderclanArc:startBossFight(pPlayer)
+		else
+			return convoTemplate("not_in_group")
+		end
 	end
 
     return pConvScreen
+end
+
+function wod_queen_mother_convo_handler:checkGroupStatus(pPlayer)
+	if (pPlayer == nil) then
+		return false
+	end
+	
+	if (CreatureObject(pPlayer):isGrouped()) then
+		local groupSize = CreatureObject(pPlayer):getGroupSize()
+
+		for i = 0, groupSize - 1, 1 do
+			local pMember = CreatureObject(pPlayer):getGroupMember(i)
+			if (pMember ~= nil and pMember ~= pPlayer and CreatureObject(pPlayer):isInRangeWithObject(pMember, 50) and not SceneObject(pMember):isAiAgent()) then
+				return true
+			end
+		end
+	end
+	return false
 end
