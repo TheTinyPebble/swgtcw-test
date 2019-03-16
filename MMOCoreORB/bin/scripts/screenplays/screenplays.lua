@@ -52,6 +52,7 @@ includeFile("themepark/marauder/themeParkMarauderSzingoTerak.lua")
 --includeFile("themepark/smc/themeParkSmcZideera.lua")
 --includeFile("themepark/smc/themeParkSmcVhaundaIzaryx.lua")
 --includeFile("themepark/smc/themeParkSmcVurleneAujante.lua")
+includeFile("themepark/wod/screenplays.lua")
 
 -- Screenplay utilities
 includeFile("utils/quest_spawner.lua")
@@ -687,8 +688,6 @@ includeFile("elite_spawns/eliteSpawnMap.lua")
 
 --World Bosses
 includeFile("world_boss/nightsister_shapeshifter.lua")
-
-includeFile("wod/screenplays.lua")
 
 --Custom Content
 includeFile("../custom_scripts/screenplays/screenplays.lua")
