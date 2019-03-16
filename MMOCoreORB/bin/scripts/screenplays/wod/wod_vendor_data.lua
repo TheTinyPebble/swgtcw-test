@@ -2,11 +2,11 @@ SMWodVendorLogic = VendorLogic:new {
 	scriptName = "SMWodVendorLogic",
 	curenncies = {
 	--For Tokens: Displayed Name, full template string (without shared_), if applicable: ScreenPlayData string, ScreenPlayData key
-		{currency = "token", name = "Dathomir Amber", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "amber"},
-		{currency = "token", name = "Rare Dried Herbs", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "herbs"},
-		{currency = "token", name = "Rancor Teeth", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "teeth"},
-		{currency = "token", name = "Spider Silk", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "silk"},
-		{currency = "token", name = "Whuffa Leather", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "leather"},
+		{currency = "token", name = "Dathomir Amber", template = "object/tangible/content/wod_token_1.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "amber"},
+		{currency = "token", name = "Rare Dried Herbs", template = "object/tangible/content/wod_token_5.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "herbs"},
+		{currency = "token", name = "Rancor Teeth", template = "object/tangible/content/wod_token_3.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "teeth"},
+		{currency = "token", name = "Spider Silk", template = "object/tangible/content/wod_token_2.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "silk"},
+		{currency = "token", name = "Whuffa Leather", template = "object/tangible/content/wod_token_4.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "leather"},
 	},
 	--Displayed Name, full template string (without shared_), cost in {}, use the same structure as currencies
 	merchandise = {
@@ -48,11 +48,11 @@ NSWodVendorLogic = VendorLogic:new {
 	scriptName = "NSWodVendorLogic",
 	curenncies = {
 	--For Tokens: Displayed Name, full template string (without shared_), if applicable: ScreenPlayData string, ScreenPlayData key
-		{currency = "token", name = "Dathomir Amber", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "amber"},
-		{currency = "token", name = "Rare Dried Herbs", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "herbs"},
-		{currency = "token", name = "Rancor Teeth", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "teeth"},
-		{currency = "token", name = "Spider Silk", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "silk"},
-		{currency = "token", name = "Whuffa Leather", template = "", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "leather"},
+		{currency = "token", name = "Dathomir Amber", template = "object/tangible/content/wod_token_1.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "amber"},
+		{currency = "token", name = "Rare Dried Herbs", template = "object/tangible/content/wod_token_5.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "herbs"},
+		{currency = "token", name = "Rancor Teeth", template = "object/tangible/content/wod_token_3.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "teeth"},
+		{currency = "token", name = "Spider Silk", template = "object/tangible/content/wod_token_2.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "silk"},
+		{currency = "token", name = "Whuffa Leather", template = "object/tangible/content/wod_token_4.iff", ScreenPlayDataString = "wodThemepark", ScreenPlayDataKey = "leather"},
 	},
 	--Displayed Name, full template string (without shared_), cost in {}, use the same structure as currencies
 	merchandise = {
