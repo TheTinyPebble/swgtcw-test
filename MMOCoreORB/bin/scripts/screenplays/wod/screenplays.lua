@@ -87,3 +87,4 @@ includeFile("wod/convo_handlers/wod_witch_herbs_convo_handler.lua")
 --Menu components
 includeFile("wod/menu_components/wod_herb_plant_menu_component.lua")
 includeFile("wod/menu_components/wod_basket_menu_components.lua")
+includeFile("wod/menu_components/wod_spiderclan_vegetation_menu_component.lua")

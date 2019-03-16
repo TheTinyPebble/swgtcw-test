@@ -161,7 +161,16 @@ function wodSpiderclanArc:sendCommMessage(pPlayer)
 	local sui = SuiMessageBox.new("wodSpiderclanArc", "noCallback")
 	sui.hideCancelButton()
 
-	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_01)) then
+	
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_03)) then
+		sui.setTitle("@theme_park_wod/wod_ns_lost_e01:comm_message_title")
+		sui.setPrompt("@theme_park_wod/wod_ns_lost_e01:task03_comm_message_text")
+		sui.sendTo(pPlayer)
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_03)) then
+		sui.setTitle("@theme_park_wod/wod_sm_lost_e01:comm_message_title")
+		sui.setPrompt("@theme_park_wod/wod_sm_lost_e01:task03_comm_message_text")
+		sui.sendTo(pPlayer)
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_01)) then
 		sui.setTitle("@theme_park_wod/wod_ns_lost_e02:comm_message_title")
 		sui.setPrompt("@theme_park_wod/wod_ns_lost_e02:task01_comm_message_text")
 		sui.sendTo(pPlayer)
