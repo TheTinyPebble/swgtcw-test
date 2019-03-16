@@ -23,7 +23,7 @@ function wodWholeTruthArc:startEliminateQuest(pPlayer)
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_02)) then
 		writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTargetGoal", 3) -- TODO: Magic number
-		writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTarget", "mutant_rancor;mutant_rancor_fierce") --TODO: Magic string
+		writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTarget", "mutant_rancor") --TODO: Magic string
 	end
 	
 	createObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
@@ -59,9 +59,9 @@ function wodWholeTruthArc:notifyKilledHuntTarget(pPlayer, pVictim)
 	if (huntTarget == nil or huntTarget == "") then
 		local newTarget = ""
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02)) then
-			newTarget = "mutant_rancor;mutant_rancor_fierce" --TODO: Magic string
+			newTarget = "mutant_rancor" --TODO: Magic string
 			printLuaError("wodWholeTruthArc:notifyKilledHuntTarget, nil huntTarget for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pVictim):getObjectName() .. "). Setting to " .. newTarget .. ".")
-			writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTarget", "mutant_rancor;mutant_rancor_fierce") --TODO: Magic string
+			writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTarget", "mutant_rancor") --TODO: Magic string
 		end
 		huntTarget = newTarget
 	end
