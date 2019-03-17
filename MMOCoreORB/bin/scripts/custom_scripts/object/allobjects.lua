@@ -3,6 +3,9 @@ includeFile("../custom_scripts/object/mobile/tatooine/objects.lua")
 includeFile("../custom_scripts/object/mobile/meatlumps/objects.lua")
 includeFile("../custom_scripts/object/mobile/skeleton/objects.lua")
 includeFile("../custom_scripts/object/weapon/melee/polearm/objects.lua")
+includeFile("../custom_scripts/object/weapon/melee/2h_sword/objects.lua")
+includeFile("../custom_scripts/object/weapon/melee/sword/objects.lua")
+includeFile("../custom_scripts/object/weapon/melee/special/objects.lua")
 includeFile("../custom_scripts/object/weapon/ranged/carbine/objects.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/objects.lua")
 includeFile("../custom_scripts/object/tangible/veteran_reward/objects.lua")
@@ -16,6 +19,7 @@ includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/objects
 includeFile("../custom_scripts/object/tangible/content/objects.lua")
 
 --Draft Schems
+includeFile("../custom_scripts/object/draft_schematic/clothing/objects.lua")
 includeFile("../custom_scripts/object/draft_schematic/weapon/objects.lua")
 includeFile("../custom_scripts/object/draft_schematic/structure/objects.lua")
 includeFile("../custom_scripts/object/draft_schematic/item/theme_park/objects.lua")
