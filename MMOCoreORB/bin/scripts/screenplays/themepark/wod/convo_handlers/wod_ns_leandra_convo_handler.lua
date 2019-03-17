@@ -48,7 +48,7 @@ function wod_ns_leandra_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 	
 	if (pGhost == nil) then
-		return
+		return pConvScreen
 	end
 
 	if (screenID == "start_quest_lost") then

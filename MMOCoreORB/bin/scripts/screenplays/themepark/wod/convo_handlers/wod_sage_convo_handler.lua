@@ -48,7 +48,7 @@ function wod_sage_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
 	if (pGhost == nil) then
-		return false
+		return pConvScreen
 	end
 	
 	if (screenID == "quest_start_first") then

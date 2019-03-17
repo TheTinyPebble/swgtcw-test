@@ -7,7 +7,7 @@ function wod_vendor_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
 	if (pGhost == nil) then
-		return
+		return convoTemplate("not_enough_faction")
 	end
 	
 	if (clan == "" or clan "" nil) then

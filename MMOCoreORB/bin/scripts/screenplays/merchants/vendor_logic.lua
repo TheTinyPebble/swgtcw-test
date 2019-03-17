@@ -109,8 +109,8 @@ function VendorLogic:buyItem(pPlayer, itemSelected)
 			end
 		end	
 		CreatureObject(pPlayer):sendSystemMessage("You have purchased " .. merch.name)
-		local pItem = giveItem(pInventory, merch.template, -1)
-		if (string.match(SceneObject(pItem):getTemplateObjectPath(), "lightsaber_module_force_crystal")) then
+		local pItem = giveItem(pInventory, merch.template, -1)		
+		if (string.match(SceneObject(pItem):getTemplateObjectPath(), "lightsaber_module_force_crystal") and pItem ~= nil) then
 			if (merch.color ~= nil) then
 				local colorCrystal = LuaLightsaberCrystalComponent(pItem)
 				colorCrystal:setColor(merch.color)

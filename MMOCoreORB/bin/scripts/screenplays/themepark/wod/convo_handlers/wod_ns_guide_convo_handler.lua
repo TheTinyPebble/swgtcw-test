@@ -7,7 +7,7 @@ function wod_ns_guide_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplat
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
 	if (pGhost == nil) then
-		return
+		return convoTemplate("not_enough_faction")
 	end
 	
 	local factionStanding = PlayerObject(pGhost):getFactionStanding("nightsister")
@@ -18,7 +18,7 @@ function wod_ns_guide_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplat
 		if (factionStanding > 3000) then
 			return convoTemplate("initial")
 		else
-			return convoTemplate("not_enough_faction_end")
+			return convoTemplate("not_enough_faction")
 		end
 	end
 	
