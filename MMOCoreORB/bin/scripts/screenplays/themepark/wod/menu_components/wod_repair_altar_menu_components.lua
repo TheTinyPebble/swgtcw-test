@@ -36,7 +36,7 @@ function wodRepairAltar1MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 	end
 
 	if (selectedID == 20) then
-		--PlayerObject(pGhost):addRewardedSchematic(schematic, 2, -1, true)
+		PlayerObject(pGhost):addRewardedSchematic("object/draft_schematic/weapon/wod_crafting_alter_1.iff", 2, -1, true)
 		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:schematic_learned_altar")
 
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_01_01)) then
@@ -61,12 +61,12 @@ function wodRepairAltar1MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			return
 		end
 
-		lightValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_light")
-		darkValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_dark")
-		wisdomValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_wisdom")
+		lightValue = LuaComponent(pItem):getAttributeValue("wod_altar_1_1")
+		darkValue = LuaComponent(pItem):getAttributeValue("wod_altar_1_2")
+		wisdomValue = LuaComponent(pItem):getAttributeValue("wod_altar_1_3")
 
 		if (lightValue == darkValue and lightValue + darkValue <= wisdomValue) then
-			--PlayerObject(pGhost):removeRewardedSchematic(schematic, true)
+			PlayerObject(pGhost):removeRewardedSchematic("object/draft_schematic/weapon/wod_crafting_alter_1.iff", true)
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_01_02)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_01_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_01_03)
@@ -122,7 +122,7 @@ function wodRepairAltar2MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 	end
 
 	if (selectedID == 20) then		
-		--PlayerObject(pGhost):addRewardedSchematic(schematic, 2, -1, true)
+		PlayerObject(pGhost):addRewardedSchematic("object/draft_schematic/weapon/wod_crafting_alter_2.iff", 2, -1, true)
 		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:schematic_learned_altar")
 
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_02_01)) then
@@ -147,13 +147,13 @@ function wodRepairAltar2MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			return
 		end
 
-		lightValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_light")
-		darkValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_dark")
-		wisdomValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_wisdom")
-		powerValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_power")
+		lightValue = LuaComponent(pItem):getAttributeValue("wod_altar_2_1")
+		darkValue = LuaComponent(pItem):getAttributeValue("wod_altar_2_2")
+		wisdomValue = LuaComponent(pItem):getAttributeValue("wod_altar_2_3")
+		powerValue = LuaComponent(pItem):getAttributeValue("wod_altar_2_4")
 
 		if (lightValue == darkValue and lightValue == wisdomValue and lightValue == powerValue) then
-			--PlayerObject(pGhost):removeRewardedSchematic(schematic, true)
+			PlayerObject(pGhost):removeRewardedSchematic("object/draft_schematic/weapon/wod_crafting_alter_2.iff", true)
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_02_02)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_02_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_02_03)
@@ -209,7 +209,7 @@ function wodRepairAltar3MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 	end
 
 	if (selectedID == 20) then		
-		--PlayerObject(pGhost):addRewardedSchematic(schematic, 2, -1, true)
+		PlayerObject(pGhost):addRewardedSchematic("object/draft_schematic/weapon/wod_crafting_alter_3.iff", 2, -1, true)
 		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:schematic_learned_altar")
 
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_03_01)) then
@@ -235,12 +235,12 @@ function wodRepairAltar3MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			return
 		end
 
-		wisdomValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_wisdom")
-		powerValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_power")
-		ageValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_age")
+		wisdomValue = LuaComponent(pItem):getAttributeValue("wod_altar_3_1")
+		powerValue = LuaComponent(pItem):getAttributeValue("wod_altar_3_2")
+		ageValue = LuaComponent(pItem):getAttributeValue("wod_altar_3_3")
 
 		if (wisdomValue < powerValue and powerValue < powerValue) then
-			--PlayerObject(pGhost):removeRewardedSchematic(schematic, true)
+			PlayerObject(pGhost):removeRewardedSchematic("object/draft_schematic/weapon/wod_crafting_alter_3.iff", true)
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_03_02)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_03_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_03_03)
@@ -296,7 +296,7 @@ function wodRepairAltar4MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 	end
 
 	if (selectedID == 20) then		
-		--PlayerObject(pGhost):addRewardedSchematic(schematic, 2, -1, true)
+		PlayerObject(pGhost):addRewardedSchematic("object/draft_schematic/weapon/wod_crafting_alter_4.iff", 2, -1, true)
 		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:schematic_learned_altar")
 
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_01)) then
@@ -321,13 +321,13 @@ function wodRepairAltar4MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			return
 		end
 
-		powerValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_power")
-		trustValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_trust")
-		friendshipValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_friendship")
-		loyaltyValue = LuaComponent(pItem):getAttributeValue("wod_repair_altar_loyalty")
+		powerValue = LuaComponent(pItem):getAttributeValue("wod_altar_4_1")
+		trustValue = LuaComponent(pItem):getAttributeValue("wod_altar_4_2")
+		friendshipValue = LuaComponent(pItem):getAttributeValue("wod_altar_4_3")
+		loyaltyValue = LuaComponent(pItem):getAttributeValue("wod_altar_4_4")
 
 		if (trustValue == friendshipValue and trustValue == loyaltyValue and trustValue * 2 <= powerValue) then
-			--PlayerObject(pGhost):removeRewardedSchematic(schematic, true)
+			PlayerObject(pGhost):removeRewardedSchematic("object/draft_schematic/weapon/wod_crafting_alter_4.iff", true)
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_02)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_03)
