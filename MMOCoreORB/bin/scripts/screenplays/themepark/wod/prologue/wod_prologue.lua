@@ -44,7 +44,7 @@ function wodPrologueScreenplay:handleCollectionReward(pPlayer, key)
 		return
 	end
 	
-	local key = "enemies"
+	local key = "enemies" .. key
 	local clan = ""
 	
 	if (string.match(key, "herbs")) then
@@ -60,16 +60,14 @@ function wodPrologueScreenplay:handleCollectionReward(pPlayer, key)
 	end
 	
 	local rewardKey = wodPrologueRewardManager[key]
-	local rewardString
+	local rewardString = "collectionReward" .. clan
 	
 	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")	
 	if (rewardKey.collectionRewardType == "all") then
-		rewardString = "collectionReward" .. clan
 		for i = 1, #rewardKey.rewardString do
 			giveItem(pInventory, rewardKey.rewardString[i], -1)
 		end
 	elseif (rewardKey.collectionRewardType == "pick") then
-		rewardString = "collectionReward" .. clan
 		local sui = SuiListBox.new("wodPrologueScreenplay", "pickRewardCallback")
 
 		sui.setTargetNetworkId(SceneObject(pPlayer):getObjectID())
@@ -88,7 +86,7 @@ function wodPrologueScreenplay:handleCollectionReward(pPlayer, key)
 			CreatureObject(pPlayer):sendSystemMessage("A collection reward could not be found for prologue quest, key: '" .. key .. "', please contact an admin.")
 			return
 		end
-		rewardString = "collectionRandomReward" .. clan
+
 		local n = getRandomNumber(1, #rewardKey.rewardString)
 		giveItem(pInventory, rewardKey.rewardString[n], -1)
 	end

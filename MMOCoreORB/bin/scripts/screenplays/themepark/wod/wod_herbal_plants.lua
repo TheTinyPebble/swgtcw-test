@@ -69,17 +69,10 @@ function wodHerbalPlants:spawnHerbalPlants()
 end
 
 function wodHerbalPlants:spawnHerbalPlants(..., loc)
-	local pAnchor = getSceneObject(readData("wodThemepark:anchorID"))
-	
-	local a = math.random() * 2 * math.pi
-	local r = self.spawnAreas[loc].radius * math.sqrt(math.random())
-
-	local x = self.spawnAreas[loc].x + r * math.cos(a)
-	local y = self.spawnAreas[loc].y + r * math.sin(a)
-	local z = getTerrainHeight(pAnchor, x, y)
+	local spawnPoint = getSpawnPoint("dathomir", self.spawnArea.x, self.spawnArea.y, 0, self.spawnArea.radius)
 			
 	local n = getRandomNumber(1, #self.plantTemplates)
-	local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], x, z, y, math.rad(math.random(360)), 0)
+	local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], spawnPoint[1], spawnPoint[2], spawnPoint[3], math.rad(math.random(360)), 0)
 	writeData("wodThemepark:herbPlantLoc:" .. SceneObject(pObject):getObjectID(), loc)
 	writeData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pObject):getObjectID(), n)
 end
@@ -94,9 +87,9 @@ function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
 	
 	createEvent(self.respawnTimeSecs * 1000, "wodHerbalPlants", "respawnHerbalPlant", nil, plantLoc)
 	
-	if (plantTemplateNum <= 5) then --TODO: Magic Number
+	if (plantTemplateNum <= 5) then
 		self:collectQuestHerb(pPlayer, plantTemplateNum)
-	elseif (plantTemplateNum == 8) then --TODO: Magic Number, trampled plant
+	elseif (plantTemplateNum == 8) then
 		CreatureObject(pPlayer):sendSystemMessage("You didn't manage to get anything useful from the trampled plant.")
 	else
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
@@ -118,15 +111,18 @@ function wodHerbalPlants:collectQuestHerb(pPlayer, num)
 	end
 	
 	local spString, questName = ""
+	local herbsNeeded = 3
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
 		spString = "wodThemepark:ns:herbs"
 		questName = "wod_ns_herb_gathering"
+		herbsNeeded = 5
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
 		spString = "wodThemepark:sm:herbs"
 		questName = "wod_sm_herb_gathering"
 	else
 		spString = "wodThemepark:prologue:herbs"
 		questName = "wod_prologue_herb_gathering"
+		herbsNeeded = 5
 	end
 	
 	local curHerbs = tonumber(readScreenPlayData(pPlayer, spString, self.screenPlayDataKey[tonumber(num)]))
@@ -137,11 +133,11 @@ function wodHerbalPlants:collectQuestHerb(pPlayer, num)
 	
 	writeScreenPlayData(pPlayer, spString, self.screenPlayDataKey[tonumber(num)], curHerbs + 1)
 	
-	if (curHerbs + 1 == 3) then --TODO: Magic number
+	if (curHerbs + 1 == herbsNeeded) then
 		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/" .. questName .. ":task06_task_display_string_" .. num)
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID(questName .. "_0" .. num))
 		self:checkQuestStatus(pPlayer, questName)
-	elseif (curHerbs + 1 > 3) then --TODO: Magic Number
+	elseif (curHerbs + 1 > herbsNeeded) then
 		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:extra_credit_herbs")
 		local bankCredits = CreatureObject(pPlayer):getBankCredits()
 		createEvent(5 * 1000, "wodHerbalPlants", "addBankCredits", pPlayer, "")
@@ -153,7 +149,7 @@ function wodHerbalPlants:checkQuestStatus(pPlayer, questName)
 		return
 	end
 	
-	for i = 1, 5 do -- TODO: Magic number
+	for i = 1, 5 do
 		if (not QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID(questName .. "_0" .. i))) then
 			return
 		end
@@ -169,14 +165,18 @@ function wodHerbalPlants:addBankCredits(pPlayer)
 		return
 	end
 	
+	local rewardedCredits = wodPrologueRewardManager.herbs.extraCredits
+	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
 		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits_ns")
+		rewardedCredits = wodRewardManager.herbs.extraCredits
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
 		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits_sm")
+		rewardedCredits = wodRewardManager.herbs.extraCredits
 	else
 		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits")
 	end
 	
 	local bankCredits = CreatureObject(pPlayer):getBankCredits()
-	CreatureObject(pPlayer):setBankCredits(bankCredits + 100) -- TODO: Magic number
+	CreatureObject(pPlayer):setBankCredits(bankCredits + rewardedCredits) -- TODO: Magic number
 end

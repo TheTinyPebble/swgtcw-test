@@ -111,28 +111,30 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	
 	if (screenID == "return_eliminate_complete_ns") then
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_05)) then
-			wodPrologueScreenplay:addToCollection(pPlayer, "rancor")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR)
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_05)
+			wodPrologueScreenplay:addToCollection(pPlayer, "Rancor")
+			wodPrologueScreenplay:handleReward(pPlayer, "enemiesRancor")
 		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_05)) then
-			wodPrologueScreenplay:addToCollection(pPlayer, "spiderclan")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN)
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_05)
+			wodPrologueScreenplay:addToCollection(pPlayer, "Spiderclan")
+			wodPrologueScreenplay:handleReward(pPlayer, "enemiesSpiderclan")
 		end
 		wodPrologueScreenplay:addToFavor(pPlayer, "sm")
-		wodPrologueScreenplay:handleReward(pPlayer, "eliminate")
 	elseif (screenID == "return_eliminate_complete_sm") then
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_06)) then
-			wodPrologueScreenplay:addToCollection(pPlayer, "rancor")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR)
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_06)
+			wodPrologueScreenplay:addToCollection(pPlayer, "Rancor")
+			wodPrologueScreenplay:handleReward(pPlayer, "enemiesRancor")
 		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_06)) then
-			wodPrologueScreenplay:addToCollection(pPlayer, "spiderclan")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN)
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_06)
+			wodPrologueScreenplay:addToCollection(pPlayer, "Spiderclan")
+			wodPrologueScreenplay:handleReward(pPlayer, "enemiesSpiderclan")
 		end
 		wodPrologueScreenplay:addToFavor(pPlayer, "ns")
-		wodPrologueScreenplay:handleReward(pPlayer, "eliminate")
 	end
 	
 	if (screenID == "task_wisdom_start") then
