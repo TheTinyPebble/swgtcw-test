@@ -32,12 +32,23 @@ function wod_witch_herbs_convo_handler:runScreenHandlers(pConvTemplate, pPlayer,
 	local clonedConversation = LuaConversationScreen(pConvScreen)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 	
-	if (screenID == "quest_start" or screenID == "quest_start_alt") then	
+	if (screenID == "quest_start" or screenID == "quest_start_alt") then
+		if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering"))) then
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_01"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_02"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_03"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_04"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_05"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_06"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_07"))
+			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_08"))
+		end
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering"))
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_01"))
 	end
 	
-	if (screenID == "return_complete_quest") then	
+	if (screenID == "return_complete_quest") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_08"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering"))
 		witchesOfDathomirScreenplay:handleReward(pPlayer, "herbs")

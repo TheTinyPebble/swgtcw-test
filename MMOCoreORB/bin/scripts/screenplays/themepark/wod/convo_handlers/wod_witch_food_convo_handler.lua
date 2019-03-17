@@ -35,6 +35,11 @@ function wod_witch_food_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))) then
 			return convoTemplate("bolma_in_progress")
 		else
+			if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))) then
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting_01"))
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting_02"))
+			end
 			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))
 			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting_01"))
 		end
@@ -46,6 +51,11 @@ function wod_witch_food_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))) then
 			return convoTemplate("fish_in_progress")
 		else
+			if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))) then
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing_01"))
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing_02"))
+			end
 			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))
 			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing_01"))
 		end

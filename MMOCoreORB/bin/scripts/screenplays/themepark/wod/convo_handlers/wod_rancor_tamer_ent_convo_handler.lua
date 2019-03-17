@@ -48,7 +48,7 @@ function wod_rancor_tamer_ent_convo_handler:runScreenHandlers(pConvTemplate, pPl
 	end
 	
 	if (screenID == "quest_start") then
-		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer")) or QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer"))) then
+		if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer"))) then
 			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer"))
 			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_01"))
 			QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_02"))

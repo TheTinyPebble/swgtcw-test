@@ -50,11 +50,21 @@ function wod_gethzerion_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 	end
 
 	if (screenID == "spiderclan_start") then
+		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)) then
+			QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)
+			QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_01)
+			QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_02)
+		end
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_01)
 	end
 	
 	if (screenID == "other_clan_start") then
+		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)) then
+			QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)
+			QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_01)
+			QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_02)
+		end
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_01)
 	end
