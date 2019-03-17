@@ -19,12 +19,12 @@ object_draft_schematic_furniture_wod_pro_sm_tree_08 = object_draft_schematic_fur
 	customizationStringNames = {},
 	customizationDefaults = {},
 
-	ingredientTemplateNames = {"craft_furniture_ingredients_n", "craft_furniture_ingredients_n", "craft_furniture_ingredients_n"},
-	ingredientTitleNames = {"pot", "tree", "greenery"},
-	ingredientSlotType = {0, 0, 0},
-	resourceTypes = {"mineral", "wood", "chemical"},
-	resourceQuantities = {40, 40, 30},
-	contribution = {100, 100, 100},
+	ingredientTemplateNames = {"craft_furniture_ingredients_n", "craft_furniture_ingredients_n", "craft_furniture_ingredients_n", "craft_furniture_ingredients_n"},
+	ingredientTitleNames = {"staves", "hoops", "water", "fertilizer"},
+	ingredientSlotType = {0, 0, 0, 0},
+	resourceTypes = {"mineral", "chemical", "water", "flora_resources"},
+	resourceQuantities = {40, 40, 30, 30},
+	contribution = {100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/furniture/decorative/wod_pro_ns_tree_08.iff",
 

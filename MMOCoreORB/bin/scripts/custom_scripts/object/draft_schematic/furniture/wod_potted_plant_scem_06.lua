@@ -19,12 +19,12 @@ object_draft_schematic_furniture_wod_potted_plant_scem_06 = object_draft_schemat
 	customizationStringNames = {},
 	customizationDefaults = {},
 
-	ingredientTemplateNames = {"craft_furniture_ingredients_n", "craft_furniture_ingredients_n", "craft_furniture_ingredients_n"},
-	ingredientTitleNames = {"pot", "tree", "greenery"},
-	ingredientSlotType = {0, 0, 0},
-	resourceTypes = {"mineral", "wood", "chemical"},
-	resourceQuantities = {30, 30, 20},
-	contribution = {100, 100, 100},
+	ingredientTemplateNames = {"craft_furniture_ingredients_n", "craft_furniture_ingredients_n", "craft_furniture_ingredients_n", "craft_furniture_ingredients_n"},
+	ingredientTitleNames = {"staves", "hoops", "water", "fertilizer"},
+	ingredientSlotType = {0, 0, 0, 0},
+	resourceTypes = {"mineral", "chemical", "water", "flora_resources"},
+	resourceQuantities = {30, 30, 20, 20},
+	contribution = {100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/furniture/decorative/wod_potted_plant_06.iff",
 
