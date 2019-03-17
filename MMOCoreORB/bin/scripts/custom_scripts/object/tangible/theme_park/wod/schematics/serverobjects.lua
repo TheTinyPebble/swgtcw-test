@@ -8,3 +8,4 @@ includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_ns_
 includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_sm_clothes_schematics.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_weapon_schematics.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_witch_banner_schematics.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_crafting_scanner_interface_schematic.lua")

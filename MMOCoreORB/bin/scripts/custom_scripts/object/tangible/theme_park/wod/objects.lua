@@ -82,3 +82,14 @@ object_tangible_theme_park_wod_shared_wod_storage_basket = SharedWeaponObjectTem
 
 ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_shared_wod_storage_basket, "object/tangible/theme_park/wod/shared_wod_storage_basket.iff")
 
+object_tangible_theme_park_wod_shared_wod_hanging_sign_skill = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/shared_wod_hanging_sign_skill.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_shared_wod_hanging_sign_skill, "object/tangible/theme_park/wod/shared_wod_hanging_sign_skill.iff")
+
+object_tangible_theme_park_wod_shared_wod_standing_sign_skill = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/shared_wod_standing_sign_skill.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_shared_wod_standing_sign_skill, "object/tangible/theme_park/wod/shared_wod_standing_sign_skill.iff")

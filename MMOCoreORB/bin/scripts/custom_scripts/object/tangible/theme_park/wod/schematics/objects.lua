@@ -440,20 +440,17 @@ object_tangible_theme_park_wod_schematics_shared_wod_1h_weapon_schematic = Share
 
 ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_1h_weapon_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_1h_weapon_schematic.iff")
 
-
 object_tangible_theme_park_wod_schematics_shared_wod_2h_weapon_schematic = SharedWeaponObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_2h_weapon_schematic.iff"
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_2h_weapon_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_2h_weapon_schematic.iff")
 
-
 object_tangible_theme_park_wod_schematics_shared_wod_polearm_weapon_schematic = SharedWeaponObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_polearm_weapon_schematic.iff"
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_polearm_weapon_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_polearm_weapon_schematic.iff")
-
 
 object_tangible_theme_park_wod_schematics_shared_wod_unarmed_weapon_schematic = SharedWeaponObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_unarmed_weapon_schematic.iff"
@@ -467,17 +464,21 @@ object_tangible_theme_park_wod_schematics_shared_wod_witch_banner_s01_schematic 
 
 ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_witch_banner_s01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_witch_banner_s01_schematic.iff")
 
-
 object_tangible_theme_park_wod_schematics_shared_wod_witch_banner_s02_schematic = SharedWeaponObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_witch_banner_s02_schematic.iff"
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_witch_banner_s02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_witch_banner_s02_schematic.iff")
 
-
-object_tangible_theme_park_wod_schematics_shared_wod_witch_banner_s02_schematic = SharedWeaponObjectTemplate:new {
-	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_witch_banner_s02_schematic.iff"
+object_tangible_theme_park_wod_schematics_shared_wod_witch_banner_s03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_witch_banner_s03_schematic.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_witch_banner_s02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_witch_banner_s02_schematic.iff")
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_witch_banner_s03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_witch_banner_s03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_crafting_scanner_interface_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_crafting_scanner_interface_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_crafting_scanner_interface_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_crafting_scanner_interface_schematic.iff")
 
