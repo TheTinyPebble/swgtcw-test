@@ -49,12 +49,6 @@ function wod_sage_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 		return pConvScreen
 	end
 
-	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
-
-	if (pInventory == nil) then
-		return pConvScreen
-	end
-
 	if (screenID == "quest_start_first") then
 		PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_" .. clan .. "_repair_altar_01:task01_waypoint_name", "", -1510, 1281, WAYPOINTYELLOW, true, true, 0)
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01_01"))
@@ -84,7 +78,6 @@ function wod_sage_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 	elseif (screenID == "init_fifth") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04_04"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04"))
-		createLoot(pInventory, "wod_holocron", 0, true)
 		witchesOfDathomirScreenplay:handleReward(pPlayer, "repairAltar4")
 		if (clan == "ns") then
 			PlayerObject(pGhost):awardBadge(164)

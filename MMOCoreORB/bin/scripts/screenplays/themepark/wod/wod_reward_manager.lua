@@ -115,7 +115,7 @@ wodRewardManager = {
 		rewardOnce = false,
 		rewardInterval = 1,
 		rewardType = "pick",
-		rewardCount = 3, --Set the amount rewarded (only use for tokens)
+		rewardCount = 3, --Set the amount rewarded (only works on tokens)
 		reward = { -- Players pick a reward from the list below.
 			{"object/tangible/content/wod_token_1.iff", "Dathomir Amber"},
 			{"object/tangible/content/wod_token_2.iff", "Spider Silk"},
@@ -227,6 +227,7 @@ wodRewardManager = {
 		rewardCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
+			"object/tangible/theme_park/wod/wod_crafting_alter_key.iff",
 		},
 		rewardRandomValuable = 2,
 	},

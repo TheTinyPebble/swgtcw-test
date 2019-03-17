@@ -22,7 +22,7 @@ includeFile("groups/skill_buffs.lua")
 includeFile("groups/tailor_components.lua")
 includeFile("groups/treasure_map_group.lua")
 includeFile("groups/named_color_crystals.lua")
-includeFile("groups/wod_holocron.lua")
+includeFile("groups/wod_logic_unit.lua")
 
 -- armor sub-folder
 includeFile("groups/armor/armor_all.lua")
