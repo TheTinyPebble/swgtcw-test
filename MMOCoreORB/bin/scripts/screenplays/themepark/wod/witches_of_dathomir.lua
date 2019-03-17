@@ -23,8 +23,7 @@ function witchesOfDathomirScreenplay:onPlayerLoggedIn(pPlayer)
 		return
 	end
 	
-	witchesOfDathomirScreenplay:onPlayerLoggedIn(pPlayer)
-	
+	wodPrologueScreenplay:onPlayerLoggedIn(pPlayer)
 end
 
 function witchesOfDathomirScreenplay:spawnMobiles()

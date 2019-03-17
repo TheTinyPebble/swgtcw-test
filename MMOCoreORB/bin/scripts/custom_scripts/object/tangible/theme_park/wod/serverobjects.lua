@@ -11,3 +11,4 @@ includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_rubina_chest.l
 includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_witch_banner_s01.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_witch_banner_s02.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_witch_banner_s03.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_storage_basket.lua")

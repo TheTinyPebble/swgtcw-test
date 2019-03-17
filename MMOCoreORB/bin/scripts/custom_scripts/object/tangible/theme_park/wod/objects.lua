@@ -76,3 +76,9 @@ object_tangible_theme_park_wod_shared_wod_witch_banner_s03 = SharedWeaponObjectT
 
 ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_shared_wod_witch_banner_s03, "object/tangible/theme_park/wod/shared_wod_witch_banner_s03.iff")
 
+object_tangible_theme_park_wod_shared_wod_storage_basket = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/shared_wod_storage_basket.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_shared_wod_storage_basket, "object/tangible/theme_park/wod/shared_wod_storage_basket.iff")
+

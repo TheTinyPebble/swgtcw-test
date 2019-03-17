@@ -239,6 +239,7 @@ function Versafunction88MenuComponent:withdrawTokenTransferCallback(pPlayer, pSu
 	
 	if (SceneObject(pInventory):isContainerFullRecursive()) then
 		CreatureObject(pPlayer):sendSystemMessage("You do not have enough inventory space.")
+		deleteData(SceneObject(pPlayer):getObjectID() .. "Versafunction88:tokenToWithdraw")
 		return
 	end
 	
