@@ -2,8 +2,6 @@ wod_sm_rancor_tamer_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Reward Handling
-
 function wod_sm_rancor_tamer_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
@@ -46,6 +44,7 @@ function wod_sm_rancor_tamer_convo_handler:runScreenHandlers(pConvTemplate, pPla
 
 	if (screenID == "complete_quest_whole_truth") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_03)
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "wholeTruth1")
 	end
 
 	if (screenID == "start_quest_whole_truth_two") then
@@ -57,6 +56,7 @@ function wod_sm_rancor_tamer_convo_handler:runScreenHandlers(pConvTemplate, pPla
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH)) then
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_06)
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH)
+			witchesOfDathomirScreenplay:handleReward(pPlayer, "wholeTruth2")
 		end
 	end
 

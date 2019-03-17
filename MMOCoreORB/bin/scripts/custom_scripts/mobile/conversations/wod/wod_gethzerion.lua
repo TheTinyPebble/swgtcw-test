@@ -95,15 +95,15 @@ cache_start = ConvoScreen:new {
 }
 wod_gethzerion:addScreen(cache_start)
 
-recon_return = ConvoScreen:new {
-	id = "recon_return",
+two_clans_return = ConvoScreen:new {
+	id = "two_clans_return",
 	leftDialog = "@conversation/wod_gethzerion:s_12",
 	stopConversation = "false",
 	options = {
 		{"@conversation/wod_gethzerion:s_32", "init_alt"},
 	}
 }
-wod_gethzerion:addScreen(recon_return)
+wod_gethzerion:addScreen(two_clans_return)
 
 spiderclan_return = ConvoScreen:new {
 	id = "spiderclan_return",

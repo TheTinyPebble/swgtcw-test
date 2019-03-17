@@ -24,8 +24,8 @@ function wod_klee_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 		return convoTemplate("spiderclan_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN_02)) then
 		return convoTemplate("other_clan_return")
-	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RECON_02)) then
-		return convoTemplate("recon_return")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_GHOST_REWARD)) then
+		return convoTemplate("two_clans_return")
 	end
 	
 	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_RECON) and (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST) or QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST))) then
@@ -41,6 +41,11 @@ function wod_klee_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 	local screenID = screen:getScreenID()
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+	if (pGhost == nil) then
+		return pConvScreen
+	end
 	
 	if (screenID == "initial" or screenID == "init_alt") then
 		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_RECON)) then
@@ -70,16 +75,23 @@ function wod_klee_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 	if (screenID == "spiderclan_return") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN_02)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN)
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "enemiesSpiderclan")
+		witchesOfDathomirScreenplay:addToCollection(pPlayer, "enemiesSpiderclanSM")
 	end
 	
 	if (screenID == "other_clan_return") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN_02)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN)
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "enemiesOtherclan")
+		witchesOfDathomirScreenplay:addToCollection(pPlayer, "enemiesOtherclanSM")
 	end
 	
-	if (screenID == "recon_return") then
-		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_RECON_02)
-		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_RECON)
+	if (screenID == "two_clans_return") then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_GHOST_REWARD)
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "ghostReward")
+		if (not PlayerObject(pGhost):hasBadge(153)) then
+			PlayerObject(pGhost):awardBadge(153)
+		end
 	end
 
     return pConvScreen

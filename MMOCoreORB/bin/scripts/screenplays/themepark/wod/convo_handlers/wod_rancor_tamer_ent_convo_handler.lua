@@ -2,8 +2,6 @@ wod_rancor_tamer_ent_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Reward Handling
-
 function wod_rancor_tamer_ent_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local rancorTamer = self:getRancorTamer(pPlayer, pNpc, pConvTemplate)
@@ -41,7 +39,8 @@ function wod_rancor_tamer_ent_convo_handler:runScreenHandlers(pConvTemplate, pPl
 	if (screenID == "return_init") then
 		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_03"))) then
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_03"))
-			--Handle reward
+			witchesOfDathomirScreenplay:handleReward(pPlayer, "rancorTamer")
+			witchesOfDathomirScreenplay:addToCollection(pPlayer, "enemiesSpiderclan" .. clan)
 		else
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_rancor_tamer_04"))
 		end

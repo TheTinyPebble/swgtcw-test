@@ -48,6 +48,12 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 		return
 	end
 
+	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
+
+	if (pInventory == nil) then
+		return
+	end
+
 	local curCount = tonumber(readScreenPlayData(pPlayer, "wodThemepark:reward", key))
 
 	if (curCount == nil or curCount == "") then
@@ -64,7 +70,6 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 	end
 
 	if (curCount + 1 ~= 1 or curCount + 1 % rewardKey.rewardInterval == 0) then
-		local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
 		local pItem
 		if (rewardKey.credits ~= nil and rewardKey.credits > 0) then
 			CreatureObject(pPlayer):addCashCredits(rewardKey.credits)
@@ -73,7 +78,7 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 			for i = 1, #rewardKey.reward do
 				pItem = giveItem(pInventory, rewardKey.reward[i], -1)
 				
-				if ((wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0) and (pItem ~= nil)) then
+				if ((wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
 					TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardCount)
 				end
 			end
@@ -99,7 +104,7 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 			local n = getRandomNumber(1, #rewardKey.reward)
 				pItem = giveItem(pInventory, rewardKey.reward[n], -1)
 			
-			if ((wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0) and (pItem ~= nil)) then
+			if ((wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
 				TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardCount)
 			end
 		end
@@ -107,7 +112,10 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 		if (wodRewardManager[key].rewardRandomValuable ~= nil or not wodRewardManager[key].rewardRandomValuable == 0) then
 			local n = getRandomNumber(1, 5)
 			pItem = giveItem(pInventory, "object/tangible/content/wod_token_" .. n .. ".iff", -1)
-			TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardRandomValuable)
+
+			if (pItem ~= nil) then
+				TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardRandomValuable)
+			end
 		end	
 		CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
 	end
@@ -137,6 +145,12 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 	if (pPlayer == nil or key == nil) then
 		return
 	end
+
+	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
+	
+	if (pInventory == nil) then
+		return
+	end
 	
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
@@ -162,12 +176,11 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 	local rewardKey = wodRewardManager[key]
 	local rewardString = "collectionReward" .. clan
 
-	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
 	local pItem
 	if (rewardKey.collectionRewardType == "all") then
 		for i = 1, #rewardKey.reward do
 			pItem = giveItem(pInventory, rewardKey.rewardString[i], -1)
-			if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and (pItem ~= nil)) then
+			if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
 				TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 			end
 		end
@@ -192,12 +205,12 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 		end
 		local n = getRandomNumber(1, #rewardKey.rewardString)
 		pItem = giveItem(pInventory, rewardKey.rewardString[n], -1)
-		if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and (pItem ~= nil)) then
+		if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
 			TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 		end
 	end
 	
-	if (rewardKey[rewardString .. "BadgeToAward"] ~= nil and rewardKey[rewardString .. "BadgeToAward"] ~= "" or PlayerObject(pGhost):hasBadge(rewardKey[rewardString .. "BadgeToAward"])) then
+	if (rewardKey[rewardString .. "BadgeToAward"] ~= nil and rewardKey[rewardString .. "BadgeToAward"] ~= "" or not PlayerObject(pGhost):hasBadge(rewardKey[rewardString .. "BadgeToAward"])) then
 		PlayerObject(pGhost):awardBadge(rewardKey[rewardString .. "BadgeToAward"])
 	end
 	CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
@@ -221,9 +234,9 @@ function witchesOfDathomirScreenplay:pickRewardCallback(pPlayer, pSui, eventInde
 	local pItem = giveItem(pInventory, reward, -1)
 
 	local key = readStringData("wodThemepark:rewardKey:" .. SceneObject(pPlayer):getObjectID())
-	if (wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0) then
+	if (wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
 		TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardCount)
-	elseif (wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) then
+	elseif (wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
 		TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 	end
 end

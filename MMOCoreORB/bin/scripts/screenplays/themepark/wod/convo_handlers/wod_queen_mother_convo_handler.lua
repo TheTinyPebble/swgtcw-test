@@ -2,8 +2,6 @@ wod_queen_mother_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Reward Handling
-
 function wod_queen_mother_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")

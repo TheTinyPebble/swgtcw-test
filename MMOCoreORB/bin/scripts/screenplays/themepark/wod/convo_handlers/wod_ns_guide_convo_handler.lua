@@ -31,6 +31,17 @@ function wod_ns_guide_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pN
 	local screenID = screen:getScreenID()
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+	if (pGhost == nil) then
+		return pConvScreen
+	end
+
+	if (screenID == "initial") then
+		if (not PlayerObject(pGhost):hasBadge(161)) then
+			PlayerObject(pGhost):awardBadge(161)
+		end
+	end
 
 	if (screenID == "continue" or screenID == "end_conv") then
 		deleteScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")

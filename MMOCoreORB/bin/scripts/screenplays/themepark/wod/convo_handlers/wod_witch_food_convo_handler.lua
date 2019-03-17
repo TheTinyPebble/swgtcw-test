@@ -2,8 +2,6 @@ wod_witch_food_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Reward Handling
-
 function wod_witch_food_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local witchFoodType = self:getWitchFoodType(pPlayer, pNpc, pConvTemplate)
@@ -57,10 +55,14 @@ function wod_witch_food_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))) then
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting_02"))
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))
+			witchesOfDathomirScreenplay:addToCollection(pPlayer, "hunting" .. clan)
+			witchesOfDathomirScreenplay:handleReward(pPlayer, "hunting")
 		end
 		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))) then
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing_02"))
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))
+			witchesOfDathomirScreenplay:addToCollection(pPlayer, "fishing" .. clan)
+			witchesOfDathomirScreenplay:handleReward(pPlayer, "fishing")
 		end
 	end
 

@@ -2,8 +2,6 @@ wod_sm_azzenaj_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Reward Handling
-
 function wod_sm_azzenaj_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
@@ -63,6 +61,7 @@ function wod_sm_azzenaj_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "lostE01")
 	end
 	
 	if (screenID == "start_quest_hate") then
@@ -71,6 +70,7 @@ function wod_sm_azzenaj_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "lostE02")
 	end
 	
 	if (screenID == "start_quest_challenge") then
@@ -79,6 +79,7 @@ function wod_sm_azzenaj_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_EHS)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_01)
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "ehs")
 	end
 
     return pConvScreen

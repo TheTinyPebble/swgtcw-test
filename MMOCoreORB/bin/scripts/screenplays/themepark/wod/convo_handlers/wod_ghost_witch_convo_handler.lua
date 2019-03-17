@@ -44,9 +44,15 @@ function wod_ghost_witch_convo_handler:runScreenHandlers(pConvTemplate, pPlayer,
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+	if (pGhost == nil) then
+		return pConvScreen
+	end
 
 	if (screenID == "quest_start") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_recon_02"))
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_recon"))
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1"))
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_01"))
 	end
@@ -54,6 +60,10 @@ function wod_ghost_witch_convo_handler:runScreenHandlers(pConvTemplate, pPlayer,
 	if (screenID == "first_sister_complete_quest") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_05"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1"))
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "firstSister")
+		if (not PlayerObject(pGhost):hasBadge(150)) then
+			PlayerObject(pGhost):awardBadge(150)
+		end
 	end
 	
 	if (screenID == "second_sister_start") then
@@ -64,6 +74,10 @@ function wod_ghost_witch_convo_handler:runScreenHandlers(pConvTemplate, pPlayer,
 	if (screenID == "second_sister_complete_quest") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2_05"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2"))
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "secondSister")
+		if (not PlayerObject(pGhost):hasBadge(151)) then
+			PlayerObject(pGhost):awardBadge(151)
+		end
 	end
 	
 	if (screenID == "third_sister_start") then
@@ -80,6 +94,10 @@ function wod_ghost_witch_convo_handler:runScreenHandlers(pConvTemplate, pPlayer,
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3_05"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3"))
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_ghost_reward"))
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "thirdSister")
+		if (not PlayerObject(pGhost):hasBadge(152)) then
+			PlayerObject(pGhost):awardBadge(152)
+		end
 	end
 
     return pConvScreen

@@ -211,7 +211,8 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	
 	if (screenID == "left_behind_complete_quest") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_03)
-		--Handle reward
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND)
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "leftBehind")
 	end
 	
     return pConvScreen

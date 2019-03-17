@@ -7,6 +7,7 @@ registerScreenPlay("wodSpiderclanArc", false)
 local QuestManager = require("managers.quest.quest_manager")
 
 -- TODO: Boss Fight
+-- TODO: Reward Handling
 
 function wodSpiderclanArc:startBossFight(pPlayer)
 end

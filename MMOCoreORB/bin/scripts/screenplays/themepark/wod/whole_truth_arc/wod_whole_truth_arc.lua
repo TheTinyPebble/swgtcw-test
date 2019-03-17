@@ -7,6 +7,7 @@ registerScreenPlay("wodWholeTruthArc", false)
 local QuestManager = require("managers.quest.quest_manager")
 
 -- TODO: Boss Fight
+-- TODO: Reward handling
 
 function wodWholeTruthArc:startBossFight(pPlayer)
 end

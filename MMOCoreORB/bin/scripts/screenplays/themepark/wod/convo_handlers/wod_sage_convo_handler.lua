@@ -2,8 +2,6 @@ wod_sage_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Reward Handling
-
 function wod_sage_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local sage = self:getSageType(pPlayer, pNpc, pConvTemplate)
@@ -50,7 +48,13 @@ function wod_sage_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 	if (pGhost == nil) then
 		return pConvScreen
 	end
-	
+
+	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
+
+	if (pInventory == nil) then
+		return pConvScreen
+	end
+
 	if (screenID == "quest_start_first") then
 		PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_" .. clan .. "_repair_altar_01:task01_waypoint_name", "", -1510, 1281, WAYPOINTYELLOW, true, true, 0)
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01_01"))
@@ -68,16 +72,25 @@ function wod_sage_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 	if (screenID == "init_second") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01_04"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01"))
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "repairAltar1")
 	elseif (screenID == "init_third") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02_04"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02"))
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "repairAltar2")
 	elseif (screenID == "init_fourth") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03_04"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03"))
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "repairAltar3")
 	elseif (screenID == "init_fifth") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04_04"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04"))
-		--Handle reward
+		createLoot(pInventory, "wod_holocron", 0, true)
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "repairAltar4")
+		if (clan == "ns") then
+			PlayerObject(pGhost):awardBadge(164)
+		else
+			PlayerObject(pGhost):awardBadge(157)
+		end
 	end
 
     return pConvScreen

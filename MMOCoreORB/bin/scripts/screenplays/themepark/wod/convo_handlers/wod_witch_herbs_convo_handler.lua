@@ -2,8 +2,6 @@ wod_witch_herbs_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Reward Handling
-
 function wod_witch_herbs_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local witchHerbsType = self:getWitchHerbsType(pPlayer, pNpc, pConvTemplate)
@@ -42,6 +40,8 @@ function wod_witch_herbs_convo_handler:runScreenHandlers(pConvTemplate, pPlayer,
 	if (screenID == "return_complete_quest") then	
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_08"))
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering"))
+		witchesOfDathomirScreenplay:handleReward(pPlayer, "herbs")
+		witchesOfDathomirScreenplay:addToCollection(pPlayer, "herbs" .. clan)
 	end
 
     return pConvScreen

@@ -103,8 +103,11 @@ wodRewardManager = {
 		collectionRewardOnce = false,
 		collectionCount = 5,
 		collectionRewardType = "all",
-		collectionReward = {
+		collectionRewardNS = {
 			"object/tangible/furniture/all/wod_ns_seed_jar.iff",
+		},
+		collectionRewardSM = {
+			"object/tangible/furniture/all/wod_sm_seed_jar.iff",
 		},
 	},
 	
@@ -120,6 +123,10 @@ wodRewardManager = {
 			{"object/tangible/content/wod_token_4.iff", "Whuffa Leather"},
 			{"object/tangible/content/wod_token_5.iff", "Rare Dried Herbs"},
 		},
+		collectionRewardOnce = true,
+		collectionCount = 7,
+		collectionNSBadgeToAward = 162,
+		collectionSMBadgeToAward = 155,
 	},
 	
 	enemiesSpiderclan = {
@@ -134,6 +141,10 @@ wodRewardManager = {
 			{"object/tangible/content/wod_token_4.iff", "Whuffa Leather"},
 			{"object/tangible/content/wod_token_5.iff", "Rare Dried Herbs"},
 		},
+		collectionRewardOnce = true,
+		collectionCount = 7,
+		collectionNSBadgeToAward = 163,
+		collectionSMBadgeToAward = 156,
 	},
 	
 	hunting = {
@@ -146,8 +157,8 @@ wodRewardManager = {
 		rewardRandomValuable = 1,
 		collectionRewardOnce = true,
 		collectionCount = 7,
-		collectionNSBadgeToAward = "",
-		collectionSMBadgeToAward = "",
+		collectionNSBadgeToAward = 165,
+		collectionSMBadgeToAward = 158,
 	},
 
 	fishing = {
@@ -164,8 +175,8 @@ wodRewardManager = {
 		},
 		collectionRewardOnce = true,
 		collectionCount = 7,
-		collectionNSBadgeToAward = "",
-		collectionSMBadgeToAward = "",
+		collectionNSBadgeToAward = 166,
+		collectionSMBadgeToAward = 159,
 	},
 	
 	rancorTamer = {
@@ -180,8 +191,8 @@ wodRewardManager = {
 		rewardRandomValuable = 2,
 		collectionRewardOnce = true,
 		collectionCount = 7,
-		collectionNSBadgeToAward = "",
-		collectionSMBadgeToAward = "",
+		collectionNSBadgeToAward = 167,
+		collectionSMBadgeToAward = 160,
 	},
 	
 	repairAltar1 = {
@@ -256,15 +267,6 @@ wodRewardManager = {
 		rewardRandomValuable = 3,
 	},
 	
-	ghostReward = {
-		rewardType = "all",
-		rewardCount = 3,
-		reward = { 
-			"object/tangible/content/wod_token_1.iff",
-		},
-		rewardRandomValuable = 3,
-	},
-	
 	wholeTruth1 = {
 		rewardType = "all",
 		rewardCount = 4,
@@ -326,6 +328,16 @@ wodRewardManager = {
 		rewardCount = 6,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
+		},
+		rewardRandomValuable = 3,
+	},
+	
+	leftBehind = {
+		rewardType = "all",
+		rewardCount = 3,
+		reward = { 
+			"object/tangible/content/wod_token_4.iff",
+			"object/tangible/painting/painting_wod_outcast.iff",
 		},
 		rewardRandomValuable = 3,
 	},

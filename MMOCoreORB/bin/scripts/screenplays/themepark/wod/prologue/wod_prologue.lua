@@ -45,26 +45,31 @@ function wodPrologueScreenplay:handleCollectionReward(pPlayer, key)
 	if (pPlayer == nil or key == nil) then
 		return
 	end
-	
+
+	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
+
+	if (pInventory == nil) then
+		return
+	end
+
 	local key = "enemies" .. key
 	local clan = ""
-	
+
 	if (string.match(key, "herbs")) then
 		key = "herbs"
 	elseif (string.match(key, "wisdom")) then
 		key = "wisdom"
 	end
-	
+
 	if (string.match(key, "SM")) then
 		clan = "SM"
 	elseif (string.match(key, "NS")) then
 		clan = "NS"
 	end
-	
+
 	local rewardKey = wodPrologueRewardManager[key]
 	local rewardString = "collectionReward" .. clan
 	
-	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")	
 	if (rewardKey.collectionRewardType == "all") then
 		for i = 1, #rewardKey.rewardString do
 			giveItem(pInventory, rewardKey.rewardString[i], -1)
@@ -99,23 +104,28 @@ function wodPrologueScreenplay:handleReward(pPlayer, key)
 	if (pPlayer == nil or key == nil) then
 		return
 	end
-	
+
+	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
+
+	if (pInventory == nil) then
+		return
+	end
+
 	local curCount = tonumber(readScreenPlayData(pPlayer, "wodThemepark:prologue:reward", key))
 	
 	if (curCount == nil or curCount == "") then
 		curCount = 0
 	end
-	
+
 	writeScreenPlayData(pPlayer, "wodThemepark:prologue:reward", key, curCount + 1)
-	
+
 	local rewardKey = wodPrologueRewardManager[key]
-	
+
 	if (rewardKey.rewardOnce and curCount + 1 ~= 1) then
 		return
 	end
-	
+
 	if (curCount + 1 ~= 1 or curCount + 1 % rewardKey.rewardInterval == 0) then
-		local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
 		if (rewardKey.credits ~= nil and rewardKey.credits > 0) then
 			CreatureObject(pPlayer):addCashCredits(rewardKey.credits)
 		end		
@@ -131,7 +141,7 @@ function wodPrologueScreenplay:handleReward(pPlayer, key)
 
 			local message = "Please select which item you want to buy."
 			sui.setPrompt(message)
-				
+	
 			for i = 1, #rewardKey.reward do
 				sui.add(#rewardKey.reward[i][2], #rewardKey.reward[i][1])
 			end

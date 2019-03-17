@@ -95,15 +95,15 @@ cache_start = ConvoScreen:new {
 }
 wod_klee:addScreen(cache_start)
 
-recon_return = ConvoScreen:new {
-	id = "recon_return",
+two_clans_return = ConvoScreen:new {
+	id = "two_clans_return",
 	leftDialog = "@conversation/wod_klee:s_16",
 	stopConversation = "false",
 	options = {
 		{"@conversation/wod_klee:s_33", "init_alt"},
 	}
 }
-wod_klee:addScreen(recon_return)
+wod_klee:addScreen(two_clans_return)
 
 spiderclan_return = ConvoScreen:new {
 	id = "spiderclan_return",
