@@ -34,9 +34,11 @@ function wodPrologueScreenplay:addToCollection(pPlayer, key)
 	
 	writeScreenPlayData(pPlayer, "wodThemepark:prologue:collection", key, curCount + 1)
 	
-	if (curCount + 1 % 5 == 0) then --TODO: Magic number
-		self:handleCollectionReward(pPlayer, key)
-	end
+	if (curCount + 1 == wodPrologueRewardManager[key].collectionRewardCount or not wodPrologueRewardManager[key].collectionRewardOnce) then
+		if (curCount + 1 % wodPrologueRewardManager[key].collectionRewardCount == 0) then
+			self:handleCollectionReward(pPlayer, key)
+		end
+	end	
 end
 
 function wodPrologueScreenplay:handleCollectionReward(pPlayer, key)

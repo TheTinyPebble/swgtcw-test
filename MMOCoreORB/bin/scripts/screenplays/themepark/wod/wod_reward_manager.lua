@@ -216,7 +216,6 @@ wodRewardManager = {
 		rewardCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
-			--Allya's Holocron
 		},
 		rewardRandomValuable = 2,
 	},

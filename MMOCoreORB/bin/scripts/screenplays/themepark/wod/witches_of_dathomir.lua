@@ -7,8 +7,9 @@ registerScreenPlay("witchesOfDathomirScreenplay", true)
 local QuestManager = require("managers.quest.quest_manager")
 
 --TODO: Spawn Scene Objects
+--TODO: Spawn mobiles
 --TODO: On logged in events
---TODO: Remove old spawns at locations (outcasts)
+--TODO: Reward handling check if inventory is full (can it give an item with full inventory? Need testing)
 
 function witchesOfDathomirScreenplay:start()
 	if (isZoneEnabled("dathomir")) then
@@ -125,9 +126,11 @@ function witchesOfDathomirScreenplay:addToCollection(pPlayer, key)
 	
 	writeScreenPlayData(pPlayer, "wodThemepark:collection", key, curCount + 1)
 	
-	if (curCount + 1 % 5 == 0) then --TODO: Magic number
-		self:handleCollectionReward(pPlayer, key)
-	end
+	if (curCount + 1 == wodRewardManager[key].collectionRewardCount or not wodRewardManager[key].collectionRewardOnce) then
+		if (curCount + 1 % wodRewardManager[key].collectionRewardCount == 0) then
+			self:handleCollectionReward(pPlayer, key)
+		end
+	end	
 end
 
 function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
@@ -164,6 +167,9 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 	if (rewardKey.collectionRewardType == "all") then
 		for i = 1, #rewardKey.reward do
 			pItem = giveItem(pInventory, rewardKey.rewardString[i], -1)
+			if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and (pItem ~= nil)) then
+				TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
+			end
 		end
 	elseif (rewardKey.collectionRewardType == "pick") then
 		local sui = SuiListBox.new("witchesOfDathomirScreenplay", "pickRewardCallback")
@@ -186,12 +192,12 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 		end
 		local n = getRandomNumber(1, #rewardKey.rewardString)
 		pItem = giveItem(pInventory, rewardKey.rewardString[n], -1)
-		if ((wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0) and (pItem ~= nil)) then
-			TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardCount)
+		if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and (pItem ~= nil)) then
+			TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 		end
 	end
 	
-	if (rewardKey[rewardString .. "BadgeToAward"] ~= nil and rewardKey[rewardString .. "BadgeToAward"] ~= "") then
+	if (rewardKey[rewardString .. "BadgeToAward"] ~= nil and rewardKey[rewardString .. "BadgeToAward"] ~= "" or PlayerObject(pGhost):hasBadge(rewardKey[rewardString .. "BadgeToAward"])) then
 		PlayerObject(pGhost):awardBadge(rewardKey[rewardString .. "BadgeToAward"])
 	end
 	CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
@@ -217,5 +223,7 @@ function witchesOfDathomirScreenplay:pickRewardCallback(pPlayer, pSui, eventInde
 	local key = readStringData("wodThemepark:rewardKey:" .. SceneObject(pPlayer):getObjectID())
 	if (wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0) then
 		TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardCount)
+	elseif (wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) then
+		TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 	end
 end
