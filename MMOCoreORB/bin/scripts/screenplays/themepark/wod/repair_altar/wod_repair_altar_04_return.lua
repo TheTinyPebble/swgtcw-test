@@ -1,9 +1,9 @@
 local QuestManager = require("managers.quest.quest_manager")
 require("utils.helpers")
 
-wodRepairAltar04NSReturnGoto = GoToLocation:new {
+wodNSRepairAltar04ReturnGoto = GoToLocation:new {
 	-- Task properties
-	taskName = "wodRepairAltar04NSReturnGoto",
+	taskName = "wodNSRepairAltar04ReturnGoto",
 	-- GoToLocation properties
 	waypointDescription = "@theme_park_wod/wod_ns_repair_altar_04:task03_waypoint_name",
 	spawnPoint = {x = -4002, y = -58},
@@ -14,20 +14,22 @@ wodRepairAltar04NSReturnGoto = GoToLocation:new {
 -- Event handler for the enter active area event.
 -- The event will complete the task.
 -- @param pPlayer pointer to the creature object of the player.
-function wodRepairAltar04NSReturnGoto:onEnteredActiveArea(pPlayer)
+function wodNSRepairAltar04ReturnGoto:onEnteredActiveArea(pPlayer)
 	if (pPlayer == nil) then
 		return 1
 	end
 
+	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_03)
+	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_04)
 	self:finish(pPlayer)
 	return 1
 end
 
-return wodRepairAltar04NSReturnGoto
+return wodNSRepairAltar04ReturnGoto
 
-wodRepairAltar04SMReturnGoto = GoToLocation:new {
+wodSMRepairAltar04ReturnGoto = GoToLocation:new {
 	-- Task properties
-	taskName = "wodRepairAltar04SMReturnGoto",
+	taskName = "wodSMRepairAltar04ReturnGoto",
 	-- GoToLocation properties
 	waypointDescription = "@theme_park_wod/wod_sm_repair_altar_04:task03_waypoint_name",
 	spawnPoint = {x = 156, y = 4527},
@@ -38,13 +40,15 @@ wodRepairAltar04SMReturnGoto = GoToLocation:new {
 -- Event handler for the enter active area event.
 -- The event will complete the task.
 -- @param pPlayer pointer to the creature object of the player.
-function wodRepairAltar04SMReturnGoto:onEnteredActiveArea(pPlayer)
+function wodSMRepairAltar04ReturnGoto:onEnteredActiveArea(pPlayer)
 	if (pPlayer == nil) then
 		return 1
 	end
 
+	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_04_03)
+	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_04_04)
 	self:finish(pPlayer)
 	return 1
 end
 
-return wodRepairAltar04SMReturnGoto
+return wodSMRepairAltar04ReturnGoto

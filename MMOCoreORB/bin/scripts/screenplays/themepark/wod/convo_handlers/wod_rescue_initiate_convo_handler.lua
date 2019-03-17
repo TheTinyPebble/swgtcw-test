@@ -2,10 +2,6 @@ wod_rescue_initiate_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Reward Handling
--- TODO: Busy check
--- TODO: Group check
-
 function wod_rescue_initiate_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")

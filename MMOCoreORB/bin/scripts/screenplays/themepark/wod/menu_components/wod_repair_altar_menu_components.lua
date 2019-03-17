@@ -70,11 +70,11 @@ function wodRepairAltar1MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_01_02)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_01_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_01_03)
-				--Goto return
+				wodNSRepairAltar01ReturnGoto:start(pPlayer)
 			else
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_01_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_01_03)
-				--Goto return
+				wodSMRepairAltar01ReturnGoto:start(pPlayer)
 			end
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:repair_complete")
 		else
@@ -157,11 +157,11 @@ function wodRepairAltar2MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_02_02)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_02_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_02_03)
-				--Goto return
+				wodNSRepairAltar02ReturnGoto:start(pPlayer)
 			else
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_02_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_02_03)
-				--Goto return
+				wodSMRepairAltar02ReturnGoto:start(pPlayer)
 			end
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:repair_complete")
 		else
@@ -244,11 +244,11 @@ function wodRepairAltar3MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_03_02)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_03_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_03_03)
-				--Goto return
+				wodNSRepairAltar03ReturnGoto:start(pPlayer)
 			else
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_03_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_03_03)
-				--Goto return
+				wodSMRepairAltar03ReturnGoto:start(pPlayer)
 			end
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:repair_complete")
 		else
@@ -331,11 +331,11 @@ function wodRepairAltar4MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_02)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_03)
-				--Goto return
+				wodNSRepairAltar04ReturnGoto:start(pPlayer)
 			else
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_04_02)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_04_03)
-				--Goto return
+				wodSMRepairAltar04ReturnGoto:start(pPlayer)
 			end
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:repair_complete")
 		else
