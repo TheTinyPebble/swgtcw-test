@@ -1,6 +1,8 @@
+includeFile("../custom_scripts/object/tangible/content/serverobjects.lua")
 includeFile("../custom_scripts/object/tangible/loot/serverobjects.lua")
 includeFile("../custom_scripts/object/tangible/veteran_reward/serverobjects.lua")
 includeFile("../custom_scripts/object/tangible/painting/serverobjects.lua")
 includeFile("../custom_scripts/object/tangible/furniture/all/serverobjects.lua")
 includeFile("../custom_scripts/object/tangible/furniture/wod_themepark/serverobjects.lua")
 includeFile("../custom_scripts/object/tangible/quest/wod/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/serverobjects.lua")

@@ -1,0 +1,4 @@
+object_draft_schematic_weapon_wod_crafting_alter_1 = object_draft_schematic_weapon_shared_wod_crafting_alter_1:new {
+
+}
+ObjectTemplates:addTemplate(object_draft_schematic_weapon_wod_crafting_alter_1, "object/draft_schematic/weapon/wod_crafting_alter_1.iff")

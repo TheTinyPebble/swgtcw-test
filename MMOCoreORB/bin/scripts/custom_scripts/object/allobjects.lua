@@ -1,4 +1,3 @@
-includeFile("../custom_scripts/object/draft_schematic/weapon/objects.lua")
 includeFile("../custom_scripts/object/mobile/wod/objects.lua")
 includeFile("../custom_scripts/object/mobile/tatooine/objects.lua")
 includeFile("../custom_scripts/object/mobile/meatlumps/objects.lua")
@@ -12,3 +11,12 @@ includeFile("../custom_scripts/object/tangible/furniture/all/objects.lua")
 includeFile("../custom_scripts/object/tangible/furniture/decorative/objects.lua")
 includeFile("../custom_scripts/object/tangible/furniture/wod_themepark/objects.lua")
 includeFile("../custom_scripts/object/tangible/quest/wod/objects.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/objects.lua")
+includeFile("../custom_scripts/object/tangible/content/objects.lua")
+
+--Draf Schems
+includeFile("../custom_scripts/object/draft_schematic/weapon/objects.lua")
+includeFile("../custom_scripts/object/draft_schematic/structure/objects.lua")
+includeFile("../custom_scripts/object/draft_schematic/item/theme_park/objects.lua")
+includeFile("../custom_scripts/object/draft_schematic/furniture/objects.lua")
+includeFile("../custom_scripts/object/draft_schematic/furniture/city/objects.lua")
