@@ -1,0 +1,6 @@
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_ns_potted_plant_schematics.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_sm_potted_plant_schematics.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_potted_plant_schematics.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_pro_ns_tree_schematics.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_pro_sm_tree_schematics.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_pro_tree_schematics.lua")

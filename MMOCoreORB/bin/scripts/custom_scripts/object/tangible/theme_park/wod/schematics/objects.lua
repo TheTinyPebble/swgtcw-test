@@ -1,0 +1,305 @@
+object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_04_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_04_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_04_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_04_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_05_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_05_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_05_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_05_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_06_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_06_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_06_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_06_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_07_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_07_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_07_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_07_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_08_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_08_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_08_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_08_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_09_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_09_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_potted_plant_09_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_potted_plant_09_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_04_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_04_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_04_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_04_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_05_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_05_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_05_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_05_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_06_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_06_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_06_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_06_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_07_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_07_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_07_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_07_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_08_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_08_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_08_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_08_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_09_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_09_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_potted_plant_09_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_potted_plant_09_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_04_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_04_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_04_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_04_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_05_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_05_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_05_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_05_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_06_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_06_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_06_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_06_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_07_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_07_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_07_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_07_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_08_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_08_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_08_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_08_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_09_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_09_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_potted_plant_09_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_potted_plant_09_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_04_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_04_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_04_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_04_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_05_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_05_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_05_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_05_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_06_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_06_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_06_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_06_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_07_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_07_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_07_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_07_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_08_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_08_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_ns_tree_08_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_ns_tree_08_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_04_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_04_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_04_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_04_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_05_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_05_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_05_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_05_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_06_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_06_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_06_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_06_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_07_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_07_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_07_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_07_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_08_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_08_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_sm_tree_08_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_sm_tree_08_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_04_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_04_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_04_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_04_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_05_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_05_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_05_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_05_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_06_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_06_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_06_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_06_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_07_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_07_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_07_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_07_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_08_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_08_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_08_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_08_schematic.iff")

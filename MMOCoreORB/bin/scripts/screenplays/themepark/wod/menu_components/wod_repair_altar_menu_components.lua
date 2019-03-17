@@ -78,7 +78,7 @@ function wodRepairAltar1MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			end
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:repair_complete")
 		else
-			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:not_a_valid_key")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:no_repair")
 		end
 		SceneObject(pItem):destroyObjectFromWorld()
 	end
@@ -165,7 +165,7 @@ function wodRepairAltar2MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			end
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:repair_complete")
 		else
-			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:not_a_valid_key")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:no_repair")
 		end
 		SceneObject(pItem):destroyObjectFromWorld()
 	end
@@ -252,7 +252,7 @@ function wodRepairAltar3MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			end
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:repair_complete")
 		else
-			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:not_a_valid_key")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:no_repair")
 		end
 		SceneObject(pItem):destroyObjectFromWorld()
 	end
@@ -339,7 +339,7 @@ function wodRepairAltar4MenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 			end
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:repair_complete")
 		else
-			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:not_a_valid_key")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:no_repair")
 		end
 		SceneObject(pItem):destroyObjectFromWorld()
 	end
