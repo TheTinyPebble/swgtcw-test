@@ -51,3 +51,15 @@ object_tangible_loot_loot_schematic_shared_wod_trilithon_schematic = SharedTangi
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_trilithon_schematic, "object/tangible/loot/loot_schematic/shared_wod_trilithon_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_ns_wall_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_ns_wall_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_ns_wall_schematic, "object/tangible/loot/loot_schematic/shared_wod_ns_wall_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_sm_wall_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_sm_wall_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_sm_wall_schematic, "object/tangible/loot/loot_schematic/shared_wod_sm_wall_schematic.iff")

@@ -2,8 +2,8 @@ object_tangible_theme_park_wod_schematics_wod_witch_banner_s01_schematic = objec
 	templateType = LOOTSCHEMATIC,
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
-	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	requiredSkill = "crafting_architect_novice",
+	targetDraftSchematic = "object/draft_schematic/furniture/wod_witch_banner_s01.iff",
 	targetUseCount = 1
 }
 
@@ -13,8 +13,8 @@ object_tangible_theme_park_wod_schematics_wod_witch_banner_s02_schematic = objec
 	templateType = LOOTSCHEMATIC,
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
-	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	requiredSkill = "crafting_architect_novice",
+	targetDraftSchematic = "object/draft_schematic/furniture/wod_witch_banner_s02.iff",
 	targetUseCount = 1
 }
 
@@ -24,8 +24,8 @@ object_tangible_theme_park_wod_schematics_wod_witch_banner_s03_schematic = objec
 	templateType = LOOTSCHEMATIC,
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
-	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	requiredSkill = "crafting_architect_novice",
+	targetDraftSchematic = "object/draft_schematic/furniture/wod_witch_banner_s03.iff",
 	targetUseCount = 1
 }
 

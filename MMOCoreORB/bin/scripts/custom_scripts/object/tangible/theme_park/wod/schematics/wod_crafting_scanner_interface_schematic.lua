@@ -2,8 +2,8 @@ object_tangible_theme_park_wod_schematics_wod_crafting_scanner_interface_schemat
 	templateType = LOOTSCHEMATIC,
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
-	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	requiredSkill = "crafting_artisan_master",
+	targetDraftSchematic = "object/draft_schematic/weapon/wod_crafting_scanner_interface.iff",
 	targetUseCount = 1
 }
 

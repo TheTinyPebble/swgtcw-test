@@ -3,7 +3,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_backpack_schematic = object_tan
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_singing_mountain_clan_backpack.iff",
 	targetUseCount = 1
 }
 
@@ -14,7 +14,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_boots_schematic = object_tangib
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_boots_singing_mtn_01.iff",
 	targetUseCount = 1
 }
 
@@ -25,7 +25,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_hat_s01_schematic = object_tang
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_hat_singing_mtn_01.iff",
 	targetUseCount = 1
 }
 
@@ -36,7 +36,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_hat_s02_schematic = object_tang
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_hat_singing_mtn_02.iff",
 	targetUseCount = 1
 }
 
@@ -47,7 +47,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_mask_schematic = object_tangibl
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_hat_singing_mtn_mask_01.iff",
 	targetUseCount = 1
 }
 
@@ -58,7 +58,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_shirt_s01_schematic = object_ta
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_shirt_singing_mtn_01.iff",
 	targetUseCount = 1
 }
 
@@ -69,7 +69,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_shirt_s02_schematic = object_ta
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_shirt_singing_mtn_02.iff",
 	targetUseCount = 1
 }
 
@@ -80,7 +80,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_shirt_s03_schematic = object_ta
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_shirt_singing_mtn_03.iff",
 	targetUseCount = 1
 }
 
@@ -91,7 +91,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_skirt_s01_schematic = object_ta
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_skirt_singing_mtn_01.iff",
 	targetUseCount = 1
 }
 
@@ -102,7 +102,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_skirt_s02_schematic = object_ta
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_skirt_singing_mtn_02.iff",
 	targetUseCount = 1
 }
 
@@ -113,7 +113,7 @@ object_tangible_theme_park_wod_schematics_wod_sm_skirt_s03_schematic = object_ta
 	objectMenuComponent = "LootSchematicMenuComponent",
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_tailor_master",
-	targetDraftSchematic = "",
+	targetDraftSchematic = "object/draft_schematic/clothing/clothing_skirt_singing_mtn_03.iff",
 	targetUseCount = 1
 }
 

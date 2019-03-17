@@ -1,4 +1,5 @@
 object_tangible_furniture_decorative_wod_floating_stones = object_tangible_furniture_decorative_shared_wod_floating_stones:new {
+	objectMenuComponent = "CityDecorationMenuComponent",
 
 }
 

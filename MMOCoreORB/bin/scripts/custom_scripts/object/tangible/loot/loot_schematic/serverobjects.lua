@@ -6,3 +6,5 @@ includeFile("../custom_scripts/object/tangible/loot/loot_schematic/wod_ns_hut.lu
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/wod_sm_hut.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/wod_tower_schematic.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/wod_trilithon_schematic.lua")
+includeFile("../custom_scripts/object/tangible/loot/loot_schematic/wod_ns_wall_schematic.lua")
+includeFile("../custom_scripts/object/tangible/loot/loot_schematic/wod_sm_wall_schematic.lua")

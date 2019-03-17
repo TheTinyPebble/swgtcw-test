@@ -254,6 +254,7 @@ wodRewardManager = {
 		rewardCount = 6,
 		reward = { 
 			"object/tangible/content/wod_token_1.iff",
+			"object/tangible/furniture/decorative/wod_deco_mask.iff",
 		},
 		rewardRandomValuable = 4,
 	},

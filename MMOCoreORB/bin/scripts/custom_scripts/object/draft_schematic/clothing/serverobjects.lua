@@ -18,3 +18,5 @@ includeFile("../custom_scripts/object/draft_schematic/clothing/clothing_shirt_si
 includeFile("../custom_scripts/object/draft_schematic/clothing/clothing_skirt_singing_mtn_01.lua")
 includeFile("../custom_scripts/object/draft_schematic/clothing/clothing_skirt_singing_mtn_02.lua")
 includeFile("../custom_scripts/object/draft_schematic/clothing/clothing_skirt_singing_mtn_03.lua")
+includeFile("../custom_scripts/object/draft_schematic/clothing/clothing_nightsister_clan_backpack.lua")
+includeFile("../custom_scripts/object/draft_schematic/clothing/clothing_singing_mountain_clan_backpack.lua")

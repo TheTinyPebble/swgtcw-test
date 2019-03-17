@@ -28,3 +28,9 @@ object_draft_schematic_item_theme_park_shared_wod_crafting_template = SharedDraf
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_item_theme_park_shared_wod_crafting_template, "object/draft_schematic/item/theme_park/shared_wod_crafting_template.iff")
 
+object_draft_schematic_item_theme_park_shared_wod_crafting_scanner_interface = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/item/theme_park/shared_wod_crafting_scanner_interface.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_item_theme_park_shared_wod_crafting_scanner_interface, "object/draft_schematic/item/theme_park/shared_wod_crafting_scanner_interface.iff")
+

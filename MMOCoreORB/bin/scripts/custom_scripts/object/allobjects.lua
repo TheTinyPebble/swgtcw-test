@@ -17,6 +17,7 @@ includeFile("../custom_scripts/object/tangible/quest/wod/objects.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/objects.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/objects.lua")
 includeFile("../custom_scripts/object/tangible/content/objects.lua")
+includeFile("../custom_scripts/object/tangible/tcg/series5/objects.lua")
 
 --Draft Schems
 includeFile("../custom_scripts/object/draft_schematic/clothing/objects.lua")

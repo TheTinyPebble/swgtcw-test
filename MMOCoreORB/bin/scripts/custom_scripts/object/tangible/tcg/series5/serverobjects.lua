@@ -1,0 +1,1 @@
+includeFile("../custom_scripts/object/tcg/series5/nightsister_backpack.lua")

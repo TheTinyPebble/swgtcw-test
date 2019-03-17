@@ -7,3 +7,4 @@ includeFile("../custom_scripts/object/tangible/furniture/wod_themepark/serverobj
 includeFile("../custom_scripts/object/tangible/quest/wod/serverobjects.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/serverobjects.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/tcg/series5/schematics/serverobjects.lua")

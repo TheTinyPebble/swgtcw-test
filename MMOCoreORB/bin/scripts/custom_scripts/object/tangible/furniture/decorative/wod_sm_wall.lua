@@ -1,4 +1,5 @@
 object_tangible_furniture_decorative_wod_sm_wall = object_tangible_furniture_decorative_shared_wod_sm_wall:new {
+	objectMenuComponent = "CityDecorationMenuComponent",
 
 }
 
