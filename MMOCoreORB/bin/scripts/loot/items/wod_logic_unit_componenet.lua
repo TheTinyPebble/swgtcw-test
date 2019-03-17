@@ -4,7 +4,7 @@ wod_logic_unit_componenet = {
 	customObjectName = "",
 	directObjectTemplate = "object/tangible/content/wod_logic_unit_componenet.iff",
 	craftingValues = {
-		{"wod_assembly_success",1,1,10},
+		{"private_amazing_success_bonus",1,1,10},
 	},
 	customizationStringNames = {},
 	customizationValues = {}

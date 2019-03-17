@@ -92,3 +92,4 @@ includeFile("themepark/wod/object_components/wod_spiderclan_vegetation_menu_comp
 includeFile("themepark/wod/object_components/wod_repair_altar_object_components.lua")
 includeFile("themepark/wod/object_components/wod_seed_jar_object_components.lua")
 includeFile("themepark/wod/object_components/wod_prologue_seed_jar_object_components.lua")
+includeFile("themepark/wod/object_components/wod_holocron_object_components.lua")

@@ -12,7 +12,7 @@ function wodHerbalPlantMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuR
 	end
 	
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
-	menuResponse:addRadialMenuItem(20, 3, "@wod_theme_park/messages:gather_herb")
+	menuResponse:addRadialMenuItem(20, 3, "@theme_park_wod/messages:gather_herb")
 end
 
 function wodHerbalPlantMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, selectedID)
@@ -22,17 +22,17 @@ function wodHerbalPlantMenuComponent:handleObjectMenuSelect(pSceneObject, pPlaye
 
 	if (selectedID == 20) then
 		if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:herb_not_sure_what_to_do")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:herb_not_sure_what_to_do")
 			return
 		end
 		
 		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_06) or QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_06) or QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_06)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:herb_already_completed_quest")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:herb_already_completed_quest")
 			return
 		end
 		
 		if (creatureObject(pPlayer):isRidingMount()) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:gather_herb_not_while_mounted")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:gather_herb_not_while_mounted")
 			return
 		end
 		

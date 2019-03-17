@@ -14,15 +14,15 @@ function wodProSMBasketMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuR
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_SPIDER_CLAN_04)) then
-		menuResponse:addRadialMenuItem(20, 3, "@wod_theme_park/messages:store_spider")
+		menuResponse:addRadialMenuItem(20, 3, "@theme_park_wod/messages:store_spider")
 		return
 	end
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_RANCOR_04)) then
-		menuResponse:addRadialMenuItem(20, 3, "@wod_theme_park/messages:store_teeth")
+		menuResponse:addRadialMenuItem(20, 3, "@theme_park_wod/messages:store_teeth")
 		return
 	end
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_07)) then
-		menuResponse:addRadialMenuItem(20, 3, "@wod_theme_park/messages:store_herb")
+		menuResponse:addRadialMenuItem(20, 3, "@theme_park_wod/messages:store_herb")
 		return
 	end
 end
@@ -34,26 +34,26 @@ function wodProSMBasketMenuComponent:handleObjectMenuSelect(pSceneObject, pPlaye
 
 	if (selectedID == 20) then
 		if (creatureObject(pPlayer):isRidingMount()) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_not_while_mounted")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_not_while_mounted")
 			return 0
 		end
 		
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_SPIDER_CLAN_04)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_spider_singing")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_spider_singing")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_SPIDER_CLAN_04)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_SPIDER_CLAN_05)
 			return 0
 		end
 		
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_RANCOR_04)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_rancor_singing")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_rancor_singing")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_RANCOR_04)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_RANCOR_05)
 			return 0
 		end
 
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_07)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_singing")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_singing")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_07)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_08)
 			return 0
@@ -76,15 +76,15 @@ function wodProNSBasketMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuR
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_SPIDER_CLAN_04)) then
-		menuResponse:addRadialMenuItem(20, 3, "@wod_theme_park/messages:store_spider")
+		menuResponse:addRadialMenuItem(20, 3, "@theme_park_wod/messages:store_spider")
 		return
 	end
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_RANCOR_04)) then
-		menuResponse:addRadialMenuItem(20, 3, "@wod_theme_park/messages:store_teeth")
+		menuResponse:addRadialMenuItem(20, 3, "@theme_park_wod/messages:store_teeth")
 		return
 	end
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_07)) then
-		menuResponse:addRadialMenuItem(20, 3, "@wod_theme_park/messages:store_herb")
+		menuResponse:addRadialMenuItem(20, 3, "@theme_park_wod/messages:store_herb")
 		return
 	end
 end
@@ -96,26 +96,26 @@ function wodProNSBasketMenuComponent:handleObjectMenuSelect(pSceneObject, pPlaye
 
 	if (selectedID == 20) then
 		if (creatureObject(pPlayer):isRidingMount()) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_not_while_mounted")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_not_while_mounted")
 			return 0
 		end
 		
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_SPIDER_CLAN_04)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_spider_nightsister")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_spider_nightsister")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_SPIDER_CLAN_04)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_SPIDER_CLAN_06)
 			return 0
 		end
 		
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_RANCOR_04)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_rancor_nightsister")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_rancor_nightsister")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_RANCOR_04)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_ELIMINATE_RANCOR_06)
 			return 0
 		end
 
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_07)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_nightsister")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_nightsister")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_07)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_09)
 			return 0
@@ -138,7 +138,7 @@ function wodSMBasketMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResp
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07)) then
-		menuResponse:addRadialMenuItem(20, 3, "@wod_theme_park/messages:store_herb")
+		menuResponse:addRadialMenuItem(20, 3, "@theme_park_wod/messages:store_herb")
 		return
 	end
 end
@@ -150,22 +150,22 @@ function wodSMBasketMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, 
 
 	if (selectedID == 20) then
 		if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07) and not QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:You aren't sure what to do with this.")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:You aren't sure what to do with this.")
 			return 0
 		end
 		
 		if (creatureObject(pPlayer):isRidingMount()) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_not_while_mounted")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_not_while_mounted")
 			return 0
 		end
 		
 		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_already_completed_quest")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_already_completed_quest")
 			return 0
 		end
 
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_zip_bar")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_zip_bar")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_08)
 			return 0
@@ -188,7 +188,7 @@ function wodNSBasketMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResp
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_07)) then
-		menuResponse:addRadialMenuItem(20, 3, "@wod_theme_park/messages:store_herb")
+		menuResponse:addRadialMenuItem(20, 3, "@theme_park_wod/messages:store_herb")
 		return
 	end
 end
@@ -200,22 +200,22 @@ function wodNSBasketMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, 
 
 	if (selectedID == 20) then
 		if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_07) and not QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_07)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:You aren't sure what to do with this.")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:You aren't sure what to do with this.")
 			return 0
 		end
 		
 		if (creatureObject(pPlayer):isRidingMount()) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_not_while_mounted")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_not_while_mounted")
 			return 0
 		end
 		
 		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_07)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_already_completed_quest")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_already_completed_quest")
 			return 0
 		end
 
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_07)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:store_herb_zip_bar")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_zip_bar")
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_07)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_08)
 			return 0

@@ -227,7 +227,7 @@ wodRewardManager = {
 		rewardCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
-			"object/tangible/theme_park/wod/wod_crafting_alter_key.iff",
+			"object/tangible/theme_park/wod/wod_crafting_template.iff",
 		},
 		rewardRandomValuable = 2,
 	},

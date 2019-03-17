@@ -25,14 +25,14 @@ wodHerbalPlants = ScreenPlay:new {
 		"object/tangible/furniture/wod_themepark/wod_trampled_plant.iff", -- Trampled plant (filler plant)
 	},
 	gatherMessage = {
-		"@wod_theme_park/messages:herb_zip_bar_lesset", -- Gathering Lesset Leaves
-		"@wod_theme_park/messages:herb_zip_bar_ongmuel", -- Gathering Ongmuel Leaves
-		"@wod_theme_park/messages:herb_zip_bar_grey", -- Gathering Greybush Leaves
-		"@wod_theme_park/messages:herb_zip_bar_red", -- Gathering Redweed Leaves
-		"@wod_theme_park/messages:herb_zip_bar_rinor", -- Gathering Rinor Leaves
-		"@wod_theme_park/messages:herb_zip_bar_remmy", -- Gathering Remmy Stalks
-		"@wod_theme_park/messages:herb_zip_bar_shroom", -- Gathering Forest Mushroom Cap
-		"@wod_theme_park/messages:herb_zip_bar", -- Gathering Herb
+		"@theme_park_wod/messages:herb_zip_bar_lesset", -- Gathering Lesset Leaves
+		"@theme_park_wod/messages:herb_zip_bar_ongmuel", -- Gathering Ongmuel Leaves
+		"@theme_park_wod/messages:herb_zip_bar_grey", -- Gathering Greybush Leaves
+		"@theme_park_wod/messages:herb_zip_bar_red", -- Gathering Redweed Leaves
+		"@theme_park_wod/messages:herb_zip_bar_rinor", -- Gathering Rinor Leaves
+		"@theme_park_wod/messages:herb_zip_bar_remmy", -- Gathering Remmy Stalks
+		"@theme_park_wod/messages:herb_zip_bar_shroom", -- Gathering Forest Mushroom Cap
+		"@theme_park_wod/messages:herb_zip_bar", -- Gathering Herb
 	},
 	screenPlayDataKey = { --Corresponds with number of herbs to gather
 		"lesset",
@@ -93,11 +93,11 @@ function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
 		CreatureObject(pPlayer):sendSystemMessage("You didn't manage to get anything useful from the trampled plant.")
 	else
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:dont_need_herb_ns")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:dont_need_herb_ns")
 		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:dont_need_herb_sm")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:dont_need_herb_sm")
 		else
-			CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:dont_need_herb")
+			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:dont_need_herb")
 		end
 		createEvent(5 * 1000, "wodHerbalPlants", "addBankCredits", pPlayer, "")
 	end
@@ -134,11 +134,11 @@ function wodHerbalPlants:collectQuestHerb(pPlayer, num)
 	writeScreenPlayData(pPlayer, spString, self.screenPlayDataKey[tonumber(num)], curHerbs + 1)
 	
 	if (curHerbs + 1 == herbsNeeded) then
-		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/" .. questName .. ":task06_task_display_string_" .. num)
+		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/" .. questName .. ":task06_task_display_string_" .. num)
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID(questName .. "_0" .. num))
 		self:checkQuestStatus(pPlayer, questName)
 	elseif (curHerbs + 1 > herbsNeeded) then
-		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:extra_credit_herbs")
+		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:extra_credit_herbs")
 		local bankCredits = CreatureObject(pPlayer):getBankCredits()
 		createEvent(5 * 1000, "wodHerbalPlants", "addBankCredits", pPlayer, "")
 	end
@@ -168,13 +168,13 @@ function wodHerbalPlants:addBankCredits(pPlayer)
 	local rewardedCredits = wodPrologueRewardManager.herbs.extraCredits
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
-		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits_ns")
+		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:received_credits_ns")
 		rewardedCredits = wodRewardManager.herbs.extraCredits
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
-		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits_sm")
+		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:received_credits_sm")
 		rewardedCredits = wodRewardManager.herbs.extraCredits
 	else
-		CreatureObject(pPlayer):sendSystemMessage("@wod_theme_park/messages:received_credits")
+		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:received_credits")
 	end
 	
 	local bankCredits = CreatureObject(pPlayer):getBankCredits()
