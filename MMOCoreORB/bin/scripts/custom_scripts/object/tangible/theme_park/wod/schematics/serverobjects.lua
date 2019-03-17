@@ -4,3 +4,6 @@ includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_pot
 includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_pro_ns_tree_schematics.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_pro_sm_tree_schematics.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_pro_tree_schematics.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_ns_clothes_schematics.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_sm_clothes_schematics.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/schematics/wod_weapon_schematics.lua")

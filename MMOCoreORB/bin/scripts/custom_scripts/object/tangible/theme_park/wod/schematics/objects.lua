@@ -303,3 +303,161 @@ object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_08_schematic = Sha
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_pro_tree_08_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_pro_tree_08_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_backpack_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_backpack_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_backpack_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_backpack_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_boots_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_boots_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_boots_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_boots_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_dress_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_dress_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_dress_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_dress_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_hat_s01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_hat_s01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_hat_s01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_hat_s01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_hat_s02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_hat_s02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_hat_s02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_hat_s02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_hat_s03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_hat_s03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_hat_s03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_hat_s03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_pants_s01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_pants_s01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_pants_s01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_pants_s01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_pants_s02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_pants_s02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_pants_s02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_pants_s02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_shirt_s01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_shirt_s01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_shirt_s01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_shirt_s01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_shirt_s02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_shirt_s02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_shirt_s02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_shirt_s02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_ns_shirt_s03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_ns_shirt_s03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_ns_shirt_s03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_ns_shirt_s03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_backpack_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_backpack_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_backpack_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_backpack_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_boots_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_boots_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_boots_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_boots_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_hat_s01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_hat_s01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_hat_s01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_hat_s01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_hat_s02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_hat_s02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_hat_s02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_hat_s02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_mask_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_mask_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_mask_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_mask_schematic.iff")
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_pants_s02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_pants_s02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_shirt_s01_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_shirt_s01_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_shirt_s01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_shirt_s01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_shirt_s02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_shirt_s02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_shirt_s02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_shirt_s02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_shirt_s03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_shirt_s03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_skirt_s03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_skirt_s03_schematic.iff")
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_skirt_s01_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_skirt_s01_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_skirt_s02_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_skirt_s02_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_skirt_s02_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_skirt_s02_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_sm_skirt_s03_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_sm_skirt_s03_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_sm_skirt_s03_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_sm_skirt_s03_schematic.iff")
+
+object_tangible_theme_park_wod_schematics_shared_wod_1h_weapon_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_1h_weapon_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_1h_weapon_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_1h_weapon_schematic.iff")
+
+
+object_tangible_theme_park_wod_schematics_shared_wod_2h_weapon_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_2h_weapon_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_2h_weapon_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_2h_weapon_schematic.iff")
+
+
+object_tangible_theme_park_wod_schematics_shared_wod_polearm_weapon_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_polearm_weapon_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_polearm_weapon_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_polearm_weapon_schematic.iff")
+
+
+object_tangible_theme_park_wod_schematics_shared_wod_unarmed_weapon_schematic = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/schematics/shared_wod_unarmed_weapon_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_schematics_shared_wod_unarmed_weapon_schematic, "object/tangible/theme_park/wod/schematics/shared_wod_unarmed_weapon_schematic.iff")
+
