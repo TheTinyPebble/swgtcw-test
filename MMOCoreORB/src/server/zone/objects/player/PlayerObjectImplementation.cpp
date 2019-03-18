@@ -1296,6 +1296,9 @@ void PlayerObjectImplementation::notifyOnline() {
 
 		parent->sendMessage(sui->generateMessage());
 	}
+	
+	//recalc skillmods
+	SkillModManager::instance()->verifySkillBoxSkillMods(playerCreature);
 
 	//Add player to visibility list
 	VisibilityManager::instance()->addToVisibilityList(playerCreature);
