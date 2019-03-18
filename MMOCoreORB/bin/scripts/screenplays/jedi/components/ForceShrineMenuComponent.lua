@@ -42,6 +42,11 @@ function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
 		return
 	end
 	
+	if (CreatureObject(pPlayer):hasSkill("base_bust_novice")) then
+		CreatureObject(pPlayer):sendSystemMessage("You must drop 'base busting' skills to continue.")
+		return
+	end
+	
 	local skillManager = LuaSkillManager()
 	local pSkill = skillManager:getSkill("jedi_padawan_novice")
 	
