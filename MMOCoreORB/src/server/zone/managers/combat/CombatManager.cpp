@@ -2937,7 +2937,7 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 			*shouldBhTef = true;
 		}
 
-		if (!(*shouldJediTef) && (targetCreature->getPlayerObject()->isJedi() && targetCreature->getWeapon()->isJediWeapon()) && (attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->getPlayerObject()->hasBhTef())){
+		if (!(*shouldJediTef) && ((targetCreature->getPlayerObject()->isJedi() && targetCreature->getWeapon()->isJediWeapon()) || (targetCreature->hasJediTef() || targetCreature->isJediAttackable())) && (attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->getPlayerObject()->hasBhTef())){
 			info("Give jedi tef in BH fight", true);
 			*shouldJediTef = true;
 		}
