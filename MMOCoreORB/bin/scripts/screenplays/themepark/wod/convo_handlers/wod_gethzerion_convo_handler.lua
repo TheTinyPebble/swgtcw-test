@@ -37,12 +37,18 @@ function wod_gethzerion_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 	local screenID = screen:getScreenID()
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
+	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
+
+	if (pInventory == nil) then
+		return
+	end
+
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
 	if (pGhost == nil) then
 		return pConvScreen
 	end
-	
+
 	if (screenID == "initial" or screenID == "init_alt") then
 		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_RECON)) then
 			clonedConversation:addOption("@conversation/wod_gethzerion:s_53", "other")
@@ -58,7 +64,7 @@ function wod_gethzerion_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_01)
 	end
-	
+
 	if (screenID == "other_clan_start") then
 		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)) then
 			QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)
@@ -68,14 +74,19 @@ function wod_gethzerion_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_01)
 	end
-	
+
 	if (screenID == "two_clans_start") then
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_RECON)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_RECON_01)
 	end
 	
 	if (screenID == "cache_start") then
-		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)
+		if (SceneObject(pInventory):isContainerFullRecursive()) then
+			return convoTemplate("initial")
+		else
+			giveItem(pInventory, "object/tangible/theme_park/wod/wod_rubina_chest.iff", -1)
+			createEvent(5 * 1000, "wodRubinaEpilogue", "sendCommMessage", pPlayer, "")
+		end
 	end
 
 	if (screenID == "spiderclan_return") then
@@ -91,7 +102,7 @@ function wod_gethzerion_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		witchesOfDathomirScreenplay:handleReward(pPlayer, "enemiesOtherclan")
 		witchesOfDathomirScreenplay:addToCollection(pPlayer, "enemiesOtherclanNS")
 	end
-	
+
 	if (screenID == "two_clans_return") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_GHOST_REWARD)
 		witchesOfDathomirScreenplay:handleReward(pPlayer, "ghostReward")

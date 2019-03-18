@@ -35,6 +35,12 @@ includeFile("themepark/wod/whole_truth_arc/wod_whole_truth_04_goto.lua")
 includeFile("themepark/wod/whole_truth_arc/wod_whole_truth_06_goto.lua")
 includeFile("themepark/wod/whole_truth_arc/wod_whole_truth_arc.lua")
 
+--Rubina Epilogue
+includeFile("themepark/wod/rubina_epilogue/wod_rubina_epilogue.lua")
+includeFile("themepark/wod/rubina_epilogue/wod_left_behind_goto.lua")
+includeFile("themepark/wod/rubina_epilogue/wod_left_behind_return.lua")
+includeFile("themepark/wod/rubina_epilogue/wod_rubina_epilogue_goto.lua")
+
 --Prologue
 includeFile("themepark/wod/prologue/wod_prologue.lua")
 includeFile("themepark/wod/prologue/wod_mysterious_witch_goto.lua")
@@ -87,9 +93,10 @@ includeFile("themepark/wod/convo_handlers/wod_witch_herbs_convo_handler.lua")
 --Object components
 includeFile("themepark/wod/object_components/wod_storage_basket_components.lua")
 includeFile("themepark/wod/object_components/wod_herb_plant_menu_component.lua")
-includeFile("themepark/wod/object_components/wod_basket_object_components.lua")
+includeFile("themepark/wod/object_components/wod_basket_menu_components.lua")
 includeFile("themepark/wod/object_components/wod_spiderclan_vegetation_menu_component.lua")
-includeFile("themepark/wod/object_components/wod_repair_altar_object_components.lua")
-includeFile("themepark/wod/object_components/wod_seed_jar_object_components.lua")
-includeFile("themepark/wod/object_components/wod_prologue_seed_jar_object_components.lua")
-includeFile("themepark/wod/object_components/wod_holocron_object_components.lua")
+includeFile("themepark/wod/object_components/wod_repair_altar_menu_components.lua")
+includeFile("themepark/wod/object_components/wod_seed_jar_menu_components.lua")
+includeFile("themepark/wod/object_components/wod_prologue_seed_jar_menu_components.lua")
+includeFile("themepark/wod/object_components/wod_holocron_menu_components.lua")
+includeFile("themepark/wod/object_components/wod_left_behind_cache_menu_component.lua")

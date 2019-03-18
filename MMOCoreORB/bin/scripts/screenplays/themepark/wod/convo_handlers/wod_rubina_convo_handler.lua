@@ -2,16 +2,19 @@ wod_rubina_convo_handler = Object:new {}
 
 local QuestManager = require("managers.quest.quest_manager")
 
---TODO: Handle left behind reward
-
 function wod_rubina_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local favor = wodPrologueScreenplay:getFavorStatus(pPlayer)
-	
+	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
+
+	if (pInventory == nil) then
+		return
+	end
+
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH)) then
 		return convoTemplate("initial")
 	end
-	
+
 	if (favor.count == 8) then
 		if (favor.clan == "ns" and not (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS) or QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS))) then
 			return convoTemplate("ns_ready")
@@ -19,7 +22,7 @@ function wod_rubina_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 			return convoTemplate("sm_ready")
 		end
 	end
-	
+
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_08)) then
 		return convoTemplate("return_herbs_sm")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_09)) then
@@ -31,7 +34,7 @@ function wod_rubina_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_06) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_06)) then
 		return convoTemplate("return_eliminate_ns")
 	end
-	
+
 	for i = 1, 7 do
 		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_0" .. i))) then
 			if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_0" .. i .. "_02"))) then
@@ -41,17 +44,17 @@ function wod_rubina_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 			end
 		end
 	end
-	
-	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)) then
+
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST) and getContainerObjectByTemplate(pInventory, "object/tangible/theme_park/wod/wod_rubina_chest.iff", true)) then
 		return convoTemplate("cache_init")
 	end
-	
-	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_LEFT_BEHIND_03)) then
+
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_LEFT_BEHIND_03) and getContainerObjectByTemplate(pInventory, "object/tangible/theme_park/wod/wod_crafting_alter_key.iff", true)) then
 		return convoTemplate("left_behind_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_LEFT_BEHIND)) then
 		return convoTemplate("quest_in_progress")
 	end
-	
+
 	return convoTemplate("second_init")
 end
 
@@ -61,7 +64,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	local screenID = screen:getScreenID()
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
-	
+
 	if (screenID == "task_herbs_start") then
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING)) then
 			return convoTemplate("quest_in_progress")
@@ -86,7 +89,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_05)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_06)
 	end
-	
+
 	if (screenID == "return_herbs_complete_ns") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_08)
@@ -100,7 +103,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 		wodPrologueScreenplay:addToFavor(pPlayer, "sm")
 		wodPrologueScreenplay:handleReward(pPlayer, "herbs")
 	end
-	
+
 	if (screenID == "task_enemies_start") then
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN)) then
 			return convoTemplate("quest_in_progress")
@@ -134,7 +137,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 			wodPrologueScreenplay:startEliminateQuest(pPlayer)
 		end
 	end
-	
+
 	if (screenID == "return_eliminate_complete_ns") then
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_05)) then
 			QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR)
@@ -162,7 +165,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 		end
 		wodPrologueScreenplay:addToFavor(pPlayer, "ns")
 	end
-	
+
 	if (screenID == "task_wisdom_start") then
 		for i = 1, 7 do
 			if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_0" .. i))) then
@@ -190,7 +193,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 			wodOutcast7GoTo:start(pPlayer)
 		end
 	end
-	
+
 	if (screenID == "return_wisdom_ns") then
 		deleteScreenPlayData(pPlayer, "wodThemepark:prologue", "outcastSM")
 		deleteScreenPlayData(pPlayer, "wodThemepark:prologue", "outcastNS")
@@ -204,7 +207,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 		wodPrologueScreenplay:addToFavor(pPlayer, "sm")
 		wodPrologueScreenplay:handleReward(pPlayer, "wisdom")
 	end
-	
+
 	if (screnID == "favor") then
 		local favor = wodPrologueScreenplay:getFavorStatus(pPlayer)
 		if (favor.count == 0) then
@@ -231,18 +234,18 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 			end
 		end
 	end
-	
+
 	if (screenID == "left_behind_start") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)
-		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND)
-		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_01)
 	end
-	
+
 	if (screenID == "left_behind_complete_quest") then
+		local pItem = getContainerObjectByTemplate(pInventory, "object/tangible/theme_park/wod/wod_rubina_chest.iff", true)
+		SceneObject(pItem):destroyObjectFromWorld()
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_03)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND)
 		witchesOfDathomirScreenplay:handleReward(pPlayer, "leftBehind")
 	end
-	
+
     return pConvScreen
 end
