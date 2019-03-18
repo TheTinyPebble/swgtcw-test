@@ -25,7 +25,8 @@ function wod_second_sister_convo_handler:runScreenHandlers(pConvTemplate, pPlaye
 	local pConvScreen = screen:cloneScreen()
 
 	if (screenID == "start_fight") then
-		--Start fight
+		writeData("wodThemepark:secondSisterOwnerID", SceneObject(pPlayer):getObjectID())
+		wodTwoClansArc:startSecondSisterEncounter(pNpc)
 	end
 
     return pConvScreen

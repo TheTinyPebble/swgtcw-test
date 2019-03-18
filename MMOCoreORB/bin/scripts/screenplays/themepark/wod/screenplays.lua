@@ -35,6 +35,15 @@ includeFile("themepark/wod/whole_truth_arc/wod_whole_truth_04_goto.lua")
 includeFile("themepark/wod/whole_truth_arc/wod_whole_truth_06_goto.lua")
 includeFile("themepark/wod/whole_truth_arc/wod_whole_truth_arc.lua")
 
+--Two Clans Arc
+includeFile("themepark/wod/two_clans_arc/wod_sister1_goto.lua")
+includeFile("themepark/wod/two_clans_arc/wod_sister1_return.lua")
+includeFile("themepark/wod/two_clans_arc/wod_sister2_goto.lua")
+includeFile("themepark/wod/two_clans_arc/wod_sister2_return.lua")
+includeFile("themepark/wod/two_clans_arc/wod_sister3_goto.lua")
+includeFile("themepark/wod/two_clans_arc/wod_sister3_return.lua")
+includeFile("themepark/wod/two_clans_arc/wod_two_clans_arc.lua")
+
 --Rubina Epilogue
 includeFile("themepark/wod/rubina_epilogue/wod_rubina_epilogue.lua")
 includeFile("themepark/wod/rubina_epilogue/wod_left_behind_goto.lua")
@@ -100,3 +109,5 @@ includeFile("themepark/wod/object_components/wod_seed_jar_menu_components.lua")
 includeFile("themepark/wod/object_components/wod_prologue_seed_jar_menu_components.lua")
 includeFile("themepark/wod/object_components/wod_holocron_menu_components.lua")
 includeFile("themepark/wod/object_components/wod_left_behind_cache_menu_component.lua")
+includeFile("themepark/wod/object_components/wod_first_sister_altar_menu_component.lua")
+includeFile("themepark/wod/object_components/wod_second_sister_fire_menu_components.lua")
