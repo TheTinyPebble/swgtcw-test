@@ -1,7 +1,7 @@
 object_draft_schematic_weapon_wod_crafting_scanner_interface = object_draft_schematic_weapon_shared_wod_crafting_scanner_interface:new {
 	templateType = DRAFTSCHEMATIC,
 
-	customObjectName = "Altar of Inner Calm Repair Parts",
+	customObjectName = "Crafting Scanner Interface",
 
 	craftingToolTab = 4096, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 12,
@@ -19,14 +19,14 @@ object_draft_schematic_weapon_wod_crafting_scanner_interface = object_draft_sche
 	customizationStringNames = {},
 	customizationDefaults = {},
 
-	ingredientTemplateNames = {"craft_item_ingredients_n", "craft_item_ingredients_n", "craft_item_ingredients_n"},
-	ingredientTitleNames = {"frame", "power_source", "mechanics"},
-	ingredientSlotType = {0, 0, 0},
-	resourceTypes = {"steel", "gas_reactive", "copper"},
-	resourceQuantities = {115, 30, 25},
-	contribution = {100, 100, 100},
+	ingredientTemplateNames = {"craft_item_ingredients_n", "craft_item_ingredients_n", "craft_item_ingredients_n", "craft_item_ingredients_n"},
+	ingredientTitleNames = {"frame", "power_source", "mechanics", "logic_unit_component"},
+	ingredientSlotType = {0, 0, 0, 3},
+	resourceTypes = {"steel", "gas_reactive", "copper", "object/tangible/content/shared_wod_logic_unit_componenet.iff"},
+	resourceQuantities = {115, 30, 25, 1},
+	contribution = {100, 100, 100, 100},
 
-	targetTemplate = "object/tangible/theme_park/wod/wod_crafting_alter_key_1.ifff",
+	targetTemplate = "object/tangible/wearables/bracelet/bracelet_wod_crafting_l.iff",
 
 	additionalTemplates = {}
 }

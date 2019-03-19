@@ -2,32 +2,33 @@ object_draft_schematic_clothing_clothing_boots_singing_mtn_01 = object_draft_sch
 
    templateType = DRAFTSCHEMATIC,
 
-   customObjectName = "Cryo Lance",
+   customObjectName = "Singing Mountain Clan Journey Boots",
 
-   craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 30,
+  craftingToolTab = 8, -- (See DraftSchematicObjectTemplate.h)
+   complexity = 14,
    size = 4,
+	factoryCrateSize = 0,
 
    xpType = "crafting_clothings_general",
-   xp = 130,
+   xp = 90,
 
    assemblySkill = "clothing_assembly",
    experimentingSkill = "clothing_experimentation",
    customizationSkill = "clothing_customization",
 
-   customizationOptions = {},
-   customizationStringNames = {},
-   customizationDefaults = {},
+   customizationOptions = {2, 1},
+   customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
+   customizationDefaults = {125, 131},
 
-   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "vibration_generator"},
-   ingredientSlotType = {0, 0, 0, 1},
-   resourceTypes = {"steel_ditanium", "copper_polysteel", "metal", "object/tangible/component/clothing/shared_vibro_unit_nightsister.iff"},
-   resourceQuantities = {38, 17, 6, 1},
-   contribution = {100, 100, 100, 100},
+   ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+   ingredientTitleNames = {"body", "binding_and_hardware", "liner", "sole", "reinforcement"},
+   ingredientSlotType = {0, 1, 0, 0, 1},
+   resourceTypes = {"fiberplast", "object/tangible/component/clothing/shared_metal_fasteners.iff", "hide_wooly", "petrochem_inert_polymer", "object/tangible/component/clothing/shared_fiberplast_panel.iff"},
+   resourceQuantities = {25, 1, 10, 10, 1},
+   contribution = {100, 100, 100, 100, 100},
 
 
-   targetTemplate = "object/clothing/melee/polearm/clothing_boots_singing_mtn_01.iff",
+   targetTemplate = "object/tangible/wearables/boots/singing_mountain_clan_boots.iff",
 
    additionalTemplates = {
              }

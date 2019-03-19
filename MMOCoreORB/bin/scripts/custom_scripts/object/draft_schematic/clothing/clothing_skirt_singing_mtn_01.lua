@@ -2,28 +2,29 @@ object_draft_schematic_clothing_clothing_skirt_singing_mtn_01 = object_draft_sch
 
    templateType = DRAFTSCHEMATIC,
 
-   customObjectName = "Cryo Lance",
+   customObjectName = "Singing Mountain Clan Maidens Skirt",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 30,
-   size = 4,
+   complexity = 17,
+   size = 3,
+   factoryCrateSize = 0,
 
-   xpType = "crafting_clothings_general",
-   xp = 130,
+   xpType = "crafting_clothing_general", 
+   xp = 100, 
 
-   assemblySkill = "clothing_assembly",
-   experimentingSkill = "clothing_experimentation",
-   customizationSkill = "clothing_customization",
+   assemblySkill = "clothing_assembly", 
+   experimentingSkill = "clothing_experimentation", 
+   customizationSkill = "clothing_customization", 
 
-   customizationOptions = {},
-   customizationStringNames = {},
-   customizationDefaults = {},
+   customizationOptions = {2, 1},
+   customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
+   customizationDefaults = {67, 48},
 
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
-   ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "vibration_generator"},
-   ingredientSlotType = {0, 0, 0, 1},
-   resourceTypes = {"steel_ditanium", "copper_polysteel", "metal", "object/tangible/component/clothing/shared_vibro_unit_nightsister.iff"},
-   resourceQuantities = {38, 17, 6, 1},
+   ingredientTitleNames = {"body", "binding_and_reinforcement", "hardware", "lining"},
+   ingredientSlotType = {1, 0, 1, 1},
+   resourceTypes = {"object/tangible/component/clothing/shared_reinforced_fiber_panels.iff", "petrochem_inert", "object/tangible/component/clothing/shared_metal_fasteners.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
+   resourceQuantities = {1, 40, 2, 2},
    contribution = {100, 100, 100, 100},
 
 

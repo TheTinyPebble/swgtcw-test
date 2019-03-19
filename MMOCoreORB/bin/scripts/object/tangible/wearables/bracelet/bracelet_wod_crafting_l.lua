@@ -58,6 +58,10 @@ object_tangible_wearables_bracelet_bracelet_s06_r = object_tangible_wearables_br
 				"object/creature/player/twilek_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff",
+				"object/creature/player/wookiee_male.iff",
+				"object/creature/player/wookiee_female.iff",
+				"object/creature/player/ithorian_male.iff",
+				"object/creature/player/ithorian_female.iff"
 				"object/mobile/vendor/aqualish_female.iff",
 				"object/mobile/vendor/aqualish_male.iff",
 				"object/mobile/vendor/bith_female.iff",
@@ -84,6 +88,15 @@ object_tangible_wearables_bracelet_bracelet_s06_r = object_tangible_wearables_br
 				"object/mobile/vendor/weequay_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
 				"object/mobile/vendor/zabrak_male.iff" },
+	numberExperimentalProperties = {1, 1, 1},
+	experimentalProperties = {"XX", "XX", "OQ"},
+	experimentalWeights = {1, 1, 1},
+	experimentalGroupTitles = {"null", "null", "exp_quality"},
+	experimentalSubGroupTitles = {"null", "null", "private_amazing_success_bonus"},
+	experimentalMin = {0, 0, 0.5},
+	experimentalMax = {0, 0, 2.5},
+	experimentalPrecision = {0, 0, 10},
+	experimentalCombineType = {0, 0, 1},
 }
 
 ObjectTemplates:addTemplate(object_tangible_wearables_bracelet_bracelet_s06_r, "object/tangible/wearables/bracelet/bracelet_wod_crafting_l.iff")

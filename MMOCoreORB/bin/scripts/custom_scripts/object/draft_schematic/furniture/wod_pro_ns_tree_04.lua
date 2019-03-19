@@ -6,7 +6,7 @@ object_draft_schematic_furniture_wod_pro_ns_tree_04 = object_draft_schematic_fur
 	craftingToolTab = 512, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 15,
 	size = 2,
-	factoryCrateSize = 10,
+	factoryCrateSize = 0,
 
 	xpType = "crafting_structure_general",
 	xp = 160,

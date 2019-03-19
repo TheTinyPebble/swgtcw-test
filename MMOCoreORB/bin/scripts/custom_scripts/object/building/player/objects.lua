@@ -1,0 +1,11 @@
+object_building_dathomir_shared_player_house_wod_ns_hut = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/building/dathomir/shared_player_house_wod_ns_hut.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_building_dathomir_shared_player_house_wod_ns_hut, "object/building/dathomir/shared_player_house_wod_ns_hut.iff")
+
+object_building_dathomir_shared_player_house_wod_sm_hut = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/building/dathomir/shared_player_house_wod_sm_hut.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_building_dathomir_shared_player_house_wod_sm_hut, "object/building/dathomir/shared_player_house_wod_sm_hut.iff")

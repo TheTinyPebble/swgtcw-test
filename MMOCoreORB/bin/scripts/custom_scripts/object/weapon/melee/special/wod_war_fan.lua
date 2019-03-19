@@ -26,65 +26,65 @@ object_weapon_melee_special_wod_war_fan = object_weapon_melee_special_shared_wod
 	attackType = MELEEATTACK,
 
 	-- ENERGY, KINETIC, ELECTRICITY, STUN, BLAST, HEAT, COLD, ACID, LIGHTSABER
-	damageType = COLD,
+	damageType = ACID,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = MEDIUM,
+	armorPiercing = LIGHT,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_special, combat_meleespecialize_onehand, combat_general,
 	-- combat_meleespecialize_twohandlightsaber, combat_meleespecialize_speciallightsaber, combat_meleespecialize_onehandlightsaber
-	xpType = "combat_meleespecialize_special",
+	xpType = "combat_meleespecialize_unarmed",
 
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_lance_cryo" },
+	certificationsRequired = { "cert_vibroknuckler" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
-	creatureAccuracyModifiers = { "special_accuracy" },
+	creatureAccuracyModifiers = { "unarmed_accuracy" },
 
 	-- See http://www.ocdsoft.com/files/defense.xls
 	defenderDefenseModifiers = { "melee_defense" },
 
-	-- Leave as "dodge" for now, may have additions later
-	defenderSecondaryDefenseModifiers = { "block" },
+	-- should be defensive acuity only
+	defenderSecondaryDefenseModifiers = { "unarmed_passive_defense" },
 
-	defenderToughnessModifiers = { "special_toughness" },
+	defenderToughnessModifiers = { "unarmed_toughness" },
 
 	-- See http://www.ocdsoft.com/files/speed.xls
-	speedModifiers = { "special_speed" },
+	speedModifiers = { "unarmed_speed" },
 
 	-- Leave blank for now
-	damageModifiers = { },
+	damageModifiers = { "unarmed_damage" },
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 51,
-	actionAttackCost = 30,
-	mindAttackCost = 15,
+	healthAttackCost = 15,
+	actionAttackCost = 25,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = 0,
+	pointBlankAccuracy = 10,
 
-	idealRange = 3,
-	idealAccuracy = 0,
+	idealRange = 1,
+	idealAccuracy = 10,
 
-	maxRange = 5,
-	maxRangeAccuracy = 0,
+	maxRange = 3,
+	maxRangeAccuracy = 10,
 
-	minDamage = 80,
-	maxDamage = 110,
+	minDamage = 180,
+	maxDamage = 350,
 
-	attackSpeed = 5,
+	attackSpeed = 2.6,
 
-	woundsRatio = 7,
+	woundsRatio = 8,
 
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalProperties = {"XX", "XX", "SR", "SR", "SR", "SR", "SR", "SR", "SR", "XX", "SR", "XX", "SR", "SR", "SR"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 53, 235, 8.5, 11, 750, -46, -46, 3, -46, 4, 120, 30, 16},
-	experimentalMax = {0, 0, 98, 436, 5.8, 20, 1500, -25, -25, 3, -25, 4, 63, 15, 7},
+	experimentalMin = {0, 0, 7, 60, 3.6, 14, 750, 5, 5, 1, 5, 5, 36, 54, 36},
+	experimentalMax = {0, 0, 13, 111, 2.5, 26, 1500, 15, 15, 1, 15, 5, 18, 30, 18},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
