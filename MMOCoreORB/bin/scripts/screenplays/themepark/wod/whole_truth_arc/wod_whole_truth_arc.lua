@@ -2,14 +2,128 @@ wodWholeTruthArc = ScreenPlay:new {
 
 }
 
-registerScreenPlay("wodWholeTruthArc", false)
+registerScreenPlay("wodWholeTruthArc", true)
 
 local QuestManager = require("managers.quest.quest_manager")
 
 -- TODO: Boss Fight
 -- TODO: Reward handling
 
-function wodWholeTruthArc:startBossFight(pPlayer)
+function wodWholeTruthArc:start()
+	self:spawnCagedRancor()
+end
+
+function wodWholeTruthArc:spawnCagedRancor()
+	--local pRancor = spawnMobile()
+	CreatureObject(pRancor):setPvpStatusBitmask(0)
+	writeData("wodThemepark:cagedRancorID", SceneObject(pRancor):getObjectID())
+end
+
+function wodWholeTruthArc:startBossFight()	
+	local pCagedRancor = getSceneObject(readData("wodThemepark:cagedRancorID"))
+	SceneObject(pCagedRancor):destroyObjectFromWorld()
+	
+	--local pBoss = spawnMobile()
+	createObserver(OBJECTDESTRUCTION, "wodWholeTruthArc", "notifyBossKilled", pBoss)
+	writeData("wodThemepark:rancorBossState", 1)
+	createEvent(10 * 1000, "wodWholeTruthArc", "sendMessageToGroup", pBoss, "")
+	createEvent(10 * 60 * 1000, "wodWholeTruthArc", "failBossFight", pBoss, "")
+	self:sendMessageToGroup(pBoss)
+end
+
+function wodWholeTruthArc:notifyBossKilled(pBoss)
+	if (pBoss == nil) then
+		return 1
+	end
+	
+	local pOwner = getSceneObject(readData("wodThemepark:rancorBossFightOwnerID"))
+	
+	if (pOwner == nil) then
+		return 1
+	end
+	
+	local groupSize = CreatureObject(pOwner):getGroupSize()
+
+	for i = 0, groupSize - 1, 1 do
+		local pMember = CreatureObject(pOwner):getGroupMember(i)
+		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+			if (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_03)) then
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_03)
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT)
+				witchesOfDathomirScreenplay:handleReward(pMember, "greaterGood")
+			elseif (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_SM_KYRISA_BOSS_FIGHT_03)) then
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_SM_KYRISA_BOSS_FIGHT_03)
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_SM_KYRISA_BOSS_FIGHT)
+				witchesOfDathomirScreenplay:handleReward(pMember, "greaterGood")
+			end
+		end
+	end
+	
+	deleteData("wodThemepark:rancorBossState")
+	return 1
+end
+
+function wodWholeTruthArc:sendMessageToGroup(pBoss)
+	if (pBoss == nil) then
+		return
+	end
+	
+	local pOwner = getSceneObject(readData("wodThemepark:rancorBossFightOwnerID"))
+	
+	if (pOwner == nil) then
+		return
+	end
+	
+	local bossState = readData("wodThemepark:rancorBossState")
+	
+	if (bossState == nil or bossState == "") then
+		return
+	end
+	
+	if (bossState == 1) then
+		writeData("wodThemepark:rancorBossState", 2)
+		createEvent(9 * 60 * 1000, "wodWholeTruthArc", "sendMessageToGroup", nil, "")
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_rancor_start")
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_begin")
+	elseif (bossState == 2) then
+		writeData("wodThemepark:rancorBossState", 3)
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_time_warning")
+	elseif (bossState == 3) then
+		writeData("wodThemepark:rancorBossState", 4)
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:mutating_rancor")
+	elseif (bossState == 4) then
+		writeData("wodThemepark:rancorBossState", 5)
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_leaving")
+	elseif (bossState == 5) then
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_failed")
+	end
+end
+
+function wodWholeTruthArc:failBossFight(pBoss)
+	if (pBoss == nil) then
+		return
+	end
+	
+	self:sendMessageToGroup(pBoss)
+	CreatureObject(pBoss):setPvpStatusBitmask(0)
+	forcePeace(pBoss)
+	--Do move, then despawn
+	createEvent(5 * 1000, "wodWholeTruthArc", "despawnBoss", pBoss, "")
+end
+
+function wodWholeTruthArc:despawnBoss(pBoss)
+	if (pBoss == nil) then
+		return
+	end
+	
+	self:sendMessageToGroup(pBoss)
+	self:spawnCagedRancor()
+
+	if (SceneObject(pBoss):isAiAgent()) then
+		CreatureObject(pBoss):setPvpStatusBitmask(0)
+		forcePeace(pBoss)
+	end
+	SceneObject(pBoss):destroyObjectFromWorld()
 end
 
 --Eliminate quest

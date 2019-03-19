@@ -40,7 +40,8 @@ function wod_kyrisa_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 		elseif (self:checkGroupStatus(pPlayer)) then
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_kyrisa_boss_fight_02"))
 			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_kyrisa_boss_fight_03"))
-			wodWholeTruthArc:startBossFight(pPlayer)
+			wodWholeTruthArc:startBossFight()
+			writeData("wodThemepark:rancorBossFightOwnerID", SceneObject(pPlayer):getObjectID())
 		else
 			return convoTemplate("not_in_group")
 		end

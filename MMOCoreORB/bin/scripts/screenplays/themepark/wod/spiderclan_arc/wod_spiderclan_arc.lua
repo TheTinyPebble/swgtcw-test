@@ -6,10 +6,105 @@ registerScreenPlay("wodSpiderclanArc", false)
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Boss Fight
--- TODO: Reward Handling
+-- TODO: Patrol move before boss despawns
 
-function wodSpiderclanArc:startBossFight(pPlayer)
+function wodSpiderclanArc:startBossFight()	
+	--local pBoss = spawnMobile()
+	createObserver(OBJECTDESTRUCTION, "wodSpiderclanArc", "notifyBossKilled", pBoss)
+	writeData("wodThemepark:spiderBossState", 1)
+	createEvent(10 * 60 * 1000, "wodSpiderclanArc", "failBossFight", pBoss, "")
+	self:sendMessageToGroup(pBoss)
+end
+
+function wodSpiderclanArc:notifyBossKilled(pBoss)
+	if (pBoss == nil) then
+		return 1
+	end
+	
+	local pOwner = getSceneObject(readData("wodThemepark:spiderBossFightOwnerID"))
+	
+	if (pOwner == nil) then
+		return 1
+	end
+	
+	local groupSize = CreatureObject(pOwner):getGroupSize()
+
+	for i = 0, groupSize - 1, 1 do
+		local pMember = CreatureObject(pOwner):getGroupMember(i)
+		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+			if (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_03)) then
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_03)
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT)
+				witchesOfDathomirScreenplay:handleReward(pMember, "huntingParty")
+			elseif (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT_03)) then
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT_03)
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT)
+				witchesOfDathomirScreenplay:handleReward(pMember, "huntingParty")
+			end
+		end
+	end
+
+	deleteData("wodThemepark:spiderBossState")
+	return 1
+end
+
+function wodSpiderclanArc:sendMessageToGroup(pBoss)
+	if (pBoss == nil) then
+		return
+	end
+	
+	local pOwner = getSceneObject(readData("wodThemepark:spiderBossFightOwnerID"))
+	
+	if (pOwner == nil) then
+		return
+	end
+	
+	local bossState = readData("wodThemepark:spiderBossState")
+	
+	if (bossState == nil or bossState == "") then
+		return
+	end
+	
+	if (bossState == 1) then
+		writeData("wodThemepark:spiderBossState", 2)
+		createEvent(9 * 60 * 1000, "wodSpiderclanArc", "sendMessageToGroup", nil, "")
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_spider_start")
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_begin")
+	elseif (bossState == 2) then
+		writeData("wodThemepark:spiderBossState", 3)
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_time_warning")
+	elseif (bossState == 3) then
+		writeData("wodThemepark:spiderBossState", 4)
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_leaving")
+	elseif (bossState == 4) then
+		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_failed")
+	end
+end
+
+function wodSpiderclanArc:failBossFight(pBoss)
+	if (pBoss == nil) then
+		return
+	end
+	
+	self:sendMessageToGroup(pBoss)
+	CreatureObject(pBoss):setPvpStatusBitmask(0)
+	forcePeace(pBoss)
+	--Do move, then despawn
+	createEvent(5 * 1000, "wodSpiderclanArc", "despawnBoss", pBoss, "")
+end
+
+function wodSpiderclanArc:despawnBoss(pBoss)
+	if (pBoss == nil) then
+		return
+	end
+	
+	self:sendMessageToGroup(pBoss)
+
+	if (SceneObject(pBoss):isAiAgent()) then
+		CreatureObject(pBoss):setPvpStatusBitmask(0)
+		forcePeace(pBoss)
+	end
+	SceneObject(pBoss):destroyObjectFromWorld()
 end
 
 --Eliminate quest

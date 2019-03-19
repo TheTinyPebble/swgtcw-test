@@ -45,7 +45,8 @@ function wod_queen_mother_convo_handler:runScreenHandlers(pConvTemplate, pPlayer
 		elseif (self:checkGroupStatus(pPlayer)) then
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight_02"))
 			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight_03"))
-			wodSpiderclanArc:startBossFight(pPlayer)
+			wodSpiderclanArc:startBossFight()
+			writeData("wodThemepark:spiderBossFightOwnerID", SceneObject(pPlayer):getObjectID())
 		else
 			return convoTemplate("not_in_group")
 		end
