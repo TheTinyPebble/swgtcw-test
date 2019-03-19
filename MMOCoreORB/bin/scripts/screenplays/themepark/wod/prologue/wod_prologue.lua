@@ -56,16 +56,16 @@ function wodPrologueScreenplay:handleCollectionReward(pPlayer, key)
 	local key = "enemies" .. key
 	local clan = ""
 
-	if (string.match(key, "herbs")) then
-		key = "herbs"
-	elseif (string.match(key, "wisdom")) then
-		key = "wisdom"
+	if (string.match(string.lower(key), "sm")) then
+		clan = "SM"
+	elseif (string.match(string.lower(key), "ns")) then
+		clan = "NS"
 	end
 
-	if (string.match(key, "SM")) then
-		clan = "SM"
-	elseif (string.match(key, "NS")) then
-		clan = "NS"
+	if (string.match(string.lower(key), "herbs")) then
+		key = "herbs"
+	elseif (string.match(string.lower(key), "wisdom")) then
+		key = "wisdom"
 	end
 
 	local rewardKey = wodPrologueRewardManager[key]

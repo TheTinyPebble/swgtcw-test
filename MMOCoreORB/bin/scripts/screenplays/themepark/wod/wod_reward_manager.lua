@@ -81,10 +81,10 @@ wodPrologueRewardManager = {
 		collectionCount = 5,
 		collectionRewardType = "all",
 		collectionRewardSM = {
-			"object/tangible/painting/painting_wod_sm_01.iff",
+			"object/tangible/painting/painting_wod_sm_02.iff",
 		},
 		collectionRewardSM = {
-			"object/tangible/painting/painting_wod_ns_01.iff",
+			"object/tangible/painting/painting_wod_ns_02.iff",
 		}
 	},
 }
@@ -99,7 +99,7 @@ wodRewardManager = {
 			"object/tangible/furniture/all/wod_seed_jar.iff",
 			"object/tangible/furniture/all/wod_seed_jar.iff",
 		},
-		rewardRandomValuable = 2, --Set how many random valuables should be rewarded.
+		rewardRandomValuable = 2, --Set how many random valuables (tokens) should be rewarded.
 		collectionRewardOnce = false,
 		collectionCount = 5,
 		collectionRewardType = "all",
@@ -115,7 +115,7 @@ wodRewardManager = {
 		rewardOnce = false,
 		rewardInterval = 1,
 		rewardType = "pick",
-		rewardCount = 3, --Set the amount rewarded (only works on tokens)
+		tokenCount = 3, --Set the amount of tokens rewarded
 		reward = { -- Players pick a reward from the list below.
 			{"object/tangible/content/wod_token_1.iff", "Dathomir Amber"},
 			{"object/tangible/content/wod_token_2.iff", "Spider Silk"},
@@ -133,7 +133,7 @@ wodRewardManager = {
 		rewardOnce = false,
 		rewardInterval = 1,
 		rewardType = "pick",
-		rewardCount = 3,
+		tokenCount = 3,
 		reward = { 
 			{"object/tangible/content/wod_token_1.iff", "Dathomir Amber"},
 			{"object/tangible/content/wod_token_2.iff", "Spider Silk"},
@@ -165,7 +165,7 @@ wodRewardManager = {
 		rewardOnce = false,
 		rewardInterval = 1,
 		rewardType = "pick",
-		rewardCount = 3,
+		tokenCount = 3,
 		reward = { 
 			{"object/tangible/content/wod_token_1.iff", "Dathomir Amber"},
 			{"object/tangible/content/wod_token_2.iff", "Spider Silk"},
@@ -183,7 +183,7 @@ wodRewardManager = {
 		rewardOnce = false,
 		rewardInterval = 1,
 		rewardType = "all",
-		rewardCount = 2,
+		tokenCount = 2,
 		reward = { 
 			"object/tangible/content/wod_token_1.iff",
 			"object/tangible/content/wod_token_2.iff",
@@ -197,7 +197,7 @@ wodRewardManager = {
 	
 	repairAltar1 = {
 		rewardType = "all",
-		rewardCount = 4,
+		tokenCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_4.iff",
 		},
@@ -206,7 +206,7 @@ wodRewardManager = {
 	
 	repairAltar2 = {
 		rewardType = "all",
-		rewardCount = 4,
+		tokenCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_4.iff",
 		},
@@ -215,7 +215,7 @@ wodRewardManager = {
 	
 	repairAltar3 = {
 		rewardType = "all",
-		rewardCount = 4,
+		tokenCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
 		},
@@ -224,7 +224,7 @@ wodRewardManager = {
 	
 	repairAltar4 = {
 		rewardType = "all",
-		rewardCount = 4,
+		tokenCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
 			"object/tangible/theme_park/wod/wod_crafting_template.iff",
@@ -234,7 +234,7 @@ wodRewardManager = {
 	
 	firstSister = {
 		rewardType = "all",
-		rewardCount = 4,
+		tokenCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_1.iff",
 		},
@@ -243,7 +243,7 @@ wodRewardManager = {
 	
 	secondSister = {
 		rewardType = "all",
-		rewardCount = 4,
+		tokenCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_1.iff",
 		},
@@ -252,7 +252,7 @@ wodRewardManager = {
 	
 	thirdSister = {
 		rewardType = "all",
-		rewardCount = 6,
+		tokenCount = 6,
 		reward = { 
 			"object/tangible/content/wod_token_1.iff",
 			"object/tangible/furniture/decorative/wod_deco_mask.iff",
@@ -262,7 +262,7 @@ wodRewardManager = {
 	
 	ghostReward = {
 		rewardType = "all",
-		rewardCount = 3,
+		tokenCount = 3,
 		reward = { 
 			"object/tangible/content/wod_token_1.iff",
 		},
@@ -271,7 +271,7 @@ wodRewardManager = {
 	
 	wholeTruth1 = {
 		rewardType = "all",
-		rewardCount = 4,
+		tokenCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_3.iff",
 		},
@@ -280,7 +280,7 @@ wodRewardManager = {
 	
 	wholeTruth2 = {
 		rewardType = "all",
-		rewardCount = 4,
+		tokenCount = 4,
 		reward = { 
 			"object/tangible/content/wod_token_3.iff",
 		},
@@ -290,7 +290,7 @@ wodRewardManager = {
 	greaterGood = {
 		credits = 4000,
 		rewardType = "all",
-		rewardCount = 6,
+		tokenCount = 6,
 		reward = { 
 			"object/tangible/content/wod_token_3.iff",
 		},
@@ -299,7 +299,7 @@ wodRewardManager = {
 	
 	lostE01 = {
 		rewardType = "all",
-		rewardCount = 2,
+		tokenCount = 2,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
 		},
@@ -308,7 +308,7 @@ wodRewardManager = {
 	
 	lostE02 = {
 		rewardType = "all",
-		rewardCount = 3,
+		tokenCount = 3,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
 		},
@@ -317,7 +317,7 @@ wodRewardManager = {
 	
 	ehs = {
 		rewardType = "all",
-		rewardCount = 3,
+		tokenCount = 3,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
 		},
@@ -327,7 +327,7 @@ wodRewardManager = {
 	huntingParty = {
 		credits = 4000,
 		rewardType = "all",
-		rewardCount = 6,
+		tokenCount = 6,
 		reward = { 
 			"object/tangible/content/wod_token_2.iff",
 		},
@@ -336,7 +336,7 @@ wodRewardManager = {
 	
 	leftBehind = {
 		rewardType = "all",
-		rewardCount = 3,
+		tokenCount = 3,
 		reward = { 
 			"object/tangible/content/wod_token_4.iff",
 			"object/tangible/painting/painting_wod_outcast.iff",

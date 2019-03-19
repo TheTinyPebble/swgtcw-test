@@ -97,14 +97,14 @@ function wod_klee_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, 
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN_02)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN)
 		witchesOfDathomirScreenplay:handleReward(pPlayer, "enemiesSpiderclan")
-		witchesOfDathomirScreenplay:addToCollection(pPlayer, "enemiesSpiderclanSM")
+		witchesOfDathomirScreenplay:addToCollection(pPlayer, "SpiderclanSM")
 	end
 
 	if (screenID == "other_clan_return") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN_02)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN)
 		witchesOfDathomirScreenplay:handleReward(pPlayer, "enemiesOtherclan")
-		witchesOfDathomirScreenplay:addToCollection(pPlayer, "enemiesOtherclanSM")
+		witchesOfDathomirScreenplay:addToCollection(pPlayer, "OtherclanSM")
 	end
 
 	if (screenID == "two_clans_return") then

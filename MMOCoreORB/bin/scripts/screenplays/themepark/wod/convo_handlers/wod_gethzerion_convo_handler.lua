@@ -93,14 +93,14 @@ function wod_gethzerion_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_02)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)
 		witchesOfDathomirScreenplay:handleReward(pPlayer, "enemiesSpiderclan")
-		witchesOfDathomirScreenplay:addToCollection(pPlayer, "enemiesSpiderclanNS")
+		witchesOfDathomirScreenplay:addToCollection(pPlayer, "SpiderclanNS")
 	end
 	
 	if (screenID == "other_clan_return") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_02)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)
 		witchesOfDathomirScreenplay:handleReward(pPlayer, "enemiesOtherclan")
-		witchesOfDathomirScreenplay:addToCollection(pPlayer, "enemiesOtherclanNS")
+		witchesOfDathomirScreenplay:addToCollection(pPlayer, "OtherclanNS")
 	end
 
 	if (screenID == "two_clans_return") then

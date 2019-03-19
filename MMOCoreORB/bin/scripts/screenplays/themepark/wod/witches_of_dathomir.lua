@@ -222,8 +222,8 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 			for i = 1, #rewardKey.reward do
 				pItem = giveItem(pInventory, rewardKey.reward[i], -1)
 				
-				if ((wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
-					TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardCount)
+				if ((wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
+					TangibleObject(pItem):setUseCount(wodRewardManager[key].tokenCount)
 				end
 			end
 		elseif (rewardKey.rewardType == "pick") then
@@ -248,8 +248,8 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 			local n = getRandomNumber(1, #rewardKey.reward)
 				pItem = giveItem(pInventory, rewardKey.reward[n], -1)
 			
-			if ((wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
-				TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardCount)
+			if ((wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
+				TangibleObject(pItem):setUseCount(wodRewardManager[key].tokenCount)
 			end
 		end
 
@@ -305,16 +305,16 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 	local key = "enemies" .. key
 	local clan = ""
 	
-	if (string.match(key, "herbs")) then
-		key = "herbs"
-	elseif (string.match(key, "wisdom")) then
-		key = "wisdom"
+	if (string.match(string.lower(key), "sm")) then
+		clan = "SM"
+	elseif (string.match(string.lower(key), "ns")) then
+		clan = "NS"
 	end
 	
-	if (string.match(key, "SM")) then
-		clan = "SM"
-	elseif (string.match(key, "NS")) then
-		clan = "NS"
+	if (string.match(string.lower(key), "herbs")) then
+		key = "herbs"
+	elseif (string.match(string.lower(key), "wisdom")) then
+		key = "wisdom"
 	end
 	
 	local rewardKey = wodRewardManager[key]
@@ -378,8 +378,8 @@ function witchesOfDathomirScreenplay:pickRewardCallback(pPlayer, pSui, eventInde
 	local pItem = giveItem(pInventory, reward, -1)
 
 	local key = readStringData("wodThemepark:rewardKey:" .. SceneObject(pPlayer):getObjectID())
-	if (wodRewardManager[key].rewardCount ~= nil or not wodRewardManager[key].rewardCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
-		TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardCount)
+	if (wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
+		TangibleObject(pItem):setUseCount(wodRewardManager[key].tokenCount)
 	elseif (wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
 		TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 	end

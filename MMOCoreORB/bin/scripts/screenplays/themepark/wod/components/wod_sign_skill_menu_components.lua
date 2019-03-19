@@ -1,6 +1,6 @@
-wodStandingSignMenuComponent = {}
+wodStandingSignSkillMenuComponent = {}
 
-function wodStandingSignMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
+function wodStandingSignSkillMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
 	if (pSceneObject == nil or pPlayer == nil) then
 		return
 	end
@@ -9,7 +9,7 @@ function wodStandingSignMenuComponent:fillObjectMenuResponse(pSceneObject, pMenu
 	menuResponse:addRadialMenuItem(20, 3, "Learn Sign")
 end
 
-function wodStandingSignMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, selectedID)
+function wodStandingSignSkillMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, selectedID)
 	if (pSceneObject == nil or pPlayer == nil) then
 		return
 	end
@@ -31,9 +31,9 @@ function wodStandingSignMenuComponent:handleObjectMenuSelect(pSceneObject, pPlay
 	return 0
 end
 
-wodHangingSignMenuComponent = {}
+wodHangingSignSkillMenuComponent = {}
 
-function wodHangingSignMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
+function wodHangingSignSkillMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
 	if (pSceneObject == nil or pPlayer == nil) then
 		return
 	end
@@ -42,7 +42,7 @@ function wodHangingSignMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuR
 	menuResponse:addRadialMenuItem(20, 3, "Learn Sign")
 end
 
-function wodHangingSignMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, selectedID)
+function wodHangingSignSkillMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, selectedID)
 	if (pSceneObject == nil or pPlayer == nil) then
 		return
 	end
