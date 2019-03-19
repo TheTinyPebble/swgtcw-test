@@ -66,8 +66,8 @@ object_weapon_ranged_turret_turret_block_small = object_weapon_ranged_turret_sha
 	idealAccuracy = 70,
 	maxRange = 80,
 	maxRangeAccuracy = 0,
-	minDamage = 50,
-	maxDamage = 150,
+	minDamage = 100,
+	maxDamage = 300,
 	attackSpeed = 2,
 	woundsRatio = 9,
 }
