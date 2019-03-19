@@ -8,6 +8,7 @@ local QuestManager = require("managers.quest.quest_manager")
 
 --TODO: On logged in events
 --TODO: Reward handling check if inventory is full (can it give an item with full inventory? Need testing)
+--TODO: Handle clan swapping
 
 function wodPrologueScreenplay:onPlayerLoggedIn(pPlayer)
 	if (pPlayer == nil) then

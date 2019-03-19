@@ -15,8 +15,6 @@ object_tcg_series5_nightsister_backpack = object_tcg_series5_shared_nightsister_
 				"object/creature/player/trandoshan_female.iff",
 				"object/creature/player/twilek_male.iff",
 				"object/creature/player/twilek_female.iff",
-				"object/creature/player/wookiee_male.iff",
-				"object/creature/player/wookiee_female.iff",
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
