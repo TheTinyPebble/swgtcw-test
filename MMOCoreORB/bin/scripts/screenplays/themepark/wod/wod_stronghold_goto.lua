@@ -24,17 +24,6 @@ function wodStrongholdNSGoto:onEnteredActiveArea(pPlayer)
 	return 1
 end
 
--- Event handler for the onSuccessfulSpawn.
--- The event will activate the quest.
--- @param pPlayer pointer to the creature object of the player.
-function wodStrongholdNSGoto:onSuccessfulSpawn(pPlayer)
-	if (pPlayer == nil) then
-		return
-	end
-
-	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS)
-end
-
 return wodStrongholdNSGoto
 
 --SM Mountain
@@ -58,17 +47,6 @@ function wodStrongholdSMGoto:onEnteredActiveArea(pPlayer)
 
 	self:finish(pPlayer)
 	return 1
-end
-
--- Event handler for the onSuccessfulSpawn.
--- The event will activate the quest.
--- @param pPlayer pointer to the creature object of the player.
-function wodStrongholdSMGoto:onSuccessfulSpawn(pPlayer)
-	if (pPlayer == nil) then
-		return
-	end
-
-	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_SM)
 end
 
 return wodStrongholdSMGoto
