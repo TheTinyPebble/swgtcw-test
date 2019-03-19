@@ -129,9 +129,11 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 	spawnMobile("dathomir", "wod_diax", -1, -20.5, 7.2, -27.4, 140, 189384)
 	spawnMobile("dathomir", "wod_kais", -1, 14.2, 7.2, -15, -92, 189382)
 	spawnMobile("dathomir", "wod_gethzerion", -1, -2, 7.2, -1, -135, 189383)
+
+	--Ghost guide abandoned village: -6850, -4897
+	spawnMobile("dathomir", "wod_ghost_witch", -1, -6894.9, 461.8, -4853.8, 109, 0)
 	
 	--Other statics
-	spawnMobile("dathomir", "wod_ghost_witch", -1, -6894.9, 461.8, -4853.8, 109, 0)
 	spawnMobile("dathomir", "wod_rescue_initiate", -1, 1.4, -46.1, -150.6, -11, 3695706)
 	
 	for i = 1, #self.spawnZones do
@@ -143,6 +145,12 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 			AiAgent(pMobile):setAiTemplate("idlewander")
 		end
 	end
+	
+	--Cave of Mutations (Kyrisa): 1993, 42, 1823
+	
+	--Breeding Cave (Queen Mother): 308, 114, -190
+	
+	--Temple of the Stars: 5269, 121, 165
 end
 
 function witchesOfDathomirScreenplay:spawnSceneObjects()
@@ -161,10 +169,11 @@ function witchesOfDathomirScreenplay:spawnSceneObjects()
 	--First sister altar
 	spawnSceneObject("dathomir", "object/tangible/content/wod_first_sister_altar.iff", -4841, 135, -2938, 0, 0)
 	
-	--Second sister fire
-	--Sister2 village: -3572, -6017
-
-	--Ghost guide abandoned village: -6850, -4897
+	--Second sister village: -3572, -6017
+	spawnSceneObject("dathomir", "object/tangible/content/wod_second_sister_fire_1.iff", -3587.3, 87.9, -5996.8, 0, 0)
+	spawnSceneObject("dathomir", "object/tangible/content/wod_second_sister_fire_2.iff", -3546.8, 87.2, -5993.8, 0, 0)
+	spawnSceneObject("dathomir", "object/tangible/content/wod_second_sister_fire_3.iff", -3553.4, 94.6, -6053.3, 0, 0)
+	spawnSceneObject("dathomir", "object/tangible/content/wod_second_sister_fire_4.iff", -3602.1, 99.9, -6051.4, 0, 0)
 
 	--Trampled Veg (lost e01)
 	local pPlant = spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/wod_trampled_plant.iff", -1316, 17, 6163 , 0, 0)
@@ -176,10 +185,6 @@ function witchesOfDathomirScreenplay:spawnSceneObjects()
 	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.7, -25.1, 610001025, math.rad(-90))
 	local pCache = spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.3, -31.7, 610001025, math.rad(-90))
 	SceneObject(pCache):setObjectMenuComponent("wodLeftBehindCacheMenuComponent")
-	
-	--Cave of Mutations (Kyrisa): 1993, 42, 1823
-	
-	--Breeding Cave (Queen Mother): 308, 114, -190
 end
 
 function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
