@@ -333,3 +333,9 @@ object_mobile_shared_spider_queen_guard = SharedCreatureObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_mobile_shared_spider_queen_guard, "object/mobile/shared_spider_queen_guard.iff")
+
+object_mobile_shared_whuffa_worm = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_whuffa_worm.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_whuffa_worm, "object/mobile/shared_whuffa_worm.iff")

@@ -1,0 +1,2 @@
+includeFile("../custom_scripts/object/building/general/serverobjects.lua")
+includeFile("../custom_scripts/object/building/dathomir/serverobjects.lua")

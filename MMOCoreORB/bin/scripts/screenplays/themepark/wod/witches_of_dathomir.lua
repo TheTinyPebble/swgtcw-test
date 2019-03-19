@@ -133,6 +133,16 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 	--Other statics
 	spawnMobile("dathomir", "wod_ghost_witch", -1, -6894.9, 461.8, -4853.8, 109, 0)
 	spawnMobile("dathomir", "wod_rescue_initiate", -1, 1.4, -46.1, -150.6, -11, 3695706)
+	
+	for i = 1, #self.spawnZones do
+		for j = 1, #self.spawnZones[i].spawnCount do
+			local spawnPoint = getSpawnPoint("dathomir", self.spawnZones[i].x, self.spawnZones[i].y, 0, self.spawnZones[i].radius)
+			
+			local n = getRandomNumber(1, #self.spawnZones[i].spawnTemplates)
+			local pMobile = spawnMobile("dathomir", self.spawnZones[i].spawnTemplates[n], self.spawnZones[i].respawnTimer, spawnPoint[1], spawnPoint[2], spawnPoint[3], math.random(360), 0)
+			AiAgent(pMobile):setAiTemplate("idlewander")
+		end
+	end
 end
 
 function witchesOfDathomirScreenplay:spawnSceneObjects()
@@ -155,14 +165,20 @@ function witchesOfDathomirScreenplay:spawnSceneObjects()
 	--Sister2 village: -3572, -6017
 
 	--Ghost guide abandoned village: -6850, -4897
-	
+
 	--Trampled Veg (lost e01)
 	local pPlant = spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/wod_trampled_plant.iff", -1316, 17, 6163 , 0, 0)
 	SceneObject(pPlant):setObjectMenuComponent("wodSpiderclanVegetationMenuComponent")
+
+	--Temple of the Stars: 5269, 121, 165
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.7, -25.1, 610001025, math.rad(90))
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.3, -31.7, 610001025, math.rad(90))
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.7, -25.1, 610001025, math.rad(-90))
+	local pCache = spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.3, -31.7, 610001025, math.rad(-90))
+	SceneObject(pCache):setObjectMenuComponent("wodLeftBehindCacheMenuComponent")
 	
-	----Caves And Temples (snapshot edits)
-	--Temple of the Stars (Left Behind): 5269, 121, 165
 	--Cave of Mutations (Kyrisa): 1993, 42, 1823
+	
 	--Breeding Cave (Queen Mother): 308, 114, -190
 end
 

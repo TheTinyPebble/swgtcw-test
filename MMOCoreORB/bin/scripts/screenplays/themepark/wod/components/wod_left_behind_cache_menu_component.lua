@@ -32,6 +32,7 @@ function wodLeftBehindCacheMenuComponent:handleObjectMenuSelect(pSceneObject, pP
 			creatureObject(pPlayer):sendSystemMessage("Couldn't retrieve cache, your inventory is full.")
 		else
 
+		creatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod_left_behind:task02_start_message")
 		giveItem(pInventory, "object/tangible/theme_park/wod/wod_crafting_alter_key.iff", -1)
 		wodRubinaEpilogue:startEncounter(pPlayer)
 	end

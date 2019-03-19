@@ -58,10 +58,10 @@ function wodHerbalPlants:spawnHerbalPlants()
 	
 	for i = 1, #self.spawnAreas do
 		for j = 1, self.spawnAreas[i].count do
-			local spawnPoint = getSpawnPoint("dathomir", self.spawnArea.x, self.spawnArea.y, 0, self.spawnArea.radius)
+			local spawnPoint = getSpawnPoint("dathomir", self.spawnArea[i].x, self.spawnArea[i].y, 0, self.spawnArea[i].radius)
 			
 			local n = getRandomNumber(1, #self.plantTemplates)
-			local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], spawnPoint[1], spawnPoint[2], spawnPoint[3], math.rad(math.random(360)), 0)
+			local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], spawnPoint[1], spawnPoint[2], spawnPoint[3], 0, math.rad(math.random(360)))
 			writeData("wodThemepark:herbPlantLoc:" .. SceneObject(pObject):getObjectID(), i)
 			writeData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pObject):getObjectID(), n)
 		end

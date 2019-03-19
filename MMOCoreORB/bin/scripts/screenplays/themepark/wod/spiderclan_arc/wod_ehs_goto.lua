@@ -6,7 +6,7 @@ wodNSEHSGoto = GoToLocation:new {
 	taskName = "wodNSEHSGoto",
 	-- GoToLocation properties
 	waypointDescription = "@theme_park_wod/wod_ns_ehs:task01_waypoint_name",
-	spawnPoint = {x = -190, y = 308},
+	spawnPoint = {x = 308, y = -190},
 	spawnPlanet = "dathomir",
 	spawnRadius = 5,
 }

@@ -1,5 +1,5 @@
-object_tangible_theme_park_wod_wod_crafting_altar = object_tangible_theme_park_wod_shared_wod_crafting_altar:new {
+object_tangible_content_wod_crafting_altar_1 = object_tangible_content_shared_wod_crafting_altar_1:new {
 	objectMenuComponent = "wodRepairAltar1MenuComponent",
 }
 
-ObjectTemplates:addTemplate(object_tangible_theme_park_wod_wod_crafting_altar, "object/tangible/theme_park/wod/wod_crafting_altar.iff")
+ObjectTemplates:addTemplate(object_tangible_content_wod_crafting_altar_1, "object/tangible/content/wod_crafting_altar_1.iff")
