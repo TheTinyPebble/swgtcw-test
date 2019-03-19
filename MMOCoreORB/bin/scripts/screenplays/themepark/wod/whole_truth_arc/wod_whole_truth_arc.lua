@@ -11,18 +11,32 @@ function wodWholeTruthArc:start()
 end
 
 function wodWholeTruthArc:spawnCagedRancor()
+	--local pCage = spawnSceneObject("dathomir", "object/tangible/quest/wod/wod_rancor_cage.iff", )
+	writeData("wodThemepark:cageID", SceneObject(pCage):getObjectID())
 	--local pRancor = spawnMobile() --wod_mutant_rancor_boss
 	CreatureObject(pRancor):setPvpStatusBitmask(0)
 	writeData("wodThemepark:cagedRancorID", SceneObject(pRancor):getObjectID())
+	deleteData("wodThemepark:rancorBossState")
+	deleteData("wodThemepark:kyrisaBossFight:active")
 end
 
 function wodWholeTruthArc:startBossFight()	
-	local pCagedRancor = getSceneObject(readData("wodThemepark:cagedRancorID"))
-	SceneObject(pCagedRancor):destroyObjectFromWorld()
+	local pCage = getSceneObject(readData("wodThemepark:cageID"))
 	
-	--local pBoss = spawnMobile()
+	if (pCage ~= nil) then
+		SceneObject(pCage):destroyObjectFromWorld()
+	end
+	
+	local pBoss = getSceneObject(readData("wodThemepark:cagedRancorID"))
+	
+	if (pBoss == nil) then
+		return
+	end
+	
+	CreatureObject(pBoss):setPvpStatusBitmask(AGGRESSIVE + ATTACKABLE + ENEMY)
 	createObserver(OBJECTDESTRUCTION, "wodWholeTruthArc", "notifyBossKilled", pBoss)
 	writeData("wodThemepark:rancorBossState", 1)
+	writeData("wodThemepark:kyrisaBossFight:active", 1)
 	createEvent(10 * 1000, "wodWholeTruthArc", "sendMessageToGroup", pBoss, "")
 	createEvent(10 * 60 * 1000, "wodWholeTruthArc", "failBossFight", pBoss, "")
 	self:sendMessageToGroup(pBoss)
@@ -76,8 +90,8 @@ function wodWholeTruthArc:notifyBossKilled(pBoss)
 			end
 		end
 	end
-	
-	deleteData("wodThemepark:rancorBossState")
+
+	createEvent(10 * 1000, "wodWholeTruthArc", "spawnCagedRancor", nil, "")
 	return 1
 end
 

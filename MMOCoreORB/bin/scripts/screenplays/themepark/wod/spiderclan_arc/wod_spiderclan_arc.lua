@@ -12,6 +12,7 @@ function wodSpiderclanArc:startBossFight()
 	--local pBoss = spawnMobile() wod_spider_queen_consort
 	createObserver(OBJECTDESTRUCTION, "wodSpiderclanArc", "notifyBossKilled", pBoss)
 	writeData("wodThemepark:spiderBossState", 1)
+	writeData("wodThemepark:queenMotherBossFight:active", 1)
 	createEvent(30 * 1000, "wodSpiderclanArc", "spawnAdds", nil, "")
 	createEvent(10 * 60 * 1000, "wodSpiderclanArc", "failBossFight", pBoss, "")
 	self:sendMessageToGroup(pBoss)
@@ -72,6 +73,7 @@ function wodSpiderclanArc:notifyBossKilled(pBoss)
 		end
 	end
 
+	deleteData("wodThemepark:queenMotherBossFight:active")
 	deleteData("wodThemepark:spiderBossState")
 	return 1
 end
@@ -139,6 +141,8 @@ function wodSpiderclanArc:despawnBoss(pBoss)
 		forcePeace(pBoss)
 	end
 	SceneObject(pBoss):destroyObjectFromWorld()
+	deleteData("wodThemepark:queenMotherBossFight:active")
+	deleteData("wodThemepark:spiderBossState")
 end
 
 --Eliminate quest

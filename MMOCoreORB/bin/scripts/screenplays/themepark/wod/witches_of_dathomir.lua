@@ -128,7 +128,7 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 	spawnMobile("dathomir", "wod_fath_hray", -1, -12, 7.2, -36.7, 13, 189384)
 	spawnMobile("dathomir", "wod_diax", -1, -20.5, 7.2, -27.4, 140, 189384)
 	spawnMobile("dathomir", "wod_kais", -1, 14.2, 7.2, -15, -92, 189382)
-	spawnMobile("dathomir", "woth_gethzerion", -1, -2, 7.2, -1, -135, 189383)
+	spawnMobile("dathomir", "wod_gethzerion", -1, -2, 7.2, -1, -135, 189383)
 	
 	--Other statics
 	spawnMobile("dathomir", "wod_ghost_witch", -1, -6894.9, 461.8, -4853.8, 109, 0)

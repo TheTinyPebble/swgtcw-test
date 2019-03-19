@@ -175,6 +175,9 @@ dathomir_regions = {
 	{ "wod_second_sister_village", -3572, -6017 {1, 150}, NOSPAWNAREA + NOBUILDZONEAREA},
 	{ "wod_abandoned_village", -6850, -4897 {1, 50}, NOSPAWNAREA + NOBUILDZONEAREA},
 	{ "wod_temple_stars", 5269, 165 {1, 150}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_mutation_cave", 1993, 1823 {1, 25}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_breeding_cave", 374, 100 {1, 25}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_mutation_cave", 1993, 1823 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_breeding_cave", 374, 100 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_rubina", -3177, 3184 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_outcast_1", 866, 1095 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_outcast_2", -1000, 862 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
 }
