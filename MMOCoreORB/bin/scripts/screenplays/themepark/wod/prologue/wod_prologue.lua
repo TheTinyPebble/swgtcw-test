@@ -318,7 +318,7 @@ function wodPrologueScreenplay:notifyKilledHuntTarget(pPlayer, pVictim)
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_01)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_02)
 			end
-			wodRubinaReturn:start(pPlayer)
+			wodRubinaReturnGoto:start(pPlayer)
 			return 1
 		end
 	end

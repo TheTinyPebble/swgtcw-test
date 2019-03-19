@@ -69,7 +69,7 @@ function wod_outcast_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNp
 			QuestManager.activateQuest(pPlayer, getPlayerQuestID(outcast .. "_03"))
 			clonedScreen:setDialogTextStringId("@conversation/" .. outcast .. ":s_108")
 		end
-		wodRubinaReturn:start(pPlayer)
+		wodRubinaReturnGoto:start(pPlayer)
 	end
 	
     return pConvScreen

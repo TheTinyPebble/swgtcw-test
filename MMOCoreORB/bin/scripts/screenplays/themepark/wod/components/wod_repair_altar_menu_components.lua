@@ -1,7 +1,5 @@
 local QuestManager = require("managers.quest.quest_manager")
 
---TODO: Add schematic
-
 wodRepairAltar1MenuComponent = {}
 
 function wodRepairAltar1MenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)

@@ -1,4 +1,5 @@
 object_tangible_furniture_wod_themepark_data_cache = object_tangible_furniture_wod_themepark_shared_data_cache:new {
+	objectMenuComponent = "wodLeftBehindCacheMenuComponent",
 }
 
 ObjectTemplates:addTemplate(object_tangible_furniture_wod_themepark_data_cache, "object/tangible/furniture/wod_themepark/data_cache.iff")

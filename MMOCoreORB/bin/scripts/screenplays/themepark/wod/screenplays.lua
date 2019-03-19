@@ -15,6 +15,7 @@ includeFile("themepark/wod/repeatable_quests/wod_kill_spiderclan.lua")
 includeFile("themepark/wod/repeatable_quests/wod_kill_spiderclan_return.lua")
 includeFile("themepark/wod/repeatable_quests/wod_entertainer_quest.lua")
 includeFile("themepark/wod/repeatable_quests/wod_entertainer_quest_return.lua")
+includeFile("themepark/wod/repeatable_quests/wod_herbs_return.lua")
 
 --Spiderclan Arc
 includeFile("themepark/wod/spiderclan_arc/wod_ehs_goto.lua")

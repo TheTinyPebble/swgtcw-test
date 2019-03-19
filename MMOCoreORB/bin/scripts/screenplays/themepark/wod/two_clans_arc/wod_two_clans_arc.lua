@@ -136,12 +136,14 @@ function wodTwoClansArc:spawnFirstSister(pPlayer)
 	end
 	
 	PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_sister1:task04_waypoint_name", "", -4782, -2951, WAYPOINTYELLOW, true, true, 0)
-	--local pFirstSister = spawnMobile()
+	local pFirstSister = spawnMobile("dathomir", "wod_first_sister", -1, -4782, 128.4, -2951, -82, 0)
+	writeData("wodThemepark:firstSisterActive", 1)
 	CreatureObject(pFirstSister):setPvpStatusBitmask(0)
 	createObserver(OBJECTDESTRUCTION, "wodTwoClansArc", "notifyFirstSisterKilled", pFirstSister)
+	createEvent(10 * 60 * 1000, "wodTwoClansArc", "despawnMobile", pBoss, "")
 end
 
-function wodTwoClansArc:startSecondSisterEncounter(pNpc)
+function wodTwoClansArc:startFirstSisterEncounter(pNpc)
 	if (pNpc == nil) then
 		return
 	end
@@ -202,8 +204,8 @@ function wodTwoClansArc:spawnSecondSisterFireAdds(location)
 		return
 	end
 	
-	for i = 1, #self.sister2Adds[location] do
-		--local spawnMobile()
+	for i,v in ipairs(#self.sister2Adds[location]) do
+		local spawnMobile("dathomir", v[1], 0, v[2], v[3], v[4], v[5], 0)
 	end
 end
 
@@ -239,9 +241,11 @@ function wodTwoClansArc:spawnSecondSister(pPlayer)
 	end
 	
 	PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_sister2:task07_waypoint_name", "", -3517, -6050, WAYPOINTYELLOW, true, true, 0)
-	--local pSecondSister = spawnMobile()
+	local pSecondSister = spawnMobile("dathomir", "wod_second_sister", -1, -3517, 92.5, -6050, -63, 0)
+	writeData("wodThemepark:secondSisterActive", 1)
 	CreatureObject(pSecondSister):setPvpStatusBitmask(0)
 	createObserver(OBJECTDESTRUCTION, "wodTwoClansArc", "notifySecondSisterKilled", pSecondSister)
+	createEvent(10 * 60 * 1000, "wodTwoClansArc", "despawnMobile", pBoss, "")
 end
 
 function wodTwoClansArc:startSecondSisterEncounter(pNpc)
@@ -301,9 +305,9 @@ function wodTwoClansArc:sendSecondSisterCommMessage(pPlayer)
 end
 
 function wodTwoClansArc:spawnThirdSister()
-	--local pThirdSister = spawnMobile
+	local pThirdSister = spawnMobile("dathomir", "wod_second_sister", -1, -3227, 29.7, -3707, -86, 0)
 	CreatureObject(pFirstSister):setPvpStatusBitmask(0)
-	createObserver(OBJECTDESTRUCTION, "wodTwoClansArc", "notifyFirstSisterKilled", pFirstSister)
+	createObserver(OBJECTDESTRUCTION, "wodTwoClansArc", "notifyThirdSisterKilled", pFirstSister)
 end
 
 function wodTwoClansArc:startThirdSisterEncounter(pNpc)
@@ -313,6 +317,7 @@ function wodTwoClansArc:startThirdSisterEncounter(pNpc)
 	
 	CreatureObject(pNpc):setPvpStatusBitmask(AGGRESSIVE + ATTACKABLE + ENEMY)
 	spatialChat(pNpc, "@theme_park_wod/wod:third_sister_aggro")
+	createEvent(10 * 60 * 1000, "wodTwoClansArc", "despawnMobile", pNpc, "")
 end
 
 function wodTwoClansArc:notifyThirdSisterKilled(pThirdSister)
@@ -323,13 +328,13 @@ function wodTwoClansArc:notifyThirdSisterKilled(pThirdSister)
 	local ownerID = readData("wodThemePark:thirdSisterOwnerID")
 	
 	if (ownerID == nil) then
-		return 1
+		return 0
 	end
 	
 	local pOwner = getSceneObject(ownerID)
 	
 	if (pOwner == nil) then
-		return 1
+		return 0
 	end
 	
 	if (QuestManager.hasActiveQuest(pOwner, QuestManager.quests.WOD_NS_SISTER3_02)) then
@@ -341,8 +346,7 @@ function wodTwoClansArc:notifyThirdSisterKilled(pThirdSister)
 	wodSister3ReturnGoto:start(pOwner)
 	
 	createEvent(5 * 1000, "wodTwoClansArc", "sendThirdSisterCommMessage", pOwner, "")
-	createEvent(60 * 1000, "wodTwoClansArc", "spawnThirdSister", nil, "")
-	return 1
+	return 0
 end
 
 function wodTwoClansArc:sendThirdSisterCommMessage(pPlayer)
@@ -361,4 +365,17 @@ function wodTwoClansArc:sendThirdSisterCommMessage(pPlayer)
 	sui.setPrompt("@theme_park_wod/wod_sister3:task02_comm_message_text")
 	sui.hideCancelButton()
 	sui.sendTo(pPlayer)
+end
+
+function wodTwoClansArc:despawnMobile(pMobile)
+	if (pMobile == nil) then
+		return
+	end
+
+	if (CreatureObject(pMobile):isInCombat() or AiAgent(pMobile):getFollowObject() ~= nil) then
+		createEvent(60 * 1000, "wodTwoClansArc", "despawnMobile", pMobile, "")
+		return
+	end
+
+	SceneObject(pMobile):destroyObjectFromWorld()
 end

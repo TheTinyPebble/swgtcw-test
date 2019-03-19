@@ -12,7 +12,7 @@ function wod_first_sister_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTem
 		return convoTemplate("not_elligible")
 	end
 	
-	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_04"))) then
+	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_04")) and not readData("wodThemepark:firstSisterActive") == 1) then
 		return convoTemplate("initial")
 	end
 	

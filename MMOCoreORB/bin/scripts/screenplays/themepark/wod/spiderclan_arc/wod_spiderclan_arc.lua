@@ -14,6 +14,27 @@ function wodSpiderclanArc:startBossFight()
 	writeData("wodThemepark:spiderBossState", 1)
 	createEvent(10 * 60 * 1000, "wodSpiderclanArc", "failBossFight", pBoss, "")
 	self:sendMessageToGroup(pBoss)
+	
+	local pOwner = getSceneObject(readData("wodThemepark:spiderBossFightOwnerID"))
+	
+	if (pOwner == nil) then
+		return
+	end
+	
+	local groupSize = CreatureObject(pOwner):getGroupSize()
+
+	for i = 0, groupSize - 1, 1 do
+		local pMember = CreatureObject(pOwner):getGroupMember(i)
+		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+			if (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_02)) then
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_02)
+				QuestManager.activateQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_03)
+			elseif (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT_02)) then
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT_02)
+				QuestManager.activateQuest(pMember, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT_03)
+			end
+		end
+	end
 end
 
 function wodSpiderclanArc:notifyBossKilled(pBoss)
@@ -65,20 +86,26 @@ function wodSpiderclanArc:sendMessageToGroup(pBoss)
 		return
 	end
 	
-	if (bossState == 1) then
-		writeData("wodThemepark:spiderBossState", 2)
-		createEvent(9 * 60 * 1000, "wodSpiderclanArc", "sendMessageToGroup", nil, "")
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_spider_start")
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_begin")
-	elseif (bossState == 2) then
-		writeData("wodThemepark:spiderBossState", 3)
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_time_warning")
-	elseif (bossState == 3) then
-		writeData("wodThemepark:spiderBossState", 4)
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_leaving")
-	elseif (bossState == 4) then
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_failed")
+	local groupSize = CreatureObject(pOwner):getGroupSize()
+
+	for i = 0, groupSize - 1, 1 do
+		local pMember = CreatureObject(pOwner):getGroupMember(i)
+		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+			if (bossState == 1) then
+				createEvent(9 * 60 * 1000, "wodSpiderclanArc", "sendMessageToGroup", nil, "")
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_spider_start")
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_begin")
+			elseif (bossState == 2) then
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_time_warning")
+			elseif (bossState == 3) then
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_leaving")
+			elseif (bossState == 4) then
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_failed")
+			end
+		end
 	end
+	
+	writeData("wodThemepark:spiderBossState", bossState + 1)
 end
 
 function wodSpiderclanArc:failBossFight(pBoss)
@@ -257,7 +284,6 @@ function wodSpiderclanArc:sendCommMessage(pPlayer)
 	local sui = SuiMessageBox.new("wodSpiderclanArc", "noCallback")
 	sui.hideCancelButton()
 
-	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_03)) then
 		sui.setTitle("@theme_park_wod/wod_ns_lost_e01:comm_message_title")
 		sui.setPrompt("@theme_park_wod/wod_ns_lost_e01:task03_comm_message_text")
@@ -273,6 +299,14 @@ function wodSpiderclanArc:sendCommMessage(pPlayer)
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)) then
 		sui.setTitle("@theme_park_wod/wod_sm_lost_e02:comm_message_title")
 		sui.setPrompt("@theme_park_wod/wod_sm_lost_e02:task01_comm_message_text")
+		sui.sendTo(pPlayer)
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_02)) then
+		sui.setTitle("@theme_park_wod/wod_ns_lost_e01:comm_message_title")
+		sui.setPrompt("@theme_park_wod/wod_ns_lost_e01:task02_comm_message_text")
+		sui.sendTo(pPlayer)
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_02)) then
+		sui.setTitle("@theme_park_wod/wod_sm_lost_e01:comm_message_title")
+		sui.setPrompt("@theme_park_wod/wod_sm_lost_e01:task02_comm_message_text")
 		sui.sendTo(pPlayer)
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_02)) then
 		sui.setTitle("@theme_park_wod/wod_ns_ehs:comm_message_title")

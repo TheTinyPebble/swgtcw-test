@@ -6,7 +6,7 @@ wodEntNSReturnEscort = Escort:new {
 	taskName = "wodEntNSReturnEscort",
 	-- GoToLocation properties
 	waypointDescription = "@theme_park_wod/wod_ns_rancor_tamer:task02_waypoint_name",
-	returnPoint = {x = -4086, y = -156},
+	returnPoint = {x = -4153, y = -96},
 	returnPlanet = "dathomir",
 	areaRadius = 16,
 }
@@ -25,9 +25,9 @@ wodEntSMReturnEscort = Escort:new {
 	taskName = "wodEntSMReturnEscort",
 	-- GoToLocation properties
 	waypointDescription = "@theme_park_wod/wod_sm_rancor_tamer:task02_waypoint_name",
-	returnPoint = {x = 139, y = 4489},
+	returnPoint = {x = 528, y = 4208},
 	returnPlanet = "dathomir",
-	spawnRadius = 5,
+	areaRadius = 16,
 }
 
 function wodEntSMReturnEscort:onEnteredActiveArea(pPlayer)

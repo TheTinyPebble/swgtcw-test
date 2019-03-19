@@ -6,9 +6,6 @@ registerScreenPlay("wodWholeTruthArc", true)
 
 local QuestManager = require("managers.quest.quest_manager")
 
--- TODO: Boss Fight
--- TODO: Reward handling
-
 function wodWholeTruthArc:start()
 	self:spawnCagedRancor()
 end
@@ -29,6 +26,27 @@ function wodWholeTruthArc:startBossFight()
 	createEvent(10 * 1000, "wodWholeTruthArc", "sendMessageToGroup", pBoss, "")
 	createEvent(10 * 60 * 1000, "wodWholeTruthArc", "failBossFight", pBoss, "")
 	self:sendMessageToGroup(pBoss)
+	
+	local pOwner = getSceneObject(readData("wodThemepark:spiderBossFightOwnerID"))
+	
+	if (pOwner == nil) then
+		return
+	end
+	
+	local groupSize = CreatureObject(pOwner):getGroupSize()
+
+	for i = 0, groupSize - 1, 1 do
+		local pMember = CreatureObject(pOwner):getGroupMember(i)
+		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+			if (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_02)) then
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_02)
+				QuestManager.activateQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_03)
+			elseif (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_SM_KYRISA_BOSS_FIGHT_02)) then
+				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_SM_KYRISA_BOSS_FIGHT_02)
+				QuestManager.activateQuest(pMember, QuestManager.quests.WOD_SM_KYRISA_BOSS_FIGHT_03)
+			end
+		end
+	end
 end
 
 function wodWholeTruthArc:notifyBossKilled(pBoss)
@@ -80,23 +98,28 @@ function wodWholeTruthArc:sendMessageToGroup(pBoss)
 		return
 	end
 	
-	if (bossState == 1) then
-		writeData("wodThemepark:rancorBossState", 2)
-		createEvent(9 * 60 * 1000, "wodWholeTruthArc", "sendMessageToGroup", nil, "")
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_rancor_start")
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_begin")
-	elseif (bossState == 2) then
-		writeData("wodThemepark:rancorBossState", 3)
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_time_warning")
-	elseif (bossState == 3) then
-		writeData("wodThemepark:rancorBossState", 4)
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:mutating_rancor")
-	elseif (bossState == 4) then
-		writeData("wodThemepark:rancorBossState", 5)
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_leaving")
-	elseif (bossState == 5) then
-		CreatureObject(pPlayer):sendGroupMessage("@theme_park_wod/wod:boss_failed")
+	local groupSize = CreatureObject(pOwner):getGroupSize()
+
+	for i = 0, groupSize - 1, 1 do
+		local pMember = CreatureObject(pOwner):getGroupMember(i)
+		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+			if (bossState == 1) then
+				createEvent(9 * 60 * 1000, "wodSpiderclanArc", "sendMessageToGroup", nil, "")
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_rancor_start")
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_begin")
+			elseif (bossState == 2) then
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_time_warning")
+			elseif (bossState == 3) then
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:mutating_rancor")
+			elseif (bossState == 4) then
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_leaving")
+			elseif (bossState == 5) then
+				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_failed")
+			end
+		end
 	end
+	
+	writeData("wodThemepark:rancorBossState", bossState + 1)
 end
 
 function wodWholeTruthArc:failBossFight(pBoss)

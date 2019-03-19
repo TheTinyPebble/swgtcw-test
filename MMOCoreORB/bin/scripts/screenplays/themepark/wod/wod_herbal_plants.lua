@@ -155,9 +155,19 @@ function wodHerbalPlants:checkQuestStatus(pPlayer, questName)
 		end
 	end
 	
-	QuestManager.completeQuest(pPlayer, getPlayerQuestID(questName .. "_06"))
-	QuestManager.activateQuest(pPlayer, getPlayerQuestID(questName .. "_07"))
-	wodRubinaReturn:start(pPlayer)
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_06)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_07)
+		wodNSHerbReturnGoto:start(pPlayer)
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_06)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07)
+		wodSMHerbReturnGoto:start(pPlayer)
+	else
+		QuestManager.completeQuest(pPlayer, getPlayerQuestID(questName .. "_06"))
+		QuestManager.activateQuest(pPlayer, getPlayerQuestID(questName .. "_07"))
+		wodRubinaReturn:start(pPlayer)
+	end
 end
 
 function wodHerbalPlants:addBankCredits(pPlayer)
@@ -178,5 +188,5 @@ function wodHerbalPlants:addBankCredits(pPlayer)
 	end
 	
 	local bankCredits = CreatureObject(pPlayer):getBankCredits()
-	CreatureObject(pPlayer):setBankCredits(bankCredits + rewardedCredits) -- TODO: Magic number
+	CreatureObject(pPlayer):setBankCredits(bankCredits + rewardedCredits)
 end

@@ -1,5 +1,66 @@
 witchesOfDathomirScreenplay = ScreenPlay:new {
-
+	spawnZones = {
+		{ --Mutant rancor prologue location
+			x = -5536, 
+			y = 3968, 
+			spawnCount = 15, 
+			radius = 50, 
+			respawnTimer = 300,
+			spawnTemplates = {
+				
+			},
+		}, 
+		{ --Spiderclan prologue location
+			x = -1887, 
+			y = 124, 
+			spawnCount = 15, 
+			radius = 50, 
+			respawnTimer = 300,
+			spawnTemplates = {
+				
+			},
+		}, 
+		{ --First Sister Malklocs
+			x = -5039,
+			y = -2768, 
+			spawnCount = 20, 
+			radius = 250, 
+			respawnTimer = 150,
+			spawnTemplates = {
+				
+			},
+		}, 
+		{ --Second Sister Village
+			x = -3572,
+			y = -6017, 
+			spawnCount = 40, 
+			radius = 75,
+			respawnTimer = 300,
+			spawnTemplates = {
+				
+			},
+		}, 
+		{ --Breeding Cave Spiderclan
+			x = 308,
+			y = -190, 
+			spawnCount = 10, 
+			radius = 40,
+			respawnTimer = 300,
+			spawnTemplates = {
+				
+			},
+		}, 
+		{ --Spiderclan Cave obfuscatrix spawns
+			x = -1217,
+			y = 6261, 
+			spawnCount = 5, 
+			radius = 40,
+			respawnTimer = 300,
+			spawnTemplates = {
+				
+			},
+		}, 
+	}
 }
 
 registerScreenPlay("witchesOfDathomirScreenplay", true)
@@ -27,19 +88,71 @@ function witchesOfDathomirScreenplay:onPlayerLoggedIn(pPlayer)
 end
 
 function witchesOfDathomirScreenplay:spawnMobiles()
-	spawnMobile("dathomir", "wod_omogg_rep", 1, 558, 6, 3073, 29, 0)
-	spawnMobile("dathomir", "wod_rubina", 1, -3177, 21.8, 3184, 0, 0)
-	spawnMobile("dathomir", "wod_outcast_01", 1, 866, 132, 1095, 162, 0)
-	spawnMobile("dathomir", "wod_outcast_02", 1, -1000, 116.2, 862, -131, 0)
-	spawnMobile("dathomir", "wod_outcast_03", 1, -2597, 131.3, 4952, 55, 0)
-	spawnMobile("dathomir", "wod_outcast_04", 1, 1482, 131.7, 3515, 43, 0)
-	spawnMobile("dathomir", "wod_outcast_05", 1, 1125, 135, -1022, -122, 0)
-	spawnMobile("dathomir", "wod_outcast_06", 1, -856, 146.7, 2788, -144, 0)
-	spawnMobile("dathomir", "wod_outcast_07", 1, -7121, 363.7, 2933, 111, 0)
+	--Prologue
+	spawnMobile("dathomir", "wod_omogg_rep", -1, 558, 6, 3073, 29, 0)
+	spawnMobile("dathomir", "wod_rubina", -1, -3177, 21.8, 3184, 0, 0)
+	spawnMobile("dathomir", "wod_outcast_01", -1, 866, 132, 1095, 162, 0)
+	spawnMobile("dathomir", "wod_outcast_02", -1, -1000, 116.2, 862, -131, 0)
+	spawnMobile("dathomir", "wod_outcast_03", -1, -2597, 131.3, 4952, 55, 0)
+	spawnMobile("dathomir", "wod_outcast_04", -1, 1482, 131.7, 3515, 43, 0)
+	spawnMobile("dathomir", "wod_outcast_05", -1, 1125, 135, -1022, -122, 0)
+	spawnMobile("dathomir", "wod_outcast_06", -1, -856, 146.7, 2788, -144, 0)
+	spawnMobile("dathomir", "wod_outcast_07", -1, -7121, 363.7, 2933, 111, 0)
+	--Singing Mountain Clan
+	spawnMobile("dathomir", "wod_telo", -1, -25.9, 2.0, -7.4, -153, 2665882)
+	spawnMobile("dathomir", "wod_aujante_klee", -1, 3, 3, -5.2, 176, 2665884)
+	spawnMobile("dathomir", "wod_azzenaj", -1, -12.0, 2.0, 14.7, 150, 2665880)
+	spawnMobile("dathomir", "wod_zideera", -1, -12.3, 2, -8.6, -79, 2665882)
+	spawnMobile("dathomir", "wod_vurlene", -1, -12, 3, -9.5, 72, 2665880)
+	spawnMobile("dathomir", "wod_hazel", -1, -14.2, 1.9, -21, -20, 2665883)
+	spawnMobile("dathomir", "wod_vhaunda", -1, -22.3, 2, 5.05, 5, 2665881)
+	spawnMobile("dathomir", "wod_izaryx", -1, -12, 2, -4, -110, 2665882)
+	spawnMobile("dathomir", "wod_sm_vendor", -1, -27.3, 2.0, 9.0, 66, 2665881)
+	--Nightsister
+	spawnMobile("dathomir", "wod_saik", -1, 3.2, 0.8, -1.8, -5, 189375)
+	spawnMobile("dathomir", "wod_num", -1, -4001.0, 119.0, -62.4, -165, 0)
+	spawnMobile("dathomir", "wod_leandra", -1, 7.7, 7.2, -34.2, 22, 189382)
+	spawnMobile("dathomir", "wod_ns_vendor", -1, 0.2, 0.8, -54.7, -5, 189379)
+	spawnMobile("dathomir", "wod_satra", -1, -13.6, 7.2, -14.4, -164, 189384)
+	spawnMobile("dathomir", "wod_fath_hray", -1, -12, 7.2, -36.7, 13, 189384)
+	spawnMobile("dathomir", "wod_diax", -1, -20.5, 7.2, -27.4, 140, 189384)
+	spawnMobile("dathomir", "wod_kais", -1, 14.2, 7.2, -15, -92, 189382)
+	spawnMobile("dathomir", "woth_gethzerion", -1, -2, 7.2, -1, -135, 189383)
+	
+	--Other statics
+	spawnMobile("dathomir", "wod_ghost_witch", -1, -6894.9, 461.8, -4853.8, 109, 0)
+	spawnMobile("dathomir", "wod_rescue_initiate", -1, 1.4, -46.1, -150.6, -11, 3695706)
 end
 
 function witchesOfDathomirScreenplay:spawnSceneObjects()
+	--Herb baskets
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/pro_ns_herb_storage.iff", -3181, 22.1, 3185.1, 0, 0)
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/pro_sm_herb_storage.iff", -3172, 25.5, 3182.4, 0, 0)
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/ns_herb_storage.iff", -11.2, 7.2, -30.5, 189384, 0)
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/herb_storage.iff", -29, 2, -3.4, 2665882, 0)
 
+	--Repair altars
+	spawnSceneObject("dathomir", "object/tangible/content/wod_crafting_alter_1.iff", -1150, 128, 1281, 0, 0)
+	spawnSceneObject("dathomir", "object/tangible/content/wod_crafting_alter_2.iff", 1455, 135, 1387, 0, 0)
+	spawnSceneObject("dathomir", "object/tangible/content/wod_crafting_alter_3.iff", -6703, 125, 3087, 0, 0)
+	spawnSceneObject("dathomir", "object/tangible/content/wod_crafting_alter_4.iff", 2774, 15, 6466, 0, 0)
+	
+	--First sister altar
+	spawnSceneObject("dathomir", "object/tangible/content/wod_first_sister_altar.iff", -4841, 135, -2938, 0, 0)
+	
+	--Second sister fire
+	--Sister2 village: -3572, -6017
+
+	--Ghost guide abandoned village: -6850, -4897
+	
+	--Trampled Veg (lost e01)
+	local pPlant = spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/wod_trampled_plant.iff", -1316, 17, 6163 , 0, 0)
+	SceneObject(pPlant):setObjectMenuComponent("wodSpiderclanVegetationMenuComponent")
+	
+	----Caves And Temples (snapshot edits)
+	--Temple of the Stars (Left Behind): 5269, 121, 165
+	--Cave of Mutations (Kyrisa): 1993, 42, 1823
+	--Breeding Cave (Queen Mother): 308, 114, -190
 end
 
 function witchesOfDathomirScreenplay:handleReward(pPlayer, key)

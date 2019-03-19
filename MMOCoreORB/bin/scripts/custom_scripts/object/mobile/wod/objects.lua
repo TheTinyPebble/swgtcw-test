@@ -297,3 +297,28 @@ object_mobile_shared_wod_third_sister = SharedCreatureObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_mobile_shared_wod_third_sister, "object/mobile/shared_wod_third_sister.iff")
+
+object_mobile_shared_dressed_dathomir_nightsister_herbalist = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_dathomir_nightsister_herbalist.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_dathomir_nightsister_herbalist, "object/mobile/shared_dressed_dathomir_nightsister_herbalist.iff")
+
+object_mobile_shared_dressed_dathomir_sing_mt_clan_herbalist = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_dathomir_sing_mt_clan_herbalist.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_dathomir_sing_mt_clan_herbalist, "object/mobile/shared_dressed_dathomir_sing_mt_clan_herbalist.iff")
+
+object_mobile_shared_dressed_dathomir_sing_mt_clan_sage = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_dathomir_sing_mt_clan_sage.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_dathomir_sing_mt_clan_sage, "object/mobile/shared_dressed_dathomir_sing_mt_clan_sage.iff")
+
+object_mobile_shared_dressed_dathomir_nightsister_sage = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_dathomir_nightsister_sage.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_dathomir_nightsister_sage, "object/mobile/shared_dressed_dathomir_nightsister_sage.iff")
+

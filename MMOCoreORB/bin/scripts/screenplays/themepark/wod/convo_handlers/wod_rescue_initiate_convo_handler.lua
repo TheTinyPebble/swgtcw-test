@@ -23,6 +23,7 @@ function wod_rescue_initiate_convo_handler:runScreenHandlers(pConvTemplate, pPla
 	if (screenID == "complete_quest_" .. clan) then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_lost_e02_02"))
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_lost_e02_03"))
+		wodSpiderclanArc:sendCommMessage(pPlayer)
 		wodSpiderclanArc:startEliminateQuest(pPlayer)
 	end
 
