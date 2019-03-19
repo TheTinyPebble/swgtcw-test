@@ -11,7 +11,7 @@ function wodWholeTruthArc:start()
 end
 
 function wodWholeTruthArc:spawnCagedRancor()
-	--local pRancor = spawnMobile()
+	--local pRancor = spawnMobile() --wod_mutant_rancor_boss
 	CreatureObject(pRancor):setPvpStatusBitmask(0)
 	writeData("wodThemepark:cagedRancorID", SceneObject(pRancor):getObjectID())
 end

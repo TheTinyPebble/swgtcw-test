@@ -31,5 +31,5 @@ function wodRubinaEpilogue:startEncounter(pPlayer)
 	end
 
 	CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod_left_behind:task02_start_message")
-	--spawnMobile()
+	--spawnMobile() wod_kwi
 end

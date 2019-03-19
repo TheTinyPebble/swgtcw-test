@@ -9,9 +9,10 @@ local QuestManager = require("managers.quest.quest_manager")
 -- TODO: Patrol move before boss despawns
 
 function wodSpiderclanArc:startBossFight()	
-	--local pBoss = spawnMobile()
+	--local pBoss = spawnMobile() wod_spider_queen_consort
 	createObserver(OBJECTDESTRUCTION, "wodSpiderclanArc", "notifyBossKilled", pBoss)
 	writeData("wodThemepark:spiderBossState", 1)
+	createEvent(30 * 1000, "wodSpiderclanArc", "spawnAdds", nil, "")
 	createEvent(10 * 60 * 1000, "wodSpiderclanArc", "failBossFight", pBoss, "")
 	self:sendMessageToGroup(pBoss)
 	
@@ -35,6 +36,12 @@ function wodSpiderclanArc:startBossFight()
 			end
 		end
 	end
+end
+
+function wodSpiderclanArc:spawnAdds()
+	--spawnMobile() wod_spider_queen_guard
+	--spawnMobile()
+	--spawnMobile()
 end
 
 function wodSpiderclanArc:notifyBossKilled(pBoss)
@@ -146,13 +153,13 @@ function wodSpiderclanArc:startEliminateQuest(pPlayer)
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_01) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)) then
 		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTargetGoal", 1) -- TODO: Magic number
-		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spider_nightsister_obfuscatrix") --TODO: Magic string
+		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spiderclan_obfuscatrix") --TODO: Magic string
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_03)) then
 		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTargetGoal", 5) -- TODO: Magic number
 		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spider_nightsister_initiate") --TODO: Magic string
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_02) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_02)) then
 		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTargetGoal", 6) -- TODO: Magic number
-		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spider_nightsister_obfuscatrix") --TODO: Magic string
+		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spiderclan_obfuscatrix") --TODO: Magic string
 	end
 	
 	createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
@@ -196,17 +203,17 @@ function wodSpiderclanArc:notifyKilledHuntTarget(pPlayer, pVictim)
 	if (huntTarget == nil or huntTarget == "") then
 		local newTarget = ""
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_01) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)) then
-			newTarget = "wod_spider_nightsister_obfuscatrix" --TODO: Magic string
+			newTarget = "wod_spiderclan_obfuscatrix" --TODO: Magic string
 			printLuaError("wodSpiderclanArc:notifyKilledHuntTarget, nil huntTarget for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pVictim):getObjectName() .. "). Setting to " .. newTarget .. ".")
-			writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spider_nightsister_obfuscatrix") --TODO: Magic string
+			writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spiderclan_obfuscatrix") --TODO: Magic string
 		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_03)) then
 			newTarget = "wod_spider_nightsister_initiate" --TODO: Magic string
 			printLuaError("wodSpiderclanArc:notifyKilledHuntTarget, nil huntTarget for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pVictim):getObjectName() .. "). Setting to " .. newTarget .. ".")
 			writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spider_nightsister_initiate") --TODO: Magic string
 		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_02) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_02)) then
-			newTarget = "wod_spider_nightsister_obfuscatrix" --TODO: Magic string
+			newTarget = "wod_spiderclan_obfuscatrix" --TODO: Magic string
 			printLuaError("wodSpiderclanArc:notifyKilledHuntTarget, nil huntTarget for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pVictim):getObjectName() .. "). Setting to " .. newTarget .. ".")
-			writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spider_nightsister_obfuscatrix") --TODO: Magic string
+			writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spiderclan_obfuscatrix") --TODO: Magic string
 		end
 		huntTarget = newTarget
 	end

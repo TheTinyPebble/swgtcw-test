@@ -322,3 +322,14 @@ object_mobile_shared_dressed_dathomir_nightsister_sage = SharedCreatureObjectTem
 
 ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_dathomir_nightsister_sage, "object/mobile/shared_dressed_dathomir_nightsister_sage.iff")
 
+object_mobile_shared_dressed_dathomir_nightsister_obfuscatrix = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_dathomir_nightsister_obfuscatrix.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_dathomir_nightsister_obfuscatrix, "object/mobile/shared_dressed_dathomir_nightsister_obfuscatrix.iff")
+
+object_mobile_shared_spider_queen_guard = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_spider_queen_guard.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_spider_queen_guard, "object/mobile/shared_spider_queen_guard.iff")

@@ -7,7 +7,7 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 			radius = 50, 
 			respawnTimer = 300,
 			spawnTemplates = {
-				
+				"mutant_rancer"
 			},
 		}, 
 		{ --Spiderclan prologue location
@@ -17,7 +17,15 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 			radius = 50, 
 			respawnTimer = 300,
 			spawnTemplates = {
-				
+				"spiderclan_acolyte",
+				"spiderclan_auspex",
+				"spiderclan_crawler",
+				"spiderclan_elder",
+				"spiderclan_protector",
+				"spiderclan_sentinel",
+				"spiderclan_sentry",
+				"spiderclan_stalker",
+				"spiderclan_web_dancer"
 			},
 		}, 
 		{ --First Sister Malklocs
@@ -27,7 +35,9 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 			radius = 250, 
 			respawnTimer = 150,
 			spawnTemplates = {
-				
+				"malkloc_plainswalker",
+				"female_malkloc_plainswalker",
+				"malkloc_bull",
 			},
 		}, 
 		{ --Second Sister Village
@@ -37,7 +47,8 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 			radius = 75,
 			respawnTimer = 300,
 			spawnTemplates = {
-				
+				"wod_reanimated_slave",
+				"wod_reanimated_slave",
 			},
 		}, 
 		{ --Breeding Cave Spiderclan
@@ -47,7 +58,7 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 			radius = 40,
 			respawnTimer = 300,
 			spawnTemplates = {
-				
+				"wod_spiderclan_obfuscatrix"
 			},
 		}, 
 		{ --Spiderclan Cave obfuscatrix spawns
@@ -57,7 +68,7 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 			radius = 40,
 			respawnTimer = 300,
 			spawnTemplates = {
-				
+				"wod_spiderclan_obfuscatrix"
 			},
 		}, 
 	}
