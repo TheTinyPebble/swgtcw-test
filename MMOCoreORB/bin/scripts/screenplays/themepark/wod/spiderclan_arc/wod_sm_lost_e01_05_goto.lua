@@ -1,12 +1,12 @@
 local QuestManager = require("managers.quest.quest_manager")
 require("utils.helpers")
 
-wodSMReconGoto = GoToLocation:new {
+wodSMLostE0105Goto = GoToLocation:new {
 	-- Task properties
-	taskName = "wodSMReconGoto",
+	taskName = "wodSMLostE0105Goto",
 	-- GoToLocation properties
-	waypointDescription = "@theme_park_wod/wod_sm_recon:task01_waypoint_name",
-	spawnPoint = {x = -6850, y = -4897},
+	waypointDescription = "@theme_park_wod/wod_sm_lost_e01:task05_waypoint_name",
+	spawnPoint = {x = 149, y = 4500},
 	spawnPlanet = "dathomir",
 	spawnRadius = 5,
 }
@@ -14,16 +14,13 @@ wodSMReconGoto = GoToLocation:new {
 -- Event handler for the enter active area event.
 -- The event will complete the task.
 -- @param pPlayer pointer to the creature object of the player.
-function wodSMReconGoto:onEnteredActiveArea(pPlayer)
+function wodSMLostE0105Goto:onEnteredActiveArea(pPlayer)
 	if (pPlayer == nil) then
 		return 1
 	end
-
-	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_RECON_01)
-	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_RECON_02)
 
 	self:finish(pPlayer)
 	return 1
 end
 
-return wodSMReconGoto
+return wodSMLostE0105Goto
