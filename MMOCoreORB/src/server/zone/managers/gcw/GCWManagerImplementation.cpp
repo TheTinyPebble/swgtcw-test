@@ -1567,10 +1567,10 @@ void GCWManagerImplementation::scheduleBaseDestruction(BuildingObject* building,
 		StringBuffer zBroadcast;
 		zBroadcast << "Countdown: Estimated time to detonation: " << minutesRemaining << " minutes";
 		if (building->getFaction() == Factions::FACTIONREBEL){
-			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#FF9933 ATTENTION REBELS, YOUR BASE IS UNDER ATTACK");
+			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#FF9933 ATTENTION SEPARATISTS, YOUR BASE IS UNDER ATTACK");
 			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
 		} else if (building->getFaction() == Factions::FACTIONIMPERIAL){
-			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#7133FF ATTENTION IMPERIALS, YOUR BASE IS UNDER ATTACK");
+			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#7133FF ATTENTION REPUBLIC MEMBERS, YOUR BASE IS UNDER ATTACK");
 			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
 		}
 		
@@ -1610,10 +1610,10 @@ void GCWManagerImplementation::doBaseDestruction(BuildingObject* building) {
 			StringBuffer zBroadcast;
 			zBroadcast << "Countdown: Estimated time to detonation: " << minutesRemaining << " minutes";
 			if (building->getFaction() == Factions::FACTIONREBEL){
-				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#FF9933 ATTENTION REBELS, YOUR BASE IS UNDER ATTACK");
+				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#FF9933 ATTENTION SEPARATISTS, YOUR BASE IS UNDER ATTACK");
 				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
 			} else if (building->getFaction() == Factions::FACTIONIMPERIAL){
-				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#7133FF ATTENTION IMPERIALS, YOUR BASE IS UNDER ATTACK");
+				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#7133FF ATTENTION REPUBLIC MEMBERS, YOUR BASE IS UNDER ATTACK");
 				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
 			}
 			return;
@@ -1652,9 +1652,9 @@ void GCWManagerImplementation::doBaseDestruction(BuildingObject* building) {
 
 			owner->sendSystemMessage(message);
 			if (building->getFaction() == Factions::FACTIONREBEL){
-				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#FF9933 ATTENTION REBELS, YOUR BASE HAS BEEN DESTROYED!!");
+				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#FF9933 ATTENTION SEPARATISTS, YOUR BASE HAS BEEN DESTROYED!!");
 			} else if (building->getFaction() == Factions::FACTIONIMPERIAL){
-				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#7133FF ATTENTION IMPERIALS, YOUR BASE HAS BEEN DESTROYED!!");
+				building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#7133FF ATTENTION REPUBLIC MEMBERS, YOUR BASE HAS BEEN DESTROYED!!");
 			}
 		}
 	}
@@ -1737,10 +1737,10 @@ void GCWManagerImplementation::abortShutdownSequence(BuildingObject* building, C
 		StringBuffer zBroadcast;
 		zBroadcast << "COUNTDOWN ABORTED: FACILITY SHUTTING DOWN!!";
 		if (building->getFaction() == Factions::FACTIONREBEL){
-			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#FF9933 ATTENTION REBELS, YOUR BASE IS UNDER ATTACK");
+			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#FF9933 ATTENTION SEPARATISTS, YOUR BASE IS UNDER ATTACK");
 			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
 		} else if (building->getFaction() == Factions::FACTIONIMPERIAL){
-			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#7133FF ATTENTION IMPERIALS, YOUR BASE IS UNDER ATTACK");
+			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, "\\#7133FF ATTENTION REPUBLIC MEMBERS, YOUR BASE IS UNDER ATTACK");
 			building->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
 		}
 

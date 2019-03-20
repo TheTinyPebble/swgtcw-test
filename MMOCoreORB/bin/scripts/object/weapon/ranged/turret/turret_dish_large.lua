@@ -66,8 +66,8 @@ object_weapon_ranged_turret_turret_dish_large = object_weapon_ranged_turret_shar
 	idealAccuracy = 70,
 	maxRange = 80,
 	maxRangeAccuracy = 0,
-	minDamage = 250,
-	maxDamage = 700,
+	minDamage = 350,
+	maxDamage = 800,
 	attackSpeed = 1,
 	woundsRatio = 9,
 }
