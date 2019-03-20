@@ -44,6 +44,9 @@ function wod_sm_guide_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pN
 	end
 
 	if (screenID == "continue" or screenID == "end_conv") then
+		if (readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment") == "ns") then
+			witchesOfDathomirScreenplay:handleClanSwap(pPlayer, "ns")
+		end
 		deleteScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 		writeScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment", "sm")
 	end

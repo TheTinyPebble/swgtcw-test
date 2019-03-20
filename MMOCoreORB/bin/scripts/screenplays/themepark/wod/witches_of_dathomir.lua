@@ -222,7 +222,7 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 			for i = 1, #rewardKey.reward do
 				pItem = giveItem(pInventory, rewardKey.reward[i], -1)
 				
-				if ((wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
+				if ((wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 					TangibleObject(pItem):setUseCount(wodRewardManager[key].tokenCount)
 				end
 			end
@@ -248,7 +248,7 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 			local n = getRandomNumber(1, #rewardKey.reward)
 				pItem = giveItem(pInventory, rewardKey.reward[n], -1)
 			
-			if ((wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
+			if ((wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 				TangibleObject(pItem):setUseCount(wodRewardManager[key].tokenCount)
 			end
 		end
@@ -324,7 +324,7 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 	if (rewardKey.collectionRewardType == "all") then
 		for i = 1, #rewardKey.reward do
 			pItem = giveItem(pInventory, rewardKey.rewardString[i], -1)
-			if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
+			if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 				TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 			end
 		end
@@ -349,7 +349,7 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 		end
 		local n = getRandomNumber(1, #rewardKey.rewardString)
 		pItem = giveItem(pInventory, rewardKey.rewardString[n], -1)
-		if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
+		if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 			TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 		end
 	end
@@ -378,9 +378,45 @@ function witchesOfDathomirScreenplay:pickRewardCallback(pPlayer, pSui, eventInde
 	local pItem = giveItem(pInventory, reward, -1)
 
 	local key = readStringData("wodThemepark:rewardKey:" .. SceneObject(pPlayer):getObjectID())
-	if (wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
+	if (wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 		TangibleObject(pItem):setUseCount(wodRewardManager[key].tokenCount)
-	elseif (wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token") then
+	elseif (wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 		TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
+	end
+end
+
+function witchesOfDathomirScreenplay:handleClanSwap(pPlayer, curClan)
+	if (pPlayer == nil or curClan == nil) then
+		return
+	end
+	
+	if (curClan == "ns") then
+		deleteScreenPlayData(pPlayer, "witchesOfDathomir", "storedQuestData:ns")
+		for i = 250, 350 do
+			if (QuestManager.hasCompletedQuest(pPlayer, i)) then
+				writeScreenPlayData(pPlayer, "witchesOfDathomir", "storedQuestData:ns", readScreenPlayData(pPlayer, "witchesOfDathomir", "storedQuestData:ns") .. ";" .. i)
+				QuestManager.resetQuest(pPlayer, i)
+			elseif (QuestManager.hasActiveQuest(pPlayer, i)) then
+				QuestManager.resetQuest(pPlayer, i)
+			end
+			local storedQuestsSM = HelperFuncs:splitString(readScreenPlayData(pPlayer, "witchesOfDathomir", "storedQuestData:sm"), ";")
+			for i = 1, #storedQuestsSM do
+				QuestManager.completeQuest(pPlayer, storedQuestsSM[i])
+			end
+		end
+	elseif (curClan == "sm") then
+		deleteScreenPlayData(pPlayer, "witchesOfDathomir", "storedQuestData:sm")
+		for i = 351, 451 do
+			if (QuestManager.hasCompletedQuest(pPlayer, i)) then
+				writeScreenPlayData(pPlayer, "witchesOfDathomir", "storedQuestData:sm", readScreenPlayData(pPlayer, "witchesOfDathomir", "storedQuestData:sm") .. ";" .. i)
+				QuestManager.resetQuest(pPlayer, i)
+			elseif (QuestManager.hasActiveQuest(pPlayer, i)) then
+				QuestManager.resetQuest(pPlayer, i)
+			end
+			local storedQuestsNS = HelperFuncs:splitString(readScreenPlayData(pPlayer, "witchesOfDathomir", "storedQuestData:ns"), ";")
+			for i = 1, #storedQuestsNS do
+				QuestManager.completeQuest(pPlayer, storedQuestsNS[i])
+			end
+		end
 	end
 end
