@@ -1,4 +1,4 @@
-object_building_dathomir_player_house_wod_sm_hut = object_building_dathomir_shared_player_house_wod_sm_hut:new {
+object_building_player_player_house_wod_sm_hut = object_building_player_shared_player_house_wod_sm_hut:new {
 	lotSize = 1,
 	baseMaintenanceRate = 6,
 	allowedZones = {"corellia", "dantooine", "lok", "naboo", "rori", "talus", "tatooine"},
@@ -24,4 +24,4 @@ object_building_dathomir_player_house_wod_sm_hut = object_building_dathomir_shar
 	}
 }
 
-ObjectTemplates:addTemplate(object_building_dathomir_player_house_wod_sm_hut, "object/building/dathomir/player_house_wod_sm_hut.iff")
+ObjectTemplates:addTemplate(object_building_player_player_house_wod_sm_hut, "object/building/player/player_house_wod_sm_hut.iff")

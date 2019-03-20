@@ -1,6 +1,6 @@
 wod_reanimated_witch = Creature:new {
 	customName = "Temporary Name: Reanimated Witch",
-	socialGroup = "",
+	socialGroup = "wod_reanimated",
 	faction = "",
 	level = 107,
 	chanceHit = 1,

@@ -1,6 +1,6 @@
 wod_reanimated_slave = Creature:new {
 	customName = "Temporary Name: Reanimated Slave",
-	socialGroup = "",
+	socialGroup = "wod_reanimated",
 	faction = "",
 	level = 96,
 	chanceHit = 0.85,
@@ -8,7 +8,7 @@ wod_reanimated_slave = Creature:new {
 	damageMax = 900,
 	baseXp = 7150,
 	baseHAM = 10000,
-	baseHAMmax = 15000,,
+	baseHAMmax = 15000,
 	armor = 2,
 	resists = {45,150,45,150,150,150,150,150,35},
 	meatType = "",

@@ -1,8 +1,8 @@
-wod_izaryx = Creature:new {
+wod_fath_hray = Creature:new {
 	objectName = "",
 	customName = "Temporary Name: Izaryx",
-	socialGroup = "mtn_clan",
-	faction = "mtn_clan",
+	socialGroup = "nightsister",
+	faction = "nightsister",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,

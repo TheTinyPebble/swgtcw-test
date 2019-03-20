@@ -16,65 +16,65 @@ object_mobile_shared_dressed_wod_ghost_guide_comm = SharedCreatureObjectTemplate
 
 ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_guide_comm, "object/mobile/shared_dressed_wod_ghost_guide_comm.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_01 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_01.iff"
+object_mobile_shared_dressed_wod_gray_outcast_01 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_01.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_01, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_01.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_01, "object/mobile/shared_dressed_wod_gray_outcast_01.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_02 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_02.iff"
+object_mobile_shared_dressed_wod_gray_outcast_02 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_02.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_02, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_02.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_02, "object/mobile/shared_dressed_wod_gray_outcast_02.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_03 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_03.iff"
+object_mobile_shared_dressed_wod_gray_outcast_03 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_03.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_03, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_03.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_03, "object/mobile/shared_dressed_wod_gray_outcast_03.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_04 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_04.iff"
+object_mobile_shared_dressed_wod_gray_outcast_04 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_04.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_04, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_04.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_04, "object/mobile/shared_dressed_wod_gray_outcast_04.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_05 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_05.iff"
+object_mobile_shared_dressed_wod_gray_outcast_05 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_05.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_05, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_05.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_05, "object/mobile/shared_dressed_wod_gray_outcast_05.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_06 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_06.iff"
+object_mobile_shared_dressed_wod_gray_outcast_06 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_06.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_06, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_06.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_06, "object/mobile/shared_dressed_wod_gray_outcast_06.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_07 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_07.iff"
+object_mobile_shared_dressed_wod_gray_outcast_07 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_07.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_07, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_07.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_07, "object/mobile/shared_dressed_wod_gray_outcast_07.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_08 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_08.iff"
+object_mobile_shared_dressed_wod_gray_outcast_08 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_08.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_08, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_08.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_08, "object/mobile/shared_dressed_wod_gray_outcast_08.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_09 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_09.iff"
+object_mobile_shared_dressed_wod_gray_outcast_09 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_09.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_09, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_09.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_09, "object/mobile/shared_dressed_wod_gray_outcast_09.iff")
 
-object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_10 = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_10.iff"
+object_mobile_shared_dressed_wod_gray_outcast_10 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_wod_gray_outcast_10.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_ghost_wod_gray_outcast_10, "object/mobile/shared_dressed_wod_ghost_wod_gray_outcast_10.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_wod_gray_outcast_10, "object/mobile/shared_dressed_wod_gray_outcast_10.iff")
 
 object_mobile_shared_dressed_wod_omogg_rep = SharedCreatureObjectTemplate:new {
 	clientTemplateFileName = "object/mobile/shared_dressed_wod_omogg_rep.iff"
@@ -94,11 +94,11 @@ object_mobile_shared_kyrisa = SharedCreatureObjectTemplate:new {
 
 ObjectTemplates:addClientTemplate(object_mobile_shared_kyrisa, "object/mobile/shared_kyrisa.iff")
 
-object_mobile_shared_dressed_npc_wod_ns_vendor = SharedCreatureObjectTemplate:new {
-	clientTemplateFileName = "object/mobile/shared_dressed_npc_wod_ns_vendor.iff"
+object_mobile_shared_npc_dressed_wod_ns_vendor = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_npc_dressed_wod_ns_vendor.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_npc_wod_ns_vendor, "object/mobile/shared_dressed_npc_wod_ns_vendor.iff")
+ObjectTemplates:addClientTemplate(object_mobile_shared_npc_dressed_wod_ns_vendor, "object/mobile/shared_npc_dressed_wod_ns_vendor.iff")
 
 object_mobile_shared_spider_queen_consort = SharedCreatureObjectTemplate:new {
 	clientTemplateFileName = "object/mobile/shared_spider_queen_consort.iff"

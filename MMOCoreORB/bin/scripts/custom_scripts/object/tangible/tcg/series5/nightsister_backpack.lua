@@ -1,4 +1,4 @@
-object_tcg_series5_nightsister_backpack = object_tcg_series5_shared_nightsister_backpack:new {
+object_tangible_tcg_series5_nightsister_backpack = object_tangible_tcg_series5_shared_nightsister_backpack:new {
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",
@@ -28,4 +28,4 @@ object_tcg_series5_nightsister_backpack = object_tcg_series5_shared_nightsister_
 	experimentalCombineType = {0, 0, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
 
-ObjectTemplates:addTemplate(object_tcg_series5_nightsister_backpack, "object/tcg/series5/nightsister_backpack.iff")
+ObjectTemplates:addTemplate(object_tangible_tcg_series5_nightsister_backpack, "object/tangible/tcg/series5/nightsister_backpack.iff")

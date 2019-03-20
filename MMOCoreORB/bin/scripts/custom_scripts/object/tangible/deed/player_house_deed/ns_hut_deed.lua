@@ -1,4 +1,4 @@
-object_tangible_loot_loot_schematic_ns_hut_deed = object_tangible_loot_loot_schematic_shared_ns_hut_deed:new {
+object_tangible_deed_player_house_deed_ns_hut_deed = object_tangible_deed_player_house_deed_shared_ns_hut_deed:new {
 	templateType = STRUCTUREDEED,
 	placeStructureComponent = "PlaceStructureComponent",
 	generatedObjectTemplate = "object/building/dathomir/player_house_wod_ns_hut.iff",
@@ -16,4 +16,4 @@ object_tangible_loot_loot_schematic_ns_hut_deed = object_tangible_loot_loot_sche
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_ns_hut_deed, "object/tangible/loot/loot_schematic/ns_hut_deed.iff")
+ObjectTemplates:addTemplate(object_tangible_deed_player_house_deed_ns_hut_deed, "object/tangible/deed/player_house_deed/ns_hut_deed.iff")

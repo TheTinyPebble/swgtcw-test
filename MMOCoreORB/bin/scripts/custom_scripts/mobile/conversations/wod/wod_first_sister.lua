@@ -1,4 +1,4 @@
-wod_first_sister= ConvoTemplate:new {
+wod_first_sister = ConvoTemplate:new {
 	initialScreen = "initial",
 	templateType = "Lua",
 	luaClassHandler = "wod_first_sister_convo_handler",
@@ -31,6 +31,6 @@ not_elligible = ConvoScreen:new {
 	options = {
 	}
 }
-wod_second_sister:addScreen(not_elligible)
+wod_first_sister:addScreen(not_elligible)
 
 addConversationTemplate("wod_first_sister", wod_first_sister);

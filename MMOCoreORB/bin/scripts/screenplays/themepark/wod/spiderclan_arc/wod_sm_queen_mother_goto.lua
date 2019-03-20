@@ -6,7 +6,7 @@ wodSMQueenMotherGoto = GoToLocation:new {
 	taskName = "wodSMQueenMotherGoto",
 	-- GoToLocation properties
 	waypointDescription = "@theme_park_wod/wod_sm_queen_mother_boss_fight:task01_waypoint_name",
-	spawnPoint = {x = 323, y = -268},,
+	spawnPoint = {x = 323, y = -268},
 	spawnPlanet = "dathomir",
 	spawnRadius = 5,
 }

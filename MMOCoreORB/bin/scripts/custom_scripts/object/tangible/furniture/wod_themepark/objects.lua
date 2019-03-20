@@ -58,8 +58,8 @@ object_tangible_furniture_wod_themepark_shared_wod_themepark_herb_07 = SharedTan
 }
 ObjectTemplates:addClientTemplate(object_tangible_furniture_wod_themepark_shared_wod_themepark_herb_07, "object/tangible/furniture/wod_themepark/shared_wod_themepark_herb_07.iff")
 
-object_tangible_furniture_wod_themepark_shared_wod_themepark_trampled_plant = SharedTangibleObjectTemplate:new {
-	clientTemplateFileName = "object/tangible/furniture/wod_themepark/shared_wod_themepark_trampled_plant.iff"
+object_tangible_furniture_wod_themepark_shared_wod_trampled_plant = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/wod_themepark/shared_wod_trampled_plant.iff"
 }
-ObjectTemplates:addClientTemplate(object_tangible_furniture_wod_themepark_shared_wod_themepark_trampled_plant, "object/tangible/furniture/wod_themepark/shared_wod_themepark_trampled_plant.iff")
+ObjectTemplates:addClientTemplate(object_tangible_furniture_wod_themepark_shared_wod_trampled_plant, "object/tangible/furniture/wod_themepark/shared_wod_trampled_plant.iff")
 

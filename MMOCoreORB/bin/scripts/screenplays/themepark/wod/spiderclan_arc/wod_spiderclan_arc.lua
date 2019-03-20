@@ -27,7 +27,7 @@ function wodSpiderclanArc:startBossFight()
 
 	for i = 0, groupSize - 1, 1 do
 		local pMember = CreatureObject(pOwner):getGroupMember(i)
-		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+		if (pMember ~= nil and CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
 			if (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_02)) then
 				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_02)
 				QuestManager.activateQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_03)
@@ -60,7 +60,7 @@ function wodSpiderclanArc:notifyBossKilled(pBoss)
 
 	for i = 0, groupSize - 1, 1 do
 		local pMember = CreatureObject(pOwner):getGroupMember(i)
-		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+		if (pMember ~= nil and CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
 			if (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_03)) then
 				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_03)
 				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT)
@@ -99,7 +99,7 @@ function wodSpiderclanArc:sendMessageToGroup(pBoss)
 
 	for i = 0, groupSize - 1, 1 do
 		local pMember = CreatureObject(pOwner):getGroupMember(i)
-		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+		if (pMember ~= nil and CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
 			if (bossState == 1) then
 				createEvent(9 * 60 * 1000, "wodSpiderclanArc", "sendMessageToGroup", nil, "")
 				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_spider_start")
@@ -264,7 +264,7 @@ function wodSpiderclanArc:notifyKilledHuntTarget(pPlayer, pVictim)
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_02)
 				self:sendCommMessage(pPlayer)
-			else(QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03)) then
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03)) then
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_04)
 				wodNSLostE0204Goto:start(pPlayer)

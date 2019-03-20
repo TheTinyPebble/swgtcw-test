@@ -68,9 +68,9 @@ function wodHerbalPlants:spawnHerbalPlants()
 	end
 end
 
-function wodHerbalPlants:spawnHerbalPlants(..., loc)
+function wodHerbalPlants:spawnHerbalPlants(none, loc)
 	local spawnPoint = getSpawnPoint("dathomir", self.spawnArea.x, self.spawnArea.y, 0, self.spawnArea.radius)
-			
+
 	local n = getRandomNumber(1, #self.plantTemplates)
 	local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], spawnPoint[1], spawnPoint[2], spawnPoint[3], math.rad(math.random(360)), 0)
 	writeData("wodThemepark:herbPlantLoc:" .. SceneObject(pObject):getObjectID(), loc)
@@ -110,9 +110,9 @@ function wodHerbalPlants:collectQuestHerb(pPlayer, num)
 		return
 	end
 	
-	local = spString = "wodThemepark:prologue:herbs"
-	local = questName = "wod_prologue_herb_gathering"
-	local = herbsNeeded = 3
+	local spString = "wodThemepark:prologue:herbs"
+	local questName = "wod_prologue_herb_gathering"
+	local herbsNeeded = 3
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
 		spString = "wodThemepark:ns:herbs"
 		questName = "wod_ns_herb_gathering"
@@ -126,7 +126,7 @@ function wodHerbalPlants:collectQuestHerb(pPlayer, num)
 	local curHerbs = tonumber(readScreenPlayData(pPlayer, spString, self.screenPlayDataKey[tonumber(num)]))
 	
 	if (curHerbs == nil or curHerbs == "") then
-		curHerbs == 0
+		curHerbs = 0
 	end
 	
 	writeScreenPlayData(pPlayer, spString, self.screenPlayDataKey[tonumber(num)], curHerbs + 1)

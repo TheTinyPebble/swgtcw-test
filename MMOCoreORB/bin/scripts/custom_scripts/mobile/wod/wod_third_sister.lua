@@ -1,6 +1,6 @@
 wod_third_sister = Creature:new {
 	customName = "Temporary Name: Third Sister",
-	socialGroup = "",
+	socialGroup = "wod_reanimated",
 	faction = "",
 	level = 131,
 	chanceHit = 4.75,
@@ -21,8 +21,8 @@ wod_third_sister = Creature:new {
 	tamingChance = 0,
 	ferocity = 0,
 	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
-	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	creatureBitmask = KILLER,
+	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/wod_third_sister.iff"},

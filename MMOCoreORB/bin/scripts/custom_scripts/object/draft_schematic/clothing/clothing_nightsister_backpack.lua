@@ -1,4 +1,4 @@
-object_draft_schematic_clothing_clothing_nightsister_clan_backpack = object_draft_schematic_clothing_shared_clothing_nightsister_clan_backpack:new {
+object_draft_schematic_clothing_clothing_nightsister_backpack = object_draft_schematic_clothing_shared_clothing_nightsister_backpack:new {
 
    templateType = DRAFTSCHEMATIC,
 
@@ -34,4 +34,4 @@ object_draft_schematic_clothing_clothing_nightsister_clan_backpack = object_draf
              }
 
 }
-ObjectTemplates:addTemplate(object_draft_schematic_clothing_clothing_nightsister_clan_backpack, "object/draft_schematic/clothing/clothing_nightsister_clan_backpack.iff")
+ObjectTemplates:addTemplate(object_draft_schematic_clothing_clothing_nightsister_backpack, "object/draft_schematic/clothing/clothing_nightsister_backpack.iff")

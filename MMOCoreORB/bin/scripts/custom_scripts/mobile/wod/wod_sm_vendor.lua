@@ -1,7 +1,7 @@
 wod_sm_vendor = Creature:new {
 	customName = "Temporary Name: SM Vendor",
 	socialGroup = "mtn_clan",
-	faction = "mtn_clan"
+	faction = "mtn_clan",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,

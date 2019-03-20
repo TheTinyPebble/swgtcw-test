@@ -1,7 +1,7 @@
 wod_spiderclan_obfuscatrix = Creature:new {
 	customName = "Temporary Name: Spiderclan Obfuscatrix",
-	socialGroup = "",
-	faction = "",
+	socialGroup = "spider_nightsister",
+	faction = "spider_nightsister",
 	level = 131,
 	chanceHit = 4.75,
 	damageMin = 770,

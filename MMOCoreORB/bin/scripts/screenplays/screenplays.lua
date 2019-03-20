@@ -39,6 +39,13 @@ includeFile("quest_tasks/go_to_location.lua")
 includeFile("quest_tasks/go_to_theater.lua")
 includeFile("quest_tasks/patrol.lua")
 
+--Merchants
+includeFile("merchants/house_merch.lua")
+includeFile("merchants/merchant_system.lua")
+includeFile("merchants/vendor_logic.lua")
+includeFile("merchants/vendorData.lua") -- Load this after vendor_logic
+includeFile("merchants/vendor_conv_handler.lua")
+
 -- Theme parks
 includeFile("themepark/conversations/goru_conv_handler.lua")
 includeFile("themepark/conversations/mission_giver_conv_handler.lua")
@@ -673,13 +680,6 @@ includeFile("record_keepers/record_keepers.lua")
 
 --Tests
 includeFile("tests/tests.lua")
-
---Merchants
-includeFile("merchants/house_merch.lua")
-includeFile("merchants/merchant_system.lua")
-includeFile("merchants/vendor_logic.lua")
-includeFile("merchants/vendorData.lua") -- Load this after vendor_logic
-includeFile("merchants/vendor_conv_handler.lua")
 
 --Elite Spawns
 includeFile("elite_spawns/eliteSpawns.lua")

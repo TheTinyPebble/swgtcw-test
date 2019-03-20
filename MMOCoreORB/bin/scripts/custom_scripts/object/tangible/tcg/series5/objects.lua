@@ -1,5 +1,5 @@
-object_tcg_series5_shared_nightsister_backpack = SharedWeaponObjectTemplate:new {
-	clientTemplateFileName = "object/tcg/series5/shared_nightsister_backpack.iff"
+object_tangible_tcg_series5_shared_nightsister_backpack = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/tcg/series5/shared_nightsister_backpack.iff"
 }
 
-ObjectTemplates:addClientTemplate(object_tcg_series5_shared_nightsister_backpack, "object/tcg/series5/shared_nightsister_backpack.iff")
+ObjectTemplates:addClientTemplate(object_tangible_tcg_series5_shared_nightsister_backpack, "object/tangible_tcg/series5/shared_nightsister_backpack.iff")

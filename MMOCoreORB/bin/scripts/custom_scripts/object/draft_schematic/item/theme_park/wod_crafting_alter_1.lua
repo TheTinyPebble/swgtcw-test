@@ -1,4 +1,4 @@
-object_draft_schematic_weapon_wod_crafting_alter_1 = object_draft_schematic_weapon_shared_wod_crafting_alter_1:new {
+object_draft_schematic_item_theme_park_wod_crafting_alter_1 = object_draft_schematic_item_theme_park_shared_wod_crafting_alter_1:new {
 	templateType = DRAFTSCHEMATIC,
 
 	customObjectName = "Altar of Inner Calm Repair Parts",
@@ -30,4 +30,4 @@ object_draft_schematic_weapon_wod_crafting_alter_1 = object_draft_schematic_weap
 
 	additionalTemplates = {}
 }
-ObjectTemplates:addTemplate(object_draft_schematic_weapon_wod_crafting_alter_1, "object/draft_schematic/weapon/wod_crafting_alter_1.iff")
+ObjectTemplates:addTemplate(object_draft_schematic_item_theme_park_wod_crafting_alter_1, "object/draft_schematic/item/theme_park/wod_crafting_alter_1.iff")

@@ -1,7 +1,7 @@
 wod_hazel = Creature:new {
 	customName = "Temporary Name: Haz'El (Sage)",
 	socialGroup = "mtn_clan",
-	faction = "mtn_clan"
+	faction = "mtn_clan",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,

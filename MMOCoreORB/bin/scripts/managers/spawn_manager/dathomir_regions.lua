@@ -172,13 +172,13 @@ dathomir_regions = {
 	{ "fs_cs_zed", 3076, 2174, {1, 50}, NOSPAWNAREA + NOBUILDZONEAREA},
 	
 	-- WOD Areas
-	{ "wod_second_sister_village", -3572, -6017 {1, 150}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_abandoned_village", -6850, -4897 {1, 50}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_third_sister_lair", -3255, -3703 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_temple_stars", 5269, 165 {1, 150}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_mutation_cave", 1993, 1823 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_breeding_cave", 374, 100 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_rubina", -3177, 3184 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_outcast_1", 866, 1095 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
-	{ "wod_outcast_2", -1000, 862 {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_second_sister_village", -3572, -6017, {1, 150}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_abandoned_village", -6850, -4897, {1, 50}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_third_sister_lair", -3255, -3703, {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_temple_stars", 5269, 165, {1, 150}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_mutation_cave", 1993, 1823, {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_breeding_cave", 374, 100, {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_rubina", -3177, 3184, {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_outcast_1", 866, 1095, {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{ "wod_outcast_2", -1000, 862, {1, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
 }

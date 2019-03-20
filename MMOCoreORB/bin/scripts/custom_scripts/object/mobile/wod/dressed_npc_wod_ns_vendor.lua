@@ -1,3 +1,0 @@
-object_mobile_dressed_npc_wod_ns_vendor = object_mobile_shared_dressed_npc_wod_ns_vendor:new {
-}
-ObjectTemplates:addTemplate(object_mobile_dressed_npc_wod_ns_vendor, "object/mobile/dressed_npc_wod_ns_vendor.iff")

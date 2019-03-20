@@ -1,7 +1,7 @@
 wod_aujante_klee = Creature:new {
 	objectName = "@mob/creature_names:aujante_klee",
 	socialGroup = "mtn_clan",
-	faction = "mtn_clan"
+	faction = "mtn_clan",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,
