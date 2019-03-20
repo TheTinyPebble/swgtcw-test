@@ -1,1 +1,1 @@
-includeFile("../custom_scripts/object/tangible/loot/base/loot_base.lua")
+includeFile("tangible/loot/base/loot_base.lua")

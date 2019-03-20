@@ -1,7 +1,7 @@
 wod_azzenaj = Creature:new {
 	customName = "Temporary Name: Azzenaj",
 	socialGroup = "mtn_clan",
-	faction = "mtn_clan"
+	faction = "mtn_clan",
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,

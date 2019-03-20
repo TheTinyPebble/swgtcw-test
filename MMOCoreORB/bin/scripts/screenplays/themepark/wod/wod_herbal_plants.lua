@@ -54,27 +54,42 @@ function wodHerbalPlants:start()
 end
 
 function wodHerbalPlants:spawnHerbalPlants()
-	local pAnchor = getSceneObject(readData("wodThemepark:anchorID"))
+	local pAncor = getSceneObject(readData("wodThemepark:anchorID"))
 	
 	for i = 1, #self.spawnAreas do
 		for j = 1, self.spawnAreas[i].count do
-			local spawnPoint = getSpawnPoint("dathomir", self.spawnArea[i].x, self.spawnArea[i].y, 0, self.spawnArea[i].radius)
-			
+			local spawnPoint = self:getSpawnPoint(i)
 			local n = getRandomNumber(1, #self.plantTemplates)
-			local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], spawnPoint[1], spawnPoint[2], spawnPoint[3], 0, math.rad(math.random(360)))
+			local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], spawnPoint.x, spawnPoint.z, spawnPoint.y, 0, math.rad(math.random(360)))
 			writeData("wodThemepark:herbPlantLoc:" .. SceneObject(pObject):getObjectID(), i)
 			writeData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pObject):getObjectID(), n)
 		end
 	end
 end
 
-function wodHerbalPlants:spawnHerbalPlants(none, loc)
-	local spawnPoint = getSpawnPoint("dathomir", self.spawnArea.x, self.spawnArea.y, 0, self.spawnArea.radius)
-
+function wodHerbalPlants:respawnHerbalPlants(none, loc)
+	local spawnPoint = self:getSpawnPoint(i)
 	local n = getRandomNumber(1, #self.plantTemplates)
-	local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], spawnPoint[1], spawnPoint[2], spawnPoint[3], math.rad(math.random(360)), 0)
+	local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], spawnPoint.x, spawnPoint.z, spawnPoint.y, 0, math.rad(math.random(360)))
 	writeData("wodThemepark:herbPlantLoc:" .. SceneObject(pObject):getObjectID(), loc)
 	writeData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pObject):getObjectID(), n)
+end
+
+function wodHerbalPlants:getSpawnPoint(loc)
+	local pAnchor = getSceneObject(readData("wodThemepark:anchorID"))
+
+	local a = math.random() * 2 * math.pi
+	local r = self.spawnAreas[loc].radius * math.sqrt(math.random())
+
+	local newX = self.spawnAreas[loc].x + r * math.cos(a)
+	local newY = self.spawnAreas[loc].y + r * math.sin(a)
+	local newZ = getTerrainHeight(pAnchor, newX, newY)
+		
+	if (newZ <= 0) then
+		return self:getSpawnPoint(loc)
+	else
+		return {x = newX, y = newY, z = newZ}
+	end
 end
 
 function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
@@ -84,8 +99,6 @@ function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
 	
 	local plantLoc = readData("wodThemepark:herbPlantLoc:" .. SceneObject(pPlant):getObjectID())
 	local plantTemplateNum = readData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pPlant):getObjectID())
-	
-	createEvent(self.respawnTimeSecs * 1000, "wodHerbalPlants", "respawnHerbalPlant", nil, plantLoc)
 	
 	if (plantTemplateNum <= 5) then
 		self:collectQuestHerb(pPlayer, plantTemplateNum)
@@ -103,6 +116,7 @@ function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
 	end
 	
 	SceneObject(pSceneObject):destroyObjectFromWorld()
+	createEvent(self.respawnTimeSecs * 1000, "wodHerbalPlants", "respawnHerbalPlant", nil, plantLoc)
 end
 
 function wodHerbalPlants:collectQuestHerb(pPlayer, num)

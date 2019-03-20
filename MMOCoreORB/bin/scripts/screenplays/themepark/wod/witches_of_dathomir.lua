@@ -7,7 +7,7 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 			radius = 50, 
 			respawnTimer = 300,
 			spawnTemplates = {
-				"mutant_rancer"
+				"mutant_rancor"
 			},
 		}, 
 		{ --Spiderclan prologue location
@@ -40,31 +40,10 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 				"malkloc_bull",
 			},
 		}, 
-		{ --Second Sister Village
-			x = -3572,
-			y = -6017, 
-			spawnCount = 40, 
-			radius = 75,
-			respawnTimer = 300,
-			spawnTemplates = {
-				"wod_reanimated_slave",
-				"wod_reanimated_slave",
-			},
-		}, 
 		{ --Breeding Cave Spiderclan
 			x = 308,
 			y = -190, 
 			spawnCount = 10, 
-			radius = 40,
-			respawnTimer = 300,
-			spawnTemplates = {
-				"wod_spiderclan_obfuscatrix"
-			},
-		}, 
-		{ --Spiderclan Cave obfuscatrix spawns
-			x = -1217,
-			y = 6261, 
-			spawnCount = 5, 
 			radius = 40,
 			respawnTimer = 300,
 			spawnTemplates = {
@@ -80,7 +59,6 @@ local QuestManager = require("managers.quest.quest_manager")
 
 --TODO: Spawn Scene Objects
 --TODO: Spawn mobiles
---TODO: On logged in events
 --TODO: Reward handling check if inventory is full (can it give an item with full inventory? Need testing)
 
 function witchesOfDathomirScreenplay:start()
@@ -393,7 +371,9 @@ end
 
 function witchesOfDathomirScreenplay:spawnMobiles()
 	--Prologue
-	spawnMobile("dathomir", "wod_omogg_rep", -1, 558, 6, 3073, 29, 0)
+	local pAnchor = spawnMobile("dathomir", "wod_omogg_rep", -1, 558, 6, 3073, 29, 0)
+	writeData("wodThemepark:anchorID", SceneObject(pAnchor):getObjectID())
+
 	spawnMobile("dathomir", "wod_rubina", -1, -3177, 21.8, 3184, 0, 0)
 	spawnMobile("dathomir", "wod_outcast_01", -1, 866, 132, 1095, 162, 0)
 	spawnMobile("dathomir", "wod_outcast_02", -1, -1000, 116.2, 862, -131, 0)
@@ -430,7 +410,7 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 	spawnMobile("dathomir", "wod_rescue_initiate", -1, 1.4, -46.1, -150.6, -11, 3695706)
 	
 	for i = 1, #self.spawnZones do
-		for j = 1, #self.spawnZones[i].spawnCount do
+		for j = 1, self.spawnZones[i].spawnCount do
 			local spawnPoint = getSpawnPoint("dathomir", self.spawnZones[i].x, self.spawnZones[i].y, 0, self.spawnZones[i].radius)
 			
 			local n = getRandomNumber(1, #self.spawnZones[i].spawnTemplates)

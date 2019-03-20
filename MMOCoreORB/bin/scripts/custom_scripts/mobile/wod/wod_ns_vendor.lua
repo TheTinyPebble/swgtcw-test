@@ -27,7 +27,7 @@ wod_ns_vendor = Creature:new {
 	optionsBitmask = AIENABLED + INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_npc_wod_ns_vendor.iff"},
+	templates = {"object/mobile/npc_dressed_wod_ns_vendor.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "wod_ns_vendor",
