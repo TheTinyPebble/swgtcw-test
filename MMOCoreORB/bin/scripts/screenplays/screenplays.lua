@@ -30,6 +30,14 @@ require("sui.custom.SuiReceiverPuzzle")
 includeFile("helperfuncs.lua")
 includeFile("playerTriggers.lua")
 
+-- Quest Tasks
+includeFile("quest_tasks/task.lua")
+includeFile("quest_tasks/persistent_event.lua")
+includeFile("quest_tasks/encounter.lua")
+includeFile("quest_tasks/escort.lua")
+includeFile("quest_tasks/go_to_location.lua")
+includeFile("quest_tasks/go_to_theater.lua")
+includeFile("quest_tasks/patrol.lua")
 
 -- Theme parks
 includeFile("themepark/conversations/goru_conv_handler.lua")
@@ -73,15 +81,6 @@ includeFile("gcw/newsnet.lua")
 includeFile("gcw/recruiters/recruiterConvoHandler.lua")
 includeFile("gcw/recruiters/recruiterScreenplay.lua")
 includeFile("crackdown/cantina.lua")
-
--- Quest Tasks
-includeFile("quest_tasks/task.lua")
-includeFile("quest_tasks/persistent_event.lua")
-includeFile("quest_tasks/encounter.lua")
-includeFile("quest_tasks/escort.lua")
-includeFile("quest_tasks/go_to_location.lua")
-includeFile("quest_tasks/go_to_theater.lua")
-includeFile("quest_tasks/patrol.lua")
 
 -- Tutorial
 includeFile("tutorial/tutorialContainerComponents.lua")

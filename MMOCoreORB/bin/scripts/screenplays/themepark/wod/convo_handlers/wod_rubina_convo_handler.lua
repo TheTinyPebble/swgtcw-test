@@ -236,7 +236,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	end
 
 	if (screenID == "ns_ready") then
-		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS)
 	end
 	
 	if (screenID == "ns_ready_waypoint") then
@@ -244,7 +244,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	end
 	
 	if (screenID == "sm_ready") then
-		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS)
 	end
 	
 	if (screenID == "sm_ready_waypoint") then
@@ -252,7 +252,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	end
 	
 	if (screenID == "left_behind_start") then
-		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)
 		wodLeftBehindGoto:start(pPlayer)
 	end
 

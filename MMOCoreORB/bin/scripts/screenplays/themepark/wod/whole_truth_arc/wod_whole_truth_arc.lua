@@ -51,7 +51,7 @@ function wodWholeTruthArc:startBossFight()
 
 	for i = 0, groupSize - 1, 1 do
 		local pMember = CreatureObject(pOwner):getGroupMember(i)
-		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+		if (pMember ~= nil and CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
 			if (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_02)) then
 				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_02)
 				QuestManager.activateQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_03)
@@ -78,7 +78,7 @@ function wodWholeTruthArc:notifyBossKilled(pBoss)
 
 	for i = 0, groupSize - 1, 1 do
 		local pMember = CreatureObject(pOwner):getGroupMember(i)
-		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+		if (pMember ~= nil and CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
 			if (QuestManager.hasActiveQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_03)) then
 				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_03)
 				QuestManager.completeQuest(pMember, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT)
@@ -116,7 +116,7 @@ function wodWholeTruthArc:sendMessageToGroup(pBoss)
 
 	for i = 0, groupSize - 1, 1 do
 		local pMember = CreatureObject(pOwner):getGroupMember(i)
-		if (pMember ~= nil CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
+		if (pMember ~= nil and CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
 			if (bossState == 1) then
 				createEvent(9 * 60 * 1000, "wodSpiderclanArc", "sendMessageToGroup", nil, "")
 				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_rancor_start")

@@ -6,7 +6,7 @@ function wod_sm_rancor_tamer_convo_handler:getInitialScreen(pPlayer, pNpc, pConv
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 
-	if (clan == "" or clan "" nil) then
+	if (clan == "" or clan == nil) then
 		return convoTemplate("not_elligible")
 	elseif (clan == "ns") then
 		return convoTemplate("wrong_alignment")

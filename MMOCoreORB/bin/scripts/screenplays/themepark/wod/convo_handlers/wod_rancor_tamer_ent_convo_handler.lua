@@ -7,7 +7,7 @@ function wod_rancor_tamer_ent_convo_handler:getInitialScreen(pPlayer, pNpc, pCon
 	local rancorTamer = self:getRancorTamer(pPlayer, pNpc, pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 	
-	if (clan == "" or clan "" nil) then
+	if (clan == "" or clan == nil) then
 		return convoTemplate("not_elligible")
 	elseif ((rancorTamer == "wod_ns_rancor_tamer_diax" and clan == "sm") or (rancorTamer == "wod_sm_rancor_tamer_zideera" and clan == "ns")) then
 		return convoTemplate("wrong_alignment")

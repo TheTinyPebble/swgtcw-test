@@ -7,7 +7,7 @@ function wod_sage_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local sage = self:getSageType(pPlayer, pNpc, pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 	
-	if (clan == "" or clan "" nil) then
+	if (clan == "" or clan == nil) then
 		return convoTemplate("not_elligible")
 	elseif ((sage == "wod_ns_sage" and clan == "sm") or (sage == "wod_sm_sage" and clan == "ns")) then
 		return convoTemplate("wrong_alignment")

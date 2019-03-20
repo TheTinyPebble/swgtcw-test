@@ -118,7 +118,6 @@ function wodStorageBasketContainerComponent:canAddObject(pBasket, pObject, slot)
 	
 	for i = 1, #wodStorageBasketTokenData do
 		if (SceneObject(pObject):getTemplateObjectPath() == wodStorageBasketTokenData[i][4]) then
-			return TRANSFERCANADD
 			local tokenData = tonumber(readScreenPlayData(pPlayer, wodStorageBasketTokenData[i][1], wodStorageBasketTokenData[i][2]))
 			if (tokenData == "" or tokenData == nil) then
 				tokenData = 0

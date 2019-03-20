@@ -199,7 +199,7 @@ function wodTwoClansArc:spawnSecondSisterFireAdds(location)
 	end
 	
 	for i,v in ipairs(#self.sister2Adds[location]) do
-		local spawnMobile("dathomir", v[1], 0, v[2], v[3], v[4], v[5], 0)
+		spawnMobile("dathomir", v[1], v[2], v[3], v[4], v[5], v[6], v[7])
 	end
 end
 

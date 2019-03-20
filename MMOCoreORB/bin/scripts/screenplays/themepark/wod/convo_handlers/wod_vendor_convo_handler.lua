@@ -10,7 +10,7 @@ function wod_vendor_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 		return convoTemplate("not_enough_faction")
 	end
 	
-	if (clan == "" or clan "" nil) then
+	if (clan == "" or clan == nil) then
 		return convoTemplate("not_elligible")
 	elseif ((vendor == "wod_ns_vendor" and clan == "sm") or (vendor == "wod_sm_vendor" and clan == "ns")) then
 		return convoTemplate("wrong_alignment")

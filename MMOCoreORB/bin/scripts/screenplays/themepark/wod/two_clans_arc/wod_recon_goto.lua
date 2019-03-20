@@ -46,8 +46,8 @@ function wodNSReconGoto:onEnteredActiveArea(pPlayer)
 		return 1
 	end
 
-	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_RECON_01)
-	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_RECON_02)
+	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_RECON_01)
+	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_RECON_02)
 
 	self:finish(pPlayer)
 	return 1
