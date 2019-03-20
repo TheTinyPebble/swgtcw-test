@@ -36,10 +36,13 @@ function wod_omogg_rep_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, p
 	
 	if (screenID == "walkabout_start") then
 		wodWalkabout1Goto:start(pPlayer)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT)
+	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_01)
 	end
 	
 	if (screenID == "walkabout_complete") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_04)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_05)
 	end
 	
 	if (screenID == "walkabout_two_start") then

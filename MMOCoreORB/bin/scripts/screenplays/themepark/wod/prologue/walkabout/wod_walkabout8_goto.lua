@@ -23,15 +23,4 @@ function wodWalkabout8Goto:onEnteredActiveArea(pPlayer)
 	return 1
 end
 
--- Event handler for the onSuccessfulSpawn.
--- The event will activate the quest.
--- @param pPlayer pointer to the creature object of the player.
-function wodWalkabout8Goto:onSuccessfulSpawn(pPlayer)
-	if (pPlayer == nil) then
-		return
-	end
-
-	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_08)
-end
-
 return wodWalkabout8Goto

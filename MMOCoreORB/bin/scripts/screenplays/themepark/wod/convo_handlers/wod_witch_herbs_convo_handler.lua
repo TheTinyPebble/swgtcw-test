@@ -7,7 +7,7 @@ function wod_witch_herbs_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemp
 	local witchHerbsType = self:getWitchHerbsType(pPlayer, pNpc, pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 	
-	if (clan == "" or clan "" nil) then
+	if (clan == "" or clan == nil) then
 		return convoTemplate("not_elligible")
 	elseif ((witchHerbsType == "wod_ns_witch_herbs" and clan == "sm") or (witchHerbsType == "wod_sm_witch_herbs" and clan == "ns")) then
 		return convoTemplate("wrong_alignment")

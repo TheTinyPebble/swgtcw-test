@@ -23,17 +23,6 @@ function wodWalkabout4Goto:onEnteredActiveArea(pPlayer)
 	return 1
 end
 
--- Event handler for the onSuccessfulSpawn.
--- The event will activate the quest.
--- @param pPlayer pointer to the creature object of the player.
-function wodWalkabout4Goto:onSuccessfulSpawn(pPlayer)
-	if (pPlayer == nil) then
-		return
-	end
-
-	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_04)
-end
-
 function wodWalkabout4Goto:sendCommMessage(pPlayer)
 	local sui = SuiMessageBox.new("wodWalkabout4Goto", "noCallBack")
 	sui.setTitle("@theme_park_wod/wod_prologue_walkabout:comm_message_title_02")

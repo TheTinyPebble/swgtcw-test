@@ -22,19 +22,9 @@ function wodWalkabout2Goto:onEnteredActiveArea(pPlayer)
 	self:finish(pPlayer)
 	self:sendCommMessage(pPlayer)
 	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_02)
+	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_03)
 	wodWalkabout3Goto:start(pPlayer)
 	return 1
-end
-
--- Event handler for the onSuccessfulSpawn.
--- The event will activate the quest.
--- @param pPlayer pointer to the creature object of the player.
-function wodWalkabout2Goto:onSuccessfulSpawn(pPlayer)
-	if (pPlayer == nil) then
-		return
-	end
-
-	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_02)
 end
 
 function wodWalkabout2Goto:sendCommMessage(pPlayer)

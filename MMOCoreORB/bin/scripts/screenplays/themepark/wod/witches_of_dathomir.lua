@@ -96,6 +96,299 @@ function witchesOfDathomirScreenplay:onPlayerLoggedIn(pPlayer)
 	end
 	
 	wodPrologueScreenplay:onPlayerLoggedIn(pPlayer)
+	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
+	
+	if (clan == "" or clan == nil) then
+		return
+	end
+	
+	if (clan == "sm") then
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_SM)) then
+			wodStrongholdSMGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_01_03)) then
+			wodSMRepairAltar01ReturnGoto:start(pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_02_03)) then
+			wodSMRepairAltar02ReturnGoto:start(pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_03_03)) then
+			wodSMRepairAltar03ReturnGoto:start(pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_04_03)) then
+			wodSMRepairAltar04ReturnGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_01)) then
+				wodSMLostE0101Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_02)) then
+				wodSMLostE0102Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_04)) then
+				wodSMLostE0104Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_05)) then
+				wodSMLostE0105Goto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)) then
+				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_03)) then
+				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_04)) then
+				wodSMLostE0204Goto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_01)) then
+				wodSMEHSGoto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_02)) then
+				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_04)) then
+				wodSMEHSReturnGoto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT_01)) then
+			wodSMQueenMotherGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)) then
+				dropObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_02)) then
+				wodHuntingSMReturnGoto:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING_01)) then
+				dropObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
+				createObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING_02)) then
+				wodFishingSMReturnGoto:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07)) then
+			wodSMHerbsReturnGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_01)) then
+				wodSMWholeTruth01Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_02)) then
+				dropObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_03)) then
+				wodSMWholeTruth03Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_04)) then
+				wodSMWholeTruth04Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_06)) then
+				wodSMWholeTruth06Goto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KYRISA_BOSS_FIGHT_01)) then
+			wodSMKyrisaCaveGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_01)) then
+				dropObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
+				createObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_02)) then
+				wodEntSMReturnEscort:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN_01)) then
+				dropObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN_02)) then
+				wodKillOtherClanSMReturnGoto:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN_01)) then
+				dropObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN_02)) then
+				wodKillSpiderclanSMReturnGoto:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RECON_01)) then
+			wodSMReconGoto:start(pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_01)) then
+				wodSister1Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_02)) then
+				dropObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_05)) then
+				wodSister1ReturnGoto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER2)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER2_01)) then
+				wodSister2Goto:start(pPlayer)
+			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER2_08)) then
+				wodSister2ReturnGoto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER3)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER3_01)) then
+				wodSister3Goto:start(pPlayer)
+			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER3_03)) then
+				wodSister3ReturnGoto:start(pPlayer)
+			end
+		end
+	elseif (clan == "ns") then
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS)) then
+			wodStrongholdNSGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_01_03)) then
+			wodNSRepairAltar01ReturnGoto:start(pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_02_03)) then
+			wodNSRepairAltar02ReturnGoto:start(pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_03_03)) then
+			wodNSRepairAltar03ReturnGoto:start(pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_03)) then
+			wodNSRepairAltar04ReturnGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_01)) then
+				wodNSLostE0101Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_02)) then
+				wodNSLostE0102Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_04)) then
+				wodNSLostE0104Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_05)) then
+				wodNSLostE0105Goto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_01)) then
+				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03)) then
+				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_04)) then
+				wodNSLostE0204Goto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_01)) then
+				wodNSEHSGoto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_02)) then
+				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_04)) then
+				wodNSEHSReturnGoto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_01)) then
+			wodNSQueenMotherGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01)) then
+				dropObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_02)) then
+				wodHuntingNSReturnGoto:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING_01)) then
+				dropObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
+				createObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING_02)) then
+				wodFishingNSReturnGoto:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_07)) then
+			wodNSHerbsReturnGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_01)) then
+				wodNSWholeTruth01Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02)) then
+				dropObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_03)) then
+				wodNSWholeTruth03Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_04)) then
+				wodNSWholeTruth04Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_06)) then
+				wodNSWholeTruth06Goto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_01)) then
+			wodNSKyrisaCaveGoto:start(pPlayer)
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_01)) then
+				dropObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
+				createObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_02)) then
+				wodEntNSReturnEscort:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_01)) then
+				dropObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_02)) then
+				wodKillOtherClanNSReturnGoto:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_01)) then
+				dropObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_02)) then
+				wodKillSpiderclanNSReturnGoto:start(pPlayer)
+			end
+		end
+		
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RECON_01)) then
+			wodNSReconGoto:start(pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_01)) then
+				wodSister1Goto:start(pPlayer)
+			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_02)) then
+				dropObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
+				createObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
+			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_05)) then
+				wodSister1ReturnGoto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER2)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER2_01)) then
+				wodSister2Goto:start(pPlayer)
+			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER2_08)) then
+				wodSister2ReturnGoto:start(pPlayer)
+			end
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER3)) then
+			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER3_01)) then
+				wodSister3Goto:start(pPlayer)
+			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER3_03)) then
+				wodSister3ReturnGoto:start(pPlayer)
+			end
+		end
+	end
+	
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)) then
+		wodRubinaEpilogueGoto:start(pPlayer)
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND)) then
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_01)) then
+			wodLeftBehindGoto:start(pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_03)) then
+			wodLeftBehindReturnGoto:start(pPlayer)
+		end
+	end
 end
 
 function witchesOfDathomirScreenplay:spawnMobiles()

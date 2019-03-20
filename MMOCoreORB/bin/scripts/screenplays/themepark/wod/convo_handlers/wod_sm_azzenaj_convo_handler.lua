@@ -52,6 +52,7 @@ function wod_sm_azzenaj_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 	if (screenID == "start_quest_lost") then
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_01)
+		wodSMLostE0101Goto:start(pPlayer)
 	end
 	
 	if (screenID == "start_quest_found") then

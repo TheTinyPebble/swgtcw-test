@@ -110,8 +110,9 @@ function wodHerbalPlants:collectQuestHerb(pPlayer, num)
 		return
 	end
 	
-	local spString, questName = ""
-	local herbsNeeded = 3
+	local = spString = "wodThemepark:prologue:herbs"
+	local = questName = "wod_prologue_herb_gathering"
+	local = herbsNeeded = 3
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
 		spString = "wodThemepark:ns:herbs"
 		questName = "wod_ns_herb_gathering"
@@ -119,9 +120,6 @@ function wodHerbalPlants:collectQuestHerb(pPlayer, num)
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
 		spString = "wodThemepark:sm:herbs"
 		questName = "wod_sm_herb_gathering"
-	else
-		spString = "wodThemepark:prologue:herbs"
-		questName = "wod_prologue_herb_gathering"
 		herbsNeeded = 5
 	end
 	
@@ -164,8 +162,8 @@ function wodHerbalPlants:checkQuestStatus(pPlayer, questName)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07)
 		wodSMHerbReturnGoto:start(pPlayer)
 	else
-		QuestManager.completeQuest(pPlayer, getPlayerQuestID(questName .. "_06"))
-		QuestManager.activateQuest(pPlayer, getPlayerQuestID(questName .. "_07"))
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_06)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_07)
 		wodRubinaReturn:start(pPlayer)
 	end
 end

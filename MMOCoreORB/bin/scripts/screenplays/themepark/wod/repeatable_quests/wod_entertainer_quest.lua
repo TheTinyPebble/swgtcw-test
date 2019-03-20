@@ -9,6 +9,7 @@ local QuestManager = require("managers.quest.quest_manager")
 --TODO: Timer
 
 function wodEntertainerQuest:beginQuest()
+	dropObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
 	createObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
 end
 

@@ -52,7 +52,7 @@ function wod_ns_leandra_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 	if (screenID == "start_quest_lost") then
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_01)
-		wodNSLostE01SiteGoto:start(pPlayer)
+		wodNSLostE0101Goto:start(pPlayer)
 	end
 	
 	if (screenID == "start_quest_found") then

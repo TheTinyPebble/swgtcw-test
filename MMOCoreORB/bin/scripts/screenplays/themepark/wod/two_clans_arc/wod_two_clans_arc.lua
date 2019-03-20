@@ -23,6 +23,8 @@ local QuestManager = require("managers.quest.quest_manager")
 
 function wodTwoClansArc:start()
 	if (isZoneEnabled("dathomir")) then
+		self:spawnFirstSister()
+		self:spawnSecondSister()
 		self:spawnThirdSister()
 	end
 end
@@ -31,7 +33,7 @@ function wodTwoClansArc:noCallback(pPlayer, pSui, eventIndex, ...)
 end
 
 function wodTwoClansArc:startEliminateQuest(pPlayer)
-	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)) then
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_02) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_02)) then
 		return
 	end
 	
@@ -52,7 +54,7 @@ function wodTwoClansArc:notifyKilledHuntTarget(pPlayer, pVictim)
 		return 0
 	end
 	
-	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)) then
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_02) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_02)) then
 		return 0
 	end
 
@@ -137,10 +139,8 @@ function wodTwoClansArc:spawnFirstSister(pPlayer)
 	
 	PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_sister1:task04_waypoint_name", "", -4782, -2951, WAYPOINTYELLOW, true, true, 0)
 	local pFirstSister = spawnMobile("dathomir", "wod_first_sister", -1, -4782, 128.4, -2951, -82, 0)
-	writeData("wodThemepark:firstSisterActive", 1)
 	CreatureObject(pFirstSister):setPvpStatusBitmask(0)
 	createObserver(OBJECTDESTRUCTION, "wodTwoClansArc", "notifyFirstSisterKilled", pFirstSister)
-	createEvent(10 * 60 * 1000, "wodTwoClansArc", "despawnMobile", pBoss, "")
 end
 
 function wodTwoClansArc:startFirstSisterEncounter(pNpc)
@@ -184,12 +184,6 @@ end
 function wodTwoClansArc:sendFirstSisterCommMessage(pPlayer)
 	if (pPlayer == nil) then
 		return
-	end
-	
-	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_05)) then
-		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_06)
-	else
-		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_06)
 	end
 
 	local sui = SuiMessageBox.new("wodTwoClansArc", "noCallBack")
@@ -242,10 +236,8 @@ function wodTwoClansArc:spawnSecondSister(pPlayer)
 	
 	PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_sister2:task07_waypoint_name", "", -3517, -6050, WAYPOINTYELLOW, true, true, 0)
 	local pSecondSister = spawnMobile("dathomir", "wod_second_sister", -1, -3517, 92.5, -6050, -63, 0)
-	writeData("wodThemepark:secondSisterActive", 1)
 	CreatureObject(pSecondSister):setPvpStatusBitmask(0)
 	createObserver(OBJECTDESTRUCTION, "wodTwoClansArc", "notifySecondSisterKilled", pSecondSister)
-	createEvent(10 * 60 * 1000, "wodTwoClansArc", "despawnMobile", pBoss, "")
 end
 
 function wodTwoClansArc:startSecondSisterEncounter(pNpc)
@@ -365,17 +357,4 @@ function wodTwoClansArc:sendThirdSisterCommMessage(pPlayer)
 	sui.setPrompt("@theme_park_wod/wod_sister3:task02_comm_message_text")
 	sui.hideCancelButton()
 	sui.sendTo(pPlayer)
-end
-
-function wodTwoClansArc:despawnMobile(pMobile)
-	if (pMobile == nil) then
-		return
-	end
-
-	if (CreatureObject(pMobile):isInCombat() or AiAgent(pMobile):getFollowObject() ~= nil) then
-		createEvent(60 * 1000, "wodTwoClansArc", "despawnMobile", pMobile, "")
-		return
-	end
-
-	SceneObject(pMobile):destroyObjectFromWorld()
 end

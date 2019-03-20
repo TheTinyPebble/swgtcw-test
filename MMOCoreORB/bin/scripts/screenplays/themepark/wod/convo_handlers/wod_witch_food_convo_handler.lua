@@ -7,7 +7,7 @@ function wod_witch_food_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTempl
 	local witchFoodType = self:getWitchFoodType(pPlayer, pNpc, pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 	
-	if (clan == "" or clan "" nil) then
+	if (clan == "" or clan == nil) then
 		return convoTemplate("not_elligible")
 	elseif ((witchFoodType == "wod_ns_witch_food" and clan == "sm") or (witchFoodType == "wod_sm_witch_food" and clan == "ns")) then
 		return convoTemplate("wrong_alignment")
