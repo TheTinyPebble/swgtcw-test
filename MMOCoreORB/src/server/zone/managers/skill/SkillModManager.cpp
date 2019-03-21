@@ -292,7 +292,7 @@ bool SkillModManager::compareMods(VectorMap<String, int>& mods, CreatureObject* 
 
 	mods.setAllowOverwriteInsertPlan();
 	mods.setNullValue(0);
-	
+
 	Mutex* skillModMutex = creature->getSkillModMutex();
 
 	Locker skillModLocker(skillModMutex);
@@ -331,6 +331,17 @@ bool SkillModManager::compareMods(VectorMap<String, int>& mods, CreatureObject* 
 			creature->addSkillMod(type, key, currentValue, true);
 
 			match = false;
+		}
+	}
+	compare << "---------------------------------" << endl;
+	SkillList* list = creature->getSkillList();
+	ManagedReference<PlayerObject*> ghost = creature->getPlayerObject();
+	
+	if (ghost != NULL) {
+		for (int i = 0 ; i < list->size(); ++i) {
+			Skill* skill = list->get(i);
+			const Vector<String>* abilityNames = skill->getAbilities();
+			SkillManager::instance()->addAbilities(ghost, *abilityNames, true);
 		}
 	}
 
