@@ -13,7 +13,7 @@
 #include "server/zone/objects/structure/StructureObject.h"
 #include "server/zone/objects/area/CampSiteActiveArea.h"
 #include "server/zone/managers/skill/SkillManager.h"
-#include "server/zone/objects/creature/variables/SkillList.h
+#include "server/zone/objects/creature/variables/SkillList.h"
 
 
 SkillModManager::SkillModManager()
