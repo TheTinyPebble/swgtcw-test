@@ -1,4 +1,4 @@
-wod_queen_mother_convo_handler = Object:new {}
+wod_queen_mother_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -7,18 +7,18 @@ function wod_queen_mother_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTem
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 
 	if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight"))) then
-		return convoTemplate("quest_complete")
+		return convoTemplate:getScreen("quest_complete")
 	end
 	
 	if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_ehs"))) then
-		return convoTemplate("hunting_init")
+		return convoTemplate:getScreen("hunting_init")
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_ehs_03"))) then
-		return convoTemplate("initial")
+		return convoTemplate:getScreen("initial")
 	end
 	
-	return convoTemplate("not_elligible")
+	return convoTemplate:getScreen("not_elligible")
 end
 
 function wod_queen_mother_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
@@ -41,14 +41,14 @@ function wod_queen_mother_convo_handler:runScreenHandlers(pConvTemplate, pPlayer
 
 	if (screenID == "hunting_start_quest") then
 		if (readData("wodThemepark:queenMotherBossFight:active") == 1) then
-			return convoTemplate("busy")
+			return convoTemplate:getScreen("busy")
 		elseif (self:checkGroupStatus(pPlayer)) then
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight_02"))
 			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_queen_mother_fight_03"))
 			wodSpiderclanArc:startBossFight()
 			writeData("wodThemepark:spiderBossFightOwnerID", SceneObject(pPlayer):getObjectID())
 		else
-			return convoTemplate("not_in_group")
+			return convoTemplate:getScreen("not_in_group")
 		end
 	end
 

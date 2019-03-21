@@ -1,4 +1,4 @@
-wod_sm_azzenaj_convo_handler = Object:new {}
+wod_sm_azzenaj_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -7,34 +7,34 @@ function wod_sm_azzenaj_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTempl
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 
 	if (clan == "" or clan == nil) then
-		return convoTemplate("not_elligible")
+		return convoTemplate:getScreen("not_elligible")
 	elseif (clan == "ns") then
-		return convoTemplate("wrong_alignment")
+		return convoTemplate:getScreen("wrong_alignment")
 	end
 	
 	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT)) then
-		return convoTemplate("quest_complete")
+		return convoTemplate:getScreen("quest_complete")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT)) then
-		return convoTemplate("quest_challenge_in_progress")
+		return convoTemplate:getScreen("quest_challenge_in_progress")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_04)) then
-		return convoTemplate("quest_hate_in_progress")
+		return convoTemplate:getScreen("quest_hate_in_progress")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_04)) then
-		return convoTemplate("quest_investigation_in_progress")
+		return convoTemplate:getScreen("quest_investigation_in_progress")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_05)) then
-		return convoTemplate("quest_lost_in_progress")
+		return convoTemplate:getScreen("quest_lost_in_progress")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_04)) then
-		return convoTemplate("quest_hate_return")
+		return convoTemplate:getScreen("quest_hate_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_04)) then
-		return convoTemplate("quest_found_return")
+		return convoTemplate:getScreen("quest_found_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_05)) then
-		return convoTemplate("quest_lost_return")
+		return convoTemplate:getScreen("quest_lost_return")
 	end
 	
-	return convoTemplate("initial")
+	return convoTemplate:getScreen("initial")
 end
 
 function wod_sm_azzenaj_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)

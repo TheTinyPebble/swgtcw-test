@@ -1,4 +1,4 @@
-wod_outcast_convo_handler = Object:new {}
+wod_outcast_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -7,14 +7,14 @@ function wod_outcast_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate
 	local outcast = self:getOutcast(pPlayer, pNpc, pConvTemplate)
 	
 	if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID(outcast .. "_01"))) then
-		return convoTemplate("supported_clan")
+		return convoTemplate:getScreen("supported_clan")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID(outcast))) then
-		return convoTemplate("initial")
+		return convoTemplate:getScreen("initial")
 	end
 	
-	return convoTemplate("not_elligible")
+	return convoTemplate:getScreen("not_elligible")
 end
 
 function wod_outcast_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
@@ -27,26 +27,26 @@ function wod_outcast_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNp
 
 	if (screenID == "dilemma_one_sm") then
 		self:addSMPoint(pPlayer)
-		return convoTemplate("dilemma_two")
+		return convoTemplate:getScreen("dilemma_two")
 	elseif (screenID == "dilemma_one_sm") then
 		self:addNSPoint(pPlayer)
-		return convoTemplate("dilemma_two")
+		return convoTemplate:getScreen("dilemma_two")
 	end
 	
 	if (screenID == "dilemma_two_sm") then
 		self:addSMPoint(pPlayer)
-		return convoTemplate("dilemma_three")
+		return convoTemplate:getScreen("dilemma_three")
 	elseif (screenID == "dilemma_two_sm") then
 		self:addNSPoint(pPlayer)
-		return convoTemplate("dilemma_three")
+		return convoTemplate:getScreen("dilemma_three")
 	end
 	
 	if (screenID == "dilemma_three_sm") then
 		self:addSMPoint(pPlayer)
-		return convoTemplate("supported_clan")
+		return convoTemplate:getScreen("supported_clan")
 	elseif (screenID == "dilemma_three_sm") then
 		self:addNSPoint(pPlayer)
-		return convoTemplate("supported_clan")
+		return convoTemplate:getScreen("supported_clan")
 	end
 	
 	local supportedClan = self:getClanAlignment(pPlayer)

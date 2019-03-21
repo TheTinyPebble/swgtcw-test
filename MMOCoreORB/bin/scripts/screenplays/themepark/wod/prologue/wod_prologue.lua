@@ -6,49 +6,11 @@ registerScreenPlay("wodPrologueScreenplay", false)
 
 local QuestManager = require("managers.quest.quest_manager")
 
---TODO: On logged in events
 --TODO: Reward handling check if inventory is full (can it give an item with full inventory? Need testing)
---TODO: Handle clan swapping
 
 function wodPrologueScreenplay:onPlayerLoggedIn(pPlayer)
 	if (pPlayer == nil) then
 		return
-	end
-	
-	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT)) then
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_01)) then
-			wodWalkabout1Goto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_02)) then
-			wodWalkabout2Goto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_03)) then
-			wodWalkabout3Goto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_04)) then
-			wodWalkabout4Goto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_05)) then
-			wodWalkabout5Goto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_06)) then
-			wodWalkabout6Goto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_07)) then
-			wodWalkabout7Goto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_08)) then
-			wodWalkabout8Goto:start(pPlayer)
-		end
-	end
-
-	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_OUTCAST_01_01)) then
-		wodOutcast1GoTo:start(pPlayer)
-	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_OUTCAST_02_01)) then
-		wodOutcast2GoTo:start(pPlayer)
-	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_OUTCAST_03_01)) then
-		wodOutcast3GoTo:start(pPlayer)
-	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_OUTCAST_04_01)) then
-		wodOutcast4GoTo:start(pPlayer)
-	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_OUTCAST_05_01)) then
-		wodOutcast5GoTo:start(pPlayer)
-	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_OUTCAST_06_01)) then
-		wodOutcast6GoTo:start(pPlayer)
-	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_OUTCAST_07_01)) then
-		wodOutcast7GoTo:start(pPlayer)
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_01) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_01)) then
@@ -442,7 +404,7 @@ function wodPrologueScreenplay:getFavorStatus(pPlayer)
 	end
 	
 	if (curNSFavor == curSMFavor) then
-		return {count = 0, clan = "ns"}
+		return {count = 0, clan = ""}
 	end
 	
 	if (curNSFavor > curSMFavor) then

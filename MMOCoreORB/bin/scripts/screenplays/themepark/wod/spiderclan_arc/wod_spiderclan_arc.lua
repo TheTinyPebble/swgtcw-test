@@ -9,7 +9,7 @@ local QuestManager = require("managers.quest.quest_manager")
 -- TODO: Patrol move before boss despawns
 
 function wodSpiderclanArc:startBossFight()	
-	--local pBoss = spawnMobile() wod_spider_queen_consort
+	local pBoss = spawnMobile("dathomir", "wod_spider_queen", 0, 46.3343, -67.424, -95.4863, 324, 610001008) 
 	createObserver(OBJECTDESTRUCTION, "wodSpiderclanArc", "notifyBossKilled", pBoss)
 	writeData("wodThemepark:spiderBossState", 1)
 	writeData("wodThemepark:queenMotherBossFight:active", 1)
@@ -40,9 +40,10 @@ function wodSpiderclanArc:startBossFight()
 end
 
 function wodSpiderclanArc:spawnAdds()
-	--spawnMobile() wod_spider_queen_guard
-	--spawnMobile()
-	--spawnMobile()
+	spawnMobile("dathomir", "wod_spider_queen_consort", 0, 31.8323, -66.7798, -75.8352, 142, 610001008)
+	spawnMobile("dathomir", "wod_spider_queen_guard", 0, 34.2232, -68.3924, -97.2978, 71, 610001008) 
+	spawnMobile("dathomir", "wod_spider_queen_guard", 0, 51.4676, -66.435, -77.8212, 184, 610001008)  
+	spawnMobile("dathomir", "wod_spider_queen_guard", 0, 31.1171, -66.8453, -74.6009, 145, 610001008) 
 end
 
 function wodSpiderclanArc:notifyBossKilled(pBoss)

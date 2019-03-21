@@ -23,15 +23,22 @@ function wodWalkabout4Goto:onEnteredActiveArea(pPlayer)
 	return 1
 end
 
-function wodWalkabout4Goto:sendCommMessage(pPlayer)
-	local sui = SuiMessageBox.new("wodWalkabout4Goto", "noCallBack")
-	sui.setTitle("@theme_park_wod/wod_prologue_walkabout:comm_message_title_02")
-	sui.setPrompt("@theme_park_wod/wod_prologue_walkabout:task04_comm_message_text_02")
-	sui.hideCancelButton()
-	sui.sendTo(pPlayer)
+-- Event handler for the onSuccessfulSpawn.
+-- The event will activate the quest.
+-- @param pPlayer pointer to the creature object of the player.
+function wodWalkabout4Goto:onSuccessfulSpawn(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+
 end
 
-function wodWalkabout4Goto:noCallback(pPlayer, pSui, eventIndex, ...)
+function wodWalkabout4Goto:onLoggedIn(pPlayer)
+	if (self:hasTaskStarted(pPlayer)) then
+		return 0
+	end
+	self:start(pPlayer)
+	return 0
 end
 
 return wodWalkabout4Goto

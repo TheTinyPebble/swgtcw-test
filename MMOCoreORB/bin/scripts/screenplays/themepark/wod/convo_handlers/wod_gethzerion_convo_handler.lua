@@ -1,4 +1,4 @@
-wod_gethzerion_convo_handler = Object:new {}
+wod_gethzerion_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -7,28 +7,28 @@ function wod_gethzerion_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTempl
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 
 	if (clan == "" or clan == nil) then
-		return convoTemplate("not_elligible")
+		return convoTemplate:getScreen("not_elligible")
 	elseif (clan == "sm") then
-		return convoTemplate("wrong_alignment")
+		return convoTemplate:getScreen("wrong_alignment")
 	end
-	
+
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RECON)) then
-		return convoTemplate("quest_in_progress")
+		return convoTemplate:getScreen("quest_in_progress")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_02)) then
-		return convoTemplate("spiderclan_return")
+		return convoTemplate:getScreen("spiderclan_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_02)) then
-		return convoTemplate("other_clan_return")
+		return convoTemplate:getScreen("other_clan_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_GHOST_REWARD)) then
-		return convoTemplate("two_clans_return")
+		return convoTemplate:getScreen("two_clans_return")
 	end
 	
 	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_RECON) and (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST) or QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST))) then
-		return convoTemplate("init_recon_complete")
+		return convoTemplate:getScreen("init_recon_complete")
 	end
 	
-	return convoTemplate("initial")
+	return convoTemplate:getScreen("initial")
 end
 
 function wod_gethzerion_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
@@ -82,7 +82,7 @@ function wod_gethzerion_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 	
 	if (screenID == "cache_start") then
 		if (SceneObject(pInventory):isContainerFullRecursive()) then
-			return convoTemplate("initial")
+			return convoTemplate:getScreen("initial")
 		else
 			giveItem(pInventory, "object/tangible/theme_park/wod/wod_rubina_chest.iff", -1)
 			createEvent(5 * 1000, "wodRubinaEpilogue", "sendCommMessage", pPlayer, "")

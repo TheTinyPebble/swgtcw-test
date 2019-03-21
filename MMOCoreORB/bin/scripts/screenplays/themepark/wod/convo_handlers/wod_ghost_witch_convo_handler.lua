@@ -1,4 +1,4 @@
-wod_ghost_witch_convo_handler = Object:new {}
+wod_ghost_witch_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -9,32 +9,32 @@ function wod_ghost_witch_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemp
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 	
 	if (clan == "" or clan == nil) then
-		return convoTemplate("not_elligible")
+		return convoTemplate:getScreen("not_elligible")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3"))) then
-		return convoTemplate("quest_completed")
+		return convoTemplate:getScreen("quest_completed")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3")) and not QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3_05"))) then
-		return convoTemplate("third_sister_in_progress")
+		return convoTemplate:getScreen("third_sister_in_progress")
 	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2")) and not QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2_05"))) then
-		return convoTemplate("second_sister_in_progress")
+		return convoTemplate:getScreen("second_sister_in_progress")
 	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1")) and not QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_05"))) then
-		return convoTemplate("first_sister_in_progress")
+		return convoTemplate:getScreen("first_sister_in_progress")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister3_05"))) then
-		return convoTemplate("third_sister_return")
+		return convoTemplate:getScreen("third_sister_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister2_05"))) then
-		return convoTemplate("second_sister_return")
+		return convoTemplate:getScreen("second_sister_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_sister1_05"))) then
-		return convoTemplate("first_sister_return")
+		return convoTemplate:getScreen("first_sister_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_recon_02"))) then
-		return convoTemplate("initial")
+		return convoTemplate:getScreen("initial")
 	end
 	
-	return convoTemplate("not_elligible")
+	return convoTemplate:getScreen("not_elligible")
 end
 
 function wod_ghost_witch_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)

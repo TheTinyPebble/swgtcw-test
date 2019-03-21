@@ -33,4 +33,22 @@ function wodSMKyrisaCaveGoto:onEnteredActiveArea(pPlayer)
 	return 1
 end
 
+-- Event handler for the onSuccessfulSpawn.
+-- The event will activate the quest.
+-- @param pPlayer pointer to the creature object of the player.
+function wodSMKyrisaCaveGoto:onSuccessfulSpawn(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+
+end
+
+function wodSMKyrisaCaveGoto:onLoggedIn(pPlayer)
+	if (self:hasTaskStarted(pPlayer)) then
+		return 0
+	end
+	self:start(pPlayer)
+	return 0
+end
+
 return wodSMKyrisaCaveGoto

@@ -1,4 +1,4 @@
-wod_witch_food_convo_handler = Object:new {}
+wod_witch_food_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -8,16 +8,16 @@ function wod_witch_food_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTempl
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 	
 	if (clan == "" or clan == nil) then
-		return convoTemplate("not_elligible")
+		return convoTemplate:getScreen("not_elligible")
 	elseif ((witchFoodType == "wod_ns_witch_food" and clan == "sm") or (witchFoodType == "wod_sm_witch_food" and clan == "ns")) then
-		return convoTemplate("wrong_alignment")
+		return convoTemplate:getScreen("wrong_alignment")
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting_02")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing_02"))) then
-		return convoTemplate("return_food")
+		return convoTemplate:getScreen("return_food")
 	end
 	
-	return convoTemplate("initial")
+	return convoTemplate:getScreen("initial")
 end
 
 function wod_witch_food_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
@@ -31,9 +31,9 @@ function wod_witch_food_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 	
 	if (screenID == "bolma_start") then	
 		if ((witchFoodType == "wod_ns_witch_food" and clan == QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING)) or (witchFoodType == "wod_sm_witch_food" and QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING))) then
-			return convoTemplate("other_faction_in_progress")
+			return convoTemplate:getScreen("other_faction_in_progress")
 		elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))) then
-			return convoTemplate("bolma_in_progress")
+			return convoTemplate:getScreen("bolma_in_progress")
 		else
 			if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))) then
 				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_hunting"))
@@ -47,9 +47,9 @@ function wod_witch_food_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, 
 	
 	if (screenID == "fish_start") then	
 		if ((witchFoodType == "wod_ns_witch_food" and clan == QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING)) or (witchFoodType == "wod_sm_witch_food" and QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING))) then
-			return convoTemplate("other_faction_in_progress")
+			return convoTemplate:getScreen("other_faction_in_progress")
 		elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))) then
-			return convoTemplate("fish_in_progress")
+			return convoTemplate:getScreen("fish_in_progress")
 		else
 			if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))) then
 				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_fishing"))

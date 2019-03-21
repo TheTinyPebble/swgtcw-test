@@ -188,7 +188,7 @@ dathomir = {
 		{"tower_and_stones",-443,-1156,32},
 		{"tree_hut",-5045,-2773,32},
 		{"wall",7442,-3024,32},
-		{"wid_second_sister_village",-3572,-6017,50},
+		{"wod_second_sister_village",-3572,-6017,50},
 	},
 
 	planetObjects = {

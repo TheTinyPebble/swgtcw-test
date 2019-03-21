@@ -1,7 +1,7 @@
 wod_spider_queen_guard = Creature:new {
 	customName = "Temporary Name: Spider Queen Guard",
-	socialGroup = "spider_queen",
-	faction = "",
+	socialGroup = "spider_nightsister",
+	faction = "spider_nightsister",
 	level = 107,
 	chanceHit = 3.0,
 	damageMin = 270,
@@ -24,7 +24,7 @@ wod_spider_queen_guard = Creature:new {
 	creatureBitmask = PACK + KILLER + STALKER,
 	optionsBitmask = AIENABLED,
 	diet = CARNIVORE,
-	scale = 1,
+	scale = 2,
 
 	templates = {"object/mobile/spider_queen_guard.iff"},
 	hues = {},

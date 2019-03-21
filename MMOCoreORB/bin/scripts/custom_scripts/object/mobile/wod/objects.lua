@@ -339,3 +339,15 @@ object_mobile_shared_whuffa_worm = SharedCreatureObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_mobile_shared_whuffa_worm, "object/mobile/shared_whuffa_worm.iff")
+
+object_mobile_shared_spiderclan_queen_mother = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_spiderclan_queen_mother.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_spiderclan_queen_mother, "object/mobile/shared_spiderclan_queen_mother.iff")
+
+object_mobile_shared_dressed_dathomir_spider_nightsister_mother = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_dathomir_spider_nightsister_mother.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_dathomir_spider_nightsister_mother, "object/mobile/shared_dressed_dathomir_spider_nightsister_mother.iff")

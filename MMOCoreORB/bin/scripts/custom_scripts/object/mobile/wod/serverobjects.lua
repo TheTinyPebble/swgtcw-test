@@ -22,3 +22,5 @@ includeFile("../custom_scripts/object/mobile/wod/dressed_dathomir_sing_mt_clan_s
 includeFile("../custom_scripts/object/mobile/wod/dressed_dathomir_nightsister_obfuscatrix.lua")
 includeFile("../custom_scripts/object/mobile/wod/spider_queen_guard.lua")
 includeFile("../custom_scripts/object/mobile/wod/whuffa_worm.lua")
+includeFile("../custom_scripts/object/mobile/wod/dressed_dathomir_spider_nightsister_mother.lua")
+includeFile("../custom_scripts/object/mobile/wod/spiderclan_queen_mother.lua")

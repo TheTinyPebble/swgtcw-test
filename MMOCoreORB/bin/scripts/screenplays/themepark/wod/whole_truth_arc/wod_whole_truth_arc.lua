@@ -11,9 +11,9 @@ function wodWholeTruthArc:start()
 end
 
 function wodWholeTruthArc:spawnCagedRancor()
-	--local pCage = spawnSceneObject("dathomir", "object/tangible/quest/wod/wod_rancor_cage.iff", )
+	local pCage = spawnSceneObject("dathomir", "object/tangible/quest/wod/wod_rancor_cage.iff", -90.9, -100.8, -97.5, 610001022, math.rad(5))
 	writeData("wodThemepark:cageID", SceneObject(pCage):getObjectID())
-	--local pRancor = spawnMobile() --wod_mutant_rancor_boss
+	local pRancor = spawnMobile("dathomir", "wod_mutant_rancor_boss", 0, -90.9051, -99.5743, -89.1738, 183, 610001022)
 	CreatureObject(pRancor):setPvpStatusBitmask(0)
 	writeData("wodThemepark:cagedRancorID", SceneObject(pRancor):getObjectID())
 	deleteData("wodThemepark:rancorBossState")
@@ -91,7 +91,7 @@ function wodWholeTruthArc:notifyBossKilled(pBoss)
 		end
 	end
 
-	createEvent(10 * 1000, "wodWholeTruthArc", "spawnCagedRancor", nil, "")
+	createEvent(30 * 1000, "wodWholeTruthArc", "spawnCagedRancor", nil, "")
 	return 1
 end
 

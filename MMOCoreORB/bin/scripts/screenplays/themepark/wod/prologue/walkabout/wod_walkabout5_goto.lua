@@ -23,8 +23,26 @@ function wodWalkabout5Goto:onEnteredActiveArea(pPlayer)
 	self:sendCommMessage(pPlayer)
 	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_05)
 	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_06)
-	wodWalkabout5Goto:start(pPlayer)
+	wodWalkabout6Goto:start(pPlayer)
 	return 1
+end
+
+-- Event handler for the onSuccessfulSpawn.
+-- The event will activate the quest.
+-- @param pPlayer pointer to the creature object of the player.
+function wodWalkabout5Goto:onSuccessfulSpawn(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+
+end
+
+function wodWalkabout5Goto:onLoggedIn(pPlayer)
+	if (self:hasTaskStarted(pPlayer)) then
+		return 0
+	end
+	self:start(pPlayer)
+	return 0
 end
 
 function wodWalkabout5Goto:sendCommMessage(pPlayer)
@@ -35,7 +53,7 @@ function wodWalkabout5Goto:sendCommMessage(pPlayer)
 	sui.sendTo(pPlayer)
 end
 
-function wodWalkabout5Goto:noCallback(pPlayer, pSui, eventIndex, ...)
+function wodWalkabout5Goto:noCallBack(pPlayer, pSui, eventIndex, ...)
 end
 
 return wodWalkabout5Goto

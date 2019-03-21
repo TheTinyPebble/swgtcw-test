@@ -40,7 +40,7 @@ function createOutcastNPC(num)
 		},
 		lootGroups = {},
 		weapons = {},
-		conversationTemplate = "wod_outcast_0" .. num,
+		conversationTemplate = "wod_prologue_outcast_" .. num,
 		attacks = {
 		}
 	}

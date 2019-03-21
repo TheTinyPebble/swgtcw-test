@@ -34,6 +34,24 @@ function wodSMLostE0104Goto:onSuccessfulSpawn(pPlayer)
 		return
 	end
 
+end
+
+function wodSMLostE0104Goto:onLoggedIn(pPlayer)
+	if (self:hasTaskStarted(pPlayer)) then
+		return 0
+	end
+	self:start(pPlayer)
+	return 0
+end
+
+-- Event handler for the onSuccessfulSpawn.
+-- The event will activate the quest.
+-- @param pPlayer pointer to the creature object of the player.
+function wodSMLostE0104Goto:onSuccessfulSpawn(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+
 	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_04)
 end
 

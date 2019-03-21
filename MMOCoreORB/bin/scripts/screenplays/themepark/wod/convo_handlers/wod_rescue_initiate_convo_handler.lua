@@ -1,4 +1,4 @@
-wod_rescue_initiate_convo_handler = Object:new {}
+wod_rescue_initiate_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -7,10 +7,10 @@ function wod_rescue_initiate_convo_handler:getInitialScreen(pPlayer, pNpc, pConv
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_lost_e02_03"))) then
-		return convoTemplate("initial_" .. clan)
+		return convoTemplate:getScreen("initial_" .. clan)
 	end
 	
-	return convoTemplate("not_elligible_" .. clan)
+	return convoTemplate:getScreen("not_elligible_" .. clan)
 end
 
 function wod_rescue_initiate_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)

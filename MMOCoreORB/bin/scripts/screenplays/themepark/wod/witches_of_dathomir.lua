@@ -44,7 +44,7 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 			x = 308,
 			y = -190, 
 			spawnCount = 10, 
-			radius = 40,
+			radius = 150,
 			respawnTimer = 300,
 			spawnTemplates = {
 				"wod_spiderclan_obfuscatrix"
@@ -81,290 +81,86 @@ function witchesOfDathomirScreenplay:onPlayerLoggedIn(pPlayer)
 	end
 	
 	if (clan == "sm") then
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_SM)) then
-			wodStrongholdSMGoto:start(pPlayer)
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)) then
+			dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_03)) then
+			dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_02)) then
+			dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_01_03)) then
-			wodSMRepairAltar01ReturnGoto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_02_03)) then
-			wodSMRepairAltar02ReturnGoto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_03_03)) then
-			wodSMRepairAltar03ReturnGoto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_REPAIR_ALTAR_04_03)) then
-			wodSMRepairAltar04ReturnGoto:start(pPlayer)
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)) then
+			dropObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_01)) then
-				wodSMLostE0101Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_02)) then
-				wodSMLostE0102Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_04)) then
-				wodSMLostE0104Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E01_05)) then
-				wodSMLostE0105Goto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_01)) then
-				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_03)) then
-				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_04)) then
-				wodSMLostE0204Goto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_01)) then
-				wodSMEHSGoto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_02)) then
-				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_04)) then
-				wodSMEHSReturnGoto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_QUEEN_MOTHER_FIGHT_01)) then
-			wodSMQueenMotherGoto:start(pPlayer)
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING_01)) then
+			dropObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
+			createObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_01)) then
-				dropObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HUNTING_02)) then
-				wodHuntingSMReturnGoto:start(pPlayer)
-			end
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_02)) then
+			dropObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING_01)) then
-				dropObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
-				createObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_FISHING_02)) then
-				wodFishingSMReturnGoto:start(pPlayer)
-			end
-		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING_07)) then
-			wodSMHerbsReturnGoto:start(pPlayer)
-		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_01)) then
-				wodSMWholeTruth01Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_02)) then
-				dropObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_03)) then
-				wodSMWholeTruth03Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_04)) then
-				wodSMWholeTruth04Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_06)) then
-				wodSMWholeTruth06Goto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KYRISA_BOSS_FIGHT_01)) then
-			wodSMKyrisaCaveGoto:start(pPlayer)
-		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_01)) then
-				dropObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_01)) then
+			dropObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
+			if (readData("wodThemepark:rancorTamingActive:" .. SceneObject(pPlayer):getObjectID()) == 1) then
 				createObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RANCOR_TAMER_02)) then
-				wodEntSMReturnEscort:start(pPlayer)
 			end
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN_01)) then
-				dropObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN_02)) then
-				wodKillOtherClanSMReturnGoto:start(pPlayer)
-			end
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_CLAN_01)) then
+			dropObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN_01)) then
-				dropObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN_02)) then
-				wodKillSpiderclanSMReturnGoto:start(pPlayer)
-			end
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_SPIDERCLAN_01)) then
+			dropObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_RECON_01)) then
-			wodSMReconGoto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_01)) then
-				wodSister1Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_02)) then
-				dropObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_05)) then
-				wodSister1ReturnGoto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER2)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER2_01)) then
-				wodSister2Goto:start(pPlayer)
-			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER2_08)) then
-				wodSister2ReturnGoto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER3)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER3_01)) then
-				wodSister3Goto:start(pPlayer)
-			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER3_03)) then
-				wodSister3ReturnGoto:start(pPlayer)
-			end
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_02)) then
+			dropObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
 		end
 	elseif (clan == "ns") then
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS)) then
-			wodStrongholdNSGoto:start(pPlayer)
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_01)) then
+			dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03)) then
+			dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_02)) then
+			dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_01_03)) then
-			wodNSRepairAltar01ReturnGoto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_02_03)) then
-			wodNSRepairAltar02ReturnGoto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_03_03)) then
-			wodNSRepairAltar03ReturnGoto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_REPAIR_ALTAR_04_03)) then
-			wodNSRepairAltar04ReturnGoto:start(pPlayer)
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01)) then
+			dropObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_01)) then
-				wodNSLostE0101Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_02)) then
-				wodNSLostE0102Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_04)) then
-				wodNSLostE0104Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E01_05)) then
-				wodNSLostE0105Goto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_01)) then
-				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03)) then
-				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_04)) then
-				wodNSLostE0204Goto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_01)) then
-				wodNSEHSGoto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_02)) then
-				dropObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodSpiderclanArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_04)) then
-				wodNSEHSReturnGoto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_QUEEN_MOTHER_FIGHT_01)) then
-			wodNSQueenMotherGoto:start(pPlayer)
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING_01)) then
+			dropObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
+			createObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_01)) then
-				dropObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodHunting", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HUNTING_02)) then
-				wodHuntingNSReturnGoto:start(pPlayer)
-			end
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02)) then
+			dropObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING_01)) then
-				dropObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
-				createObserver(FISHINGSUCESS, "wodFishing", "notifyFishingSuccess", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_FISHING_02)) then
-				wodFishingNSReturnGoto:start(pPlayer)
-			end
-		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_07)) then
-			wodNSHerbsReturnGoto:start(pPlayer)
-		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_01)) then
-				wodNSWholeTruth01Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02)) then
-				dropObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_03)) then
-				wodNSWholeTruth03Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_04)) then
-				wodNSWholeTruth04Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_06)) then
-				wodNSWholeTruth06Goto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT_01)) then
-			wodNSKyrisaCaveGoto:start(pPlayer)
-		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_01)) then
-				dropObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_01)) then
+			dropObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
+			if (readData("wodThemepark:rancorTamingActive:" .. SceneObject(pPlayer):getObjectID()) == 1) then
 				createObserver(STARTENTERTAIN, "wodEntertainerQuest", "notifyPerformanceObserver", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RANCOR_TAMER_02)) then
-				wodEntNSReturnEscort:start(pPlayer)
 			end
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_01)) then
-				dropObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_02)) then
-				wodKillOtherClanNSReturnGoto:start(pPlayer)
-			end
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_CLAN_01)) then
+			dropObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_01)) then
-				dropObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_02)) then
-				wodKillSpiderclanNSReturnGoto:start(pPlayer)
-			end
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_SPIDERCLAN_01)) then
+			dropObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
 		end
-		
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_RECON_01)) then
-			wodNSReconGoto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_01)) then
-				wodSister1Goto:start(pPlayer)
-			elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_02)) then
-				dropObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
-				createObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
-			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_05)) then
-				wodSister1ReturnGoto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER2)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER2_01)) then
-				wodSister2Goto:start(pPlayer)
-			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER2_08)) then
-				wodSister2ReturnGoto:start(pPlayer)
-			end
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER3)) then
-			if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER3_01)) then
-				wodSister3Goto:start(pPlayer)
-			elseif (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER3_03)) then
-				wodSister3ReturnGoto:start(pPlayer)
-			end
-		end
-	end
-	
-	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)) then
-		wodRubinaEpilogueGoto:start(pPlayer)
-	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND)) then
-		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_01)) then
-			wodLeftBehindGoto:start(pPlayer)
-		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_03)) then
-			wodLeftBehindReturnGoto:start(pPlayer)
+		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_02)) then
+			dropObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
+			createObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
 		end
 	end
 end
@@ -408,6 +204,11 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 	
 	--Other statics
 	spawnMobile("dathomir", "wod_rescue_initiate", -1, 1.4, -46.1, -150.6, -11, 3695706)
+	spawnMobile("dathomir", "wod_spiderclan_obfuscatrix", 300, -1211.14, 126.731, 6200.72, 219, 0)
+	spawnMobile("dathomir", "wod_spiderclan_obfuscatrix", 300, -1158.8, 134.365, 6218.83, 77, 0) 
+	spawnMobile("dathomir", "wod_spiderclan_obfuscatrix", 300, -1153.97, 120.224, 6261.31, 229, 0) 
+	spawnMobile("dathomir", "wod_spiderclan_obfuscatrix", 300, -1194.61, 127.826, 6312.44, 150, 0) 
+	spawnMobile("dathomir", "wod_spiderclan_obfuscatrix", 300, -1235.59, 108.501, 6273.43, 221, 0) 
 	
 	for i = 1, #self.spawnZones do
 		for j = 1, self.spawnZones[i].spawnCount do
@@ -420,16 +221,141 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 	end
 	
 	--Cave of Mutations (Kyrisa): 1993, 42, 1823
+	spawnMobile("dathomir", "wod_kyrisa", 300, -85.9867, -101.108, -146.848, 97, 610001019) 
+	spawnMobile("dathomir", "mutant_rancor", 300, 2013.6, 27.1653, 1815.7, 311, 0) 
+	spawnMobile("dathomir", "mutant_rancor", 300, 2023.37, 30.0528, 1827.49, 314, 0) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -3.64833, -40.3737, -71.9833, 64, 610001014) 
+	spawnMobile("dathomir", "mutant_rancor", 300, 21.0084, -43.6678, -61.4665, 242, 610001014) 
+	spawnMobile("dathomir", "mutant_rancor", 300, 42.2644, -46.4554, -55.337, 193, 610001015) 
+	spawnMobile("dathomir", "mutant_rancor", 300, 43.2449, -46.0775, -97.4378, 347, 610001015) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -5.33385, -45.1265, -141.72, 147, 610001016) 
+	spawnMobile("dathomir", "mutant_rancor", 300, 64.6421, -47.3975, -128.361, 248, 610001016) 
+	spawnMobile("dathomir", "mutant_rancor", 300, 58.1275, -56.0969, -154.475, 126, 610001016) 
+	spawnMobile("dathomir", "mutant_rancor", 300, 57.272, -56.7325, -178.495, 275, 610001016) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -3.82092, -64.0563, -178.86, 87, 610001017) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -1.29048, -63.7761, -232.021, 278, 610001018) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -18.0333, -65.8262, -239.192, 61, 610001018) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -71.528, -69.4305, -194.527, 14, 610001019) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -95.5359, -73.7156, -169.064, 81, 610001019) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -120.967, -69.7222, -126.557, 201, 610001019) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -90.6674, -70.5743, -111.763, 194, 610001019) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -55.564, -69.9051, -88.0477, 275, 610001020) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -49.3086, -68.9791, -105.445, 275, 610001020) 
+	spawnMobile("dathomir", "mutant_rancor", 300, -25.8339, -79.4139, -140.684, 347, 610001021) 
 	
 	--Breeding Cave (Queen Mother): 308, 114, -190
+	spawnMobile("dathomir", "wod_queen_mother", 300, 3.08672, -67.305, -74.1763, 187, 610001001) 
+	local pSpider = spawnMobile("dathomir", "cavern_spider_broodling", 300, 2.43422, -67.4344, -66.7283, 176, 610001001) 
+	CreatureObject(pSpider):setPvpStatusBitmask(0)
+	pSpider = spawnMobile("dathomir", "cavern_spider_broodling", 300, 10.1517, -66.8012, -76.0353, 232, 610001001) 
+	CreatureObject(pSpider):setPvpStatusBitmask(0)
+	pSpider = spawnMobile("dathomir", "cavern_spider_broodling", 300, 9.18448, -67.2903, -69.6039, 230, 610001001) 
+	CreatureObject(pSpider):setPvpStatusBitmask(0)
+	
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -8.72737, -30.2743, -43.746, 249, 610000983) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -10.3108, -30.237, -50.1996, 331, 610000983) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -14.0785, -30.2435, -47.9276, 343, 610000983) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -44.7617, -30.0132, -45.5551, 306, 610000984) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -76.0539, -29.9613, -42.0035, 116, 610000986) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -73.1548, -29.9506, -39.8257, 177, 610000986) 
+	spawnMobile("dathomir", "cavern_spider", 300, -98.8088, -38.4038, -121.272, 3, 610000990) 
+	spawnMobile("dathomir", "cavern_spider", 300, -103.515, -39.3991, -117.072, 62, 610000990) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -99.8184, -38.919, -88.308, 261, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -103.271, -38.9451, -83.6091, 225, 610000992) 
+	spawnMobile("dathomir", "cavern_spider", 300, -114.362, -38.422, -78.9145, 198, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -126.668, -33.8462, -64.5616, 123, 610000987) 
+	spawnMobile("dathomir", "cavern_spider", 300, -106.915, -36.0845, -65.3279, 293, 610000987) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -103.495, -42.0965, -26.9966, 93, 610000997) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -104.5, -42.1731, -22.8781, 312, 610000997) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -105.059, -42.4767, -14.319, 181, 610000998) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -135.893, -54.0382, -11.2952, 147, 610000999) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -138.102, -57.2517, -22.4536, 67, 610000999) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -134.942, -57.3724, -27.4849, 337, 610000999) 
+	spawnMobile("dathomir", "cavern_spider", 300, -110.881, -57.7561, -25.4874, 162, 610000997) 
+	spawnMobile("dathomir", "cavern_spider", 300, -115.515, -57.8328, -36.0169, 359, 610000997) 
+	spawnMobile("dathomir", "cavern_spider", 300, -122.28, -57.6675, -30.4606, 60, 610000997) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -80.0229, -57.9442, -39.5909, 201, 610000995) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -84.5985, -57.3794, -38.7337, 159, 610000995) 
+	spawnMobile("dathomir", "cavern_spider", 300, -81.6952, -61.3118, -64.4004, 46, 610000995) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -98.4116, -54.9555, -87.3005, 280, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -101.719, -55.1902, -81.0633, 278, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -112.694, -55.1336, -88.4306, 5, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -113.149, -54.3038, -79.2292, 191, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -121.505, -54.1821, -83.5256, 157, 610000992) 
+	spawnMobile("dathomir", "cavern_spider", 300, -117.304, -54.6525, -88.0298, 42, 610000992) 
+	spawnMobile("dathomir", "cavern_spider", 300, -129.766, -53.7441, -83.6629, 175, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -134.12, -54.1235, -81.9921, 30, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -142.986, -54.0078, -81.6129, 145, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -142.372, -53.8809, -89.8782, 122, 610000992) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -144.54, -53.5675, -116.354, 229, 610000993) 
+	spawnMobile("dathomir", "cavern_spider", 300, -149.104, -54.0405, -121.091, 284, 610000993) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -170.915, -54.3727, -120.749, 26, 610000993) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -162.664, -49.8456, -80.2689, 358, 610000991) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -172.316, -50.0686, -65.0638, 83, 610000991) 
+	spawnMobile("dathomir", "cavern_spider", 300, -167.313, -49.8859, -40.921, 105, 610000989) 
+	spawnMobile("dathomir", "cavern_spider", 300, -141.251, -49.6307, -65.2166, 17, 610000987) 
+	spawnMobile("dathomir", "cavern_spider", 300, -140.088, -49.497, -55.5922, 110, 610000987) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -121.107, -49.5566, -60.1073, 176, 610000987) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -119.769, -49.0836, -66.2714, 42, 610000987) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -67.9919, -46.8738, -74.2088, 17, 610000986) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -67.7542, -46.8351, -71.0158, 244, 610000986) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -80.6958, -46.9173, -46.2041, 58, 610000986) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -76.4945, -46.8779, -38.6803, 114, 610000986) 
+	spawnMobile("dathomir", "cavern_spider", 300, -63.0624, -46.5139, -48.2058, 218, 610000986) 
+	spawnMobile("dathomir", "cavern_spider", 300, -71.5257, -46.917, -23.3346, 97, 610000985) 
+	spawnMobile("dathomir", "cavern_spider", 300, -70.6257, -46.2751, -14.3826, 104, 610000985) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -65.1636, -43.9364, -10.556, 104, 610000985) 
+	spawnMobile("dathomir", "cavern_spider", 300, -40.466, -33.352, -22.0262, 99, 610000983) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -25.0224, -30.2228, -21.528, 98, 610000983) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -23.6589, -30.2063, -15.9482, 66, 610000983) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, 16.3683, -21.5059, -20.9266, 299, 610001000) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, 18.0012, -35.4402, -71.2298, 298, 610001001) 
+	spawnMobile("dathomir", "cavern_spider", 300, 15.8063, -35.4085, -68.8043, 59, 610001001) 
+	spawnMobile("dathomir", "cavern_spider", 300, -11.5408, -34.8361, -79.1411, 32, 610001001) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -16.5916, -34.5539, -64.2922, 186, 610001001) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -26.9231, -35.2895, -66.5937, 113, 610001002) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -11.6237, -43.7295, -100.197, 309, 610001003) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -39.0603, -44.7512, -110.574, 282, 610001003) 
+	spawnMobile("dathomir", "cavern_spider", 300, -51.4123, -48.48, -96.0129, 136, 610001003) 
+	spawnMobile("dathomir", "cavern_spider", 300, -39.7154, -45.2907, -104.247, 257, 610001003) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -78.4305, -52.9875, -113.204, 82, 610000990) 
+	spawnMobile("dathomir", "cavern_spider", 300, -131.954, -55.3407, -120.483, 38, 610001004) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -127.765, -60.3114, -136.038, 68, 610001005) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -124.714, -60.4347, -140.161, 299, 610001005) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -110.586, -69.7205, -115.072, 86, 610000990) 
+	spawnMobile("dathomir", "cavern_spider", 300, -111.103, -69.4856, -106.198, 122, 610000990) 
+	spawnMobile("dathomir", "cavern_spider", 300, -88.4228, -71.7917, -109.542, 175, 610000990) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -83.7736, -72.4327, -113, 242, 610000990) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -88.8333, -71.8934, -117.949, 8, 610000990) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -74.2776, -66.8058, -137.597, 290, 610001006) 
+	spawnMobile("dathomir", "cavern_spider", 300, -47.4118, -66.7247, -156.943, 287, 610001009) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -87.0639, -66.1879, -160.133, 86, 610001009) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -84.4905, -65.4194, -156.137, 141, 610001009) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -78.0116, -66.0119, -179.81, 60, 610001009) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -63.6468, -66.2091, -172.607, 342, 610001009) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -75.8746, -66.3928, -187.641, 23, 610001009) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -46.7536, -66.4958, -183.481, 313, 610001009) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -62.2136, -65.5501, -232.302, 39, 610001010) 
+	spawnMobile("dathomir", "cavern_spider_hunter", 300, -55.3619, -66.194, -236.676, 296, 610001010) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -61.4488, -66.4021, -237.436, 31, 610001010) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -66.9405, -64.8309, -229.952, 53, 610001010) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -52.4152, -65.1941, -230.984, 306, 610001010) 
+	spawnMobile("dathomir", "cavern_spider", 300, -48.2611, -68.2505, -134.239, 289, 610001006) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, 3.40277, -71.4344, -108.744, 282, 610001007) 
+	spawnMobile("dathomir", "cavern_spider_broodling", 300, -1.32541, -70.8481, -103.685, 235, 610001007) 
 	
 	--Temple of the Stars: 5269, 121, 165
+	spawnMobile("dathomir", "wod_kwi", 300, -8.45219, -37.2976, 11.8412, 162, 610001025)  
+	spawnMobile("dathomir", "wod_kwi", 300, 7.65888, -37.2976, 9.01322, 198, 610001025) 
+	spawnMobile("dathomir", "wod_kwi", 300, 9.94425, -37.2976, -7.08133, 238, 610001025) 
+	spawnMobile("dathomir", "wod_kwi", 300, -8.28943, -37.2976, -11.4224, 316, 610001025)  
+	spawnMobile("dathomir", "wod_giant_whuffa_worm", 300, -0.554375, -37.2976, -18.1245, 176, 610001025) 
 end
 
 function witchesOfDathomirScreenplay:spawnSceneObjects()
 	--Herb baskets
 	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/pro_ns_herb_storage.iff", -3181, 22.1, 3185.1, 0, 0)
-	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/pro_sm_herb_storage.iff", -3172, 25.5, 3182.4, 0, 0)
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/pro_sm_herb_storage.iff", -3172, 21.5, 3182.4, 0, 0)
 	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/ns_herb_storage.iff", -11.2, 7.2, -30.5, 189384, 0)
 	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/herb_storage.iff", -29, 2, -3.4, 2665882, 0)
 
@@ -453,10 +379,10 @@ function witchesOfDathomirScreenplay:spawnSceneObjects()
 	SceneObject(pPlant):setObjectMenuComponent("wodSpiderclanVegetationMenuComponent")
 
 	--Temple of the Stars: 5269, 121, 165
-	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.7, -25.1, 610001025, math.rad(90))
-	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.3, -31.7, 610001025, math.rad(90))
-	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.7, -25.1, 610001025, math.rad(-90))
-	local pCache = spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -9.8, -37.3, -31.7, 610001025, math.rad(-90))
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -10, -37.7, -25.1, 610001025, 0)
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", -10, -37.3, -31.7, 610001025, 0)
+	spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", 10, -37.7, -25.1, 610001025, 0)
+	local pCache = spawnSceneObject("dathomir", "object/tangible/furniture/wod_themepark/data_cache.iff", 10, -37.3, -31.7, 610001025, 0)
 	SceneObject(pCache):setObjectMenuComponent("wodLeftBehindCacheMenuComponent")
 end
 

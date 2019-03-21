@@ -1,4 +1,4 @@
-wod_sage_convo_handler = Object:new {}
+wod_sage_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -8,32 +8,32 @@ function wod_sage_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 	
 	if (clan == "" or clan == nil) then
-		return convoTemplate("not_elligible")
+		return convoTemplate:getScreen("not_elligible")
 	elseif ((sage == "wod_ns_sage" and clan == "sm") or (sage == "wod_sm_sage" and clan == "ns")) then
-		return convoTemplate("wrong_alignment")
+		return convoTemplate:getScreen("wrong_alignment")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03")) or QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04"))) then
-		return convoTemplate("quest_in_progress")
+		return convoTemplate:getScreen("quest_in_progress")
 	elseif (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04"))) then
-		return convoTemplate("quest_completed")
+		return convoTemplate:getScreen("quest_completed")
 	end
 	
 	if (not CreatureObject(pPlayer):hasSkill("crafting_artisan_novice")) then
-		return convoTemplate("not_crafter")
+		return convoTemplate:getScreen("not_crafter")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_04_04"))) then
-		return convoTemplate("init_fifth")
+		return convoTemplate:getScreen("init_fifth")
 	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03_04")) or QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_03_04"))) then
-		return convoTemplate("init_fourth")
+		return convoTemplate:getScreen("init_fourth")
 	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02_04")) or QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_02_04"))) then
-		return convoTemplate("init_third")
+		return convoTemplate:getScreen("init_third")
 	elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01_04")) or QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_repair_altar_01_04"))) then
-		return convoTemplate("init_second")
+		return convoTemplate:getScreen("init_second")
 	end
 
-	return convoTemplate("initial")
+	return convoTemplate:getScreen("initial")
 end
 
 function wod_sage_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)

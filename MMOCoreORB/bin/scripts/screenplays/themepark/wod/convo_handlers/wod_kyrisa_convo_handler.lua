@@ -1,4 +1,4 @@
-wod_kyrisa_convo_handler = Object:new {}
+wod_kyrisa_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -7,18 +7,18 @@ function wod_kyrisa_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 
 	if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_kyrisa_boss_fight"))) then
-		return convoTemplate("quest_complete")
+		return convoTemplate:getScreen("quest_complete")
 	end
 	
 	if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_whole_truth"))) then
-		return convoTemplate("greater_good_init")
+		return convoTemplate:getScreen("greater_good_init")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_whole_truth_05"))) then
-		return convoTemplate("initial")
+		return convoTemplate:getScreen("initial")
 	end
 	
-	return convoTemplate("not_elligible")
+	return convoTemplate:getScreen("not_elligible")
 end
 
 function wod_kyrisa_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
@@ -36,14 +36,14 @@ function wod_kyrisa_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 
 	if (screenID == "greater_good_start_quest") then
 		if (readData("wodThemepark:kyrisaBossFight:active") == 1) then
-			return convoTemplate("busy")
+			return convoTemplate:getScreen("busy")
 		elseif (self:checkGroupStatus(pPlayer)) then
 			QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_kyrisa_boss_fight_02"))
 			QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_kyrisa_boss_fight_03"))
 			wodWholeTruthArc:startBossFight()
 			writeData("wodThemepark:rancorBossFightOwnerID", SceneObject(pPlayer):getObjectID())
 		else
-			return convoTemplate("not_in_group")
+			return convoTemplate:getScreen("not_in_group")
 		end
 	end
 

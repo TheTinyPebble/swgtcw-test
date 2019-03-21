@@ -24,6 +24,16 @@ includeFile("themepark/wod/repeatable_quests/wod_sm_entertainer_quest_return.lua
 includeFile("themepark/wod/repeatable_quests/wod_ns_herbs_return.lua")
 includeFile("themepark/wod/repeatable_quests/wod_sm_herbs_return.lua")
 
+--Repair Altars
+includeFile("themepark/wod/repair_altar/wod_ns_repair_altar_01_return.lua")
+includeFile("themepark/wod/repair_altar/wod_ns_repair_altar_02_return.lua")
+includeFile("themepark/wod/repair_altar/wod_ns_repair_altar_03_return.lua")
+includeFile("themepark/wod/repair_altar/wod_ns_repair_altar_04_return.lua")
+includeFile("themepark/wod/repair_altar/wod_sm_repair_altar_01_return.lua")
+includeFile("themepark/wod/repair_altar/wod_sm_repair_altar_02_return.lua")
+includeFile("themepark/wod/repair_altar/wod_sm_repair_altar_03_return.lua")
+includeFile("themepark/wod/repair_altar/wod_sm_repair_altar_04_return.lua")
+
 --Spiderclan Arc
 includeFile("themepark/wod/spiderclan_arc/wod_ns_ehs_goto.lua")
 includeFile("themepark/wod/spiderclan_arc/wod_ns_ehs_return_goto.lua")
@@ -75,7 +85,6 @@ includeFile("themepark/wod/rubina_epilogue/wod_rubina_epilogue_goto.lua")
 
 --Prologue
 includeFile("themepark/wod/prologue/wod_prologue.lua")
-includeFile("themepark/wod/prologue/wod_mysterious_witch_goto.lua")
 includeFile("themepark/wod/prologue/wod_rubina_return.lua")
 
 --Prologue outcasts

@@ -1,4 +1,4 @@
-wod_rubina_convo_handler = Object:new {}
+wod_rubina_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -10,52 +10,56 @@ function wod_rubina_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemplate)
 	if (pInventory == nil) then
 		return
 	end
+	
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH) and not QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH)) then
+		return convoTemplate:getScreen("not_elligible")
+	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH)) then
-		return convoTemplate("initial")
+		return convoTemplate:getScreen("initial")
 	end
 
 	if (favor.count == 8) then
 		if (favor.clan == "ns" and not (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS) or QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS))) then
-			return convoTemplate("ns_ready")
+			return convoTemplate:getScreen("ns_ready")
 		elseif (favor.clan == "sm" and not (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_SM) or QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_SM))) then
-			return convoTemplate("sm_ready")
+			return convoTemplate:getScreen("sm_ready")
 		end
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_08)) then
-		return convoTemplate("return_herbs_sm")
+		return convoTemplate:getScreen("return_herbs_sm")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_09)) then
-		return convoTemplate("return_herbs_ns")
+		return convoTemplate:getScreen("return_herbs_ns")
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_05) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_05)) then
-		return convoTemplate("return_eliminate_sm")
+		return convoTemplate:getScreen("return_eliminate_sm")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_06) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_06)) then
-		return convoTemplate("return_eliminate_ns")
+		return convoTemplate:getScreen("return_eliminate_ns")
 	end
 
 	for i = 1, 7 do
 		if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_0" .. i))) then
 			if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_0" .. i .. "_02"))) then
-				return convoTemplate("return_wisdom_ns")
+				return convoTemplate:getScreen("return_wisdom_ns")
 			elseif (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_0" .. i .. "_03"))) then
-				return convoTemplate("return_wisdom_sm")
+				return convoTemplate:getScreen("return_wisdom_sm")
 			end
 		end
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST) and getContainerObjectByTemplate(pInventory, "object/tangible/theme_park/wod/wod_rubina_chest.iff", true)) then
-		return convoTemplate("cache_init")
+		return convoTemplate:getScreen("cache_init")
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_LEFT_BEHIND_03) and getContainerObjectByTemplate(pInventory, "object/tangible/theme_park/wod/wod_crafting_alter_key.iff", true)) then
-		return convoTemplate("left_behind_return")
+		return convoTemplate:getScreen("left_behind_return")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_RUBINA_LEFT_BEHIND)) then
-		return convoTemplate("quest_in_progress")
+		return convoTemplate:getScreen("quest_in_progress")
 	end
 
-	return convoTemplate("second_init")
+	return convoTemplate:getScreen("second_init")
 end
 
 function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)
@@ -64,10 +68,14 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	local screenID = screen:getScreenID()
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
+	
+	if (screenID == "complete_meet_witch") then
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH)
+	end
 
 	if (screenID == "task_herbs_start") then
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING)) then
-			return convoTemplate("quest_in_progress")
+			return convoTemplate:getScreen("quest_in_progress")
 		end
 		if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING)) then
 			QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING)
@@ -106,7 +114,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 
 	if (screenID == "task_enemies_start") then
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN)) then
-			return convoTemplate("quest_in_progress")
+			return convoTemplate:getScreen("quest_in_progress")
 		end
 		local n = getRandomNumber(1, 2)
 		if (n == 1) then
@@ -165,15 +173,19 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 		end
 		wodPrologueScreenplay:addToFavor(pPlayer, "ns")
 	end
-
+	
+	print(QuestManager.getQuestName(222))
 	if (screenID == "task_wisdom_start") then
 		for i = 1, 7 do
-			if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_0" .. i))) then
-				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_0" .. i))
+			if (QuestManager.hasCompletedQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_" .. i))) then
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_" .. i))
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_" .. i .. "_01"))
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_" .. i .. "_02"))
+				QuestManager.resetQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_" .. i .. "_03"))
 				break
 			end
-			if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_0" .. i))) then
-				return convoTemplate("quest_in_progress")
+			if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_prologue_outcast_" .. i))) then
+				return convoTemplate:getScreen("quest_in_progress")
 			end
 		end
 		local n = getRandomNumber(1, 7)
@@ -208,29 +220,29 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 		wodPrologueScreenplay:handleReward(pPlayer, "wisdom")
 	end
 
-	if (screnID == "favor") then
+	if (screenID == "favor") then
 		local favor = wodPrologueScreenplay:getFavorStatus(pPlayer)
-		if (favor.count == 0) then
-			clonedScreen:setDialogTextStringId("@conversation/wod_rubina:s_196")
+		if (favor.count == 0 or favor.count == nil or favor.count == "") then
+			clonedConversation:setDialogTextStringId("@conversation/wod_rubina:s_196")
 		elseif (favor.count == 1) then
-			clonedScreen:setDialogTextStringId("@conversation/wod_rubina:s_204")
+			clonedConversation:setDialogTextStringId("@conversation/wod_rubina:s_204")
 		elseif (favor.count == 2) then
 			if (favor.clan == "ns") then
-				clonedScreen:setDialogTextStringId("@conversation/wod_rubina:s_164")
+				clonedConversation:setDialogTextStringId("@conversation/wod_rubina:s_164")
 			elseif (favor.clan == "sm") then
-				clonedScreen:setDialogTextStringId("@conversation/wod_rubina:s_198")
+				clonedConversation:setDialogTextStringId("@conversation/wod_rubina:s_198")
 			end
 		elseif (favor.count == 5) then
 			if (favor.clan == "ns") then
-				clonedScreen:setDialogTextStringId("@conversation/wod_rubina:s_158")
+				clonedConversation:setDialogTextStringId("@conversation/wod_rubina:s_158")
 			elseif (favor.clan == "sm") then
-				clonedScreen:setDialogTextStringId("@conversation/wod_rubina:s_200")
+				clonedConversation:setDialogTextStringId("@conversation/wod_rubina:s_200")
 			end
 		elseif (favor.count == 8) then
 			if (favor.clan == "ns") then
-				clonedScreen:setDialogTextStringId("@conversation/wod_rubina:s_156")
+				clonedConversation:setDialogTextStringId("@conversation/wod_rubina:s_156")
 			elseif (favor.clan == "sm") then
-				clonedScreen:setDialogTextStringId("@conversation/wod_rubina:s_202")
+				clonedConversation:setDialogTextStringId("@conversation/wod_rubina:s_202")
 			end
 		end
 	end
@@ -254,6 +266,8 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	if (screenID == "left_behind_start") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_RUBINA_CHEST)
 		wodLeftBehindGoto:start(pPlayer)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND)
+		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_LEFT_BEHIND_01)
 	end
 
 	if (screenID == "left_behind_complete_quest") then

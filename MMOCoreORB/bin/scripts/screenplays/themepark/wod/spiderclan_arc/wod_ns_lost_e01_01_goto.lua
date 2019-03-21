@@ -27,6 +27,24 @@ function wodNSLostE0101Goto:onEnteredActiveArea(pPlayer)
 	return 1
 end
 
+-- Event handler for the onSuccessfulSpawn.
+-- The event will activate the quest.
+-- @param pPlayer pointer to the creature object of the player.
+function wodNSLostE0101Goto:onSuccessfulSpawn(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+
+end
+
+function wodNSLostE0101Goto:onLoggedIn(pPlayer)
+	if (self:hasTaskStarted(pPlayer)) then
+		return 0
+	end
+	self:start(pPlayer)
+	return 0
+end
+
 function wodNSLostE0101Goto:sendCommMessage1(pPlayer)
 	local sui = SuiMessageBox.new("wodNSLostE0101Goto", "defaultCallBack")
 	sui.setTitle("@theme_park_wod/wod_ns_lost_e01:comm_message_title")

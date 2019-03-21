@@ -24,7 +24,7 @@ wod_mutant_rancor_boss = Creature:new {
 	creatureBitmask = KILLER + STALKER,
 	optionsBitmask = AIENABLED,
 	diet = CARNIVORE,
-	scale = 1,
+	scale = 2,
 
 	templates = {"object/mobile/wod_mutant_rancor_boss.iff"},
 	hues = {},

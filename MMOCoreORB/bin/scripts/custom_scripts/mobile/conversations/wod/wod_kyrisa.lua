@@ -1,4 +1,4 @@
-wod_kyrisa= ConvoTemplate:new {
+wod_kyrisa = ConvoTemplate:new {
 	initialScreen = "initial",
 	templateType = "Lua",
 	luaClassHandler = "wod_kyrisa_convo_handler",

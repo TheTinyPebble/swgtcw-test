@@ -27,6 +27,24 @@ function wodWalkabout1Goto:onEnteredActiveArea(pPlayer)
 	return 1
 end
 
+-- Event handler for the onSuccessfulSpawn.
+-- The event will activate the quest.
+-- @param pPlayer pointer to the creature object of the player.
+function wodWalkabout1Goto:onSuccessfulSpawn(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+
+end
+
+function wodWalkabout1Goto:onLoggedIn(pPlayer)
+	if (self:hasTaskStarted(pPlayer)) then
+		return 0
+	end
+	self:start(pPlayer)
+	return 0
+end
+
 function wodWalkabout1Goto:sendCommMessage1(pPlayer)
 	local sui = SuiMessageBox.new("wodWalkabout1Goto", "defaultCallBack")
 	sui.setTitle("@theme_park_wod/wod_prologue_walkabout:comm_message_title_01")
@@ -35,7 +53,7 @@ function wodWalkabout1Goto:sendCommMessage1(pPlayer)
 	sui.sendTo(pPlayer)
 end
 
-function wodWalkabout1Goto:defaultCallback(pPlayer, pSui, eventIndex, ...)
+function wodWalkabout1Goto:defaultCallBack(pPlayer, pSui, eventIndex, ...)
 	createEvent(10 * 1000, "wodWalkabout1Goto", "sendCommMessage2", pPlayer, "")
 end
 
@@ -47,7 +65,7 @@ function wodWalkabout1Goto:sendCommMessage2(pPlayer)
 	sui.sendTo(pPlayer)
 end
 
-function wodWalkabout1Goto:noCallback(pPlayer, pSui, eventIndex, ...)
+function wodWalkabout1Goto:noCallBack(pPlayer, pSui, eventIndex, ...)
 end
 
 return wodWalkabout1Goto

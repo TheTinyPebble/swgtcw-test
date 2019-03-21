@@ -109,10 +109,10 @@ function createWODOutcastConvoTemplate(templateName)
 	addConversationTemplate(templateName, wod_outcast);
 end
 
-createWODOutcastConvoTemplate("wod_outcast_01")
-createWODOutcastConvoTemplate("wod_outcast_02")
-createWODOutcastConvoTemplate("wod_outcast_03")
-createWODOutcastConvoTemplate("wod_outcast_04")
-createWODOutcastConvoTemplate("wod_outcast_05")
-createWODOutcastConvoTemplate("wod_outcast_06")
-createWODOutcastConvoTemplate("wod_outcast_07")
+createWODOutcastConvoTemplate("wod_prologue_outcast_1")
+createWODOutcastConvoTemplate("wod_prologue_outcast_2")
+createWODOutcastConvoTemplate("wod_prologue_outcast_3")
+createWODOutcastConvoTemplate("wod_prologue_outcast_4")
+createWODOutcastConvoTemplate("wod_prologue_outcast_5")
+createWODOutcastConvoTemplate("wod_prologue_outcast_6")
+createWODOutcastConvoTemplate("wod_prologue_outcast_7")

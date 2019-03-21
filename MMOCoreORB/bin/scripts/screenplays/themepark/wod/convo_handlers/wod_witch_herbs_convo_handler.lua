@@ -1,4 +1,4 @@
-wod_witch_herbs_convo_handler = Object:new {}
+wod_witch_herbs_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -8,20 +8,20 @@ function wod_witch_herbs_convo_handler:getInitialScreen(pPlayer, pNpc, pConvTemp
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 	
 	if (clan == "" or clan == nil) then
-		return convoTemplate("not_elligible")
+		return convoTemplate:getScreen("not_elligible")
 	elseif ((witchHerbsType == "wod_ns_witch_herbs" and clan == "sm") or (witchHerbsType == "wod_sm_witch_herbs" and clan == "ns")) then
-		return convoTemplate("wrong_alignment")
+		return convoTemplate:getScreen("wrong_alignment")
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering")) and not QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_08"))) then
-		return convoTemplate("quest_in_progress")
+		return convoTemplate:getScreen("quest_in_progress")
 	end
 	
 	if (QuestManager.hasActiveQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_herb_gathering_08"))) then
-		return convoTemplate("return_complete_quest")
+		return convoTemplate:getScreen("return_complete_quest")
 	end
 	
-	return convoTemplate("initial")
+	return convoTemplate:getScreen("initial")
 end
 
 function wod_witch_herbs_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)

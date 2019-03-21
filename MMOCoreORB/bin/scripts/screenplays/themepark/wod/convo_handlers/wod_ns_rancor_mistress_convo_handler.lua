@@ -1,4 +1,4 @@
-wod_ns_rancor_mistress_convo_handler = Object:new {}
+wod_ns_rancor_mistress_convo_handler = conv_handler:new{}
 
 local QuestManager = require("managers.quest.quest_manager")
 
@@ -7,26 +7,26 @@ function wod_ns_rancor_mistress_convo_handler:getInitialScreen(pPlayer, pNpc, pC
 	local clan = readScreenPlayData(pPlayer, "witchesOfDathomir", "clanAlignment")
 
 	if (clan == "" or clan == nil) then
-		return convoTemplate("not_elligible")
+		return convoTemplate:getScreen("not_elligible")
 	elseif (clan == "sm") then
-		return convoTemplate("wrong_alignment")
+		return convoTemplate:getScreen("wrong_alignment")
 	end
 
 	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_03) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_04)) then
-		return convoTemplate("whole_truth_two_init")
+		return convoTemplate:getScreen("whole_truth_two_init")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KYRISA_BOSS_06) or (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT))) then
-		return convoTemplate("return_whole_truth_two")
+		return convoTemplate:getScreen("return_whole_truth_two")
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_03)) then
-		return convoTemplate("quest_whole_truth_in_progress")
+		return convoTemplate:getScreen("quest_whole_truth_in_progress")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_06)) then
-		return convoTemplate("quest_whole_truth_two_in_progress")
+		return convoTemplate:getScreen("quest_whole_truth_two_in_progress")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT)) then
-		return convoTemplate("quest_greater_good_in_progress")
+		return convoTemplate:getScreen("quest_greater_good_in_progress")
 	end
 
-	return convoTemplate("initial")
+	return convoTemplate:getScreen("initial")
 end
 
 function wod_ns_rancor_mistress_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc, selectedOption, pConvScreen)

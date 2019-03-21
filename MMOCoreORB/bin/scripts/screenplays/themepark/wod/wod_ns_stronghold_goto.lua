@@ -24,4 +24,12 @@ function wodStrongholdNSGoto:onEnteredActiveArea(pPlayer)
 	return 1
 end
 
+function wodStrongholdNSGoto:onLoggedIn(pPlayer)
+	if (self:hasTaskStarted(pPlayer)) then
+		return 0
+	end
+	self:start(pPlayer)
+	return 0
+end
+
 return wodStrongholdNSGoto
