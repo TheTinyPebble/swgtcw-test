@@ -344,6 +344,27 @@ bool SkillModManager::compareMods(VectorMap<String, int>& mods, CreatureObject* 
 		for (int i = 0 ; i < list->size(); ++i) {
 			Skill* skill = list->get(i);
 			const Vector<String>* abilityNames = skill->getAbilities();
+			if (abilityNames->size() > 0) {
+				SortedVector<String> abilitiesLost;
+				for (int i = 0; i < skillAbilities->size(); i++) {
+					abilitiesLost.put(skillAbilities->get(i));
+				}
+				for (int i = 0; i < skillList->size(); i++) {
+					Skill* remainingSkill = skillList->get(i);
+					auto remainingAbilities = remainingSkill->getAbilities();
+					for(int j = 0; j < remainingAbilities->size(); j++) {
+						if (abilitiesLost.contains(remainingAbilities->get(j))) {
+							abilitiesLost.drop(remainingAbilities->get(j));
+							if (abilitiesLost.size() == 0) {
+								break;
+							}
+						}
+					}
+				}
+				if (abilitiesLost.size() > 0) {
+					removeAbilities(ghost, abilitiesLost, notifyClient);
+				}
+			}
 			SkillManager::instance()->addAbilities(ghost, *abilityNames, true);
 		}
 	}
