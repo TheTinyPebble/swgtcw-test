@@ -14,7 +14,8 @@
 #include "server/zone/objects/area/CampSiteActiveArea.h"
 #include "server/zone/managers/skill/SkillManager.h"
 #include "server/zone/objects/creature/variables/SkillList.h"
-
+#include "server/zone/objects/player/variables/AbilityList.h"
+#include "server/zone/objects/player/variables/Ability.h"
 
 SkillModManager::SkillModManager()
 		: Logger("SkillModManager") {
@@ -332,40 +333,37 @@ bool SkillModManager::compareMods(VectorMap<String, int>& mods, CreatureObject* 
 
 			creature->removeSkillMod(type, key, value, true);
 			creature->addSkillMod(type, key, currentValue, true);
-
 			match = false;
 		}
 	}
 	compare << "---------------------------------" << endl;
 	SkillList* list = creature->getSkillList();
 	ManagedReference<PlayerObject*> ghost = creature->getPlayerObject();
-	
+	AbilityList* abilityList = NULL;
+
 	if (ghost != NULL) {
-		for (int i = 0 ; i < list->size(); ++i) {
+		abilityList = ghost->getAbilityList();
+		SortedVector<String> abilitiesToRemove;
+		for (int i = 0; i < abilityList->size(); ++i) {
+			Ability* ability = abilityList->getSafe(i);
+			const String& abilityName = ability->getAbilityName();
+
+			if (ghost->hasAbility(abilityName))
+				abilitiesToRemove.put(abilityName);
+		}
+		for (int i = 0; i < list->size(); ++i) {
 			Skill* skill = list->get(i);
-			const Vector<String>* abilityNames = skill->getAbilities();
-			if (abilityNames->size() > 0) {
-				SortedVector<String> abilitiesLost;
-				for (int i = 0; i < skillAbilities->size(); i++) {
-					abilitiesLost.put(skillAbilities->get(i));
-				}
-				for (int i = 0; i < skillList->size(); i++) {
-					Skill* remainingSkill = skillList->get(i);
-					auto remainingAbilities = remainingSkill->getAbilities();
-					for(int j = 0; j < remainingAbilities->size(); j++) {
-						if (abilitiesLost.contains(remainingAbilities->get(j))) {
-							abilitiesLost.drop(remainingAbilities->get(j));
-							if (abilitiesLost.size() == 0) {
-								break;
-							}
-						}
-					}
-				}
-				if (abilitiesLost.size() > 0) {
-					removeAbilities(ghost, abilitiesLost, notifyClient);
-				}
+			const Vector<String>* skillAbilities = skill->getAbilities();
+			for (int j = 0; j < skillAbilities->size(); j++) {
+				const String& abilityName = skillAbilities->get(j);
+
+				if (ghost->hasAbility(abilityName) && abilitiesToRemove.contains(abilityName))
+					abilitiesToRemove.drop(abilityName);
 			}
-			SkillManager::instance()->addAbilities(ghost, *abilityNames, true);
+			SkillManager::instance()->addAbilities(ghost, *skillAbilities, true);
+		}
+		if (abilitiesToRemove.size() > 0) {
+			SkillManager::instance()->removeAbilities(ghost, abilitiesToRemove);
 		}
 	}
 
@@ -377,6 +375,7 @@ bool SkillModManager::compareMods(VectorMap<String, int>& mods, CreatureObject* 
 			int currentValue = mods.get(key);
 
 			compare << "	" << key << "	" << "none" << "	" << currentValue << endl;
+			creature->addSkillMod(type, key, currentValue, true);
 		}
 	}
 
