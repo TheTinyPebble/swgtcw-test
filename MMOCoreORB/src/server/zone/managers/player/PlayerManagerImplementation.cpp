@@ -5835,6 +5835,7 @@ void PlayerManagerImplementation::grantJediTank(CreatureObject* player){
 
 	skillManager->awardSkill("jedi_padawan_master", player, true, true, true);
 	skillManager->awardSkill("jedi_light_side_defender_master", player, true, true, true);
+	skillManager->awardSkill("force_title_jedi_rank_02", player, true, true, true);
 
 }
 
@@ -5890,6 +5891,7 @@ void PlayerManagerImplementation::grantJediHealer(CreatureObject* player){
 
 	skillManager->awardSkill("jedi_padawan_master", player, true, true, true);
 	skillManager->awardSkill("jedi_light_side_healer_master", player, true, true, true);
+	skillManager->awardSkill("force_title_jedi_rank_02", player, true, true, true);
 
 }
 
@@ -5946,7 +5948,7 @@ void PlayerManagerImplementation::grantJediPowers(CreatureObject* player){
 
 	skillManager->awardSkill("jedi_padawan_master", player, true, true, true);
 	skillManager->awardSkill("jedi_light_side_powers_master", player, true, true, true);
-
+	skillManager->awardSkill("force_title_jedi_rank_02", player, true, true, true);
 }
 
 void PlayerManagerImplementation::grantJediSabers(CreatureObject* player){
@@ -6001,5 +6003,6 @@ void PlayerManagerImplementation::grantJediSabers(CreatureObject* player){
 
 	skillManager->awardSkill("jedi_padawan_master", player, true, true, true);
 	skillManager->awardSkill("jedi_light_side_sabers_master", player, true, true, true);
+	skillManager->awardSkill("force_title_jedi_rank_02", player, true, true, true);
 
 }

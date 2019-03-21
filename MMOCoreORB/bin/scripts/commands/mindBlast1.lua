@@ -77,7 +77,7 @@ MindBlast1Command = {
 			{},
 			{ "dizzy_defense" },
 			{ "jedi_state_defense" },
-			90,
+			95,
 			0,
 			30
 		)

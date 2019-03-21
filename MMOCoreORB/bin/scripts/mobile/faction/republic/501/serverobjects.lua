@@ -1,0 +1,8 @@
+includeFile("faction/republic/501/clone_scout_trooper_501.lua")
+includeFile("faction/republic/501/clonetrooper_501.lua")
+includeFile("faction/republic/501/clonetrooper_bombardier_501.lua")
+includeFile("faction/republic/501/clonetrooper_captain_501.lua")
+includeFile("faction/republic/501/clonetrooper_major_501.lua")
+includeFile("faction/republic/501/clonetrooper_medic_501.lua")
+includeFile("faction/republic/501/clonetrooper_sniper_501.lua")
+includeFile("faction/republic/501/clonetrooper_squad_leader_501.lua")

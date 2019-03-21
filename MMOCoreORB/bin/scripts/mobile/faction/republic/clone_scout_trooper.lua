@@ -45,7 +45,7 @@ clone_scout_trooper = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_heavy"},
+	weapons = {"clonetrooper_weapons_mix"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	personalityStf = "@hireling/hireling_stormtrooper",

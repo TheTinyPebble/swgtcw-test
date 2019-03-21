@@ -3054,6 +3054,11 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 	if (getGroupID() != 0 && getGroupID() == object->getGroupID())
 		return false;
 
+	if (ghost->hasBhTef() && ghost->hasJediTef()){
+		info("Target has both BH and Jedi TEF and should be attackable", true);
+		return true;
+	}
+
 	if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
 		return true;
 
@@ -3100,7 +3105,7 @@ bool CreatureObjectImplementation::isHealableBy(CreatureObject* object) {
 	if (ghost == nullptr)
 		return false;
 	//Comment out BH TEF check for healing
-	//if (ghost->hasBhTef())
+	//if (ghost->hasBhTef() && !ghost->hasJediTef())
 	//	return false;
 
 	//if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
@@ -3443,7 +3448,7 @@ bool CreatureObjectImplementation::hasEffectImmunity(uint8 effectType) {
 	case CommandEffect::INTIMIDATE:
 	case CommandEffect::STUN:
 	case CommandEffect::NEXTATTACKDELAY:
-		if (isDroidSpecies() || isVehicleObject() || isWalkerSpecies())
+		if ((isDroidSpecies() && level>299) || isVehicleObject() || isWalkerSpecies() || level==301)
 			return true;
 		break;
 	case CommandEffect::KNOCKDOWN:

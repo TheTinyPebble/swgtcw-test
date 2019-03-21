@@ -43,6 +43,7 @@ lootGroups = {
 	}
 },
 weapons = {"battle_droid_weapons"},
+defaultAttack = "defaultdroidrangedattack",
 conversationTemplate = "",
 reactionStf = "@npc_reaction/battle_droid",
 personalityStf = "@hireling/hireling_military",

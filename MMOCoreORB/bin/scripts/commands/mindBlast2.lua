@@ -46,7 +46,7 @@ MindBlast2Command = {
 
 	minDamage = 250,
 	maxDamage = 500,
-	speed = 2.0,
+	speed = 1.0,
 	forceCost = 160,
 	visMod = 25,
 	accuracySkillMod = "mindblast_accuracy";
@@ -79,7 +79,7 @@ MindBlast2Command = {
 			{},
 			{ "dizzy_defense" },
 			{ "jedi_state_defense" },
-			90,
+			95,
 			0,
 			30
 		)

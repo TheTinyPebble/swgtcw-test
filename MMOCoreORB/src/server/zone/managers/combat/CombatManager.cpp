@@ -563,11 +563,11 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 		}
 		if (dotstrength > 6999 && defender->isPlayerCreature()) {//Reduces Force Throw DOT for pvp
 			potency = 300;
-			dotstrength = 100;
+			dotstrength = 800;
 		}
 		if (dotstrength == 3000 && defender->isPlayerCreature()) {//Reduces Force Throw DOT for pvp
 			potency = 300;
-			dotstrength = 100;
+			dotstrength = 400;
 		}
 		if (attacker->isPlayerCreature() && dotType == CreatureState::BLEEDING){
 			dotstrength = dotstrength*0.25;
@@ -1278,7 +1278,7 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 		// inflict condition damage
 		Locker alocker(armor);
 
-		armor->inflictDamage(armor, 0, damage * 0.2, true, true);
+		armor->inflictDamage(armor, 0, dmgAbsorbed * 0.05, true, true);
 	}
 
 	return damage;
@@ -2931,7 +2931,16 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 
 		if (!(*shouldBhTef) && (attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->hasBountyMissionFor(attackingCreature)))
 			*shouldBhTef = true;
-	} else if (attackingCreature != NULL && targetCreature != NULL && attackingCreature->isPlayerCreature() && targetCreature->getFaction() != 0 && targetCreature->getFaction() != attackingCreature->getFaction()){
-		*shouldGcwTef = true;
+
+		if (!(*shouldBhTef) && targetCreature->getPlayerObject()->hasBhTef() && (targetCreature->getPlayerObject()->isJediAttackable() || targetCreature->getPlayerObject()->hasJediTef())){
+			info("Give BH tef in jedi fight");
+			*shouldBhTef = true;
+		}
+
+		if (!(*shouldJediTef) && ((targetCreature->getPlayerObject()->isJedi() && targetCreature->getWeapon()->isJediWeapon()) || (targetCreature->getPlayerObject()->hasJediTef() || targetCreature->getPlayerObject()->isJediAttackable())) && (attackingCreature->hasBountyMissionFor(targetCreature) || targetCreature->getPlayerObject()->hasBhTef())){
+			info("Give jedi tef in BH fight", true);
+			*shouldJediTef = true;
+		}
+
 	}
 }

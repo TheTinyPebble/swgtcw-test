@@ -106,18 +106,18 @@ object_weapon_ranged_carbine_ep3_carbine_dc15 = object_weapon_ranged_carbine_ep3
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = -20,
+	pointBlankAccuracy = -10,
 
-	idealRange = 22,
-	idealAccuracy = 66,
+	idealRange = 30,
+	idealAccuracy = 10,
 
 	maxRange = 64,
-	maxRangeAccuracy = -20,
+	maxRangeAccuracy = -40,
 
 	minDamage = 125,
-	maxDamage = 375,
+	maxDamage = 200,
 
-	attackSpeed = 2.5,
+	attackSpeed = 3.5,
 
 	woundsRatio = 40,
 
@@ -126,8 +126,8 @@ object_weapon_ranged_carbine_ep3_carbine_dc15 = object_weapon_ranged_carbine_ep3
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 83, 91, 4.3, 7, 15, 750, -20, -60, 30, -5, 33, 42, 20},
-	experimentalMax = {0, 0, 133, 143, 3, 13, 45, 1500, -20, -60, 30, 5, 18, 22, 11},
+	experimentalMin = {0, 0, 83, 141, 4.3, 7, 15, 750, -10, -40, 30, 0, 33, 42, 20},
+	experimentalMax = {0, 0, 183, 243, 3, 13, 45, 1500, -10, -40, 30, 10, 18, 22, 11},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

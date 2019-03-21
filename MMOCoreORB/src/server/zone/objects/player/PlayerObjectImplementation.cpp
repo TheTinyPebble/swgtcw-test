@@ -1296,6 +1296,9 @@ void PlayerObjectImplementation::notifyOnline() {
 
 		parent->sendMessage(sui->generateMessage());
 	}
+	
+	//recalc skillmods
+	SkillModManager::instance()->verifySkillBoxSkillMods(playerCreature);
 
 	//Add player to visibility list
 	VisibilityManager::instance()->addToVisibilityList(playerCreature);
@@ -1329,7 +1332,7 @@ void PlayerObjectImplementation::notifyOnline() {
 
 	MissionManager* missionManager = zoneServer->getMissionManager();
 
-	if (missionManager != nullptr && (playerCreature->hasSkill("force_title_jedi_rank_02") || playerCreature->hasSkill("combat_bountyhunter_investigation_03"))) {
+	if (missionManager != nullptr && (playerCreature->hasSkill("force_title_jedi_rank_01") || playerCreature->hasSkill("combat_bountyhunter_investigation_03"))) {
 		uint64 id = playerCreature->getObjectID();
 
 		if (!missionManager->hasPlayerBountyTargetInList(id))
@@ -1388,7 +1391,7 @@ void PlayerObjectImplementation::notifyOffline() {
 
 	MissionManager* missionManager = getZoneServer()->getMissionManager();
 
-	if (missionManager != nullptr && (playerCreature->hasSkill("force_title_jedi_rank_02") || playerCreature->hasSkill("combat_bountyhunter_investigation_03"))) {
+	if (missionManager != nullptr && (playerCreature->hasSkill("force_title_jedi_rank_01") || playerCreature->hasSkill("combat_bountyhunter_investigation_03"))) {
 		missionManager->updatePlayerBountyOnlineStatus(playerCreature->getObjectID(), false);
 	}
 }
@@ -2152,7 +2155,6 @@ void PlayerObjectImplementation::updateLastPvpCombatActionTimestamp(bool updateG
 	if (updateJediAction){
 		lastJediPvpCombatActionTimestamp.updateToCurrentTime();
 		lastJediPvpCombatActionTimestamp.addMiliTime(FactionManager::TEFTIMER);
-		info("Updating Jedi TEF");
 	}
 
 	schedulePvpTefRemovalTask();

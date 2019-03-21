@@ -1,3 +1,5 @@
+includeFile("faction/republic/501/serverobjects.lua")
+
 includeFile("faction/republic/clone_commando.lua")
 includeFile("faction/republic/clone_sand_trooper.lua")
 includeFile("faction/republic/clone_scout_trooper.lua")
@@ -10,6 +12,7 @@ includeFile("faction/republic/clonetrooper_sniper.lua")
 includeFile("faction/republic/clonetrooper_squad_leader.lua")
 
 includeFile("faction/republic/rep_at_xt.lua")
+includeFile("faction/republic/rep_at_xt_pet.lua")
 
 includeFile("faction/republic/rebel_gungan_bomber.lua")
 includeFile("faction/republic/rebel_gungan_boss.lua")

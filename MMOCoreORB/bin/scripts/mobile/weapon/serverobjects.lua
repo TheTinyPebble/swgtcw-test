@@ -96,5 +96,7 @@ includeFile("weapon/groups/nilyahin_tribunal.lua")
 -- Prequel Weapons
 
 includeFile("weapon/groups/clonetrooper_weapons.lua")
+includeFile("weapon/groups/clonetrooper_heavy_weapons.lua")
+includeFile("weapon/groups/clonetrooper_weapons_mix.lua")
 includeFile("weapon/groups/magnaguard_weapons.lua")
 includeFile("weapon/groups/light_jedi_weapons_basic.lua")

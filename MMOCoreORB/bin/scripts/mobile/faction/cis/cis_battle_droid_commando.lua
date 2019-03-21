@@ -5,8 +5,8 @@ cis_battle_droid_commando = Creature:new {
 	faction = "rebel",
 	level = 30,
 	chanceHit = 0.36,
-	damageMin = 240,
-	damageMax = 250,
+	damageMin = 270,
+	damageMax = 280,
 	baseXp = 2637,
 	baseHAM = 7200,
 	baseHAMmax = 8800,
@@ -45,6 +45,7 @@ cis_battle_droid_commando = Creature:new {
 		}
 	},
 	weapons = {"rebel_weapons_heavy"},
+	defaultAttack = "defaultdroidrangedattack",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",
