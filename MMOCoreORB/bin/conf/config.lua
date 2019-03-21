@@ -150,7 +150,7 @@ TreFiles = {
 	--"renik.tre"
 	--"tiny.tre"
 	--"vlad.tre"
-	"tcw_2.tre"
+	"tcw_2.tre",
 	"tcw_1.tre",
 	"tcw_NGE.tre",
 	"tcw_house.tre",
