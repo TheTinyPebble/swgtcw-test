@@ -21,7 +21,7 @@ function wodHerbalPlantMenuComponent:handleObjectMenuSelect(pSceneObject, pPlaye
 	end
 
 	if (selectedID == 20) then
-		if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
+		if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_HERB_GATHERING)) then
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:herb_not_sure_what_to_do")
 			return
 		end
@@ -31,7 +31,7 @@ function wodHerbalPlantMenuComponent:handleObjectMenuSelect(pSceneObject, pPlaye
 			return
 		end
 		
-		if (creatureObject(pPlayer):isRidingMount()) then
+		if (CreatureObject(pPlayer):isRidingMount()) then
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:gather_herb_not_while_mounted")
 			return
 		end

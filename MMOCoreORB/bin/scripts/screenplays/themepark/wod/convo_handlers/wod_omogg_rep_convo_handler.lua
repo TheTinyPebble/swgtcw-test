@@ -33,11 +33,6 @@ function wod_omogg_rep_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, p
 	local screenID = screen:getScreenID()
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
-	local pGhost = CreatureObject(pPlayer):getPlayerObject()
-	
-	if (pGhost == nil) then
-		return pConvScreen
-	end
 	
 	if (screenID == "walkabout_start") then
 		wodWalkabout1Goto:start(pPlayer)
@@ -57,8 +52,7 @@ function wod_omogg_rep_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, p
 	if (screenID == "walkabout_two_complete") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT_08)
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_WALKABOUT)
-		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH)
-		PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_prologue_walkabout:task09_waypoint_name", "", -3177, 3184, WAYPOINTGREEN, true, true, 0)
+		createEvent(10 * 1000, "wodPrologueScreenplay", "startMysteriousWitchQuest", pPlayer, "")
 	end
 	
     return pConvScreen

@@ -24,6 +24,15 @@ function wodStrongholdNSGoto:onEnteredActiveArea(pPlayer)
 	return 1
 end
 
+-- Event handler for the onSuccessfulSpawn.
+-- The event will activate the quest.
+-- @param pPlayer pointer to the creature object of the player.
+function wodStrongholdNSGoto:onSuccessfulSpawn(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+end
+
 function wodStrongholdNSGoto:onLoggedIn(pPlayer)
 	if (self:hasTaskStarted(pPlayer)) then
 		return 0

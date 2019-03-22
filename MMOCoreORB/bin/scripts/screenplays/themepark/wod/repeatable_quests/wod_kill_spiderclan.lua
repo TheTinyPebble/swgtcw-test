@@ -19,7 +19,7 @@ function wodKillSpiderclan:startEliminateQuest(pPlayer)
 	
 	writeScreenPlayData(pPlayer, "wodThemepark:spiderclan", "huntTargetCount", 0)
 	writeScreenPlayData(pPlayer, "wodThemepark:spiderclan", "huntTargetGoal", 13) -- TODO: Magic number
-	writeScreenPlayData(pPlayer, "wodThemepark:spiderclan", "huntTarget", "spiderclan_acolyte;spiderclan_auspex;spiderclan_crawler;spiderclan_elder;spiderclan_protector;spiderclan_sentinel;spiderclan_sentry;spiderclan_stalker;spiderclan_web_dancer") --TODO: Magic string
+	writeScreenPlayData(pPlayer, "wodThemepark:spiderclan", "huntTarget", "spider_nightsister_initiate;spider_nightsister_spell_weaver;spider_nightsister_crawler;spider_nightsister_elder;spider_nightsister_protector;spider_nightsister_sentinel;spider_nightsister_sentry;spider_nightsister_stalker;spider_nightsister_web_dancer") --TODO: Magic string
 	
 	createObserver(KILLEDCREATURE, "wodKillSpiderclan", "notifyKilledHuntTarget", pPlayer)
 end
@@ -51,8 +51,8 @@ function wodKillSpiderclan:notifyKilledHuntTarget(pPlayer, pVictim)
 
 	if (huntTarget == nil or huntTarget == "") then
 		local newTarget = ""
-		writeScreenPlayData(pPlayer, "wodThemepark:spiderclan", "huntTarget", "spiderclan_acolyte;spiderclan_auspex;spiderclan_crawler;spiderclan_elder;spiderclan_protector;spiderclan_sentinel;spiderclan_sentry;spiderclan_stalker;spiderclan_web_dancer") --TODO: Magic string
-		newTarget = "spiderclan_acolyte;spiderclan_auspex;spiderclan_crawler;spiderclan_elder;spiderclan_protector;spiderclan_sentinel;spiderclan_sentry;spiderclan_stalker;spiderclan_web_dancer" --TODO: Magic string
+		writeScreenPlayData(pPlayer, "wodThemepark:spiderclan", "huntTarget", "spider_nightsister_initiate;spider_nightsister_spell_weaver;spider_nightsister_crawler;spider_nightsister_elder;spider_nightsister_protector;spider_nightsister_sentinel;spider_nightsister_sentry;spider_nightsister_stalker;spider_nightsister_web_dancer") --TODO: Magic string
+		newTarget = "spider_nightsister_initiate;spider_nightsister_spell_weaver;spider_nightsister_crawler;spider_nightsister_elder;spider_nightsister_protector;spider_nightsister_sentinel;spider_nightsister_sentry;spider_nightsister_stalker;spider_nightsister_web_dancer" --TODO: Magic string
 		printLuaError("wodKillSpiderclan:notifyKilledHuntTarget, nil huntTarget for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pVictim):getObjectName() .. "). Setting to " .. newTarget .. ".")
 		huntTarget = newTarget
 	end

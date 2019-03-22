@@ -12,9 +12,9 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 		}, 
 		{ --Spiderclan prologue location
 			x = -1887, 
-			y = 124, 
+			y = 5721, 
 			spawnCount = 15, 
-			radius = 50, 
+			radius = 100, 
 			respawnTimer = 300,
 			spawnTemplates = {
 				"spiderclan_acolyte",
@@ -420,6 +420,7 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 		if (rewardKey.rewardType == "all") then
 			for i = 1, #rewardKey.reward do
 				pItem = giveItem(pInventory, rewardKey.reward[i], -1)
+				CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
 				
 				if ((wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 					TangibleObject(pItem):setUseCount(wodRewardManager[key].tokenCount)
@@ -431,14 +432,14 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 			sui.setTargetNetworkId(SceneObject(pPlayer):getObjectID())
 			sui.setTitle("Pick a Reward")
 
-			local message = "Please select which item you want to buy."
+			local message = "Please select your reward."
 			sui.setPrompt(message)
 
 			for i = 1, #rewardKey.reward do
-				sui.add(#rewardKey.reward[i][2], #rewardKey.reward[i][1])
+				sui.add(rewardKey.reward[i][2], rewardKey.reward[i][1])
 			end
 
-			sui.sendTo(pCreatureObject)
+			sui.sendTo(pPlayer)
 		else --Random option
 			if (rewardKey.rewardType ~= "random") then
 				CreatureObject(pPlayer):sendSystemMessage("A reward could not be found for prologue quest, key: '" .. key .. "', please contact an admin.")
@@ -455,12 +456,12 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 		if (wodRewardManager[key].rewardRandomValuable ~= nil or not wodRewardManager[key].rewardRandomValuable == 0) then
 			local n = getRandomNumber(1, 5)
 			pItem = giveItem(pInventory, "object/tangible/content/wod_token_" .. n .. ".iff", -1)
+			CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
 
 			if (pItem ~= nil) then
 				TangibleObject(pItem):setUseCount(wodRewardManager[key].rewardRandomValuable)
 			end
-		end	
-		CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
+		end
 	end
 end
 
@@ -478,7 +479,7 @@ function witchesOfDathomirScreenplay:addToCollection(pPlayer, key)
 	writeScreenPlayData(pPlayer, "wodThemepark:collection", key, curCount + 1)
 	
 	if (curCount + 1 == wodRewardManager[key].collectionRewardCount or not wodRewardManager[key].collectionRewardOnce) then
-		if (curCount + 1 % wodRewardManager[key].collectionRewardCount == 0) then
+		if ((curCount + 1) % wodRewardManager[key].collectionRewardCount == 0) then
 			self:handleCollectionReward(pPlayer, key)
 		end
 	end	
@@ -522,7 +523,9 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 	local pItem
 	if (rewardKey.collectionRewardType == "all") then
 		for i = 1, #rewardKey.reward do
-			pItem = giveItem(pInventory, rewardKey.rewardString[i], -1)
+			pItem = giveItem(pInventory, rewardKey[rewardString][i], -1)
+			CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
+			
 			if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 				TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 			end
@@ -533,21 +536,23 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 		sui.setTargetNetworkId(SceneObject(pPlayer):getObjectID())
 		sui.setTitle("Pick a Reward")
 
-		local message = "Please select which item you want to buy."
+		local message = "Please select your reward."
 		sui.setPrompt(message)
 
 		for i = 1, #rewardKey.reward do
-			sui.add(#rewardKey.reward[i][2], #rewardKey.reward[i][1])
+			sui.add(rewardKey.reward[i][2], rewardKey.reward[i][1])
 		end
 
-		sui.sendTo(pCreatureObject)
+		sui.sendTo(pPlayer)
 	else --Random option
 		if (rewardKey.collectionRewardType ~= "random") then
 			CreatureObject(pPlayer):sendSystemMessage("A reward could not be found for prologue quest, key: '" .. key .. "', please contact an admin.")
 			return
 		end
-		local n = getRandomNumber(1, #rewardKey.rewardString)
-		pItem = giveItem(pInventory, rewardKey.rewardString[n], -1)
+		local n = getRandomNumber(1, #rewardKey[rewardString])
+		pItem = giveItem(pInventory, rewardKey[rewardString][n], -1)
+		CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
+		
 		if ((wodRewardManager[key].collectionRewardCount ~= nil or not wodRewardManager[key].collectionRewardCount == 0) and pItem ~= nil and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 			TangibleObject(pItem):setUseCount(wodRewardManager[key].collectionRewardCount)
 		end
@@ -556,7 +561,7 @@ function witchesOfDathomirScreenplay:handleCollectionReward(pPlayer, key)
 	if (rewardKey[rewardString .. "BadgeToAward"] ~= nil and rewardKey[rewardString .. "BadgeToAward"] ~= "" or not PlayerObject(pGhost):hasBadge(rewardKey[rewardString .. "BadgeToAward"])) then
 		PlayerObject(pGhost):awardBadge(rewardKey[rewardString .. "BadgeToAward"])
 	end
-	CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
+	CreatureObject(pPlayer):sendSystemMessage("You have completed a collection.")
 end
 
 function witchesOfDathomirScreenplay:pickRewardCallback(pPlayer, pSui, eventIndex, args)
@@ -574,8 +579,15 @@ function witchesOfDathomirScreenplay:pickRewardCallback(pPlayer, pSui, eventInde
 		reward = suiPageData:getStoredData("1")
 	end
 
-	local pItem = giveItem(pInventory, reward, -1)
+	local pInventory = CreatureObject(pPlayer):getSlottedObject("inventory")
 
+	if (pInventory == nil) then
+		return
+	end
+
+	local pItem = giveItem(pInventory, reward, -1)
+	CreatureObject(pPlayer):sendSystemMessage("You have received a reward.")
+	
 	local key = readStringData("wodThemepark:rewardKey:" .. SceneObject(pPlayer):getObjectID())
 	if (wodRewardManager[key].tokenCount ~= nil or not wodRewardManager[key].tokenCount == 0 and string.match(SceneObject(pItem):getTemplateObjectPath(), "wod_token")) then
 		TangibleObject(pItem):setUseCount(wodRewardManager[key].tokenCount)

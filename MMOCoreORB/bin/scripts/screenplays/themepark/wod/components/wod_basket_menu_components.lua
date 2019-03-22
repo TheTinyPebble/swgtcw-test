@@ -33,7 +33,7 @@ function wodProSMBasketMenuComponent:handleObjectMenuSelect(pSceneObject, pPlaye
 	end
 
 	if (selectedID == 20) then
-		if (creatureObject(pPlayer):isRidingMount()) then
+		if (CreatureObject(pPlayer):isRidingMount()) then
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_not_while_mounted")
 			return 0
 		end
@@ -95,7 +95,7 @@ function wodProNSBasketMenuComponent:handleObjectMenuSelect(pSceneObject, pPlaye
 	end
 
 	if (selectedID == 20) then
-		if (creatureObject(pPlayer):isRidingMount()) then
+		if (CreatureObject(pPlayer):isRidingMount()) then
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_not_while_mounted")
 			return 0
 		end
@@ -154,7 +154,7 @@ function wodSMBasketMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, 
 			return 0
 		end
 		
-		if (creatureObject(pPlayer):isRidingMount()) then
+		if (CreatureObject(pPlayer):isRidingMount()) then
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_not_while_mounted")
 			return 0
 		end
@@ -204,7 +204,7 @@ function wodNSBasketMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, 
 			return 0
 		end
 		
-		if (creatureObject(pPlayer):isRidingMount()) then
+		if (CreatureObject(pPlayer):isRidingMount()) then
 			CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:store_herb_not_while_mounted")
 			return 0
 		end

@@ -8,7 +8,7 @@ wodOutcast1GoTo = GoToLocation:new {
 	waypointDescription = "@theme_park_wod/wod_outcast_1:task01_waypoint_name",
 	spawnPoint = {x = 866, y = 1095},
 	spawnPlanet = "dathomir",
-	spawnRadius = 5,
+	spawnRadius = 16,
 }
 
 -- Event handler for the enter active area event.

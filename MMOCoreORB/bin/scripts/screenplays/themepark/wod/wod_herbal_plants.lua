@@ -1,17 +1,17 @@
 wodHerbalPlants = ScreenPlay:new {
 	spawnAreas = { --x coord, y coord, spawn radius, plant count
-		{x = 866, y = 1095, radius = 25, count = 10}, -- Outcast 1
-		{x = -1000, y = 862, radius = 25, count = 10}, -- Outcast 2
-		{x = -2597, y = 4952, radius = 25, count = 10}, -- Outcast 3
-		{x = 1482, y = 3515, radius = 25, count = 10}, -- Outcast 4
-		{x = 1125, y = -1022, radius = 25, count = 10}, -- Outcast 5
-		{x = -856, y = 2788, radius = 25, count = 10}, -- Outcast 6
-		{x = -7121, y = 2933, radius = 25, count = 10}, -- Outcast 7
-		{x = -3177, y = 3184, radius = 25, count = 10}, -- Rubina
-		{x = -2080, y = 3143, radius = 50, count = 20}, -- Sarlacc Area
-		{x = -3946, y = -50, radius = 50, count = 20}, -- NS Stronghold
-		{x = 678, y = 4079, radius = 50, count = 20}, -- Singing Mountain
-		{x = -1219, y = 6262, radius = 35, count = 15}, -- Spider cave
+		{x = 866, y = 1095, radius = 35, count = 10}, -- Outcast 1
+		{x = -1000, y = 862, radius = 35, count = 10}, -- Outcast 2
+		{x = -2597, y = 4952, radius = 35, count = 10}, -- Outcast 3
+		{x = 1482, y = 3515, radius = 35, count = 10}, -- Outcast 4
+		{x = 1125, y = -1022, radius = 35, count = 10}, -- Outcast 5
+		{x = -856, y = 2788, radius = 35, count = 10}, -- Outcast 6
+		{x = -7121, y = 2933, radius = 35, count = 10}, -- Outcast 7
+		{x = -3177, y = 3184, radius = 35, count = 10}, -- Rubina
+		{x = -2080, y = 3143, radius = 75, count = 20}, -- Sarlacc Area
+		{x = -3946, y = -50, radius = 75, count = 20}, -- NS Stronghold
+		{x = 678, y = 4079, radius = 75, count = 20}, -- Singing Mountain
+		{x = -1219, y = 6262, radius = 75, count = 15}, -- Spider cave
 	},
 	respawnTimeSecs = 60,
 	plantTemplates = {
@@ -68,7 +68,7 @@ function wodHerbalPlants:spawnHerbalPlants()
 end
 
 function wodHerbalPlants:respawnHerbalPlants(none, loc)
-	local spawnPoint = self:getSpawnPoint(i)
+	local spawnPoint = self:getSpawnPoint(loc)
 	local n = getRandomNumber(1, #self.plantTemplates)
 	local pObject = spawnSceneObject("dathomir", self.plantTemplates[n], spawnPoint.x, spawnPoint.z, spawnPoint.y, 0, math.rad(math.random(360)))
 	writeData("wodThemepark:herbPlantLoc:" .. SceneObject(pObject):getObjectID(), loc)
@@ -77,7 +77,7 @@ end
 
 function wodHerbalPlants:getSpawnPoint(loc)
 	local pAnchor = getSceneObject(readData("wodThemepark:anchorID"))
-
+	local loc = tonumber(loc)
 	local a = math.random() * 2 * math.pi
 	local r = self.spawnAreas[loc].radius * math.sqrt(math.random())
 
@@ -88,7 +88,7 @@ function wodHerbalPlants:getSpawnPoint(loc)
 	if (newZ <= 0) then
 		return self:getSpawnPoint(loc)
 	else
-		return {x = newX, y = newY, z = newZ}
+		return {x = newX, y = newY, z = newZ - 0.2}
 	end
 end
 
@@ -99,6 +99,9 @@ function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
 	
 	local plantLoc = readData("wodThemepark:herbPlantLoc:" .. SceneObject(pPlant):getObjectID())
 	local plantTemplateNum = readData("wodThemepark:herbPlantTemplateNum:" .. SceneObject(pPlant):getObjectID())
+	
+	local message = self.gatherMessage[plantTemplateNum]
+	CreatureObject(pPlayer):sendSystemMessage(message)
 	
 	if (plantTemplateNum <= 5) then
 		self:collectQuestHerb(pPlayer, plantTemplateNum)
@@ -115,15 +118,15 @@ function wodHerbalPlants:gatherHerbalPlant(pPlayer, pPlant)
 		createEvent(5 * 1000, "wodHerbalPlants", "addBankCredits", pPlayer, "")
 	end
 	
-	SceneObject(pSceneObject):destroyObjectFromWorld()
-	createEvent(self.respawnTimeSecs * 1000, "wodHerbalPlants", "respawnHerbalPlant", nil, plantLoc)
+	SceneObject(pPlant):destroyObjectFromWorld()
+	createEvent(self.respawnTimeSecs * 1000, "wodHerbalPlants", "respawnHerbalPlants", nil, plantLoc)
 end
 
 function wodHerbalPlants:collectQuestHerb(pPlayer, num)
-	if (pPlayer == nil or plantTemplateNum == nil) then
+	if (pPlayer == nil or num == nil) then
 		return
 	end
-	
+
 	local spString = "wodThemepark:prologue:herbs"
 	local questName = "wod_prologue_herb_gathering"
 	local herbsNeeded = 3
@@ -148,7 +151,7 @@ function wodHerbalPlants:collectQuestHerb(pPlayer, num)
 	if (curHerbs + 1 == herbsNeeded) then
 		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/" .. questName .. ":task06_task_display_string_" .. num)
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID(questName .. "_0" .. num))
-		self:checkQuestStatus(pPlayer, questName)
+		self:checkQuestStatus(pPlayer, spString, questName)
 	elseif (curHerbs + 1 > herbsNeeded) then
 		CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/messages:extra_credit_herbs")
 		local bankCredits = CreatureObject(pPlayer):getBankCredits()
@@ -156,8 +159,8 @@ function wodHerbalPlants:collectQuestHerb(pPlayer, num)
 	end
 end
 
-function wodHerbalPlants:checkQuestStatus(pPlayer, questName)
-	if (pPlayer == nil or questName == nil) then
+function wodHerbalPlants:checkQuestStatus(pPlayer, spString, questName)
+	if (pPlayer == nil or spString == nil or questName == nil) then
 		return
 	end
 	
@@ -166,6 +169,12 @@ function wodHerbalPlants:checkQuestStatus(pPlayer, questName)
 			return
 		end
 	end
+	
+	deleteScreenPlayData(pPlayer, spString, self.screenPlayDataKey[1])
+	deleteScreenPlayData(pPlayer, spString, self.screenPlayDataKey[2])
+	deleteScreenPlayData(pPlayer, spString, self.screenPlayDataKey[3])
+	deleteScreenPlayData(pPlayer, spString, self.screenPlayDataKey[4])
+	deleteScreenPlayData(pPlayer, spString, self.screenPlayDataKey[5])
 	
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING)) then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_HERB_GATHERING_06)
@@ -178,7 +187,7 @@ function wodHerbalPlants:checkQuestStatus(pPlayer, questName)
 	else
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_06)
 		QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_HERB_GATHERING_07)
-		wodRubinaReturn:start(pPlayer)
+		wodRubinaReturnGoto:start(pPlayer)
 	end
 end
 

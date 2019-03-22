@@ -44,7 +44,7 @@ function wodTwoClansArc:startEliminateQuest(pPlayer)
 	
 	writeScreenPlayData(pPlayer, "wodThemepark:hunting", "huntTargetCount", 0)
 	writeScreenPlayData(pPlayer, "wodThemepark:hunting", "huntTargetGoal", 5) -- TODO: Magic number
-	writeScreenPlayData(pPlayer, "wodThemepark:hunting", "huntTarget", "female_malkloc_plainswalker;malkloc;malkloc_bull;malkloc_plainswalker;young_malkloc;young_malkloc_plainswalker") --TODO: Magic string
+	writeScreenPlayData(pPlayer, "wodThemepark:hunting", "huntTarget", "malkloc_plainswalker_female;malkloc;malkloc_bull;malkloc_plainswalker;young_malkloc;malkloc_plainswalker_youth") --TODO: Magic string
 	
 	createObserver(KILLEDCREATURE, "wodTwoClansArc", "notifyKilledHuntTarget", pPlayer)
 end

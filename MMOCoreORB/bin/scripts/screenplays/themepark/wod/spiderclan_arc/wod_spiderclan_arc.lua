@@ -161,7 +161,7 @@ function wodSpiderclanArc:startEliminateQuest(pPlayer)
 		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spiderclan_obfuscatrix") --TODO: Magic string
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_03)) then
 		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTargetGoal", 5) -- TODO: Magic number
-		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spider_nightsister_initiate") --TODO: Magic string
+		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "spider_nightsister_initiate") --TODO: Magic string
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_02) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_02)) then
 		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTargetGoal", 6) -- TODO: Magic number
 		writeScreenPlayData(pPlayer, "wodThemepark:spiderclanArc:killQuest", "huntTarget", "wod_spiderclan_obfuscatrix") --TODO: Magic string

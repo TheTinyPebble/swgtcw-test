@@ -20,9 +20,9 @@ function wodKillOtherClan:startEliminateQuest(pPlayer)
 	writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTargetCount", 0)
 	writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTargetGoal", 13) -- TODO: Magic number
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_01)) then
-		writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTarget", "singing_mountain_clan_arch_witch;singing_mountain_clan_councilwoman;singing_mountain_clan_dragoon;singing_mountain_clan_guardian;singing_mountain_clan_huntress;singing_mountain_clan_sentry;singing_mountain_clan_scout") --TODO: Magic string
+		writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTarget", "singing_mtn_clan_arch_witch;singing_mtn_clan_councilwoman;singing_mtn_clan_dragoon;singing_mtn_clan_guardian;singing_mtn_clan_huntress;singing_mtn_clan_rancor_tamer;singing_mtn_clan_scout;singing_mountain_clan_sentry") --TODO: Magic string
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_01)) then
-		writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTarget", "nightsister_elder;nightsister_protector;nightsister_ranger;nightsister_sentinel;nightsister_sentry;nightsister_spell_weaver;nightsister_stalker") --TODO: Magic string
+		writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTarget", "nightsister_elder;nightsister_protector;nightsister_rancor_tamer;nightsister_ranger;nightsister_sentinal;nightsister_sentry;nightsister_spell_weaver;nightsister_stalker") --TODO: Magic string
 	end
 	createObserver(KILLEDCREATURE, "wodKillOtherClan", "notifyKilledHuntTarget", pPlayer)
 end
@@ -55,11 +55,11 @@ function wodKillOtherClan:notifyKilledHuntTarget(pPlayer, pVictim)
 	if (huntTarget == nil or huntTarget == "") then
 		local newTarget = ""
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KILL_01)) then
-			writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTarget", "singing_mountain_clan_arch_witch;singing_mountain_clan_councilwoman;singing_mountain_clan_dragoon;singing_mountain_clan_guardian;singing_mountain_clan_huntress;singing_mountain_clan_sentry;singing_mountain_clan_scout") --TODO: Magic string
-			newTarget = "singing_mountain_clan_arch_witch;singing_mountain_clan_councilwoman;singing_mountain_clan_dragoon;singing_mountain_clan_guardian;singing_mountain_clan_huntress;singing_mountain_clan_sentry;singing_mountain_clan_scout" --TODO: Magic string
+			writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTarget", "singing_mtn_clan_arch_witch;singing_mtn_clan_councilwoman;singing_mtn_clan_dragoon;singing_mtn_clan_guardian;singing_mtn_clan_huntress;singing_mtn_clan_rancor_tamer;singing_mtn_clan_scout;singing_mountain_clan_sentry") --TODO: Magic string
+			newTarget = "singing_mtn_clan_arch_witch;singing_mtn_clan_councilwoman;singing_mtn_clan_dragoon;singing_mtn_clan_guardian;singing_mtn_clan_huntress;singing_mtn_clan_rancor_tamer;singing_mtn_clan_scout;singing_mountain_clan_sentry" --TODO: Magic string
 		elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_KILL_01)) then
-			writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTarget", "nightsister_elder;nightsister_protector;nightsister_ranger;nightsister_sentinel;nightsister_sentry;nightsister_spell_weaver;nightsister_stalker") --TODO: Magic string
-			newTarget = "nightsister_elder;nightsister_protector;nightsister_ranger;nightsister_sentinel;nightsister_sentry;nightsister_spell_weaver;nightsister_stalker" --TODO: Magic string
+			writeScreenPlayData(pPlayer, "wodThemepark:otherClan", "huntTarget", "nightsister_elder;nightsister_protector;nightsister_rancor_tamer;nightsister_ranger;nightsister_sentinal;nightsister_sentry;nightsister_spell_weaver;nightsister_stalker") --TODO: Magic string
+			newTarget = "nightsister_elder;nightsister_protector;nightsister_rancor_tamer;nightsister_ranger;nightsister_sentinal;nightsister_sentry;nightsister_spell_weaver;nightsister_stalker" --TODO: Magic string
 		end
 		printLuaError("wodKillOtherClan:notifyKilledHuntTarget, nil huntTarget for player: " .. SceneObject(pPlayer):getCustomObjectName() .. " (player killed target: " .. SceneObject(pVictim):getObjectName() .. "). Setting to " .. newTarget .. ".")
 		huntTarget = newTarget
