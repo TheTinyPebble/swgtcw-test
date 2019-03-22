@@ -1,5 +1,5 @@
 wod_ghost_witch = Creature:new {
-	customName = "Temporary Name: Ghost Clan Mother",
+	objectName = "@mob/creature_names:wod_ghost_witch",
 	socialGroup = "",
 	faction = "",
 	level = 100,

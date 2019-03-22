@@ -1,6 +1,5 @@
 wod_leandra = Creature:new {
-	objectName = "",
-	customName = "Temp Name: Lendra",
+	objectName = "@mob/creature_names:leandra",
 	socialGroup = "nightsister",
 	faction = "nightsister",
 	level = 100,

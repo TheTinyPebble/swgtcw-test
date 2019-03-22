@@ -1,5 +1,5 @@
 wod_hazel = Creature:new {
-	customName = "Temporary Name: Haz'El (Sage)",
+	objectName = "@mob/creature_names:sage_hazel",
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
 	level = 100,

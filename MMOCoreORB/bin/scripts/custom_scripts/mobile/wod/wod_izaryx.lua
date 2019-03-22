@@ -1,6 +1,5 @@
 wod_izaryx = Creature:new {
-	objectName = "",
-	customName = "Temporary Name: Izaryx",
+	objectName = "@mob/creature_names:izaryx",
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
 	level = 100,

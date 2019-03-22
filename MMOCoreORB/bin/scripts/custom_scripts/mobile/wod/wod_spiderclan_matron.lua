@@ -1,5 +1,5 @@
-wod_queen_mother = Creature:new {
-	customName = "Temporary Name: Queen Mother",
+wod_spiderclan_matron = Creature:new {
+	objectName = "@mob/creature_names:spiderclan_matron",
 	socialGroup = "",
 	faction = "",
 	level = 100,
@@ -34,4 +34,4 @@ wod_queen_mother = Creature:new {
 	}
 }
 
-CreatureTemplates:addCreatureTemplate(wod_queen_mother, "wod_queen_mother")
+CreatureTemplates:addCreatureTemplate(wod_spiderclan_matron, "wod_spiderclan_matron")

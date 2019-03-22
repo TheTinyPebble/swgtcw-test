@@ -1,5 +1,5 @@
 wod_omogg_rep = Creature:new {
-	customName = "Temporary Name: Omogg Repp",
+	objectName = "@mob/creature_names:omoggs_rep",
 	socialGroup = "",
 	faction = "",
 	level = 100,

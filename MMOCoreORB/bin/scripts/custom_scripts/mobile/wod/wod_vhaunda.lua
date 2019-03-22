@@ -1,6 +1,5 @@
 wod_vhaunda = Creature:new {
-	objectName = "",
-	customName = "Temp Name: Vhaunda",
+	objectName = "@mob/creature_names:vhaunda",
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
 	level = 100,

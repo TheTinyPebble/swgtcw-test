@@ -1,5 +1,5 @@
 wod_azzenaj = Creature:new {
-	customName = "Temporary Name: Azzenaj",
+	objectName = "@mob/creature_names:azzenaj",
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
 	level = 100,

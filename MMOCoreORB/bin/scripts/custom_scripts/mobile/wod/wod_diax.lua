@@ -1,6 +1,5 @@
 wod_diax = Creature:new {
 	objectName = "@mob/creature_names:diax",
-	customName = "Diax",
 	socialGroup = "nightsister",
 	faction = "nightsister",
 	level = 100,

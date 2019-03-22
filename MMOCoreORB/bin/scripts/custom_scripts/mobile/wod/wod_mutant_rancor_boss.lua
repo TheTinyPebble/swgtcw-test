@@ -1,5 +1,5 @@
 wod_mutant_rancor_boss = Creature:new {
-	customName = "Temporary Name: WOD Mutant Rancor Boss",
+	objectName = "@mob/creature_names:wod_mutant_rancor_boss",
 	socialGroup = "",
 	faction = "",
 	level = 336,

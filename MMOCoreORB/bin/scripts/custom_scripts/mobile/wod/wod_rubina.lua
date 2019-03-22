@@ -1,5 +1,5 @@
 wod_rubina = Creature:new {
-	customName = "Temporary Name: Rubina",
+	objectName = "@mob/creature_names:rubina",
 	socialGroup = "",
 	faction = "",
 	level = 100,

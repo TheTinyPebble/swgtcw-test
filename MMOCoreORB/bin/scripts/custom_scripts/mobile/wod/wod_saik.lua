@@ -1,6 +1,5 @@
 wod_saik = Creature:new {
-	objectName = "",
-	customName = "Temp Name: Saik",
+	objectName = "@mob/creature_names:saik",
 	socialGroup = "nightsister",
 	faction = "nightsister",
 	level = 100,

@@ -1,5 +1,5 @@
 wod_spider_queen = Creature:new {
-	customName = "Temporary Name: Spider Queen",
+	objectName = "@mob/creature_names:wod_spider_queen",
 	socialGroup = "spider_nightsister",
 	faction = "spider_nightsister",
 	level = 336,

@@ -1,5 +1,7 @@
 wod_reanimated_witch = Creature:new {
-	customName = "Temporary Name: Reanimated Witch",
+	objectName = "@mob/creature_names:reanimated_witch",
+	randomNameType = NAME_GENERIC,
+	randomNameTag = true,
 	socialGroup = "wod_reanimated",
 	faction = "",
 	level = 107,

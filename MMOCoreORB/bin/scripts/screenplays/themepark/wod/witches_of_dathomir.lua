@@ -244,7 +244,7 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 	spawnMobile("dathomir", "mutant_rancor", 300, -25.8339, -79.4139, -140.684, 347, 610001021) 
 	
 	--Breeding Cave (Queen Mother): 308, 114, -190
-	spawnMobile("dathomir", "wod_queen_mother", 300, 3.08672, -67.305, -74.1763, 187, 610001001) 
+	spawnMobile("dathomir", "wod_spiderclan_matron", 300, 3.08672, -67.305, -74.1763, 187, 610001001) 
 	local pSpider = spawnMobile("dathomir", "cavern_spider_broodling", 300, 2.43422, -67.4344, -66.7283, 176, 610001001) 
 	CreatureObject(pSpider):setPvpStatusBitmask(0)
 	pSpider = spawnMobile("dathomir", "cavern_spider_broodling", 300, 10.1517, -66.8012, -76.0353, 232, 610001001) 

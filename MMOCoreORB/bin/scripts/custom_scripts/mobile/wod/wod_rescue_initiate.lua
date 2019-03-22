@@ -1,6 +1,7 @@
 wod_rescue_initiate = Creature:new {
-	objectName = "",
-	customName = "Temp Name: Initiate",
+	objectName = "@mob/creature_names:rescue_initiate",
+	randomNameType = NAME_GENERIC,
+	randomNameTag = true,
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,

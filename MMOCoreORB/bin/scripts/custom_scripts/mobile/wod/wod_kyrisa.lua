@@ -1,5 +1,5 @@
 wod_kyrisa = Creature:new {
-	customName = "Temporary Name: Kyrisa",
+	objectName = "@mob/creature_names:kyrisa",
 	socialGroup = "",
 	faction = "",
 	level = 100,

@@ -1,5 +1,5 @@
 wod_sm_vendor = Creature:new {
-	customName = "Temporary Name: SM Vendor",
+	objectName = "@mob/creature_names:wod_sm_vendor",
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
 	level = 100,

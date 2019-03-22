@@ -1,5 +1,5 @@
 wod_giant_whuffa_worm = Creature:new {
-	customName = "Temporary Name: WOD Giant Whuffa Worm",
+	objectName = "@mob/creature_names:giant_whuffa_worm",
 	socialGroup = "kwi",
 	faction = "",
 	level = 141,

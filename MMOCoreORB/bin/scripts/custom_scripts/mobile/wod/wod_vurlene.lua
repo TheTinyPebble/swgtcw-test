@@ -1,6 +1,5 @@
 wod_vurlene = Creature:new {
-	objectName = "",
-	customName = "Temp Name: Vurlene",
+	objectName = "@mob/creature_names:vurlene",
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
 	level = 100,

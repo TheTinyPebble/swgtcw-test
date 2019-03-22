@@ -1,6 +1,5 @@
 wod_fath_hray = Creature:new {
-	objectName = "",
-	customName = "Temporary Name: Izaryx",
+	objectName = "@mob/creature_names:fath_hray",
 	socialGroup = "nightsister",
 	faction = "nightsister",
 	level = 100,

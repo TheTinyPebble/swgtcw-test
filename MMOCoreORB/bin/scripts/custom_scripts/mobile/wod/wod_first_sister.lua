@@ -1,5 +1,5 @@
 wod_first_sister = Creature:new {
-	customName = "Temporary Name: First Sister",
+	objectName = "@mob/creature_names:wod_first_sister",
 	socialGroup = "wod_reanimated",
 	faction = "",
 	level = 131,

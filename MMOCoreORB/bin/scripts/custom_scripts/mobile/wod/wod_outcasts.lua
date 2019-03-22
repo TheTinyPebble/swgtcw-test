@@ -1,6 +1,6 @@
 function createOutcastNPC(num)
 	wod_outcast = Creature:new {
-		customName = "Temporary Name: Outcast",
+	objectName = "@mob/creature_names:wod_outcast",
 		socialGroup = "",
 		faction = "",
 		level = 100,

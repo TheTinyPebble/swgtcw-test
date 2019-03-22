@@ -1,6 +1,5 @@
 wod_telo = Creature:new {
-	objectName = "",
-	customName = "Temp Name: Telo (Herbalist)",
+	objectName = "@mob/creature_names:telo",
 	socialGroup = "mtn_clan",
 	faction = "mtn_clan",
 	level = 100,

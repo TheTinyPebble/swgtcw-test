@@ -1,6 +1,5 @@
 wod_ns_vendor = Creature:new {
-	objectName = "",
-	customName = "Temp Name: NS Vendor",
+	objectName = "@mob/creature_names:wod_ns_vendor",
 	socialGroup = "nightsister",
 	faction = "nightsister",
 	level = 100,

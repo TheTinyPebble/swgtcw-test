@@ -1,5 +1,5 @@
 wod_kwi = Creature:new {
-	customName = "Temporary Name: WOD Kwi",
+	objectName = "@mob/creature_names:wod_kwi",
 	socialGroup = "kwi",
 	faction = "",
 	level = 101,

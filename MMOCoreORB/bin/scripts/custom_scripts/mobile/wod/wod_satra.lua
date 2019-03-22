@@ -1,6 +1,5 @@
 wod_satra = Creature:new {
-	objectName = "",
-	customName = "Temp Name: Satra (Herbalist)",
+	objectName = "@mob/creature_names:satra",
 	socialGroup = "nightsister",
 	faction = "nightsister",
 	level = 100,

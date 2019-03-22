@@ -1,5 +1,5 @@
 wod_spiderclan_obfuscatrix = Creature:new {
-	customName = "Temporary Name: Spiderclan Obfuscatrix",
+	objectName = "@mob/creature_names:wod_spiderclan_obfuscatrix",
 	socialGroup = "spider_nightsister",
 	faction = "spider_nightsister",
 	level = 131,

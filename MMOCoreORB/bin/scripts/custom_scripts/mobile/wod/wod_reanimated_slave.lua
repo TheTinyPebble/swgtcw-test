@@ -1,5 +1,7 @@
 wod_reanimated_slave = Creature:new {
-	customName = "Temporary Name: Reanimated Slave",
+	objectName = "@mob/creature_names:reanimated_slave",
+	randomNameType = NAME_GENERIC,
+	randomNameTag = true,
 	socialGroup = "wod_reanimated",
 	faction = "",
 	level = 96,
