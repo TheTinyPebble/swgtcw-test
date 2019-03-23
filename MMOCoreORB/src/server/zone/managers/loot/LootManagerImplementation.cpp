@@ -999,15 +999,10 @@ void LootManagerImplementation::addRandomDots(TangibleObject* object, LootItemTe
 				str *= yellowModifier;
 			}*/
 
-			if (dotType == 1){
+			if (dotType == 1)
 				str = str * 2;
-				if (str >200)
-					str = 200;
-			}else if (dotType == 3){
+			else if (dotType == 3)
 				str = str * 1.5;
-				if (str >150)
-					str = 150;
-			}
 
 			weapon->addDotStrength(str);
 
