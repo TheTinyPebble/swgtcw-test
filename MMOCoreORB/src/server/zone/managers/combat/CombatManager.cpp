@@ -2952,5 +2952,7 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 			*shouldJediTef = true;
 		}
 
-	}
+	} else if (attackingCreature != NULL && targetCreature != NULL && attackingCreature->isPlayerCreature() && !targetCreature->isPlayerCreature() && targetCreature->getFaction() != 0 && targetCreature->getFaction() != attackingCreature->getFaction()){
+		*shouldGcwTef = true;
+
 }
