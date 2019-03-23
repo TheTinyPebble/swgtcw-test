@@ -121,16 +121,16 @@ function wodWholeTruthArc:sendMessageToGroup(pBoss)
 		if (pMember ~= nil and CreatureObject(pOwner):isInRangeWithObject(pMember, 50)) then
 			if (bossState == 1) then
 				createEvent(9 * 60 * 1000, "wodSpiderclanArc", "sendMessageToGroup", nil, "")
-				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_rancor_start")
-				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_begin")
+				CreatureObject(pMember):sendSystemMessage("@theme_park_wod/wod:boss_rancor_start")
+				CreatureObject(pMember):sendSystemMessage("@theme_park_wod/wod:boss_begin")
 			elseif (bossState == 2) then
-				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_time_warning")
+				CreatureObject(pMember):sendSystemMessage("@theme_park_wod/wod:boss_time_warning")
 			elseif (bossState == 3) then
-				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:mutating_rancor")
+				CreatureObject(pMember):sendSystemMessage("@theme_park_wod/wod:mutating_rancor")
 			elseif (bossState == 4) then
-				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_leaving")
+				CreatureObject(pMember):sendSystemMessage("@theme_park_wod/wod:boss_leaving")
 			elseif (bossState == 5) then
-				CreatureObject(pPlayer):sendSystemMessage("@theme_park_wod/wod:boss_failed")
+				CreatureObject(pMember):sendSystemMessage("@theme_park_wod/wod:boss_failed")
 			end
 		end
 	end
