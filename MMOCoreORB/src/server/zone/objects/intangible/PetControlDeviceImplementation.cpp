@@ -177,7 +177,7 @@ void PetControlDeviceImplementation::callObject(CreatureObject* player) {
 			if (object->isCreature() && petType == PetManager::CREATUREPET) {
 				ManagedReference<CreatureTemplate*> activePetTemplate = object->getCreatureTemplate();
 
-				if (activePetTemplate == NULL || activePetTemplate->getTemplateName() == "rep_at_xt" || activePetTemplate->getTemplateName() == "cis_hailfire")
+				if (activePetTemplate == NULL || activePetTemplate->getTemplateName() == "rep_at_xt" || activePetTemplate->getTemplateName() == "cis_hailfire"|| activePetTemplate->getTemplateName() == "rep_at_xt_pet"|| activePetTemplate->getTemplateName() == "cis_hailfire_pet")
 					continue;
 
 				if (++currentlySpawned >= maxPets) {
@@ -200,11 +200,17 @@ void PetControlDeviceImplementation::callObject(CreatureObject* player) {
 				ManagedReference<CreatureTemplate*> activePetTemplate = object->getCreatureTemplate();
 				ManagedReference<CreatureTemplate*> callingPetTemplate = pet->getCreatureTemplate();
 
-				if (activePetTemplate == NULL || callingPetTemplate == NULL || (activePetTemplate->getTemplateName() != "rep_at_xt" && activePetTemplate->getTemplateName() != "cis_hailfire"))
+				if (activePetTemplate == NULL || callingPetTemplate == NULL || (activePetTemplate->getTemplateName() != "rep_at_xt" && activePetTemplate->getTemplateName() != "cis_hailfire" && activePetTemplate->getTemplateName() != "rep_at_xt_pet" && activePetTemplate->getTemplateName() != "cis_hailfire_pet"))
 					continue;
 
 				if (++currentlySpawned >= maxPets || (activePetTemplate->getTemplateName() == "rep_at_xt" && callingPetTemplate->getTemplateName() == "rep_at_xt")
-						|| (activePetTemplate->getTemplateName() == "cis_hailfire" && callingPetTemplate->getTemplateName() == "cis_hailfire")) {
+						|| (activePetTemplate->getTemplateName() == "rep_at_xt_pet" && callingPetTemplate->getTemplateName() == "rep_at_xt_pet")
+						|| (activePetTemplate->getTemplateName() == "rep_at_xt" && callingPetTemplate->getTemplateName() == "rep_at_xt_pet")
+						|| (activePetTemplate->getTemplateName() == "rep_at_xt_pet" && callingPetTemplate->getTemplateName() == "rep_at_xt")
+						|| (activePetTemplate->getTemplateName() == "cis_hailfire" && callingPetTemplate->getTemplateName() == "cis_hailfire_pet")
+						|| (activePetTemplate->getTemplateName() == "cis_hailfire_pet" && callingPetTemplate->getTemplateName() == "cis_hailfire")
+						|| (activePetTemplate->getTemplateName() == "cis_hailfire" && callingPetTemplate->getTemplateName() == "cis_hailfire")
+						|| (activePetTemplate->getTemplateName() == "cis_hailfire_pet" && callingPetTemplate->getTemplateName() == "cis_hailfire_pet")) {
 					player->sendSystemMessage("@pet/pet_menu:at_max"); // You already have the maximum number of pets of this type that you can call.
 					return;
 				}
