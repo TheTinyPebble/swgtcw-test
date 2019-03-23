@@ -38,6 +38,9 @@ SMWodVendorLogic = VendorLogic:new {
 		{name = "Schematic: SMC-style Hut", template = "object/tangible/loot/loot_schematic/wod_sm_hut.iff", cost = {5,30,3,3,9,0}},
 		{name = "WOD Sign (Hanging)", template = "object/tangible/theme_park/wod/wod_hanging_sign_skill.iff", cost = {6,6,6,6,6,0}},
 		{name = "WOD Sign (Standing)", template = "object/tangible/theme_park/wod/wod_standing_sign_skill.iff", cost = {6,6,6,6,6,0}},
+		{name = "Hanging Banner, Style 1 (Sign)", template = "object/tangible/theme_park/wod/wod_banner_1_sign_skill.iff", cost = {6,6,6,6,6,0}},
+		{name = "Hanging Banner, Style 2 (Sign)", template = "object/tangible/theme_park/wod/wod_banner_2_sign_skill.iff", cost = {6,6,6,6,6,0}},
+		{name = "Hanging Banner, Style 3 (Sign)", template = "object/tangible/theme_park/wod/wod_banner_3_sign_skill.iff", cost = {6,6,6,6,6,0}},
 	},
 }
 
@@ -83,6 +86,9 @@ NSWodVendorLogic = VendorLogic:new {
 		{name = "Schematic: NS-style Hut", template = "object/tangible/loot/loot_schematic/wod_ns_hut.iff", cost = {5,30,3,3,9,0}},
 		{name = "WOD Sign (Hanging)", template = "object/tangible/theme_park/wod/wod_hanging_sign_skill.iff", cost = {6,6,6,6,6,0}},
 		{name = "WOD Sign (Standing)", template = "object/tangible/theme_park/wod/wod_standing_sign_skill.iff", cost = {6,6,6,6,6,0}},
+		{name = "Hanging Banner, Style 1 (Sign)", template = "object/tangible/theme_park/wod/wod_banner_1_sign_skill.iff", cost = {6,6,6,6,6,0}},
+		{name = "Hanging Banner, Style 2 (Sign)", template = "object/tangible/theme_park/wod/wod_banner_2_sign_skill.iff", cost = {6,6,6,6,6,0}},
+		{name = "Hanging Banner, Style 3 (Sign)", template = "object/tangible/theme_park/wod/wod_banner_3_sign_skill.iff", cost = {6,6,6,6,6,0}},
 	},
 }
 

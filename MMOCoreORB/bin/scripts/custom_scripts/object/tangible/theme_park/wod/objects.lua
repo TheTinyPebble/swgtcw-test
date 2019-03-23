@@ -93,3 +93,21 @@ object_tangible_theme_park_wod_shared_wod_standing_sign_skill = SharedTangibleOb
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_shared_wod_standing_sign_skill, "object/tangible/theme_park/wod/shared_wod_standing_sign_skill.iff")
+
+object_tangible_theme_park_wod_shared_wod_banner_1_sign_skill = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/shared_wod_banner_1_sign_skill.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_shared_wod_banner_1_sign_skill, "object/tangible/theme_park/wod/shared_wod_banner_1_sign_skill.iff")
+
+object_tangible_theme_park_wod_shared_wod_banner_2_sign_skill = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/shared_wod_banner_2_sign_skill.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_shared_wod_banner_2_sign_skill, "object/tangible/theme_park/wod/shared_wod_banner_2_sign_skill.iff")
+
+object_tangible_theme_park_wod_shared_wod_banner_3_sign_skill = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/theme_park/wod/shared_wod_banner_3_sign_skill.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_theme_park_wod_shared_wod_banner_3_sign_skill, "object/tangible/theme_park/wod/shared_wod_banner_3_sign_skill.iff")

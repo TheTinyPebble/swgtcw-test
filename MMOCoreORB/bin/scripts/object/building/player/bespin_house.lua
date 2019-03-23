@@ -26,6 +26,9 @@ object_building_player_bespin_house = object_building_player_shared_bespin_house
 		{templateFile = "object/tangible/sign/player/shop_sign_s04.iff", x = -0.532527, z = 0.531912, y = -5.45694, ow = 1, ox = 0, oz = 0, oy = 0, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_04", suiItem = "@player_structure:shop_sign4"},
 		{templateFile = "object/tangible/sign/player/wod_sm_hanging_sign_01.iff", x = 0.39, z = 3.00, y = -2.44, ow = 0.99144, ox = 0, oz = 0, oy = -0.13053, cellid = -1, containmentType = -1, requiredSkill = "loot_sign_01", suiItem = "@player_structure:wod_sm_hanging_sign_01"},
 		{templateFile = "object/tangible/sign/player/wod_sm_standing_sign_01.iff", x = -0.532527, z = 0.531912, y = -5.45694, ow = 1, ox = 0, oz = 0, oy = 0, cellid = -1, containmentType = -1, requiredSkill = "loot_sign_02", suiItem = "@player_structure:wod_sm_standing_sign_01"},
+		{templateFile = "object/tangible/sign/player/wod_sm_banner_sign_01.iff", x = 0.39, z = 3.00, y = -2.44, ow = 0.99144, ox = 0, oz = 0, oy = -0.13053, containmentType = -1, requiredSkill = "loot_sign_03", suiItem = "@player_structure:wod_sm_banner_sign_01"},
+		{templateFile = "object/tangible/sign/player/wod_sm_banner_sign_02.iff", x = 0.39, z = 3.00, y = -2.44, ow = 0.99144, ox = 0, oz = 0, oy = -0.13053, containmentType = -1, requiredSkill = "loot_sign_04", suiItem = "@player_structure:wod_sm_banner_sign_02"},
+		{templateFile = "object/tangible/sign/player/wod_sm_banner_sign_03.iff", x = 0.39, z = 3.00, y = -2.44, ow = 0.99144, ox = 0, oz = 0, oy = -0.13053, containmentType = -1, requiredSkill = "loot_sign_05", suiItem = "@player_structure:wod_sm_banner_sign_03"},
 	}
 }
 

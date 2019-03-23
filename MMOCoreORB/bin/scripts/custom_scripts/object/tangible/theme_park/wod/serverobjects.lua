@@ -14,3 +14,6 @@ includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_witch_banner_s
 includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_storage_basket.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_hanging_sign_skill.lua")
 includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_standing_sign_skill.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_banner_1_sign_skill.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_banner_2_sign_skill.lua")
+includeFile("../custom_scripts/object/tangible/theme_park/wod/wod_banner_3_sign_skill.lua")

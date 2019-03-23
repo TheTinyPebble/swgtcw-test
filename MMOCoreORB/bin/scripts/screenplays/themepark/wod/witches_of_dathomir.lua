@@ -1,3 +1,5 @@
+-- Authour: The Tiny Pebble
+
 witchesOfDathomirScreenplay = ScreenPlay:new {
 	spawnZones = {
 		{ --Mutant rancor prologue location
