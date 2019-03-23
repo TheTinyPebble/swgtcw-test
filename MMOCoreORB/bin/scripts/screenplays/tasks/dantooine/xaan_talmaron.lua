@@ -79,7 +79,7 @@ XaanTalmaron = ThemeParkLogic:new {
 	faction = FACTIONIMPERIAL
 }
 
-registerScreenPlay("XaanTalmaron", true)
+registerScreenPlay("XaanTalmaron", false)
 
 xaan_talmaron_mission_giver_conv_handler = mission_giver_conv_handler:new {
 	themePark = XaanTalmaron
