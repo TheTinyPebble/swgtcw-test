@@ -32,6 +32,11 @@ function wod_kyrisa_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	if (screenID == "complete_quest") then
 		QuestManager.completeQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_whole_truth_05"))
 		QuestManager.activateQuest(pPlayer, getPlayerQuestID("wod_" .. clan .. "_whole_truth_06"))
+		if (clan == "ns") then
+			wodNSWholeTruth06Goto:start(pPlayer)
+		else
+			wodSMWholeTruth06Goto:start(pPlayer)
+		end
 	end
 
 	if (screenID == "greater_good_start_quest") then

@@ -1,6 +1,6 @@
 wod_mutant_rancor_boss = Creature:new {
 	objectName = "@mob/creature_names:wod_mutant_rancor_boss",
-	socialGroup = "",
+	socialGroup = "mutant_rancor",
 	faction = "",
 	level = 336,
 	chanceHit = 30.0,

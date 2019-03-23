@@ -95,7 +95,7 @@ function VendorLogic:buyItem(pPlayer, itemSelected)
 					if (cost <= CreatureObject(pPlayer):getCashCredits()) then
 						CreatureObject(pPlayer):subtractCashCredits(cost)
 					else
-						cost = cost - cashCredits
+						cost = cost - CreatureObject(pPlayer):getCashCredits()
 						CreatureObject(pPlayer):subtractCashCredits(CreatureObject(pPlayer):getCashCredits())
 						CreatureObject(pPlayer):setBankCredits(CreatureObject(pPlayer):getBankCredits() - cost)
 					end

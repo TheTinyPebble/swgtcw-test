@@ -6,7 +6,7 @@ wodSMWholeTruth04Goto = GoToLocation:new {
 	taskName = "wodSMWholeTruth04Goto",
 	-- GoToLocation properties
 	waypointDescription = "@theme_park_wod/wod_sm_whole_truth:task04_waypoint_name",
-	spawnPoint = {x = 1823, y = 1993},
+	spawnPoint = {x = 1993, y = 1823},
 	spawnPlanet = "dathomir",
 	spawnRadius = 5,
 }
@@ -20,7 +20,8 @@ function wodSMWholeTruth04Goto:onEnteredActiveArea(pPlayer)
 	end
 
 	self:finish(pPlayer)
-	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_03)
+	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_04)
+	QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_05)
 	return 1
 end
 

@@ -1,6 +1,6 @@
 SMWodVendorLogic = VendorLogic:new {
 	scriptName = "SMWodVendorLogic",
-	curenncies = {
+	currencies = {
 	--For Tokens: Displayed Name, full template string (without shared_), if applicable: ScreenPlayData string, ScreenPlayData key
 		{currency = "token", name = "Dathomir Amber", template = "object/tangible/content/wod_token_1.iff", ScreenPlayDataString = "wodThemeparkToken", ScreenPlayDataKey = "amber"},
 		{currency = "token", name = "Rare Dried Herbs", template = "object/tangible/content/wod_token_5.iff", ScreenPlayDataString = "wodThemeparkToken", ScreenPlayDataKey = "herbs"},
@@ -24,7 +24,6 @@ SMWodVendorLogic = VendorLogic:new {
 		{name = "Schematic: SMC Frenzy Headcover", template = "object/tangible/wearables/hat/singing_mountain_clan_hat_s02.iff", cost = {0,0,2,6,4,0}},
 		{name = "Schematic: SMC Mask", template = "object/tangible/theme_park/wod/schematics/wod_sm_mask_schematic.iff", cost = {0,0,2,6,4,0}},
 		{name = "Schematic: SMC Twisted Travel Pack", template = "object/tangible/theme_park/wod/schematics/wod_sm_backpack_schematic.iff", cost = {0,0,2,6,4,0}},
-		{name = "Schematic: NS Feather Backpack", template = "object/tangible/theme_park/wod/schematics/wod_ns_backpack_schematic.iff", cost = {0,0,2,6,4,0}},
 		{name = "Schematic: Banner - The Maiden", template = "object/tangible/theme_park/wod/schematics/wod_witch_banner_s01_schematic.iff", cost = {0,0,2,5,2,0}},
 		{name = "Schematic: Banner - The Mother", template = "object/tangible/theme_park/wod/schematics/wod_witch_banner_s02_schematic.iff", cost = {0,0,2,5,2,0}},
 		{name = "Schematic: Banner - The Crone", template = "object/tangible/theme_park/wod/schematics/wod_witch_banner_s03_schematic.iff", cost = {0,0,2,5,2,0}},
@@ -46,7 +45,7 @@ registerScreenPlay("SMWodVendorLogic", false)
 
 NSWodVendorLogic = VendorLogic:new {
 	scriptName = "NSWodVendorLogic",
-	curenncies = {
+	currencies = {
 	--For Tokens: Displayed Name, full template string (without shared_), if applicable: ScreenPlayData string, ScreenPlayData key
 		{currency = "token", name = "Dathomir Amber", template = "object/tangible/content/wod_token_1.iff", ScreenPlayDataString = "wodThemeparkToken", ScreenPlayDataKey = "amber"},
 		{currency = "token", name = "Rare Dried Herbs", template = "object/tangible/content/wod_token_5.iff", ScreenPlayDataString = "wodThemeparkToken", ScreenPlayDataKey = "herbs"},

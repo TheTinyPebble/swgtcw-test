@@ -4,6 +4,8 @@ wodWholeTruthArc = ScreenPlay:new {
 
 registerScreenPlay("wodWholeTruthArc", true)
 
+--TODO: Rancor mechanic (debuff/poison + synergy shield)
+
 local QuestManager = require("managers.quest.quest_manager")
 
 function wodWholeTruthArc:start()
@@ -165,19 +167,14 @@ end
 
 --Eliminate quest
 function wodWholeTruthArc:startEliminateQuest(pPlayer)
-	
 	dropObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
 	deleteScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTarget")
 	deleteScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTargetCount")
 	deleteScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTargetGoal")
 	
 	writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTargetCount", 0)
-	
-	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_02)) then
-		writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTargetGoal", 3) -- TODO: Magic number
-		writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTarget", "mutant_rancor") --TODO: Magic string
-	end
-	
+	writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTargetGoal", 3) -- TODO: Magic number
+	writeScreenPlayData(pPlayer, "wodThemepark:wholeTruthArc:killQuest", "huntTarget", "mutant_rancor") --TODO: Magic string
 	createObserver(KILLEDCREATURE, "wodWholeTruthArc", "notifyKilledHuntTarget", pPlayer)
 end
 
@@ -185,8 +182,8 @@ function wodWholeTruthArc:notifyKilledHuntTarget(pPlayer, pVictim)
 	if (pVictim == nil or pPlayer == nil) then
 		return 0
 	end
-	
-	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_02)) then
+
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_02)) then
 		return 0
 	end
 
@@ -223,7 +220,7 @@ function wodWholeTruthArc:notifyKilledHuntTarget(pPlayer, pVictim)
 	end
 
 	local targetList = HelperFuncs:splitString(huntTarget, ";")
-
+	
 	if (huntTarget == SceneObject(pVictim):getObjectName() or HelperFuncs:tableContainsValue(targetList, SceneObject(pVictim):getObjectName())) then
 		targetCount = targetCount + 1
 		
@@ -238,7 +235,7 @@ function wodWholeTruthArc:notifyKilledHuntTarget(pPlayer, pVictim)
 		local remaining = targetGoal - targetCount
 
 		if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_02) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_WHOLE_TRUTH_02)) then
-			if (remaining == 0) then
+			if (remaining > 0) then
 				CreatureObject(pPlayer):sendSystemMessage("You have collected a mutant rancor blood sample, " .. remaining .. " remaining.")
 			else
 				CreatureObject(pPlayer):sendSystemMessage("You have collected enough mutated rancor blood samples.")

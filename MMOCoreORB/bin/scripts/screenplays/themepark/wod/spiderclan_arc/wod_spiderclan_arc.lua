@@ -175,7 +175,7 @@ function wodSpiderclanArc:notifyKilledHuntTarget(pPlayer, pVictim)
 		return 0
 	end
 	
-	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_03) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_02) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_02)) then
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_LOST_E02_03) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_LOST_E02_03) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_EHS_02) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_EHS_02)) then
 		return 0
 	end
 

@@ -41,6 +41,7 @@ function wod_ns_guide_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pN
 		if (not PlayerObject(pGhost):hasBadge(161)) then
 			PlayerObject(pGhost):awardBadge(161)
 		end
+		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_RUBINA_GOTO_NS)
 	end
 
 	if (screenID == "continue" or screenID == "end_conv") then

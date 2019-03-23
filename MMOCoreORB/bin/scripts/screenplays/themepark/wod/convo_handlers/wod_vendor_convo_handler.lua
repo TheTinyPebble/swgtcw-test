@@ -36,7 +36,7 @@ function wod_vendor_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	if (screenID == "sale") then
 		if (vendor == "wod_ns_vendor") then
 			NSWodVendorLogic:openSUI(pPlayer)
-		elseif (vendor == "wod_ns_vendor") then
+		else
 			SMWodVendorLogic:openSUI(pPlayer)
 		end
 	end

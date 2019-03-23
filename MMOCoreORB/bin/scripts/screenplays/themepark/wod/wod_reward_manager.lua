@@ -9,7 +9,7 @@ wodPrologueRewardManager = {
 			"object/tangible/furniture/all/wod_pro_seed_jar.iff",
 		},
 		collectionRewardOnce = false, --Award reward only once. Default setting: false
-		collectionCount = 5,
+		collectionCount = 1,--Prod Setting: 5
 		collectionRewardType = "random", --Set collection reward type, "all", "random", "pick"
 		collectionRewardSM = {
 			"object/tangible/furniture/all/wod_pro_sm_seed_jar_01.iff",
@@ -35,7 +35,7 @@ wodPrologueRewardManager = {
 	
 	enemiesRancor = {
 		rewardOnce = false, --Award reward only once. Default setting: false
-		rewardInterval = 1, --Set how often rewards are granted. Reward is always granted on first completion. Default setting: 1
+		rewardInterval = 1, --Set how often rewards (every x completions) are granted. Reward is always granted on first completion. Default setting: 1
 		rewardType = "pick",
 		reward = { -- Players pick a reward from the list below.
 			{"object/tangible/veteran_reward/frn_reptilian_flyer_toy.iff", "Miniature Reptilian Flyer"},
@@ -43,7 +43,7 @@ wodPrologueRewardManager = {
 			{"object/tangible/veteran_reward/frn_malkloc_toy.iff", "Miniature Malkloc"},
 		},
 		collectionRewardOnce = false,
-		collectionCount = 5,
+		collectionCount = 1,--Prod Setting: 5
 		collectionRewardType = "all",
 		collectionReward = {
 			"object/tangible/veteran_reward/frn_mutated_rancor_toy.iff",
@@ -60,7 +60,7 @@ wodPrologueRewardManager = {
 			{"object/tangible/veteran_reward/frn_malkloc_toy.iff", "Miniature Malkloc"},
 		},
 		collectionRewardOnce = false,
-		collectionCount = 5,
+		collectionCount = 1,--Prod Setting: 5
 		collectionRewardType = "all",
 		collectionReward = {
 			"object/tangible/veteran_reward/frn_gaping_spider_toy.iff",
@@ -78,12 +78,12 @@ wodPrologueRewardManager = {
 			{"object/tangible/painting/painting_wod_scene_04.iff", "Dathomir Mountain Scenery"},
 		},
 		collectionRewardOnce = false,
-		collectionCount = 5,
+		collectionCount = 1,--Prod Setting: 5
 		collectionRewardType = "all",
 		collectionRewardSM = {
 			"object/tangible/painting/painting_wod_sm_02.iff",
 		},
-		collectionRewardSM = {
+		collectionRewardNS = {
 			"object/tangible/painting/painting_wod_ns_02.iff",
 		}
 	},
@@ -101,7 +101,7 @@ wodRewardManager = {
 		},
 		rewardRandomValuable = 2, --Set how many random valuables (tokens) should be rewarded.
 		collectionRewardOnce = false,
-		collectionCount = 5,
+		collectionCount = 1,--Prod Setting: 5
 		collectionRewardType = "all",
 		collectionRewardNS = {
 			"object/tangible/furniture/all/wod_ns_seed_jar.iff",
@@ -124,7 +124,7 @@ wodRewardManager = {
 			{"object/tangible/content/wod_token_5.iff", "Rare Dried Herbs"},
 		},
 		collectionRewardOnce = true,
-		collectionCount = 7,
+		collectionCount = 1,--Prod Setting: 7
 		collectionNSBadgeToAward = 162,
 		collectionSMBadgeToAward = 155,
 	},
@@ -142,7 +142,7 @@ wodRewardManager = {
 			{"object/tangible/content/wod_token_5.iff", "Rare Dried Herbs"},
 		},
 		collectionRewardOnce = true,
-		collectionCount = 7,
+		collectionCount = 1,--Prod Setting: 7
 		collectionNSBadgeToAward = 163,
 		collectionSMBadgeToAward = 156,
 	},
@@ -156,7 +156,7 @@ wodRewardManager = {
 		},
 		rewardRandomValuable = 1,
 		collectionRewardOnce = true,
-		collectionCount = 7,
+		collectionCount = 1,--Prod Setting: 7
 		collectionNSBadgeToAward = 165,
 		collectionSMBadgeToAward = 158,
 	},
@@ -174,7 +174,7 @@ wodRewardManager = {
 			{"object/tangible/content/wod_token_5.iff", "Rare Dried Herbs"},
 		},
 		collectionRewardOnce = true,
-		collectionCount = 7,
+		collectionCount = 1,--Prod Setting: 7
 		collectionNSBadgeToAward = 166,
 		collectionSMBadgeToAward = 159,
 	},
@@ -190,7 +190,7 @@ wodRewardManager = {
 		},
 		rewardRandomValuable = 2,
 		collectionRewardOnce = true,
-		collectionCount = 7,
+		collectionCount = 1,--Prod Setting: 7
 		collectionNSBadgeToAward = 167,
 		collectionSMBadgeToAward = 160,
 	},

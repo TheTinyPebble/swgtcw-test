@@ -21,26 +21,30 @@ function wodStorageBasketMenuComponent:handleObjectMenuSelect(pSceneObject, pPla
 	if (pSceneObject == nil or pPlayer == nil) then
 		return
 	end
-	
+
 	if (SceneObject(pSceneObject):isASubChildOf(pPlayer) == false) then
 		return 0
 	end
 
 	if (selectedID == 122) then
 		local sui = SuiListBox.new("wodStorageBasketMenuComponent", "withdrawTokenListCallback")
-		
+
 		sui.setTargetNetworkId(SceneObject(pPlayer):getObjectID())
-		
+
 		sui.setTitle("Item Withdrawal")
 		sui.setPrompt("Select which item to withdraw from your storage basket.")
-		
+
 		for i = 1, 5 do
 			local tokenData = tonumber(readScreenPlayData(pPlayer, wodStorageBasketTokenData[i][1], wodStorageBasketTokenData[i][2]))
+			if (tokenData == nil or tokenData == "") then
+				tokenData = 0
+			end
+
 			if (tokenData >= 1) then
 				sui.add(wodStorageBasketTokenData[i][3], "")
 			end
 		end
-		
+
 		sui.sendTo(pPlayer)
 	end
 	return 0
@@ -109,9 +113,9 @@ function wodStorageBasketContainerComponent:canAddObject(pBasket, pObject, slot)
 	if (pBasket == nil or pObject == nil) then
 		return
 	end
-	
+	print("OO")
 	local pParent = self:getObjOwner(pObject)
-	
+	print("OO")
 	if (pParent == nil or not SceneObject(pParent):isPlayerCreature()) then
 		return TRANSFERCANTADD
 	end
@@ -177,15 +181,13 @@ wodStorageBasketAttributeListComponent = {}
 
 function wodStorageBasketAttributeListComponent:fillAttributeList(pALM, pPlayer, pObject)
 	local ALM = LuaAttributeListMessage(pALM)
-	
-	ALM:insertNewAttribute("versafunction_display", "Stored Tokens")
-	
+
 	for i = 1, #wodStorageBasketTokenData do
 		local tokenData = tonumber(readScreenPlayData(pPlayer, wodStorageBasketTokenData[i][1], wodStorageBasketTokenData[i][2]))
 		if (tokenData == "" or tokenData == nil) then
 			tokenData = 0
 		end
-		
+
 		ALM:insertNewAttribute("wod_storage_basket_token" .. i, tokenData)
 	end
 end

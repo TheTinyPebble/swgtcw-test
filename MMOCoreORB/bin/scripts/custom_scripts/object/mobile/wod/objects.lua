@@ -351,3 +351,9 @@ object_mobile_shared_dressed_dathomir_spider_nightsister_mother = SharedCreature
 }
 
 ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_dathomir_spider_nightsister_mother, "object/mobile/shared_dressed_dathomir_spider_nightsister_mother.iff")
+
+object_mobile_shared_mutant_rancor_static = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_mutant_rancor_static.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_mutant_rancor_static, "object/mobile/shared_mutant_rancor_static.iff")

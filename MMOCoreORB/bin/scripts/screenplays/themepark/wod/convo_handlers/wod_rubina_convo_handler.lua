@@ -68,12 +68,7 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 	local screenID = screen:getScreenID()
 	local pConvScreen = screen:cloneScreen()
 	local clonedConversation = LuaConversationScreen(pConvScreen)
-	local pGhost = CreatureObject(pPlayer):getPlayerObject()
-	
-	if (pGhost == nil) then
-		return pConvScreen
-	end
-	
+
 	if (screenID == "complete_meet_witch") then
 		QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_MEET_MYSTERIOUS_WITCH)
 	end
@@ -131,10 +126,9 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 				QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_04)
 				QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_05)
 			end
-			PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_prologue_kill_rancor:task01_waypoint_name", "", -5536, 3968, WAYPOINTYELLOW, true, true, 0)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_01)
-			wodPrologueScreenplay:startEliminateQuest(pPlayer)
+			wodEliminateRancorGoto:start(pPlayer)
 		else
 			if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN)) then
 				QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN)
@@ -144,10 +138,9 @@ function wod_rubina_convo_handler:runScreenHandlers(pConvTemplate, pPlayer, pNpc
 				QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_04)
 				QuestManager.resetQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_05)
 			end
-			PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_prologue_kill_spider_clan:task01_waypoint_name", "", -1887, 5723, WAYPOINTYELLOW, true, true, 0)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN)
 			QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_01)
-			wodPrologueScreenplay:startEliminateQuest(pPlayer)
+			wodEliminateSpiderclanGoto:start(pPlayer)
 		end
 	end
 

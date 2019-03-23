@@ -26,7 +26,7 @@ function wodSMKyrisaCaveGoto:onEnteredActiveArea(pPlayer)
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 	
 	if (pGhost == nil) then
-		return
+		return 1
 	end
 	
 	PlayerObject(pGhost):addWaypoint("dathomir", "@theme_park_wod/wod_ns_kyrisa_boss_fight:task02_waypoint_name", "", 1726, 2141, WAYPOINTYELLOW, true, true, 0)

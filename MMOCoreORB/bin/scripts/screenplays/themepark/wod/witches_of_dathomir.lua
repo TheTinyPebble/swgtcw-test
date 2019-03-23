@@ -59,7 +59,7 @@ local QuestManager = require("managers.quest.quest_manager")
 
 --TODO: Spawn Scene Objects
 --TODO: Spawn mobiles
---TODO: Reward handling check if inventory is full (can it give an item with full inventory? Need testing)
+--TODO: Reward handling check if inventory is full
 
 function witchesOfDathomirScreenplay:start()
 	if (isZoneEnabled("dathomir")) then
@@ -183,7 +183,9 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 	spawnMobile("dathomir", "wod_aujante_klee", -1, 3, 3, -5.2, 176, 2665884)
 	spawnMobile("dathomir", "wod_azzenaj", -1, -12.0, 2.0, 14.7, 150, 2665880)
 	spawnMobile("dathomir", "wod_zideera", -1, -12.3, 2, -8.6, -79, 2665882)
-	spawnMobile("dathomir", "wod_vurlene", -1, -12, 3, -9.5, 72, 2665880)
+	spawnMobile("dathomir", "theme_park_smc_rancor_pygmy_shando", -1, -12.6, 2, -2, -125, 2665882)
+	spawnMobile("dathomir", "theme_park_smc_rancor_pygmy_maufel", -1, -11.5, 2, -5.7, -99, 2665882)
+	spawnMobile("dathomir", "wod_vurlene", -1, -11.8, 2, 9.4, 86, 2665880)
 	spawnMobile("dathomir", "wod_hazel", -1, -14.2, 1.9, -21, -20, 2665883)
 	spawnMobile("dathomir", "wod_vhaunda", -1, -22.3, 2, 5.05, 5, 2665881)
 	spawnMobile("dathomir", "wod_izaryx", -1, -12, 2, -4, -110, 2665882)
@@ -222,26 +224,26 @@ function witchesOfDathomirScreenplay:spawnMobiles()
 	
 	--Cave of Mutations (Kyrisa): 1993, 42, 1823
 	spawnMobile("dathomir", "wod_kyrisa", 300, -85.9867, -101.108, -146.848, 97, 610001019) 
-	spawnMobile("dathomir", "mutant_rancor", 300, 2013.6, 27.1653, 1815.7, 311, 0) 
-	spawnMobile("dathomir", "mutant_rancor", 300, 2023.37, 30.0528, 1827.49, 314, 0) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -3.64833, -40.3737, -71.9833, 64, 610001014) 
-	spawnMobile("dathomir", "mutant_rancor", 300, 21.0084, -43.6678, -61.4665, 242, 610001014) 
-	spawnMobile("dathomir", "mutant_rancor", 300, 42.2644, -46.4554, -55.337, 193, 610001015) 
-	spawnMobile("dathomir", "mutant_rancor", 300, 43.2449, -46.0775, -97.4378, 347, 610001015) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -5.33385, -45.1265, -141.72, 147, 610001016) 
-	spawnMobile("dathomir", "mutant_rancor", 300, 64.6421, -47.3975, -128.361, 248, 610001016) 
-	spawnMobile("dathomir", "mutant_rancor", 300, 58.1275, -56.0969, -154.475, 126, 610001016) 
-	spawnMobile("dathomir", "mutant_rancor", 300, 57.272, -56.7325, -178.495, 275, 610001016) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -3.82092, -64.0563, -178.86, 87, 610001017) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -1.29048, -63.7761, -232.021, 278, 610001018) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -18.0333, -65.8262, -239.192, 61, 610001018) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -71.528, -69.4305, -194.527, 14, 610001019) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -95.5359, -73.7156, -169.064, 81, 610001019) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -120.967, -69.7222, -126.557, 201, 610001019) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -90.6674, -70.5743, -111.763, 194, 610001019) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -55.564, -69.9051, -88.0477, 275, 610001020) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -49.3086, -68.9791, -105.445, 275, 610001020) 
-	spawnMobile("dathomir", "mutant_rancor", 300, -25.8339, -79.4139, -140.684, 347, 610001021) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, 2013.6, 27.1653, 1815.7, 311, 0) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, 2023.37, 30.0528, 1827.49, 314, 0) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -3.64833, -40.3737, -71.9833, 64, 610001014) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, 21.0084, -43.6678, -61.4665, 242, 610001014) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, 42.2644, -46.4554, -55.337, 193, 610001015) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, 43.2449, -46.0775, -97.4378, 347, 610001015) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -5.33385, -45.1265, -141.72, 147, 610001016) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, 64.6421, -47.3975, -128.361, 248, 610001016) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, 58.1275, -56.0969, -154.475, 126, 610001016) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, 57.272, -56.7325, -178.495, 275, 610001016) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -3.82092, -64.0563, -178.86, 87, 610001017) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -1.29048, -63.7761, -232.021, 278, 610001018) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -18.0333, -65.8262, -239.192, 61, 610001018) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -71.528, -69.4305, -194.527, 14, 610001019) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -95.5359, -73.7156, -169.064, 81, 610001019) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -120.967, -69.7222, -126.557, 201, 610001019) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -90.6674, -70.5743, -111.763, 194, 610001019) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -55.564, -69.9051, -88.0477, 275, 610001020) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -49.3086, -68.9791, -105.445, 275, 610001020) 
+	spawnMobile("dathomir", "wod_mutant_rancor", 300, -25.8339, -79.4139, -140.684, 347, 610001021) 
 	
 	--Breeding Cave (Queen Mother): 308, 114, -190
 	spawnMobile("dathomir", "wod_spiderclan_matron", 300, 3.08672, -67.305, -74.1763, 187, 610001001) 
@@ -411,8 +413,13 @@ function witchesOfDathomirScreenplay:handleReward(pPlayer, key)
 	if (rewardKey.rewardOnce and curCount + 1 ~= 1) then
 		return
 	end
+	
+	local rewardInterval = 0
+	if (rewardKey.rewardInterval ~= nil) then
+		rewardInterval = (curCount + 1) % rewardKey.rewardInterval
+	end
 
-	if (curCount + 1 ~= 1 or curCount + 1 % rewardKey.rewardInterval == 0) then
+	if (curCount + 1 ~= 1 or rewardInterval == 0) then
 		local pItem
 		if (rewardKey.credits ~= nil and rewardKey.credits > 0) then
 			CreatureObject(pPlayer):addCashCredits(rewardKey.credits)

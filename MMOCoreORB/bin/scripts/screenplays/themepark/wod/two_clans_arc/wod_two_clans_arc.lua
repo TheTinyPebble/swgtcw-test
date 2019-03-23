@@ -54,7 +54,7 @@ function wodTwoClansArc:notifyKilledHuntTarget(pPlayer, pVictim)
 		return 0
 	end
 	
-	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_02) or not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_02)) then
+	if (not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_SISTER1_02) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_SM_SISTER1_02)) then
 		return 0
 	end
 

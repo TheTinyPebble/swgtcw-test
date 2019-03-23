@@ -12,7 +12,9 @@ function wod_ns_rancor_mistress_convo_handler:getInitialScreen(pPlayer, pNpc, pC
 		return convoTemplate:getScreen("wrong_alignment")
 	end
 
-	if (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_03) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_04)) then
+	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_03)) then
+		return convoTemplate:getScreen("return_whole_truth")
+	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH) and QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_03) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_04)) then
 		return convoTemplate:getScreen("whole_truth_two_init")
 	elseif (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KYRISA_BOSS_06) or (QuestManager.hasCompletedQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH) and not QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_NS_KYRISA_BOSS_FIGHT))) then
 		return convoTemplate:getScreen("return_whole_truth_two")

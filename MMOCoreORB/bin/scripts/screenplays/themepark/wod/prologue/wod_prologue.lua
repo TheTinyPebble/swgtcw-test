@@ -6,7 +6,7 @@ registerScreenPlay("wodPrologueScreenplay", false)
 
 local QuestManager = require("managers.quest.quest_manager")
 
---TODO: Reward handling check if inventory is full (can it give an item with full inventory? Need testing)
+--TODO: Reward handling check if inventory is full
 
 function wodPrologueScreenplay:onPlayerLoggedIn(pPlayer)
 	if (pPlayer == nil) then
@@ -14,7 +14,6 @@ function wodPrologueScreenplay:onPlayerLoggedIn(pPlayer)
 	end
 
 	if (QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_RANCOR_01) or QuestManager.hasActiveQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_01)) then
-		print("OOO")
 		dropObserver(KILLEDCREATURE, "wodPrologueScreenplay", "notifyKilledHuntTarget", pPlayer)
 		createObserver(KILLEDCREATURE, "wodPrologueScreenplay", "notifyKilledHuntTarget", pPlayer)
 	end
@@ -142,7 +141,12 @@ function wodPrologueScreenplay:handleReward(pPlayer, key)
 		return
 	end
 
-	if (curCount + 1 ~= 1 or curCount + 1 % rewardKey.rewardInterval == 0) then
+	local rewardInterval = 0
+	if (rewardKey.rewardInterval ~= nil) then
+		rewardInterval = (curCount + 1) % rewardKey.rewardInterval
+	end
+
+	if (curCount + 1 ~= 1 or rewardInterval == 0) then
 		if (rewardKey.credits ~= nil and rewardKey.credits > 0) then
 			CreatureObject(pPlayer):addCashCredits(rewardKey.credits)
 		end		
@@ -266,11 +270,10 @@ function wodPrologueScreenplay:notifyKilledHuntTarget(pPlayer, pVictim)
 	if (SceneObject(pVictim):getZoneName() ~= SceneObject(pPlayer):getZoneName() or not CreatureObject(pPlayer):isInRangeWithObject(pVictim, 80)) then
 		return 0
 	end
-	print("oo")
+
 	local targetList = HelperFuncs:splitString(huntTarget, ";")
-	print("oo", SceneObject(pVictim):getObjectName())
+
 	if (huntTarget == SceneObject(pVictim):getObjectName() or HelperFuncs:tableContainsValue(targetList, SceneObject(pVictim):getObjectName())) then
-		print("ooo")
 		local n = getRandomNumber(1, 4) --TODO: Magic number
 		if (n == 1) then
 			return 0
@@ -302,7 +305,7 @@ function wodPrologueScreenplay:notifyKilledHuntTarget(pPlayer, pVictim)
 				QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_01)
 				QuestManager.activateQuest(pPlayer, QuestManager.quests.WOD_PROLOGUE_KILL_SPIDER_CLAN_02)
 			end
-			wodRubinaReturnGoto:start(pPlayer)
+			wodEliminateReturnGoto:start(pPlayer)
 			return 1
 		end
 	end

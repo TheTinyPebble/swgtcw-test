@@ -20,7 +20,6 @@ function wodNSWholeTruth03Goto:onEnteredActiveArea(pPlayer)
 	end
 
 	self:finish(pPlayer)
-	QuestManager.completeQuest(pPlayer, QuestManager.quests.WOD_NS_WHOLE_TRUTH_03)
 	return 1
 end
 

@@ -86,6 +86,9 @@ includeFile("themepark/wod/rubina_epilogue/wod_rubina_epilogue_goto.lua")
 --Prologue
 includeFile("themepark/wod/prologue/wod_prologue.lua")
 includeFile("themepark/wod/prologue/wod_rubina_return.lua")
+includeFile("themepark/wod/prologue/wod_eliminate_rancor_goto.lua")
+includeFile("themepark/wod/prologue/wod_eliminate_spiderclan_goto.lua")
+includeFile("themepark/wod/prologue/wod_eliminate_return.lua")
 
 --Prologue outcasts
 includeFile("themepark/wod/prologue/outcast/wod_outcast1_goto.lua")

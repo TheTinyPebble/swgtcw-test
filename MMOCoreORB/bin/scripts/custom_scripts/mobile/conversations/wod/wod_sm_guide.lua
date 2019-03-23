@@ -29,7 +29,7 @@ wod_sm_guide:addScreen(first_screen)
 
 continue = ConvoScreen:new {
 	id = "continue",
-	leftDialog = "@conversation/wod_sm_guide:s_75",
+	leftDialog = "@conversation/wod_sm_guide:s_33",
 	stopConversation = "true",
 	options = {
 	}
@@ -163,7 +163,7 @@ wod_sm_guide:addScreen(information_subtle_skills)
 
 information_subtle_skills_end = ConvoScreen:new {
 	id = "information_subtle_skills_end",
-	leftDialog = "@conversation/wod_sm_guide:s_33",
+	leftDialog = "@conversation/wod_sm_guide:s_75",
 	stopConversation = "true",
 	options = {
 	}
