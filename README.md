@@ -67,6 +67,7 @@ A big thank you to everyone who has helped make Clone Wars a reality and also to
   * ModTheGalaxy - ModTheGalaxy tres including all of the CU and NGE items/content.
   * Holocron Team - Being helpful and providing guidance when needed.
   * Aftermath - Aftermath base code work via the public repo.
+  * Tatwi - Legend of Hondo vendor merchant logic.
   * Timbab - Jawa Toolbox usage.
   * Halyn - Sitting through hours of us DMing him questions and being a huge help with multiple things.
   * TheTinyPebble - Custom Armour system originally created for the Sentinels Republic server.
