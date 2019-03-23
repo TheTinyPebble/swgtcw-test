@@ -75,7 +75,7 @@ A big thank you to everyone who has helped make Clone Wars a reality and also to
   * Empire in Flames server - Useful Newsnet terminal mod.
   * Infinity server - CA/AAs working with skirts, Covert Hat, Clothes breaking on 0 condition, RegrantSkills Command and the SEA Removal Tool.
   * Sentinels Republic server - Healing Battle Fatigue in a Ranger Camp.
-  * Reckoning server - City Mail spam bug fix.
+  * Reckoning server - City Mail spam bug fix & increased badge limit.
   * Progor - Relics of Corbantis open source launcher base and DiscordBot.
   * Tyclo - Sentinels Republic open source launcher base, based on the RoC launcher listed above.
   * Phoenix - LUA Attribute Component.
