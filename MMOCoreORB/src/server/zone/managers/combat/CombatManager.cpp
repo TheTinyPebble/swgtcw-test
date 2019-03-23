@@ -634,6 +634,7 @@ void CombatManager::applyWeaponDots(CreatureObject* attacker, CreatureObject* de
 		case 4: //BLEED
 			type = CreatureState::BLEEDING;
 			resist = defender->getSkillMod("combat_bleeding_defense");
+			strength = weapon->getDotStrength(i);
 			break;
 		default:
 			break;
@@ -643,7 +644,7 @@ void CombatManager::applyWeaponDots(CreatureObject* attacker, CreatureObject* de
 			continue;
 
 		if (weapon->getDotPotency(i)*(1.f-resist/100.f) > System::random(100) &&
-			defender->addDotState(attacker, type, weapon->getObjectID(), weapon->getDotStrength(i), weapon->getDotAttribute(i), weapon->getDotDuration(i), -1, 0, (int)(weapon->getDotStrength(i)/5.f)) > 0)
+			defender->addDotState(attacker, type, weapon->getObjectID(), strength, weapon->getDotAttribute(i), weapon->getDotDuration(i), -1, 0, (int)(weapon->getDotStrength(i)/5.f)) > 0)
 			if (weapon->getDotUses(i) > 0)
 				weapon->setDotUses(weapon->getDotUses(i) - 1, i); // Unresisted despite mod, reduce use count.
 	}
