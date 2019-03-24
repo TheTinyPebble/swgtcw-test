@@ -145,7 +145,7 @@ ZonesEnabled = {
 TrePath = "/home/swgemu/Desktop/SWGEmu"
 
 TreFiles = {
-	--"alpha.tre",
+	"alpha.tre",
 	--"dirt.tre"
 	--"renik.tre"
 	--"tiny.tre"

@@ -428,4 +428,53 @@ function NabooTheedScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "flewt", 300, getRandomNumber(10) + -5176.4, 6, getRandomNumber(10) + 4612.2, getRandomNumber(360), 0)
 	spawnMobile(self.planet, "flewt", 300, getRandomNumber(10) + -5161.3, 6, getRandomNumber(10) + 4601.7, getRandomNumber(360), 0)
 	spawnMobile(self.planet, "flewt", 300, getRandomNumber(10) + -5193.3, 6, getRandomNumber(10) + 4610.0, getRandomNumber(360), 0)
+
+ 	--Palace Spawns
+	--Entrance ramp
+	spawnMobile("naboo", "naboo_police_officer", 300, -5478.68, 13.999, 4464.91, 108, 0)
+	spawnMobile("naboo", "naboo_police_officer", 300, -5476.85, 13.999, 4463.57, 308, 0)
+	spawnMobile("naboo", "naboo_police_officer", 300, -5478.03, 13.999, 4462.75, 352, 0)
+
+	spawnMobile("naboo", "gungan_bomber", 300, -5510.95, 14, 4466.23, 304, 0)
+	spawnMobile("naboo", "gungan_bomber", 300, -5512.92, 14, 4465.31, 330, 0)
+	spawnMobile("naboo", "gungan_bomber", 300, -5510.15, 14, 4467.11, 305, 0)
+	spawnMobile("naboo", "gungan_bomber", 300, -5511.75, 14, 4468.63, 134, 0)
+	spawnMobile("naboo", "gungan_bomber", 300, -5512.19, 14, 4467.6, 197, 0)
+	spawnMobile("naboo", "gungan_bomber", 300, -5514.48, 13.999, 4466.94, 127, 0)
+	spawnMobile("naboo", "gungan_bomber", 300, -5513.01, 14, 4466.54, 86, 0)
+
+	--Main door
+	spawnMobile("naboo", "naboo_police_officer", 300, -5500.88, 13.999, 4470.18, 180, 0)
+	spawnMobile("naboo", "naboo_police_officer", 300, -5491.07, 13.999, 4469.84, 175, 0)
+	spawnMobile("naboo", "naboo_police_officer", 300, -5493.39, 14, 4478.93, 176, 0)
+	spawnMobile("naboo", "naboo_police_officer", 300, -5498.88, 13.998, 4478.91, 133, 0)
+
+	--interior
+	spawnMobile("naboo", "clonetrooper_captain_501", 300, 9.6558, 12, 84.5917, 193, 1688852)
+	spawnMobile("naboo", "clonetrooper_501", 300, 5.4543, 12.0008, 82.3805, 91, 1688852)
+
+	spawnMobile("naboo", "noble", 300, -15.9395, 18.9995, 1.95604, 14, 1688859)
+	spawnMobile("naboo", "noble", 300, -17.8971, 18.9995, 2.3035, 18, 1688859)
+	spawnMobile("naboo", "noble", 300, 33.642, 23.0011, -33.8072, 18, 1688861)
+	spawnMobile("naboo", "noble", 300, 34.0208, 23.0011, -32.7953, 200, 1688861)
+	spawnMobile("naboo", "naboo_police_officer", 300, -12.4934, 21, -34.3435, 86, 1688860)
+	spawnMobile("naboo", "naboo_police_officer", 300, -12.5846, 21, -30.3833, 86, 1688860)
+
+	spawnMobile("naboo", "handmaiden_02", 300, -37.1532, 33, -100.683, 45, 1688873)
+	spawnMobile("naboo", "handmaiden_03", 300, -36.3442, 33, -99.8849, 223, 1688873)
+
+	spawnMobile("naboo", "entertainer", 300, 43.8789, 12.9393, 45.0403, 268, 1688857)
+	spawnMobile("naboo", "entertainer", 300, 44.4404, 12.9393, 42.843, 264, 1688857)
+	spawnMobile("naboo", "entertainer", 300, 44.6487, 12.9393, 46.9631, 265, 1688857)
+
+	spawnMobile("naboo", "noble", 300, -45.9037, 12.9393, 48.6542, 178, 1688858)
+	spawnMobile("naboo", "queen_kylantha_gazebo", 300, -47.0009, 12.9393, 45.703, 91, 1688858)
+	spawnMobile("naboo", "handmaiden_01", 300, -46.871, 12.9393, 47.2163, 86, 1688858)
+	spawnMobile("naboo", "noble", 300, -46.9929, 12.9393, 44.394, 87, 1688858)
+
+	--library
+	spawnMobile("naboo", "commoner", 300, 43.3815, 33, -83.9213, 13, 1688867)
+	spawnMobile("naboo", "commoner", 300, 48.7555, 33, -85.6378, 80, 1688867)
+	spawnMobile("naboo", "commoner", 300, 49.4623, 33, -86.4104, 30, 1688867)
+
 end
