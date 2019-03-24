@@ -28,8 +28,7 @@ clonetrooper_captain = Creature:new {
 	diet = HERBIVORE,
 	scale = 1.05,
 
-	templates = {"object/mobile/dressed_clone_arc_m.iff",
-		     "object/mobile/dressed_clonetrooper_blue_nh_m.iff"},
+	templates = {"object/mobile/dressed_clone_arc_m.iff",},
 	lootGroups = {
 		{
 			groups = {
