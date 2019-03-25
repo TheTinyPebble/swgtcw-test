@@ -170,9 +170,11 @@ int SharedLabratory::calculateAssemblySuccess(CreatureObject* player,DraftSchema
 		}
 	}
 
+	int amazingSucessBonus = player->getSkillMod("private_amazing_success_bonus");
+
 	int luckRoll = System::random(100) + cityBonus;
 
-	if(luckRoll > (95 - craftbonus))
+	if(luckRoll > (95 - craftbonus - amazingSucessBonus))
 		return CraftingManager::AMAZINGSUCCESS;
 
 	if(luckRoll < (5 - craftbonus - failMitigate))
