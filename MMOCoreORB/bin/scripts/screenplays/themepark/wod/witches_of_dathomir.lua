@@ -1,4 +1,4 @@
--- Authour: The Tiny Pebble
+--Authour: The Tiny Pebble
 
 witchesOfDathomirScreenplay = ScreenPlay:new {
 	spawnZones = {
