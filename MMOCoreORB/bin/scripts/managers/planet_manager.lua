@@ -250,7 +250,7 @@ lok = {
 	},
 
 	badgeAreas = {
-		{"badge_imp_outpost",-1814,-3086,0,10,98},
+		{"badge_cis_outpost",-1814,-3086,0,10,98},
 		{"badge_kimogila_skeleton",4562,-1156,0,10,99},
 		{"badge_volcano",3091,-4638,0,10,24},
 	},
@@ -521,7 +521,7 @@ tatooine = {
 		{"badge_lars_homestead",-2579,-5500,0,10,17},
 		{"badge_sarlacc_pit",-6176,-3372,0,10,16},
 		{"badge_tusken_pool",-3971,6267,1189178,10,13},
-		{"badge_watto",-2898,2427,0,4,147},						
+		{"badge_watto",-2898,2427,0,4,147},
 	},
 
 	navAreas = {
