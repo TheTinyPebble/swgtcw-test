@@ -54,8 +54,8 @@ DrainForceCommand = {
   damageType = LIGHTSABER_DAMAGE,
 
 	minDamage = 600, --Force drained
-  maxDamage = 1600,
-	speed = 4.0,
+  maxDamage = 1000,
+	speed = 3.0,
 	range = 32
 
 }

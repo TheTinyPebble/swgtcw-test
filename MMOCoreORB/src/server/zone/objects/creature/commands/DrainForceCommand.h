@@ -53,11 +53,11 @@ public:
 
 		Locker clocker(targetCreature, creature);
 
-		ManagedReference<PlayerObject*> targetGhost = targetCreature->getPlayerObject();
+		//ManagedReference<PlayerObject*> targetGhost = targetCreature->getPlayerObject();
 		ManagedReference<PlayerObject*> playerGhost = creature->getPlayerObject();
 
-		if (targetGhost == NULL || playerGhost == NULL)
-			return GENERALERROR;
+		//if (targetGhost == NULL || playerGhost == NULL)
+		//	return GENERALERROR;
 
 		CombatManager* manager = CombatManager::instance();
 
@@ -89,7 +89,7 @@ public:
 			}
 			//int forceDrain = targetForce >= maxDrain ? maxDrain : targetForce; //Drain whatever Force the target has, up to max.
 			int forceDrain = maxDrain;
-			forceDrain = 0.25*(System::random(minDamage)+(maxDrain-minDamage));
+			forceDrain = 0.25*(minDamage+(maxDrain-minDamage)+(System::random(50)));
 			if (forceDrain > forceSpace)
 				forceDrain = forceSpace; //Drain only what attacker can hold in their own Force pool.
 
