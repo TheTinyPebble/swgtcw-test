@@ -48,10 +48,14 @@ DrainForceCommand = {
 
 	combatSpam = "forcedrain_hit",
 
-	poolsToDamage = NO_ATTRIBUTE,
+	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	minDamage = 200, --Force drained
+  forceAttack = true,
+  damageType = LIGHTSABER_DAMAGE,
 
+	minDamage = 600, --Force drained
+  maxDamage = 1600,
+	speed = 4.0,
 	range = 32
 
 }

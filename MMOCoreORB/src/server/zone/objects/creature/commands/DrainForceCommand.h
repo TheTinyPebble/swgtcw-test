@@ -35,7 +35,7 @@ public:
 
 		ManagedReference<SceneObject*> object = server->getZoneServer()->getObject(target);
 
-		if (object == NULL || !object->isPlayerCreature())
+		if (object == NULL)
 			return INVALIDTARGET;
 
 		CreatureObject* targetCreature = cast<CreatureObject*>( object.get());
@@ -76,23 +76,30 @@ public:
 
 			maxDrain = maxDrain + (forceEnh * 7.5);
 
-			int targetForce = targetGhost->getForcePower();
-			if (targetForce <= 0) {
-				creature->sendSystemMessage("@jedi_spam:target_no_force"); //That target does not have any Force Power.
-				return GENERALERROR;
-			}
+			//int targetForce = targetGhost->getForcePower();
+			//if (targetForce <= 0) {
+			//	creature->sendSystemMessage("@jedi_spam:target_no_force"); //That target does not have any Force Power.
+			//	return GENERALERROR;
+			//}
 
-			int forceDrain = targetForce >= maxDrain ? maxDrain : targetForce; //Drain whatever Force the target has, up to max.
+			int forceShield = targetCreature->getSkillMod("force_shield");
+			//forceShield=forceShield/100;
+			if (forceShield>0){
+				maxDrain = maxDrain*(forceShield/100);
+			}
+			//int forceDrain = targetForce >= maxDrain ? maxDrain : targetForce; //Drain whatever Force the target has, up to max.
+			int forceDrain = maxDrain;
+			forceDrain = 0.25*(System::random(minDamage)+(maxDrain-minDamage));
 			if (forceDrain > forceSpace)
 				forceDrain = forceSpace; //Drain only what attacker can hold in their own Force pool.
 
 			playerGhost->setForcePower(playerGhost->getForcePower() + forceDrain);
-			targetGhost->setForcePower(targetGhost->getForcePower() - forceDrain);
+			//targetGhost->setForcePower(targetGhost->getForcePower() - forceDrain);
 
 			uint32 animCRC = getAnimationString().hashCode();
 			creature->doCombatAnimation(targetCreature, animCRC, 0x1, 0xFF);
 			manager->broadcastCombatSpam(creature, targetCreature, NULL, forceDrain, "cbt_spam", combatSpam, 1);
-
+			return doCombatAction(creature, target);
 			return SUCCESS;
 		}
 
