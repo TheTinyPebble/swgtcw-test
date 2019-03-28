@@ -44,10 +44,10 @@
 MindBlast2Command = {
 	name = "mindblast2",
 
-	minDamage = 250,
-	maxDamage = 500,
+	minDamage = 150,
+	maxDamage = 300,
 	speed = 1.0,
-	forceCost = 160,
+	forceCost = 100,
 	visMod = 25,
 	accuracySkillMod = "mindblast_accuracy";
 	coneAngle = 40,
