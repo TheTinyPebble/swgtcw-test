@@ -65,7 +65,9 @@ public:
 			int forceSpace = playerGhost->getForcePowerMax() - playerGhost->getForcePower();
 			if (forceSpace <= 0) //Cannot Force Drain if attacker can't hold any more Force.
 				return GENERALERROR;
-
+			if (targetCreature->isPlayerCreature()){
+				return GENERALERROR;
+			}
 			int maxDrain = minDamage; //Value set in command lua.
 			int forceEnh = 0;
 			if(playerGhost->getJediState() == 4) {
@@ -81,20 +83,20 @@ public:
 			//	creature->sendSystemMessage("@jedi_spam:target_no_force"); //That target does not have any Force Power.
 			//	return GENERALERROR;
 			//}
-			maxDrain = 275;
-			int forceShield = targetCreature->getSkillMod("force_shield");
-			int toughness = targetCreature->getSkillMod("unarmed_toughness");
-			if (targetCreature->getSkillMod("twohandmelee_toughness") > toughness){toughness = targetCreature->getSkillMod("twohandmelee_toughness");}
-			if (targetCreature->getSkillMod("onehandmelee_toughness") > toughness){toughness = targetCreature->getSkillMod("onehandmelee_toughness");}
-			if (targetCreature->getSkillMod("polearm_toughness") > toughness){toughness = targetCreature->getSkillMod("polearm_toughness");}
-			if (targetCreature->getSkillMod("lightsaber_toughness") > toughness){toughness = targetCreature->getSkillMod("lightsaber_toughness");}
+			//maxDrain = 275;
+			//int forceShield = targetCreature->getSkillMod("force_shield");
+			//int toughness = targetCreature->getSkillMod("unarmed_toughness");
+			//if (targetCreature->getSkillMod("twohandmelee_toughness") > toughness){toughness = targetCreature->getSkillMod("twohandmelee_toughness");}
+			//if (targetCreature->getSkillMod("onehandmelee_toughness") > toughness){toughness = targetCreature->getSkillMod("onehandmelee_toughness");}
+			//if (targetCreature->getSkillMod("polearm_toughness") > toughness){toughness = targetCreature->getSkillMod("polearm_toughness");}
+			//if (targetCreature->getSkillMod("lightsaber_toughness") > toughness){toughness = targetCreature->getSkillMod("lightsaber_toughness");}
 
-			if (forceShield>0){
-				maxDrain = maxDrain*(1-(forceShield/100));
-			}
-			if (toughness>0){
-				maxDrain = maxDrain*(1-(toughness/100));
-			}
+			//if (forceShield>0){
+			//	maxDrain = maxDrain*(1-(forceShield/100));
+			//}
+			//if (toughness>0){
+			//	maxDrain = maxDrain*(1-(toughness/100));
+			//}
 			if (!targetCreature->isPlayerCreature()){
 				maxDrain = 100;
 			}
