@@ -228,3 +228,5 @@ includeFile("naboo/zogor_storm.lua")
 --palace
 
 includeFile("naboo/handmaiden_01.lua")
+includeFile("naboo/handmaiden_02.lua")
+includeFile("naboo/handmaiden_03.lua")
