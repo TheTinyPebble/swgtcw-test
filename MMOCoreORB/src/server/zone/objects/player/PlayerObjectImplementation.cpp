@@ -2455,28 +2455,31 @@ int PlayerObjectImplementation::getSpentJediSkillPoints() {
 	if(player == nullptr)
 		return 0;
 
-	int jediSkillPoints = 0;
+		int jediSkillPoints = 0;
 
-	SkillList* skillList = player->getSkillList();
+		SkillList* skillList = player->getSkillList();
 
-	for(int i = 0; i < skillList->size(); ++i) {
-		Skill* jediSkill = skillList->get(i);
+		for(int i = 0; i < skillList->size(); ++i) {
+			Skill* jediSkill = skillList->get(i);
 
-		if (jediSkill->getSkillName().indexOf("jedi") != -1){
-			if (jediSkill->getSkillName().indexOf("_padawan_") != -1){
-				jediSkillPoints += 6;
-			}else if (jediSkill->getSkillName().indexOf("_powers_") != -1) {
-				jediSkillPoints += 8;
-			}else if (jediSkill->getSkillName().indexOf("_sabers_") != -1) {
-				jediSkillPoints += 8;
-			}else if (jediSkill->getSkillName().indexOf("_defender_") != -1) {
-				jediSkillPoints += 8;
-			}else if (jediSkill->getSkillName().indexOf("_sabers_") != -1) {
-				jediSkillPoints += 8;
+			if (jediSkill->getSkillName().indexOf("jedi") != -1){
+				if (jediSkill->getSkillName().indexOf("_padawan_") != -1){
+					jediSkillPoints += 6;
+				}else if (jediSkill->getSkillName().indexOf("_powers_") != -1) {
+					jediSkillPoints += 8;
+				}else if (jediSkill->getSkillName().indexOf("_healer_") != -1) {
+					jediSkillPoints += 8;
+				}else if (jediSkill->getSkillName().indexOf("_defender_") != -1) {
+					jediSkillPoints += 8;
+				}else if (jediSkill->getSkillName().indexOf("_sabers_") != -1) {
+					jediSkillPoints += 8;
+				}
 			}
 
-	return jediSkillPoints;
-}
+		}
+
+		return jediSkillPoints;
+	}
 
 bool PlayerObjectImplementation::canActivateQuest(int questID) {
 	ManagedReference<CreatureObject*> creature = dynamic_cast<CreatureObject*>(parent.get().get());
