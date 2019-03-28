@@ -1296,7 +1296,7 @@ void PlayerObjectImplementation::notifyOnline() {
 
 		parent->sendMessage(sui->generateMessage());
 	}
-	
+
 	//recalc skillmods
 	SkillModManager::instance()->verifySkillBoxSkillMods(playerCreature);
 
@@ -2464,11 +2464,15 @@ int PlayerObjectImplementation::getSpentJediSkillPoints() {
 
 		if (jediSkill->getSkillName().indexOf("jedi") != -1){
 			if (jediSkill->getSkillName().indexOf("_padawan_") != -1){
-				jediSkillPoints += 4;
-			}else if (jediSkill->getSkillName().indexOf("_journeyman_") != -1) {
 				jediSkillPoints += 6;
-			}else if (jediSkill->getSkillName().indexOf("_master_") != -1){
-				jediSkillPoints += 7;
+			}else if (jediSkill->getSkillName().indexOf("_powers_") != -1) {
+				jediSkillPoints += 8;
+			}else if (jediSkill->getSkillName().indexOf("_sabers_") != -1) {
+				jediSkillPoints += 8;
+			}else if (jediSkill->getSkillName().indexOf("_defender_") != -1) {
+				jediSkillPoints += 8;
+			}else if (jediSkill->getSkillName().indexOf("_sabers_") != -1) {
+				jediSkillPoints += 8;
 			}
 		}
 
