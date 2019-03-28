@@ -95,7 +95,7 @@ public:
 			if (toughness>0){
 				maxDrain = maxDrain*(1-(toughness/100));
 			}
-			if (targetCreature->isPlayerCreature()){
+			if (!targetCreature->isPlayerCreature()){
 				maxDrain = 100;
 			}
 			//int forceDrain = targetForce >= maxDrain ? maxDrain : targetForce; //Drain whatever Force the target has, up to max.
