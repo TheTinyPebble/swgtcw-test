@@ -81,15 +81,26 @@ public:
 			//	creature->sendSystemMessage("@jedi_spam:target_no_force"); //That target does not have any Force Power.
 			//	return GENERALERROR;
 			//}
-
+			maxDrain = 275;
 			int forceShield = targetCreature->getSkillMod("force_shield");
-			//forceShield=forceShield/100;
+			int toughness = targetCreature->getSkillMod("unarmed_toughness");
+			if (targetCreature->getSkillMod("twohandmelee_toughness") > toughness){toughness = targetCreature->getSkillMod("twohandmelee_toughness");}
+			if (targetCreature->getSkillMod("onehandmelee_toughness") > toughness){toughness = targetCreature->getSkillMod("onehandmelee_toughness");}
+			if (targetCreature->getSkillMod("polearm_toughness") > toughness){toughness = targetCreature->getSkillMod("polearm_toughness");}
+			if (targetCreature->getSkillMod("lightsaber_toughness") > toughness){toughness = targetCreature->getSkillMod("lightsaber_toughness");}
+
 			if (forceShield>0){
-				maxDrain = maxDrain*(forceShield/100);
+				maxDrain = maxDrain*(1-(forceShield/100));
+			}
+			if (toughness>0){
+				maxDrain = maxDrain*(1-(toughness/100));
+			}
+			if (targetCreature->isPlayerCreature()){
+				maxDrain = 100;
 			}
 			//int forceDrain = targetForce >= maxDrain ? maxDrain : targetForce; //Drain whatever Force the target has, up to max.
 			int forceDrain = maxDrain;
-			forceDrain = 0.25*(minDamage+(maxDrain-minDamage)+(System::random(50)));
+			forceDrain = maxDrain+(System::random(50));
 			if (forceDrain > forceSpace)
 				forceDrain = forceSpace; //Drain only what attacker can hold in their own Force pool.
 
