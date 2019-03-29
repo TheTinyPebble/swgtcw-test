@@ -1,0 +1,4 @@
+object_building_poi_dathomir_third_sister_lair = object_building_poi_shared_dathomir_third_sister_lair:new {
+}
+
+ObjectTemplates:addTemplate(object_building_poi_dathomir_third_sister_lair, "object/building/poi/dathomir_third_sister_lair.iff")
