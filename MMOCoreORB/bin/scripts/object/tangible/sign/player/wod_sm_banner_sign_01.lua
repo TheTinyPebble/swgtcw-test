@@ -41,22 +41,8 @@
 --this exception also makes it possible to release a modified version 
 
 
+object_tangible_sign_player_wod_sm_banner_sign_01 = object_tangible_sign_player_shared_wod_sm_banner_sign_01:new {
+	maxCondition = 0
+}
 
---Children folder includes
-includeFile("tangible/sign/player/banner/serverobjects.lua")
-includeFile("tangible/sign/player/base/serverobjects.lua")
-
--- Server Objects
-includeFile("tangible/sign/player/house_address.lua")
-includeFile("tangible/sign/player/house_address_corellia.lua")
-includeFile("tangible/sign/player/house_address_naboo.lua")
-includeFile("tangible/sign/player/house_address_tatooine.lua")
-includeFile("tangible/sign/player/shop_sign_s01.lua")
-includeFile("tangible/sign/player/shop_sign_s02.lua")
-includeFile("tangible/sign/player/shop_sign_s03.lua")
-includeFile("tangible/sign/player/shop_sign_s04.lua")
-includeFile("tangible/sign/player/wod_sm_hanging_sign_01.lua")
-includeFile("tangible/sign/player/wod_sm_standing_sign_01.lua")
-includeFile("tangible/sign/player/wod_sm_banner_sign_01.lua")
-includeFile("tangible/sign/player/wod_sm_banner_sign_02.lua")
-includeFile("tangible/sign/player/wod_sm_banner_sign_03.lua")
+ObjectTemplates:addTemplate(object_tangible_sign_player_wod_sm_banner_sign_01, "object/tangible/sign/player/wod_sm_banner_sign_01.iff")
