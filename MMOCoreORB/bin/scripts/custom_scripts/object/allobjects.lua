@@ -21,7 +21,6 @@ includeFile("../custom_scripts/object/tangible/deed/player_house_deed/objects.lu
 includeFile("../custom_scripts/object/building/player/objects.lua")
 includeFile("../custom_scripts/object/building/general/objects.lua")
 includeFile("../custom_scripts/object/building/dathomir/objects.lua")
-includeFile("../custom_scripts/object/building/poi/objects.lua")
 includeFile("../custom_scripts/object/building/heroic/objects.lua")
 
 --Draft Schems
