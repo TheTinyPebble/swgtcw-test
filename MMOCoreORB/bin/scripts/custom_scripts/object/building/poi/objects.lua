@@ -1,5 +1,0 @@
-object_building_poi_shared_dathomir_third_sister_lair = SharedBuildingObjectTemplate:new {
-	clientTemplateFileName = "object/building/poi/shared_dathomir_third_sister_lair.iff"
-}
-
-ObjectTemplates:addClientTemplate(object_building_poi_shared_dathomir_third_sister_lair, "object/building/poi/shared_dathomir_third_sister_lair.iff")
