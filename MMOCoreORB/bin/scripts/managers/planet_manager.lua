@@ -696,3 +696,8 @@ dungeon1 = {
 	weatherEnabled = 0,
 	gcwEnabled = 0,
 }
+
+dungeon2 = {
+	weatherEnabled = 0,
+	gcwEnabled = 0,
+}

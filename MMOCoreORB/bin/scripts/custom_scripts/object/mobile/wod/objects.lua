@@ -357,3 +357,9 @@ object_mobile_shared_mutant_rancor_static = SharedCreatureObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_mobile_shared_mutant_rancor_static, "object/mobile/shared_mutant_rancor_static.iff")
+
+object_mobile_shared_axkva_whirl = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_axkva_whirl.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_shared_axkva_whirl, "object/mobile/shared_axkva_whirl.iff")
