@@ -297,7 +297,7 @@ function wodTwoClansArc:sendSecondSisterCommMessage(pPlayer)
 end
 
 function wodTwoClansArc:spawnThirdSister()
-	local pThirdSister = spawnMobile("dathomir", "wod_third_sister", 60, -3227.8, 28.2, -3698.7, -87, 0)
+	local pThirdSister = spawnMobile("dathomir", "wod_third_sister", 60, -3228.6, 28.5, -3701.8, -48, 0)
 	CreatureObject(pThirdSister):setPvpStatusBitmask(0)
 	createObserver(OBJECTDESTRUCTION, "wodTwoClansArc", "notifyThirdSisterKilled", pThirdSister)
 end
