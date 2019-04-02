@@ -120,7 +120,6 @@ namespace creature {
 		int getGender(lua_State* L);
 		int setAlternateAppearance(lua_State* L);
 		int doCombatAnimation(lua_State* L);
-		int isRidingMount(lua_State* L);
 	private:
 		// The pointer to the 'real object' defined in object.cc
 		CreatureObject* realObject;

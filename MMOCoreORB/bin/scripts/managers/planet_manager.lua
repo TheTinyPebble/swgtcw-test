@@ -188,7 +188,6 @@ dathomir = {
 		{"tower_and_stones",-443,-1156,32},
 		{"tree_hut",-5045,-2773,32},
 		{"wall",7442,-3024,32},
-		{"wod_second_sister_village",-3572,-6017,50},
 	},
 
 	planetObjects = {
@@ -250,7 +249,7 @@ lok = {
 	},
 
 	badgeAreas = {
-		{"badge_cis_outpost",-1814,-3086,0,10,98},
+		{"badge_imp_outpost",-1814,-3086,0,10,98},
 		{"badge_kimogila_skeleton",4562,-1156,0,10,99},
 		{"badge_volcano",3091,-4638,0,10,24},
 	},
@@ -521,7 +520,7 @@ tatooine = {
 		{"badge_lars_homestead",-2579,-5500,0,10,17},
 		{"badge_sarlacc_pit",-6176,-3372,0,10,16},
 		{"badge_tusken_pool",-3971,6267,1189178,10,13},
-		{"badge_watto",-2898,2427,0,4,147},
+		{"badge_watto",-2898,2427,0,4,147},						
 	},
 
 	navAreas = {
@@ -693,11 +692,6 @@ tutorial = {
 }
 
 dungeon1 = {
-	weatherEnabled = 0,
-	gcwEnabled = 0,
-}
-
-dungeon2 = {
 	weatherEnabled = 0,
 	gcwEnabled = 0,
 }

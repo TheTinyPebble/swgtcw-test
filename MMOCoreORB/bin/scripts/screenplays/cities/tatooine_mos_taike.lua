@@ -8,8 +8,8 @@ TatooineMosTaikeScreenPlay = CityScreenPlay:new {
 	gcwMobs = {
 		{"clonetrooper", "cis_battle_droid_pilot", 3732.4,5.6,2387.5,90,0, "", ""},
 		{"clonetrooper", "cis_battle_droid_pilot", 3732.2,5.5,2382.8,90,0, "", ""},
-		{"clonetrooper", "cis_battle_droid_geo", 3759.3,8.4,2309.4,180,0, "", ""},
-		{"clonetrooper", "cis_battle_droid_geo", 3788.5,8.4,2309.9,180,0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3759.3,8.4,2309.4,180,0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3788.5,8.4,2309.9,180,0, "", ""},
 		{"clone_scout_trooper", "cis_battle_droid_scout", 3792.3,11.6,2379.2,180,0, "", ""},
 		{"clonetrooper_sniper", "cis_resistance_separatist", 3813.2,16.1,2315.6,-137,0, "", ""},
 		{"clonetrooper_bombardier", "cis_surface_marshall", 3855.6,27.5,2325.3,-50,0, "", ""},

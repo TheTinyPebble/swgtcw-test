@@ -62,7 +62,7 @@ ForceThrow1Command = {
 		0,
 		100,
 		3000,
-		62,
+		32,
 		100,
 		1
 		),
@@ -75,10 +75,22 @@ ForceThrow1Command = {
 		0, --??
 		100, --potency
 		3000, --strength
-		62, --duration
+		32, --duration
 		100, --??
 		1 --??
 		),
+	},
+
+	stateEffects = {
+		StateEffect(
+		POSTUREDOWN_EFFECT,
+		{ "postureDownRecovery" },
+		{ "posture_change_down_defense" },
+		{},
+		100,
+		0,
+		0
+		)
 	},
 
 	stateEffects = {

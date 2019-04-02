@@ -53,7 +53,6 @@ const static char* TerrainNames[] = {
     "terrain/tutorial.trn", // 42
     "terrain/umbra.trn", // 43
     "terrain/watertabletest.trn" // 44
-    "terrain/dungeon2.trn", // 45
 };
 
 class Terrain {

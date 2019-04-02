@@ -21,9 +21,9 @@ TatooineMosEisleyScreenPlay = CityScreenPlay:new {
 		{"clone_sand_trooper", "cis_battle_droid_pilot", 3516.17,5,-4879.7,80,0, "neutral", "neutral"},
 		{"clone_sand_trooper", "cis_battle_droid_pilot", 3279.95,5,-4835.74,40,0, "", ""},
 		{"clone_sand_trooper", "cis_battle_droid_pilot", 3341.8,5,-4750.9,124,0, "", ""},
-		{"clone_scout_trooper", "cis_battle_droid_geo", 3585.84,5,-4719.95,281.969,0, "", ""},
-		{"clone_scout_trooper", "cis_battle_droid_geo", 3288.12,4.9981,-4842.11,27.4222,0, "", ""},
-		{"clone_scout_trooper", "cis_battle_droid_geo", 3377.5,0,-4709,156,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid", 3585.84,5,-4719.95,281.969,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid", 3288.12,4.9981,-4842.11,27.4222,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid", 3377.5,0,-4709,156,0, "", ""},
 		{"clonetrooper", "cis_battle_droid_commando", 3242.3,5,-4532.3,151,0, "npc_imperial", "neutral"},
 		{"clonetrooper_sniper", "cis_sbd", 3756.71,5,-4845.03,78.2181,0, "", ""},
 		{"rep_jedi_knight", "cis_magnaguard", 3490.5,5,-4733.94,305,0, "npc_imperial", "conversation"},
@@ -76,7 +76,7 @@ end
 function TatooineMosEisleyScreenPlay:spawnMobiles()
 
 	--Starport
-	spawnMobile("tatooine", "rebel_recruiter", 300, 3535.69, 5, -4823.4, 272, 0)
+	spawnMobile("tatooine", "rebel_recruiter", 300, 3535.69, 5, -4823.4, 272, 0) 
 	local pNpc = spawnMobile(self.planet, "chassis_dealer",60,2.32807,0.639422,67.8972,165.339,1106372)
 	self:setMoodString(pNpc, "neutral")
 	pNpc = spawnMobile(self.planet, "ecik",60,1.1,0.639421,66.3,101.522,1106372)
