@@ -2479,7 +2479,7 @@ int PlayerObjectImplementation::getSpentJediSkillPoints() {
 	}
 
 	return jediSkillPoints;
-}
+	}
 
 bool PlayerObjectImplementation::canActivateQuest(int questID) {
 	ManagedReference<CreatureObject*> creature = dynamic_cast<CreatureObject*>(parent.get().get());
