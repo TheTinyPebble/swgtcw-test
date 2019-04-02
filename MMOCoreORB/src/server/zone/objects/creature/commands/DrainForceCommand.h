@@ -35,7 +35,7 @@ public:
 
 		ManagedReference<SceneObject*> object = server->getZoneServer()->getObject(target);
 
-		if (object == NULL || !object->isPlayerCreature())
+		if (object == NULL)
 			return INVALIDTARGET;
 
 		CreatureObject* targetCreature = cast<CreatureObject*>( object.get());
@@ -53,11 +53,11 @@ public:
 
 		Locker clocker(targetCreature, creature);
 
-		ManagedReference<PlayerObject*> targetGhost = targetCreature->getPlayerObject();
+		//ManagedReference<PlayerObject*> targetGhost = targetCreature->getPlayerObject();
 		ManagedReference<PlayerObject*> playerGhost = creature->getPlayerObject();
 
-		if (targetGhost == NULL || playerGhost == NULL)
-			return GENERALERROR;
+		//if (targetGhost == NULL || playerGhost == NULL)
+		//	return GENERALERROR;
 
 		CombatManager* manager = CombatManager::instance();
 
@@ -65,7 +65,9 @@ public:
 			int forceSpace = playerGhost->getForcePowerMax() - playerGhost->getForcePower();
 			if (forceSpace <= 0) //Cannot Force Drain if attacker can't hold any more Force.
 				return GENERALERROR;
-
+			if (targetCreature->isPlayerCreature()){
+				return GENERALERROR;
+			}
 			int maxDrain = minDamage; //Value set in command lua.
 			int forceEnh = 0;
 			if(playerGhost->getJediState() == 4) {
@@ -76,23 +78,41 @@ public:
 
 			maxDrain = maxDrain + (forceEnh * 7.5);
 
-			int targetForce = targetGhost->getForcePower();
-			if (targetForce <= 0) {
-				creature->sendSystemMessage("@jedi_spam:target_no_force"); //That target does not have any Force Power.
-				return GENERALERROR;
-			}
+			//int targetForce = targetGhost->getForcePower();
+			//if (targetForce <= 0) {
+			//	creature->sendSystemMessage("@jedi_spam:target_no_force"); //That target does not have any Force Power.
+			//	return GENERALERROR;
+			//}
+			//maxDrain = 275;
+			//int forceShield = targetCreature->getSkillMod("force_shield");
+			//int toughness = targetCreature->getSkillMod("unarmed_toughness");
+			//if (targetCreature->getSkillMod("twohandmelee_toughness") > toughness){toughness = targetCreature->getSkillMod("twohandmelee_toughness");}
+			//if (targetCreature->getSkillMod("onehandmelee_toughness") > toughness){toughness = targetCreature->getSkillMod("onehandmelee_toughness");}
+			//if (targetCreature->getSkillMod("polearm_toughness") > toughness){toughness = targetCreature->getSkillMod("polearm_toughness");}
+			//if (targetCreature->getSkillMod("lightsaber_toughness") > toughness){toughness = targetCreature->getSkillMod("lightsaber_toughness");}
 
-			int forceDrain = targetForce >= maxDrain ? maxDrain : targetForce; //Drain whatever Force the target has, up to max.
+			//if (forceShield>0){
+			//	maxDrain = maxDrain*(1-(forceShield/100));
+			//}
+			//if (toughness>0){
+			//	maxDrain = maxDrain*(1-(toughness/100));
+			//}
+			if (!targetCreature->isPlayerCreature()){
+				maxDrain = 100;
+			}
+			//int forceDrain = targetForce >= maxDrain ? maxDrain : targetForce; //Drain whatever Force the target has, up to max.
+			int forceDrain = maxDrain;
+			forceDrain = maxDrain+(System::random(50));
 			if (forceDrain > forceSpace)
 				forceDrain = forceSpace; //Drain only what attacker can hold in their own Force pool.
 
 			playerGhost->setForcePower(playerGhost->getForcePower() + forceDrain);
-			targetGhost->setForcePower(targetGhost->getForcePower() - forceDrain);
+			//targetGhost->setForcePower(targetGhost->getForcePower() - forceDrain);
 
 			uint32 animCRC = getAnimationString().hashCode();
 			creature->doCombatAnimation(targetCreature, animCRC, 0x1, 0xFF);
 			manager->broadcastCombatSpam(creature, targetCreature, NULL, forceDrain, "cbt_spam", combatSpam, 1);
-
+			return doCombatAction(creature, target);
 			return SUCCESS;
 		}
 

@@ -44,24 +44,23 @@
 PolearmLegHit3Command = {
         name = "polearmleghit3",
 
-	damageMultiplier = 2.5,
+	damageMultiplier = 2.0,
 	speedMultiplier = 2.25,
 	healthCostMultiplier = 2.0,
 	actionCostMultiplier = 1.5,
 	mindCostMultiplier = 1.5,
 	accuracyBonus = 10,
 
-	animation = "combo_3b", 
+	animation = "combo_3b",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "legbreaker",
 
 	poolsToDamage = ACTION_ATTRIBUTE,
-	
+
 	weaponType = POLEARMWEAPON,
 
 	range = -1
 }
 
 AddCommand(PolearmLegHit3Command)
-
