@@ -29,8 +29,6 @@ clonetrooper_medic = Creature:new {
 	scale = 1.05,
 
 	templates = {"object/mobile/dressed_clonetrooper_m.iff",
-		     "object/mobile/dressed_clonetrooper_blue_m.iff",
-		     "object/mobile/dressed_clonetrooper_blue_nh_m.iff"
 	},
 	lootGroups = {
 		{
