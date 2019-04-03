@@ -9,7 +9,7 @@ armor_battle_gloves = {
 		{"armor_rating",1,1,0},
 					{"armor_effectiveness",30,30,0},
 					{"energyeffectiveness",5,5,0},
-					{"kineticeffectiveness",20,20,0},
+					{"kineticeffectiveness",10,10,0},
 					{"blasteffectiveness",5,5,0},
 	        {"armor_integrity",45000,45000,0},
 	        {"armor_health_encumbrance",175,175,0},
