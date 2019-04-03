@@ -292,7 +292,7 @@ int PlayerObjectImplementation::calculateBhReward() {
 	int reward = skillPoints * 1000;
 	ManagedReference<CreatureObject*> creature = dynamic_cast<CreatureObject*>(parent.get().get());
 
-	reward = skillPoints * 2000;
+	//reward = skillPoints * 2000;
 	if (creature->getScreenPlayState("deathBounty") > 0){
 		int playerBounty = 100000 + (creature->getScreenPlayState("deathBounty") * 100000);
 		reward += playerBounty;
@@ -2475,7 +2475,19 @@ int PlayerObjectImplementation::getSpentJediSkillPoints() {
 				jediSkillPoints += 8;
 			}
 		}
-
+		if (jediSkill->getSkillName().indexOf("dark_") != -1){
+			if (jediSkill->getSkillName().indexOf("_padawan_") != -1){
+				jediSkillPoints += 6;
+			}else if (jediSkill->getSkillName().indexOf("_powers_") != -1) {
+				jediSkillPoints += 8;
+			}else if (jediSkill->getSkillName().indexOf("_healer_") != -1) {
+				jediSkillPoints += 8;
+			}else if (jediSkill->getSkillName().indexOf("_defender_") != -1) {
+				jediSkillPoints += 8;
+			}else if (jediSkill->getSkillName().indexOf("_sabers_") != -1) {
+				jediSkillPoints += 8;
+			}
+		}
 	}
 
 	return jediSkillPoints;
