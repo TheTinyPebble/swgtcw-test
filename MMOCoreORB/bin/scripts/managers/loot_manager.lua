@@ -67,6 +67,8 @@ randomDotUses = {250, 9999}
 junkValueModifier = 5;
 
 lootableArmorAttachmentStatMods = {
+	"aim",
+	"alert",	
 	"berserk",
 	"blind_defense",
 	"block",
@@ -76,6 +78,7 @@ lootableArmorAttachmentStatMods = {
 	"carbine_speed",
 	"combat_bleeding_defense",
 	"counterattack",
+	"cover",	
 	"dizzy_defense",
 	"dodge",
 	"droid_find_chance",
@@ -102,6 +105,7 @@ lootableArmorAttachmentStatMods = {
 	"posture_change_down_defense",
 	"posture_change_up_defense",
 	"ranged_defense",
+	"rescue",
 	"resistance_bleeding",
 	"resistance_disease",
 	"resistance_fire",
@@ -112,6 +116,7 @@ lootableArmorAttachmentStatMods = {
 	"slope_move",
 	"steadyaim",
 	"stun_defense",
+	"take_cover",
 	"tame_aggro",
 	"tame_bonus",
 	"tame_non_aggro",
@@ -128,10 +133,14 @@ lootableArmorAttachmentStatMods = {
 	"polearmlightsaber_accuracy",
 	"jedi_saber_experimentation",
 	"jedi_saber_assembly",
-	"absorption_poison"
+	"absorption_poison",
+	"bio_engineer_assembly",
+	"bio_engineer_experimentation"
 }
 
 lootableClothingAttachmentStatMods = {
+	"aim",
+	"alert",
 	"armor_assembly",
 	"armor_experimentation",
 	"armor_repair",
@@ -150,6 +159,7 @@ lootableClothingAttachmentStatMods = {
 	"combat_medicine_assembly",
 	"combat_medicine_experimentation",
 	"counterattack",
+	"cover",
 	"dizzy_defense",
 	"dodge",
 	"droid_assembly",
@@ -201,6 +211,7 @@ lootableClothingAttachmentStatMods = {
 	"posture_change_down_defense",
 	"posture_change_up_defense",
 	"ranged_defense",
+	"rescue",
 	"resistance_bleeding",
 	"resistance_disease",
 	"resistance_fire",
@@ -213,6 +224,7 @@ lootableClothingAttachmentStatMods = {
 	"structure_assembly",
 	"structure_experimentation",
 	"stun_defense",
+	"take_cover",
 	"surveying",
 	"tame_aggro",
 	"tame_bonus",
@@ -233,7 +245,9 @@ lootableClothingAttachmentStatMods = {
 	"polearmlightsaber_accuracy",
 	"jedi_saber_experimentation",
 	"jedi_saber_assembly",
-	"absorption_poison"
+	"absorption_poison",
+	"bio_engineer_assembly",
+	"bio_engineer_experimentation"
 }
 
 lootableArmorStatMods = {
