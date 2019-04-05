@@ -2288,7 +2288,7 @@ bool AiAgentImplementation::isScentMasked(CreatureObject* target) {
 		return false;
 	}
 
-	if (isNonPlayerCreatureObject() || isDroidObject() || isDroidSpecies())
+	if (isNonPlayerCreatureObject() || isDroidObject())
 		return false;
 
 	// Don't check if it's already been checked
