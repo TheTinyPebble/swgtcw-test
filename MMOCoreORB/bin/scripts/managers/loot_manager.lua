@@ -133,9 +133,7 @@ lootableArmorAttachmentStatMods = {
 	"polearmlightsaber_accuracy",
 	"jedi_saber_experimentation",
 	"jedi_saber_assembly",
-	"absorption_poison",
-	"bio_engineer_assembly",
-	"bio_engineer_experimentation"
+	"absorption_poison"
 }
 
 lootableClothingAttachmentStatMods = {
