@@ -45,7 +45,7 @@ function wodNSLostE0101Goto:onLoggedIn(pPlayer)
 	return 0
 end
 
-function wodNSLostE0101Goto:sendCommMessage1(pPlayer)
+function wodNSLostE0101Goto:sendCommMessage(pPlayer)
 	local sui = SuiMessageBox.new("wodNSLostE0101Goto", "defaultCallBack")
 	sui.setTitle("@theme_park_wod/wod_ns_lost_e01:comm_message_title")
 	sui.setPrompt("@theme_park_wod/wod_ns_lost_e01:task01_comm_message_text")
