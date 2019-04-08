@@ -11,6 +11,8 @@
 #include "server/zone/ZoneServer.h"
 #include "server/zone/managers/combat/CombatManager.h"
 
+#include "engine/log/Logger.h"
+
 DamageOverTime::DamageOverTime() {
 	setAttackerID(0);
 	setType(CreatureState::BLEEDING);
