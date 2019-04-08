@@ -329,7 +329,6 @@ uint32 DamageOverTime::doPoisonTick(CreatureObject* victim, CreatureObject* atta
 
 		victimRef->playEffect("clienteffect/dot_poisoned.cef","");
 	}, "PoisonTickLambda");
-	info(totalDamage);
 
 	return totalDamage;
 }
