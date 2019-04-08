@@ -348,10 +348,10 @@ uint32 DamageOverTime::doDiseaseTick(CreatureObject* victim, CreatureObject* att
 	int damage = (int)(strength * (1.f - absorptionMod / 100.f) * (1.f + victim->getShockWounds() / 100.0f));
 	int maxDamage = (victim->getBaseHAM(attribute)) - 1 - victim->getWounds(attribute);
 	if (victim->isPlayerCreature()){
-	maxDamage = (0.25*victim->getBaseHAM(attribute)) - 1 - victim->getWounds(attribute);
+		maxDamage = (0.25*victim->getBaseHAM(attribute)) - 1 - victim->getWounds(attribute);
 	}
-	info("Min Damage: " + damage, true);
-	info("Max Damage: " + maxDamage, true);
+	info("Min Damage: " + String::valueOf(damage), true);
+	info("Max Damage: " + String::valueOf(maxDamage), true);
 	damage = Math::min(damage, maxDamage);
 
 	Reference<CreatureObject*> attackerRef = attacker;
