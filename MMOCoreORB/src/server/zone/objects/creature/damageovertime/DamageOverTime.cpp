@@ -350,8 +350,8 @@ uint32 DamageOverTime::doDiseaseTick(CreatureObject* victim, CreatureObject* att
 	if (victim->isPlayerCreature()){
 		maxDamage = (0.25*victim->getBaseHAM(attribute)) - 1 - victim->getWounds(attribute);
 	}
-	Logger::info("Min Damage: " + String::valueOf(damage), true);
-	Logger::info("Max Damage: " + String::valueOf(maxDamage), true);
+	victim->info("Min Damage: " + String::valueOf(damage), true);
+	victim->info("Max Damage: " + String::valueOf(maxDamage), true);
 	damage = Math::min(damage, maxDamage);
 
 	Reference<CreatureObject*> attackerRef = attacker;
