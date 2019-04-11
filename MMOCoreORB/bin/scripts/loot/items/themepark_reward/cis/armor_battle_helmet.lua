@@ -7,7 +7,7 @@ armor_battle_helmet = {
 	directObjectTemplate = "object/tangible/wearables/armor/sep_battle_theme/armor_sep_theme_helmet.iff",
 	craftingValues = {
 		{"armor_rating",1,1,0},
-					{"armor_effectiveness",30,30,0},
+					{"armor_effectiveness",20,20,0},
 					{"energyeffectiveness",5,5,0},
 					{"kineticeffectiveness",10,10,0},
 					{"blasteffectiveness",5,5,0},
