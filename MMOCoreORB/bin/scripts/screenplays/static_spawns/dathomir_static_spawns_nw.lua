@@ -47,8 +47,8 @@ function DathomirStaticSpawnsNwScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "nightsister_outcast", 420, -2569.4, 125.9, 4986.5, -135, 0)
 
 	--imperial camp (-4630,5393)
-	spawnMobile("dathomir", "assault_trooper", 300, -4631.2, 121.1, 5392.8, -115, 0)
-	spawnMobile("dathomir", "assault_trooper", 300, -4626.9, 122.1, 5386.7, 175, 0)
+	spawnMobile("dathomir", "clonetrooper_captain", 300, -4631.2, 121.1, 5392.8, -115, 0)
+	spawnMobile("dathomir", "clonetrooper", 300, -4626.9, 122.1, 5386.7, 175, 0)
 
 	--singing mountain clan village (-7081,5888)
 	spawnMobile("dathomir", "singing_mountain_clan_arch_witch", 360, -7097.5, 379.7, 5897.5, 75, 0)
