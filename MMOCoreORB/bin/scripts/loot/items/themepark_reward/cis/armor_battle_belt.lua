@@ -18,7 +18,7 @@ armor_battle_belt = {
 	},
 	customizationStringNames = {},
 	customizationValues = {},
-	skillMods = {{"blind_defense", 5}, {"melee_defense", 3}}
+	skillMods = {{"blind_defense", 5}}
 }
 
 addLootItemTemplate("armor_battle_belt", armor_battle_belt)

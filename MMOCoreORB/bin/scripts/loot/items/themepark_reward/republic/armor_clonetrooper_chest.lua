@@ -18,7 +18,7 @@ armor_clonetrooper_chest = {
 	},
 	customizationStringNames = {},
 	customizationValues = {},
-	skillMods = {{"stun_defense", 5}, {"melee_defense", 3}}
+	skillMods = {{"stun_defense", 5}}
 }
 
 addLootItemTemplate("armor_clonetrooper_chest", armor_clonetrooper_chest)

@@ -18,7 +18,7 @@ armor_battle_leggings = {
 	},
 	customizationStringNames = {},
 	customizationValues = {},
-	skillMods = {{"dizzy_defense", 5}, {"melee_defense", 3}}
+	skillMods = {{"dizzy_defense", 5}}
 }
 
 addLootItemTemplate("armor_battle_leggings", armor_battle_leggings)

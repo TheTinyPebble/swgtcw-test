@@ -18,7 +18,7 @@ armor_battle_gloves = {
 	},
 	customizationStringNames = {},
 	customizationValues = {},
-	skillMods = {{"stun_defense", 5}, {"melee_defense", 3}}
+	skillMods = {{"stun_defense", 5}}
 }
 
 addLootItemTemplate("armor_battle_gloves", armor_battle_gloves)
