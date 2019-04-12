@@ -22,12 +22,14 @@ light_jedi_sentinel = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
+	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + HERD + KILLER,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {
+		"object/mobile/dressed_jedi_knight_03.iff",
+		"object/mobile/dressed_jedi_knight_04.iff",
 		"object/mobile/dressed_jedi_trainer_old_human_male_01.iff",
 		"object/mobile/dressed_jedi_trainer_chiss_male_01.iff",
 		"object/mobile/dressed_jedi_trainer_nikto_male_01.iff",
