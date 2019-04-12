@@ -80,7 +80,7 @@ function TalusDetainmentCenterScreenPlay:spawnImperials(pBuilding)
 	BuildingObject(pBuilding):spawnChildCreature("clonetrooper", 300, -5.0, -23.0, 196.3, 90, 9686217)
 	BuildingObject(pBuilding):spawnChildCreature("clonetrooper", 300, -8.0, -23.0, 196.3, 90, 9686217)
 	BuildingObject(pBuilding):spawnChildCreature("imperial_first_lieutenant", 300, 7.1, -23.0, 198.5, -135, 9686217)
-	BuildingObject(pBuilding):spawnChildCreature("rep_jedi_master", 900, -80.5, -23.0, 259.4, 88, 9686223)
+	BuildingObject(pBuilding):spawnChildCreature("rep_jedi_knight", 900, -80.5, -23.0, 259.4, 88, 9686223)
 	BuildingObject(pBuilding):spawnChildCreature("rep_jedi_knight", 600, 45.2, -23.0, 276.3, -179, 9686225)
 	BuildingObject(pBuilding):spawnChildCreature("rep_jedi_knight", 10800, -2.7, -23.0, 268.5, 90, 9686224)
 end
