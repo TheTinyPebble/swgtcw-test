@@ -37,7 +37,6 @@ function NabooStaticSpawnsSouthScreenPlay:spawnMobiles()
 	spawnMobile("naboo", "commoner_naboo", 180, 1014.5, 185.3, -3461.2, -145.0, 0)
 
 		--Statues + Fire (-1637,-4032)
-	spawnMobile("naboo", "rep_jedi_master", 300, -1638.6, 14.0, -4033.7, 90, 0)
 
 		--Small Imperial Outpost (-4767,-3975)
 	spawnMobile("naboo", "imperial_warrant_officer_i", 300, -4773.3, 333.3, -3985.2, -90.0, 0)
