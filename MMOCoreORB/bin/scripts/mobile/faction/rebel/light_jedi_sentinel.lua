@@ -37,7 +37,7 @@ light_jedi_sentinel = Creature:new {
 		"object/mobile/dressed_tiberus_anderlock.iff",
 		"object/mobile/dressed_neja_bertolo.iff"},
 	lootGroups = {},
-	weapons = {"light_jedi_weapons"},
+	weapons = {"light_jedi_weapons_basic"},
 	conversationTemplate = "",
 	attacks = merge(lightsabermaster,forcepowermaster)
 }

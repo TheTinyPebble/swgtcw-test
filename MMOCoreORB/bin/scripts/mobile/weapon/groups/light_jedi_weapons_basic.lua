@@ -1,13 +1,16 @@
 light_jedi_weapons_basic = {
 	"object/weapon/melee/sword/sword_lightsaber_blue.iff",
-	--"object/weapon/melee/sword/sword_lightsaber_darkblue.iff",
+	"object/weapon/melee/sword/sword_lightsaber_darkblue.iff",
 	"object/weapon/melee/sword/sword_lightsaber_lightgreen.iff",
+	"object/weapon/melee/sword/sword_lightsaber_yellow.iff",
 	"object/weapon/melee/2h_sword/2h_sword_lightsaber_blue.iff",
-	--"object/weapon/melee/2h_sword/2h_sword_lightsaber_darkblue.iff",
-	--"object/weapon/melee/2h_sword/2h_sword_lightsaber_lightgreen.iff",
+	"object/weapon/melee/2h_sword/2h_sword_lightsaber_darkblue.iff",
+	"object/weapon/melee/2h_sword/2h_sword_lightsaber_lightgreen.iff",
+	"object/weapon/melee/2h_sword/2h_sword_lightsaber_yellow.iff",
 	--"object/weapon/melee/polearm/lance_lightsaber_blue.iff",
 	--"object/weapon/melee/polearm/lance_lightsaber_darkblue.iff",
 	--"object/weapon/melee/polearm/lance_lightsaber_lightgreen.iff",
+	--"object/weapon/melee/polearm/lance_lightsaber_yellow.iff",
 }
 
 addWeapon("light_jedi_weapons_basic", light_jedi_weapons_basic)
