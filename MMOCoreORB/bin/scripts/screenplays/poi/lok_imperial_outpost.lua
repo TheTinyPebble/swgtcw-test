@@ -292,11 +292,8 @@ function LokImperialOutpostScreenPlay:spawnMobiles()
 
 	spawnMobile("lok", "cis_battle_droid_commando", 300, -1894.4, 19.0, -3082.2, -90, 0)
 	spawnMobile("lok", "cis_battle_droid_commando", 300, -1894.4, 19.0, -3086.6, -90, 0)
-<<<<<<< HEAD
+
 	spawnMobile("lok", "cis_magnaguard", 300, -1892.9, 19.0, -3103.9, 0, 0)
-=======
-	spawnMobile("lok", "rep_jedi_knight", 300, -1892.9, 19.0, -3103.9, 0, 0)
->>>>>>> parent of 8ba0284c8f... Revert "Merge branch 'Patches' into 'Hotfixes'"
 	spawnMobile("lok", "cis_battle_droid_geo", 300, -1892.9, 19.0, -3093.3, 0, 0)
 	spawnMobile("lok", "cis_battle_droid_specforce", 300, -1852.3, 19.0, -3092.6, 90, 0)
 	spawnMobile("lok", "cis_battle_droid_specforce", 300, -1852.3, 19.0, -3097.6, 90, 0)
@@ -311,11 +308,7 @@ function LokImperialOutpostScreenPlay:spawnMobiles()
 
 	spawnMobile("lok", "cis_battle_droid_commando", 300, 8.9, 7.0, -7.5, -90, 8615428)
 	spawnMobile("lok", "cis_battle_droid_commando", 300, 8.9, 7.0, -10.5, -90, 8615428)
-<<<<<<< HEAD
 	spawnMobile("lok", "cis_magnaguard", 300, 2.9, 7.0, -15.8, 0, 8615428)
-=======
-	spawnMobile("lok", "rep_jedi_knight", 300, 2.9, 7.0, -15.8, 0, 8615428)
->>>>>>> parent of 8ba0284c8f... Revert "Merge branch 'Patches' into 'Hotfixes'"
 	spawnMobile("lok", "cis_battle_droid_specforce", 300, -3.1, 7.0, -7.5, 90, 8615428)
 	spawnMobile("lok", "cis_battle_droid_specforce", 300, -3.1, 7.0, -10.5, 90, 8615428)
 	spawnMobile("lok", "cis_battle_droid_squad_leader", 300, -15.3, 7.0, -14.7, 90, 8615428)
