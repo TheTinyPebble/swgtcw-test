@@ -1,4 +1,0 @@
-object_building_dathomir_spiderclan_breeding_cave = object_building_dathomir_shared_spiderclan_breeding_cave:new {
-}
-
-ObjectTemplates:addTemplate(object_building_dathomir_spiderclan_breeding_cave, "object/building/dathomir/spiderclan_breeding_cave.iff")

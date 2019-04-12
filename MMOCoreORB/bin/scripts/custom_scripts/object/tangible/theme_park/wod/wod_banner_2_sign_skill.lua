@@ -1,5 +1,0 @@
-object_tangible_theme_park_wod_wod_banner_2_sign_skill = object_tangible_theme_park_wod_shared_wod_banner_2_sign_skill:new {
-	objectMenuComponent = "wodBanner2SignSkillMenuComponent",
-}
-
-ObjectTemplates:addTemplate(object_tangible_theme_park_wod_wod_banner_2_sign_skill, "object/tangible/theme_park/wod/wod_banner_2_sign_skill.iff")

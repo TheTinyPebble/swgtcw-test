@@ -1,1 +1,0 @@
-includeFile("../custom_scripts/object/weapon/melee/sword/sword_wod_scyth.lua")
