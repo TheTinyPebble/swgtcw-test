@@ -6,17 +6,17 @@ TatooineWayfarScreenPlay = CityScreenPlay:new {
 	planet = "tatooine",
 
 	gcwMobs = {
-		{"clone_sand_trooper", "cis_battle_droid", -5033.0,75.0,-6623.2,90,0, "", ""},
-		{"clone_sand_trooper", "cis_battle_droid", -5030.3,75.0,-6605.0,90,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -5033.0,75.0,-6623.2,90,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -5030.3,75.0,-6605.0,90,0, "", ""},
 		{"clonetrooper_squad_leader", "cis_magnaguard", -5031.1,75.0,-6610.1,90,0, "", ""},
 		{"clone_commando", "cis_battle_droid_squad_leader", -5102.9,75.0,-6617.5,90,0, "", ""},
 		{"clone_commando", "cis_battle_droid_squad_leader", -5125.8,75.0,-6576.9,125,0, "", ""},
-		{"clone_scout_trooper", "cis_battle_droid", -5211.3,75.0,-6611.2,-130,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid_geo", -5211.3,75.0,-6611.2,-130,0, "", ""},
 		{"clonetrooper_bombardier", "cis_surface_marshall", -5207.2,75.0,-6603.6,111,0, "", ""},
 		{"clone_commando", "cis_battle_droid_scout", -5221.7,75.0,-6595.2,-60,0, "", ""},
 		{"clonetrooper_medic", "rebel_medic", -5248.3,75.0,-6529.9,0,0, "", ""},
 		{"rep_jedi_knight", "cis_magnaguard", -5287.5,75.0,-6594.4,-145,0, "", ""},
-		{"clone_sand_trooper", "cis_battle_droid", -5295.0,75.0,-6590.2,-145,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -5295.0,75.0,-6590.2,-145,0, "", ""},
 	},
 }
 

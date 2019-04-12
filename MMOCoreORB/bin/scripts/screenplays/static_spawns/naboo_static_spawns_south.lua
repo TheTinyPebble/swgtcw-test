@@ -41,8 +41,8 @@ function NabooStaticSpawnsSouthScreenPlay:spawnMobiles()
 
 		--Small Imperial Outpost (-4767,-3975)
 	spawnMobile("naboo", "imperial_warrant_officer_i", 300, -4773.3, 333.3, -3985.2, -90.0, 0)
-	spawnMobile("naboo", "storm_commando", 300, -4773.3, 333.3, -3979.4, -90.0, 0)
-	spawnMobile("naboo", "storm_commando", 300, -4767.3, 333.3, -3976.5, 0.0, 0)
+	spawnMobile("naboo", "clone_commando", 300, -4773.3, 333.3, -3979.4, -90.0, 0)
+	spawnMobile("naboo", "clone_commando", 300, -4767.3, 333.3, -3976.5, 0.0, 0)
 	spawnMobile("naboo", "shadowy_figure", 300, 4.3, 0.5, 3.0, 180, 9525590)
 
 		--Arch & Debris (-6592,-2682)

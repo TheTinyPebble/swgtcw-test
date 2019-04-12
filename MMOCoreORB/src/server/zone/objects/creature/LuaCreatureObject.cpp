@@ -139,6 +139,7 @@ Luna<LuaCreatureObject>::RegType LuaCreatureObject::Register[] = {
 		{ "getGender", &LuaCreatureObject::getGender },
 		{ "setAlternateAppearance", &LuaCreatureObject::setAlternateAppearance },
 		{ "doCombatAnimation", &LuaCreatureObject::doCombatAnimation },
+		{ "isRidingMount", &LuaCreatureObject::isRidingMount },
 		{ 0, 0 }
 };
 
@@ -1078,4 +1079,11 @@ int LuaCreatureObject::doCombatAnimation(lua_State* L) {
 		realObject->doCombatAnimation(enemy, animString.hashCode(), 0, 0xFF);
 
 	return 0;
+}
+
+int LuaCreatureObject::isRidingMount(lua_State* L) {
+	
+	lua_pushboolean(L, realObject->isRidingMount());
+
+	return 1;
 }

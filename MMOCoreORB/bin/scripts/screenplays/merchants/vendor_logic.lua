@@ -95,7 +95,7 @@ function VendorLogic:buyItem(pPlayer, itemSelected)
 					if (cost <= CreatureObject(pPlayer):getCashCredits()) then
 						CreatureObject(pPlayer):subtractCashCredits(cost)
 					else
-						cost = cost - cashCredits
+						cost = cost - CreatureObject(pPlayer):getCashCredits()
 						CreatureObject(pPlayer):subtractCashCredits(CreatureObject(pPlayer):getCashCredits())
 						CreatureObject(pPlayer):setBankCredits(CreatureObject(pPlayer):getBankCredits() - cost)
 					end
@@ -109,6 +109,14 @@ function VendorLogic:buyItem(pPlayer, itemSelected)
 			end
 		end	
 		CreatureObject(pPlayer):sendSystemMessage("You have purchased " .. merch.name)
+		local pItem = giveItem(pInventory, merch.template, -1)		
+		if (string.match(SceneObject(pItem):getTemplateObjectPath(), "lightsaber_module_force_crystal") and pItem ~= nil) then
+			if (merch.color ~= nil) then
+				local colorCrystal = LuaLightsaberCrystalComponent(pItem)
+				colorCrystal:setColor(merch.color)
+				colorCrystal:updateCrystal(merch.color)
+			end
+		end
 	else
 		CreatureObject(pPlayer):sendSystemMessage("You can't afford the selected item.")
 	end
@@ -251,6 +259,4 @@ function VendorLogic:payTokens(pPlayer, selectedItem, num)
 		local tokenData = tonumber(readScreenPlayData(pPlayer, self.currencies[i].ScreenPlayDataString, self.currencies[i].ScreenPlayDataKey))
 		writeScreenPlayData(pPlayer, self.currencies[i].ScreenPlayDataString, self.currencies[i].ScreenPlayDataKey, tokenData - screenPlayTokenCost)
 	end
-	
-	giveItem(pInventory, merch.template, -1)
 end

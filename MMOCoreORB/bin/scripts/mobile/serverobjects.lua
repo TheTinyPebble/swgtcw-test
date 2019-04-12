@@ -1,6 +1,3 @@
--- Custom content
-includeFile("../custom_scripts/mobile/serverobjects.lua")
-
 -- Conversations
 includeFile("conversations.lua")
 
@@ -56,4 +53,5 @@ includeFile("aftermath/serverobjects.lua")
 includeFile("merchants/serverobjects.lua")
 
 --Custom
+includeFile("../custom_scripts/mobile/serverobjects.lua")
 includeFile("conversations/omega/conversations.lua")
