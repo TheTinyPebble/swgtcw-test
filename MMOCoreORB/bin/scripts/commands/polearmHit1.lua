@@ -47,16 +47,16 @@ PolearmHit1Command = {
 	damageMultiplier = 2.0,
 	speedMultiplier = 1.5,
 	accuracyBonus = 10,
-
+	
 	healthCostMultiplier = 1.0,
 	actionCostMultiplier = 0.5,
 	mindCostMultiplier = 0.5,
 
-	animation = "combo_2b",
+	animation = "combo_2b", 
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "bonebruiser",
-
+	
 	weaponType = POLEARMWEAPON,
 
 	range = -1
@@ -64,3 +64,4 @@ PolearmHit1Command = {
 }
 
 AddCommand(PolearmHit1Command)
+
