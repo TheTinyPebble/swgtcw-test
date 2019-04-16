@@ -199,8 +199,6 @@ function LokImperialOutpostScreenPlay:spawnMobiles()
 	spawnMobile("lok", "cis_battle_droid", 300, -1879.2, 11.9, -3037.2, 180, 0)
 	spawnMobile("lok", "rebel_medic", 300, -1891.9, 11.9, -3021.2, 0, 0)
 	spawnMobile("lok", "rebel_medic", 300, -1868.2, 11.9, -3021.2, 0, 0)
-	spawnMobile("lok", "stormtrooper_dewback", 300, -1891.9, 11.9, -3010.2, 180, 0)
-	spawnMobile("lok", "stormtrooper_dewback", 300, -1868.2, 11.9, -3010.2, 180, 0)
 
 	spawnMobile("lok", "cis_battle_droid_geo", 300, -2024.4, 11.9, -3054.0, 180, 0)
 	spawnMobile("lok", "cis_battle_droid_geo", 300, -2024.4, 11.9, -3074.3, 0, 0)
