@@ -1,4 +1,4 @@
-paint_disperser = {
+event_token_item = {
 	minimumLevel = 0,
 	maximumLevel = 0,
 	customObjectName = "",
