@@ -21,6 +21,7 @@ includeFile("groups/sith_shadow_intro_theater_datapad.lua")
 includeFile("groups/skill_buffs.lua")
 includeFile("groups/tailor_components.lua")
 includeFile("groups/treasure_map_group.lua")
+includeFile("groups/event_token.lua")
 
 includeFile("groups/named_color_crystals.lua")
 

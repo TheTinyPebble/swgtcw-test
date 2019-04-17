@@ -44,6 +44,7 @@ includeFile("items/pistol_de10.lua")
 includeFile("items/treasure_map.lua")
 includeFile("items/viewscreen_printer.lua")
 includeFile("items/viewscreen_reader.lua")
+includeFile("items/event_token_item.lua")
 
 --armor sub-folder
 includeFile("items/armor/bh_armor_belt.lua")
