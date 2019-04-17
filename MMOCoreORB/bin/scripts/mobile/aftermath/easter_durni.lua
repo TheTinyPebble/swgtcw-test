@@ -1,5 +1,5 @@
 easter_durni = Creature:new {
-	customName = "Easter drni",
+	customName = "Easter durni",
 	socialGroup = "durni",
 	faction = "",
 	level = 157,
