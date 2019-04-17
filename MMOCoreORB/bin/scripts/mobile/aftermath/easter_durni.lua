@@ -31,9 +31,8 @@ easter_durni = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "clothing_attachments", chance = 2500000},
-				{group = "armor_attachments", chance = 5000000},
 				{group = "event_token", chance = 2500000},
+				{group = "durni_reward", chance = 100000},
 			}
 		}
 	},
