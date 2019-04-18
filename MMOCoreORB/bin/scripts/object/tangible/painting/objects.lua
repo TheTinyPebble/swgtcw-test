@@ -4936,3 +4936,9 @@ object_tangible_painting_shared_painting_exclusive14 = SharedTangibleObjectTempl
 
 ObjectTemplates:addClientTemplate(object_tangible_painting_shared_painting_exclusive14, "object/tangible/painting/shared_painting_exclusive14.iff")
 
+object_tangible_painting_shared_painting_durni_reward_01 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/painting/shared_painting_durni_reward_01.iff"
+
+	}
+
+ObjectTemplates:addClientTemplate(object_tangible_painting_shared_painting_durni_reward_01, "object/tangible/painting/shared_painting_durni_reward_01.iff")
