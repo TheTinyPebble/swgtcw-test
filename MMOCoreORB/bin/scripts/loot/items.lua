@@ -45,6 +45,7 @@ includeFile("items/treasure_map.lua")
 includeFile("items/viewscreen_printer.lua")
 includeFile("items/viewscreen_reader.lua")
 includeFile("items/wod_logic_unit_componenet.lua")
+includeFile("items/event_token_item.lua")
 
 --armor sub-folder
 includeFile("items/armor/bh_armor_belt.lua")
@@ -1267,3 +1268,4 @@ includeFile("items/painting/painting_exclusive11.lua")
 includeFile("items/painting/painting_exclusive12.lua")
 includeFile("items/painting/painting_exclusive13.lua")
 includeFile("items/painting/painting_exclusive14.lua")
+includeFile("items/painting/painting_durni_reward_01.lua")

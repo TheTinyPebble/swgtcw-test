@@ -21,6 +21,8 @@ includeFile("groups/sith_shadow_intro_theater_datapad.lua")
 includeFile("groups/skill_buffs.lua")
 includeFile("groups/tailor_components.lua")
 includeFile("groups/treasure_map_group.lua")
+includeFile("groups/event_token.lua")
+
 includeFile("groups/named_color_crystals.lua")
 includeFile("groups/wod_logic_unit.lua")
 
@@ -411,3 +413,4 @@ includeFile("groups/aftermath/exclusive11.lua")
 includeFile("groups/aftermath/exclusive12.lua")
 includeFile("groups/aftermath/exclusive13.lua")
 includeFile("groups/aftermath/exclusive14.lua")
+includeFile("groups/aftermath/durni_reward.lua")

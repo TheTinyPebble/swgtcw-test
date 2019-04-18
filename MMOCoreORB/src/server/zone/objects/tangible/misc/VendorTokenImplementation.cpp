@@ -29,7 +29,7 @@ void VendorTokenImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuR
 	String fullTemplate = getObjectTemplate()->getFullTemplateString();
 	
 	menuResponse->addRadialMenuItem(40, 3, "Split Tokens");
-	menuResponse->addRadialMenuItem(50, 3, "Store Tokens");
+	//menuResponse->addRadialMenuItem(50, 3, "Store Tokens");
 }
 
 int VendorTokenImplementation::handleObjectMenuSelect(CreatureObject* player, byte selectedID) {
