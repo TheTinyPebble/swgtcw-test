@@ -2,6 +2,7 @@ dark_jedi_sentinel = Creature:new {
 	objectName = "@mob/creature_names:dark_jedi_sentinel",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	customName = "a Dark Jedi Keeper",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 1,
