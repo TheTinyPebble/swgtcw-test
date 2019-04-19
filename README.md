@@ -67,6 +67,7 @@ A big thank you to everyone who has helped make Clone Wars a reality and also to
   * ModTheGalaxy - ModTheGalaxy tres including all of the CU and NGE items/content.
   * Holocron Team - Being helpful and providing guidance when needed.
   * Aftermath - Aftermath base code work via the public repo.
+  * Cesta - GalaxyHarvester upload script.
   * Tatwi - Legend of Hondo vendor merchant logic.
   * Timbab - Jawa Toolbox usage.
   * Halyn - Sitting through hours of us DMing him questions and being a huge help with multiple things.
@@ -81,3 +82,4 @@ A big thank you to everyone who has helped make Clone Wars a reality and also to
   * Phoenix - LUA Attribute Component.
   * Liakhara - Gas Recycler implementation.
   * Skyyyr - Colored Lightsabers for NPCs.
+  * Peltarius - Improved Clone Trooper Armor mod.
