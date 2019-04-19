@@ -1274,9 +1274,6 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 		message.setTO("exp_n", "jedi_general");
 		player->sendSystemMessage(message);
 		VisibilityManager::instance()->clearVisibility(player);
-		uint64 targetId = player->getObjectID();
-		MissionManager* missionManager = server->getMissionManager();
-		missionManager->clearPlayerBountyMissions(targetId);
 	}
 }
 
