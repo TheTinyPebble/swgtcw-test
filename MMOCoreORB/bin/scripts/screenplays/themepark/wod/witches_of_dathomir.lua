@@ -55,7 +55,7 @@ witchesOfDathomirScreenplay = ScreenPlay:new {
 	}
 }
 
-registerScreenPlay("witchesOfDathomirScreenplay", true)
+registerScreenPlay("witchesOfDathomirScreenplay", false)
 
 local QuestManager = require("managers.quest.quest_manager")
 
