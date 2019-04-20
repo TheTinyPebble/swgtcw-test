@@ -1,5 +1,5 @@
 light_jedi_sentinel = Creature:new {
-	objectName = "@mob/creature_names:light_jedi_sentinel",
+	objectName = "",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	customName = "a Jedi Guardsman",
