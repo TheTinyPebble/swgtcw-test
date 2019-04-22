@@ -75,10 +75,39 @@ public:
 
 				ghost->setScreenPlayData(screenPlayName, screenPlayVariable, value);
 
+			} else if (commandType.beginsWith("resetHolo")){
+				PlayerObject* ghost = targetCreature->getPlayerObject();
+
+				if (ghost == NULL)
+					return INVALIDTARGET;
+
+				String screenPlayName, screenPlayVariable, value;
+				screenPlayName = "CustomJediProgression";
+				screenPlayVariable = "HolocronTimer";
+				value = "";
+
+				ghost->setScreenPlayData(screenPlayName, screenPlayVariable, value);
+
+			} else if (commandType.beginsWith("read")){
+				PlayerObject* ghost = targetCreature->getPlayerObject();
+
+				if (ghost == NULL)
+					return INVALIDTARGET;
+
+				String screenPlayName, screenPlayVariable, value;
+				args.getStringToken(screenPlayName);
+				args.getStringToken(screenPlayVariable);
+
+				value = ghost->getScreenPlayData(screenPlayName, screenPlayVariable);
+
+				creature->sendSystemMessage(targetCreature->getFirstName() + " " + screenPlayVariable + " is " + value);
+
 			} else {
 				creature->sendSystemMessage("SYNTAX: /completeQuest screenplaystate <screenPlayStateName> <state>");
 				creature->sendSystemMessage("SYNTAX: /completeQuest spdata <screenPlayName> <screenPlayVariable> <data>");
 				creature->sendSystemMessage("SYNTAX: /completeQuest quest <quest>");
+				creature->sendSystemMessage("SYNTAX: /completeQuest resetHolo");
+				creature->sendSystemMessage("SYNTAX: /completeQuest read <screenPlayName> <screenPlayVariable>");
 
 				return INVALIDPARAMETERS;
 			}
@@ -86,6 +115,8 @@ public:
 			creature->sendSystemMessage("SYNTAX: /completeQuest screenplaystate <screenPlayStateName> <state>");
 			creature->sendSystemMessage("SYNTAX: /completeQuest spdata <screenPlayName> <screenPlayVariable> <data>");
 			creature->sendSystemMessage("SYNTAX: /completeQuest quest <quest>");
+			creature->sendSystemMessage("SYNTAX: /completeQuest resetHolo");
+			creature->sendSystemMessage("SYNTAX: /completeQuest read <screenPlayName> <screenPlayVariable>");
 
 			return INVALIDPARAMETERS;
 		}
