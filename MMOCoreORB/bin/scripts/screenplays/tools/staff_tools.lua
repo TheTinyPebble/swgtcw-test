@@ -257,7 +257,7 @@ function StaffTools.resetHolocronCooldown(pPlayer, targetID)
 		return
 	end
 
-	writeScreenPlayData(pPlayer, "CustomJediProgression", "HolocronTimer", "")
+	writeScreenPlayData(CreatureObject(pTarget), "CustomJediProgression", "HolocronTimer", "")
 	CreatureObject(pPlayer):sendSystemMessage("Now force resetting holocron cooldown for " .. playerName .. ".")
 
 end
