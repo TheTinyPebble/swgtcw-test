@@ -214,7 +214,8 @@ function StaffTools.fixJedi(pPlayer)
 	return 
 end
 
-function StaffTools.forceIntroOldManEvent(pPlayer, targetID)
+function StaffTools.forceIntroOldManEvent(pPlayer)
+	local targetID = CreatureObject(pPlayer):getTargetID()
 	local pTarget = getSceneObject(targetID)
 
 	if (pTarget == nil) then
@@ -232,7 +233,8 @@ function StaffTools.forceIntroOldManEvent(pPlayer, targetID)
 	CustomUnlock:startOldMan(pTarget)
 end
 
-function StaffTools.forceIntroSithAttackEvent(pPlayer, targetID)
+function StaffTools.forceIntroSithAttackEvent(pPlayer)
+	local targetID = CreatureObject(pPlayer):getTargetID()
 	local pTarget = getSceneObject(targetID)
 
 	if (pTarget == nil) then
@@ -250,7 +252,8 @@ function StaffTools.forceIntroSithAttackEvent(pPlayer, targetID)
 	CustomUnlock:startSithAttack(pTarget)
 end
 
-function StaffTools.resetHolocronCooldown(pPlayer, targetID)
+function StaffTools.resetHolocronCooldown(pPlayer)
+	local targetID = CreatureObject(pPlayer):getTargetID()
 	local pTarget = getSceneObject(targetID)
 	local pCreature = CreatureObject(pTarget)
 
