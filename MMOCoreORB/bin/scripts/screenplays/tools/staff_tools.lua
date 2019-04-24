@@ -9,6 +9,9 @@ StaffTools = {
 		{ "Start Nightsister Shapeshifter", "startNSWB" },
 		{ "End NS Shapeshifter", "endNSWB" },
 		{ "Test WOD convo", "testWODConvo" },
+		{ "Force Old Man Visit", "forceIntroOldManEvent"},
+		{ "Force Sith Attack", "forceIntroSithAttackEvent"},
+		{ "Reset Holocron Cooldown", "resetHolocronCooldown"},
 	}
 }
 
@@ -210,6 +213,57 @@ function StaffTools.fixJedi(pPlayer)
 	end
 	return 
 end
+
+function StaffTools.forceIntroOldManEvent(pPlayer, targetID)
+	local pTarget = getSceneObject(targetID)
+
+	if (pTarget == nil) then
+		return
+	end
+
+	local curStep = CustomUnlock:getCurrentStep(pTarget)
+	local playerName = CreatureObject(pTarget):getFirstName()
+	if (not CustomUnlock:isOnIntro(pTarget) or (curStep ~= CustomUnlock.OLDMANWAIT and curStep ~= CustomUnlock.OLDMANMEET)) then
+		CreatureObject(pPlayer):sendSystemMessage("Unable to force the old man intro event for " .. playerName .. ", they are not on the correct step.")
+		return
+	end
+
+	CreatureObject(pPlayer):sendSystemMessage("Now forcing the old man event intro to start for " .. playerName .. ".")
+	CustomUnlock:startOldMan(pTarget)
+end
+
+function StaffTools.forceIntroSithAttackEvent(pPlayer, targetID)
+	local pTarget = getSceneObject(targetID)
+
+	if (pTarget == nil) then
+		return
+	end
+
+	local curStep = CustomUnlock:getCurrentStep(pTarget)
+	local playerName = CreatureObject(pTarget):getFirstName()
+	if (not CustomUnlock:isOnIntro(pTarget) or (curStep ~= CustomUnlock.SITHWAIT and curStep ~= CustomUnlock.SITHATTACK)) then
+		CreatureObject(pPlayer):sendSystemMessage("Unable to force the sith attack intro event for " .. playerName .. ", they are not on the correct step.")
+		return
+	end
+
+	CreatureObject(pPlayer):sendSystemMessage("Now forcing the sith attack intro event to start for " .. playerName .. ".")
+	CustomUnlock:startSithAttack(pTarget)
+end
+
+function StaffTools.resetHolocronCooldown(pPlayer, targetID)
+	local pTarget = getSceneObject(targetID)
+
+	if (pTarget == nil) then
+		return
+	end
+
+	writeScreenPlayData(pPlayer, "CustomJediProgression", "HolocronTimer", "")
+	CreatureObject(pPlayer):sendSystemMessage("Now force resetting holocron cooldown for " .. playerName .. ".")
+
+end
+
+
+
 
 function StaffTools:HolocronTroubleshootCallback()
 end
