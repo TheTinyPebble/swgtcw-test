@@ -156,7 +156,7 @@ function StaffTools.holocronTroubleshoot(pPlayer)
 	
 	local unlockStep = readScreenPlayData(pTarget, "CustomJediProgression", "CustomUnlockStep")
 
-	local holocronCD = readScreenPlayData(pTarget, "CustomJediProgression", "HolocronTimer")
+	local holocronCD = readScreenPlayData(pTarget, "CustomJediProgression", "HolocronTimer") - os.time()
 	
 	if (unlockStep == "" or unlockStep == nil) then
 		unlockStep = 0
@@ -176,7 +176,7 @@ function StaffTools.holocronTroubleshoot(pPlayer)
 	message = message .. "Has active holocron theater: " .. hasActiveTask .. "\n"
 	message = message .. "Active holocron trial: " .. activeHolocronTask .. "\n"
 	message = message .. "Holocron trials completed: " .. holocronStep .. "\n"
-	message = message .. "Holocron Cooldown: " .. holocronCD .. "\n"
+	message = message .. "Holocron Last Successfully Used: " .. StaffTools:getTimeString(holocronCD * 1000) .. " ago" .. "\n"
 	message = message .. "Jedi State: " .. PlayerObject(pTargetGhost):getJediState()
 	
 	local suiManager = LuaSuiManager()
@@ -271,6 +271,15 @@ function StaffTools.resetHolocronCooldown(pPlayer)
 
 end
 
+function StaffTools:getTimeString(miliTime)
+	local timeLeft = miliTime / 1000
+	local daysLeft = math.floor(timeLeft / (24 * 60 * 60))
+	local hoursLeft = math.floor((timeLeft / 3600) % 24)
+	local minutesLeft = math.floor((timeLeft / 60) % 60)
+	local secondsLeft = math.floor(timeLeft % 60)
+
+	return daysLeft .. "d " .. hoursLeft .. "h " .. minutesLeft .. "m " .. secondsLeft .. "s"
+end
 
 
 
