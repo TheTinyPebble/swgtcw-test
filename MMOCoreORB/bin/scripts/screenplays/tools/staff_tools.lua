@@ -156,9 +156,9 @@ function StaffTools.holocronTroubleshoot(pPlayer)
 	
 	local unlockStep = readScreenPlayData(pTarget, "CustomJediProgression", "CustomUnlockStep")
 
-	local holocronCD = readScreenPlayData(pTarget, "CustomJediProgression", "HolocronTimer") - os.time()
+	local holocronCD = os.time() - readScreenPlayData(pTarget, "CustomJediProgression", "HolocronTimer")
 	
-	if (unlockStep == "" or unlockStep == nil) then
+	if (unlockStep == "" or unlockStep == nil
 		unlockStep = 0
 	end
 	
