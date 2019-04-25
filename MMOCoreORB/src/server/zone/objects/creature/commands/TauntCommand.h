@@ -14,12 +14,10 @@ public:
 	TauntCommand(const String& name, ZoneProcessServer* server)
 		: CombatQueueCommand(name, server) {
 
-		mindCost = 750;
 	}
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) const {
 
-		creature->inflictDamage(creature, CreatureAttribute::MIND, mindCost, false);
 
 		if (!checkStateMask(creature))
 			return INVALIDSTATE;
