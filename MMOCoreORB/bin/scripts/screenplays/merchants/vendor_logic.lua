@@ -3,7 +3,7 @@ VendorLogic = ScreenPlay:new {
 	--EXAMPLE SETUP
 	currencies = {
 	--For Tokens: currency = "token", name: displayed name, full template string (without shared_), if applicable: ScreenPlayData string, ScreenPlayData key
-		{currency = "token", name = "Event Tokens", ScreenPlayDataString = "vendorToken", ScreenPlayDataKey = "event_token"},
+		{currency = "token", name = "Event Tokens", template = "object/tangible/loot/misc/event_token.iff", ScreenPlayDataString = "vendorToken", ScreenPlayDataKey = "event_token"},
 		{currency = "token", name = "Locked Briefcases", template = "object/tangible/loot/misc/briefcase_s01.iff"}, 
 	--For credits: currency = "credits"
 		{currency = "credits"},
