@@ -163,7 +163,6 @@ function StaffTools.holocronTroubleshoot(pPlayer)
 	end
 	
 	local unlockStepString = unlockStepIndex[tonumber(unlockStep)]
-	print(unlockStepString)
 	if (unlockStepString == "" or unlockStepString == nil) then
 		unlockStepString = "Not glowing yet.\n"
 	else
