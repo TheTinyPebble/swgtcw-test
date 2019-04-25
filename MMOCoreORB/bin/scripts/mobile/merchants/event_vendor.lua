@@ -30,7 +30,7 @@ eventvendor = Creature:new {
 	templates = {"object/mobile/gungan_s04_male.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "VendorConvoTemplate",
+	conversationTemplate = "eventVendorConvoTemplate",
 	attacks = {
 	}
 }
