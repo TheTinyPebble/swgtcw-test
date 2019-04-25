@@ -233,12 +233,12 @@ function VendorLogic:payTokens(pPlayer, selectedItem, num)
 	else 
 		deleteItems = cost
 	end
-	print(deleteItems, cost)
+	
 	for i = containerSize - 1 , 0 , -1 do
 		pInvObj = SceneObject(pInventory):getContainerObject(i)
 		invSceno = LuaSceneObject(pInvObj)
 		invTano = LuaTangibleObject(pInvObj)
-		if (invSceno:getTemplateObjectPath() == self.token and deleteItems > 0 ) then
+		if (invSceno:getTemplateObjectPath() == self.currencies[num].template and deleteItems > 0 ) then
 			if (invTano:getUseCount() - tokenCost < 0) then
 				deleteItems = deleteItems - invTano:getUseCount()
 				invSceno:destroyObjectFromWorld()
