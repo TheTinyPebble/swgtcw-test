@@ -76,7 +76,7 @@ function VendorLogic:buyItem(pPlayer, itemSelected)
 	end
  			 		
 	if (SceneObject(pInventory):isContainerFullRecursive()) then
-		creature:sendSystemMessage("You do not have enough inventory space.")
+		CreatureObject(pPlayer):sendSystemMessage("You do not have enough inventory space.")
 		return
 	end
 	
@@ -233,7 +233,7 @@ function VendorLogic:payTokens(pPlayer, selectedItem, num)
 	else 
 		deleteItems = cost
 	end
-	
+	print(deleteItems, cost)
 	for i = containerSize - 1 , 0 , -1 do
 		pInvObj = SceneObject(pInventory):getContainerObject(i)
 		invSceno = LuaSceneObject(pInvObj)
