@@ -256,7 +256,7 @@ function StaffTools.resetHolocronCooldown(pPlayer)
 	local targetID = CreatureObject(pPlayer):getTargetID()
 	local pTarget = getSceneObject(targetID)
 	local pCreature = getCreatureObject(pTarget)
-	local pObject = getPlayerObject(pCreature)
+	local pObject = CreatureObject(pTarget):getPlayerObject()
 	local playerName = CreatureObject():getFirstName()
 
 	if (pTarget == nil or pCreature == nil) then
