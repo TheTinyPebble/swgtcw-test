@@ -22,7 +22,7 @@ VendorLogic = ScreenPlay:new {
 	},
 }
 
-registerScreenPlay("VendorLogic", false)
+registerScreenPlay("VendorLogic", true)
 
 function VendorLogic:openSUI(pCreatureObject, pUsingObject)
 	local sui = SuiListBox.new(self.scriptName, "defaultCallback")
