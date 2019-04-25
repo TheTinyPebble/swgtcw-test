@@ -10,7 +10,7 @@ EventVendorLogic = VendorLogic:new {
         {name = "Painting - Legion", template = "object/tangible/painting/painting_exclusive2.iff", cost = {10,}},
         {name = "Painting - Count Dooku", template = "object/tangible/painting/painting_exclusive3.iff", cost = {10,}},
         {name = "Painting - Droideka", template = "object/tangible/painting/painting_exclusive4.iff", cost = {10,}},
-        {name = "Painting - Darth Maul", template = "object/tangible/painting/painting_exclusive5.iff", cost = {10,}},
+        {name = "Painting - Face of Death", template = "object/tangible/painting/painting_exclusive5.iff", cost = {10,}},
         {name = "Painting - The Holocron", template = "object/tangible/painting/painting_exclusive6.iff", cost = {10,}},
         {name = "Painting - B1 Sketch", template = "object/tangible/painting/painting_exclusive7.iff", cost = {10,}},
         {name = "Painting - Fett", template = "object/tangible/painting/painting_exclusive8.iff", cost = {10,}},
