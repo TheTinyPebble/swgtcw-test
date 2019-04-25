@@ -214,7 +214,7 @@ function VendorLogic:payTokens(pPlayer, selectedItem, num)
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 	
 	local merch = self.merchandise[selectedItem]
-	local cost = merch.cost[num]
+	local tokenCost = merch.cost[num]
 	deleteItems = 0
 	tokens = 0
 	screenPlayTokenCost = 0
@@ -227,11 +227,11 @@ function VendorLogic:payTokens(pPlayer, selectedItem, num)
 		end
 	end
 
-	if (tokens < cost) then
+	if (tokens < tokenCost) then
 		deleteItems = tokens
-		screenPlayTokenCost = cost - tokens
+		screenPlayTokenCost = tokenCost - tokens
 	else 
-		deleteItems = cost
+		deleteItems = tokenCost
 	end
 	
 	for i = containerSize - 1 , 0 , -1 do
