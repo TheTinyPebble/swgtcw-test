@@ -1,6 +1,6 @@
 EventVendorLogic = VendorLogic:new {
 	scriptName = "EventVendorLogic",
-	curenncies = {
+	currencies = {
 	--For Tokens: Displayed Name, full template string (without shared_), if applicable: ScreenPlayData string, ScreenPlayData key
 		{currency = "token", name = "Event Tokens", template = "object/tangible/loot/misc/event_token.iff", ScreenPlayDataString = "vendorToken", ScreenPlayDataKey = "event_token"},
 	},
@@ -24,4 +24,4 @@ EventVendorLogic = VendorLogic:new {
 	},
 }
 
-registerScreenPlay("EventVendorLogic", true)
+registerScreenPlay("EventVendorLogic", false)
