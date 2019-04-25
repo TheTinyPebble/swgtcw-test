@@ -256,6 +256,7 @@ function StaffTools.resetHolocronCooldown(pPlayer)
 	local targetID = CreatureObject(pPlayer):getTargetID()
 	local pTarget = getSceneObject(targetID)
 	local pCreature = CreatureObject(pTarget)
+	local pObject = CreatureObject(pTarget):getPlayerObject()
 	local playerName = CreatureObject(pTarget):getFirstName()
 
 	if (pTarget == nil or pCreature == nil) then
@@ -263,7 +264,7 @@ function StaffTools.resetHolocronCooldown(pPlayer)
 		return
 	end
 
-	writeScreenPlayData(pCreature, "CustomJediProgression", "HolocronTimer", 999)
+	writeScreenPlayData(pObject, "CustomJediProgression", "HolocronTimer", 999)
 	CreatureObject(pPlayer):sendSystemMessage("Now force resetting holocron cooldown for " .. playerName .. ".")
 
 end
