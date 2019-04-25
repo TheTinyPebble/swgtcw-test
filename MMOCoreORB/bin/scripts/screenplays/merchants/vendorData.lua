@@ -24,4 +24,4 @@ EventVendorLogic = VendorLogic:new {
 	},
 }
 
-registerScreenPlay("EventVendorLogic", false)
+registerScreenPlay("EventVendorLogic", true)
