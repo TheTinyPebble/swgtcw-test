@@ -75,14 +75,14 @@ EventVendorConvoHandler = VendorConvoHandler:new {
 	--Vendor Setup
 	vendorLogicType = EventVendorLogic,
 	--Vendor Greeting
-	initialDialog = "Hello, buy my items please and thank you.",
+	initialDialog = "Ya-hoo, namen Minbob Qozz, me travelen da world sellen items per special event tokens. Do yousa wanten be buyin sometten?",
 	--Player selection to start buying, vendor spatial.
 	saleOption = "Show me what you have for sale.",
-	saleDialog = "Buy my stuff.",
+	saleDialog = "Okeeday, hair's what me have per sale.",
 	--Player selection to get vendor information, vendor dialog.
-	informationFirstOption = "What do you sell?",
-	informationFirstDialog = "Buncha stuff, please buy.",
+	informationFirstOption = "What sort of items do you sell?",
+	informationFirstDialog = "Lots of stuffen, maken sure to come backen every now and again as me updaten stock wit new items.",
 	--Player selection to get vendor more information, vendor dialog.
 	informationSecondOption = "How do I get event tokens?",
-	informationSecondDialog = "Post a picture of a naked Gungan in discord.",
+	informationSecondDialog = "Participaten in events all across da galaxy. When yousa getsa some tokens, maken sure to come backen to mesa and traden yous tokens per items.",
 }
