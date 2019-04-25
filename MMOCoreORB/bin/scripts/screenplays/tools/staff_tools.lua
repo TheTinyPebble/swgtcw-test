@@ -255,9 +255,9 @@ end
 function StaffTools.resetHolocronCooldown(pPlayer)
 	local targetID = CreatureObject(pPlayer):getTargetID()
 	local pTarget = getSceneObject(targetID)
-	local pCreature = CreatureObject(pTarget)
-	local pObject = CreatureObject(pTarget):getPlayerObject()
-	local playerName = CreatureObject(pTarget):getFirstName()
+	local pCreature = getCreatureObject(targetID)
+	local pObject = CreatureObject(pCreature):getPlayerObject()
+	local playerName = CreatureObject(pCreature):getFirstName()
 
 	if (pTarget == nil or pCreature == nil) then
 		CreatureObject(pPlayer):sendSystemMessage("No target found")
