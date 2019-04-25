@@ -155,6 +155,7 @@ function CorelliaCoronetScreenPlay:spawnMobiles()
 	self:setMoodString(pNpc, "conversation")
 	pNpc = spawnMobile(self.planet, "commoner_naboo",60,17.3045,2.25,18.2968,360.011,1855477)
 	self:setMoodString(pNpc, "conversation")
+	spawnMobile(self.planet, "eventvendor",1,-0.00597673,-9,-20.4835,359,1855486)
 
 	--Hotel
 	pNpc = spawnMobile(self.planet, "corellia_times_investigator",60,7.44572,1.00001,-8.00652,0,1855548)
