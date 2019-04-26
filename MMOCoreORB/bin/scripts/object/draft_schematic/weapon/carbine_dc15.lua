@@ -66,7 +66,7 @@ object_draft_schematic_weapon_carbine_dc15 = object_draft_schematic_weapon_share
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "barrel", "scope", "stock"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3, 3},
    resourceTypes = {"iron_plumbum", "metal_ferrous", "metal", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/component/weapon/shared_blaster_rifle_barrel.iff", "object/tangible/component/weapon/shared_scope_weapon.iff", "object/tangible/component/weapon/shared_stock.iff"},
-   resourceQuantities = {40, 20, 9, 1, 1, 1, 1},
+   resourceQuantities = {40, 20, 9, 4, 1, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100, 100},
    ingredientAppearance = {"", "", "", "", "muzzle", "scope", ""},
 
