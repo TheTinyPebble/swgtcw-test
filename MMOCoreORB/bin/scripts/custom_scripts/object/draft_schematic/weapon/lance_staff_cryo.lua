@@ -66,7 +66,7 @@ object_draft_schematic_weapon_lance_staff_cryo = object_draft_schematic_weapon_s
    ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "vibration_generator"},
    ingredientSlotType = {0, 0, 0, 1},
    resourceTypes = {"steel_ditanium", "copper_polysteel", "metal", "object/tangible/component/weapon/shared_vibro_unit_nightsister.iff"},
-   resourceQuantities = {38, 17, 6, 1},
+   resourceQuantities = {38, 17, 6, 2},
    contribution = {100, 100, 100, 100},
 
 
