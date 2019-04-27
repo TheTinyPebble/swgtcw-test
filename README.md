@@ -72,6 +72,7 @@ A big thank you to everyone who has helped make Clone Wars a reality and also to
   * Timbab - Jawa Toolbox usage.
   * Halyn - Sitting through hours of us DMing him questions and being a huge help with multiple things.
   * TheTinyPebble - Custom Armour system originally created for the Sentinels Republic server.
+  * Alpha - Development work on the Clone Wars timeline & multiple LUA, C++ and TRE work additions/changes.
   * Deztia, Slight, Sallorn, Fanta and Eawah - Testing help during Clone Wars development.
   * Empire in Flames server - Useful Newsnet terminal mod.
   * Infinity server - CA/AAs working with skirts, Covert Hat, Clothes breaking on 0 condition, RegrantSkills Command and the SEA Removal Tool.
