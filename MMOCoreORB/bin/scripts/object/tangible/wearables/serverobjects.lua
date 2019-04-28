@@ -76,4 +76,9 @@ includeFile("tangible/wearables/vest/serverobjects.lua")
 includeFile("tangible/wearables/wookiee/serverobjects.lua")
 
 includeFile("tangible/wearables/cosmetics/serverobjects.lua")
+
+includeFile("tangible/wearables/armor/sep_battle/serverobjects.lua")
+includeFile("tangible/wearables/armor/sep_theme/serverobjects.lua")
+includeFile("tangible/wearables/armor/sep_infil/serverobjects.lua")
+
 -- Server Objects
