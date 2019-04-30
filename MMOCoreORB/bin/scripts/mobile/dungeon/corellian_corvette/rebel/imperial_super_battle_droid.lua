@@ -43,7 +43,7 @@ imperial_super_battle_droid = Creature:new {
 		conversationTemplate = "",
 		reactionStf = "@npc_reaction/stormtrooper",
 		personalityStf = "@hireling/hireling_stormtrooper",
-		attacks = merge(attack)
+		attacks = merge(basicattack)
 
 }
 
