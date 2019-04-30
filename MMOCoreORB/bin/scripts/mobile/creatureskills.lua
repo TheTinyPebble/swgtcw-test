@@ -64,3 +64,6 @@ oldguard ={ {"scattershot2",""} }
 specialist ={ {"melee1hscatterhit2",""},{"melee1hblindhit2",""} }
 unarmednil ={ {"unarmeddizzy1",""},{"unarmedstun1",""},{"unarmedblind1",""} }
 rangednil ={ {"underhandshot",""},{"eyeshot",""} }
+
+--default attack
+basicattack = { {"attack",""} }

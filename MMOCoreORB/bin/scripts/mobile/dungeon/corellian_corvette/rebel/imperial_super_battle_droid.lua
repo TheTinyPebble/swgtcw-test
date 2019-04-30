@@ -39,9 +39,12 @@ imperial_super_battle_droid = Creature:new {
       lootChance = 4000000
     }
   	},
-	conversationTemplate = "",
-	defaultWeapon = "object/weapon/ranged/rifle/rifle_dc15.iff",
-	defaultAttack = "defaultAttack"
+		weapons = {"clonetrooper_weapons"},
+		conversationTemplate = "",
+		reactionStf = "@npc_reaction/stormtrooper",
+		personalityStf = "@hireling/hireling_stormtrooper",
+		attacks = merge(attack)
+
 }
 
 CreatureTemplates:addCreatureTemplate(imperial_super_battle_droid, "imperial_super_battle_droid")
