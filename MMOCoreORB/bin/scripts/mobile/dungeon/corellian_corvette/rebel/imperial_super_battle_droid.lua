@@ -41,7 +41,7 @@ imperial_super_battle_droid = Creature:new {
   	},
 	conversationTemplate = "",
 	defaultWeapon = "object/weapon/ranged/rifle/rifle_dc15.iff",
-	defaultAttack = "creaturerangedattack"
+	defaultAttack = "attack"
 }
 
 CreatureTemplates:addCreatureTemplate(imperial_super_battle_droid, "imperial_super_battle_droid")
