@@ -74,10 +74,11 @@ A big thank you to everyone who has helped make Clone Wars a reality and also to
   * TheTinyPebble - Custom Armour system originally created for the Sentinels Republic server.
   * Alpha - Development work on the Clone Wars timeline & multiple LUA, C++ and TRE work additions/changes.
   * Deztia, Slight, Sallorn, Fanta and Eawah - Testing help during Clone Wars development.
-  * Empire in Flames server - Useful Newsnet terminal mod.
+  * Empire in Flames server - Useful Newsnet terminal mod, Better Astromech mod & astromech droid animation fixes.
   * Infinity server - CA/AAs working with skirts, Covert Hat, Clothes breaking on 0 condition, RegrantSkills Command and the SEA Removal Tool.
   * Sentinels Republic server - Healing Battle Fatigue in a Ranger Camp.
   * Reckoning server - City Mail spam bug fix & increased badge limit.
+  * Flurry server - Resource name displays in inventory.
   * Progor - Relics of Corbantis open source launcher base and DiscordBot.
   * Tyclo - Sentinels Republic open source launcher base, based on the RoC launcher listed above.
   * Phoenix - LUA Attribute Component.
