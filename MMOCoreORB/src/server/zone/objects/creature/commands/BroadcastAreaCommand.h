@@ -117,7 +117,7 @@ public:
 
 			//Creates an Imperial-only broadcast
 			else if (messageType.toLowerCase() == "-imperial" || messageType == "-i") {
-				String type = " \\#0000FF[Imperial]\\#FFFFFF ";
+				String type = " \\#EEEDEF[Republic]\\#FFFFFF ";
 				String message;
 				String faction = "imperial";
 
@@ -148,7 +148,7 @@ public:
 
 			//Creates a Rebel-only broadcast
 			else if (messageType.toLowerCase() == "-rebel" || messageType == "-r") {
-				String type = " \\#800000[Rebel]\\#FFFFFF ";
+				String type = " \\#234BED[Separatist]\\#FFFFFF ";
 				String message;
 				String faction = "rebel";
 
