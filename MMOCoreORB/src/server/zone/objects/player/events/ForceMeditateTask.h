@@ -36,10 +36,10 @@ public:
 				return;
 
 
-			if (fmeditateTask != NULL)
-				fmeditateTask->reschedule(3500);
-			else
-				fmeditateTask->schedule(3500);
+			if (fmeditateTask != NULL) {
+				fmeditateTask->reschedule(5000);
+				creature->playEffect("clienteffect/pl_force_meditate_self.cef", "");
+			}
 
 		} catch (Exception& e) {
 			player->error("unreported exception caught in ForceMeditateTask::activate");
