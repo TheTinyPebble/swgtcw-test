@@ -5,8 +5,8 @@ kashyyykian_hunting_armor_chest_plate = {
 	directObjectTemplate = "object/tangible/wearables/armor/kashyyykian_hunting/armor_kashyyykian_hunting_chest_plate.iff",
 	craftingValues = {
 		{"armor_rating",1,1,0},
-		{"armor_effectiveness",8,39,10},
-		{"armor_integrity",30000,55000,0},
+		{"armor_effectiveness",2,20,10},
+		{"armor_integrity",15000, 25000,0},
 		{"armor_health_encumbrance",350,210,0},
 		{"armor_action_encumbrance",157,93,0},
 		{"armor_mind_encumbrance",400,240,0},
