@@ -37,7 +37,7 @@ public:
 
 
 			if (fmeditateTask != NULL)
-				fmeditateTask->reschedule(5000);
+				fmeditateTask->reschedule(3500);
 			else
 				fmeditateTask->schedule(3500);
 
