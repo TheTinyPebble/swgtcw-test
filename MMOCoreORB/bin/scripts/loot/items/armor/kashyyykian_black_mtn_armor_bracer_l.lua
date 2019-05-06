@@ -5,9 +5,9 @@ kashyyykian_black_mtn_armor_bracer_l = {
 	directObjectTemplate = "object/tangible/wearables/armor/kashyyykian_black_mtn/armor_kashyyykian_black_mtn_bracer_l.iff",
 	craftingValues = {
 		{"armor_rating",1,1,0},
-		{"kineticeffectiveness",10,40,10},
-		{"armor_effectiveness",4,29,10},
-		{"armor_integrity",18750, 31250,0},
+		{"kineticeffectiveness",2,20,10},
+		{"armor_effectiveness",2,15,10},
+		{"armor_integrity",9750, 15250,0},
 		{"armor_health_encumbrance",17,10,0},
 		{"armor_action_encumbrance",22,13,0},
 		{"armor_mind_encumbrance",23,14,0},
