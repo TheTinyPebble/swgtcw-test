@@ -38,6 +38,8 @@ public:
 
 			if (fmeditateTask != NULL)
 				fmeditateTask->reschedule(5000);
+			else
+				fmeditateTask->schedule(3500);
 
 		} catch (Exception& e) {
 			player->error("unreported exception caught in ForceMeditateTask::activate");
