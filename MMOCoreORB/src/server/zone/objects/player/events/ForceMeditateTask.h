@@ -38,7 +38,7 @@ public:
 
 			if (fmeditateTask != NULL) {
 				fmeditateTask->reschedule(5000);
-				creature->playEffect("clienteffect/pl_force_meditate_self.cef", "");
+				player->playEffect("clienteffect/pl_force_meditate_self.cef", "");
 			}
 
 		} catch (Exception& e) {
