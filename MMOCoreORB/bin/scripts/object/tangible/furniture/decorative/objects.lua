@@ -1869,3 +1869,12 @@ object_tangible_furniture_decorative_shared_tatooine_tapestry = SharedTangibleOb
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_tatooine_tapestry, "object/tangible/furniture/decorative/shared_tatooine_tapestry.iff")
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_bas_relief, "object/tangible/furniture/decorative/shared_bas_relief.iff")
+
+object_tangible_furniture_decorative_shared_bas_relief = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_bas_relief.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_bas_relief, "object/tangible/furniture/decorative/shared_bas_relief.iff")
