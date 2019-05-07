@@ -43,18 +43,19 @@
 
 
 --Children folder includes
-includeFile("tangible/item/new_player/serverobjects.lua")
-includeFile("tangible/item/plant/serverobjects.lua")
-includeFile("tangible/item/quest/serverobjects.lua")
-includeFile("tangible/item/furniture/serverobjects.lua")
 
 -- Server Objects
-includeFile("tangible/item/con_drinking_glass_01.lua")
-includeFile("tangible/item/droid_customization.lua")
-includeFile("tangible/item/loot_credit_chip.lua")
-includeFile("tangible/item/lytus_family_artefact.lua")
-includeFile("tangible/item/vehicle_customization.lua")
-includeFile("tangible/item/versafunction88.lua")
-
---sea tool
-includeFile("tangible/item/sea_removal_tool.lua")
+includeFile("items/furniture/decorative_bas_relief.lua")
+includeFile("items/furniture/decorative_chon_bust.lua")
+includeFile("items/furniture/decorative_computer_console_01.lua")
+includeFile("items/furniture/decorative_computer_console_02.lua")
+includeFile("items/furniture/decorative_display_case_01.lua")
+includeFile("items/furniture/decorative_display_case_02.lua")
+includeFile("items/furniture/decorative_dooku_bust.lua")
+includeFile("items/furniture/decorative_drink_dispenser.lua")
+includeFile("items/furniture/decorative_indoor_fountain_01.lua")
+includeFile("items/furniture/decorative_indoor_fountain_02.lua")
+includeFile("items/furniture/decorative_indoor_garden_01.lua")
+includeFile("items/furniture/decorative_indoor_garden_02.lua")
+includeFile("items/furniture/decorative_jedi_library_bookshelf.lua")
+includeFile("items/furniture/decorative_painting_jedi_crest.lua")
