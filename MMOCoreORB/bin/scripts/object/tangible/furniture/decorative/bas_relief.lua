@@ -41,7 +41,7 @@
 --this exception also makes it possible to release a modified version 
 
 
-object_tangible_furniture_decorative_bas_relief = object_tangible_furniture_decorative_bas_relief:new {
+object_tangible_furniture_decorative_bas_relief = object_tangible_furniture_decorative_shared_bas_relief:new {
 
 }
 
