@@ -884,11 +884,19 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 
 	int jediToughness = defender->getSkillMod("jedi_toughness");
 	int lsRangedToughness = defender->getSkillMod("lightsaber_toughness") / 1.5;
+	int rangedToughness = 0;
+
+ 	for (int i = 0; i < defenseToughMods->size(); ++i) {
+		rangedToughness = defender->getSkillMod(defenseToughMods->get(i));
+	}
 	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0)
 		damage *= 1.f - (jediToughness / 100.f);
 
-	if (damType == SharedWeaponObjectTemplate::RANGEDATTACK && lsRangedToughness > 0)
+	if (damType == SharedWeaponObjectTemplate::RANGEDATTACK && lsRangedToughness > 0){
 		damage *= 1.f - (lsRangedToughness / 100.f);
+	} else if (damType == SharedWeaponObjectTemplate::RANGEDATTACK && rangedToughness > 0){
+		damage *=1.f - ((rangedToughness / 1.3)  / 100.f);
+	}
 
 	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && defender->isPlayerCreature() && defender->hasSkill("combat_bountyhunter_master")){
 		damage *= 1.f - (25.f/100.f);
