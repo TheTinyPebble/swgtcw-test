@@ -118,7 +118,7 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 
 	--GCW Correspondence text
 	if (selectedID == 82) then
-		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
+		body = http.request("http://swgtcw.us/launcher/patchnotes.txt")
 		title = "Report From The Front"
 		
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()
