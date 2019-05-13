@@ -889,12 +889,14 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
  	for (int i = 0; i < defenseToughMods->size(); ++i) {
 		rangedToughness = defender->getSkillMod(defenseToughMods->get(i));
 	}
+	info("Ranged Toughness: " + rangedToughness, true);
 	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0)
 		damage *= 1.f - (jediToughness / 100.f);
 
 	if (damType == SharedWeaponObjectTemplate::RANGEDATTACK && lsRangedToughness > 0){
 		damage *= 1.f - (lsRangedToughness / 100.f);
 	} else if (damType == SharedWeaponObjectTemplate::RANGEDATTACK && rangedToughness > 0){
+		info("Using ranged toughness to lower damage by: " + String::valueOf(rangedToughness / 100.f) + "%", true);
 		damage *= 1.f - (rangedToughness / 100.f);
 	}
 
