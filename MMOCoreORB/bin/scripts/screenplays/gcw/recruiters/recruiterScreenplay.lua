@@ -343,6 +343,7 @@ function recruiterScreenplay:handleSuiPurchase(pCreature, pSui, eventIndex, arg0
 	deleteStringData(playerID .. ":faction_purchase")
 
 	local awardResult = nil
+	local factionName = nil
 
 	if (self:isHireling(faction, itemString)) then
 		awardResult = self:awardData(pCreature, faction, itemString)
@@ -361,7 +362,12 @@ function recruiterScreenplay:handleSuiPurchase(pCreature, pSui, eventIndex, arg0
 	elseif (awardResult == self.errorCodes.NOTENOUGHFACTION) then
 		local messageString = LuaStringIdChatParameter("@faction_recruiter:not_enough_standing_spend")
 		messageString:setDI(self.minimumFactionStanding)
-		messageString:setTO(self:toTitleCase(faction))
+		if (self:toTitleCase(faction) ~= "imperial") then
+			factionName = "Republic"
+		elseif (self:toTitleCase(faction) ~= "rebel") then
+			factionName = "Separatist"
+		end
+		messageString:setTO(factionName)
 		CreatureObject(pCreature):sendSystemMessage(messageString:_getObject()) -- You do not have enough faction standing to spend. You must maintain at least %DI to remain part of the %TO faction.
 	elseif (awardResult == self.errorCodes.ITEMCOST) then
 		CreatureObject(pCreature):sendSystemMessage("Error determining cost of item. Please post a bug report regarding the item you attempted to purchase.")
