@@ -895,7 +895,7 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	if (damType == SharedWeaponObjectTemplate::RANGEDATTACK && lsRangedToughness > 0){
 		damage *= 1.f - (lsRangedToughness / 100.f);
 	} else if (damType == SharedWeaponObjectTemplate::RANGEDATTACK && rangedToughness > 0){
-		damage *=1.f - ((rangedToughness / 1.3)  / 100.f);
+		damage *= 1.f - (rangedToughness / 100.f);
 	}
 
 	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && defender->isPlayerCreature() && defender->hasSkill("combat_bountyhunter_master")){
