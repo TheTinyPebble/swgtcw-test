@@ -27,7 +27,7 @@ object_weapon_melee_2h_sword_2h_sword_lightsaber_yellow = object_weapon_melee_2h
 	attackType = MELEEATTACK,
 
 	-- ENERGY, KINETIC, ELECTRICITY, STUN, BLAST, HEAT, COLD, ACID, LIGHTSABER
-	damageType = LIGHTSABER,
+	damageType = ENERGY,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
 	armorPiercing = MEDIUM,
