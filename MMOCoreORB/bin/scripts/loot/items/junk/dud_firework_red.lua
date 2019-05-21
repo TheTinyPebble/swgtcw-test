@@ -10,6 +10,7 @@ dud_firework_red = {
 	customizationStringNames = {},
 	customizationValues = {},
 	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKGENERIC,
 	junkMinValue = 20,
 	junkMaxValue = 40
 }

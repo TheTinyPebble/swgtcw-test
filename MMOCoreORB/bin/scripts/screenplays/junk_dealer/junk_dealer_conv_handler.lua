@@ -110,33 +110,53 @@ JunkDealerGenericConvoHandler = JunkDealerConvoHandler:new {
 }
 
 JunkDealerArmsConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "arms",
-	noLootText = "@conversation/junk_dealer_arms:s_370a03c",
-	startSaleText = "@conversation/junk_dealer_arms:s_c86eba88"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "arms",
+	--noLootText = "@conversation/junk_dealer_arms:s_370a03c",
+	--startSaleText = "@conversation/junk_dealer_arms:s_c86eba88"
 }
 
 JunkDealerFineryConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "finery",
-	noLootText = "@conversation/junk_dealer_finery:s_370a03c",
-	startSaleText = "@conversation/junk_dealer_finery:s_c86eba88"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "finery",
+	--noLootText = "@conversation/junk_dealer_finery:s_370a03c",
+	--startSaleText = "@conversation/junk_dealer_finery:s_c86eba88"
 }
 
 JunkDealerDenderConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "gungan",
-	noLootText = "@conversation/junk_dender_rori:s_a753e4d6",
-	startSaleText = "@conversation/junk_dender_rori:s_673b632f"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "gungan",
+	--noLootText = "@conversation/junk_dender_rori:s_a753e4d6",
+	--startSaleText = "@conversation/junk_dender_rori:s_673b632f"
 }
 
 JunkDealerLilaConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "arms",
-	noLootText = "@conversation/junk_lila_borvo:s_e8b03c7c",
-	startSaleText = "@conversation/junk_lila_borvo:s_1875d09c"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "arms",
+	--noLootText = "@conversation/junk_lila_borvo:s_e8b03c7c",
+	--startSaleText = "@conversation/junk_lila_borvo:s_1875d09c"
 }
 
 JunkDealerMalikConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "corsec",
-	noLootText = "@conversation/junk_malik_vistal:s_d36db42d",
-	startSaleText = "@conversation/junk_malik_vistal:s_fc51be40"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "corsec",
+	--noLootText = "@conversation/junk_malik_vistal:s_d36db42d",
+	--startSaleText = "@conversation/junk_malik_vistal:s_fc51be40"
 }
 
 JunkDealerNadoConvoHandler = JunkDealerConvoHandler:new {
@@ -146,39 +166,63 @@ JunkDealerNadoConvoHandler = JunkDealerConvoHandler:new {
 }
 
 JunkDealerNathanConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "jawa",
-	noLootText = "@conversation/junk_nathan_taike:s_69567be7",
-	startSaleText = "@conversation/junk_nathan_taike:s_ecf19442"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "jawa",
+	--noLootText = "@conversation/junk_nathan_taike:s_69567be7",
+	--startSaleText = "@conversation/junk_nathan_taike:s_ecf19442"
 }
 
 JunkDealerOlloboConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "arms",
-	noLootText = "@conversation/junk_ollobo_jabbas:s_b85badf5",
-	startSaleText = "@conversation/junk_ollobo_jabbas:s_e2ee167d"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "arms",
+	--noLootText = "@conversation/junk_ollobo_jabbas:s_b85badf5",
+	--startSaleText = "@conversation/junk_ollobo_jabbas:s_e2ee167d"
 }
 
 JunkDealerQuichConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "jedi",
-	noLootText = "@conversation/junk_quich_dantooine:s_6e11f342",
-	startSaleText = "@conversation/junk_quich_dantooine:s_463bc6c4"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "jedi",
+	--noLootText = "@conversation/junk_quich_dantooine:s_6e11f342",
+	--startSaleText = "@conversation/junk_quich_dantooine:s_463bc6c4"
 }
 
 JunkDealerReggiConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "arms",
-	noLootText = "@conversation/junk_reggi_nym:s_2e005077",
-	startSaleText = "@conversation/junk_reggi_nym:s_b8e27f3c"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "arms",
+	--noLootText = "@conversation/junk_reggi_nym:s_2e005077",
+	--startSaleText = "@conversation/junk_reggi_nym:s_b8e27f3c"
 }
 
 JunkDealerSheaniConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "finery",
-	noLootText = "@conversation/junk_sheani_lake:s_d264cf44",
-	startSaleText = "@conversation/junk_sheani_lake:s_370197a6"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "finery",
+	--noLootText = "@conversation/junk_sheani_lake:s_d264cf44",
+	--startSaleText = "@conversation/junk_sheani_lake:s_370197a6"
 }
 
 JunkDealerSnegConvoHandler = JunkDealerConvoHandler:new {
-	junkType = "arms",
-	noLootText = "@conversation/junk_sneg_valarian:s_b4cc3fb7",
-	startSaleText = "@conversation/junk_sneg_valarian:s_94fa366f"
+	junkType = "generic",
+	noLootText = "@conversation/junk_dealer_generic:s_cd7a3f41",
+	startSaleText = "@conversation/junk_dealer_generic:s_54fab04f",
+	inventorText = "@conversation/junk_dealer_generic:s_3aa18b2d"
+	--junkType = "arms",
+	--noLootText = "@conversation/junk_sneg_valarian:s_b4cc3fb7",
+	--startSaleText = "@conversation/junk_sneg_valarian:s_94fa366f"
 }
 
 JunkDealerJawaConvoHandler = JunkDealerConvoHandler:new {
@@ -189,13 +233,16 @@ JunkDealerJawaConvoHandler = JunkDealerConvoHandler:new {
 }
 
 JunkDealerJawaArmsConvoHandler = JunkDealerJawaConvoHandler:new {
-	junkType = "arms"
+	junkType = "generic",
+	--junkType = "arms"
 }
 
 JunkDealerJawaFineryConvoHandler = JunkDealerJawaConvoHandler:new {
-	junkType = "finery"
+	junkType = "generic",
+	--junkType = "finery"
 }
 
 JunkDealerJawaTuskenConvoHandler = JunkDealerJawaConvoHandler:new {
-	junkType = "tusken"
+	junkType = "generic",
+	--junkType = "tusken"
 }

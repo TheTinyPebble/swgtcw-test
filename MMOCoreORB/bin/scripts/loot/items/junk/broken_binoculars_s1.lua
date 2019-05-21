@@ -8,6 +8,7 @@ broken_binoculars_s1 = {
 	customizationStringNames = {},
 	customizationValues = {},
 	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKGENERIC,
 	junkMinValue = 20,
 	junkMaxValue = 40
 }

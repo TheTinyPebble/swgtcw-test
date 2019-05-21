@@ -9,7 +9,8 @@ used_ticket = {
 	},
 	customizationStringNames = {},
 	customizationValues = {},
-	junkDealerTypeNeeded = JUNKGENERIC + JUNKFINERY + JUNKARMS,
+	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKGENERIC + JUNKFINERY + JUNKARMS,
 	junkMinValue = 20,
 	junkMaxValue = 40
 }
