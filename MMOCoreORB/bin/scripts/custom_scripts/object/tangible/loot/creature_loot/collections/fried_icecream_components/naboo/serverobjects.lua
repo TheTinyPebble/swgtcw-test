@@ -1,0 +1,7 @@
+includeFile("../custom_scripts/object/tangible/loot/creature_loot/collections/fried_icecream_components/naboo/cligs.lua")
+includeFile("../custom_scripts/object/tangible/loot/creature_loot/collections/fried_icecream_components/naboo/cracknut.lua")
+includeFile("../custom_scripts/object/tangible/loot/creature_loot/collections/fried_icecream_components/naboo/denta.lua")
+includeFile("../custom_scripts/object/tangible/loot/creature_loot/collections/fried_icecream_components/naboo/muja.lua")
+includeFile("../custom_scripts/object/tangible/loot/creature_loot/collections/fried_icecream_components/naboo/ootoowergs.lua")
+includeFile("../custom_scripts/object/tangible/loot/creature_loot/collections/fried_icecream_components/naboo/phraig.lua")
+includeFile("../custom_scripts/object/tangible/loot/creature_loot/collections/fried_icecream_components/naboo/stinkmelon.lua")
