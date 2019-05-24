@@ -167,7 +167,7 @@ function EventTools.getDeco(pPlayer)
 					local dir = math.floor(SceneObject(pObject):getDirectionAngle())
 					local templatePath = SceneObject(pObject):getTemplateObjectPath()
 					
-					CreatureObject(pPlayer):sendSystemMessage("spawnSceneObject(dungeon1, " .. templatePath .. ", " .. posX .. ", " .. posZ .. ", " .. posY .. ", 1, " .. dir .. ")")
+					CreatureObject(pPlayer):sendSystemMessage("spawnSceneObject(\"dungeon1\", \"" .. templatePath .. "\" , " .. posX .. ", " .. posZ .. ", " .. posY .. ", 1, " .. dir .. ")")
 				end
 			end
 		end
