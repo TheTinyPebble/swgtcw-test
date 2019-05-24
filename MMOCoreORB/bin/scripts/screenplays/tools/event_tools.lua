@@ -7,6 +7,7 @@ EventTools = {
 		{ "Elite Spawns Satus", "openEliteSpawnStatus" },
 		--{ "Test ODST", "openOdstConfig" },
 		{ "Test Event Spawn Manager", "testESM" },
+		{ "Spawn Buildings + Teleport (For Test)", "spawnBuildings" },
 	}
 }
 
@@ -23,7 +24,7 @@ function EventTools:openSUI(pCreature)
 
 	sui.setTargetNetworkId(SceneObject(pCreature):getObjectID())
 
-	sui.setTitle("Staff Tools")
+	sui.setTitle("Event Tools")
 	sui.setPrompt("Select a tool below to open it.")
 
 	for i = 1, #self.toolsMenu, 1 do
@@ -66,6 +67,56 @@ function EventTools.testESM(pPlayer)
 end
 
 function EventTools:suiShuttleDropoffCallback(pPlayer, pSui, eventIndex, args)
+end
+
+function EventTools.spawnBuildings(pPlayer)
+	local sui = SuiListBox.new("EventTools", "spawnBuildingsCallBack")
+
+	sui.setTargetNetworkId(SceneObject(pPlayer):getObjectID())
+
+	sui.setTitle("Building Spawner (For Test)")
+	sui.setPrompt("Select which building to spawn, you'll be teleported inside.")
+
+	sui.add("Space Station", "")
+	sui.add("Axkva Min Lair", "")
+	sui.add("Tomb of Exar Kun", "")
+
+	sui.sendTo(pPlayer)
+end
+
+function EventTools:spawnBuildingsCallBack(pPlayer, pSui, eventIndex, args)
+	local cancelPressed = (eventIndex == 1)
+
+	if (cancelPressed) then
+		return
+	end
+
+	local arg = args + 1
+	
+	local zoneName = SceneObject(pPlayer):getZoneName()
+	local posX = SceneObject(pPlayer):getWorldPositionX()
+	local posZ = SceneObject(pPlayer):getWorldPositionZ()
+	local posY = SceneObject(pPlayer):getWorldPositionY()
+	local pBuilding
+	
+	if (arg == 1) then
+		local pBuilding = spawnSceneObject(zoneName, "object/building/heroic/exar_kun_tomb.iff", posX, posZ, posY, 0, 0 )
+	elseif (arg == 2) then
+		local pBuilding = spawnSceneObject(zoneName, "object/building/heroic/axkva_min_lair.iff", posX, posZ, posY, 0, 0 )
+	elseif (arg == 3) then
+		local pBuilding = spawnSceneObject(zoneName, "object/building/general/npe_space_station.iff", posX, posZ, posY, 0, 0 )
+	end
+
+	if (pBuilding ~= nil) then
+		local pCell = BuildingObject(pBuilding):getCell(1)
+
+		if (pCell == nil) then
+			return
+		end
+
+		local cellID = SceneObject(pCell):getObjectID()
+		SceneObject(pPlayer):switchZone(zoneName, 0, 0, 0, cellID)
+	end
 end
 
 return EventTools
