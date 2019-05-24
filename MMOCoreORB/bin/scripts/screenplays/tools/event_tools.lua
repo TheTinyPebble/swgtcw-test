@@ -100,11 +100,11 @@ function EventTools:spawnBuildingsCallBack(pPlayer, pSui, eventIndex, args)
 	local pBuilding
 	
 	if (arg == 1) then
-		local pBuilding = spawnSceneObject(zoneName, "object/building/heroic/exar_kun_tomb.iff", posX, posZ, posY, 0, 0 )
+		pBuilding = spawnSceneObject(zoneName, "object/building/heroic/exar_kun_tomb.iff", posX, posZ, posY, 0, 0 )
 	elseif (arg == 2) then
-		local pBuilding = spawnSceneObject(zoneName, "object/building/heroic/axkva_min_lair.iff", posX, posZ, posY, 0, 0 )
+		pBuilding = spawnSceneObject(zoneName, "object/building/heroic/axkva_min_lair.iff", posX, posZ, posY, 0, 0 )
 	elseif (arg == 3) then
-		local pBuilding = spawnSceneObject(zoneName, "object/building/general/npe_space_station.iff", posX, posZ, posY, 0, 0 )
+		pBuilding = spawnSceneObject(zoneName, "object/building/general/npe_space_station.iff", posX, posZ, posY, 0, 0 )
 	end
 
 	if (pBuilding ~= nil) then
@@ -116,6 +116,7 @@ function EventTools:spawnBuildingsCallBack(pPlayer, pSui, eventIndex, args)
 
 		local cellID = SceneObject(pCell):getObjectID()
 		SceneObject(pPlayer):switchZone(zoneName, 0, 0, 0, cellID)
+		CreatureObject(pPlayer):sendSystemMessage(cellID)
 	end
 end
 
