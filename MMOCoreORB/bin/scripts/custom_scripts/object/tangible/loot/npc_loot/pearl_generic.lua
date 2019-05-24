@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_pearl_generic = object_tangible_loot_npc_loot_shar
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_pearl_generic, "object/tangible/loot/npc/loot/pearl_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_pearl_generic, "object/tangible/loot/npc_loot/pearl_generic.iff")

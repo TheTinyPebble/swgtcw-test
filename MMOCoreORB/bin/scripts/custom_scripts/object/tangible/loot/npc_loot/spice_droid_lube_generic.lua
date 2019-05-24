@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_spice_droid_lube_generic = object_tangible_loot_np
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_droid_lube_generic, "object/tangible/loot/npc/loot/spice_droid_lube_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_droid_lube_generic, "object/tangible/loot/npc_loot/spice_droid_lube_generic.iff")

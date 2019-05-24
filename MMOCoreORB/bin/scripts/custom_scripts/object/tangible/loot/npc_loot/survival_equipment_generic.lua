@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_survival_equipment_generic = object_tangible_loot_
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_survival_equipment_generic, "object/tangible/loot/npc/loot/survival_equipment_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_survival_equipment_generic, "object/tangible/loot/npc_loot/survival_equipment_generic.iff")

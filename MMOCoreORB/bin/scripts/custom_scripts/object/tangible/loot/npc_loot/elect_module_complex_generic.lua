@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_elect_module_complex_generic = object_tangible_loo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_elect_module_complex_generic, "object/tangible/loot/npc/loot/elect_module_complex_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_elect_module_complex_generic, "object/tangible/loot/npc_loot/elect_module_complex_generic.iff")

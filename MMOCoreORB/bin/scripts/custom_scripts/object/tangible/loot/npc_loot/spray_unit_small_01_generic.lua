@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_spray_unit_small_01_generic = object_tangible_loot
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spray_unit_small_01_generic, "object/tangible/loot/npc/loot/spray_unit_small_01_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spray_unit_small_01_generic, "object/tangible/loot/npc_loot/spray_unit_small_01_generic.iff")

@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_destroyer_space_beacon = object_tangible_lo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_destroyer_space_beacon, "object/tangible/loot/npc/loot/heroic_destroyer_space_beacon.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_destroyer_space_beacon, "object/tangible/loot/npc_loot/heroic_destroyer_space_beacon.iff")

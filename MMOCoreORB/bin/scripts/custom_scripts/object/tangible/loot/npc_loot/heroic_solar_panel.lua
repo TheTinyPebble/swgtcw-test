@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_solar_panel = object_tangible_loot_npc_loot
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_solar_panel, "object/tangible/loot/npc/loot/heroic_solar_panel.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_solar_panel, "object/tangible/loot/npc_loot/heroic_solar_panel.iff")

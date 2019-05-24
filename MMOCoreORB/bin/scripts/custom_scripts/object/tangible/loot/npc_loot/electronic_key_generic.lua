@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_electronic_key_generic = object_tangible_loot_npc_
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_electronic_key_generic, "object/tangible/loot/npc/loot/electronic_key_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_electronic_key_generic, "object/tangible/loot/npc_loot/electronic_key_generic.iff")

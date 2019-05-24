@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_basket_generic = object_tangible_loot_npc_loot_sha
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_basket_generic, "object/tangible/loot/npc/loot/basket_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_basket_generic, "object/tangible/loot/npc_loot/basket_generic.iff")

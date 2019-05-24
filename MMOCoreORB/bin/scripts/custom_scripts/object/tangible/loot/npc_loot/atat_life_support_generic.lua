@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_atat_life_support_generic = object_tangible_loot_n
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_atat_life_support_generic, "object/tangible/loot/npc/loot/atat_life_support_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_atat_life_support_generic, "object/tangible/loot/npc_loot/atat_life_support_generic.iff")

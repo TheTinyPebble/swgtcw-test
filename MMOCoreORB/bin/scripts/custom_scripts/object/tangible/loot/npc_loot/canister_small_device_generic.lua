@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_canister_small_device_generic = object_tangible_lo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_canister_small_device_generic, "object/tangible/loot/npc/loot/canister_small_device_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_canister_small_device_generic, "object/tangible/loot/npc_loot/canister_small_device_generic.iff")

@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_tusken_meat_rack = object_tangible_loot_npc
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_tusken_meat_rack, "object/tangible/loot/npc/loot/heroic_tusken_meat_rack.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_tusken_meat_rack, "object/tangible/loot/npc_loot/heroic_tusken_meat_rack.iff")

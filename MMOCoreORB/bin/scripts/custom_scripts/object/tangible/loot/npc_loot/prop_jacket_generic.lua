@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_prop_jacket_generic = object_tangible_loot_npc_loo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_prop_jacket_generic, "object/tangible/loot/npc/loot/prop_jacket_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_prop_jacket_generic, "object/tangible/loot/npc_loot/prop_jacket_generic.iff")

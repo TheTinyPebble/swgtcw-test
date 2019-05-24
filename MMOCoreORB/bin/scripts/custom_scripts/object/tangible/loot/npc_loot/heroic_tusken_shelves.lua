@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_tusken_shelves = object_tangible_loot_npc_l
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_tusken_shelves, "object/tangible/loot/npc/loot/heroic_tusken_shelves.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_tusken_shelves, "object/tangible/loot/npc_loot/heroic_tusken_shelves.iff")

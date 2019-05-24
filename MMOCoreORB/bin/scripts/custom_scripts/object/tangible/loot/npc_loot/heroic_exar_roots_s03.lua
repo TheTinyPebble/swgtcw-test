@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_exar_roots_s03 = object_tangible_loot_npc_l
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_exar_roots_s03, "object/tangible/loot/npc/loot/heroic_exar_roots_s03.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_exar_roots_s03, "object/tangible/loot/npc_loot/heroic_exar_roots_s03.iff")

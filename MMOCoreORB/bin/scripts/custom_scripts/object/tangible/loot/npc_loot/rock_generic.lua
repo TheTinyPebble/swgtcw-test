@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_rock_generic = object_tangible_loot_npc_loot_share
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_rock_generic, "object/tangible/loot/npc/loot/rock_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_rock_generic, "object/tangible/loot/npc_loot/rock_generic.iff")

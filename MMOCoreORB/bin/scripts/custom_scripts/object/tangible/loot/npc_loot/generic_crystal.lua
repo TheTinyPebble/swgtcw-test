@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_generic_crystal = object_tangible_loot_npc_loot_sh
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_generic_crystal, "object/tangible/loot/npc/loot/generic_crystal.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_generic_crystal, "object/tangible/loot/npc_loot/generic_crystal.iff")

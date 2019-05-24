@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_slave_collar_generic = object_tangible_loot_npc_lo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_slave_collar_generic, "object/tangible/loot/npc/loot/slave_collar_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_slave_collar_generic, "object/tangible/loot/npc_loot/slave_collar_generic.iff")

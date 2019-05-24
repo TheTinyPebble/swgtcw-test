@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_chassis_blueprint_device_generic = object_tangible
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_chassis_blueprint_device_generic, "object/tangible/loot/npc/loot/chassis_blueprint_device_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_chassis_blueprint_device_generic, "object/tangible/loot/npc_loot/chassis_blueprint_device_generic.iff")

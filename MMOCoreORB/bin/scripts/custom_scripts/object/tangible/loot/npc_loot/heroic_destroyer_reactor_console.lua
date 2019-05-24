@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_destroyer_reactor_console = object_tangible
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_destroyer_reactor_console, "object/tangible/loot/npc/loot/heroic_destroyer_reactor_console.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_destroyer_reactor_console, "object/tangible/loot/npc_loot/heroic_destroyer_reactor_console.iff")

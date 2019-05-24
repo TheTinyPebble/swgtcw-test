@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_scope_weapon_generic = object_tangible_loot_npc_lo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_scope_weapon_generic, "object/tangible/loot/npc/loot/scope_weapon_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_scope_weapon_generic, "object/tangible/loot/npc_loot/scope_weapon_generic.iff")

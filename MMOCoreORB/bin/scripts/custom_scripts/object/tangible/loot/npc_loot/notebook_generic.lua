@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_notebook_generic = object_tangible_loot_npc_loot_s
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_notebook_generic, "object/tangible/loot/npc/loot/notebook_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_notebook_generic, "object/tangible/loot/npc_loot/notebook_generic.iff")

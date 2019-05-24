@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_exar_torch = object_tangible_loot_npc_loot_
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_exar_torch, "object/tangible/loot/npc/loot/heroic_exar_torch.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_exar_torch, "object/tangible/loot/npc_loot/heroic_exar_torch.iff")

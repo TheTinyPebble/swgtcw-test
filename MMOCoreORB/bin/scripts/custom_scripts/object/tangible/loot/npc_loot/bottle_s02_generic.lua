@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_bottle_s02_generic = object_tangible_loot_npc_loot
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_bottle_s02_generic, "object/tangible/loot/npc/loot/bottle_s02_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_bottle_s02_generic, "object/tangible/loot/npc_loot/bottle_s02_generic.iff")

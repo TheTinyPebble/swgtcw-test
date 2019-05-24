@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_camera_generic = object_tangible_loot_npc_loot_sha
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_camera_generic, "object/tangible/loot/npc/loot/camera_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_camera_generic, "object/tangible/loot/npc_loot/camera_generic.iff")

@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_metal_barrel_generic = object_tangible_loot_npc_lo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_metal_barrel_generic, "object/tangible/loot/npc/loot/metal_barrel_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_metal_barrel_generic, "object/tangible/loot/npc_loot/metal_barrel_generic.iff")

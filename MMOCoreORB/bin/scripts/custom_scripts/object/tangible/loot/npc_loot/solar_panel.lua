@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_solar_panel = object_tangible_loot_npc_loot_shared
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_solar_panel, "object/tangible/loot/npc/loot/solar_panel.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_solar_panel, "object/tangible/loot/npc_loot/solar_panel.iff")

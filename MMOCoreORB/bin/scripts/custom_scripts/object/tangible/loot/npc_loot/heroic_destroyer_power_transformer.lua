@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_destroyer_power_transformer = object_tangib
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_destroyer_power_transformer, "object/tangible/loot/npc/loot/heroic_destroyer_power_transformer.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_destroyer_power_transformer, "object/tangible/loot/npc_loot/heroic_destroyer_power_transformer.iff")

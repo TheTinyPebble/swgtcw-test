@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_axkva_min_claw = object_tangible_loot_npc_l
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_axkva_min_claw, "object/tangible/loot/npc/loot/heroic_axkva_min_claw.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_axkva_min_claw, "object/tangible/loot/npc_loot/heroic_axkva_min_claw.iff")

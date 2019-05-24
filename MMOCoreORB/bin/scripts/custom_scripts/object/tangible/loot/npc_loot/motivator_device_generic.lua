@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_motivator_device_generic = object_tangible_loot_np
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_motivator_device_generic, "object/tangible/loot/npc/loot/motivator_device_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_motivator_device_generic, "object/tangible/loot/npc_loot/motivator_device_generic.iff")

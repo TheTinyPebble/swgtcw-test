@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_wall_lamp = object_tangible_loot_npc_loot_s
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_wall_lamp, "object/tangible/loot/npc/loot/heroic_wall_lamp.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_wall_lamp, "object/tangible/loot/npc_loot/heroic_wall_lamp.iff")

@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_axkva_min_claw_light = object_tangible_loot
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_axkva_min_claw_light, "object/tangible/loot/npc/loot/heroic_axkva_min_claw_light.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_axkva_min_claw_light, "object/tangible/loot/npc_loot/heroic_axkva_min_claw_light.iff")

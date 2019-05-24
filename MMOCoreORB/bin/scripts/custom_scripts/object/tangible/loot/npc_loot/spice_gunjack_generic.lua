@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_spice_gunjack_generic = object_tangible_loot_npc_l
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_gunjack_generic, "object/tangible/loot/npc/loot/spice_gunjack_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_gunjack_generic, "object/tangible/loot/npc_loot/spice_gunjack_generic.iff")

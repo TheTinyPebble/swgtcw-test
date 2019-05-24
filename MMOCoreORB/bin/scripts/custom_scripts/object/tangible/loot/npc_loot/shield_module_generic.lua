@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_shield_module_generic = object_tangible_loot_npc_l
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_shield_module_generic, "object/tangible/loot/npc/loot/shield_module_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_shield_module_generic, "object/tangible/loot/npc_loot/shield_module_generic.iff")

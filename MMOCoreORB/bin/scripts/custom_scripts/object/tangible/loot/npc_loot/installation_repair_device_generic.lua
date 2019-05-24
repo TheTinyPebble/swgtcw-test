@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_installation_repair_device_generic = object_tangib
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_installation_repair_device_generic, "object/tangible/loot/npc/loot/installation_repair_device_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_installation_repair_device_generic, "object/tangible/loot/npc_loot/installation_repair_device_generic.iff")

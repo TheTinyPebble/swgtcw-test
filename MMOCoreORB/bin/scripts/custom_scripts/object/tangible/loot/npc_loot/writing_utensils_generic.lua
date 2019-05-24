@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_writing_utensils_generic = object_tangible_loot_np
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_writing_utensils_generic, "object/tangible/loot/npc/loot/writing_utensils_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_writing_utensils_generic, "object/tangible/loot/npc_loot/writing_utensils_generic.iff")

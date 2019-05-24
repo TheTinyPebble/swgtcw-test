@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_datadisk_generic = object_tangible_loot_npc_loot_s
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_datadisk_generic, "object/tangible/loot/npc/loot/datadisk_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_datadisk_generic, "object/tangible/loot/npc_loot/datadisk_generic.iff")

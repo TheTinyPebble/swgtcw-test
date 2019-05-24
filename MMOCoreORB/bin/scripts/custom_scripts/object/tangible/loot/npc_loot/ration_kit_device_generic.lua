@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_ration_kit_device_generic = object_tangible_loot_n
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_ration_kit_device_generic, "object/tangible/loot/npc/loot/ration_kit_device_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_ration_kit_device_generic, "object/tangible/loot/npc_loot/ration_kit_device_generic.iff")

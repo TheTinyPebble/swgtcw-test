@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_red_wiring_generic = object_tangible_loot_npc_loot
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_red_wiring_generic, "object/tangible/loot/npc/loot/red_wiring_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_red_wiring_generic, "object/tangible/loot/npc_loot/red_wiring_generic.iff")

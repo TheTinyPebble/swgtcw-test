@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_exar_brazier = object_tangible_loot_npc_loo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_exar_brazier, "object/tangible/loot/npc/loot/heroic_exar_brazier.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_exar_brazier, "object/tangible/loot/npc_loot/heroic_exar_brazier.iff")

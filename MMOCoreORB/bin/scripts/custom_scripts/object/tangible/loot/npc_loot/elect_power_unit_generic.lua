@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_elect_power_unit_generic = object_tangible_loot_np
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_elect_power_unit_generic, "object/tangible/loot/npc/loot/elect_power_unit_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_elect_power_unit_generic, "object/tangible/loot/npc_loot/elect_power_unit_generic.iff")

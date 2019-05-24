@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_spice_neutron_pixey_generic = object_tangible_loot
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_neutron_pixey_generic, "object/tangible/loot/npc/loot/spice_neutron_pixey_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_neutron_pixey_generic, "object/tangible/loot/npc_loot/spice_neutron_pixey_generic.iff")

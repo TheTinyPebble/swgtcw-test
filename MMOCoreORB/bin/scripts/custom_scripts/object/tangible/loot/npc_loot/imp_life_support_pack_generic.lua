@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_imp_life_support_pack_generic = object_tangible_lo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_imp_life_support_pack_generic, "object/tangible/loot/npc/loot/imp_life_support_pack_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_imp_life_support_pack_generic, "object/tangible/loot/npc_loot/imp_life_support_pack_generic.iff")

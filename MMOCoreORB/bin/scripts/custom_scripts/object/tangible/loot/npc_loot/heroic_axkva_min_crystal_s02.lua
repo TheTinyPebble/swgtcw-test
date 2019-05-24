@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_heroic_axkva_min_crystal_s02 = object_tangible_loo
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_axkva_min_crystal_s02, "object/tangible/loot/npc/loot/heroic_axkva_min_crystal_s02.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_heroic_axkva_min_crystal_s02, "object/tangible/loot/npc_loot/heroic_axkva_min_crystal_s02.iff")

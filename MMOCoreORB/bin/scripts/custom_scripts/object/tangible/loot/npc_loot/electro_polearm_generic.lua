@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_electro_polearm_generic = object_tangible_loot_npc
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_electro_polearm_generic, "object/tangible/loot/npc/loot/electro_polearm_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_electro_polearm_generic, "object/tangible/loot/npc_loot/electro_polearm_generic.iff")

@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_flask_sample_device_generic = object_tangible_loot
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_flask_sample_device_generic, "object/tangible/loot/npc/loot/flask_sample_device_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_flask_sample_device_generic, "object/tangible/loot/npc_loot/flask_sample_device_generic.iff")

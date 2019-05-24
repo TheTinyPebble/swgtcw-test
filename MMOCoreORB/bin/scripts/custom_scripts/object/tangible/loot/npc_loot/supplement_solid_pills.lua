@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_supplement_solid_pills = object_tangible_loot_npc_
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_supplement_solid_pills, "object/tangible/loot/npc/loot/supplement_solid_pills.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_supplement_solid_pills, "object/tangible/loot/npc_loot/supplement_solid_pills.iff")

@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_aero_magnifier_generic = object_tangible_loot_npc_
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_aero_magnifier_generic, "object/tangible/loot/npc/loot/aero_magnifier_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_aero_magnifier_generic, "object/tangible/loot/npc_loot/aero_magnifier_generic.iff")

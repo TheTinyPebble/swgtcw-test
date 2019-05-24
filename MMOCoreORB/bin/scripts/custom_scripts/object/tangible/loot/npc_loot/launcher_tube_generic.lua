@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_launcher_tube_generic = object_tangible_loot_npc_l
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_launcher_tube_generic, "object/tangible/loot/npc/loot/launcher_tube_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_launcher_tube_generic, "object/tangible/loot/npc_loot/launcher_tube_generic.iff")

@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_spice_giggledust_generic = object_tangible_loot_np
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_giggledust_generic, "object/tangible/loot/npc/loot/spice_giggledust_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_giggledust_generic, "object/tangible/loot/npc_loot/spice_giggledust_generic.iff")

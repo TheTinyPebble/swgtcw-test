@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_spice_grey_gabaki_generic = object_tangible_loot_n
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_grey_gabaki_generic, "object/tangible/loot/npc/loot/spice_grey_gabaki_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_spice_grey_gabaki_generic, "object/tangible/loot/npc_loot/spice_grey_gabaki_generic.iff")

@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_software_module_red_generic = object_tangible_loot
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_software_module_red_generic, "object/tangible/loot/npc/loot/software_module_red_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_software_module_red_generic, "object/tangible/loot/npc_loot/software_module_red_generic.iff")

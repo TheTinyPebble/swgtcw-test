@@ -2,4 +2,4 @@ object_tangible_loot_npc_loot_jewelry_setting_generic = object_tangible_loot_npc
 
 }
 
-ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_jewelry_setting_generic, "object/tangible/loot/npc/loot/jewelry_setting_generic.iff")
+ObjectTemplates:addTemplate(object_tangible_loot_npc_loot_jewelry_setting_generic, "object/tangible/loot/npc_loot/jewelry_setting_generic.iff")
