@@ -1,3 +1,17 @@
+object_tangible_loot_loot_schematic_shared_carbine_geo_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_carbine_geo_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_carbine_geo_schematic, "object/tangible/loot/loot_schematic/shared_carbine_geo_schematic.iff")
+------------------------------------------------------------------------------------------------------------------------------------
+
+object_tangible_loot_loot_schematic_shared_lance_staff_cryo_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_lance_staff_cryo_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_lance_staff_cryo_schematic, "object/tangible/loot/loot_schematic/shared_lance_staff_cryo_schematic.iff")
+------------------------------------------------------------------------------------------------------------------------------------
+
 object_tangible_loot_loot_schematic_shared_dancing_droid_schematic = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_dancing_droid_schematic.iff"
 }

@@ -1,3 +1,4 @@
+includeFile("../custom_scripts/object/tangible/loot/loot_schematic/carbine_geo_schematic.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/dancing_droid_schematic.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/deconstructed_armor_schematic.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/deconstructed_vehicle_schematic.lua")
@@ -7,6 +8,7 @@ includeFile("../custom_scripts/object/tangible/loot/loot_schematic/generic_limit
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/generic_vehicle.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/imperial_gunner_helmet_schematic.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/kashyyyk_treehouse_scem.lua")
+includeFile("../custom_scripts/object/tangible/loot/loot_schematic/lance_staff_cryo_schematic.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/planning_table_bestine_imp_schematic.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/planning_table_bestine_reb_schematic.lua")
 includeFile("../custom_scripts/object/tangible/loot/loot_schematic/planning_table_dearic_imp_schematic.lua")
