@@ -7,7 +7,8 @@ EventTools = {
 		{ "Elite Spawns Satus", "openEliteSpawnStatus" },
 		--{ "Test ODST", "openOdstConfig" },
 		{ "Test Event Spawn Manager", "testESM" },
-		{ "Spawn Buildings + Teleport (For Test)", "spawnBuildings" },
+		{ "Spawn Buildings + Teleport", "spawnBuildings" },
+		{ "Get Decorations in Building", "getDeco" },
 	}
 }
 
@@ -77,9 +78,12 @@ function EventTools.spawnBuildings(pPlayer)
 	sui.setTitle("Building Spawner (For Test)")
 	sui.setPrompt("Select which building to spawn, you'll be teleported inside.")
 
-	sui.add("Tomb of Exar Kun", "")
-	sui.add("Axkva Min Lair", "")
+	sui.add("Tomb of Exar Kun (empty)", "")
+	--sui.add("Tomb of Exar Kun (super deco)", "")
+	sui.add("Axkva Min Lair (empty)", "")
+	--sui.add("Axkva Min Lair (super deco)", "")
 	sui.add("Space Station", "")
+	--sui.add("Space Station (super deco)", "")
 
 	sui.sendTo(pPlayer)
 end
@@ -126,6 +130,47 @@ function EventTools:spawnBuildingsCallBack(pPlayer, pSui, eventIndex, args)
 		local cellID = SceneObject(pCell):getObjectID()
 		SceneObject(pPlayer):switchZone(zoneName, cellX, cellZ, cellY, cellID)
 		CreatureObject(pPlayer):sendSystemMessage(cellID)
+	end
+end
+
+function EventTools:spawnDeco(deco)
+	if (deco == nil) then
+		return
+	end
+	
+	
+end
+
+function EventTools:getDeco(pPlayer)
+	local pParent = SceneObject(pPlayer):getParent()
+
+	if (pParent == nil) then
+		return
+	end
+
+	local pBuilding = SceneObject(pParent):getParent()
+
+	if (pBuilding == nil or not SceneObject(pBuilding):isBuildingObject()) then
+		return
+	end
+
+	for i = 1, 100 do
+		local pCell = BuildingObject(pBuilding):getCell(i)
+
+		if (pCell ~= nil) then
+			for j = 1, SceneObject(pCell):getContainerObjectsSize(), 1 do
+			local pObject = SceneObject(pCell):getContainerObject(j - 1)
+				if (pObject ~= nil and not SceneObject(pObject):isPlayerCreature()) then
+					local posX = SceneObject(pObject):getPositionX()
+					local posZ = SceneObject(pObject):getPositionZ()
+					local posY = SceneObject(pObject):getPositionY()
+					local dir = math.floor(SceneObject(pObject):getDirectionAngle())
+					local templatePath = SceneObject(pObject):getTemplateObjectPath()
+					
+					CreatureObject(pPlayer):sendSystemMessage("spawnSceneObject(dungeon1, " .. templatePath .. ", " .. posX .. ", " .. posZ .. ", " .. posY .. ", 1, " .. dir .. ")")
+				end
+			end
+		end
 	end
 end
 
