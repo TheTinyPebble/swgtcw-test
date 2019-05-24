@@ -141,7 +141,7 @@ function EventTools:spawnDeco(deco)
 	
 end
 
-function EventTools:getDeco(pPlayer)
+function EventTools.getDeco(pPlayer)
 	local pParent = SceneObject(pPlayer):getParent()
 
 	if (pParent == nil) then
