@@ -154,7 +154,7 @@ function EventTools.getDeco(pPlayer)
 		return
 	end
 
-	for i = 1, 100 do
+	for i = 1, BuildingObject(pBuilding):getTotalCellNumber() do
 		local pCell = BuildingObject(pBuilding):getCell(i)
 
 		if (pCell ~= nil) then
