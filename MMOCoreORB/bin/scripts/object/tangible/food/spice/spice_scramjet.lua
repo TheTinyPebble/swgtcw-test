@@ -56,8 +56,8 @@ object_tangible_food_spice_spice_scramjet = object_tangible_food_spice_shared_sp
 	flavorMax = 0,
 	nutritionMin = 0,
 	nutritionMax = 0,
-	quantityMin = 0,
-	quantityMax = 0,
+	quantityMin = 1,
+	quantityMax = 5,
 
 	modifiers = { "strength", 300 },
 
@@ -65,15 +65,15 @@ object_tangible_food_spice_spice_scramjet = object_tangible_food_spice_shared_sp
 	buffCRC = 0,
 	speciesRestriction = "",
 
-	numberExperimentalProperties = {1, 1, 3},
-	experimentalProperties = {"XX", "XX", "DR", "OQ", "UT"},
-	experimentalWeights = {1, 1, 4, 1, 1},
-	experimentalGroupTitles = {"null", "null", "exp_nutrition"},
-	experimentalSubGroupTitles = {"null", "null", "hitpoints"},
-	experimentalMin = {0, 0, 1000},
-	experimentalMax = {0, 0, 1000},
-	experimentalPrecision = {0, 0, 0},
-	experimentalCombineType = {0, 0, 4},
+	numberExperimentalProperties = {1, 1, 1, 1},
+	experimentalProperties = {"XX", "XX", "XX", "OQ"},
+	experimentalWeights = {1, 1, 1, 1},
+	experimentalGroupTitles = {"null", "null", "null", "exp_quantity"},
+	experimentalSubGroupTitles = {"null", "null", "hitpoints", "quantity"},
+	experimentalMin = {0, 0, 1000, 60},
+	experimentalMax = {0, 0, 1000, 100},
+	experimentalPrecision = {0, 0, 0, 10},
+	experimentalCombineType = {0, 0, 4, 1},
 }
 
 ObjectTemplates:addTemplate(object_tangible_food_spice_spice_scramjet, "object/tangible/food/spice/spice_scramjet.iff")

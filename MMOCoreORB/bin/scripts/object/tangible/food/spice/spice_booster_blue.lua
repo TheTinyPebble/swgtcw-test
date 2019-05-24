@@ -57,7 +57,7 @@ object_tangible_food_spice_spice_booster_blue = object_tangible_food_spice_share
 	nutritionMin = 0,
 	nutritionMax = 0,
 	quantityMin = 1,
-	quantityMax = 10,
+	quantityMax = 5,
 
 	modifiers = { "action" , 400, "quickness" , 400 },
 
