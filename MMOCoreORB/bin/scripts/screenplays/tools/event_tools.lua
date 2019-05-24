@@ -77,9 +77,9 @@ function EventTools.spawnBuildings(pPlayer)
 	sui.setTitle("Building Spawner (For Test)")
 	sui.setPrompt("Select which building to spawn, you'll be teleported inside.")
 
-	sui.add("Space Station", "")
-	sui.add("Axkva Min Lair", "")
 	sui.add("Tomb of Exar Kun", "")
+	sui.add("Axkva Min Lair", "")
+	sui.add("Space Station", "")
 
 	sui.sendTo(pPlayer)
 end
@@ -97,14 +97,23 @@ function EventTools:spawnBuildingsCallBack(pPlayer, pSui, eventIndex, args)
 	local posX = SceneObject(pPlayer):getWorldPositionX()
 	local posZ = SceneObject(pPlayer):getWorldPositionZ()
 	local posY = SceneObject(pPlayer):getWorldPositionY()
-	local pBuilding
+	local pBuilding, cellX, cellZ, cellY
 	
 	if (arg == 1) then
 		pBuilding = spawnSceneObject(zoneName, "object/building/heroic/exar_kun_tomb.iff", posX, posZ, posY, 0, 0 )
+		cellX = -11.6
+		cellZ = 0
+		cellY = -120.8
 	elseif (arg == 2) then
 		pBuilding = spawnSceneObject(zoneName, "object/building/heroic/axkva_min_lair.iff", posX, posZ, posY, 0, 0 )
+		cellX = 28.9
+		cellZ = 0
+		cellY = 0
 	elseif (arg == 3) then
 		pBuilding = spawnSceneObject(zoneName, "object/building/general/npe_space_station.iff", posX, posZ, posY, 0, 0 )
+		cellX = 0
+		cellZ = 0
+		cellY = 0
 	end
 
 	if (pBuilding ~= nil) then
@@ -115,7 +124,7 @@ function EventTools:spawnBuildingsCallBack(pPlayer, pSui, eventIndex, args)
 		end
 
 		local cellID = SceneObject(pCell):getObjectID()
-		SceneObject(pPlayer):switchZone(zoneName, 0, 0, 0, cellID)
+		SceneObject(pPlayer):switchZone(zoneName, cellX, cellZ, cellY, cellID)
 		CreatureObject(pPlayer):sendSystemMessage(cellID)
 	end
 end
