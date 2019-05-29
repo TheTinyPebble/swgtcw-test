@@ -78,6 +78,7 @@ admin_csr_malevolence = {
 		"broadcastPlanet",			-- Broadcast Messaage
 		"createCreature",			-- Create a Creature from a Mobile
 		"createNPC",				-- Create an NPC from a mobile
+		"object",
 		"createMissionElement",			-- ?
 		"createSpawningElement",		-- Creates a spawning element based on a predefined script at the player's current location
 		"createSpawningElementWithDifficulty",	-- Creates a spawning element based on a predefined script with a defined dificulty.
