@@ -45,15 +45,15 @@ object_draft_schematic_armor_armor_segment_bone_advanced = object_draft_schemati
 
 	templateType = DRAFTSCHEMATIC,
 
-	customObjectName = "Armor Segment (Advanced)",
+	customObjectName = "Advanced Bone Armor Segment",
 
 	craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
-	complexity = 20,
-	size = 6,
+	complexity = 30,
+	size = 4,
 	factoryCrateSize = 50,
 
 	xpType = "crafting_clothing_armor",
-	xp = 35,
+	xp = 30,
 
 	assemblySkill = "armor_assembly",
 	experimentingSkill = "armor_experimentation",
@@ -67,7 +67,7 @@ object_draft_schematic_armor_armor_segment_bone_advanced = object_draft_schemati
 	ingredientTitleNames = {"segment_layer_assembly_plate", "armor_layer_weld_tabs", "segment_mounting_tabs", "defensive_layer", "defensive_layer_2", "defensive_layer_3", "segment_enhancement"},
 	ingredientSlotType = {0, 0, 0, 3, 3, 3, 3},
 	resourceTypes = {"iron_colat", "steel_kiirium", "copper_polysteel", "object/tangible/component/armor/shared_armor_layer.iff", "object/tangible/component/armor/shared_armor_layer.iff", "object/tangible/component/armor/shared_armor_layer.iff", "object/tangible/component/armor/shared_base_armor_segment_enhancement.iff"},
-	resourceQuantities = {32, 16, 10, 2, 2, 2, 1},
+	resourceQuantities = {16, 8, 5, 1, 1, 1, 1},
 	contribution = {100, 100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/component/armor/armor_segment_bone_advanced.iff",

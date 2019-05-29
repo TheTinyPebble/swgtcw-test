@@ -8,6 +8,7 @@ broken_viewscreen_tan = {
 	customizationStringNames = {},
 	customizationValues = {},
 	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKGENERIC,
 	junkMinValue = 20,
 	junkMaxValue = 40
 }

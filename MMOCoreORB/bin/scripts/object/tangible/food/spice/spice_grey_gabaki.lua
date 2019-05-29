@@ -56,8 +56,8 @@ object_tangible_food_spice_spice_grey_gabaki = object_tangible_food_spice_shared
 	flavorMax = 0,
 	nutritionMin = 0,
 	nutritionMax = 0,
-	quantityMin = 0,
-	quantityMax = 0,
+	quantityMin = 1,
+	quantityMax = 5,
 
 	modifiers = { "focus", 500 },
 
@@ -65,15 +65,15 @@ object_tangible_food_spice_spice_grey_gabaki = object_tangible_food_spice_shared
 	buffCRC = 0,
 	speciesRestriction = "",
 
-	numberExperimentalProperties = {1, 1, 1},
-	experimentalProperties = {"XX", "XX", "XX"},
-	experimentalWeights = {1, 1, 1},
-	experimentalGroupTitles = {"null", "null", "null"},
-	experimentalSubGroupTitles = {"null", "null", "hitpoints"},
-	experimentalMin = {0, 0, 1000},
-	experimentalMax = {0, 0, 1000},
-	experimentalPrecision = {0, 0, 0},
-	experimentalCombineType = {0, 0, 4},
+	numberExperimentalProperties = {1, 1, 1, 1},
+	experimentalProperties = {"XX", "XX", "XX", "OQ"},
+	experimentalWeights = {1, 1, 1, 1},
+	experimentalGroupTitles = {"null", "null", "null", "exp_quantity"},
+	experimentalSubGroupTitles = {"null", "null", "hitpoints", "quantity"},
+	experimentalMin = {0, 0, 1000, 0},
+	experimentalMax = {0, 0, 1000, 100},
+	experimentalPrecision = {0, 0, 0, 10},
+	experimentalCombineType = {0, 0, 4, 1},
 }
 
 ObjectTemplates:addTemplate(object_tangible_food_spice_spice_grey_gabaki, "object/tangible/food/spice/spice_grey_gabaki.iff")

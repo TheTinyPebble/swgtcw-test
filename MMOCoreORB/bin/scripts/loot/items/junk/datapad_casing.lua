@@ -10,6 +10,7 @@ datapad_casing = {
 	customizationStringNames = {},
 	customizationValues = {},
 	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKGENERIC,
 	junkMinValue = 20,
 	junkMaxValue = 40
 }

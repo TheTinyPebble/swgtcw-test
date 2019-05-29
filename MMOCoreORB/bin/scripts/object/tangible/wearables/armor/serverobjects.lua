@@ -65,8 +65,5 @@ includeFile("tangible/wearables/armor/tantel/serverobjects.lua")
 includeFile("tangible/wearables/armor/ubese/serverobjects.lua")
 includeFile("tangible/wearables/armor/zam/serverobjects.lua")
 includeFile("tangible/wearables/armor/clone_trooper/serverobjects.lua")
-includeFile("tangible/wearables/armor/sep_battle/serverobjects.lua")
-includeFile("tangible/wearables/armor/sep_theme/serverobjects.lua")
-includeFile("tangible/wearables/armor/sep_infil/serverobjects.lua")
 
 -- Server Objects

@@ -45,7 +45,7 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 	
 	--Patch Notes text
 	if (selectedID == 20) then
-		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
+		body = http.request("http://swgtcw.us/launcher/patchnotes.txt")
 		title = "Patch Notes"
 
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()
@@ -61,7 +61,7 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 	
 	--Upcoming Events text
 	if (selectedID == 40) then
-		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
+		body = http.request("http://swgtcw.us/launcher/patchnotes.txt")
 		title = "Upcoming Events"
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()
 
@@ -118,7 +118,7 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 
 	--GCW Correspondence text
 	if (selectedID == 82) then
-		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
+		body = http.request("http://swgtcw.us/launcher/patchnotes.txt")
 		title = "Report From The Front"
 		
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()
@@ -133,7 +133,7 @@ function NewsnetMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selectedI
 	end
 
 	if (selectedID == 100) then
-		body = http.request("http://swgtcw.com/launcher/patch-notes.txt")
+		body = http.request("http://swgtcw.us/launcher/patchnotes.txt")
 		title = "Around the Galaxy"
 		
 		local pGhost = CreatureObject(pPlayer):getPlayerObject()

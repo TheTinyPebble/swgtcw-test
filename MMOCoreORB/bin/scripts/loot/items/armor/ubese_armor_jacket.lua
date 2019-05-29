@@ -5,9 +5,9 @@ ubese_armor_jacket = {
 	directObjectTemplate = "object/tangible/wearables/armor/ubese/armor_ubese_jacket.iff",
 	craftingValues = {
 		{"armor_rating",1,1,0},
-		{"kineticeffectiveness",10,40,10},
-		{"armor_effectiveness",4,29,10},
-		{"armor_integrity",18750, 31250,0},
+		{"kineticeffectiveness",5,20,10},
+		{"armor_effectiveness",2,15,10},
+		{"armor_integrity",9750, 15250,0},
 		{"armor_health_encumbrance",109,66,0},
 		{"armor_action_encumbrance",42,25,0},
 		{"armor_mind_encumbrance",19,11,0},

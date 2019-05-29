@@ -10,6 +10,7 @@ empty_cage = {
 	customizationStringNames = {},
 	customizationValues = {},
 	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKGENERIC,
 	junkMinValue = 20,
 	junkMaxValue = 40
 }

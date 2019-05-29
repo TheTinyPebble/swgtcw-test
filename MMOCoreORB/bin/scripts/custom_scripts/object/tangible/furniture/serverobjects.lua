@@ -1,0 +1,21 @@
+--Child Folders
+includeFile("../custom_scripts/object/tangible/furniture/all/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/cheap/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/city/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/decorative/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/efol/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/elegant/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/ep3_rewards/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/gcw/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/house_cleanup/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/jedi/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/lifeday/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/modern/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/nym_themepark/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/rustic/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/tatooine/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/technical/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/terminal/serverobjects.lua")
+includeFile("../custom_scripts/object/tangible/furniture/wod_themepark/serverobjects.lua")
+
+-- Server Objects

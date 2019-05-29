@@ -44,15 +44,15 @@
 PointBlankArea2Command = {
         name = "pointblankarea2",
 
-	damageMultiplier = 4.0,
+	damageMultiplier = 2.5,
 	speedMultiplier = 1.5,
 	healthCostMultiplier = 0.5,
 	actionCostMultiplier = 1.5,
 	mindCostMultiplier = 0.5,
 	accuracyBonus = 50,
 
-	coneAngle = 60,
-	coneAction = true,
+	areaRange = 15,
+	areaAction = true,
 
 	animation = "fire_area_no_trails", 
 	animType = GENERATE_INTENSITY,

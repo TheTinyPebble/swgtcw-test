@@ -102,6 +102,7 @@ ZonesEnabled = {
 	"dantooine",
 	"dathomir",
 	"dungeon1",
+	"dungeon2",
 	"endor",
 	--"endor_asommers",
 	--"floratest",
@@ -145,13 +146,12 @@ ZonesEnabled = {
 TrePath = "/home/swgemu/Desktop/SWGEmu"
 
 TreFiles = {
-	"alpha.tre",
 	--"dirt.tre"
 	--"renik.tre"
 	--"tiny.tre"
 	--"vlad.tre"
-	"tcw_wod.tre",
 	"tcw_2.tre",
+	"tcw_wod.tre",
 	"tcw_1.tre",
 	"tcw_NGE.tre",
 	"tcw_house.tre",
