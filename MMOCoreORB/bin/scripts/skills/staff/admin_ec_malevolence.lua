@@ -52,6 +52,11 @@ admin_ec_malevolence = {
 		"broadcastPlanet",  		-- Broadcast Messaage
 		"createCreature", 			-- Create an Creature
 		"createNPC",  				-- Create an NPC
+		"createSpawningElement",    -- Creates a spawning element based on a predefined script at the player's current location
+        "setFirstName",             -- Set Player First Name
+        "setLastName",              -- Set Player Last Name
+        "object",                   -- Create Object
+        "findObject",               -- Find Object
 		"setName", 					-- Sets the name of the targeted object. This can be used on NPCs as well as Players, so they need to be careful.
 		"gmEventTools",				-- Custom event tools
 	},
