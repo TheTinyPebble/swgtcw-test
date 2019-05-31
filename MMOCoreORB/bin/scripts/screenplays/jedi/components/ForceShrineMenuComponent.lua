@@ -146,13 +146,11 @@ function ForceShrineMenuComponent:swapFaction(pPlayer)
 	if (pGhost == nil) then
 		return
 	end
-	
-	print(PlayerObject(pGhost):getFactionStanding("rebel"), PlayerObject(pGhost):getFactionStanding("imperial"), not (PlayerObject(pGhost):getFactionStanding("rebel") < 200), not (PlayerObject(pGhost):getFactionStanding("imperial") < 200))
-	
-	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL and not (PlayerObject(pGhost):getFactionStanding("rebel") < 200)) then
+
+	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL and (PlayerObject(pGhost):getFactionStanding("rebel") < 200)) then
 		CreatureObject(pPlayer):sendSystemMessage("You do not have enough faction with the CIS to defect.")
 		return
-	elseif (CreatureObject(pPlayer):getFaction() == FACTIONREBEL and not (PlayerObject(pGhost):getFactionStanding("imperial") < 200)) then
+	elseif (CreatureObject(pPlayer):getFaction() == FACTIONREBEL and (PlayerObject(pGhost):getFactionStanding("imperial") < 200)) then
 		CreatureObject(pPlayer):sendSystemMessage("You do not have enough faction with the Republic to defect.")
 		return
 	end
@@ -184,9 +182,9 @@ function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex,
 		return 0
 	end
 	
-	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL and PlayerObject(pGhost):getFactionStanding("rebel") < 200) then
+	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL and (PlayerObject(pGhost):getFactionStanding("rebel") < 200)) then
 		CreatureObject(pPlayer):setFaction(370444368) -- Rebel faction hash code
-	elseif (CreatureObject(pPlayer):getFaction() == FACTIONREBEL and PlayerObject(pGhost):getFactionStanding("imperial") < 200) then
+	elseif (CreatureObject(pPlayer):getFaction() == FACTIONREBEL and (PlayerObject(pGhost):getFactionStanding("imperial") < 200)) then
 		CreatureObject(pPlayer):setFaction(3679112276) -- Imperial faction hash code
 	end
 	
