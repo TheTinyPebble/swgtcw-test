@@ -1,48 +1,6 @@
 ForceShrineMenuComponent = {}
 
 local jediSkills = {
-	padawan_light = {
-		"jedi_padawan_novice",
-		"jedi_padawan_saber_01",
-		"jedi_padawan_saber_02",
-		"jedi_padawan_saber_03",
-		"jedi_padawan_saber_04",
-		"jedi_padawan_healing_01",
-		"jedi_padawan_healing_02",
-		"jedi_padawan_healing_03",
-		"jedi_padawan_healing_04",
-		"jedi_padawan_force_power_01",
-		"jedi_padawan_force_power_02",
-		"jedi_padawan_force_power_03",
-		"jedi_padawan_force_power_04",
-		"jedi_padawan_force_manipulation_01",
-		"jedi_padawan_force_manipulation_02",
-		"jedi_padawan_force_manipulation_03",
-		"jedi_padawan_force_manipulation_04",
-		"jedi_padawan_master",
-	},
-	
-	padawan_dark = {
-		"dark_padawan_novice",
-		"dark_padawan_saber_01",
-		"dark_padawan_saber_02",
-		"dark_padawan_saber_03",
-		"dark_padawan_saber_04",
-		"dark_padawan_healing_01",
-		"dark_padawan_healing_02",
-		"dark_padawan_healing_03",
-		"dark_padawan_healing_04",
-		"dark_padawan_force_power_01",
-		"dark_padawan_force_power_02",
-		"dark_padawan_force_power_03",
-		"dark_padawan_force_power_04",
-		"dark_padawan_force_manipulation_01",
-		"dark_padawan_force_manipulation_02",
-		"dark_padawan_force_manipulation_03",
-		"dark_padawan_force_manipulation_04",
-		"dark_padawan_master",
-	},
-	
 	jedi_defender_light = {
 		"jedi_padawan_novice",
 		"jedi_padawan_saber_01",
@@ -367,7 +325,7 @@ function ForceShrineMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResp
 		menuResponse:addRadialMenuItem(121, 3, "@force_rank:recover_jedi_items") -- Recover Jedi Items
 	end
 	
-	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_master") or CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
+	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_defender_master") or CreatureObject(pPlayer):hasSkill("jedi_light_side_sabers_master") or CreatureObject(pPlayer):hasSkill("jedi_light_side_healer_master") or CreatureObject(pPlayer):hasSkill("jedi_light_side_powers_master") or CreatureObject(pPlayer):hasSkill("dark_dark_side_defender_master") or CreatureObject(pPlayer):hasSkill("dark_dark_side_sabers_master") or CreatureObject(pPlayer):hasSkill("dark_dark_side_healer_master") or CreatureObject(pPlayer):hasSkill("dark_dark_side_powers_master")) then
 		menuResponse:addRadialMenuItem(122, 3, "Switch Faction")
 	end
 
@@ -386,7 +344,7 @@ function ForceShrineMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selec
 		end
 	elseif (selectedID == 121 and (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice") or CreatureObject(pPlayer):hasSkill("dark_padawan_novice"))) then
 		self:recoverRobe(pPlayer)
-	elseif (selectedID == 122 and (CreatureObject(pPlayer):hasSkill("jedi_padawan_master") or CreatureObject(pPlayer):hasSkill("dark_padawan_master"))) then
+	elseif (selectedID == 122 and (CreatureObject(pPlayer):hasSkill("jedi_light_side_defender_master") or CreatureObject(pPlayer):hasSkill("jedi_light_side_sabers_master") or CreatureObject(pPlayer):hasSkill("jedi_light_side_healer_master") or CreatureObject(pPlayer):hasSkill("jedi_light_side_powers_master") or CreatureObject(pPlayer):hasSkill("dark_dark_side_defender_master") or CreatureObject(pPlayer):hasSkill("dark_dark_side_sabers_master") or CreatureObject(pPlayer):hasSkill("dark_dark_side_healer_master") or CreatureObject(pPlayer):hasSkill("dark_dark_side_powers_master"))) then
 		self:swapFaction(pPlayer)
 	end
 
@@ -594,20 +552,6 @@ function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex,
 		end
 		for i = 1, #jediSkills.jedi_powers_light do
 			awardSkill(pPlayer, jediSkills.jedi_powers_light[i])
-		end
-	elseif (CreatureObject(pPlayer):hasSkill("jedi_padawan_master")) then
-		for i = #jediSkills.padawan_light, 1, -1 do
-			CreatureObject(pPlayer):surrenderSkill(jediSkills.padawan_light[i])
-		end
-		for i = 1, #jediSkills.padawan_dark do
-			awardSkill(pPlayer, jediSkills.padawan_dark[i])
-		end
-	elseif (CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
-		for i = #jediSkills.padawan_dark, 1, -1 do
-			CreatureObject(pPlayer):surrenderSkill(jediSkills.padawan_dark[i])
-		end
-		for i = 1, #jediSkills.padawan_light do
-			awardSkill(pPlayer, jediSkills.padawan_light[i])
 		end
 	end
 end
