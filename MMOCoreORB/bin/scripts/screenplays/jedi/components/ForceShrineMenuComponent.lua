@@ -220,7 +220,7 @@ function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex,
 	deleteStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID())
 end
 
-function surrenderAllJediSkills(pPlayer)
+function ForceShrineMenuComponent:surrenderAllJediSkills(pPlayer)
 	if (pPlayer == nil) then
 		return
 	end
