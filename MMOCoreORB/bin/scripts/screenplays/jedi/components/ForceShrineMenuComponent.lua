@@ -171,7 +171,7 @@ function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex,
 
 	local cancelPressed = (eventIndex == 1)
 
-	if (cancelPressed or pCreature == nil) then
+	if (cancelPressed or pPlayer == nil) then
 		return 0
 	end
 	
