@@ -1,6 +1,216 @@
 ForceShrineMenuComponent = {}
 
-local trainerData = require("screenplays.trainers.trainerData")
+local jediSkills = {
+	padawan_light = {
+		"jedi_padawan_novice",
+		"jedi_padawan_master",
+		"jedi_padawan_saber_01",
+		"jedi_padawan_saber_02",
+		"jedi_padawan_saber_03",
+		"jedi_padawan_saber_04",
+		"jedi_padawan_healing_01",
+		"jedi_padawan_healing_02",
+		"jedi_padawan_healing_03",
+		"jedi_padawan_healing_04",
+		"jedi_padawan_force_power_01",
+		"jedi_padawan_force_power_02",
+		"jedi_padawan_force_power_03",
+		"jedi_padawan_force_power_04",
+		"jedi_padawan_force_manipulation_01",
+		"jedi_padawan_force_manipulation_02",
+		"jedi_padawan_force_manipulation_03",
+		"jedi_padawan_force_manipulation_04"
+	},
+	
+	padawan_dark = {
+		"dark_padawan_novice",
+		"dark_padawan_master",
+		"dark_padawan_saber_01",
+		"dark_padawan_saber_02",
+		"dark_padawan_saber_03",
+		"dark_padawan_saber_04",
+		"dark_padawan_healing_01",
+		"dark_padawan_healing_02",
+		"dark_padawan_healing_03",
+		"dark_padawan_healing_04",
+		"dark_padawan_force_power_01",
+		"dark_padawan_force_power_02",
+		"dark_padawan_force_power_03",
+		"dark_padawan_force_power_04",
+		"dark_padawan_force_manipulation_01",
+		"dark_padawan_force_manipulation_02",
+		"dark_padawan_force_manipulation_03",
+		"dark_padawan_force_manipulation_04"
+	},
+	
+	jedi_defender_light = {
+		"jedi_light_side_defender_novice",
+		"jedi_light_side_defender_master",
+		"jedi_light_side_defender_saber_01",
+		"jedi_light_side_defender_saber_02",
+		"jedi_light_side_defender_saber_03",
+		"jedi_light_side_defender_saber_04",
+		"jedi_light_side_defender_mitigation_01",
+		"jedi_light_side_defender_mitigation_02",
+		"jedi_light_side_defender_mitigation_03",
+		"jedi_light_side_defender_mitigation_04",
+		"jedi_light_side_defender_force_power_01",
+		"jedi_light_side_defender_force_power_02",
+		"jedi_light_side_defender_force_power_03",
+		"jedi_light_side_defender_force_power_04",
+		"jedi_light_side_defender_force_manipulation_01",
+		"jedi_light_side_defender_force_manipulation_02",
+		"jedi_light_side_defender_force_manipulation_03",
+		"jedi_light_side_defender_force_manipulation_04"
+	},
+	
+	jedi_sabers_light = {
+		"jedi_light_side_sabers_novice",
+		"jedi_light_side_sabers_master",
+		"jedi_light_side_sabers_saber_single_01",
+		"jedi_light_side_sabers_saber_single_02",
+		"jedi_light_side_sabers_saber_single_03",
+		"jedi_light_side_sabers_saber_single_04",
+		"jedi_light_side_sabers_saber_dbl_01",
+		"jedi_light_side_sabers_saber_dbl_02",
+		"jedi_light_side_sabers_saber_dbl_03",
+		"jedi_light_side_sabers_saber_dbl_04",
+		"jedi_light_side_sabers_craftsmanship_01",
+		"jedi_light_side_sabers_craftsmanship_02",
+		"jedi_light_side_sabers_craftsmanship_03",
+		"jedi_light_side_sabers_craftsmanship_04",
+		"jedi_light_side_sabers_force_manipulation_01",
+		"jedi_light_side_sabers_force_manipulation_02",
+		"jedi_light_side_sabers_force_manipulation_03",
+		"jedi_light_side_sabers_force_manipulation_04"
+	},
+	
+	jedi_healer_light = {
+		"jedi_light_side_healer_novice",
+		"jedi_light_side_healer_master",
+		"jedi_light_side_healer_saber_01",
+		"jedi_light_side_healer_saber_02",
+		"jedi_light_side_healer_saber_03",
+		"jedi_light_side_healer_saber_04",
+		"jedi_light_side_healer_heals_01",
+		"jedi_light_side_healer_heals_02",
+		"jedi_light_side_healer_heals_03",
+		"jedi_light_side_healer_heals_04",
+		"jedi_light_side_healer_force_power_01",
+		"jedi_light_side_healer_force_power_02",
+		"jedi_light_side_healer_force_power_03",
+		"jedi_light_side_healer_force_power_04",
+		"jedi_light_side_healer_manipulation_01",
+		"jedi_light_side_healer_manipulation_02",
+		"jedi_light_side_healer_manipulation_03",
+		"jedi_light_side_healer_manipulation_04"
+	},
+	
+	jedi_powers_light = {
+		"jedi_light_side_powers_novice",
+		"jedi_light_side_powers_master",
+		"jedi_light_side_powers_assault_01",
+		"jedi_light_side_powers_assault_02",
+		"jedi_light_side_powers_assault_03",
+		"jedi_light_side_powers_assault_04",
+		"jedi_light_side_powers_ranged_01",
+		"jedi_light_side_powers_ranged_02",
+		"jedi_light_side_powers_ranged_03",
+		"jedi_light_side_powers_ranged_04",
+		"jedi_light_side_powers_power_01",
+		"jedi_light_side_powers_power_02",
+		"jedi_light_side_powers_power_03",
+		"jedi_light_side_powers_power_04",
+		"jedi_light_side_powers_manipulation_01",
+		"jedi_light_side_powers_manipulation_02",
+		"jedi_light_side_powers_manipulation_03",
+		"jedi_light_side_powers_manipulation_04"
+	},
+	
+	jedi_defender_dark = {
+		"dark_dark_side_defender_novice",
+		"dark_dark_side_defender_master",
+		"dark_dark_side_defender_saber_01",
+		"dark_dark_side_defender_saber_02",
+		"dark_dark_side_defender_saber_03",
+		"dark_dark_side_defender_saber_04",
+		"dark_dark_side_defender_mitigation_01",
+		"dark_dark_side_defender_mitigation_02",
+		"dark_dark_side_defender_mitigation_03",
+		"dark_dark_side_defender_mitigation_04",
+		"dark_dark_side_defender_force_power_01",
+		"dark_dark_side_defender_force_power_02",
+		"dark_dark_side_defender_force_power_03",
+		"dark_dark_side_defender_force_power_04",
+		"dark_dark_side_defender_force_manipulation_01",
+		"dark_dark_side_defender_force_manipulation_02",
+		"dark_dark_side_defender_force_manipulation_03",
+		"dark_dark_side_defender_force_manipulation_04"
+	},
+	
+	jedi_sabers_dark = {
+		"dark_dark_side_sabers_novice",
+		"dark_dark_side_sabers_master",
+		"dark_dark_side_sabers_saber_single_01",
+		"dark_dark_side_sabers_saber_single_02",
+		"dark_dark_side_sabers_saber_single_03",
+		"dark_dark_side_sabers_saber_single_04",
+		"dark_dark_side_sabers_saber_dbl_01",
+		"dark_dark_side_sabers_saber_dbl_02",
+		"dark_dark_side_sabers_saber_dbl_03",
+		"dark_dark_side_sabers_saber_dbl_04",
+		"dark_dark_side_sabers_craftsmanship_01",
+		"dark_dark_side_sabers_craftsmanship_02",
+		"dark_dark_side_sabers_craftsmanship_03",
+		"dark_dark_side_sabers_craftsmanship_04",
+		"dark_dark_side_sabers_force_manipulation_01",
+		"dark_dark_side_sabers_force_manipulation_02",
+		"dark_dark_side_sabers_force_manipulation_03",
+		"dark_dark_side_sabers_force_manipulation_04"
+	},
+	
+	jedi_healer_dark = {
+		"dark_dark_side_healer_novice",
+		"dark_dark_side_healer_master",
+		"dark_dark_side_healer_saber_01",
+		"dark_dark_side_healer_saber_02",
+		"dark_dark_side_healer_saber_03",
+		"dark_dark_side_healer_saber_04",
+		"dark_dark_side_healer_heals_01",
+		"dark_dark_side_healer_heals_02",
+		"dark_dark_side_healer_heals_03",
+		"dark_dark_side_healer_heals_04",
+		"dark_dark_side_healer_force_power_01",
+		"dark_dark_side_healer_force_power_02",
+		"dark_dark_side_healer_force_power_03",
+		"dark_dark_side_healer_force_power_04",
+		"dark_dark_side_healer_manipulation_01",
+		"dark_dark_side_healer_manipulation_02",
+		"dark_dark_side_healer_manipulation_03",
+		"dark_dark_side_healer_manipulation_04"
+	},
+	
+	jedi_powers_dark = {
+		"dark_dark_side_powers_novice",
+		"dark_dark_side_powers_master",
+		"dark_dark_side_powers_assault_01",
+		"dark_dark_side_powers_assault_02",
+		"dark_dark_side_powers_assault_03",
+		"dark_dark_side_powers_assault_04",
+		"dark_dark_side_powers_ranged_01",
+		"dark_dark_side_powers_ranged_02",
+		"dark_dark_side_powers_ranged_03",
+		"dark_dark_side_powers_ranged_04",
+		"dark_dark_side_powers_power_01",
+		"dark_dark_side_powers_power_02",
+		"dark_dark_side_powers_power_03",
+		"dark_dark_side_powers_power_04",
+		"dark_dark_side_powers_manipulation_01",
+		"dark_dark_side_powers_manipulation_02",
+		"dark_dark_side_powers_manipulation_03",
+		"dark_dark_side_powers_manipulation_04"
+	},
+}
 
 function ForceShrineMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
@@ -186,60 +396,62 @@ function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex,
 	CreatureObject(pPlayer):setFactionStatus(1)
 	
 	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_padawan_master")
+		for i = 1, #jediSkills.padawan_light do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.padawan_light[i])
+			awardSkill(pPlayer, jediSkills.padawan_dark[i])
+		end
 	elseif (CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_padawan_master")
-	end
-	
-	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_defender_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_light_side_defender_master")
-	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_defender_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_dark_side_defender_master")
-	end
-	
-	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_sabers_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_light_side_sabers_master")
-	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_sabers_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_dark_side_sabers_master")
-	end
-	
-	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_healer_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_light_side_healer_master")
-	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_healer_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_dark_side_healer_master")
-	end
-	
-	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_powers_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_light_side_powers_master")
-	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_powers_master")) then
-		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_dark_side_powers_master")
-	end
-		
-	self:surrenderAllJediSkills(pPlayer)
-	awardSkill(pPlayer, readStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID()))
-	deleteStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID())
-end
-
-function ForceShrineMenuComponent:surrenderAllJediSkills(pPlayer)
-	if (pPlayer == nil) then
-		return
-	end
-
-	local jediSkillsToRemove = readStringData("jediFactionSwap" .. SceneObject(pPlayer):getObjectID())
-	
-	if (jediSkillsToRemove ~= "jedi_padawan_master" or jediSkillsToRemove ~= "dark_padawan_master") then
-		if (CreatureObject(pPlayer):hasSkill("jedi_padawan_master")) then
-			for i = 1, trainerData.trainerSkills["jedi_padawan_master"] do
-				CreatureObject(pPlayer):surrenderSkill(trainerData.trainerSkills["jedi_padawan_master"][i])
-			end
-		elseif (CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
-			for i = 1, trainerData.trainerSkills["dark_padawan_master"] do
-				CreatureObject(pPlayer):surrenderSkill(trainerData.trainerSkills["dark_padawan_master"][i])
-			end
+		for i = 1, #jediSkills.padawan_dark do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.padawan_dark[i])
+			awardSkill(pPlayer, jediSkills.padawan_light[i])
 		end
 	end
 	
-	for i = 1, trainerData.trainerSkills[jediSkillsToRemove] do
-		CreatureObject(pPlayer):surrenderSkill(trainerData.trainerSkills[jediSkillsToRemove][i])
+	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_defender_master")) then
+		for i = 1, #jediSkills.jedi_defender_light do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_defender_light[i])
+			awardSkill(pPlayer, jediSkills.jedi_defender_dark[i])
+		end
+	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_defender_master")) then
+		for i = 1, #jediSkills.jedi_defender_dark do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_defender_dark[i])
+			awardSkill(pPlayer, jediSkills.jedi_defender_light[i])
+		end
+	end
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_sabers_master")) then
+		for i = 1, #jediSkills.jedi_sabers_light do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_sabers_light[i])
+			awardSkill(pPlayer, jediSkills.jedi_sabers_dark[i])
+		end
+	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_sabers_master")) then
+		for i = 1, #jediSkills.jedi_sabers_dark do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_sabers_dark[i])
+			awardSkill(pPlayer, jediSkills.jedi_sabers_light[i])
+		end
+	end
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_healer_master")) then
+		for i = 1, #jediSkills.jedi_healer_light do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_healer_light[i])
+			awardSkill(pPlayer, jediSkills.jedi_healer_dark[i])
+		end
+	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_healer_master")) then
+		for i = 1, #jediSkills.jedi_healer_dark do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_healer_dark[i])
+			awardSkill(pPlayer, jediSkills.jedi_healer_light[i])
+		end
+	end
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_powers_master")) then
+		for i = 1, #jediSkills.jedi_powers_light do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_powers_light[i])
+			awardSkill(pPlayer, jediSkills.jedi_powers_dark[i])
+		end
+	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_powers_master")) then
+		for i = 1, #jediSkills.jedi_powers_dark do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_powers_dark[i])
+			awardSkill(pPlayer, jediSkills.jedi_powers_light[i])
+		end
 	end
 end
