@@ -176,9 +176,9 @@ function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex,
 	end
 	
 	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL and (PlayerObject(pGhost):getFactionStanding("rebel") < 200)) then
-		CreatureObject(pPlayer):setFaction(370444368) -- Rebel faction hash code
+		CreatureObject(pPlayer):setFaction(FACTIONREBEL)
 	elseif (CreatureObject(pPlayer):getFaction() == FACTIONREBEL and (PlayerObject(pGhost):getFactionStanding("imperial") < 200)) then
-		CreatureObject(pPlayer):setFaction(3679112276) -- Imperial faction hash code
+		CreatureObject(pPlayer):setFaction(FACTIONIMPERIAL)
 	end
 	
 	CreatureObject(pPlayer):setFactionStatus(1)
