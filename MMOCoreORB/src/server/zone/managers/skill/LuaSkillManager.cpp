@@ -10,6 +10,7 @@ Luna<LuaSkillManager>::RegType LuaSkillManager::Register[] = {
 		{ "getSkill", &LuaSkillManager::getSkill },
 		{ "awardSkill", &LuaSkillManager::awardSkill },
 		{ "canLearnSkill", &LuaSkillManager::canLearnSkill },
+		{ "surrenderAllSkills", &LuaSkillManager::surrenderAllSkills },
 		{ 0, 0 }
 };
 
@@ -98,6 +99,20 @@ int LuaSkillManager::awardSkill(lua_State* L) {
 	CreatureObject* creo = (CreatureObject*) lua_touserdata(L, -2);
 
 	lua_pushboolean(L, realObject->awardSkill(skillName, creo, true, false, false));
+
+	return 1;
+}
+
+int LuaSkillManager::surrenderAllSkills(lua_State* L) {
+	if (lua_gettop(L) - 1 != 1) {
+		Logger::console.error("incorrect number of arguments for LuaSkillManager::surrenderAllSkills");
+		return 0;
+	}
+
+	CreatureObject* creo = (CreatureObject*) lua_touserdata(L, -1);
+	bool removeForceProgression = lua_toboolean(L, -2); 
+
+	realObject->surrenderAllSkills(creo, true, removeForceProgression);
 
 	return 1;
 }

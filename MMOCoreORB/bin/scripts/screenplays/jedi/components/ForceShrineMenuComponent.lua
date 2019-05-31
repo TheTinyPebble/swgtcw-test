@@ -10,6 +10,10 @@ function ForceShrineMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResp
 	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice") or CreatureObject(pPlayer):hasSkill("dark_padawan_novice")) then
 		menuResponse:addRadialMenuItem(121, 3, "@force_rank:recover_jedi_items") -- Recover Jedi Items
 	end
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_master") or CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
+		menuResponse:addRadialMenuItem(122, 3, "Switch Faction")
+	end
 
 end
 
@@ -26,6 +30,8 @@ function ForceShrineMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selec
 		end
 	elseif (selectedID == 121 and (CreatureObject(pPlayer):hasSkill("jedi_padawan_novice") or CreatureObject(pPlayer):hasSkill("dark_padawan_novice"))) then
 		self:recoverRobe(pPlayer)
+	elseif (selectedID == 122 and (CreatureObject(pPlayer):hasSkill("jedi_padawan_master") or CreatureObject(pPlayer):hasSkill("dark_padawan_master"))) then
+		self:swapFaction(pPlayer)
 	end
 
 	return 0
@@ -128,4 +134,94 @@ function ForceShrineMenuComponent:recoverRobe(pPlayer)
 	end
 	giveItem(pInventory, robeTemplate, -1)
 	CreatureObject(pPlayer):sendSystemMessage("@force_rank:items_recovered")
+end
+
+function ForceShrineMenuComponent:swapFaction(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+	
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+	
+	if (pGhost == nil) then
+		return
+	end
+	
+	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL and not PlayerObject(pGhost):getFactionStanding("rebel") < 200) then
+		CreatureObject(pPlayer):sendSystemMessage("You do not have enough faction with the CIS to defect.")
+		return
+	elseif (CreatureObject(pPlayer):getFaction() == FACTIONREBEL and not PlayerObject(pGhost):getFactionStanding("imperial") < 200) then
+		CreatureObject(pPlayer):sendSystemMessage("You do not have enough faction with the Republic to defect.")
+		return
+	end
+	
+	local sui = SuiMessageBox.new("ForceShrineMenuComponent", "swapFactionCallback")
+	sui.setTitle("Faction Defection Information")
+	sui.setPrompt("Warning: You are about to swap factions. You will retain your profession skills, however you will lose your current faction rank and faction standing. Are you sure you would like to proceed?")
+
+	sui.sendTo(pPlayer)
+end
+
+function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex, ...)
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+	if (pGhost == nil) then
+		return 0
+	end
+
+	local cancelPressed = (eventIndex == 1)
+
+	if (cancelPressed or pCreature == nil) then
+		return 0
+	end
+
+	local suiBox = LuaSuiBox(pSui)
+	local pUsingObject = suiBox:getUsingObject()
+
+	if (pUsingObject == nil) then
+		return 0
+	end
+	
+	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL and PlayerObject(pGhost):getFactionStanding("rebel") < 200) then
+		CreatureObject(pPlayer):setFaction(370444368) -- Rebel faction hash code
+	elseif (CreatureObject(pPlayer):getFaction() == FACTIONREBEL and PlayerObject(pGhost):getFactionStanding("imperial") < 200) then
+		CreatureObject(pPlayer):setFaction(3679112276) -- Imperial faction hash code
+	end
+	
+	CreatureObject(pPlayer):setFactionStatus(1)
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_padawan_master")
+	elseif (CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_padawan_master")
+	end
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_defender_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_light_side_defender_master")
+	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_defender_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_dark_side_defender_master")
+	end
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_sabers_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_light_side_sabers_master")
+	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_sabers_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_dark_side_sabers_master")
+	end
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_healer_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_light_side_healer_master")
+	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_healer_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_dark_side_healer_master")
+	end
+	
+	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_powers_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "jedi_light_side_powers_master")
+	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_powers_master")) then
+		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_dark_side_powers_master")
+	end
+		
+	local skillManager = LuaSkillManager()
+	skillManager:surrenderAllSkills(pPlayer, false)
+	awardSkill(pPlayer, readStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID()))
+	deleteStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID())
 end
