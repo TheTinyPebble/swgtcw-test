@@ -1,5 +1,7 @@
 ForceShrineMenuComponent = {}
 
+local trainerData = require("screenplays.trainers.trainerData")
+
 function ForceShrineMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
 	local menuResponse = LuaObjectMenuResponse(pMenuResponse)
 
@@ -213,8 +215,31 @@ function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex,
 		writeStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID(), "dark_dark_side_powers_master")
 	end
 		
-	local skillManager = LuaSkillManager()
-	skillManager:surrenderAllSkills(pPlayer, false)
+	self:surrenderAllJediSkills(pPlayer)
 	awardSkill(pPlayer, readStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID()))
 	deleteStringData("jediFactionSwap:" .. SceneObject(pPlayer):getObjectID())
+end
+
+function surrenderAllJediSkills(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+
+	local jediSkillsToRemove = readStringData("jediFactionSwap" .. SceneObject(pPlayer):getObjectID())
+	
+	if (jediSkillsToRemove ~= "jedi_padawan_master" or jediSkillsToRemove ~= "dark_padawan_master") then
+		if (CreatureObject(pPlayer):hasSkill("jedi_padawan_master")) then
+			for i = 1, trainerData.trainerSkills["jedi_padawan_master"] do
+				CreatureObject(pPlayer):surrenderSkill(trainerData.trainerSkills["jedi_padawan_master"][i])
+			end
+		elseif (CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
+			for i = 1, trainerData.trainerSkills["dark_padawan_master"] do
+				CreatureObject(pPlayer):surrenderSkill(trainerData.trainerSkills["dark_padawan_master"][i])
+			end
+		end
+	end
+	
+	for i = 1, trainerData.trainerSkills[jediSkillsToRemove] do
+		CreatureObject(pPlayer):surrenderSkill(trainerData.trainerSkills[jediSkillsToRemove][i])
+	end
 end
