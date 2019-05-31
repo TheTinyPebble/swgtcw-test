@@ -174,13 +174,6 @@ function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex,
 	if (cancelPressed or pCreature == nil) then
 		return 0
 	end
-
-	local suiBox = LuaSuiBox(pSui)
-	local pUsingObject = suiBox:getUsingObject()
-
-	if (pUsingObject == nil) then
-		return 0
-	end
 	
 	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL and (PlayerObject(pGhost):getFactionStanding("rebel") < 200)) then
 		CreatureObject(pPlayer):setFaction(370444368) -- Rebel faction hash code
