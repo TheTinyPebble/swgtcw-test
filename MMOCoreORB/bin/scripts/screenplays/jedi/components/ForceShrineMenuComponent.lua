@@ -3,7 +3,6 @@ ForceShrineMenuComponent = {}
 local jediSkills = {
 	padawan_light = {
 		"jedi_padawan_novice",
-		"jedi_padawan_master",
 		"jedi_padawan_saber_01",
 		"jedi_padawan_saber_02",
 		"jedi_padawan_saber_03",
@@ -19,12 +18,12 @@ local jediSkills = {
 		"jedi_padawan_force_manipulation_01",
 		"jedi_padawan_force_manipulation_02",
 		"jedi_padawan_force_manipulation_03",
-		"jedi_padawan_force_manipulation_04"
+		"jedi_padawan_force_manipulation_04",
+		"jedi_padawan_master",
 	},
 	
 	padawan_dark = {
 		"dark_padawan_novice",
-		"dark_padawan_master",
 		"dark_padawan_saber_01",
 		"dark_padawan_saber_02",
 		"dark_padawan_saber_03",
@@ -40,12 +39,30 @@ local jediSkills = {
 		"dark_padawan_force_manipulation_01",
 		"dark_padawan_force_manipulation_02",
 		"dark_padawan_force_manipulation_03",
-		"dark_padawan_force_manipulation_04"
+		"dark_padawan_force_manipulation_04",
+		"dark_padawan_master",
 	},
 	
 	jedi_defender_light = {
+		"jedi_padawan_novice",
+		"jedi_padawan_saber_01",
+		"jedi_padawan_saber_02",
+		"jedi_padawan_saber_03",
+		"jedi_padawan_saber_04",
+		"jedi_padawan_healing_01",
+		"jedi_padawan_healing_02",
+		"jedi_padawan_healing_03",
+		"jedi_padawan_healing_04",
+		"jedi_padawan_force_power_01",
+		"jedi_padawan_force_power_02",
+		"jedi_padawan_force_power_03",
+		"jedi_padawan_force_power_04",
+		"jedi_padawan_force_manipulation_01",
+		"jedi_padawan_force_manipulation_02",
+		"jedi_padawan_force_manipulation_03",
+		"jedi_padawan_force_manipulation_04",
+		"jedi_padawan_master",
 		"jedi_light_side_defender_novice",
-		"jedi_light_side_defender_master",
 		"jedi_light_side_defender_saber_01",
 		"jedi_light_side_defender_saber_02",
 		"jedi_light_side_defender_saber_03",
@@ -61,12 +78,30 @@ local jediSkills = {
 		"jedi_light_side_defender_force_manipulation_01",
 		"jedi_light_side_defender_force_manipulation_02",
 		"jedi_light_side_defender_force_manipulation_03",
-		"jedi_light_side_defender_force_manipulation_04"
+		"jedi_light_side_defender_force_manipulation_04",
+		"jedi_light_side_defender_master",
 	},
 	
 	jedi_sabers_light = {
+		"jedi_padawan_novice",
+		"jedi_padawan_saber_01",
+		"jedi_padawan_saber_02",
+		"jedi_padawan_saber_03",
+		"jedi_padawan_saber_04",
+		"jedi_padawan_healing_01",
+		"jedi_padawan_healing_02",
+		"jedi_padawan_healing_03",
+		"jedi_padawan_healing_04",
+		"jedi_padawan_force_power_01",
+		"jedi_padawan_force_power_02",
+		"jedi_padawan_force_power_03",
+		"jedi_padawan_force_power_04",
+		"jedi_padawan_force_manipulation_01",
+		"jedi_padawan_force_manipulation_02",
+		"jedi_padawan_force_manipulation_03",
+		"jedi_padawan_force_manipulation_04",
+		"jedi_padawan_master",
 		"jedi_light_side_sabers_novice",
-		"jedi_light_side_sabers_master",
 		"jedi_light_side_sabers_saber_single_01",
 		"jedi_light_side_sabers_saber_single_02",
 		"jedi_light_side_sabers_saber_single_03",
@@ -82,12 +117,30 @@ local jediSkills = {
 		"jedi_light_side_sabers_force_manipulation_01",
 		"jedi_light_side_sabers_force_manipulation_02",
 		"jedi_light_side_sabers_force_manipulation_03",
-		"jedi_light_side_sabers_force_manipulation_04"
+		"jedi_light_side_sabers_force_manipulation_04",
+		"jedi_light_side_sabers_master",
 	},
 	
 	jedi_healer_light = {
+		"jedi_padawan_novice",
+		"jedi_padawan_saber_01",
+		"jedi_padawan_saber_02",
+		"jedi_padawan_saber_03",
+		"jedi_padawan_saber_04",
+		"jedi_padawan_healing_01",
+		"jedi_padawan_healing_02",
+		"jedi_padawan_healing_03",
+		"jedi_padawan_healing_04",
+		"jedi_padawan_force_power_01",
+		"jedi_padawan_force_power_02",
+		"jedi_padawan_force_power_03",
+		"jedi_padawan_force_power_04",
+		"jedi_padawan_force_manipulation_01",
+		"jedi_padawan_force_manipulation_02",
+		"jedi_padawan_force_manipulation_03",
+		"jedi_padawan_force_manipulation_04",
+		"jedi_padawan_master",
 		"jedi_light_side_healer_novice",
-		"jedi_light_side_healer_master",
 		"jedi_light_side_healer_saber_01",
 		"jedi_light_side_healer_saber_02",
 		"jedi_light_side_healer_saber_03",
@@ -103,12 +156,30 @@ local jediSkills = {
 		"jedi_light_side_healer_manipulation_01",
 		"jedi_light_side_healer_manipulation_02",
 		"jedi_light_side_healer_manipulation_03",
-		"jedi_light_side_healer_manipulation_04"
+		"jedi_light_side_healer_manipulation_04",
+		"jedi_light_side_healer_master",
 	},
 	
 	jedi_powers_light = {
+		"jedi_padawan_novice",
+		"jedi_padawan_saber_01",
+		"jedi_padawan_saber_02",
+		"jedi_padawan_saber_03",
+		"jedi_padawan_saber_04",
+		"jedi_padawan_healing_01",
+		"jedi_padawan_healing_02",
+		"jedi_padawan_healing_03",
+		"jedi_padawan_healing_04",
+		"jedi_padawan_force_power_01",
+		"jedi_padawan_force_power_02",
+		"jedi_padawan_force_power_03",
+		"jedi_padawan_force_power_04",
+		"jedi_padawan_force_manipulation_01",
+		"jedi_padawan_force_manipulation_02",
+		"jedi_padawan_force_manipulation_03",
+		"jedi_padawan_force_manipulation_04",
+		"jedi_padawan_master",
 		"jedi_light_side_powers_novice",
-		"jedi_light_side_powers_master",
 		"jedi_light_side_powers_assault_01",
 		"jedi_light_side_powers_assault_02",
 		"jedi_light_side_powers_assault_03",
@@ -124,12 +195,30 @@ local jediSkills = {
 		"jedi_light_side_powers_manipulation_01",
 		"jedi_light_side_powers_manipulation_02",
 		"jedi_light_side_powers_manipulation_03",
-		"jedi_light_side_powers_manipulation_04"
+		"jedi_light_side_powers_manipulation_04",
+		"jedi_light_side_powers_master",
 	},
 	
 	jedi_defender_dark = {
+		"dark_padawan_novice",
+		"dark_padawan_saber_01",
+		"dark_padawan_saber_02",
+		"dark_padawan_saber_03",
+		"dark_padawan_saber_04",
+		"dark_padawan_healing_01",
+		"dark_padawan_healing_02",
+		"dark_padawan_healing_03",
+		"dark_padawan_healing_04",
+		"dark_padawan_force_power_01",
+		"dark_padawan_force_power_02",
+		"dark_padawan_force_power_03",
+		"dark_padawan_force_power_04",
+		"dark_padawan_force_manipulation_01",
+		"dark_padawan_force_manipulation_02",
+		"dark_padawan_force_manipulation_03",
+		"dark_padawan_force_manipulation_04",
+		"dark_padawan_master",
 		"dark_dark_side_defender_novice",
-		"dark_dark_side_defender_master",
 		"dark_dark_side_defender_saber_01",
 		"dark_dark_side_defender_saber_02",
 		"dark_dark_side_defender_saber_03",
@@ -145,12 +234,30 @@ local jediSkills = {
 		"dark_dark_side_defender_force_manipulation_01",
 		"dark_dark_side_defender_force_manipulation_02",
 		"dark_dark_side_defender_force_manipulation_03",
-		"dark_dark_side_defender_force_manipulation_04"
+		"dark_dark_side_defender_force_manipulation_04",
+		"dark_dark_side_defender_master",
 	},
 	
 	jedi_sabers_dark = {
+		"dark_padawan_novice",
+		"dark_padawan_saber_01",
+		"dark_padawan_saber_02",
+		"dark_padawan_saber_03",
+		"dark_padawan_saber_04",
+		"dark_padawan_healing_01",
+		"dark_padawan_healing_02",
+		"dark_padawan_healing_03",
+		"dark_padawan_healing_04",
+		"dark_padawan_force_power_01",
+		"dark_padawan_force_power_02",
+		"dark_padawan_force_power_03",
+		"dark_padawan_force_power_04",
+		"dark_padawan_force_manipulation_01",
+		"dark_padawan_force_manipulation_02",
+		"dark_padawan_force_manipulation_03",
+		"dark_padawan_force_manipulation_04",
+		"dark_padawan_master",
 		"dark_dark_side_sabers_novice",
-		"dark_dark_side_sabers_master",
 		"dark_dark_side_sabers_saber_single_01",
 		"dark_dark_side_sabers_saber_single_02",
 		"dark_dark_side_sabers_saber_single_03",
@@ -166,12 +273,30 @@ local jediSkills = {
 		"dark_dark_side_sabers_force_manipulation_01",
 		"dark_dark_side_sabers_force_manipulation_02",
 		"dark_dark_side_sabers_force_manipulation_03",
-		"dark_dark_side_sabers_force_manipulation_04"
+		"dark_dark_side_sabers_force_manipulation_04",
+		"dark_dark_side_sabers_master",
 	},
 	
 	jedi_healer_dark = {
+		"dark_padawan_novice",
+		"dark_padawan_saber_01",
+		"dark_padawan_saber_02",
+		"dark_padawan_saber_03",
+		"dark_padawan_saber_04",
+		"dark_padawan_healing_01",
+		"dark_padawan_healing_02",
+		"dark_padawan_healing_03",
+		"dark_padawan_healing_04",
+		"dark_padawan_force_power_01",
+		"dark_padawan_force_power_02",
+		"dark_padawan_force_power_03",
+		"dark_padawan_force_power_04",
+		"dark_padawan_force_manipulation_01",
+		"dark_padawan_force_manipulation_02",
+		"dark_padawan_force_manipulation_03",
+		"dark_padawan_force_manipulation_04",
+		"dark_padawan_master",
 		"dark_dark_side_healer_novice",
-		"dark_dark_side_healer_master",
 		"dark_dark_side_healer_saber_01",
 		"dark_dark_side_healer_saber_02",
 		"dark_dark_side_healer_saber_03",
@@ -187,12 +312,30 @@ local jediSkills = {
 		"dark_dark_side_healer_manipulation_01",
 		"dark_dark_side_healer_manipulation_02",
 		"dark_dark_side_healer_manipulation_03",
-		"dark_dark_side_healer_manipulation_04"
+		"dark_dark_side_healer_manipulation_04",
+		"dark_dark_side_healer_master",
 	},
 	
 	jedi_powers_dark = {
+		"dark_padawan_novice",
+		"dark_padawan_saber_01",
+		"dark_padawan_saber_02",
+		"dark_padawan_saber_03",
+		"dark_padawan_saber_04",
+		"dark_padawan_healing_01",
+		"dark_padawan_healing_02",
+		"dark_padawan_healing_03",
+		"dark_padawan_healing_04",
+		"dark_padawan_force_power_01",
+		"dark_padawan_force_power_02",
+		"dark_padawan_force_power_03",
+		"dark_padawan_force_power_04",
+		"dark_padawan_force_manipulation_01",
+		"dark_padawan_force_manipulation_02",
+		"dark_padawan_force_manipulation_03",
+		"dark_padawan_force_manipulation_04",
+		"dark_padawan_master",
 		"dark_dark_side_powers_novice",
-		"dark_dark_side_powers_master",
 		"dark_dark_side_powers_assault_01",
 		"dark_dark_side_powers_assault_02",
 		"dark_dark_side_powers_assault_03",
@@ -208,7 +351,8 @@ local jediSkills = {
 		"dark_dark_side_powers_manipulation_01",
 		"dark_dark_side_powers_manipulation_02",
 		"dark_dark_side_powers_manipulation_03",
-		"dark_dark_side_powers_manipulation_04"
+		"dark_dark_side_powers_manipulation_04",
+		"dark_dark_side_powers_master",
 	},
 }
 
@@ -387,71 +531,83 @@ function ForceShrineMenuComponent:swapFactionCallback(pPlayer, pSui, eventIndex,
 		return 0
 	end
 	
-	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL and (PlayerObject(pGhost):getFactionStanding("rebel") < 200)) then
+	if (CreatureObject(pPlayer):getFaction() == FACTIONIMPERIAL) then
 		CreatureObject(pPlayer):setFaction(FACTIONREBEL)
-	elseif (CreatureObject(pPlayer):getFaction() == FACTIONREBEL and (PlayerObject(pGhost):getFactionStanding("imperial") < 200)) then
+	elseif (CreatureObject(pPlayer):getFaction() == FACTIONREBEL) then
 		CreatureObject(pPlayer):setFaction(FACTIONIMPERIAL)
 	end
 	
 	CreatureObject(pPlayer):setFactionStatus(1)
-	
-	if (CreatureObject(pPlayer):hasSkill("jedi_padawan_master")) then
-		for i = 1, #jediSkills.padawan_light do
-			CreatureObject(pPlayer):surrenderSkill(jediSkills.padawan_light[i])
-			awardSkill(pPlayer, jediSkills.padawan_dark[i])
-		end
-	elseif (CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
-		for i = 1, #jediSkills.padawan_dark do
-			CreatureObject(pPlayer):surrenderSkill(jediSkills.padawan_dark[i])
-			awardSkill(pPlayer, jediSkills.padawan_light[i])
-		end
-	end
-	
+
 	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_defender_master")) then
-		for i = 1, #jediSkills.jedi_defender_light do
+		for i = #jediSkills.jedi_defender_light, 1, -1 do
 			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_defender_light[i])
+		end
+		for i = 1, #jediSkills.jedi_defender_dark do
 			awardSkill(pPlayer, jediSkills.jedi_defender_dark[i])
 		end
 	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_defender_master")) then
-		for i = 1, #jediSkills.jedi_defender_dark do
+		for i = #jediSkills.jedi_defender_dark, 1, -1 do
 			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_defender_dark[i])
+		end
+		for i = 1, #jediSkills.jedi_defender_light do
 			awardSkill(pPlayer, jediSkills.jedi_defender_light[i])
 		end
-	end
-	
-	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_sabers_master")) then
-		for i = 1, #jediSkills.jedi_sabers_light do
+	elseif (CreatureObject(pPlayer):hasSkill("jedi_light_side_sabers_master")) then
+		for i = #jediSkills.jedi_sabers_light, 1, -1 do
 			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_sabers_light[i])
+		end
+		for i = 1, #jediSkills.jedi_sabers_dark do
 			awardSkill(pPlayer, jediSkills.jedi_sabers_dark[i])
 		end
 	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_sabers_master")) then
-		for i = 1, #jediSkills.jedi_sabers_dark do
+		for i = #jediSkills.jedi_sabers_dark, 1, -1 do
 			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_sabers_dark[i])
+		end
+		for i = 1, #jediSkills.jedi_sabers_light do
 			awardSkill(pPlayer, jediSkills.jedi_sabers_light[i])
 		end
-	end
-	
-	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_healer_master")) then
-		for i = 1, #jediSkills.jedi_healer_light do
+	elseif (CreatureObject(pPlayer):hasSkill("jedi_light_side_healer_master")) then
+		for i = #jediSkills.jedi_healer_light, 1, -1 do
 			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_healer_light[i])
+		end
+		for i = 1, #jediSkills.jedi_healer_dark do
 			awardSkill(pPlayer, jediSkills.jedi_healer_dark[i])
 		end
 	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_healer_master")) then
-		for i = 1, #jediSkills.jedi_healer_dark do
+		for i = #jediSkills.jedi_healer_dark, 1, -1 do
 			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_healer_dark[i])
+		end
+		for i = 1, #jediSkills.jedi_healer_light do
 			awardSkill(pPlayer, jediSkills.jedi_healer_light[i])
 		end
-	end
-	
-	if (CreatureObject(pPlayer):hasSkill("jedi_light_side_powers_master")) then
-		for i = 1, #jediSkills.jedi_powers_light do
+	elseif (CreatureObject(pPlayer):hasSkill("jedi_light_side_powers_master")) then
+		for i = #jediSkills.jedi_powers_light, 1, -1 do
 			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_powers_light[i])
+		end
+		for i = 1, #jediSkills.jedi_powers_dark do
 			awardSkill(pPlayer, jediSkills.jedi_powers_dark[i])
 		end
 	elseif (CreatureObject(pPlayer):hasSkill("dark_dark_side_powers_master")) then
-		for i = 1, #jediSkills.jedi_powers_dark do
+		for i = #jediSkills.jedi_powers_dark, 1, -1 do
 			CreatureObject(pPlayer):surrenderSkill(jediSkills.jedi_powers_dark[i])
+		end
+		for i = 1, #jediSkills.jedi_powers_light do
 			awardSkill(pPlayer, jediSkills.jedi_powers_light[i])
+		end
+	elseif (CreatureObject(pPlayer):hasSkill("jedi_padawan_master")) then
+		for i = #jediSkills.padawan_light, 1, -1 do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.padawan_light[i])
+		end
+		for i = 1, #jediSkills.padawan_dark do
+			awardSkill(pPlayer, jediSkills.padawan_dark[i])
+		end
+	elseif (CreatureObject(pPlayer):hasSkill("dark_padawan_master")) then
+		for i = #jediSkills.padawan_dark, 1, -1 do
+			CreatureObject(pPlayer):surrenderSkill(jediSkills.padawan_dark[i])
+		end
+		for i = 1, #jediSkills.padawan_light do
+			awardSkill(pPlayer, jediSkills.padawan_light[i])
 		end
 	end
 end
