@@ -9,6 +9,7 @@ EventTools = {
 		{ "Test Event Spawn Manager", "testESM" },
 		{ "Spawn Buildings + Teleport", "spawnBuildings" },
 		{ "Get Decorations in Building", "getDeco" },
+		{ "Test Heroic Dungeon", "testHeroic" },
 	}
 }
 
@@ -172,6 +173,10 @@ function EventTools.getDeco(pPlayer)
 			end
 		end
 	end
+end
+
+function EventTools.testHeroic(pPlayer)
+	HeroicLogic:spawnDungeon(pPlayer)
 end
 
 return EventTools

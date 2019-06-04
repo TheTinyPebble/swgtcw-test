@@ -688,6 +688,9 @@ includeFile("elite_spawns/eliteSpawnMap.lua")
 --World Bosses
 includeFile("world_boss/nightsister_shapeshifter.lua")
 
+--Heroics
+includeFile("heroic/heroic_logic.lua")
+
 --Custom Content
 includeFile("../custom_scripts/screenplays/screenplays.lua")
 includeFile("omega/screenplays.lua")
