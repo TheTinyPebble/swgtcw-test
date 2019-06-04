@@ -43,7 +43,7 @@ public:
 			UnicodeString arg;
 			tokenizer.getUnicodeToken(arg);
 			
-			if (arg == "who") {
+			if (arg == "list") {
 				if (!player->isInGuild()) {
 					player->sendSystemMessage("You are not in a guild.");
 					return GENERALERROR;
@@ -84,7 +84,7 @@ public:
 					UnicodeString arg;
 					tokenizer.getUnicodeToken(arg);
 					
-					if (arg == "online") {
+					if (arg == "-online") {
 						msg << "\\#ffffffGuild Member List (online only):\n";
 						
 						for (const auto& memberID : members) {
