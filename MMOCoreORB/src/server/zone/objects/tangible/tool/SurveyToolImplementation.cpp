@@ -52,7 +52,7 @@ int SurveyToolImplementation::handleObjectMenuSelect(CreatureObject* player, byt
 		if (selectedID == 20) { // use object
 			int range = getRange(player);
 
-			if(range <= 0 || range > 384) {
+			if(range <= 0 || range > 414) {
 				sendRangeSui(player);
 				return 0;
 			}
