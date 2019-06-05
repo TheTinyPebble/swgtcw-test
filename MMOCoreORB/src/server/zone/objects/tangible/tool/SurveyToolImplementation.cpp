@@ -17,6 +17,7 @@
 #include "server/zone/objects/tangible/tool/sui/SurveyToolApproveRadioactiveSuiCallback.h"
 #include "server/zone/objects/player/sessions/survey/SurveySession.h"
 #include "server/zone/packets/scene/AttributeListMessage.h"
+#include "server/zone/objects/manufactureschematic/craftingvalues/CraftingValues.h"
 
 void SurveyToolImplementation::loadTemplateData(SharedObjectTemplate* templateData) {
 	TangibleObjectImplementation::loadTemplateData(templateData);
