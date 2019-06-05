@@ -44,6 +44,8 @@
 object_tangible_deed_vehicle_deed_speederbike_deed = object_tangible_deed_vehicle_deed_shared_speederbike_deed:new {
 
 	templateType = VEHICLEDEED,
+	acceleration = 5,
+	speed = 5,
 
 	controlDeviceObjectTemplate = "object/intangible/vehicle/speederbike_pcd.iff",
 	generatedObjectTemplate = "object/mobile/vehicle/speederbike.iff",
