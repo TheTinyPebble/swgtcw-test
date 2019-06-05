@@ -140,7 +140,6 @@ int SurveyToolImplementation::getRange(CreatureObject* player) {
 
 	int surveyMod = player->getSkillMod("surveying");
 	int rangeBasedOnSkill = getSkillBasedRange(surveyMod);
-	int toolEff = getEffectiveness() * 2;
 	
 	if (range > rangeBasedOnSkill)
 		setRange(rangeBasedOnSkill);
@@ -153,7 +152,7 @@ int SurveyToolImplementation::getSkillBasedRange(int skillLevel) {
 	if (skillLevel >= 120)
 		return 384;
 	else if (skillLevel >= 100)
-		return 320 + 10;
+		return 320;
 	else if (skillLevel >= 75)
 		return 256;
 	else if (skillLevel >= 55)
@@ -167,7 +166,8 @@ int SurveyToolImplementation::getSkillBasedRange(int skillLevel) {
 }
 
 void SurveyToolImplementation::setRange(int r) {
-	range = r;  // Distance the tool checks during survey
+	int toolEff = getEffectiveness() * 2;
+	range = r + toolEff;  // Distance the tool checks during survey
 
 	// Set number of grid points in survey SUI 3x3 to 5x5
 	if (range >= 256) {
