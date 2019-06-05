@@ -14,8 +14,8 @@ include templates.SharedObjectTemplate;
 @json
 class VehicleDeed extends Deed {
 	protected int hitPoints;
-	protected int speed;
-	protected int acceleration;
+	protected float speed;
+	protected float acceleration;
 	protected string controlDeviceObjectTemplate;
 
 	public VehicleDeed() {

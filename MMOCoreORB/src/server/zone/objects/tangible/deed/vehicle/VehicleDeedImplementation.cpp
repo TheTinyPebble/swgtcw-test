@@ -46,8 +46,8 @@ void VehicleDeedImplementation::updateCraftingValues(CraftingValues* values, boo
 	 */
 
 	hitPoints = (int) values->getCurrentValue("hit_points");
-	speed = (int) values->getCurrentValue("speed");
-	acceleration = (int) values->getCurrentValue("acceleration");
+	speed = (float) values->getCurrentValue("speed");
+	acceleration = (float) values->getCurrentValue("acceleration");
 }
 
 void VehicleDeedImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuResponse, CreatureObject* player) {
@@ -117,7 +117,7 @@ int VehicleDeedImplementation::handleObjectMenuSelect(CreatureObject* player, by
 		vehicle->createChildObjects();
 		vehicle->setMaxCondition(hitPoints);
 		vehicle->setConditionDamage(0);
-		//vehicle->setRunSpeed(speed);
+		vehicle->setRunSpeed(speed);
 		//vehicle->setAccelerationMultiplierMod(acceleration, true);
 		vehicleControlDevice->setControlledObject(vehicle);
 
