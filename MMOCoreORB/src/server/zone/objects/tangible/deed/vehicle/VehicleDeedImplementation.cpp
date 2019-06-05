@@ -29,7 +29,7 @@ void VehicleDeedImplementation::fillAttributeList(AttributeListMessage* alm, Cre
 
 	alm->insertAttribute("hit_points", hitPoints);
 	alm->insertAttribute("speed", speed);
-	alm->insertAttribute("speed", acceleration);
+	alm->insertAttribute("acceleration", acceleration);
 }
 
 void VehicleDeedImplementation::initializeTransientMembers() {
