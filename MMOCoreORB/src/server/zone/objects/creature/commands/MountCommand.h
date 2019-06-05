@@ -176,7 +176,7 @@ public:
 		creature->setTurnScale(newTurn, true);
 		creature->setAccelerationMultiplierMod(newAccel, true);
 		creature->addMountedCombatSlow();
-		creature->sendSystemMessage(String::valueOf(newSpeed));
+		creature->sendSystemMessage(String::valueOf(creature->getRunSpeed()));
 
 		return SUCCESS;
 	}
