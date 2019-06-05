@@ -54,7 +54,7 @@ object_tangible_deed_vehicle_deed_speederbike_deed = object_tangible_deed_vehicl
 	experimentalGroupTitles = {"null", "null", "exp_durability", "exp_effectiveness", "exp_effectiveness"},
 	experimentalSubGroupTitles = {"null", "null", "hit_points", "speed", "acceleration"},
 	experimentalMin = {0, 0, 1000, 10, 10},
-	experimentalMax = {0, 0, 2500, 50, 50},
+	experimentalMax = {0, 0, 2500, 500, 500},
 	experimentalPrecision = {0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1},
 }
