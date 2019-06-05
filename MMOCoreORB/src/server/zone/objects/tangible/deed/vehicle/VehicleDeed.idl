@@ -14,11 +14,15 @@ include templates.SharedObjectTemplate;
 @json
 class VehicleDeed extends Deed {
 	protected int hitPoints;
+	protected int speed;
+	protected int acceleration;
 	protected string controlDeviceObjectTemplate;
 
 	public VehicleDeed() {
 		Logger.setLoggingName("VehicleDeed");
 		hitPoints = 1500;
+		speed = 10;
+		acceleration = 10;
 	}
 
 	public native void initializeTransientMembers();
