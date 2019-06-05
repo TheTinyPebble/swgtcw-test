@@ -283,14 +283,4 @@ class VehicleObject extends CreatureObject {
 	public float getLightSaber() {
 		return 25 - getConditionReduction(25);
 	}
-	
-	@dirty
-	public float getRunSpeed() {
-		return runSpeed;
-	}
-	
-	@dirty
-	public float getAccelerationMultiplierMod() {
-		return accelerationMultiplierMod;
-	}
 }

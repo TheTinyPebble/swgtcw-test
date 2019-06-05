@@ -76,8 +76,8 @@ void VehicleObjectImplementation::fillAttributeList(AttributeListMessage* alm, C
 
 	alm->insertAttribute("@obj_attr_n:owner", linkedCreature->getFirstName());
 	
-	alm->insertAttribute("speed", speed);
-	alm->insertAttribute("acceleration", acceleration);
+	alm->insertAttribute("speed", object->getRunSpeed());
+	alm->insertAttribute("acceleration", object->getAccelerationMultiplierMod());
 
 }
 
