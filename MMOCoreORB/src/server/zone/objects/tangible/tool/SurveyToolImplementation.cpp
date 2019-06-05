@@ -95,14 +95,6 @@ void SurveyToolImplementation::fillAttributeList(AttributeListMessage* alm,
 	alm->insertAttribute("craft_tool_effectiveness", Math::getPrecision(effectiveness, 1));
 }
 
-void SurveyToolImplementation::updateCraftingValues(CraftingValues* values, bool firstUpdate) {
-	/// useModifer is the effectiveness
-
-	effectiveness = values->getCurrentValue("usemodifier");
-
-	//craftingValues->toString();
-}
-
 void SurveyToolImplementation::sendRangeSui(CreatureObject* player) {
 	int surveyMod = player->getSkillMod("surveying");
 
