@@ -93,6 +93,15 @@ void SurveyToolImplementation::fillAttributeList(AttributeListMessage* alm,
 	TangibleObjectImplementation::fillAttributeList(alm, object);
 
 	alm->insertAttribute("craft_tool_effectiveness", Math::getPrecision(effectiveness, 1));
+
+}
+
+void SurveyToolImplementation::updateCraftingValues(CraftingValues* values, bool firstUpdate) {
+	/// useModifer is the effectiveness
+
+	effectiveness = values->getCurrentValue("usemodifier");
+
+	//craftingValues->toString();
 }
 
 void SurveyToolImplementation::sendRangeSui(CreatureObject* player) {
