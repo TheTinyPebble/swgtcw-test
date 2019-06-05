@@ -117,7 +117,7 @@ int VehicleDeedImplementation::handleObjectMenuSelect(CreatureObject* player, by
 		vehicle->createChildObjects();
 		vehicle->setMaxCondition(hitPoints);
 		vehicle->setConditionDamage(0);
-		vehicle->setRunSpeed(speed);
+		//vehicle->setRunSpeed(speed);
 		//vehicle->setAccelerationMultiplierMod(acceleration, true);
 		vehicleControlDevice->setControlledObject(vehicle);
 
