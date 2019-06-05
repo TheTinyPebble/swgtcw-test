@@ -141,6 +141,7 @@ public:
 		// Drop old change off the buffer
 		if (bufferSize > 5) {
 			changeBuffer->remove(0);
+			creature->sendSystemMessage(String::valueOf(creature->getRunSpeed()));
 		}
 
 		// get vehicle speed
