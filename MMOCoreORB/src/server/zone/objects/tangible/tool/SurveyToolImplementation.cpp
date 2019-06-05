@@ -16,6 +16,7 @@
 #include "server/zone/objects/tangible/tool/sui/SurveyToolSetRangeSuiCallback.h"
 #include "server/zone/objects/tangible/tool/sui/SurveyToolApproveRadioactiveSuiCallback.h"
 #include "server/zone/objects/player/sessions/survey/SurveySession.h"
+#include "server/zone/packets/scene/AttributeListMessage.h"
 
 void SurveyToolImplementation::loadTemplateData(SharedObjectTemplate* templateData) {
 	TangibleObjectImplementation::loadTemplateData(templateData);
@@ -84,6 +85,21 @@ int SurveyToolImplementation::handleObjectMenuSelect(CreatureObject* player, byt
 	}
 
 	return TangibleObjectImplementation::handleObjectMenuSelect(player, selectedID);
+}
+
+void SurveyToolImplementation::fillAttributeList(AttributeListMessage* alm,
+		CreatureObject* object) {
+	TangibleObjectImplementation::fillAttributeList(alm, object);
+
+	alm->insertAttribute("craft_tool_effectiveness", Math::getPrecision(effectiveness, 1));
+}
+
+void SurveyToolImplementation::updateCraftingValues(CraftingValues* values, bool firstUpdate) {
+	/// useModifer is the effectiveness
+
+	effectiveness = values->getCurrentValue("usemodifier");
+
+	//craftingValues->toString();
 }
 
 void SurveyToolImplementation::sendRangeSui(CreatureObject* player) {

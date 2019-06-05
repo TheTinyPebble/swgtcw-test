@@ -9,6 +9,7 @@ import server.zone.objects.creature.CreatureObject;
 import server.zone.packets.object.ObjectMenuResponse;
 include server.zone.objects.manufactureschematic.craftingvalues.CraftingValues;
 include templates.SharedObjectTemplate;
+import server.zone.packets.scene.AttributeListMessage;
 
 @json
 class SurveyTool extends ToolTangibleObject {
@@ -67,6 +68,19 @@ class SurveyTool extends ToolTangibleObject {
 	 */
 	public native int handleObjectMenuSelect(CreatureObject player, byte selectedID);
 
+	/**
+	 * Fills the attribute list message options that are sent to player creature
+	 * @pre { }
+	 * @post { }
+	 * @param msg attribute list message with the attributes
+	 * @param object player creature to which the message is sent
+	 */
+	@local
+	@dirty
+	public native void fillAttributeList(AttributeListMessage msg, CreatureObject object);
+
+	@local
+	public native void updateCraftingValues(CraftingValues values, boolean firstUpdate);
 
 	@local
 	public void updateCraftingValues(CraftingValues values, boolean firstUpdate) {
