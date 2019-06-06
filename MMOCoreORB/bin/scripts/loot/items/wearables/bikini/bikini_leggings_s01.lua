@@ -9,7 +9,8 @@ bikini_leggings_s01 = {
     customizationStringNames = {},
     customizationValues = {
     },
-    junkDealerTypeNeeded = JUNKFINERY,
+    junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKFINERY,
     junkMinValue = 55,
     junkMaxValue = 110
 }

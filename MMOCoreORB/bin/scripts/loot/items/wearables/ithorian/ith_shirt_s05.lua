@@ -9,7 +9,8 @@ ith_shirt_s05 = {
     customizationStringNames = {},
     customizationValues = {
     },
-    junkDealerTypeNeeded = JUNKFINERY,
+    junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKFINERY,
     junkMinValue = 40,
     junkMaxValue = 80
 }

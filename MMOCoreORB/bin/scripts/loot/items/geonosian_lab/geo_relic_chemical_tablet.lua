@@ -9,7 +9,8 @@ geo_relic_chemical_tablet = {
 	},
 	customizationStringNames = {},
 	customizationValues = {},
-	junkDealerTypeNeeded = JUNKGEO,
+	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKGEO,
 	junkMinValue = 50,
 	junkMaxValue = 100
 }

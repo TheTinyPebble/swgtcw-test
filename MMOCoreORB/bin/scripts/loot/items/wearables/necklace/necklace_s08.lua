@@ -9,7 +9,8 @@ necklace_s08 = {
     customizationStringNames = {},
     customizationValues = {
     },
-    junkDealerTypeNeeded = JUNKFINERY,
+    junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKFINERY,
     junkMinValue = 30,
     junkMaxValue = 60
 }

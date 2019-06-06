@@ -9,7 +9,8 @@ gloves_s12 = {
     customizationStringNames = {},
     customizationValues = {
     },
-    junkDealerTypeNeeded = JUNKFINERY,
+    junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKFINERY,
     junkMinValue = 20,
     junkMaxValue = 40
 }

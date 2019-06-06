@@ -9,7 +9,8 @@ geo_relic_honey_carafe = {
 	},
 	customizationStringNames = {},
 	customizationValues = {},
-	junkDealerTypeNeeded = JUNKGEO,
+	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKGEO,
 	junkMinValue = 50,
 	junkMaxValue = 100
 }

@@ -41,7 +41,8 @@ knife_janta = {
 		{"uses", 650, 650}
 	},
 
-	junkDealerTypeNeeded = JUNKARMS,
+	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKARMS,
 	junkMinValue = 20,
 	junkMaxValue = 60
 

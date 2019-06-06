@@ -9,7 +9,8 @@ geo_relic_small_ball = {
 	},
 	customizationStringNames = {},
 	customizationValues = {},
-	junkDealerTypeNeeded = JUNKGEO,
+	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKGEO,
 	junkMinValue = 50,
 	junkMaxValue = 100
 }

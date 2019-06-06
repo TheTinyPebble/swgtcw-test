@@ -9,7 +9,9 @@ belt_s16 = {
     customizationStringNames = {},
     customizationValues = {
     },
-    junkDealerTypeNeeded = JUNKFINERY,
+    junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded
+	--junkDealerTypeNeeded = JUNKFINERY,
     junkMinValue = 35,
     junkMaxValue = 70
 }

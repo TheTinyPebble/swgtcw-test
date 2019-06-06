@@ -25,7 +25,8 @@ corsec_cdef_pistol = {
 
 	-- randomDotChance: The chance of this weapon object dropping with a random dot on it. Higher number means less chance. Set to 0 to always have a random dot.
 	randomDotChance = 625,
-	junkDealerTypeNeeded = JUNKARMS + JUNKCORSEC,
+	junkDealerTypeNeeded = JUNKGENERIC,
+	--junkDealerTypeNeeded = JUNKARMS + JUNKCORSEC,
 	junkMinValue = 20,
 	junkMaxValue = 60
 
