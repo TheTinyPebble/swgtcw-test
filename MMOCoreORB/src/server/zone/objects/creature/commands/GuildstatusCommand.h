@@ -102,7 +102,7 @@ public:
 					} else {
 						player->sendSystemMessage("SYNTAX: /guildStatus list");
 						player->sendSystemMessage("SYNTAX: /guildStatus list -online");
-						return SUCCESS;
+						return INVALIDPARAMETERS;
 					}
 				} else {
 					prompt << "Guild Member List";
