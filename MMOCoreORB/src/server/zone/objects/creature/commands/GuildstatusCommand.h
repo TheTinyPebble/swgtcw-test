@@ -8,6 +8,7 @@
 #include "server/zone/objects/scene/SceneObject.h"
 #include "server/zone/ZoneServer.h"
 #include "server/zone/objects/guild/GuildObject.h"
+#include "server/zone/objects/player/sui/messagebox/SuiMessageBox.h"
 
 class GuildstatusCommand : public QueueCommand {
 public:
@@ -79,13 +80,14 @@ public:
 				locker.release();
 				
 				StringBuffer msg;
+				StringBuffer prompt;
 				
 				if (tokenizer.hasMoreTokens()) {
 					UnicodeString arg;
 					tokenizer.getUnicodeToken(arg);
 					
 					if (arg == "-online") {
-						msg << "\\#ffffffGuild Member List (online only):\n";
+						prompt << "Guild Member List (online only)";
 						
 						for (const auto& memberID : members) {
 							auto firstName = guild->getZoneServer()->getPlayerManager()->getPlayerName(memberID);
@@ -96,9 +98,14 @@ public:
 								msg << "\\#ffd300" << firstName << " - online\n";
 							}
 						}
+						//msg << "\\#ffffff--------------\nEnd of Guild List.";
+					} else {
+						player->sendSystemMessage("SYNTAX: /guildStatus list");
+						player->sendSystemMessage("SYNTAX: /guildStatus list -online");
+						return SUCCESS;
 					}
 				} else {
-					msg << "\\#ffffffGuild Member List:\n";
+					prompt << "Guild Member List";
 					
 					for (const auto& memberID : members) {
 						auto firstName = guild->getZoneServer()->getPlayerManager()->getPlayerName(memberID);
@@ -113,11 +120,26 @@ public:
 
 						msg << "\\#ffffff\n";
 					}
+					//msg << "\\#ffffff--------------\nEnd of Guild List.";
 				}
-				msg << "\\#ffffff--------------\nEnd of Guild List.";
-				player->sendSystemMessage(msg.toString());
-				return SUCCESS;
 				
+				ManagedReference<PlayerObject*> ghost = player->getPlayerObject();
+
+				if (ghost == NULL) {
+					return GENERALERROR;
+				}
+				ManagedReference<SuiMessageBox*> box = new SuiMessageBox(player, SuiWindowType::NONE);
+				box->setPromptTitle(prompt.toString());
+				box->setPromptText(msg.toString());
+
+				ghost->addSuiBox(box);
+				player->sendMessage(box->generateMessage());
+				//player->sendSystemMessage(msg.toString());
+				return SUCCESS;
+			} else if (arg == "help") {
+				player->sendSystemMessage("SYNTAX: /guildStatus list");
+				player->sendSystemMessage("SYNTAX: /guildStatus list -online");
+				return SUCCESS;
 			} else {
 				uint64 targetPlayerID = playerManager->getObjectID(arg.toString());
 
