@@ -40,7 +40,7 @@ function hgT1TrophyMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, s
 	return 0
 end
 
-function hgT1TrophyMenuComponent:noCallback(pPlayer, pSui, eventIndex, ...)
+function hgT1TrophyMenuComponent:t1TrophyCollectCallback(pPlayer, pSui, eventIndex, ...)
 	local cancelPressed = (eventIndex == 1)
 
 	if (cancelPressed) then
