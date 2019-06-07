@@ -562,10 +562,6 @@ public:
 	void setTemplateFileName(const String& str) {
 		templateFileName = str;
 	}
-	
-	void setNoTrade(bool noTrade) {
-		this->noTrade = noTrade;
-	}
 
 public:
 	virtual bool isArmorObjectTemplate() {

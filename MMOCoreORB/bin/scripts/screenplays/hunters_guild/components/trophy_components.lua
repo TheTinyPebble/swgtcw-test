@@ -64,6 +64,10 @@ hgT1TrophyAttributeListComponent = {}
 
 function hgT1TrophyAttributeListComponent:fillAttributeList(pALM, pPlayer, pObject)
 	local ALM = LuaAttributeListMessage(pALM)
+	
+	if (TangibleObject(pObject):isNoTrade()) then
+		ALM:insertNewAttribute("no_trade", "\\#ff0000No Trade")
+	end
 
 	for i = 1, #hgT1TrophyStates do
 		if (CreatureObject(pPlayer):hasScreenPlayState(hgT1TrophyStates[i][2], "hgT1Trophies")) then

@@ -62,7 +62,6 @@ namespace tangible {
 		int isNoTrade(lua_State* L);
 		int getUseCount(lua_State* L);
 		int setUseCount(lua_State* L);
-		int setNoTrade(lua_State* L);
 
 	protected:
 		TangibleObject* realObject;
