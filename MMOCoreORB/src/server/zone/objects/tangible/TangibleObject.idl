@@ -122,6 +122,7 @@ class TangibleObject extends SceneObject {
 		sliceable = false;
 		sliced = false;
 		isCraftedEnhancedItem = false;
+		isNoTrade = false;
 
 		threatMap = null;
 		junkDealerNeeded = 0;
@@ -880,5 +881,7 @@ class TangibleObject extends SceneObject {
 
 	@dirty
 	public native boolean isInNavMesh();
+	
+	public native void setNoTrade(boolean value);
 }
 

@@ -1175,3 +1175,7 @@ TangibleObject* TangibleObject::asTangibleObject() {
 TangibleObject* TangibleObjectImplementation::asTangibleObject() {
 	return _this.getReferenceUnsafeStaticCast();
 }
+
+void TangibleObjectImplementation::setNoTrade(bool value) {
+	isNoTrade = value;
+}

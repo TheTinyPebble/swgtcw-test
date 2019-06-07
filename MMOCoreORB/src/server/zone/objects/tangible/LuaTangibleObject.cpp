@@ -52,6 +52,7 @@ Luna<LuaTangibleObject>::RegType LuaTangibleObject::Register[] = {
 		{ "isNoTrade", &LuaTangibleObject::isNoTrade},
 		{ "getUseCount", &LuaTangibleObject::getUseCount},
 		{ "setUseCount", &LuaTangibleObject::setUseCount},
+		{ "setNoTrade", &LuaTangibleObject::setNoTrade},
 		{ 0, 0 }
 };
 
@@ -399,6 +400,16 @@ int LuaTangibleObject::setUseCount(lua_State* L){
 	Locker locker(realObject);
 	
 	realObject->setUseCount(useCount, true);
+
+	return 0;
+}
+
+int LuaTangibleObject::setNoTrade(lua_State* L){
+	bool noTrade = lua_toboolean(L, -1);
+	
+	Locker locker(realObject);
+	
+	realObject->setNoTrade(noTrade, true);
 
 	return 0;
 }

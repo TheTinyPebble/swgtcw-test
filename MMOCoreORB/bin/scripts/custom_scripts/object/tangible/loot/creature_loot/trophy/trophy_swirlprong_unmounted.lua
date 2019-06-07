@@ -1,4 +1,5 @@
 object_tangible_loot_creature_loot_trophy_trophy_swirlprong_unmounted = object_tangible_loot_creature_loot_trophy_shared_trophy_swirlprong_unmounted:new {
-
+	objectMenuComponent = "hgT1TrophyMenuComponent",
+	attributeListComponent = "hgT1TrophyAttributeListComponent",
 }
 ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_swirlprong_unmounted, "object/tangible/loot/creature_loot/trophy/trophy_swirlprong_unmounted.iff")
