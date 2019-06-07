@@ -82,6 +82,7 @@ class TangibleObject extends SceneObject {
 	protected SortedVector<ActiveArea> activeAreas;
 
 	protected SceneObject antiDecayKitObject;
+	protected boolean isNoTrade;
 
 	/**
 	 * TangibleObject constructor, used to initialized the object
