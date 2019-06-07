@@ -172,6 +172,7 @@ public:
 			newTurn += creature->getSkillMod("force_vehicle_control");
 		}
 
+		vehicle-setRunSpeed(50);
 		creature->setRunSpeed(50);
 		creature->setTurnScale(newTurn, true);
 		creature->setAccelerationMultiplierMod(newAccel, true);
