@@ -32,6 +32,7 @@ function hgT1TrophyMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, s
 	end
 
 	if (selectedID == 20) then
+		writeData("hgT1TrophyID" .. SceneObject(pPlayer):getObjectID(), SceneObject(pSceneObject):getObjectID())
 		local sui = SuiMessageBox.new("hgT1TrophyMenuComponent", "t1TrophyCollectCallback")
 		sui.setTitle("Collect Trophy")
 		sui.setPrompt("Do you want to add this trophy to your collection? If you do, then this trophy will be un-tradeable.")
@@ -47,8 +48,13 @@ function hgT1TrophyMenuComponent:t1TrophyCollectCallback(pPlayer, pSui, eventInd
 		return
 	end
 
+	local pSceneObject = getSceneObject(readData("hgT1TrophyID" .. SceneObject(pPlayer):getObjectID()))
+	
+	if (pObject == nil) then
+		return
+	end
+
 	for i = 1, #hgT1TrophyStates do
-		print(SceneObject(pSceneObject):getTemplateObjectPath(), hgT1TrophyStates[i][1])
 		if (string.find(SceneObject(pSceneObject):getTemplateObjectPath(), hgT1TrophyStates[i][1])) then
 			if (CreatureObject(pPlayer):hasScreenPlayState(hgT1TrophyStates[i][2], "hgT1Trophies")) then
 				CreatureObject(pPlayer):sendSystemMessage("You have already collected this trophy.")
@@ -59,6 +65,8 @@ function hgT1TrophyMenuComponent:t1TrophyCollectCallback(pPlayer, pSui, eventInd
 			end
 		end
 	end
+	
+	deleteData("hgT1TrophyID" .. SceneObject(pPlayer):getObjectID())
 end
 
 hgT1TrophyAttributeListComponent = {}
