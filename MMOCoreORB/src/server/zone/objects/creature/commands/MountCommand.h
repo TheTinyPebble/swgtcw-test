@@ -172,7 +172,7 @@ public:
 			newTurn += creature->getSkillMod("force_vehicle_control");
 		}
 
-		creature->setRunSpeed(newSpeed);
+		creature->setRunSpeed(50);
 		creature->setTurnScale(newTurn, true);
 		creature->setAccelerationMultiplierMod(newAccel, true);
 		creature->addMountedCombatSlow();
