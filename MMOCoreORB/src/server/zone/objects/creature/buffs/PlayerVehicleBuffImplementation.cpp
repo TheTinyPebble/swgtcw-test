@@ -86,6 +86,7 @@ void PlayerVehicleBuffImplementation::updateRiderSpeeds() {
 		}
 
 		// get vehicle speed
+		vehicle->setRunSpeed(50);
 		float newSpeed = vehicle->getRunSpeed();
 
 		// get animal mount speeds
