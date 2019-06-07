@@ -1,0 +1,4 @@
+object_tangible_loot_creature_loot_trophy_trophy_condor_dragon_unmounted = object_tangible_loot_creature_loot_trophy_shared_trophy_condor_dragon_unmounted:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_condor_dragon_unmounted, "object/tangible/loot/creature_loot/trophy/trophy_condor_dragon_unmounted.iff")

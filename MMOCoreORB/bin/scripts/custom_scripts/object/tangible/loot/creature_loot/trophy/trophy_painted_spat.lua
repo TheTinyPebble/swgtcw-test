@@ -1,0 +1,4 @@
+object_tangible_loot_creature_loot_trophy_trophy_painted_spat = object_tangible_loot_creature_loot_trophy_shared_trophy_painted_spat:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_painted_spat, "object/tangible/loot/creature_loot/trophy/trophy_painted_spat.iff")

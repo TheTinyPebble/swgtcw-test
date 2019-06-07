@@ -1,0 +1,4 @@
+object_tangible_loot_creature_loot_trophy_trophy_mutant_acklay = object_tangible_loot_creature_loot_trophy_shared_trophy_mutant_acklay:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_mutant_acklay, "object/tangible/loot/creature_loot/trophy/trophy_mutant_acklay.iff")

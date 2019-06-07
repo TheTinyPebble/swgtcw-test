@@ -1,0 +1,4 @@
+object_tangible_loot_creature_loot_trophy_trophy_peko_peko_unmounted = object_tangible_loot_creature_loot_trophy_shared_trophy_peko_peko_unmounted:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_peko_peko_unmounted, "object/tangible/loot/creature_loot/trophy/trophy_peko_peko_unmounted.iff")

@@ -1,0 +1,100 @@
+object_tangible_loot_creature_loot_trophy_shared_trophy_bane_back_spider = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_bane_back_spider.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_bane_back_spider, "object/tangible/loot/creature_loot/trophy/shared_trophy_bane_back_spider.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_bocatt_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_bocatt_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_bocatt_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_bocatt_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_choku_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_choku_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_choku_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_choku_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_condor_dragon_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_condor_dragon_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_condor_dragon_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_condor_dragon_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_corellian_sand_panther_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_corellian_sand_panther_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_corellian_sand_panther_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_corellian_sand_panther_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_finned_blaggart = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_finned_blaggart.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_finned_blaggart, "object/tangible/loot/creature_loot/trophy/shared_trophy_finned_blaggart.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_gurreck_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_gurreck_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_gurreck_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_gurreck_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_kliknik_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_kliknik_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_kliknik_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_kliknik_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_krayt_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_krayt_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_krayt_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_krayt_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_murra_blanca = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_murra_blanca.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_murra_blanca, "object/tangible/loot/creature_loot/trophy/shared_trophy_murra_blanca.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_mutant_acklay = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_mutant_acklay.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_mutant_acklay, "object/tangible/loot/creature_loot/trophy/shared_trophy_mutant_acklay.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_painted_spat = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_painted_spat.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_painted_spat, "object/tangible/loot/creature_loot/trophy/shared_trophy_painted_spat.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_peko_peko_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_peko_peko_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_peko_peko_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_peko_peko_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_rancor_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_rancor_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_rancor_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_rancor_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_scorpion_kliknik = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_scorpion_kliknik.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_scorpion_kliknik, "object/tangible/loot/creature_loot/trophy/shared_trophy_scorpion_kliknik.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_swirlprong_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_swirlprong_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_swirlprong_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_swirlprong_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_slice_hound_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_slice_hound_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_slice_hound_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_slice_hound_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_spiketail_blurrg = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_spiketail_blurrg.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_spiketail_blurrg, "object/tangible/loot/creature_loot/trophy/shared_trophy_spiketail_blurrg.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_verne_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_verne_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_verne_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_verne_unmounted.iff")
+
+object_tangible_loot_creature_loot_trophy_shared_trophy_zucca_boar_unmounted = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/creature_loot/trophy/shared_trophy_zucca_boar_unmounted.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_creature_loot_trophy_shared_trophy_zucca_boar_unmounted, "object/tangible/loot/creature_loot/trophy/shared_trophy_zucca_boar_unmounted.iff")
+

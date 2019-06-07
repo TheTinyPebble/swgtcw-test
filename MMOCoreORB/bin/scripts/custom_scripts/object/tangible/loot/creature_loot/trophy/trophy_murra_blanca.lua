@@ -1,0 +1,4 @@
+object_tangible_loot_creature_loot_trophy_trophy_murra_blanca = object_tangible_loot_creature_loot_trophy_shared_trophy_murra_blanca:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_murra_blanca, "object/tangible/loot/creature_loot/trophy/trophy_murra_blanca.iff")

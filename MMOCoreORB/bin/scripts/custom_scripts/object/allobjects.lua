@@ -188,6 +188,7 @@ includeFile("../custom_scripts/object/tangible/loot/creature_loot/collections/fr
 includeFile("../custom_scripts/object/tangible/loot/creature_loot/collections/space/objects.lua")
 includeFile("../custom_scripts/object/tangible/loot/creature_loot/generic/objects.lua")
 includeFile("../custom_scripts/object/tangible/loot/creature_loot/kashyyyk_loot/objects.lua")
+includeFile("../custom_scripts/object/tangible/loot/creature_loot/trophy/objects.lua")
 includeFile("../custom_scripts/object/tangible/loot/generic/objects.lua")
 includeFile("../custom_scripts/object/tangible/loot/generic_deed/objects.lua")
 includeFile("../custom_scripts/object/tangible/loot/generic_usable/objects.lua")

@@ -1,0 +1,4 @@
+object_tangible_loot_creature_loot_trophy_trophy_scorpion_kliknik = object_tangible_loot_creature_loot_trophy_shared_trophy_scorpion_kliknik:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_scorpion_kliknik, "object/tangible/loot/creature_loot/trophy/trophy_scorpion_kliknik.iff")

@@ -1,0 +1,4 @@
+object_tangible_loot_creature_loot_trophy_trophy_spiketail_blurrg = object_tangible_loot_creature_loot_trophy_shared_trophy_spiketail_blurrg:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_spiketail_blurrg, "object/tangible/loot/creature_loot/trophy/trophy_spiketail_blurrg.iff")

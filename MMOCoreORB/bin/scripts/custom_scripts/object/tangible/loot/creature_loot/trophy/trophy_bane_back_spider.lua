@@ -1,0 +1,4 @@
+object_tangible_loot_creature_loot_trophy_trophy_bane_back_spider = object_tangible_loot_creature_loot_trophy_shared_trophy_bane_back_spider:new {
+
+}
+ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_bane_back_spider, "object/tangible/loot/creature_loot/trophy/trophy_bane_back_spider.iff")
