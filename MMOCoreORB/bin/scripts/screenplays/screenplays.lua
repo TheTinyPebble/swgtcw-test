@@ -691,6 +691,9 @@ includeFile("world_boss/nightsister_shapeshifter.lua")
 --Heroics
 includeFile("heroic/heroic_logic.lua")
 
+--Hunters Guild
+includeFile("hunters_guild/components/trophy_components.lua")
+
 --Custom Content
 includeFile("../custom_scripts/screenplays/screenplays.lua")
 includeFile("omega/screenplays.lua")
