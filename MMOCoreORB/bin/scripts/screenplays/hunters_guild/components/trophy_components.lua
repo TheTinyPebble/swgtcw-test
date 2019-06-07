@@ -55,6 +55,7 @@ function hgT1TrophyMenuComponent:t1TrophyCollectCallback(pPlayer, pSui, eventInd
 	end
 
 	for i = 1, #hgT1TrophyStates do
+		print(string.find(SceneObject(pSceneObject):getTemplateObjectPath(), hgT1TrophyStates[i][1]))
 		if (string.find(SceneObject(pSceneObject):getTemplateObjectPath(), hgT1TrophyStates[i][1])) then
 			if (CreatureObject(pPlayer):hasScreenPlayState(hgT1TrophyStates[i][2], "hgT1Trophies")) then
 				CreatureObject(pPlayer):sendSystemMessage("You have already collected this trophy.")
