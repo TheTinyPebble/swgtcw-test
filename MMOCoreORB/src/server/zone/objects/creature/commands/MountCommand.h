@@ -144,6 +144,7 @@ public:
 		}
 
 		// get vehicle speed
+		vehicle->setRunSpeed(50);
 		float newSpeed = vehicle->getRunSpeed();
 		float newAccel = vehicle->getAccelerationMultiplierMod();
 		float newTurn = vehicle->getTurnScale();
@@ -172,7 +173,6 @@ public:
 			newTurn += creature->getSkillMod("force_vehicle_control");
 		}
 
-		vehicle->setRunSpeed(50);
 		creature->setRunSpeed(50);
 		creature->setTurnScale(newTurn, true);
 		creature->setAccelerationMultiplierMod(newAccel, true);
