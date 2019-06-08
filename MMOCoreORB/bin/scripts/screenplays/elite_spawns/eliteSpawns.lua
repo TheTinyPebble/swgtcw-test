@@ -371,12 +371,10 @@ function eliteSpawns:teleportSui(pPlayer)
 		local pMobile = getSceneObject(readData("eliteSpawns:mobileID" .. i))
 		local planet = eliteSpawnMap[i]['planet']
 		
-		if (pMobile == nil) then
-			return
-		end
-
-		if (not CreatureObject(pMobile):isDead()) then
-			sui.add(i .. ": " .. SceneObject(pMobile):getDisplayedName() .. ", " .. planet:gsub("^%l", string.upper), tostring(i))
+		if (pMobile ~= nil) then
+			if (not CreatureObject(pMobile):isDead()) then
+				sui.add(i .. ": " .. SceneObject(pMobile):getDisplayedName() .. ", " .. planet:gsub("^%l", string.upper), tostring(i))
+			end
 		end
 	end
 	
