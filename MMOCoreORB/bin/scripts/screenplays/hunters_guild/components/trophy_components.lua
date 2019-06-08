@@ -61,7 +61,7 @@ function ghaT1TrophyMenuComponent:t1TrophyCollectCallback(pPlayer, pSui, eventIn
 				return 0
 			else
 				CreatureObject(pPlayer):setScreenPlayState(ghaT1TrophyStates[i][2], "ghaT1Trophies")
-				TangibleObject(pSceneObject):setNoTrade(true)
+				--TangibleObject(pSceneObject):setNoTrade(true)
 			end
 		end
 	end
