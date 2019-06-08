@@ -152,26 +152,35 @@ function eliteSpawns:awardBadge(pMobile, pAttacker, num)
 	if (pMobile == nil) then
 		return 
 	end
-	
-	local healerList = CreatureObject(pMobile):getHealingThreatList()
-	if (healerList == nil or #healerList == 0) then
-		return
-	end
-		
-	for i = 1, #healerList do
-		local pPlayer = healerList[i]
-		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
-			PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
-		end
-	end
-		
+
+	self:checkHealerList(pMobile)
+
 	local attackerList = CreatureObject(pMobile):getDamageDealerList()
 	if attackerList == nil or #attackerList == 0 then
 		return
 	end
-		
+
 	for i = 1, #attackerList, 1 do
 		local pPlayer = attackerList[i]
+		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
+			PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
+		end
+	end
+end
+
+function eliteSpawns:checkHealerList(pCreature)
+	if (pCreature == nil) then
+		return
+	end
+
+	local healerList = CreatureObject(pCreature):getHealingThreatList()
+
+	if (healerList == nil or #healerList == 0) then
+		return
+	end
+
+	for i = 1, #healerList, 1 do
+		local pPlayer = healerList[i]
 		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
 			PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 		end
