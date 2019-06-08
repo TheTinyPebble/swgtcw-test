@@ -9,6 +9,48 @@ eliteSpawnMap = {
 			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
 		},
 	},
+	{
+		planet = "corellia", mobile = "painted_spat", respawnTime = 90, 
+		idleWander = true,
+		spawnArea = {
+			{x = 910, y = 4640, radius = 1000},
+		},
+	},
+	{
+		planet = "talus", mobile = "murra_blanca", respawnTime = 90, 
+		idleWander = true,
+		spawnArea = {
+			{x = -4804, y = -4746, radius = 1000},
+		},
+	},
+	{
+		planet = "yavin4", mobile = "finned_blaggart", respawnTime = 90, 
+		idleWander = true,
+		spawnArea = {
+			{x = -2851, y = -1168, radius = 1000},
+		},
+	},
+	{
+		planet = "dathomir", mobile = "bane_back_spider", respawnTime = 90, 
+		idleWander = true,
+		spawnArea = {
+			{x = -1209, y = 6332, radius = 1000},
+		},
+	},
+	{
+		planet = "yavin4", mobile = "scorpion_kliknik", respawnTime = 90, 
+		idleWander = true,
+		spawnArea = {
+			{x = 959, y = 4473, radius = 1000},
+		},
+	},
+	{
+		planet = "endor", mobile = "spiketail_blurrg", respawnTime = 90, 
+		idleWander = true,
+		spawnArea = {
+			{x = 2584, y = -4010, radius = 1000},
+		},
+	},
 	--[[{
 		planet = "endor", mobile = "elite_mandalorian_supercommando", respawnTime = 5, 
 		spawnArea = {

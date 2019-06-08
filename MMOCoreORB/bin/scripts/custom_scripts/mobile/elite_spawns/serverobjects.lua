@@ -1,0 +1,6 @@
+includeFile("../custom_scripts/mobile/elite_spawns/scorpion_kliknik.lua")
+includeFile("../custom_scripts/mobile/elite_spawns/finned_blaggart.lua")
+includeFile("../custom_scripts/mobile/elite_spawns/bane_back_spider.lua")
+includeFile("../custom_scripts/mobile/elite_spawns/spiketail_blurrg.lua")
+includeFile("../custom_scripts/mobile/elite_spawns/painted_spat.lua")
+includeFile("../custom_scripts/mobile/elite_spawns/murra_blanca.lua")

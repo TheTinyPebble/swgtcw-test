@@ -1,3 +1,11 @@
 includeFile("../custom_scripts/object/mobile/wod/serverobjects.lua")
 includeFile("../custom_scripts/object/mobile/tatooine/serverobjects.lua")
 includeFile("../custom_scripts/object/mobile/meatlumps/serverobjects.lua")
+
+includeFile("../custom_scripts/object/mobile/scorpion_kliknik.lua")
+includeFile("../custom_scripts/object/mobile/murra_blanca.lua")
+includeFile("../custom_scripts/object/mobile/mutant_acklay.lua")
+includeFile("../custom_scripts/object/mobile/finned_blaggart.lua")
+includeFile("../custom_scripts/object/mobile/bane_back_spider.lua")
+includeFile("../custom_scripts/object/mobile/painted_spat.lua")
+includeFile("../custom_scripts/object/mobile/spiketail_blurrg.lua")
