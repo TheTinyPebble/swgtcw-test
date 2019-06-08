@@ -1,4 +1,5 @@
 object_tangible_loot_creature_loot_trophy_trophy_slice_hound_unmounted = object_tangible_loot_creature_loot_trophy_shared_trophy_slice_hound_unmounted:new {
-
+	objectMenuComponent = "ghaT1TrophyMenuComponent",
+	attributeListComponent = "ghaT1TrophyAttributeListComponent",
 }
 ObjectTemplates:addTemplate(object_tangible_loot_creature_loot_trophy_trophy_slice_hound_unmounted, "object/tangible/loot/creature_loot/trophy/trophy_slice_hound_unmounted.iff")

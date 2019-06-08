@@ -1,4 +1,4 @@
-hgT1TrophyStates = {
+ghaT1TrophyStates = {
 	{"trophy_bocatt_unmounted", 1},
 	{"trophy_choku_unmounted", 2},
 	{"trophy_corellian_sand_panther_unmounted", 4},
@@ -11,9 +11,9 @@ hgT1TrophyStates = {
 	{"trophy_zucca_boar_unmounted", 512},
 }
 
-hgT1TrophyMenuComponent = {}
+ghaT1TrophyMenuComponent = {}
 
-function hgT1TrophyMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
+function ghaT1TrophyMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuResponse, pPlayer)
 	if (pSceneObject == nil or pPlayer == nil) then
 		return
 	end
@@ -22,7 +22,7 @@ function hgT1TrophyMenuComponent:fillObjectMenuResponse(pSceneObject, pMenuRespo
 	menuResponse:addRadialMenuItem(20, 3, "Collect Trophy")
 end
 
-function hgT1TrophyMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, selectedID)
+function ghaT1TrophyMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, selectedID)
 	if (pSceneObject == nil or pPlayer == nil) then
 		return
 	end
@@ -32,8 +32,8 @@ function hgT1TrophyMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, s
 	end
 
 	if (selectedID == 20) then
-		writeData("hgT1TrophyID" .. SceneObject(pPlayer):getObjectID(), SceneObject(pSceneObject):getObjectID())
-		local sui = SuiMessageBox.new("hgT1TrophyMenuComponent", "t1TrophyCollectCallback")
+		writeData("ghaT1TrophyID" .. SceneObject(pPlayer):getObjectID(), SceneObject(pSceneObject):getObjectID())
+		local sui = SuiMessageBox.new("ghaT1TrophyMenuComponent", "t1TrophyCollectCallback")
 		sui.setTitle("Collect Trophy")
 		sui.setPrompt("Do you want to add this trophy to your collection? If you do, then this trophy will be un-tradeable.")
 		sui.sendTo(pPlayer)
@@ -41,48 +41,48 @@ function hgT1TrophyMenuComponent:handleObjectMenuSelect(pSceneObject, pPlayer, s
 	return 0
 end
 
-function hgT1TrophyMenuComponent:t1TrophyCollectCallback(pPlayer, pSui, eventIndex, ...)
+function ghaT1TrophyMenuComponent:t1TrophyCollectCallback(pPlayer, pSui, eventIndex, ...)
 	local cancelPressed = (eventIndex == 1)
 
 	if (cancelPressed) then
 		return
 	end
 
-	local pSceneObject = getSceneObject(readData("hgT1TrophyID" .. SceneObject(pPlayer):getObjectID()))
+	local pSceneObject = getSceneObject(readData("ghaT1TrophyID" .. SceneObject(pPlayer):getObjectID()))
 	
 	if (pSceneObject == nil) then
 		return
 	end
 
-	for i = 1, #hgT1TrophyStates do
-		if (string.find(SceneObject(pSceneObject):getTemplateObjectPath(), hgT1TrophyStates[i][1])) then
-			if (CreatureObject(pPlayer):hasScreenPlayState(hgT1TrophyStates[i][2], "hgT1Trophies")) then
+	for i = 1, #ghaT1TrophyStates do
+		if (string.find(SceneObject(pSceneObject):getTemplateObjectPath(), ghaT1TrophyStates[i][1])) then
+			if (CreatureObject(pPlayer):hasScreenPlayState(ghaT1TrophyStates[i][2], "ghaT1Trophies")) then
 				CreatureObject(pPlayer):sendSystemMessage("You have already collected this trophy.")
 				return 0
 			else
-				CreatureObject(pPlayer):setScreenPlayState(hgT1TrophyStates[i][2], "hgT1Trophies")
+				CreatureObject(pPlayer):setScreenPlayState(ghaT1TrophyStates[i][2], "ghaT1Trophies")
 				TangibleObject(pSceneObject):setNoTrade(true)
 			end
 		end
 	end
 	
-	deleteData("hgT1TrophyID" .. SceneObject(pPlayer):getObjectID())
+	deleteData("ghaT1TrophyID" .. SceneObject(pPlayer):getObjectID())
 end
 
-hgT1TrophyAttributeListComponent = {}
+ghaT1TrophyAttributeListComponent = {}
 
-function hgT1TrophyAttributeListComponent:fillAttributeList(pALM, pPlayer, pObject)
+function ghaT1TrophyAttributeListComponent:fillAttributeList(pALM, pPlayer, pObject)
 	local ALM = LuaAttributeListMessage(pALM)
 	
 	if (TangibleObject(pObject):isNoTrade()) then
 		ALM:insertNewAttribute("no_trade", "\\#ff0000No Trade")
 	end
 
-	for i = 1, #hgT1TrophyStates do
-		if (CreatureObject(pPlayer):hasScreenPlayState(hgT1TrophyStates[i][2], "hgT1Trophies")) then
-			ALM:insertNewAttribute(hgT1TrophyStates[i][1], "\\#008000Collected")
+	for i = 1, #ghaT1TrophyStates do
+		if (CreatureObject(pPlayer):hasScreenPlayState(ghaT1TrophyStates[i][2], "ghaT1Trophies")) then
+			ALM:insertNewAttribute(ghaT1TrophyStates[i][1], "\\#008000Collected")
 		else
-			ALM:insertNewAttribute(hgT1TrophyStates[i][1], "\\#ff0000Not Collected")
+			ALM:insertNewAttribute(ghaT1TrophyStates[i][1], "\\#ff0000Not Collected")
 		end
 	end
 end
