@@ -29,6 +29,12 @@ scorpion_kliknik = Creature:new {
 	templates = {"object/mobile/scorpion_kliknik.iff"},
 	hues = {},
 	lootGroups = {
+		{
+			groups = {
+				{group = "scorpion_kliknik_trophy", chance = 10000000},
+			},
+			lootChance = 10000000
+		},
 	},
 	weapons = {},
 	conversationTemplate = "",

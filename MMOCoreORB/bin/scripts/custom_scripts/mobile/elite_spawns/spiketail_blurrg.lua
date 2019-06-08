@@ -29,6 +29,12 @@ spiketail_blurrg = Creature:new {
 	templates = {"object/mobile/spiketail_blurrg.iff"},
 	hues = {},
 	lootGroups = {
+		{
+			groups = {
+				{group = "spiketail_blurrg_trophy", chance = 10000000},
+			},
+			lootChance = 10000000
+		},
 	},
 	weapons = {"creature_spit_small_yellow"},
 	conversationTemplate = "",

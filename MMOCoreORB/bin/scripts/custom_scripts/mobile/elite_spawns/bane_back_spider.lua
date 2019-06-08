@@ -29,6 +29,12 @@ bane_back_spider = Creature:new {
 	templates = {"object/mobile/bane_back_spider.iff"},
 	hues = {},
 	lootGroups = {
+		{
+			groups = {
+				{group = "bane_back_spider_trophy", chance = 10000000},
+			},
+			lootChance = 10000000
+		},
 	},
 	weapons = {"creature_spit_small_yellow"},
 	conversationTemplate = "",

@@ -29,6 +29,12 @@ finned_blaggart = Creature:new {
 	templates = {"object/mobile/finned_blaggart.iff"},
 	hues = {},
 	lootGroups = {
+		{
+			groups = {
+				{group = "finned_blaggart_trophy", chance = 10000000},
+			},
+			lootChance = 10000000
+		},
 	},
 	weapons = {"creature_spit_small_toxicgreen"},
 	conversationTemplate = "",

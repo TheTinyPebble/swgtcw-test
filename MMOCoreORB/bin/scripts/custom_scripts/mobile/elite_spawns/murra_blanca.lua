@@ -29,6 +29,12 @@ murra_blanca = Creature:new {
 	templates = {"object/mobile/murra_blanca.iff"},
 	hues = {},
 	lootGroups = {
+		{
+			groups = {
+				{group = "murra_blanca_trophy", chance = 10000000},
+			},
+			lootChance = 10000000
+		},
 	},
 	weapons = {},
 	conversationTemplate = "",

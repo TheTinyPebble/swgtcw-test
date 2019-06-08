@@ -29,6 +29,12 @@ painted_spat = Creature:new {
 	templates = {"object/mobile/painted_spat.iff"},
 	hues = {},
 	lootGroups = {
+		{
+			groups = {
+				{group = "painted_spat_trophy", chance = 10000000},
+			},
+			lootChance = 10000000
+		},
 	},
 	weapons = {},
 	conversationTemplate = "",
