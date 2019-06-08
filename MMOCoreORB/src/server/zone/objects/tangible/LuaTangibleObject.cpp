@@ -409,7 +409,7 @@ int LuaTangibleObject::setNoTrade(lua_State* L){
 	
 	Locker locker(realObject);
 	
-	realObject->setNoTrade(noTrade, true);
+	realObject->setNoTrade(noTrade);
 
 	return 0;
 }
