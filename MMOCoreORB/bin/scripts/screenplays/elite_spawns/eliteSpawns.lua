@@ -163,7 +163,8 @@ function eliteSpawns:awardBadge(pMobile, pKiller, num)
 	for i = 1, #attackerList, 1 do
 		local pPlayer = attackerList[i]
 		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
-			PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
+			CreatureObject(pPlayer):sendSystemMessage("REE")
+			--PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 		end
 	end
 end
@@ -181,7 +182,8 @@ function eliteSpawns:checkHealerList(pMobile, pKiller, num)
 	for i = 1, #healerList, 1 do
 		local pPlayer = healerList[i]
 		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
-			PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
+			CreatureObject(pPlayer):sendSystemMessage("REE")
+			--PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 		end
 	end
 end

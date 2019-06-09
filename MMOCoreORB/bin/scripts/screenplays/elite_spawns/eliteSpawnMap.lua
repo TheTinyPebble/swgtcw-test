@@ -8,6 +8,7 @@ eliteSpawnMap = {
 			mechanic = "patrolling",
 			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
 		},
+		awardBadge = true, badgeToAward = BDG_RACING_AGRILAT_SWAMP,
 	},
 	{
 		planet = "corellia", mobile = "painted_spat", respawnTime = 90, 
