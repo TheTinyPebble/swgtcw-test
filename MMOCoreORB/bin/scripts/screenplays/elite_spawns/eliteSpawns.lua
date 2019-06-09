@@ -153,19 +153,23 @@ function eliteSpawns:awardBadge(pMobile, pKiller, num)
 		return 
 	end
 	
-	self:checkHealerList(pMobile, pKiller, num)
+	if (CreatureObject(pKiller):isGrouped()) then
+		self:checkHealerList(pMobile, pKiller, num)
 
-	local attackerList = CreatureObject(pMobile):getDamageDealerList()
-	if (attackerList == nil or #attackerList == 0) then
-		return
-	end
-
-	for i = 1, #attackerList, 1 do
-		local pPlayer = attackerList[i]
-		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
-			CreatureObject(pPlayer):sendSystemMessage("REE")
-			--PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
+		local attackerList = CreatureObject(pMobile):getDamageDealerList()
+		if (attackerList == nil or #attackerList == 0) then
+			return
 		end
+
+		for i = 1, #attackerList, 1 do
+			local pPlayer = attackerList[i]
+			if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
+				CreatureObject(pPlayer):sendSystemMessage("REE")
+				--PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
+			end
+		end
+	elseif (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
+		CreatureObject(pPlayer):sendSystemMessage("REE")
 	end
 end
 
