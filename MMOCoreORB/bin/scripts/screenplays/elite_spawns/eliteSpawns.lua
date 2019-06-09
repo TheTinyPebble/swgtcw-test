@@ -150,10 +150,9 @@ end
 --Badge Mechanic
 function eliteSpawns:awardBadge(pMobile, pKiller, num)
 	if (pMobile == nil or pKiller == nil) then
-		print(":O")
 		return 
 	end
-	print("waa")
+
 	if (CreatureObject(pKiller):isGrouped()) then
 		self:checkHealerList(pMobile, pKiller, num)
 
@@ -165,16 +164,28 @@ function eliteSpawns:awardBadge(pMobile, pKiller, num)
 		for i = 1, #attackerList, 1 do
 			local pPlayer = attackerList[i]
 			if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature()) then
-				if (not PlayerObject(pPlayer):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
+				local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+				if (pGhost == nil) then
+					return
+				end
+
+				if (not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
 					CreatureObject(pPlayer):sendSystemMessage("REE")
-					--PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
+					--PlayerObject(pGhost):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 				end
 			end
 		end
 	elseif (pKiller ~= nil and SceneObject(pKiller):isPlayerCreature()) then
-		print("waaaa")
-		if (not PlayerObject(pKiller):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
+		local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+		if (pGhost == nil) then
+			return
+		end
+
+		if (not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
 			CreatureObject(pKiller):sendSystemMessage("REE")
+			--PlayerObject(pGhost):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 		end
 	end
 end
@@ -192,6 +203,12 @@ function eliteSpawns:checkHealerList(pMobile, pKiller, num)
 	for i = 1, #healerList, 1 do
 		local pPlayer = healerList[i]
 		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature()) then
+			local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+			if (pGhost == nil) then
+				return
+			end
+
 			if (not PlayerObject(pPlayer):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
 				CreatureObject(pPlayer):sendSystemMessage("REE")
 				--PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
