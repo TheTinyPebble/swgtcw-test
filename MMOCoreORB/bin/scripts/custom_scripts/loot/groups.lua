@@ -1,7 +1,7 @@
 --Dathomir Bunker
-includeFile("../custom_scripts/loot/groups/dathomir_bunker/tfa_paintings_trophy.lua")
-includeFile("../custom_scripts/loot/groups/dathomir_bunker/weapon_components_trophy.lua")
-includeFile("../custom_scripts/loot/groups/dathomir_bunker/dath_schems_trophy.lua")
+includeFile("../custom_scripts/loot/groups/dathomir_bunker/tfa_paintings.lua")
+includeFile("../custom_scripts/loot/groups/dathomir_bunker/weapon_components.lua")
+includeFile("../custom_scripts/loot/groups/dathomir_bunker/dath_schems.lua")
 
 --Trophies
 includeFile("../custom_scripts/loot/groups/trophies/bane_back_spider_trophy.lua")
