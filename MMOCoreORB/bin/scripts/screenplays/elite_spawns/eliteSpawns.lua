@@ -150,9 +150,10 @@ end
 --Badge Mechanic
 function eliteSpawns:awardBadge(pMobile, pKiller, num)
 	if (pMobile == nil or pKiller == nil) then
+		print(":O")
 		return 
 	end
-	
+	print("waa")
 	if (CreatureObject(pKiller):isGrouped()) then
 		self:checkHealerList(pMobile, pKiller, num)
 
@@ -171,6 +172,7 @@ function eliteSpawns:awardBadge(pMobile, pKiller, num)
 			end
 		end
 	elseif (pKiller ~= nil and SceneObject(pKiller):isPlayerCreature()) then
+		print("waaaa")
 		if (not PlayerObject(pKiller):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
 			CreatureObject(pKiller):sendSystemMessage("REE")
 		end
