@@ -177,7 +177,7 @@ function eliteSpawns:awardBadge(pMobile, pKiller, num)
 			end
 		end
 	elseif (pKiller ~= nil and SceneObject(pKiller):isPlayerCreature()) then
-		local pGhost = CreatureObject(pPlayer):getPlayerObject()
+		local pGhost = CreatureObject(pKiller):getPlayerObject()
 
 		if (pGhost == nil) then
 			return
