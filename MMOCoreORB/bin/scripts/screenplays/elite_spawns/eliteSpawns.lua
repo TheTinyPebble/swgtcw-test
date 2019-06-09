@@ -171,8 +171,7 @@ function eliteSpawns:awardBadge(pMobile, pKiller, num)
 				end
 
 				if (not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
-					CreatureObject(pPlayer):sendSystemMessage("REE")
-					--PlayerObject(pGhost):awardBadge(eliteSpawnMap[num]['badgeToAward'])
+					PlayerObject(pGhost):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 				end
 			end
 		end
@@ -184,8 +183,7 @@ function eliteSpawns:awardBadge(pMobile, pKiller, num)
 		end
 
 		if (not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
-			CreatureObject(pKiller):sendSystemMessage("REE")
-			--PlayerObject(pGhost):awardBadge(eliteSpawnMap[num]['badgeToAward'])
+			PlayerObject(pGhost):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 		end
 	end
 end
@@ -210,8 +208,7 @@ function eliteSpawns:checkHealerList(pMobile, pKiller, num)
 			end
 
 			if (not PlayerObject(pPlayer):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
-				CreatureObject(pPlayer):sendSystemMessage("REE")
-				--PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
+				PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 			end
 		end
 	end
