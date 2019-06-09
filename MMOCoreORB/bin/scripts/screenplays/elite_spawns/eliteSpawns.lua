@@ -98,8 +98,8 @@ function eliteSpawns:spawnMobile(none, num)
 	end
 end
 
-function eliteSpawns:notifyMobileDestroyed(pMobile, pAttacker)
-	if (pMobile == nil or pAttacker == nil) then
+function eliteSpawns:notifyMobileDestroyed(pMobile, pKiller)
+	if (pMobile == nil or pKiller == nil) then
 		return 0
 	end
 	
@@ -111,7 +111,7 @@ function eliteSpawns:notifyMobileDestroyed(pMobile, pAttacker)
 		createEvent(2 * 60 * 1000, self.scripName, "removeTheater", nil, tostring(num))
 	end
 	if (eliteSpawnMap[num]['awardBadge']) then
-		self:awardBadge(pMobile, pAttacker, num)
+		self:awardBadge(pMobile, pKiller, num)
 	end
 	return 1
 end
@@ -148,12 +148,12 @@ function eliteSpawns:destroyObject(pObject)
 end
 
 --Badge Mechanic
-function eliteSpawns:awardBadge(pMobile, pAttacker, num)
-	if (pMobile == nil) then
+function eliteSpawns:awardBadge(pMobile, pKiller, num)
+	if (pMobile == nil or pKiller = nil) then
 		return 
 	end
-
-	self:checkHealerList(pMobile)
+	
+	self:checkHealerList(pMobile, pKiller, num)
 
 	local attackerList = CreatureObject(pMobile):getDamageDealerList()
 	if attackerList == nil or #attackerList == 0 then
@@ -162,18 +162,18 @@ function eliteSpawns:awardBadge(pMobile, pAttacker, num)
 
 	for i = 1, #attackerList, 1 do
 		local pPlayer = attackerList[i]
-		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
+		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
 			PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 		end
 	end
 end
 
-function eliteSpawns:checkHealerList(pCreature)
-	if (pCreature == nil) then
+function eliteSpawns:checkHealerList(pMobile, pKiller, num)
+	if (pMobile == nil or pKiller = nil) then
 		return
 	end
 
-	local healerList = CreatureObject(pCreature):getHealingThreatList()
+	local healerList = CreatureObject(pMobile):getHealingThreatList()
 
 	if (healerList == nil or #healerList == 0) then
 		return
@@ -181,7 +181,7 @@ function eliteSpawns:checkHealerList(pCreature)
 
 	for i = 1, #healerList, 1 do
 		local pPlayer = healerList[i]
-		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward'])) then
+		if (pPlayer ~= nil and SceneObject(pPlayer):isPlayerCreature() and not PlayerObject(pGhost):hasBadge(eliteSpawnMap[num]['badgeToAward']) and CreatureObject(pPlayer):isGroupedWith(pKiller)) then
 			PlayerObject(pPlayer):awardBadge(eliteSpawnMap[num]['badgeToAward'])
 		end
 	end
