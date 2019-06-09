@@ -284,6 +284,12 @@ tatooine_destroy_missions = {
 			maxDifficulty = 36,
 			size = 25,
 		},
+		{
+			lairTemplateName = "tatooine_zucca_boar_zucca_neutral_medium_boss_02",
+			minDifficulty = 48,
+			maxDifficulty = 52,
+			size = 25,
+		},
 	}
 }
 

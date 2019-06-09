@@ -57,6 +57,12 @@ yavin4_destroy_missions = {
 			size = 25,
 		},
 		{
+			lairTemplateName = "yavin4_choku_frenzied_neutral_medium_boss_01",
+			minDifficulty = 20,
+			maxDifficulty = 24,
+			size = 25,
+		},
+		{
 			lairTemplateName = "yavin4_skreeg_lair_neutral_hard",
 			minDifficulty = 20,
 			maxDifficulty = 24,

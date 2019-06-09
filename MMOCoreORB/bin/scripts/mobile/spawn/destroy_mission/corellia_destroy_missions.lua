@@ -81,6 +81,12 @@ corellia_destroy_missions = {
 			size = 20,
 		},
 		{
+			lairTemplateName = "corellia_slice_hound_lair_neutral_medium_boss",
+			minDifficulty = 8,
+			maxDifficulty = 12,
+			size = 25,
+		},
+		{
 			lairTemplateName = "corellia_bageraset_lair_neutral_medium_boss_01",
 			minDifficulty = 8,
 			maxDifficulty = 12,
@@ -289,6 +295,12 @@ corellia_destroy_missions = {
 			minDifficulty = 27,
 			maxDifficulty = 31,
 			size = 30,
+		},
+		{
+			lairTemplateName = "corellia_crimson_sand_panther_pride_neutral_medium_boss",
+			minDifficulty = 29,
+			maxDifficulty = 33,
+			size = 35,
 		},
 		{
 			lairTemplateName = "corellia_sharnaff_lair_neutral_large_boss_01",

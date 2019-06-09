@@ -183,6 +183,12 @@ naboo_destroy_missions = {
 			size = 25,
 		},
 		{
+			lairTemplateName = "naboo_peko_peko_eyrie_neutral_large_boss",
+			minDifficulty = 20,
+			maxDifficulty = 24,
+			size = 25,
+		},
+		{
 			lairTemplateName = "naboo_narglatch_pride_neutral_medium",
 			minDifficulty = 20,
 			maxDifficulty = 24,

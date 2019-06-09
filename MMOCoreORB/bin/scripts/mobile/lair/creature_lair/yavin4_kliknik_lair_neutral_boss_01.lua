@@ -1,6 +1,6 @@
 yavin4_kliknik_lair_neutral_boss_01 = Lair:new {
 	mobiles = {{"kliknik_scout",1},{"kliknik_defender",1}},
-	bossMobiles = {{"kliknik_shredder_guardian",1}},
+	bossMobiles = {{"kliknik_shredder_guardian",1},{"kliknik_champion",1}},
 	spawnLimit = 15,
 	buildingsVeryEasy = {"object/tangible/lair/base/poi_all_lair_nest_large_evil_fire_small.iff"},
 	buildingsEasy = {"object/tangible/lair/base/poi_all_lair_nest_large_evil_fire_small.iff"},

@@ -1,6 +1,6 @@
 yavin4_kliknik_lair_neutral_boss_03 = Lair:new {
 	mobiles = {{"kliknik_hunter",1}},
-	bossMobiles = {{"kliknik_queen",1}},
+	bossMobiles = {{"kliknik_queen",1},{"kliknik_champion",1}},
 	spawnLimit = 15,
 	buildingsVeryEasy = {"object/tangible/lair/base/poi_all_lair_leaf_large.iff"},
 	buildingsEasy = {"object/tangible/lair/base/poi_all_lair_leaf_large.iff"},

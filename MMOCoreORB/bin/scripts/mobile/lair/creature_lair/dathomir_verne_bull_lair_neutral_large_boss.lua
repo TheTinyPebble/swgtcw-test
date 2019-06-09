@@ -1,6 +1,6 @@
-yavin4_choku_frenzied_neutral_medium_boss_01 = Lair:new {
-	mobiles = {{"frenzied_choku",1}},
-	bossMobiles = {{"choku_packmaster",1},{"choku_hunter",2},{"choku_jungle_terror",1}},
+dathomir_verne_bull_lair_neutral_large_boss = Lair:new {
+	mobiles = {{"verne_bull",1},{"verne_calf",1}},
+	bossMobiles = {{"verne_matriarch",1}},
 	spawnLimit = 15,
 	buildingsVeryEasy = {"object/tangible/lair/base/poi_all_lair_thicket_small.iff"},
 	buildingsEasy = {"object/tangible/lair/base/poi_all_lair_thicket_small.iff"},
@@ -9,4 +9,4 @@ yavin4_choku_frenzied_neutral_medium_boss_01 = Lair:new {
 	buildingsVeryHard = {"object/tangible/lair/base/poi_all_lair_thicket_small.iff"},
 }
 
-addLairTemplate("yavin4_choku_frenzied_neutral_medium_boss_01", yavin4_choku_frenzied_neutral_medium_boss_01)
+addLairTemplate("dathomir_verne_bull_lair_neutral_large_boss", dathomir_verne_bull_lair_neutral_large_boss)

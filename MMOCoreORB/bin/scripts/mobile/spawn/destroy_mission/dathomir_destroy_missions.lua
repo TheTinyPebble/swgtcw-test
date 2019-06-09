@@ -27,6 +27,12 @@ dathomir_destroy_missions = {
 			size = 25,
 		},
 		{
+			lairTemplateName = "dathomir_verne_bull_lair_neutral_large_boss",
+			minDifficulty = 16,
+			maxDifficulty = 21,
+			size = 25,
+		},
+		{
 			lairTemplateName = "dathomir_baz_nitch_lair_neutral_small",
 			minDifficulty = 18,
 			maxDifficulty = 22,

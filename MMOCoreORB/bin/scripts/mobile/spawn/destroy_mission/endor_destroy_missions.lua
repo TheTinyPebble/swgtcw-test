@@ -57,6 +57,12 @@ endor_destroy_missions = {
 			size = 25,
 		},
 		{
+			lairTemplateName = "endor_swirl_prong_neutral_small_boss",
+			minDifficulty = 18,
+			maxDifficulty = 22,
+			size = 25,
+		},
+		{
 			lairTemplateName = "endor_bark_mite_burrower_swarmling_lair_neutral_small",
 			minDifficulty = 18,
 			maxDifficulty = 22,
@@ -198,6 +204,12 @@ endor_destroy_missions = {
 			lairTemplateName = "endor_gurreck_hilltop_neutral_small",
 			minDifficulty = 39,
 			maxDifficulty = 43,
+			size = 25,
+		},
+		{
+			lairTemplateName = "endor_gurreck_hilltop_neutral_small_boss",
+			minDifficulty = 40,
+			maxDifficulty = 44,
 			size = 25,
 		},
 		{
