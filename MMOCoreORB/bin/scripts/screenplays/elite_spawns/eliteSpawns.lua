@@ -156,7 +156,7 @@ function eliteSpawns:awardBadge(pMobile, pKiller, num)
 	self:checkHealerList(pMobile, pKiller, num)
 
 	local attackerList = CreatureObject(pMobile):getDamageDealerList()
-	if attackerList == nil or #attackerList == 0 then
+	if (attackerList == nil or #attackerList == 0) then
 		return
 	end
 
