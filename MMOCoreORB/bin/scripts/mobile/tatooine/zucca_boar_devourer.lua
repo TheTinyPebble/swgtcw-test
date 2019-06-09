@@ -45,4 +45,4 @@ zucca_boar_devourer = Creature:new {
 	}
 }
 
-CreatureTemplates:addCreatureTemplate(wild_dune_boar, "wild_dune_boar")
+CreatureTemplates:addCreatureTemplate(zucca_boar_devourer, "zucca_boar_devourer")

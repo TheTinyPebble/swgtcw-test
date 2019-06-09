@@ -46,4 +46,4 @@ verne_matriarch = Creature:new {
 	}
 }
 
-CreatureTemplates:addCreatureTemplate(verne_bull, "verne_bull")
+CreatureTemplates:addCreatureTemplate(verne_matriarch, "verne_matriarch")
