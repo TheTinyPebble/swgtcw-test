@@ -1,5 +1,5 @@
 gurreck_brute = Creature:new {
-	objectName = "a gurreck brute",
+	customName = "a gurreck brute",
 	socialGroup = "gurreck",
 	faction = "",
 	level = 55,
