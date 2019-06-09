@@ -1,8 +1,8 @@
 eliteSpawnMap = {
 	{
-		planet = "endor", mobile = "gorax", respawnTime = 90, 
+		planet = "endor", mobile = "gorax", respawnTime = 1, 
 		spawnArea = {
-			{x = 5050, y = 4678, radius = 1500},
+			{x = 5050, y = 4678, radius = 15},
 		},
 		mechanics = {
 			mechanic = "patrolling",
