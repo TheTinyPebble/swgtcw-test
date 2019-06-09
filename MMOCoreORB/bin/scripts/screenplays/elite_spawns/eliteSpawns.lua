@@ -149,7 +149,7 @@ end
 
 --Badge Mechanic
 function eliteSpawns:awardBadge(pMobile, pKiller, num)
-	if (pMobile == nil or pKiller = nil) then
+	if (pMobile == nil or pKiller == nil) then
 		return 
 	end
 	
@@ -170,7 +170,7 @@ function eliteSpawns:awardBadge(pMobile, pKiller, num)
 end
 
 function eliteSpawns:checkHealerList(pMobile, pKiller, num)
-	if (pMobile == nil or pKiller = nil) then
+	if (pMobile == nil or pKiller == nil) then
 		return
 	end
 
