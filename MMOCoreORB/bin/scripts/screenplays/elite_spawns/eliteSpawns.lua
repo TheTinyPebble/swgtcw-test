@@ -174,7 +174,6 @@ function eliteSpawns:checkHealerList(pMobile, pKiller, num)
 	end
 
 	local healerList = CreatureObject(pMobile):getHealingThreatList()
-
 	if (healerList == nil or #healerList == 0) then
 		return
 	end
