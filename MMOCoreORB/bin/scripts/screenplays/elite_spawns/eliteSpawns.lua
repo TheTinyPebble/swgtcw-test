@@ -343,7 +343,7 @@ function eliteSpawns:statusSui(pPlayer)
 	sui.setCancelButtonText("Close Window")
 	sui.setOkButtonText("Refresh Status")
 	sui.setPrompt(suiMsg)
-	-- Other Button setup subscribe
+	--Other Button setup subscribe
 	sui.setProperty("btnRevert", "OnPress", "RevertWasPressed=1\r\nparent.btnOk.press=t")
 	sui.subscribeToPropertyForEvent(SuiEventType.SET_onClosedOk, "btnRevert", "RevertWasPressed")
 	
