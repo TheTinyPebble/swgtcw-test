@@ -1,15 +1,13 @@
 eliteSpawnMap = {
 	{
-		planet = "endor", mobile = "gorax", respawnTime = 1, 
-		idleWander = true,
+		planet = "endor", mobile = "gorax", respawnTime = 90, 
 		spawnArea = {
-			{x = 5050, y = 4678, radius = 15},
+			{x = 5050, y = 4678, radius = 1500},
 		},
-		--mechanics = {
-			--mechanic = "patrolling",
+		mechanics = {
+			mechanic = "patrolling",
 			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
-		--},
-		awardBadge = true, badgeToAward = BDG_RACING_AGRILAT_SWAMP,
+		},
 	},
 	{
 		planet = "corellia", mobile = "painted_spat", respawnTime = 90, 
