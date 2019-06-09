@@ -1,5 +1,5 @@
 vicious_peko_peko = Creature:new {
-	custom_name = "a vicious peko peko",
+	customName = "a vicious peko peko",
 	socialGroup = "peko",
 	faction = "",
 	level = 28,
